@@ -5,10 +5,18 @@ import { AppComponent } from './app.component';
 const routes: Routes = [
     {
         path: 'jordimas96',
-        redirectTo: 'funciona'
+        redirectTo: 'funciona96'
+    },
+    {
+        path: 'jordimas',
+        redirectTo: 'funcio'
     },
     {
         path: 'funciona',
+        component: AppComponent
+    },
+    {
+        path: 'funcio',
         component: AppComponent
     },
 ];
