@@ -4,11 +4,11 @@ import { AppComponent } from './app.component';
 
 const routes: Routes = [
     {
-        path: 'jordimas',
-        redirectTo: 'holacomva'
+        path: 'jordimas96',
+        redirectTo: 'funciona'
     },
     {
-        path: 'holacomva',
+        path: 'funciona',
         component: AppComponent
     },
 ];
