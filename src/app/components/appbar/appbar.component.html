@@ -1,0 +1,12 @@
+<div class="appbar">
+    <div class="botonsDarkMode">
+        <button (click)="btnDarkMode_click()" class="botoDarkMode"><i class="fa-solid fa-circle-half-stroke"></i></button>
+        <button (click)="btnAutoDarkMode_click()" class="botoDarkMode botoAutoMode" style="display:none;"><b>A</b></button>
+    </div>
+
+    <select [(ngModel)]="idioma" id="idioma" name="idioma" class="select-idioma" (change)='setCookieIdioma()'>
+        <option value="ca">Català</option>
+        <option value="es">Español</option>
+        <option value="en">English</option>
+    </select>
+</div>

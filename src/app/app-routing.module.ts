@@ -1,24 +1,23 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { AppComponent } from './app.component';
+import { ExperiencePageComponent } from './pages/experience-page/experience-page.component';
+import { ProjectsPageComponent } from './pages/projects-page/projects-page.component';
+import { ContactPageComponent } from './pages/contact-page/contact-page.component';
 
 const routes: Routes = [
     {
-        path: 'jordimas96',
-        redirectTo: 'funciona96'
+        path: 'experience',
+        component: ExperiencePageComponent
     },
     {
-        path: 'jordimas',
-        redirectTo: 'funcio'
+        path: 'projects',
+        component: ProjectsPageComponent
     },
     {
-        path: 'funciona',
-        component: AppComponent
+        path: 'contact',
+        component: ContactPageComponent
     },
-    {
-        path: 'funcio',
-        component: AppComponent
-    },
+
 ];
 
 @NgModule({

@@ -1,0 +1,38 @@
+// Variables //
+::ng-deep .botoDarkMode { --fonsBotoDM: #fff4; }
+::ng-deep .light .botoDarkMode { --fonsBotoDM: #0002; }
+
+
+.appbar {
+    display: flex;
+    justify-content: space-between;
+}
+
+.botonsDarkMode {
+    width: fit-content;
+    margin: 0.5rem;
+    .botoDarkMode {
+        background-color: var(--fonsBotoDM);
+        color: var(--text);
+        border: none;
+        border-radius: 10000px;
+        cursor: pointer;
+        padding: 0.5rem 1.4rem;
+        font-size: 16pt;
+        transition: background-color 0.3s ease, color 0.3s ease;
+    }
+    .botoDarkMode:focus {
+        outline: none;
+    }
+}
+
+
+.select-idioma {
+    background-color: var(--fons);
+    color: var(--text);
+    border-color: var(--text);
+    border-radius: 5px;
+    margin: auto 1rem;
+    padding: 0.25rem 1rem;
+    font-size: large;
+}
