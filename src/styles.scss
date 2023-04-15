@@ -57,12 +57,12 @@ body {
     margin-bottom: 1rem;
     text-align: center;
 }
+.title, .subtitle, .text {
+    transition: font-size 0.3s ease;
+}
+
 .group {
     margin-top: 3rem;
-
-    // p {
-    //     text-align: justify;
-    // }
 }
 
 
@@ -125,16 +125,30 @@ img, .noselect {
 ///////////////////
 // MEDIA QUERIES //
 ///////////////////
+// PC //
+@media only screen and (min-width: 576px) {
+    .title {
+        font-size: 2.5rem;
+    }
+    .subtitle {
+        font-size: 1.75rem;
+    }
+    .text {
+
+    }
+}
 // Mòbil //
 @media only screen and (max-width: 576px) {
     .title {
         font-size: 2rem;
     }
-
-
+    .subtitle {
+        font-size: 1.4rem;
+    }
+    .text {
+        
+    }
 }
-// PC //
-// @media only screen and (min-width: 576px) { }
 
 
 // @media only screen and (max-width: 576px) { // Mòbil // }

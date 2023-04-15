@@ -1,70 +1,70 @@
 <div class="content">
     <div class="title h1 mt-0 mb-4">
-        <span *ngIf="m.ca()">Projectes personals</span>
-        <span *ngIf="m.es()">Proyectos personales</span>
-        <span *ngIf="m.en()">Personal projects</span>
+        <ng-container *ngIf="m.ca()">Projectes personals</ng-container>
+        <ng-container *ngIf="m.es()">Proyectos personales</ng-container>
+        <ng-container *ngIf="m.en()">Personal projects</ng-container>
     </div>
 
     <!-- Android Apps -->
     <div id="android" class="group">
-        <h3>
-            <span *ngIf="m.ca()">Apps Android</span>
-            <span *ngIf="m.es()">Apps Android</span>
-            <span *ngIf="m.en()">Android Apps</span>
+        <div class="subtitle">
+            <ng-container *ngIf="m.ca()">Apps Android</ng-container>
+            <ng-container *ngIf="m.es()">Apps Android</ng-container>
+            <ng-container *ngIf="m.en()">Android Apps</ng-container>
             <a href="https://www.android.com/" class="link-img ml-2"><img src="assets/icons/Android.png" alt="Android" class="title-icon p-1"></a>
-        </h3>
+        </div>
         <p class="text-justify mb-1">
-            <span *ngIf="m.ca()">Quan tinc temps lliure, m'agrada desenvolupar aplicacions per a Android i jocs per a la Play Store, ja sigui en Android Studio com en Unity o Cordova. Per fer-ho, utilitzo Java, Kotlin, C# i Javascript.</span>
+            <ng-container *ngIf="m.ca()">Quan tinc temps lliure, m'agrada desenvolupar aplicacions per a Android i jocs per a la Play Store, ja sigui en Android Studio com en Unity o Cordova. Per fer-ho, utilitzo Java, Kotlin, C# i Javascript.</ng-container>
             
-            <span *ngIf="m.es()">Cuando tengo tiempo libre, me gusta desarrollar aplicaciones para Android y juegos para la Play Store, ya sea en Android Studio como en Unity o Cordova. Para hacerlo, uso Java, Kotlin, C# y Javascript.</span>
+            <ng-container *ngIf="m.es()">Cuando tengo tiempo libre, me gusta desarrollar aplicaciones para Android y juegos para la Play Store, ya sea en Android Studio como en Unity o Cordova. Para hacerlo, uso Java, Kotlin, C# y Javascript.</ng-container>
             
-            <span *ngIf="m.en()">When I have free time, I like to develop Android apps and games for the Play Store, either in Android Studio, Unity or Cordova. To do it I use Java, Kotlin, C# and Javascript.</span>
+            <ng-container *ngIf="m.en()">When I have free time, I like to develop Android apps and games for the Play Store, either in Android Studio, Unity or Cordova. To do it I use Java, Kotlin, C# and Javascript.</ng-container>
         </p>
-        <span *ngIf="m.ca()"><a href="https://play.google.com/store/apps/developer?id=Jordi+Mas+Parramon">Les meves apps a Google Play</a></span>
-        <span *ngIf="m.es()"><a href="https://play.google.com/store/apps/developer?id=Jordi+Mas+Parramon">Mis apps en Google Play</a></span>
-        <span *ngIf="m.en()"><a href="https://play.google.com/store/apps/developer?id=Jordi+Mas+Parramon">My apps in Google Play</a></span>
+        <ng-container *ngIf="m.ca()"><a href="https://play.google.com/store/apps/developer?id=Jordi+Mas+Parramon">Les meves apps a Google Play</a></ng-container>
+        <ng-container *ngIf="m.es()"><a href="https://play.google.com/store/apps/developer?id=Jordi+Mas+Parramon">Mis apps en Google Play</a></ng-container>
+        <ng-container *ngIf="m.en()"><a href="https://play.google.com/store/apps/developer?id=Jordi+Mas+Parramon">My apps in Google Play</a></ng-container>
     </div>
     
     <!-- Tasker -->
     <div id="tasker" class="group">
-        <h3>
-            <span *ngIf="m.ca()">Projectes TaskerNet</span>
-            <span *ngIf="m.es()">Proyectos TaskerNet</span>
-            <span *ngIf="m.en()">TaskerNet projects</span>
+        <div class="subtitle">
+            <ng-container *ngIf="m.ca()">Projectes TaskerNet</ng-container>
+            <ng-container *ngIf="m.es()">Proyectos TaskerNet</ng-container>
+            <ng-container *ngIf="m.en()">TaskerNet projects</ng-container>
             <a href="https://tasker.joaoapps.com/" class="link-img ml-2"><img src="assets/icons/Tasker.png" alt="Tasker" class="title-icon"></a>
-        </h3>
+        </div>
         <p class="text-justify mb-1">
-            <span *ngIf="m.ca()">Una altra de les meves aficions és experimentar amb Android, en específic trastejar amb diferents versions i ampliar-ne les funcionalitats. Una de les maneres de fer-ho és amb <a href="https://play.google.com/store/apps/details?id=net.dinglisch.android.taskerm">Tasker</a>, una app d'automatització de tasques en Android que ofereix una infinitat de possibilitats. A través d'aquesta aplicació, he creat nombrosos projectes amb l'objectiu de millorar i ampliar les capacitats d'Android, i he publicat aquells que podrien resultar útils per a altres usuaris.</span>
+            <ng-container *ngIf="m.ca()">Una altra de les meves aficions és experimentar amb Android, en específic trastejar amb diferents versions i ampliar-ne les funcionalitats. Una de les maneres de fer-ho és amb <a href="https://play.google.com/store/apps/details?id=net.dinglisch.android.taskerm">Tasker</a>, una app d'automatització de tasques en Android que ofereix una infinitat de possibilitats. A través d'aquesta aplicació, he creat nombrosos projectes amb l'objectiu de millorar i ampliar les capacitats d'Android, i he publicat aquells que podrien resultar útils per a altres usuaris.</ng-container>
             
-            <span *ngIf="m.es()">Otra de mis aficiones es experimentar con Android, en específico trastear con diferentes versiones y ampliar sus funcionalidades. Una de las maneras de hacerlo es con <a href="https://play.google.com/store/apps/details?id=net.dinglisch.android.taskerm">Tasker</a>, una app de automatización de tareas en Android que ofrece una infinidad de posibilidades. A través de esta aplicación, he creado numerosos proyectos con el fin de mejorar y ampliar las capacidades de Android, y he publicado aquellos que podrían resultar útiles para otros usuarios.</span>
+            <ng-container *ngIf="m.es()">Otra de mis aficiones es experimentar con Android, en específico trastear con diferentes versiones y ampliar sus funcionalidades. Una de las maneras de hacerlo es con <a href="https://play.google.com/store/apps/details?id=net.dinglisch.android.taskerm">Tasker</a>, una app de automatización de tareas en Android que ofrece una infinidad de posibilidades. A través de esta aplicación, he creado numerosos proyectos con el fin de mejorar y ampliar las capacidades de Android, y he publicado aquellos que podrían resultar útiles para otros usuarios.</ng-container>
             
-            <span *ngIf="m.en()">Another of my hobbies is experimenting with Android, specifically tinkering with different versions and expanding its functionality. One way to do this is with <a href="https://play.google.com/store/apps/details?id=net.dinglisch.android.taskerm">Tasker</a>, an automation app of tasks in Android that offers an infinity of possibilities. Through this app, I have created numerous projects to enhance and expand the functionality of Android, and I have published the most useful and straightforward ones for other users.</span>
+            <ng-container *ngIf="m.en()">Another of my hobbies is experimenting with Android, specifically tinkering with different versions and expanding its functionality. One way to do this is with <a href="https://play.google.com/store/apps/details?id=net.dinglisch.android.taskerm">Tasker</a>, an automation app of tasks in Android that offers an infinity of possibilities. Through this app, I have created numerous projects to enhance and expand the functionality of Android, and I have published the most useful and straightforward ones for other users.</ng-container>
         </p>
         <a href="https://taskernet.com/?user=AS35m8mRntivpH1gAMw7ymN993wqjIo0bD6%2FSevikpiMYXceQJ%2BATvjOUxxvfzAbynKD">
-            <span *ngIf="m.ca()">Projectes públics de Jordi Mas</span>
-            <span *ngIf="m.es()">Proyectos públicos de Jordi Mas</span>
-            <span *ngIf="m.en()">Jordi Mas's Public Shares</span>
+            <ng-container *ngIf="m.ca()">Projectes públics de Jordi Mas</ng-container>
+            <ng-container *ngIf="m.es()">Proyectos públicos de Jordi Mas</ng-container>
+            <ng-container *ngIf="m.en()">Jordi Mas's Public Shares</ng-container>
         </a>
     </div>
 
 
     <!-- Mad Jumpgate -->
     <div id="mad-jumpgate" class="group">
-        <h3>
-            <span *ngIf="m.ca()">Projecte final 2n DAM</span>
-            <span *ngIf="m.es()">Proyecto final 2do DAM</span>
-            <span *ngIf="m.en()">Final project for the second year of the Higher Cycle of Multiplatform Application Development (DAM)</span>
+        <div class="subtitle">
+            <ng-container *ngIf="m.ca()">Projecte final 2n DAM</ng-container>
+            <ng-container *ngIf="m.es()">Proyecto final 2do DAM</ng-container>
+            <ng-container *ngIf="m.en()">Final project for the second year of the Higher Cycle of Multiplatform Application Development (DAM)</ng-container>
             - Mad Jumpgate
             <a href="https://jmaspgames.itch.io/mad-jumpgate" class="link-img ml-1"><img src="assets/icons/Mad-jumpgate.png" alt="Mad Jumpgate" class="title-icon rounded"></a>
-        </h3>
+        </div>
         <p class="mb-1">
-            <span *ngIf="m.ca()">Aquest és el meu projecte final del segon curs del Cicle Superior de Desenvolupament d'Aplicacions Multiplataforma (DAM).
-                Em va portar 2 setmanes de feina crear aquest FPS des de zero, amb Unity. Des del moviment de la càmara i del jugador, passant per les mecàniques de cada tipus d'arma (tant l'usuari con els enemics), fins a gestionar l'inventari format per les bales i els subministres.</span>
+            <ng-container *ngIf="m.ca()">Aquest és el meu projecte final del segon curs del Cicle Superior de Desenvolupament d'Aplicacions Multiplataforma (DAM).
+                Em va portar 2 setmanes de feina crear aquest FPS des de zero, amb Unity. Des del moviment de la càmara i del jugador, passant per les mecàniques de cada tipus d'arma (tant l'usuari con els enemics), fins a gestionar l'inventari format per les bales i els subministres.</ng-container>
             
-            <span *ngIf="m.es()">Éste es mi proyecto final del segundo curso del Ciclo Superior de Desarrollo de Aplicaciones Multiplataforma (DAM).
-                Me llevó 2 semanas de trabajo crear ese FPS desde cero, con Unity. Desde el movimiento de la cámara y del jugador, pasando por las mecánicas de cada tipo de arma (tanto el usuario como los enemigos), hasta gestionar el inventario formado por las balas y los suministros.</span>
+            <ng-container *ngIf="m.es()">Éste es mi proyecto final del segundo curso del Ciclo Superior de Desarrollo de Aplicaciones Multiplataforma (DAM).
+                Me llevó 2 semanas de trabajo crear ese FPS desde cero, con Unity. Desde el movimiento de la cámara y del jugador, pasando por las mecánicas de cada tipo de arma (tanto el usuario como los enemigos), hasta gestionar el inventario formado por las balas y los suministros.</ng-container>
             
-            <span *ngIf="m.en()">This is my final project for the second year of the Higher Cycle of Multiplatform Application Development (DAM). It took me 2 weeks of work to create this FPS from scratch, using Unity. From the movement of the camera and the player, through the mechanics of shooting each type of weapon (both the user and the enemies), to managing the inventory consisting of bullets and supplies.</span>
+            <ng-container *ngIf="m.en()">This is my final project for the second year of the Higher Cycle of Multiplatform Application Development (DAM). It took me 2 weeks of work to create this FPS from scratch, using Unity. From the movement of the camera and the player, through the mechanics of shooting each type of weapon (both the user and the enemies), to managing the inventory consisting of bullets and supplies.</ng-container>
         </p>
         <iframe *ngIf="mostrarWidgetJoc" src="https://itch.io/embed/2011884" width="552" height="167" frameborder="0" class="game mt-2">
             <a href="https://jmaspgames.itch.io/mad-jumpgate">Mad Jumpgate by Jordi Mas</a>
