@@ -32,9 +32,8 @@ export class AppbarComponent {
 
 
         this.actTema();
-    }
-    ngAfterViewInit() {
-        setTimeout(() => { $("app-root").fadeIn(300); }, 1000);
+
+        setTimeout(() => { $("app-root").fadeIn(300); }, this.m.tempsDelayCarregaPag);
     }
 
     btnDarkMode_click() {

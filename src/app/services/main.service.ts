@@ -15,6 +15,9 @@ export class MainService {
     // Services //
     public utils: Utils;
 
+    // Variables //
+    public tempsDelayCarregaPag = 1000;
+
     constructor() {
         this.utils = Utils;
     }

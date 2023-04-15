@@ -66,10 +66,10 @@
             
             <span *ngIf="m.en()">This is my final project for the second year of the Higher Cycle of Multiplatform Application Development (DAM). It took me 2 weeks of work to create this FPS from scratch, using Unity. From the movement of the camera and the player, through the mechanics of shooting each type of weapon (both the user and the enemies), to managing the inventory consisting of bullets and supplies.</span>
         </p>
-        <iframe src="https://itch.io/embed/2011884" width="552" height="167" frameborder="0" class="game mt-2">
-            <a href="https://jmaspgames.itch.io/mad-jumpgate">Mad Jumpgate by jmaspgames</a>
+        <iframe *ngIf="mostrarWidgetJoc" src="https://itch.io/embed/2011884" width="552" height="167" frameborder="0" class="game mt-2">
+            <a href="https://jmaspgames.itch.io/mad-jumpgate">Mad Jumpgate by Jordi Mas</a>
         </iframe>
-        <!-- <a href="https://jmaspgames.itch.io/mad-jumpgate">Mad Jumpgate by jmaspgames</a> -->
+        <a *ngIf="!mostrarWidgetJoc" href="https://jmaspgames.itch.io/mad-jumpgate">Mad Jumpgate by Jordi Mas</a>
         
     </div>
 </div>
