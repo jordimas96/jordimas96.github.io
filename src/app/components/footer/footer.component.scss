@@ -1,0 +1,18 @@
+
+.footer {
+    --fons: var(--color-fosc);
+    --text: var(--color-clar);
+}
+
+::ng-deep .footer {
+    background-color: var(--fons)
+}
+
+.footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: var(--footer-altura);
+    border-top: 1px solid var(--text);
+    // box-shadow: inset -100px 133px 9px -123px var(--text);
+}

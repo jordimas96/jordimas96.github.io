@@ -1,0 +1,44 @@
+// Variables //
+
+:root {
+    --breakpoint-xs: 0;
+    --breakpoint-sm: 576px;
+    --breakpoint-md: 768px;
+    --breakpoint-lg: 992px;
+    --breakpoint-xl: 1200px;
+
+}
+
+// Estils generals dark mode //
+body {
+    // --fons: rgb(0, 31, 31);
+    // --text: rgb(224, 255, 255);
+    --fons: rgb(16, 16, 16);
+    --text: rgb(255, 255, 255);
+
+    --link: #5fc2ff;
+    --link-hover: #2b94d6;
+
+    --transicio-colors: background-color 0.3s ease, color 0.3s ease, filter 0.3s ease;
+}
+.light body {
+    --fons: rgb(255, 255, 255);
+    --text: rgb(16, 16, 16);
+
+    --link: #0089ff;
+    --link-hover: #0065bd;
+}
+
+
+// PC //
+@media only screen and (min-width: 576px) {
+    :root {
+        --footer-altura: 100px;
+    }
+}
+// Mòbil //
+@media only screen and (max-width: 576px) {
+    :root {
+        --footer-altura: 100px;
+    }
+}

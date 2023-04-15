@@ -5,6 +5,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { FormsModule } from '@angular/forms';
 import { AppbarComponent } from './components/appbar/appbar.component';
+import { FooterComponent } from './components/footer/footer.component';
 import { ImatgeScrollComponent } from './components/imatge-scroll/imatge-scroll.component';
 import { ExperiencePageComponent } from './pages/experience-page/experience-page.component';
 import { ProjectsPageComponent } from './pages/projects-page/projects-page.component';
@@ -12,25 +13,26 @@ import { ContactPageComponent } from './pages/contact-page/contact-page.componen
 import { HomePageComponent } from './pages/home-page/home-page.component';
 
 @NgModule({
-  declarations: [
-    AppComponent,
+    declarations: [
+        AppComponent,
 
-    // Components //
-    AppbarComponent,
-    ImatgeScrollComponent,
+        // Components //
+        AppbarComponent,
+        FooterComponent,
+        ImatgeScrollComponent,
     
-    // Pages //
-    ExperiencePageComponent,
-    ProjectsPageComponent,
-    ContactPageComponent,
-    HomePageComponent,
-  ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule,
-    FormsModule,
-  ],
-  providers: [],
-  bootstrap: [AppComponent]
+        // Pages //
+        ExperiencePageComponent,
+        ProjectsPageComponent,
+        ContactPageComponent,
+        HomePageComponent,
+    ],
+    imports: [
+        BrowserModule,
+        AppRoutingModule,
+        FormsModule,
+    ],
+    providers: [],
+    bootstrap: [AppComponent]
 })
 export class AppModule { }

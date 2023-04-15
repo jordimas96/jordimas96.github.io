@@ -1,3 +1,6 @@
+// Variables //
+@import "./variables.scss";
+
 // Per aplicar un estil saltant-se l'encapsulació d'Angular //
 // :host ::ng-deep
 
@@ -8,49 +11,28 @@ html {
     font-family: Arial, sans-serif;
     color-scheme: dark;
 
+    // Footer //
+    position: relative;
+    min-height: 100%;
+
     &.light {
         color-scheme: light;
     }
+    // Temes //
+    &.matinada { --color-fosc: rgb(37, 37, 0);  --color-clar: rgb(255, 255, 209); }
+    &.mati     { --color-fosc: rgb(0, 26, 39);  --color-clar: rgb(186, 232, 255); }
+    &.tarda    { --color-fosc: rgb(34, 19, 0);  --color-clar: rgb(255, 236, 210); }
+    &.vespre   { --color-fosc: rgb(0, 0, 42);   --color-clar: rgb(217, 217, 255); }
+    &.nit      { --color-fosc: rgb(16, 16, 16); --color-clar: rgb(255, 255, 255); }
 }
 
-// Estils generals dark mode //
 body {
-    // --fons: rgb(0, 31, 31);
-    // --text: rgb(224, 255, 255);
-    --fons: rgb(16, 16, 16);
-    --text: rgb(255, 255, 255);
-
-    --link: #5fc2ff;
-    --link-hover: #2b94d6;
+    --fons: var(--color-fosc);
+    --text: var(--color-clar);
 }
 .light body {
-    --fons: rgb(255, 255, 255);
-    --text: rgb(16, 16, 16);
-
-    --link: #0089ff;
-    --link-hover: #0065bd;
-}
-
-// Temes //
-.matinada {
-    &       body { --fons: rgb(37, 37, 0);     --text: rgb(255, 255, 209); }
-    &.light body { --fons: rgb(255, 255, 209); --text: rgb(37, 37, 0);     }
-}
-.mati {
-    &       body { --fons: rgb(0, 26, 39);     --text: rgb(186, 232, 255); }
-    &.light body { --fons: rgb(186, 232, 255); --text: rgb(0, 26, 39);     }
-}
-.tarda {
-    &       body { --fons: rgb(34, 19, 0);     --text: rgb(255, 236, 210); }
-    &.light body { --fons: rgb(255, 236, 210); --text: rgb(34, 19, 0);     }
-}
-.vespre {
-    &       body { --fons: rgb(0, 0, 42);      --text: rgb(217, 217, 255); }
-    &.light body { --fons: rgb(217, 217, 255); --text: rgb(0, 0, 42);      }
-}
-.nit {
-    &       body { --fons: rgb(16, 16, 16);    --text: rgb(255, 255, 255); }
-    &.light body { --fons: rgb(255, 255, 255); --text: rgb(16, 16, 16);    }
+    --fons: var(--color-clar);
+    --text: var(--color-fosc)
 }
 
 
@@ -58,7 +40,8 @@ body {
 body {
     background: var(--fons);
     color: var(--text);
-    // transition: background-color 0.3s ease, color 0.3s ease;
+    margin-bottom: var(--footer-altura);
+    transition: var(--transicio-colors);
 }
 
 
@@ -76,6 +59,10 @@ body {
 }
 .group {
     margin-top: 3rem;
+
+    // p {
+    //     text-align: justify;
+    // }
 }
 
 
@@ -85,12 +72,12 @@ body {
     height: 2rem;
 }
 .inv-dark {
-    transition: filter 0.3s ease;
+    transition: var(--transicio-colors);
 }
-.light .inv-dark {
+html.light .inv-dark {
     filter: invert(1);
 }
-.dark .inv-dark-2 {
+html.dark .inv-dark-2 {
     filter: invert(1);
 }
 
@@ -111,10 +98,6 @@ a.link-img {
 }
 .title-icon {
     display: block;
-}
-
-iframe.game {
-    max-width: 100%;
 }
 
 

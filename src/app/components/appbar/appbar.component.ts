@@ -32,8 +32,9 @@ export class AppbarComponent {
 
 
         this.actTema();
-
-        // setTimeout(() => { $("app-root").fadeIn(300); }, 1);
+    }
+    ngAfterViewInit() {
+        setTimeout(() => { $("app-root").fadeIn(300); }, 1000);
     }
 
     btnDarkMode_click() {
@@ -63,8 +64,8 @@ export class AppbarComponent {
     
     getTema() {
         // Colors matinada, matí, tarda, vespre, nit //
-        const horaActual: number = new Date().getHours();
-
+        let horaActual: number = new Date().getHours();
+        
         const primeraHoraNit: number = 1;
         const primeraHoraMatinada: number = 6;
         const primeraHoraMati: number = 9;
