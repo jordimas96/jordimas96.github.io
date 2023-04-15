@@ -1,4 +1,9 @@
-/* You can add global styles to this file, and also import other style files */
+// Per aplicar un estil saltant-se l'encapsulació d'Angular //
+// :host ::ng-deep
+
+// Per a més efectivitat (si el primer no funciona) //
+// ::ng-deep
+
 html {
     font-family: Arial, sans-serif;
     color-scheme: dark;
@@ -14,14 +19,14 @@ body {
     // --text: rgb(224, 255, 255);
     --fons: rgb(16, 16, 16);
     --text: rgb(255, 255, 255);
-    
+
     --link: #5fc2ff;
     --link-hover: #2b94d6;
 }
 .light body {
     --fons: rgb(255, 255, 255);
     --text: rgb(16, 16, 16);
-    
+
     --link: #0089ff;
     --link-hover: #0065bd;
 }
@@ -53,7 +58,7 @@ body {
 body {
     background: var(--fons);
     color: var(--text);
-    transition: background-color 0.3s ease, color 0.3s ease;
+    // transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 
@@ -73,26 +78,8 @@ body {
     margin-top: 3rem;
 }
 
-.container-foto {
-    padding: 1rem;
-    /* border-radius: 1000px; */
-}
 
 
-.scroller-div {
-    border-radius: 1000px;
-    overflow: hidden;
-}
-
-.foto {
-    width: 100%;
-    height: 100%;
-    transform: scale(1.15) translateY(6%);
-}
-
-.container-text-bio {
-    padding: 1rem;
-}
 
 .title-icon {
     height: 2rem;
@@ -151,23 +138,22 @@ img, .noselect {
 
 
 
-/* #region MEDIA QUERIES */
-/* Mòbil */
+// #region MEDIA QUERIES //
+///////////////////
+// MEDIA QUERIES //
+///////////////////
+// Mòbil //
 @media only screen and (max-width: 576px) {
     .title {
         font-size: 2rem;
     }
-    .container-foto, .container-text-bio {
-        padding: 2rem;
-    }
 
 
 }
-/* PC */
-/* @media only screen and (min-width: 576px) {
-} */
+// PC //
+// @media only screen and (min-width: 576px) { }
 
 
-/* @media only screen and (max-width: 576px) { // Mòbil // } */
-/* @media only screen and (min-width: 576px) { // PC // } */
-/* #endregion MEDIA QUERIES */
+// @media only screen and (max-width: 576px) { // Mòbil // }
+// @media only screen and (min-width: 576px) { // PC // }
+// #endregion MEDIA QUERIES //

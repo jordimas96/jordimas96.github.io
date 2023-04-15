@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { Utils } from './../../services/utils.service';
 import * as $ from "jquery";
+import { MainService } from 'src/app/services/main.service';
 
 
 @Component({
@@ -15,7 +16,10 @@ export class AppbarComponent {
     idioma: string = "en";
     
 
-    ngOnInit(): void {
+    constructor(public m: MainService) {
+        m.appbar = this;
+    }
+    ngOnInit() {
         this.modeFosc = this.getDarkMode();
 
         this.tema = this.getTema();
@@ -28,16 +32,18 @@ export class AppbarComponent {
 
 
         this.actTema();
+
+        // setTimeout(() => { $("app-root").fadeIn(300); }, 1);
     }
 
-    btnDarkMode_click(): void {
+    btnDarkMode_click() {
         this.modeFosc = !this.modeFosc;
         this.actTema();
         Utils.setCookie("darkmode", this.modeFosc ? 1 : 0)
         $(".botoAutoMode").fadeIn(200);
     }
 
-    btnAutoDarkMode_click(): void {
+    btnAutoDarkMode_click() {
         this.modeFosc = Utils.systemDarkMode();
         this.actTema();
         Utils.removeCookie("darkmode");
@@ -103,9 +109,5 @@ export class AppbarComponent {
     setCookieIdioma() {
         Utils.setCookie("lang", this.idioma);
     }
-
-    ca() { return this.idioma == "ca" }
-    es() { return this.idioma == "es" }
-    en() { return this.idioma == "en" }
 
 }
