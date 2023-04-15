@@ -1,11 +1,11 @@
 <footer class="footer dark">
-    <div id="contact">
-        <!-- <h3>
-            <span lang="ca">Contacte</span>
-            <span lang="es">Contacto</span>
-            <span lang="en">Contact</span>
+    <!-- <div id="contact"> -->
+        <!-- <h3 class="subtitle">
+            <ng-container *ngIf="m.ca()">Contacte</ng-container>
+            <ng-container *ngIf="m.es()">Contacto</ng-container>
+            <ng-container *ngIf="m.en()">Contact</ng-container>
         </h3> -->
-        <div class="px-2 py-4" style="text-align: center;">
+        <div class="contact-icons">
             <a href="https://github.com/jordimas96" class="link-img mr-3">
                 <img src="assets/icons/contact/GitHub.png" alt="GitHub" title="GitHub" class="title-icon">
             </a>
@@ -20,5 +20,6 @@
             </a>
 
         </div>
-    </div>
+        
+    <!-- </div> -->
 </footer>

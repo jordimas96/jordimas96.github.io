@@ -15,4 +15,12 @@
     height: var(--footer-altura);
     border-top: 1px solid var(--text);
     // box-shadow: inset -100px 133px 9px -123px var(--text);
+
+    display: flex;
+
+    .contact-icons {
+        text-align: center;
+        height: fit-content;
+        margin: auto;
+    }
 }
