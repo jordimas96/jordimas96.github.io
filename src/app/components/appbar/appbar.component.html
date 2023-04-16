@@ -7,9 +7,21 @@
     
 
     <div class="navegacio col-12 col-md-8 order-3 order-md-2">
-        <button routerLinkActive="selected" [routerLinkActiveOptions]="{exact: true}" routerLink="/">Home</button>
-        <button routerLinkActive="selected" [routerLinkActiveOptions]="{exact: true}" routerLink="/experience">Experience</button>
-        <button routerLinkActive="selected" [routerLinkActiveOptions]="{exact: true}" routerLink="/projects">Projects</button>
+        <button routerLinkActive="selected" [routerLinkActiveOptions]="{exact: true}" routerLink="/">
+            <ng-container *ngIf="m.ca()">Inici</ng-container>
+            <ng-container *ngIf="m.es()">Inicio</ng-container>
+            <ng-container *ngIf="m.en()">Home</ng-container>
+        </button>
+        <button routerLinkActive="selected" [routerLinkActiveOptions]="{exact: true}" routerLink="/experience">
+            <ng-container *ngIf="m.ca()">Experiència</ng-container>
+            <ng-container *ngIf="m.es()">Experiencia</ng-container>
+            <ng-container *ngIf="m.en()">Experience</ng-container>
+        </button>
+        <button routerLinkActive="selected" [routerLinkActiveOptions]="{exact: true}" routerLink="/projects">
+            <ng-container *ngIf="m.ca()">Projectes</ng-container>
+            <ng-container *ngIf="m.es()">Proyectos</ng-container>
+            <ng-container *ngIf="m.en()">Projects</ng-container>
+        </button>
     </div>
 
     <div class="idioma col-6 col-md-2 order-2 order-md-3">

@@ -25,12 +25,11 @@
 
     .navegacio {
         text-align: center;
-        height: fit-content;
+        height: 4rem;
 
         button {
             background-color: var(--fons);
             color: var(--text);
-            height: 100%;
             outline: none;
             cursor: pointer;
             border: 1px solid var(--text);
@@ -38,15 +37,12 @@
             padding: 0.25rem 1rem;
             border-radius: 0.6rem;
 
-            transition: border-radius 0.3s ease, font-size 0.3s ease, var(--transicio-colors);
+            transition: border-radius 0.3s ease, font-size 0.3s ease, padding 0.3s ease, var(--transicio-colors);
 
             &.selected {
                 background-color: var(--text);
                 color: var(--fons);
                 border-radius: 1.6rem;
-            }
-            &:not(:last-child) {
-                margin-right: 0.5rem;
             }
         }
     }
@@ -60,8 +56,8 @@
             color: var(--text);
             border-color: var(--text);
             border-radius: 5px;
-            margin: auto;
-            padding: 0.25rem 1rem;
+            padding: 0.25rem 0.5rem 0.25rem 1rem;
+            margin-top: 0.25rem;
             font-size: large;
             outline: none;
             cursor: pointer;
@@ -70,6 +66,12 @@
 }
 
 
+// Pantalla Gran //
+@media only screen and (min-width: 992px) {
+    .navegacio button {
+        padding: 0.25rem 3rem !important;
+    }
+}
 // PC //
 @media only screen and (min-width: 576px) {
     .navegacio button {
@@ -77,8 +79,10 @@
     }
 }
 // Mòbil //
-@media only screen and (max-width: 576px) {
+@media only screen and (max-width: 575px) {
     .navegacio button {
         font-size: 1.1rem;
     }
 }
+
+

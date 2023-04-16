@@ -9,8 +9,8 @@ import { FooterComponent } from './components/footer/footer.component';
 import { ImatgeScrollComponent } from './components/imatge-scroll/imatge-scroll.component';
 import { ExperiencePageComponent } from './pages/experience-page/experience-page.component';
 import { ProjectsPageComponent } from './pages/projects-page/projects-page.component';
-import { ContactPageComponent } from './pages/contact-page/contact-page.component';
 import { HomePageComponent } from './pages/home-page/home-page.component';
+import { TargetBlankDirective } from './directives/target-blank.directive';
 
 @NgModule({
     declarations: [
@@ -22,10 +22,12 @@ import { HomePageComponent } from './pages/home-page/home-page.component';
         ImatgeScrollComponent,
     
         // Pages //
+        HomePageComponent,
         ExperiencePageComponent,
         ProjectsPageComponent,
-        ContactPageComponent,
-        HomePageComponent,
+
+        // Directives //
+        TargetBlankDirective,
     ],
     imports: [
         BrowserModule,

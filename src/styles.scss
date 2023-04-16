@@ -7,6 +7,8 @@
 // Per a més efectivitat (si el primer no funciona) //
 // ::ng-deep
 
+// * { transition: all 0.3s ease; }
+
 html {
     font-family: Arial, sans-serif;
     color-scheme: dark;
@@ -57,6 +59,13 @@ body {
     margin-bottom: 1rem;
     text-align: center;
 }
+.subtitle {
+    
+}
+.text {
+    text-align: justify;
+}
+
 .title, .subtitle, .text {
     transition: font-size 0.3s ease;
 }
@@ -64,7 +73,6 @@ body {
 .group {
     margin-top: 3rem;
 }
-
 
 
 
@@ -138,11 +146,11 @@ img, .noselect {
         font-size: 1.75rem;
     }
     .text {
-
+        font-size: 1.1rem;
     }
 }
 // Mòbil //
-@media only screen and (max-width: 576px) {
+@media only screen and (max-width: 575px) {
     .title {
         font-size: 2rem;
     }
@@ -150,11 +158,11 @@ img, .noselect {
         font-size: 1.4rem;
     }
     .text {
-        
+        font-size: 1.1rem;
     }
 }
 
 
-// @media only screen and (max-width: 576px) { // Mòbil // }
 // @media only screen and (min-width: 576px) { // PC // }
+// @media only screen and (max-width: 575px) { // Mòbil // }
 // #endregion MEDIA QUERIES //

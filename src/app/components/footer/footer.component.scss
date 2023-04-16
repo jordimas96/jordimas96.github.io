@@ -14,17 +14,23 @@ footer {
     width: 100%;
     height: var(--footer-altura);
     border-top: 1px solid var(--text);
-    // box-shadow: inset -100px 133px 9px -123px var(--text);
 
     display: flex;
+    transition: height 0.3s ease;
 
     .contact-icons {
         text-align: center;
         height: fit-content;
         margin: auto;
 
-        a:not(:last-child) {
-            margin-right: 1rem;
+        a {
+            margin: 0.5rem;
+
+            .title-icon {
+                height: 2.2rem;
+            }
         }
     }
 }
+
+// ::ng-deep .light footer { box-shadow: inset -100px 133px 9px -123px var(--text); }
