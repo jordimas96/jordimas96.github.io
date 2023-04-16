@@ -1,18 +1,22 @@
-<div class="appbar">
-    <div class="botonsDarkMode">
+<div class="appbar row no-gutters">
+    <div class="botonsDarkMode col-6 col-md-2 order-1 order-md-1">
         <button (click)="btnDarkMode_click()" class="botoDarkMode"><i class="fa-solid fa-circle-half-stroke"></i></button>
         <button (click)="btnAutoDarkMode_click()" class="botoDarkMode botoAutoMode ml-1" style="display:none;"><b>A</b></button>
     </div>
 
-    <nav style="background-color: #000; border-radius: 20px;" class="pt-3 px-3 mt-1 h4">
-        <a routerLink="/">home</a>&nbsp;
-        <a routerLink="/experience">experience</a>&nbsp;
-        <a routerLink="/projects">projects</a>&nbsp;
-    </nav>
+    
 
-    <select [(ngModel)]="idioma" id="idioma" name="idioma" class="select-idioma" (change)='setCookieIdioma()'>
-        <option value="ca">Català</option>
-        <option value="es">Español</option>
-        <option value="en">English</option>
-    </select>
+    <div class="navegacio col-12 col-md-8 order-3 order-md-2">
+        <button routerLinkActive="selected" [routerLinkActiveOptions]="{exact: true}" routerLink="/">Home</button>
+        <button routerLinkActive="selected" [routerLinkActiveOptions]="{exact: true}" routerLink="/experience">Experience</button>
+        <button routerLinkActive="selected" [routerLinkActiveOptions]="{exact: true}" routerLink="/projects">Projects</button>
+    </div>
+
+    <div class="idioma col-6 col-md-2 order-2 order-md-3">
+        <select class="select-idioma" [(ngModel)]="idioma" id="idioma" name="idioma" (change)='setCookieIdioma()'>
+            <option value="ca">Català</option>
+            <option value="es">Español</option>
+            <option value="en">English</option>
+        </select>
+    </div>
 </div>

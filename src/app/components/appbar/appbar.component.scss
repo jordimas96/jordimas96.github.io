@@ -6,33 +6,64 @@
 .appbar {
     display: flex;
     justify-content: space-between;
-}
 
-.botonsDarkMode {
-    width: fit-content;
-    margin: 0.5rem;
-    .botoDarkMode {
-        background-color: var(--fonsBotoDM);
-        color: var(--text);
-        border: none;
-        border-radius: 10000px;
-        cursor: pointer;
-        padding: 0.5rem 1.4rem;
-        font-size: 16pt;
-        transition: var(--transicio-colors);
+    .botonsDarkMode {
+        width: fit-content;
+        padding: 0.5rem;
+        .botoDarkMode {
+            background-color: var(--fonsBotoDM);
+            color: var(--text);
+            border: none;
+            border-radius: 10000px;
+            cursor: pointer;
+            padding: 0.5rem 1.4rem;
+            font-size: 16pt;
+            transition: var(--transicio-colors);
+        }
+        .botoDarkMode:focus {
+            outline: none;
+        }
     }
-    .botoDarkMode:focus {
-        outline: none;
+
+    .navegacio {
+        text-align: center;
+        padding: 0.5rem;
+
+        button {
+            background-color: var(--fons);
+            color: var(--text);
+            height: 100%;
+            font-size: 1.5rem;
+            outline: none;cursor: pointer;
+            border: 1px solid var(--text);
+            padding: 0.25rem 1rem;
+            border-radius: 0.8rem;
+
+            transition: border-radius 0.3s ease, var(--transicio-colors);
+
+            &.selected {
+                background-color: var(--text);
+                color: var(--fons);
+                border-radius: 1.6rem;
+            }
+            &:not(:last-child) {
+                margin-right: 0.5rem;
+            }
+        }
     }
-}
 
+    .idioma {
+        padding: 0.5rem;
+        text-align: right;
 
-.select-idioma {
-    background-color: var(--fons);
-    color: var(--text);
-    border-color: var(--text);
-    border-radius: 5px;
-    margin: auto 1rem;
-    padding: 0.25rem 1rem;
-    font-size: large;
+        .select-idioma {
+            background-color: var(--fons);
+            color: var(--text);
+            border-color: var(--text);
+            border-radius: 5px;
+            margin: auto;
+            padding: 0.25rem 1rem;
+            font-size: large;
+        }
+    }
 }

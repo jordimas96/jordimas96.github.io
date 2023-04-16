@@ -22,5 +22,9 @@
         text-align: center;
         height: fit-content;
         margin: auto;
+
+        a:not(:last-child) {
+            margin-right: 1rem;
+        }
     }
 }
