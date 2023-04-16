@@ -15,31 +15,30 @@
             color: var(--text);
             border: none;
             border-radius: 10000px;
+            outline: none;
             cursor: pointer;
             padding: 0.5rem 1.4rem;
             font-size: 16pt;
             transition: var(--transicio-colors);
         }
-        .botoDarkMode:focus {
-            outline: none;
-        }
     }
 
     .navegacio {
         text-align: center;
-        padding: 0.5rem;
+        height: fit-content;
 
         button {
             background-color: var(--fons);
             color: var(--text);
             height: 100%;
-            font-size: 1.5rem;
-            outline: none;cursor: pointer;
+            outline: none;
+            cursor: pointer;
             border: 1px solid var(--text);
+            margin: 0.5rem 0.25rem;
             padding: 0.25rem 1rem;
-            border-radius: 0.8rem;
+            border-radius: 0.6rem;
 
-            transition: border-radius 0.3s ease, var(--transicio-colors);
+            transition: border-radius 0.3s ease, font-size 0.3s ease, var(--transicio-colors);
 
             &.selected {
                 background-color: var(--text);
@@ -64,6 +63,22 @@
             margin: auto;
             padding: 0.25rem 1rem;
             font-size: large;
+            outline: none;
+            cursor: pointer;
         }
+    }
+}
+
+
+// PC //
+@media only screen and (min-width: 576px) {
+    .navegacio button {
+        font-size: 1.5rem;
+    }
+}
+// Mòbil //
+@media only screen and (max-width: 576px) {
+    .navegacio button {
+        font-size: 1.1rem;
     }
 }
