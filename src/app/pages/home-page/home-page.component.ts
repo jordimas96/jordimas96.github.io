@@ -10,4 +10,11 @@ export class HomePageComponent {
 
     constructor(public m: MainService) { }
 
+    ngOnInit() {
+        setTimeout(() => { this.afterFadeIn(); }, $("app-root").is(":visible") ? 0 : this.m.tempsDelayCarregaPag); // Retard fadein pagina //
+    }
+
+    afterFadeIn() {
+        $("app-imatge-scroll").fadeIn(300);
+    }
 }

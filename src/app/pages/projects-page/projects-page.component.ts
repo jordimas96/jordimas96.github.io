@@ -13,9 +13,13 @@ export class ProjectsPageComponent {
     constructor(public m: MainService) { }
 
     ngOnInit() {
-        setTimeout(() => {
-            this.mostrarWidgetJoc = true;
-        }, this.m.tempsDelayCarregaPag);
+        setTimeout(() => { this.afterFadeIn(); }, $("app-root").is(":visible") ? 0 : this.m.tempsDelayCarregaPag); // Retard fadein pagina //
     }
 
+    afterFadeIn() {
+        this.mostrarWidgetJoc = true;
+        setTimeout(() => {
+            $(".game").css("transform","scaleY(1)");
+        }, 400);
+    }
 }

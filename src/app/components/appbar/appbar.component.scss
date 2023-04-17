@@ -18,7 +18,7 @@
             outline: none;
             cursor: pointer;
             padding: 0.5rem 1.4rem;
-            font-size: 16pt;
+            font-size: 1.3rem;
             transition: var(--transicio-colors);
         }
     }
@@ -58,9 +58,9 @@
             border-radius: 5px;
             padding: 0.25rem 0.5rem 0.25rem 1rem;
             margin-top: 0.25rem;
-            font-size: large;
             outline: none;
             cursor: pointer;
+            transition: padding 0.3s ease, font-size 0.3s ease, var(--transicio-colors);
         }
     }
 }
@@ -69,7 +69,12 @@
 // Pantalla Gran //
 @media only screen and (min-width: 992px) {
     .navegacio button {
-        padding: 0.25rem 3rem !important;
+        padding-left: 3rem !important;
+        padding-right: 3rem !important;
+    }
+    .idioma .select-idioma {
+        padding-left: 2rem !important;
+        padding-right: 1.5rem !important;
     }
 }
 // PC //
@@ -77,10 +82,16 @@
     .navegacio button {
         font-size: 1.5rem;
     }
+    .idioma .select-idioma {
+        font-size: 1.2rem;
+    }
 }
 // Mòbil //
 @media only screen and (max-width: 575px) {
     .navegacio button {
+        font-size: 1.1rem;
+    }
+    .idioma .select-idioma {
         font-size: 1.1rem;
     }
 }

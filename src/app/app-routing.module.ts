@@ -6,16 +6,20 @@ import { ProjectsPageComponent } from './pages/projects-page/projects-page.compo
 
 const routes: Routes = [
     {
-        path: '',
+        path: "",
         component: HomePageComponent
     },
     {
-        path: 'experience',
+        path: "experience",
         component: ExperiencePageComponent
     },
     {
-        path: 'projects',
+        path: "projects",
         component: ProjectsPageComponent
+    },
+    {
+        path: "**",
+        redirectTo: ""
     },
 
 ];
