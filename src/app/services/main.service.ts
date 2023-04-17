@@ -20,6 +20,10 @@ export class MainService {
 
     constructor() {
         this.utils = Utils;
+
+        // NOMÉS per poder debugar //
+        if (Utils.esDebug())
+            window["main"] = this;
     }
     onInit() { }
 

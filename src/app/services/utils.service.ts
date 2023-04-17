@@ -49,12 +49,9 @@ export class Utils {
 
 
     // Utils //
-    public static esMobil() {
-        return window.innerWidth <= 576;
-    }
-    public static esPc() {
-        return !this.esMobil();
-    }
+    public static esMobil() { return window.innerWidth <= 576; }
+    public static esPc() { return !this.esMobil(); }
+    public static esDebug() { return window.location.origin == "http://localhost:4200"; }
     public static objPle(obj) {
         if (!obj) return false;
         else return JSON.stringify(obj) != "{}";
