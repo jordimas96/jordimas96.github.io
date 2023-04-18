@@ -51,7 +51,6 @@ export class Utils {
     // Utils //
     public static esMobil() { return window.innerWidth <= 576; }
     public static esPc() { return !this.esMobil(); }
-    public static esDebug() { return window.location.origin == "http://localhost:4200"; }
     public static objPle(obj) {
         if (!obj) return false;
         else return JSON.stringify(obj) != "{}";
@@ -66,7 +65,11 @@ export class Utils {
     }
 
 
-
+    public static fadeIn(selector, retard = 0) {
+        setTimeout(() => {
+            $(selector).addClass("mostrat");
+        }, retard);
+    }
 
 
 

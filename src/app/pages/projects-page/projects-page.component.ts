@@ -1,5 +1,6 @@
 import { Component, ViewChild } from '@angular/core';
 import { MainService } from 'src/app/services/main.service';
+import { Utils } from 'src/app/services/utils.service';
 
 @Component({
     selector: 'app-projects-page',
@@ -14,12 +15,17 @@ export class ProjectsPageComponent {
     constructor(public m: MainService) { }
 
     ngOnInit() {
-        setTimeout(() => { this.afterFadeIn(); }, $("app-root").is(":visible") ? 0 : this.m.tempsDelayCarregaPag); // Retard fadein pagina //
-
+        this.m.afterRootFadeIn(this.afterRootFadeIn.bind(this));
         
     }
 
-    afterFadeIn() {
+    afterRootFadeIn() {
+        Utils.fadeIn(".content .ocult-animacio:nth-child(1)", 0);
+        Utils.fadeIn(".content .ocult-animacio:nth-child(2)", 25);
+        Utils.fadeIn(".content .ocult-animacio:nth-child(3)", 50);
+        Utils.fadeIn(".content .ocult-animacio:nth-child(4)", 75);
+
+
         this.mostrarWidgetJoc = true;
         setTimeout(() => {
             // Mostrar amb fadein el widget quan s'hagi carregat //

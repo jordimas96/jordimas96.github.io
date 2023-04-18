@@ -11,18 +11,15 @@ import { MainService } from 'src/app/services/main.service';
 })
 export class AppbarComponent {
     
-    modeFosc: boolean = true;
-    tema: string = "";
-    idioma: string = "en";
-    
 
     constructor(public m: MainService) {
         m.appbar = this;
     }
     ngOnInit() {
-        this.modeFosc = this.getDarkMode();
+        this.m.afterRootFadeIn(this.afterRootFadeIn.bind(this));
+        this.m.modeFosc = this.getDarkMode();
 
-        this.tema = this.getTema();
+        this.m.tema = this.getTema();
 
 
         // Mostrar boto Dark Mode Auto si cal //
@@ -36,15 +33,20 @@ export class AppbarComponent {
         setTimeout(() => { $("app-root").fadeIn(300); }, this.m.tempsDelayCarregaPag);
     }
 
+    afterRootFadeIn() {
+        Utils.fadeIn(".appbar", 200);
+    }
+
+
     btnDarkMode_click() {
-        this.modeFosc = !this.modeFosc;
+        this.m.modeFosc = !this.m.modeFosc;
         this.actTema();
-        Utils.setCookie("darkmode", this.modeFosc ? 1 : 0)
+        Utils.setCookie("darkmode", this.m.modeFosc ? 1 : 0)
         $(".botoAutoMode").fadeIn(200);
     }
 
     btnAutoDarkMode_click() {
-        this.modeFosc = Utils.systemDarkMode();
+        this.m.modeFosc = Utils.systemDarkMode();
         this.actTema();
         Utils.removeCookie("darkmode");
         $(".botoAutoMode").fadeOut(200);
@@ -86,28 +88,21 @@ export class AppbarComponent {
     actTema() {
         $("html")
             .removeClass()
-            .addClass(this.modeFosc ? "dark" : "light")
-            .addClass(this.tema);
+            .addClass(this.m.modeFosc ? "dark" : "light")
+            .addClass(this.m.tema);
     }
 
     // Idioma //
     establirIdiomaDefecte() {
-        // Establir idioma //
-        this.idioma = Utils.getCookie("lang") || navigator.language.split("-")[0];
+        // Detectar idioma i guardar-lo //
+        this.m.idioma = Utils.getCookie("lang") || navigator.language.split("-")[0];
         
         // Valor per defecte //
-        if (!Utils.arrayConte($("#idioma > option").map((i, e) => $(e).val()).toArray(), this.idioma))
+        if (!Utils.arrayConte($("#idioma > option").map((i, e) => $(e).val()).toArray(), this.m.idioma))
             $("#idioma").val("en");
     }
-
-    canviarIdioma(target) {
-        this.idioma = (target as HTMLSelectElement).value;
-        $("[lang=ca], [lang=es], [lang=en]").hide();
-        $(`[lang=${this.idioma}]`).show();
-        
-    }
     setCookieIdioma() {
-        Utils.setCookie("lang", this.idioma);
+        Utils.setCookie("lang", this.m.idioma);
     }
 
 }

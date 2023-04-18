@@ -1,3 +1,16 @@
+// opacity: primary (87%), secondary (60%), tertiary (38%) //
+
 .div-foto, .div-text {
     transition: all 0.3s ease;
 }
+.linia1 {
+    font-size: 1.5rem;
+    opacity: 0.6;
+}
+.linia2 {
+    font-size: 2rem;
+    .sub {
+        font-size: 1.5rem;
+    }
+}
+

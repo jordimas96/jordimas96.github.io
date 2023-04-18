@@ -1,4 +1,4 @@
-<div class="appbar row no-gutters">
+<div class="appbar row no-gutters ocult-animacio v">
     <div class="botonsDarkMode col-6 col-md-2 order-1 order-md-1 d-flex">
         <button (click)="btnDarkMode_click()" class="botoDarkMode"><i class="fa-solid fa-circle-half-stroke"></i></button>
         <button (click)="btnAutoDarkMode_click()" class="botoDarkMode botoAutoMode ml-1" style="display:none;"><b>A</b></button>
@@ -25,7 +25,7 @@
     </div>
 
     <div class="idioma col-6 col-md-2 order-2 order-md-3">
-        <select class="select-idioma" [(ngModel)]="idioma" id="idioma" name="idioma" (change)='setCookieIdioma()'>
+        <select class="select-idioma" [(ngModel)]="m.idioma" id="idioma" name="idioma" (change)='setCookieIdioma()'>
             <option value="ca">Català</option>
             <option value="es">Español</option>
             <option value="en">English</option>

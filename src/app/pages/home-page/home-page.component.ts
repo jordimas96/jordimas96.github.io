@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { MainService } from 'src/app/services/main.service';
+import { Utils } from 'src/app/services/utils.service';
 
 @Component({
     selector: 'app-home-page',
@@ -11,10 +12,12 @@ export class HomePageComponent {
     constructor(public m: MainService) { }
 
     ngOnInit() {
-        setTimeout(() => { this.afterFadeIn(); }, $("app-root").is(":visible") ? 0 : this.m.tempsDelayCarregaPag); // Retard fadein pagina //
+        this.m.afterRootFadeIn(this.afterRootFadeIn.bind(this));
     }
 
-    afterFadeIn() {
-        $("app-imatge-scroll").fadeIn(300);
+    afterRootFadeIn() {
+        Utils.fadeIn(".div-foto", 0);
+        // Utils.fadeIn(".div-text", 200);
+        Utils.fadeIn(".div-text", 50);
     }
 }

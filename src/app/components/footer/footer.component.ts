@@ -19,8 +19,17 @@ export class FooterComponent {
     constructor(public m: MainService) {
         // m.footer = this;
     }
+
     ngOnInit() {
-        
+        this.m.afterRootFadeIn(this.afterRootFadeIn.bind(this));
+
+    }
+
+    afterRootFadeIn() {
+        Utils.fadeIn(".contact-icons a:nth-child(1)", 100);
+        Utils.fadeIn(".contact-icons a:nth-child(2)", 200);
+        Utils.fadeIn(".contact-icons a:nth-child(3)", 300);
+        Utils.fadeIn(".contact-icons a:nth-child(4)", 400);
     }
 
 
