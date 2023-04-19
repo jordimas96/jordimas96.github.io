@@ -7,10 +7,8 @@
     --breakpoint-lg: 992px;
     --breakpoint-xl: 1200px;
 
-}
-
-// Estils generals dark mode //
-body {
+    // Estils generals dark mode //
+    
     // --fons: rgb(0, 31, 31);
     // --text: rgb(224, 255, 255);
     --fons: rgb(16, 16, 16);
@@ -20,14 +18,16 @@ body {
     --link-hover: #2b94d6;
 
     --transicio-colors: background-color 0.3s ease, color 0.15s ease, border-color 0.3s ease, filter 0.3s ease;
-}
-.light body {
-    --fons: rgb(255, 255, 255);
-    --text: rgb(16, 16, 16);
 
-    --link: #0089ff;
-    --link-hover: #0065bd;
+    &.light {
+        --fons: rgb(255, 255, 255);
+        --text: rgb(16, 16, 16);
+    
+        --link: #0089ff;
+        --link-hover: #0065bd;
+    }
 }
+
 
 // PC //
 @media only screen and (min-width: 576px) {

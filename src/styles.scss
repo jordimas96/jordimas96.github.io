@@ -130,7 +130,7 @@ body {
     transition: all 0.3s ease;
 }
 
-
+// Pages //
 .content {
     max-width: 940px;
     margin: auto;
@@ -142,9 +142,10 @@ body {
     margin-top: 1.5rem;
     margin-bottom: 1rem;
     text-align: center;
+    color: var(--text);
 }
 .subtitle {
-    
+    color: var(--text);
 }
 .text {
     text-align: justify;
@@ -181,13 +182,16 @@ html.dark .inv-dark-2 {
 
 
 /* Fixes */
-a:not(.link-img):link, a:not(.link-img):visited {
-    color: var(--link);
+a:not(.link-img) {
     text-decoration: none;
-}
-a:not(.link-img):hover {
-    color: var(--link-hover);
-    text-decoration: underline;
+    &:link, &:visited {
+        color: var(--link);
+        
+    }
+    &:hover {
+        color: var(--link-hover);
+        text-decoration: underline;
+    }
 }
 a.link-img {
     display: inline-block;

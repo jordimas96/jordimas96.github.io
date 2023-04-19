@@ -7,13 +7,15 @@
 .linia1 {
     text-align: right;
     color: var(--text-60);
-    transition: font-size 0.3s ease;
+    transition: font-size 0.3s ease, var(--transicio-colors);
 }
 .linia2 {
     text-align: right;
-    transition: font-size 0.3s ease;
+    color: var(--text);
+    transition: font-size 0.3s ease, var(--transicio-colors);
     .sub {
         color: var(--text-70);
+        transition: font-size 0.3s ease, var(--transicio-colors);
     }
 }
 
