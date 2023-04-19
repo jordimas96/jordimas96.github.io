@@ -126,7 +126,8 @@ body {
     background: var(--fons);
     color: var(--text);
     margin-bottom: var(--footer-altura);
-    transition: var(--transicio-colors);
+    // transition: var(--transicio-colors);
+    transition: all 0.3s ease;
 }
 
 
@@ -151,7 +152,7 @@ body {
 }
 
 .title, .subtitle, .text {
-    transition: font-size 0.3s ease;
+    transition: font-size 0.3s ease, var(--transicio-colors);
 }
 
 .group {
@@ -224,7 +225,7 @@ img, .noselect {
     &.-v { transform: translateY(30px); }
     &.-h { transform: translateX(30px); }
     opacity: 0;
-    transition: transform 0.3s ease, opacity 0.5s ease;
+    transition: transform 0.3s ease, opacity 0.5s ease, font-size 0.3s ease, var(--transicio-colors);
 
     &.mostrat {
         transform: translate(0);
