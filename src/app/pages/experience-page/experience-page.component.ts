@@ -16,9 +16,9 @@ export class ExperiencePageComponent {
     }
 
     afterRootFadeIn() {
-        Utils.fadeIn(".content .ocult-animacio:nth-child(1)", 0);
-        Utils.fadeIn(".content .ocult-animacio:nth-child(2)", 25);
-        Utils.fadeIn(".content .ocult-animacio:nth-child(3)", 50);
+        Utils.fadeIn($(".content .ocult-animacio").eq(0), 0);
+        Utils.fadeIn($(".content .ocult-animacio").eq(1), 25);
+        Utils.fadeIn($(".content .ocult-animacio").eq(2), 50);
     }
 
 }

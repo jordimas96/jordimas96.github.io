@@ -4,42 +4,96 @@
 .div-foto, .div-text {
     transition: all 0.3s ease;
 }
-.linia1 {
+
+.linies {
     text-align: right;
-    color: var(--text-60);
-    transition: font-size 0.3s ease, var(--transicio-colors);
-}
-.linia2 {
-    text-align: right;
-    color: var(--text);
-    transition: font-size 0.3s ease, var(--transicio-colors);
-    .sub {
-        color: var(--text-70);
+    & * {
         transition: font-size 0.3s ease, var(--transicio-colors);
+    }
+
+    .bondia {
+        color: var(--text-60);
+    }
+    .nom {
+        color: var(--text);
+        .emdic {
+            color: var(--text-70);
+        }
+    }
+    .programador {
+        color: var(--text-70);
+        font-style: italic;
     }
 }
 
+.llenguatges {
+    .titol-tipus-llenguatge {
+        font-size: 1.2rem;
+        color: var(--text-80);
+    }
+    .chips {
+        overflow: hidden;
+        
+
+        .chip {
+            color: #fff;
+            background-color: var(--text);
+            font-size: 1rem;
+            padding: 0.25rem 0.75rem;
+            margin: 0.25rem;
+            border-radius: 1000px;
+            float: left;
+
+            
+            &.angular    { background-color: #dd0031; color: #ffffff; }
+            &.javascript { background-color: #ffdf00; color: #000000; }
+            &.jquery     { background-color: #0868ac; color: #ffffff; }
+            &.typescript { background-color: #0078cf; color: #ffffff; }
+            &.css        { background-color: #2196f3; color: #ffffff; }
+            &.sass       { background-color: #d56fa4; color: #ffffff; }
+            &.html       { background-color: #e64c18; color: #ffffff; }
+            &.android    { background-color: #3DDC84; color: #000000; }
+            &.python     { background-color: #3572A5; color: #ffffff; }
+            &.django     { background-color: #003e2b; color: #ffffff; }
+            &.csharp     { background-color: #953dac; color: #ffffff; }
+            &.java       { background-color: #e11f21; color: #ffffff; }
+            &.nodejs     { background-color: #83cd29; color: #000000; }
+            &.plsql      { background-color: #e11a1f; color: #ffffff; }
+            &.php        { background-color: #777bb3; color: #ffffff; }
+            &.sequelize  { background-color: #02aeee; color: #ffffff; }
+            &.joomla     { background-color: #5091cd; color: #ffffff; }
+        }
+    }
+}
+
+
 // PC //
 @media only screen and (min-width: 576px) {
-    .linia1 {
+    .bondia {
         font-size: 1.8rem;
     }
-    .linia2 {
+    .nom {
         font-size: 1.7rem;
-        .sub {
+        .emdic {
             font-size: 1.4rem;
         }
+    }
+    .programador {
+        font-size: 1.2rem;
     }
 }
 // Mòbil //
 @media only screen and (max-width: 575px) {
-    .linia1 {
-        font-size: 1.2rem;
+    .bondia {
+        font-size: 1.4rem;
     }
-    .linia2 {
-        font-size: 1.2rem;
-        .sub {
+    .nom {
+        font-size: 1.3rem;
+        .emdic {
             font-size: 1.1rem;
         }
+    }
+    .programador {
+        font-size: 0.9rem;
     }
 }

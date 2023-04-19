@@ -1,4 +1,4 @@
-<div class="content" [style.padding-top.px]="m.u.getAlturaAppbar() + 16">
+<div class="content" [style.margin-top.px]="m.u.getAlturaAppbar()">
     <!-- <div class="title h1 mt-0 mb-4">Jordi Mas Parramon</div> -->
 
     <div class="row no-gutters">
@@ -9,24 +9,96 @@
             <!-- <h2>Bona tarda</h2>
             <div class="d-inline"><small style="opacity:0.8">sóc en</small> <h1>Jordi Mas Parramon</h1></div> -->
 
-            <div class="linia1">{{getSalutacioSegonsHora()}}</div>
-            <div class="linia2">
-                <span class="sub">
-                    <ng-container *ngIf="m.ca()">Em dic</ng-container>
-                    <ng-container *ngIf="m.es()">Me llamo</ng-container>
-                    <ng-container *ngIf="m.en()">My name is</ng-container>
-                </span>
-                <br class="d-sm-none">
-                Jordi Mas Parramon
+            <div class="linies">
+                <div class="bondia mb-2">{{getSalutacioSegonsHora()}}</div>
+                <div class="nom">
+                    <span class="emdic">
+                        <ng-container *ngIf="m.ca()">Em dic</ng-container>
+                        <ng-container *ngIf="m.es()">Me llamo</ng-container>
+                        <ng-container *ngIf="m.en()">My name is</ng-container>
+                    </span>
+                    <br *ngIf="m.esMobil()">
+                    Jordi Mas Parramon
+                </div>
+                <div class="programador">
+                    -
+                    <ng-container *ngIf="m.ca()">Programador frontend</ng-container>
+                    <ng-container *ngIf="m.es()">Programador frontend</ng-container>
+                    <ng-container *ngIf="m.en()">Frontend programmer</ng-container>
+                    -
+                </div>
             </div>
-              
-            <p class="text">
-                <ng-container *ngIf="m.ca()">i sóc un apassionat programador amb experiència en Angular, CSS, Javascript, C# i Python, entre altres. En aquesta web, trobaràs informació sobre la meva experiència, habilitats i projectes, així com la meva informació de contacte perquè puguem conversar sobre com et puc ajudar amb el teu proper projecte.</ng-container>
-                
-                <ng-container *ngIf="m.es()">y soy un apasionado programador con experiencia en Angular, CSS, Javascript, C# y Python, entre otros. En esta web, encontrarás información sobre mi experiencia, habilidades y proyectos, así como mi información de contacto para que podamos conversar sobre cómo puedo ayudarte con tu próximo proyecto.</ng-container>
-
-                <ng-container *ngIf="m.en()">and I am a passionate programmer with experience in Angular, CSS, Javascript, C# and Python, among others. On this site, you'll find information about my past experience, skills, and projects, as well as my contact information so we can discuss about how I can help with your next project.</ng-container>
-            </p>
+            <!-- Recipient bio pc -->
+            <div *ngIf="m.esPc()" class="text bio mt-4">
+                <div *ngTemplateOutlet="bio"></div>
+            </div>
+            
         </div>
     </div>
+    <!-- Recipient bio mobil -->
+    <div *ngIf="m.esMobil()" class="text bio mt-4">
+        <div *ngTemplateOutlet="bio"></div>
+    </div>
+    <!-- Template bio -->
+    <ng-template #bio>
+        <ng-container *ngIf="m.ca()">Sóc un apassionat programador amb experiència en Angular, CSS, Javascript, C# i Python, entre altres. En aquesta web, trobaràs informació sobre la meva experiència, habilitats i projectes, així com la meva informació de contacte perquè puguem conversar sobre com et puc ajudar amb el teu proper projecte.</ng-container>
+            
+        <ng-container *ngIf="m.es()">Soy un apasionado programador con experiencia en Angular, CSS, Javascript, C# y Python, entre otros. En esta web, encontrarás información sobre mi experiencia, habilidades y proyectos, así como mi información de contacto para que podamos conversar sobre cómo puedo ayudarte con tu próximo proyecto.</ng-container>
+    
+        <ng-container *ngIf="m.en()">I am a passionate programmer with experience in Angular, CSS, Javascript, C# and Python, among others. On this site, you'll find information about my past experience, skills, and projects, as well as my contact information so we can discuss about how I can help with your next project.</ng-container>
+    </ng-template>
+
+    <!-- Skills -->
+    <div id="llenguatges" class="group llenguatges ocult-animacio h">
+        <div class="subtitle">
+            <ng-container *ngIf="m.ca()">Habilitats en programació</ng-container>
+            <ng-container *ngIf="m.es()">Habilidades en programación</ng-container>
+            <ng-container *ngIf="m.en()">Programming skills</ng-container>
+        </div>
+        <div class="row no-gutters">
+            <div class="col-12 col-sm-4 mt-2">
+                <div class="titol-tipus-llenguatge ml-2">Frontend</div>
+                <div class="chips">
+                    <div class="chip ocult-animacio -v angular">Angular</div>
+                    <div class="chip ocult-animacio -v javascript">JavaScript</div>
+                    <div class="chip ocult-animacio -v jquery">JQuery</div>
+                    <div class="chip ocult-animacio -v typescript">TypeScript</div>
+                    <div class="chip ocult-animacio -v css">CSS</div>
+                    <div class="chip ocult-animacio -v sass">SASS</div>
+                    <div class="chip ocult-animacio -v html">HTML</div>
+                    <div class="chip ocult-animacio -v android">Android</div>
+                </div>
+    
+            </div>
+            <div class="col-12 col-sm-4 mt-2">
+                <div class="titol-tipus-llenguatge ml-2">Backend</div>
+                <div class="chips">
+                    <div class="chip ocult-animacio -v python">Python</div>
+                    <div class="chip ocult-animacio -v django">Django</div>
+                    <div class="chip ocult-animacio -v csharp">C#</div>
+                    <div class="chip ocult-animacio -v java">Java</div>
+        
+                    <div class="chip ocult-animacio -v nodejs">NodeJs</div>
+                    <div class="chip ocult-animacio -v plsql">PL/SQL</div>
+                    <div class="chip ocult-animacio -v php">PHP</div>
+                    <div class="chip ocult-animacio -v sequelize">Sequelize</div>
+                </div>
+    
+            </div>
+            <div class="col-12 col-sm-4 mt-2">
+                <div class="titol-tipus-llenguatge ml-2">
+                    <ng-container *ngIf="m.ca()">CMS i frameworks web</ng-container>
+                    <ng-container *ngIf="m.es()">CMS y frameworks web</ng-container>
+                    <ng-container *ngIf="m.en()">CMS and web frameworks</ng-container>
+                </div>
+                <div class="chips">
+                    <div class="chip ocult-animacio -v joomla">Joomla</div>
+                </div>
+    
+            </div>
+            
+        </div>
+        
+    </div>
 </div>
+

@@ -11,7 +11,7 @@ import { MainService } from 'src/app/services/main.service';
 })
 export class AppbarComponent {
     
-    public innerWidth = window.innerWidth;
+    public width = window.innerWidth;
 
     constructor(public m: MainService) {
         m.appbar = this;
@@ -112,6 +112,6 @@ export class AppbarComponent {
     // Funcions //
     @HostListener('window:resize', ['$event'])
     onResize(event) {
-        this.innerWidth = event.target.innerWidth;
+        this.width = event.target.innerWidth;
     }
 }

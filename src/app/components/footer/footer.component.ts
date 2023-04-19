@@ -26,10 +26,10 @@ export class FooterComponent {
     }
 
     afterRootFadeIn() {
-        Utils.fadeIn(".contact-icons a:nth-child(1)", 100);
-        Utils.fadeIn(".contact-icons a:nth-child(2)", 200);
-        Utils.fadeIn(".contact-icons a:nth-child(3)", 300);
-        Utils.fadeIn(".contact-icons a:nth-child(4)", 400);
+        Utils.fadeIn($(".contact-icons a").eq(0), 0);
+        Utils.fadeIn($(".contact-icons a").eq(1), 100);
+        Utils.fadeIn($(".contact-icons a").eq(2), 200);
+        Utils.fadeIn($(".contact-icons a").eq(3), 300);
     }
 
 

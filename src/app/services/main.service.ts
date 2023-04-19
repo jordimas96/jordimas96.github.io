@@ -38,6 +38,8 @@ export class MainService {
 
     public log(t) { console.log(t); }
     public logDebug(t) { if (this.debug) console.log(t); }
+    public esMobil() { return this.appbar.width <= 576; }
+    public esPc() { return !this.esMobil(); }
 
     // Funcions //
     afterRootFadeIn(funcio: Function) {

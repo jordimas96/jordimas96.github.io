@@ -49,8 +49,6 @@ export class Utils {
 
 
     // Utils //
-    public static esMobil() { return window.innerWidth; }
-    public static esPc() { return !this.esMobil(); }
     public static objPle(obj) {
         if (!obj) return false;
         else return JSON.stringify(obj) != "{}";
