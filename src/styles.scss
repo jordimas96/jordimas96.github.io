@@ -98,11 +98,14 @@ html {
     }
 }
   
-#matic .subtitle {
 
-}
 body {
     --fons: var(--color-fosc);
+    --fons-90: var(--color-fosc-90);
+    --fons-80: var(--color-fosc-80);
+    --fons-70: var(--color-fosc-70);
+    --fons-60: var(--color-fosc-60);
+    --fons-50: var(--color-fosc-50);
     --text: var(--color-clar);
     --text-90: var(--color-clar-90);
     --text-80: var(--color-clar-80);
@@ -112,6 +115,11 @@ body {
 }
 .light body {
     --fons: var(--color-clar);
+    --fons-90: var(--color-clar-90);
+    --fons-80: var(--color-clar-80);
+    --fons-70: var(--color-clar-70);
+    --fons-60: var(--color-clar-60);
+    --fons-50: var(--color-clar-50);
     --text: var(--color-fosc);
     --text-90: var(--color-fosc-90);
     --text-80: var(--color-fosc-80);
@@ -174,9 +182,6 @@ html.light .inv-dark {
 html.dark .inv-dark-2 {
     filter: invert(1);
 }
-
-
-
 
 
 

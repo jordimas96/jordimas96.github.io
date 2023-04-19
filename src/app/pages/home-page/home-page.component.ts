@@ -44,9 +44,13 @@ export class HomePageComponent {
         let horaActual = new Date().getHours();
         let index;
 
-        if (horaActual >= 5 && horaActual < 12)
+        const primeraHoraMati = 5;
+        const primeraHoraTarda = 15;
+        const primeraHoraVespre = 19;
+
+        if (horaActual >= primeraHoraMati && horaActual < primeraHoraTarda)
             index = 0;
-        else if (horaActual >= 12 && horaActual < 19)
+        else if (horaActual >= primeraHoraTarda && horaActual < primeraHoraVespre)
             index = 1;
         else
             index = 2;

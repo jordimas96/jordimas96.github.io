@@ -29,12 +29,14 @@ export class AppbarComponent {
         this.establirIdiomaDefecte();
 
 
+
         this.actTema();
 
         setTimeout(() => { $("app-root").fadeIn(300); }, this.m.tempsDelayCarregaPag);
     }
 
     afterRootFadeIn() {
+        
         Utils.fadeIn(".appbar", 200);
     }
 

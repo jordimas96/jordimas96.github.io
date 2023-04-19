@@ -58,6 +58,10 @@ export class Utils {
     public static arrayConte(array, valor) {
         return array.includes(valor);
     }
+    public static scroll0() { window.scroll(0, 0); }
+    public static getAlturaAppbar() {
+        return $(".appbar").outerHeight();
+    }
 
 
     public static systemDarkMode() {

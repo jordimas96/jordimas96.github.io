@@ -13,7 +13,7 @@ export class MainService {
     public appbar!: AppbarComponent;
 
     // Services //
-    public utils;
+    public u;
 
     // Variables //
     public tempsDelayCarregaPag = 1000;
@@ -23,7 +23,7 @@ export class MainService {
     public idioma: string = "en";
 
     constructor() {
-        this.utils = Utils;
+        this.u = Utils;
         
         // NOMÉS per poder debugar //
         if (this.debug)
