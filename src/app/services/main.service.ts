@@ -1,4 +1,4 @@
-import { Injectable } from "@angular/core";
+import { HostListener, Injectable } from "@angular/core";
 import { AppbarComponent } from "../components/appbar/appbar.component";
 import { Utils } from "./utils.service";
 
@@ -13,7 +13,7 @@ export class MainService {
     public appbar!: AppbarComponent;
 
     // Services //
-    public utils: Utils;
+    public utils;
 
     // Variables //
     public tempsDelayCarregaPag = 1000;
@@ -24,7 +24,7 @@ export class MainService {
 
     constructor() {
         this.utils = Utils;
-
+        
         // NOMÉS per poder debugar //
         if (this.debug)
             window["main"] = this;
@@ -38,7 +38,6 @@ export class MainService {
 
     public log(t) { console.log(t); }
     public logDebug(t) { if (this.debug) console.log(t); }
-
 
     // Funcions //
     afterRootFadeIn(funcio: Function) {

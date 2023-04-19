@@ -9,15 +9,23 @@
             <!-- <h2>Bona tarda</h2>
             <div class="d-inline"><small style="opacity:0.8">sóc en</small> <h1>Jordi Mas Parramon</h1></div> -->
 
-            <div class="linia1">Bona tarda!</div>
-            <div class="linia2"><span class="sub">Em dic</span> Jordi Mas Parramon</div>
+            <div class="linia1">{{getSalutacioSegonsHora()}}</div>
+            <div class="linia2">
+                <span class="sub">
+                    <ng-container *ngIf="m.ca()">Em dic</ng-container>
+                    <ng-container *ngIf="m.es()">Me llamo</ng-container>
+                    <ng-container *ngIf="m.en()">My name is</ng-container>
+                </span>
+                <br class="d-sm-none">
+                Jordi Mas Parramon
+            </div>
               
             <p class="text">
-                <ng-container *ngIf="m.ca()">Sóc un apassionat programador amb experiència en Angular, CSS, Javascript, C# i Python, entre altres. En aquesta web, trobaràs informació sobre la meva experiència, habilitats i projectes, així com la meva informació de contacte perquè puguem conversar sobre com et puc ajudar amb el teu proper projecte.</ng-container>
+                <ng-container *ngIf="m.ca()">i sóc un apassionat programador amb experiència en Angular, CSS, Javascript, C# i Python, entre altres. En aquesta web, trobaràs informació sobre la meva experiència, habilitats i projectes, així com la meva informació de contacte perquè puguem conversar sobre com et puc ajudar amb el teu proper projecte.</ng-container>
                 
-                <ng-container *ngIf="m.es()">Soy un apasionado programador con experiencia en Angular, CSS, Javascript, C# y Python, entre otros. En esta web, encontrarás información sobre mi experiencia, habilidades y proyectos, así como mi información de contacto para que podamos conversar sobre cómo puedo ayudarte con tu próximo proyecto.</ng-container>
+                <ng-container *ngIf="m.es()">y soy un apasionado programador con experiencia en Angular, CSS, Javascript, C# y Python, entre otros. En esta web, encontrarás información sobre mi experiencia, habilidades y proyectos, así como mi información de contacto para que podamos conversar sobre cómo puedo ayudarte con tu próximo proyecto.</ng-container>
 
-                <ng-container *ngIf="m.en()">I am a passionate programmer with experience in Angular, CSS, Javascript, C# and Python, among others. On this site, you'll find information about my past experience, skills, and projects, as well as my contact information so we can discuss about how I can help with your next project.</ng-container>
+                <ng-container *ngIf="m.en()">and I am a passionate programmer with experience in Angular, CSS, Javascript, C# and Python, among others. On this site, you'll find information about my past experience, skills, and projects, as well as my contact information so we can discuss about how I can help with your next project.</ng-container>
             </p>
         </div>
     </div>

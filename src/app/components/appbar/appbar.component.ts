@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, HostListener } from '@angular/core';
 import { Utils } from './../../services/utils.service';
 import * as $ from "jquery";
 import { MainService } from 'src/app/services/main.service';
@@ -11,6 +11,7 @@ import { MainService } from 'src/app/services/main.service';
 })
 export class AppbarComponent {
     
+    public innerWidth = window.innerWidth;
 
     constructor(public m: MainService) {
         m.appbar = this;
@@ -19,7 +20,7 @@ export class AppbarComponent {
         this.m.afterRootFadeIn(this.afterRootFadeIn.bind(this));
         this.m.modeFosc = this.getDarkMode();
 
-        this.m.tema = this.getTema();
+        this.m.tema = this.getTemaSegonsHora();
 
 
         // Mostrar boto Dark Mode Auto si cal //
@@ -63,15 +64,15 @@ export class AppbarComponent {
         return modeFosc;
     }
     
-    getTema() {
+    getTemaSegonsHora() {
         // Colors matinada, matí, tarda, vespre, nit //
-        let horaActual: number = new Date().getHours();
+        let horaActual = new Date().getHours();
         
-        const primeraHoraNit: number = 1;
-        const primeraHoraMatinada: number = 6;
-        const primeraHoraMati: number = 9;
-        const primeraHoraTarda: number = 15;
-        const primeraHoraVespre: number = 20;
+        const primeraHoraNit = 1;
+        const primeraHoraMatinada = 6;
+        const primeraHoraMati = 9;
+        const primeraHoraTarda = 15;
+        const primeraHoraVespre = 20;
 
         if (horaActual >= primeraHoraNit && horaActual < primeraHoraMatinada)
             return "nit";
@@ -97,12 +98,18 @@ export class AppbarComponent {
         // Detectar idioma i guardar-lo //
         this.m.idioma = Utils.getCookie("lang") || navigator.language.split("-")[0];
         
-        // Valor per defecte //
+        // Si l'idioma detectat no es al select, el posem a anglès //
         if (!Utils.arrayConte($("#idioma > option").map((i, e) => $(e).val()).toArray(), this.m.idioma))
             $("#idioma").val("en");
     }
     setCookieIdioma() {
         Utils.setCookie("lang", this.m.idioma);
     }
+    
 
+    // Funcions //
+    @HostListener('window:resize', ['$event'])
+    onResize(event) {
+        this.innerWidth = event.target.innerWidth;
+    }
 }

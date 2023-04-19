@@ -1,16 +1,43 @@
 // opacity: primary (87%), secondary (60%), tertiary (38%) //
 
+
 .div-foto, .div-text {
     transition: all 0.3s ease;
 }
 .linia1 {
-    font-size: 1.5rem;
+    text-align: right;
     opacity: 0.6;
+    transition: font-size 0.3s ease;
 }
 .linia2 {
-    font-size: 2rem;
+    text-align: right;
+    transition: font-size 0.3s ease;
     .sub {
-        font-size: 1.5rem;
+        opacity: 0.7;
     }
 }
 
+// PC //
+@media only screen and (min-width: 576px) {
+    .linia1 {
+        font-size: 1.8rem;
+    }
+    .linia2 {
+        font-size: 1.7rem;
+        .sub {
+            font-size: 1.4rem;
+        }
+    }
+}
+// Mòbil //
+@media only screen and (max-width: 575px) {
+    .linia1 {
+        font-size: 1.2rem;
+    }
+    .linia2 {
+        font-size: 1.2rem;
+        .sub {
+            font-size: 1.1rem;
+        }
+    }
+}
