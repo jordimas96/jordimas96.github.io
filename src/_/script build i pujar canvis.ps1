@@ -1,1 +1,1 @@
-ng build; git add .; git commit -m "no message"; git push
+ng build; git add .; git commit -m "(from git)"; git push
