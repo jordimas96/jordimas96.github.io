@@ -56,9 +56,13 @@
             &.css         { background-color: #2196f3; color: #ffffff; }
             &.sass        { background-color: #d56fa4; color: #ffffff; }
             &.html        { background-color: #e64c18; color: #ffffff; }
-            &.android     { background-color: #3DDC84; color: #000000; }
             &.bootstrap   { background-color: #563d7c; color: #ffffff; }
             &.materialize { background-color: #f6a2ad; color: #000000; }
+            &.android     { background-color: #3DDC84; color: #153b4c; }
+            &.uwp         { background-color: #0072c6; color: #ffffff; }
+            &.cordova     { background-color: #364451; color: #ffffff; }
+            &.wpf         { background-color: #044a88; color: #ffffff; }
+            &.delphi      { background-color: #9e0f20; color: #ffffff; }
             &.python      { background-color: #3572A5; color: #ffe364; }
             &.django      { background-color: #003e2b; color: #ffffff; }
             &.csharp      { background-color: #953dac; color: #ffffff; }
@@ -68,9 +72,10 @@
             &.php         { background-color: #777bb3; color: #ffffff; }
             &.sequelize   { background-color: #02aeee; color: #ffffff; }
             &.apache      { background-color: #c4203c; color: #ffffff; }
-            &.plsql       { background-color: #e11a1f; color: #ffffff; }
-            &.phpmyadmin  { background-color: #6c78af; color: #f89c0e; }
             &.mysql       { background-color: #5382a1; color: #ffa518; }
+            &.phpmyadmin  { background-color: #6c78af; color: #f89c0e; }
+            &.plsql       { background-color: #e11a1f; color: #ffffff; }
+            &.pl1         { background-color: #000000; color: #00ff00; }
             &.git         { background-color: #f05133; color: #413000; }
             &.github      { background-color: #ffffff; color: #000000; }
             &.bitbucket   { background-color: #2684ff; color: #ffffff; }
@@ -83,7 +88,11 @@
             &.hibernate   { background-color: #59666c; color: #bcae79; }
             &.vscode      { background-color: #3aa8f2; color: #ffffff; }
             &.poedit      { background-color: #dbcb44; color: #000000; }
+            &.fastreport  { background-color: #b5110f; color: #1d1d1b; }
             &.joomla      { background-color: #5091cd; color: #ffffff; }
+            &.k2          { background-color: #000000; color: #ffffff; }
+            &.akeeba      { background-color: #514f50; color: #38b5b9; }
+            &.jce         { background-color: #dddddd; color: #000000; }
 
         }
     }

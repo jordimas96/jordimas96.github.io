@@ -63,6 +63,10 @@
         }
     }
 }
+::ng-deep html.nit .appbar {
+    // background: none;
+    backdrop-filter: blur(20px) saturate(2);
+}
 
 
 // Pantalla Gran //
