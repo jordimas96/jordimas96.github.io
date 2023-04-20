@@ -28,11 +28,14 @@
 
 .llenguatges {
     .titol-tipus-llenguatge {
-        font-size: 1.2rem;
+        font-size: 1.4rem;
         color: var(--text-80);
+        text-align: center;
     }
     .chips {
-        overflow: hidden;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
         
 
         .chip {
@@ -42,10 +45,8 @@
             padding: 0.25rem 0.75rem;
             margin: 0.25rem;
             border-radius: 1000px;
-            float: left;
             font-weight: bold;
             box-shadow: 0px 30px 25px -30px #ffffff45 inset, 0px -30px 25px -30px #00000045 inset;
-            
 
 
 
