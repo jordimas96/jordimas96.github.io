@@ -39,7 +39,7 @@ export class HomePageComponent {
         Utils.fadeIn($(".content .ocult-animacio").eq(2), 50);
 
         $(".content .chips .ocult-animacio").each((i, e) => {
-            Utils.fadeIn(e, i * 25);
+            Utils.fadeIn(e, i * 20);
         });
     }
 
