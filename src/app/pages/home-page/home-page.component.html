@@ -36,8 +36,10 @@
         </div>
     </div>
     <!-- Recipient bio mobil -->
-    <div *ngIf="m.esMobil()" class="text bio mt-4">
-        <div *ngTemplateOutlet="bio"></div>
+    <div class="ocult-animacio h">
+        <div *ngIf="m.esMobil()" class="text bio mt-4">
+            <div *ngTemplateOutlet="bio"></div>
+        </div>
     </div>
     <!-- Template bio -->
     <ng-template #bio>
@@ -69,7 +71,8 @@
                     <div class="chip ocult-animacio -v html">HTML</div>
                     <div class="chip ocult-animacio -v bootstrap">Bootstrap</div>
                     <div class="chip ocult-animacio -v materialize">Materialize</div>
-                    <div class="chip ocult-animacio -v android">Android Studio</div>
+                    <div class="chip ocult-animacio -v android">Android</div>
+                    <div class="chip ocult-animacio -v kotlin">Kotlin</div>
                     <div class="chip ocult-animacio -v uwp">UWP</div>
                     <div class="chip ocult-animacio -v cordova">Cordova</div>
                     <div class="chip ocult-animacio -v wpf">WPF</div>
@@ -109,7 +112,10 @@
                     <div class="chip ocult-animacio -v bitbucket">Bitbucket</div>
                     <div class="chip ocult-animacio -v sourcetree">Sourcetree</div>
                     <div class="chip ocult-animacio -v postman">Postman</div>
+                    <div class="chip ocult-animacio -v asana">Asana</div>
                     <div class="chip ocult-animacio -v filezilla">Filezilla</div>
+                    <div class="chip ocult-animacio -v androidstudio">Android Studio</div>
+                    <div class="chip ocult-animacio -v unity">Unity</div>
                     <div class="chip ocult-animacio -v netbeans">Netbeans</div>
                     <div class="chip ocult-animacio -v eclipse">Eclipse</div>
                     <div class="chip ocult-animacio -v svn">SVN</div>
@@ -131,6 +137,25 @@
                     <div class="chip ocult-animacio -v k2">K2</div>
                     <div class="chip ocult-animacio -v akeeba">Akeeba Backup</div>
                     <div class="chip ocult-animacio -v jce">JCE FileManager</div>
+                </div>
+            </div>
+            <div class="col-12 col-sm-6 mt-4">
+                <div class="titol-tipus-llenguatge mb-2">
+                    <ng-container *ngIf="m.ca()">Eines de virtualització i SO</ng-container>
+                    <ng-container *ngIf="m.es()">Herramientas de virtualización y SO</ng-container>
+                    <ng-container *ngIf="m.en()">Virtualization tools and OS</ng-container>
+                </div>
+                <div class="chips">
+                    <div class="chip ocult-animacio -v vmware">VMware</div>
+                    <div class="chip ocult-animacio -v virtualbox">VirtualBox</div>
+                    <div class="chip ocult-animacio -v windows">Windows</div>
+                    <div class="chip ocult-animacio -v winserver">Windows Server</div>
+                    <div class="chip ocult-animacio -v ubuntu">Ubuntu</div>
+                    <div class="chip ocult-animacio -v debian">Debian</div>
+                    <div class="chip ocult-animacio -v redhat">Red Hat</div>
+                    <div class="chip ocult-animacio -v fedora">Fedora</div>
+                    <div class="chip ocult-animacio -v macos">macOS</div>
+                    <div class="chip ocult-animacio -v tails">Tails</div>
                 </div>
             </div>
             
