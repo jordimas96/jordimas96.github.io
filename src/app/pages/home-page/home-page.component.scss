@@ -4,6 +4,9 @@
 .div-foto, .div-text {
     transition: all 0.3s ease;
 }
+.div-text {
+    align-self: center;
+}
 
 .linies {
     text-align: right;
@@ -118,11 +121,13 @@
 // Mòbil //
 @media only screen and (max-width: 575px) {
     .bondia {
-        font-size: 1.4rem;
+        font-size: 1.6rem;
     }
     .nom {
-        font-size: 1.3rem;
+        font-size: 1.4rem;
         .emdic {
+            position: relative;
+            top: 0.5rem;
             font-size: 1.1rem;
         }
     }
