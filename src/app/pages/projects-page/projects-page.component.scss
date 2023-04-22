@@ -4,3 +4,8 @@ iframe.game {
     opacity: 0;
     transition: opacity 0.3s ease;
 }
+.game-placeholder {
+    max-width: 100%;
+
+    background-color: var(--text-50);
+}

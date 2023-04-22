@@ -66,10 +66,11 @@
             
             <ng-container *ngIf="m.en()">This is my final project for the second year of the Higher Cycle of Multiplatform Application Development (DAM). It took me 2 weeks of work to create this <i><a href="https://en.wikipedia.org/wiki/First-person_shooter">First Person Shooter</a></i> from scratch, using Unity. From the movement of the camera and the player, through the mechanics of shooting each type of weapon (both the user and the enemies) and spawn points, to managing the inventory consisting of ammunition and supplies.</ng-container>
         </p>
-        <iframe *ngIf="mostrarWidgetJoc" #game class="game mt-2" src="https://itch.io/embed/2011884" width="552" height="167" frameborder="0">
-            <a href="https://jmaspgames.itch.io/mad-jumpgate">Mad Jumpgate by Jordi Mas</a>
-        </iframe>
-        <div *ngIf="!mostrarWidgetJoc" style="width:552px; height:167px;"></div><!-- per a que no salti l'scroll. TODO si la pagina projectes s'emplena, borrar aixo -->
+        <div class="game-placeholder mt-2" style="width:552px; height:167px;">
+            <iframe *ngIf="mostrarWidgetJoc" #game class="game" src="https://itch.io/embed/2011884" width="552" height="167" frameborder="0">
+                <a href="https://jmaspgames.itch.io/mad-jumpgate">Mad Jumpgate by Jordi Mas</a>
+            </iframe>
+        </div><!-- per a que no salti l'scroll. TODO si la pagina projectes s'emplena, borrar aixo -->
         <!-- <a *ngIf="!mostrarWidgetJoc" href="https://jmaspgames.itch.io/mad-jumpgate">Mad Jumpgate by Jordi Mas</a> -->
         
     </div>
