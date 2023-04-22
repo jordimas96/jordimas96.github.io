@@ -305,15 +305,7 @@ img, .noselect {
     }
 }
 // Mòbil //
-@media (pointer: coarse) {
-    // Efecte hover links en mòbil //
-    a:not(.link-img) {
-        &:hover {
-            text-decoration: underline;
-            color: var(--link-hover);
-        }
-    }
-}
+@media (pointer: coarse) { }
 
 
 // Media queries adequades //
