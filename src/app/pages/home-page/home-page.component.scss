@@ -1,3 +1,5 @@
+@import "src/styles.scss";
+
 // opacity: primary (87%), secondary (60%), tertiary (38%) //
 
 
@@ -49,8 +51,9 @@
             margin: 0.25rem;
             border-radius: 1000px;
             font-weight: bold;
-            box-shadow: 0px 30px 25px -30px #ffffff45 inset, 0px -30px 25px -30px #00000045 inset;
-
+            box-shadow:
+                0px 30px 25px -30px #ffffff45 inset, 0px -30px 25px -30px #00000045 inset,
+                0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
 
 
             &.angular       { background-color: #dd0031; color: #ffffff; }
@@ -65,7 +68,7 @@
             &.android       { background-color: #3DDC84; color: #153b4c; }
             &.kotlin        { background-color: #f88909; color: #231f20; }
             &.uwp           { background-color: #0072c6; color: #ffffff; }
-            &.cordova       { background-color: #364451; color: #ffffff; }
+            &.cordova       { background-color: #364451; color: #35e9f6; }
             &.wpf           { background-color: #044a88; color: #ffffff; }
             &.delphi        { background-color: #9e0f20; color: #ffffff; }
             &.python        { background-color: #3572A5; color: #ffe364; }
@@ -97,7 +100,7 @@
             &.vscode        { background-color: #3aa8f2; color: #ffffff; }
             &.poedit        { background-color: #dbcb44; color: #000000; }
             &.fastreport    { background-color: #b5110f; color: #1d1d1b; }
-            &.vmware        { background-color: #ffffff; color: #717074; }
+            &.vmware        { background-color: #ffffff; color: #545256; }
             &.virtualbox    { background-color: #cee4fb; color: #183861; }
             &.windows       { background-color: #00aeef; color: #ffffff; }
             &.winserver     { background-color: #37689d; color: #c9c5be; }
@@ -118,7 +121,7 @@
 }
 
 
-// PC //
+// Pantalla PC //
 @media only screen and (min-width: 576px) {
     .bondia {
         font-size: 1.8rem;
@@ -133,7 +136,7 @@
         font-size: 1.2rem;
     }
 }
-// Mòbil //
+// Pantalla Mòbil //
 @media only screen and (max-width: 575px) {
     .bondia {
         font-size: 1.6rem;

@@ -32,5 +32,8 @@ export class FooterComponent {
         Utils.fadeIn($(".contact-icons a").eq(3), 300);
     }
 
-
 }
+
+// const iconImgs = $('.contact-icons > a');
+//         iconImgs.on('mouseenter', function () { iconImgs.not(this).addClass('blur'); });
+//         iconImgs.on('mouseleave', function () { iconImgs.removeClass('blur'); });

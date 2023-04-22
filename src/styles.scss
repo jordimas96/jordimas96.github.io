@@ -142,7 +142,7 @@ body {
 .content {
     max-width: 940px;
     margin: auto;
-    padding: 1rem;
+    padding: 1rem 1rem 4rem;
     font-size: 1.1rem;
     // margin-bottom: 1000px;
 }
@@ -227,6 +227,11 @@ img, .noselect {
 }
 
 
+// Tota la pagina //
+::selection { background: var(--text-90); color: var(--fons); }
+::-moz-selection { background: var(--text-90); color: var(--fons); }
+
+
 
 // ANIMACIONS //
 .ocult-animacio {
@@ -257,7 +262,7 @@ img, .noselect {
 ///////////////////
 // MEDIA QUERIES //
 ///////////////////
-// PC //
+// Pantalla PC //
 @media only screen and (min-width: 576px) {
     .title {
         font-size: 2.5rem;
@@ -269,7 +274,7 @@ img, .noselect {
         font-size: 1.1rem;
     }
 }
-// Mòbil //
+// Pantalla Mòbil //
 @media only screen and (max-width: 575px) {
     .title {
         font-size: 2rem;
@@ -282,7 +287,16 @@ img, .noselect {
     }
 }
 
+// PC //
+@media (pointer: fine) { }
+// Mòbil //
+@media (pointer: coarse) { }
 
-// @media only screen and (min-width: 576px) { // PC // }
-// @media only screen and (max-width: 575px) { // Mòbil // }
+
+// Media queries adequades //
+// @media only screen and (min-width: 576px) { // Pantalla PC // }
+// @media only screen and (max-width: 575px) { // Pantalla Mòbil // }
+// @media (pointer: fine) { // PC // }
+// @media (pointer: coarse) { // Mòbil // }
+
 // #endregion MEDIA QUERIES //

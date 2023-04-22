@@ -12,7 +12,7 @@
         .botoDarkMode {
             background-color: var(--color-fosc);
             color: var(--color-clar);
-            border: 1px solid var(--color-clar);
+            border: 1px solid var(--color-clar-70);
             border-radius: 1000px;
             outline: none;
             cursor: pointer;
@@ -31,7 +31,7 @@
             color: var(--text);
             outline: none;
             cursor: pointer;
-            border: 1px solid var(--text);
+            border: 1px solid var(--text-70);
             margin: 0.5rem 0.25rem;
             padding: 0.25rem 1rem;
             border-radius: 0.6rem;
@@ -53,7 +53,7 @@
         .select-idioma {
             background-color: var(--fons);
             color: var(--text);
-            border-color: var(--text);
+            border-color: var(--text-70);
             border-radius: 5px;
             padding: 0.25rem 0.5rem 0.25rem 1rem;
             margin-top: 0.25rem;
@@ -62,6 +62,9 @@
             transition: padding 0.3s ease, font-size 0.3s ease, var(--transicio-colors);
         }
     }
+}
+::ng-deep html.light .appbar .botoDarkMode {
+    border-color: transparent !important;
 }
 ::ng-deep html.nit .appbar {
     background: none;
@@ -79,7 +82,7 @@
         padding-right: 1.5rem !important;
     }
 }
-// PC //
+// Pantalla PC //
 @media only screen and (min-width: 576px) {
     .navegacio button {
         font-size: 1.5rem;
@@ -88,7 +91,7 @@
         font-size: 1.2rem;
     }
 }
-// Mòbil //
+// Pantalla Mòbil //
 @media only screen and (max-width: 575px) {
     .navegacio button {
         font-size: 1.1rem;
@@ -98,4 +101,11 @@
     }
 }
 
-
+// PC //
+@media (pointer: fine) { }
+// Mòbil //
+@media (pointer: coarse) {
+    .select-idioma {
+        border-radius: 0.6rem !important;
+    }
+}
