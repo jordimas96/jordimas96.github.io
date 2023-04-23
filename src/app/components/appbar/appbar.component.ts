@@ -67,6 +67,7 @@ export class AppbarComponent {
     }
     
     getTemaSegonsHora() {
+        if (Utils.hasCookie("forçartema")) return Utils.getCookie("forçartema");
         // Colors matinada, matí, tarda, vespre, nit //
         let horaActual = new Date().getHours();
         
@@ -75,7 +76,7 @@ export class AppbarComponent {
         const primeraHoraMati = 9;
         const primeraHoraTarda = 15;
         const primeraHoraVespre = 20;
-
+        
         if (horaActual >= primeraHoraNit && horaActual < primeraHoraMatinada)
             return "nit";
         else if (horaActual >= primeraHoraMatinada && horaActual < primeraHoraMati)

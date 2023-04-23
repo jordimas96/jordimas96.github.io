@@ -96,6 +96,67 @@ html {
         --color-clar-60: rgba(255, 255, 255, 0.6);
         --color-clar-50: rgba(255, 255, 255, 0.5);
     }
+    // Paleta 2 //
+    &.matinada {
+        --color-l-0: #242400;
+        --color-l-1: #535300;
+        --color-l-2: #838300;
+        --color-l-3: #b3b300;
+        --color-l-4: #e2e200;
+        --color-l-5: #ffff12;
+        --color-l-6: #ffff42;
+        --color-l-7: #ffff72;
+        --color-l-8: #ffffa1;
+        --color-l-9: #ffffd1;
+    }
+    &.mati {
+        --color-l-0: #001b29;
+        --color-l-1: #003855;
+        --color-l-2: #005681;
+        --color-l-3: #0073ad;
+        --color-l-4: #0091d9;
+        --color-l-5: #07acff;
+        --color-l-6: #32bbff;
+        --color-l-7: #5fcaff;
+        --color-l-8: #8bd8ff;
+        --color-l-9: #b8e7ff;
+    }
+    &.tarda {
+        --color-l-0: #241400;
+        --color-l-1: #532e00;
+        --color-l-2: #834800;
+        --color-l-3: #b36200;
+        --color-l-4: #e27c00;
+        --color-l-5: #ff9512;
+        --color-l-6: #ffaa42;
+        --color-l-7: #ffbf72;
+        --color-l-8: #ffd5a1;
+        --color-l-9: #ffecd1;
+    }
+    &.vespre {
+        --color-l-0: #000029;
+        --color-l-1: #000059;
+        --color-l-2: #000089;
+        --color-l-3: #0000b9;
+        --color-l-4: #0000e9;
+        --color-l-5: #1b1bff;
+        --color-l-6: #4b4bff;
+        --color-l-7: #7b7bff;
+        --color-l-8: #ababff;
+        --color-l-9: #dbdbff;
+    }
+    &.nit {
+        --color-l-0: #0f0f0f;
+        --color-l-1: #2a2a2a;
+        --color-l-2: #444444;
+        --color-l-3: #5f5f5f;
+        --color-l-4: #7a7a7a;
+        --color-l-5: #949494;
+        --color-l-6: #afafaf;
+        --color-l-7: #cacaca;
+        --color-l-8: #e4e4e4;
+        --color-l-9: #ffffff;
+    }
 }
   
 
@@ -112,6 +173,17 @@ body {
     --text-70: var(--color-clar-70);
     --text-60: var(--color-clar-60);
     --text-50: var(--color-clar-50);
+
+    --color-0: var(--color-l-0);
+    --color-1: var(--color-l-1);
+    --color-2: var(--color-l-2);
+    --color-3: var(--color-l-3);
+    --color-4: var(--color-l-4);
+    --color-5: var(--color-l-5);
+    --color-6: var(--color-l-6);
+    --color-7: var(--color-l-7);
+    --color-8: var(--color-l-8);
+    --color-9: var(--color-l-9);
 }
 .light body {
     --fons: var(--color-clar);
@@ -126,6 +198,17 @@ body {
     --text-70: var(--color-fosc-70);
     --text-60: var(--color-fosc-60);
     --text-50: var(--color-fosc-50);
+    
+    --color-0: var(--color-l-9);
+    --color-1: var(--color-l-8);
+    --color-2: var(--color-l-7);
+    --color-3: var(--color-l-6);
+    --color-4: var(--color-l-5);
+    --color-5: var(--color-l-4);
+    --color-6: var(--color-l-3);
+    --color-7: var(--color-l-2);
+    --color-8: var(--color-l-1);
+    --color-9: var(--color-l-0);
 }
 
 

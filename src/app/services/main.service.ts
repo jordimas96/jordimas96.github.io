@@ -27,7 +27,7 @@ export class MainService {
         
         // NOMÉS per poder debugar //
         if (this.debug)
-            window["main"] = this;
+            window["m"] = this;
     }
     onInit() { }
 
