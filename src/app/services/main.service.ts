@@ -41,6 +41,9 @@ export class MainService {
     public esMobil() { return this.appbar.width <= 576; }
     public esPc() { return !this.esMobil(); }
 
+    public force(tema) { Utils.setCookie("forçartema", tema) }
+    public noforce() { Utils.removeCookie("forçartema") }
+
     // Funcions //
     afterRootFadeIn(funcio: Function) {
         setTimeout(() => {

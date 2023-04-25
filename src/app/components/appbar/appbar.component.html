@@ -26,9 +26,16 @@
 
     <div class="idioma col-6 col-md-2 order-2 order-md-3">
         <select class="select-idioma" [(ngModel)]="m.idioma" id="idioma" name="idioma" (change)='setCookieIdioma()'>
-            <option value="ca">Català</option>
-            <option value="es">Español</option>
-            <option value="en">English</option>
+            <ng-container *ngIf="!m.es()">
+                <option value="ca">Català</option>
+                <option value="es">Español</option>
+                <option value="en">English</option>
+            </ng-container>
+            <ng-container *ngIf="m.es()">
+                <option value="es">Español</option>
+                <option value="ca">Català</option>
+                <option value="en">English</option>
+            </ng-container>
         </select>
     </div>
 </div>

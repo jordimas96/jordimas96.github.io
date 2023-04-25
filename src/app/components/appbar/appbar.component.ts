@@ -18,6 +18,7 @@ export class AppbarComponent {
     }
     ngOnInit() {
         this.m.afterRootFadeIn(this.afterRootFadeIn.bind(this));
+        
         this.m.modeFosc = this.getDarkMode();
 
         this.m.tema = this.getTemaSegonsHora();
