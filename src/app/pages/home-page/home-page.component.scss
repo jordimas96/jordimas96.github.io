@@ -71,19 +71,21 @@
             &.cordova       { background-color: #364451; color: #35e9f6; }
             &.wpf           { background-color: #044a88; color: #ffffff; }
             &.delphi        { background-color: #9e0f20; color: #ffffff; }
-            &.python        { background-color: #3572A5; color: #ffe364; }
-            &.django        { background-color: #003e2b; color: #ffffff; }
-            &.csharp        { background-color: #953dac; color: #ffffff; }
-            &.java          { background-color: #e11f21; color: #ffffff; }
-            &.rubyonrails   { background-color: #cc0000; color: #ffffff; }
             &.nodejs        { background-color: #83cd29; color: #333333; }
-            &.php           { background-color: #777bb3; color: #ffffff; }
             &.sequelize     { background-color: #02aeee; color: #ffffff; }
+            &.java          { background-color: #e11f21; color: #ffffff; }
+            &.python        { background-color: #3572A5; color: #ffe364; }
+            &.csharp        { background-color: #953dac; color: #ffffff; }
+            &.django        { background-color: #003e2b; color: #ffffff; }
+            &.php           { background-color: #777bb3; color: #ffffff; }
+            &.rubyonrails   { background-color: #cc0000; color: #ffffff; }
             &.apache        { background-color: #c4203c; color: #ffffff; }
             &.mysql         { background-color: #00618a; color: #e48e00; }
             &.phpmyadmin    { background-color: #6c78af; color: #f89c0e; }
             &.plsql         { background-color: #e11a1f; color: #ffffff; }
-            &.pl1           { background-color: #000000; color: #00ff00; }
+            &.jsp           { background-color: #000000; color: #ffffff; }
+            &.pl1           { background-color: #000000; color: #00d200; }
+            &.db2           { background-color: #009a2c; color: #ffffff; }
             &.git           { background-color: #f05133; color: #413000; }
             &.github        { background-color: #ffffff; color: #000000; }
             &.bitbucket     { background-color: #2684ff; color: #ffffff; }
@@ -110,6 +112,7 @@
             &.fedora        { background-color: #243f73; color: #ffffff; }
             &.macos         { background-color: #eeeeee; color: #444444; }
             &.tails         { background-color: #55347b; color: #ffffff; }
+            &.zos           { background-color: #000000; color: #00ff00; }
             &.joomla        { background-color: #5091cd; color: #ffffff; }
             &.k2            { background-color: #000000; color: #ffffff; }
             &.akeeba        { background-color: #514f50; color: #38b5b9; }

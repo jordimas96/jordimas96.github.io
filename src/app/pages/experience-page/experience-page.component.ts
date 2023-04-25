@@ -19,6 +19,7 @@ export class ExperiencePageComponent {
         Utils.fadeIn($(".content .ocult-animacio").eq(0), 0);
         Utils.fadeIn($(".content .ocult-animacio").eq(1), 25);
         Utils.fadeIn($(".content .ocult-animacio").eq(2), 50);
+        Utils.fadeIn($(".content .ocult-animacio").eq(3), 75);
     }
 
 }
