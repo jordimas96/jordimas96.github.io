@@ -56,7 +56,7 @@ export class Utils {
     public static arrayConte(array, valor) {
         return array.includes(valor);
     }
-    public static scroll0() { window.scroll(0, 0); }
+    public static scroll(x) { window.scroll(0, x); }
     public static getAlturaAppbar() {
         return $(".appbar").outerHeight();
     }

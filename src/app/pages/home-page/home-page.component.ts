@@ -34,10 +34,9 @@ export class HomePageComponent {
     }
 
     afterRootFadeIn() {
-        Utils.fadeIn($(".content .ocult-animacio").eq(0), 0);
-        Utils.fadeIn($(".content .ocult-animacio").eq(1), 25);
-        Utils.fadeIn($(".content .ocult-animacio").eq(2), 50);
-        Utils.fadeIn($(".content .ocult-animacio").eq(3), 75);
+        $(".content .ocult-animacio:not(.chip)").each((i, e) => {
+            Utils.fadeIn(e, i * 50);
+        });
 
         $(".content .chips .ocult-animacio").each((i, e) => {
             Utils.fadeIn(e, i * 20);

@@ -9,7 +9,7 @@
     <div id="in2art" class="group ocult-animacio h">
         <div class="subtitle">
             In2art
-            <a href="https://in2.art/" class="link-img ml-2 mb-1"><img src="assets/icons/In2art.png" alt="In2art" class="title-icon inv-dark"></a>
+            <a [href]="getLink('in2art')" class="link-img ml-2 mb-1"><img src="assets/icons/In2art.png" alt="In2art" class="title-icon inv-dark"></a>
         </div>
         <p class="text mb-1">
             <ng-container *ngIf="m.ca()">
@@ -31,16 +31,14 @@
             </ng-container>
 
         </p>
-        <ng-container *ngIf="m.ca()"><a href="https://in2.art/es">in2.art</a></ng-container>
-        <ng-container *ngIf="m.es()"><a href="https://in2.art/es">in2.art</a></ng-container>
-        <ng-container *ngIf="m.en()"><a href="https://in2.art/en">in2.art</a></ng-container>
+        <a [href]="getLink('in2art')">in2.art</a>
     </div>
 
     <!-- Matic -->
     <div id="matic" class="group ocult-animacio h">
         <div class="subtitle">
             Matic
-            <a href="https://www.matic.cat/" class="link-img ml-2 mb-1"><img src="assets/icons/Matic.png" alt="Matic" class="title-icon rounded"></a>
+            <a [href]="getLink('matic')" class="link-img ml-2 mb-1"><img src="assets/icons/Matic.png" alt="Matic" class="title-icon rounded"></a>
         </div>
         <p class="text mb-1">
             <ng-container *ngIf="m.ca()">
@@ -61,15 +59,13 @@
                 I also developed specific web pages for billboard screens in multiple cinema locations in Madrid.
             </ng-container>
         </p>
-        <ng-container *ngIf="m.ca()"><a href="https://www.matic.cat/">www.matic.cat</a></ng-container>
-        <ng-container *ngIf="m.es()"><a href="https://www.matic.cat/es/inicio/">www.matic.cat</a></ng-container>
-        <ng-container *ngIf="m.en()"><a href="https://www.matic.cat/es/inicio/">www.matic.cat</a></ng-container>
+        <a [href]="getLink('matic')">www.matic.cat</a>
     </div>
     <!-- Indra -->
     <div id="indra" class="group ocult-animacio h">
         <div class="subtitle">
             Indra
-            <a href="https://www.indracompany.com/es/" class="link-img ml-2 mb-1">
+            <a [href]="getLink('indra')" class="link-img ml-2 mb-1">
                 <img *ngIf="m.modeFosc" src="assets/icons/indra-d.png" alt="Indra" class="title-icon rounded">
                 <img *ngIf="!m.modeFosc" src="assets/icons/indra-l.png" alt="Indra" class="title-icon rounded">
             </a>
@@ -127,8 +123,32 @@
                 <a href="https://www.ibm.com/topics/middleware">Middleware</a> tools.
             </ng-container>
         </p>
-        <ng-container *ngIf="m.ca()"><a href="https://www.indracompany.com/es/">www.indracompany.com</a></ng-container>
-        <ng-container *ngIf="m.es()"><a href="https://www.indracompany.com/es/">www.indracompany.com</a></ng-container>
-        <ng-container *ngIf="m.en()"><a href="https://www.indracompany.com/en/">www.indracompany.com</a></ng-container>
+        <a [href]="getLink('indra')">www.indracompany.com</a>
+    </div>
+    <!-- Indra -->
+    <div id="nexxia" class="group ocult-animacio h">
+        <div class="subtitle">
+            Nexxia Soft
+            <a [href]="getLink('nexxia')" class="link-img ml-2 mb-1">
+                <img src="assets/icons/nexxia.jpg" alt="Nexxia" class="title-icon rounded-2">
+            </a>
+        </div>
+        <p class="text mb-1">
+            <ng-container *ngIf="m.ca()">
+                Vaig desenvolupar una eina de software en Delphi que permetia generar aplicacions Windows amb opcions personalitzades per a la generació de plantilles FastReport. Aquestes plantilles permeten al client generar informes i factures personalitzades per satisfer les seves necessitats.<br>
+                També vaig desenvolupar diverses pantalles web referents al projecte, usant JQuery i Bootstrap.
+            </ng-container>
+                
+            <ng-container *ngIf="m.es()">
+                Desarrollé una herramienta de software en Delphi que permitía generar aplicaciones Windows con opciones personalizadas para la generación de plantillas FastReport. Estas plantillas permiten al cliente generar informes y facturas personalizadas para satisfacer sus necesidades.<br>
+                También desarrollé varias pantallas web referentes al proyecto, usando JQuery y Bootstrap.
+            </ng-container>
+                
+            <ng-container *ngIf="m.en()">
+                I developed a software tool in Delphi that allowed to generate Windows applications with customized options for the generation of FastReport templates. These templates allow the customer to generate customized reports and invoices to meet their needs.<br>
+                I also developed several web screens related to the project, using JQuery and Bootstrap.
+            </ng-container>
+        </p>
+        <a [href]="getLink('nexxia')">www.nexxiasoft.com</a>
     </div>
 </div>
