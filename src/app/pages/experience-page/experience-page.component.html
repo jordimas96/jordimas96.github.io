@@ -7,38 +7,37 @@
 
     <!-- In2art -->
     <div id="in2art" class="group ocult-animacio h">
-        <div class="subtitle">
-            In2art
-            <a [href]="getLink('in2art')" class="link-img ml-2 mb-1"><img src="assets/icons/In2art.png" alt="In2art" class="title-icon inv-dark"></a>
+        <div class="subtitle mb-2">
+            <a [href]="getLink('in2art')" class="no-style">
+                In2art <img src="assets/icons/In2art.png" alt="In2art" class="title-icon inv-dark mb-1"></a>
         </div>
         <p class="text mb-1">
             <ng-container *ngIf="m.ca()">
                 Principal desenvolupador d'una xarxa social a In2Art. Vaig ser responsable del frontend, disseny i part del backend.
                 A més, estic orgullós de dir que vaig desenvolupar la pàgina des de zero utilitzant la meva experiència a Angular, CSS i TypeScript.<br>
-                La primera part del projecte, quan vaig fer l'estructura i l'organització del frontend, la vaig desenvolupar en solitari. A mesura que la web va anar creixent i es van afegir noves seccions, vaig poder dividir la càrrega de treball entre estudiants de pràctiques als que jo mateix vaig formar en Angular, TypeScript i CSS. Junts vam treballar en equip per crear una veritable obra d'art.
+                La primera part del projecte, quan vaig fer l'estructura i l'organització del frontend, la vaig desenvolupar en solitari. A mesura que la web va anar creixent i es van afegir noves seccions, vaig poder dividir la càrrega de treball entre estudiants de pràctiques de DAM (backend) als que jo mateix vaig formar en Angular, TypeScript i CSS. Junts vam treballar en equip per crear una veritable obra d'art.
             </ng-container>
 
             <ng-container *ngIf="m.es()">
                 Principal desarrollador de una red social en In2Art. Fui responsable del frontend, diseño y parte del backend.
                 Además, estoy orgulloso de decir que desarrollé la página desde cero utilizando mi experiencia en Angular, CSS y TypeScript.<br>
-                La primera parte del proyecto, cuando hice la estructura y organización del frontend, la desarrollé en solitario. A medida que la web fue creciendo y se añadieron nuevas secciones, pude dividir la carga de trabajo entre estudiantes de prácticas a los que yo mismo formé en Angular, TypeScript y CSS. Juntos, trabajamos en equipo para crear una verdadera obra de arte.
+                La primera parte del proyecto, cuando hice la estructura y organización del frontend, la desarrollé en solitario. A medida que la web fue creciendo y se añadieron nuevas secciones, pude dividir la carga de trabajo entre estudiantes de prácticas de DAM (backend) a los que yo mismo formé en Angular, TypeScript y CSS. Juntos, trabajamos en equipo para crear una verdadera obra de arte.
             </ng-container>
 
             <ng-container *ngIf="m.en()">
                 Main developer of a social network at In2art. I was responsible for the frontend, design and part of the backend.
                 Also, I'm proud to say that I built the page from scratch using my experience in Angular, CSS, and TypeScript.<br>
-                The first part of the project, when I did the structure and organization of the frontend, I developed it alone. As the web grew and new sections were added, I splitted the workload among interns I trained myself in Angular, TypeScript, and CSS. Together, we worked as a team to create a true work of art.
+                The first part of the project, when I did the structure and organization of the frontend, I developed it alone. As the web grew and new sections were added, I splitted the workload among DAM internship students (backend) that I trained myself in Angular, TypeScript, and CSS. Together, we worked as a team to create a true work of art.
             </ng-container>
-
         </p>
-        <a [href]="getLink('in2art')">in2.art</a>
+        <!-- <a [href]="getLink('in2art')">in2.art</a> -->
     </div>
 
     <!-- Matic -->
     <div id="matic" class="group ocult-animacio h">
-        <div class="subtitle">
-            Matic
-            <a [href]="getLink('matic')" class="link-img ml-2 mb-1"><img src="assets/icons/Matic.png" alt="Matic" class="title-icon rounded"></a>
+        <div class="subtitle mb-2">
+            <a [href]="getLink('matic')" class="no-style">
+                Matic <img src="assets/icons/Matic.png" alt="Matic" class="title-icon rounded mb-1"></a>
         </div>
         <p class="text mb-1">
             <ng-container *ngIf="m.ca()">
@@ -59,15 +58,13 @@
                 I also developed specific web pages for billboard screens in multiple cinema locations in Madrid.
             </ng-container>
         </p>
-        <a [href]="getLink('matic')">www.matic.cat</a>
+        <!-- <a [href]="getLink('matic')">www.matic.cat</a> -->
     </div>
     <!-- Indra -->
     <div id="indra" class="group ocult-animacio h">
-        <div class="subtitle">
-            Indra
-            <a [href]="getLink('indra')" class="link-img ml-2 mb-1">
-                <img *ngIf="m.modeFosc" src="assets/icons/indra-d.png" alt="Indra" class="title-icon rounded">
-                <img *ngIf="!m.modeFosc" src="assets/icons/indra-l.png" alt="Indra" class="title-icon rounded">
+        <div class="subtitle mb-2">
+            <a [href]="getLink('indra')" class="no-style">
+                Indra <img [src]="'assets/icons/'+(m.modeFosc?'indra-d':'indra-l')+'.png'" alt="Indra" class="title-icon rounded mb-1">
             </a>
         </div>
         <p class="text mb-1">
@@ -123,32 +120,30 @@
                 <a href="https://www.ibm.com/topics/middleware">Middleware</a> tools.
             </ng-container>
         </p>
-        <a [href]="getLink('indra')">www.indracompany.com</a>
+        <!-- <a [href]="getLink('indra')">www.indracompany.com</a> -->
     </div>
-    <!-- Indra -->
+    <!-- Nexxia -->
     <div id="nexxia" class="group ocult-animacio h">
-        <div class="subtitle">
-            Nexxia Soft
-            <a [href]="getLink('nexxia')" class="link-img ml-2 mb-1">
-                <img src="assets/icons/nexxia.jpg" alt="Nexxia" class="title-icon rounded-2">
-            </a>
+        <div class="subtitle mb-2">
+            <a [href]="getLink('nexxia')" class="no-style">
+                Nexxia Soft <img src="assets/icons/nexxia.jpg" alt="Nexxia" class="title-icon rounded-2 mb-1"></a>
         </div>
         <p class="text mb-1">
             <ng-container *ngIf="m.ca()">
-                Vaig desenvolupar una eina de software en Delphi que permetia generar aplicacions Windows amb opcions personalitzades per a la generació de plantilles FastReport. Aquestes plantilles permeten al client generar informes i factures personalitzades per satisfer les seves necessitats.<br>
+                Vaig desenvolupar una eina de software en Delphi que permetia generar aplicacions Windows amb opcions personalitzades per a la generació de plantilles <a href="https://www.fast-report.com/en/">FastReport</a>. Aquestes plantilles permeten al client generar informes i factures personalitzades per satisfer les seves necessitats.<br><br>
                 També vaig desenvolupar diverses pantalles web referents al projecte, usant JQuery i Bootstrap.
             </ng-container>
                 
             <ng-container *ngIf="m.es()">
-                Desarrollé una herramienta de software en Delphi que permitía generar aplicaciones Windows con opciones personalizadas para la generación de plantillas FastReport. Estas plantillas permiten al cliente generar informes y facturas personalizadas para satisfacer sus necesidades.<br>
+                Desarrollé una herramienta de software en Delphi que permitía generar aplicaciones Windows con opciones personalizadas para la generación de plantillas <a href="https://www.fast-report.com/en/">FastReport</a>. Estas plantillas permiten al cliente generar informes y facturas personalizadas para satisfacer sus necesidades.<br><br>
                 También desarrollé varias pantallas web referentes al proyecto, usando JQuery y Bootstrap.
             </ng-container>
                 
             <ng-container *ngIf="m.en()">
-                I developed a software tool in Delphi that allowed to generate Windows applications with customized options for the generation of FastReport templates. These templates allow the customer to generate customized reports and invoices to meet their needs.<br>
+                I developed a software tool in Delphi that allowed to generate Windows applications with customized options for the generation of <a href="https://www.fast-report.com/en/">FastReport</a> templates. These templates allow the customer to generate customized reports and invoices to meet their needs.<br><br>
                 I also developed several web screens related to the project, using JQuery and Bootstrap.
             </ng-container>
         </p>
-        <a [href]="getLink('nexxia')">www.nexxiasoft.com</a>
+        <!-- <a [href]="getLink('nexxia')">www.nexxiasoft.com</a> -->
     </div>
 </div>

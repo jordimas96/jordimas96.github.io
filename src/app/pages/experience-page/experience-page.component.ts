@@ -21,6 +21,7 @@ export class ExperiencePageComponent {
 
     ngOnInit() {
         this.m.afterRootFadeIn(this.afterRootFadeIn.bind(this));
+        
     }
 
     afterRootFadeIn() {

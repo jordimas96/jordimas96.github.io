@@ -277,16 +277,22 @@ html.dark .inv-dark-2 {
 
 /* Arreglos */
 .title-icon {
-    display: block;
+    // display: block;
 }
 a.link-img {
     display: inline-block;
     vertical-align: bottom;
 }
-a:not(.link-img) {
+a:not(.link-img, .no-style) {
     text-decoration: none;
     &:link, &:visited {
         color: var(--link);
+    }
+}
+a.no-style {
+    color: var(--text);
+    &:hover {
+        text-decoration: none;
     }
 }
 
@@ -374,7 +380,7 @@ img, .noselect {
 // PC //
 @media (pointer: fine) {
     // Efecte hover links en PC //
-    a:not(.link-img) {
+    a:not(.link-img, .no-style) {
         background-image: linear-gradient(0deg, var(--link), var(--link));
         background-size: calc(100% - 12px) 8%;
         background-position: 50% 88%;
