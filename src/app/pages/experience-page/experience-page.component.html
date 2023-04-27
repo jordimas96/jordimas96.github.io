@@ -1,5 +1,5 @@
 <div class="content" [style.margin-top.px]="m.u.getAlturaAppbar()">
-    <div class="title h1 mt-0 mb-4 ocult-animacio h">
+    <div class="title h1 mb-5 ocult-animacio h">
         <ng-container *ngIf="m.ca()">Experiència professional</ng-container>
         <ng-container *ngIf="m.es()">Experiencia profesional</ng-container>
         <ng-container *ngIf="m.en()">Professional experience</ng-container>
@@ -9,35 +9,70 @@
     <div id="in2art" class="group ocult-animacio h">
         <div class="subtitle mb-2">
             <a [href]="getLink('in2art')" class="no-style">
-                In2art <img src="assets/icons/In2art.png" alt="In2art" class="title-icon inv-dark mb-1"></a>
+                In2art <img src="assets/icons/In2art.png" alt="In2art" class="title-icon inv-dark mb-1 ml-2"></a>
         </div>
         <p class="text mb-1">
             <ng-container *ngIf="m.ca()">
                 Principal desenvolupador d'una xarxa social a In2Art. Vaig ser responsable del frontend, disseny i part del backend.
                 A més, estic orgullós de dir que vaig desenvolupar la pàgina des de zero utilitzant la meva experiència a Angular, CSS i TypeScript.<br>
-                La primera part del projecte, quan vaig fer l'estructura i l'organització del frontend, la vaig desenvolupar en solitari. A mesura que la web va anar creixent i es van afegir noves seccions, vaig poder dividir la càrrega de treball entre estudiants de pràctiques de DAM (backend) als que jo mateix vaig formar en Angular, TypeScript i CSS. Junts vam treballar en equip per crear una veritable obra d'art.
+                La primera part del projecte, quan vaig fer l'estructura i l'organització del frontend, la vaig desenvolupar en solitari. A mesura que la web va anar creixent i es van afegir noves seccions, vaig poder dividir la càrrega de treball entre estudiants de pràctiques de DAM (backend) als que jo mateix vaig formar en Angular, TypeScript i CSS. Junts vam treballar en equip per crear una veritable obra d'art.<br><br>
+
+                També vaig elaborar una extensa documentació amb els passos detallats per a compilar el projecte, pujar la web al servidor, arxius importants com .htaccess, treballar amb les traduccions, paràmetres de les peticions de la API, etc. El propòsit d'aquesta documentació és evitar les feines repetitives i agilitzar la comunicació entre frontend i backend.
+                A més, vaig crear diferents scripts de PowerShell per a automatitzar les compilacions i traduccions.
             </ng-container>
 
             <ng-container *ngIf="m.es()">
                 Principal desarrollador de una red social en In2Art. Fui responsable del frontend, diseño y parte del backend.
                 Además, estoy orgulloso de decir que desarrollé la página desde cero utilizando mi experiencia en Angular, CSS y TypeScript.<br>
-                La primera parte del proyecto, cuando hice la estructura y organización del frontend, la desarrollé en solitario. A medida que la web fue creciendo y se añadieron nuevas secciones, pude dividir la carga de trabajo entre estudiantes de prácticas de DAM (backend) a los que yo mismo formé en Angular, TypeScript y CSS. Juntos, trabajamos en equipo para crear una verdadera obra de arte.
+                La primera parte del proyecto, cuando hice la estructura y organización del frontend, la desarrollé en solitario. A medida que la web fue creciendo y se añadieron nuevas secciones, pude dividir la carga de trabajo entre estudiantes de prácticas de DAM (backend) a los que yo mismo formé en Angular, TypeScript y CSS. Juntos, trabajamos en equipo para crear una verdadera obra de arte.<br><br>
+
+                También elaboré una extensa documentación con los pasos detallados para compilar el proyecto, subir la web al servidor, archivos importantes como .htaccess, trabajar con las traducciones, parámetros de las peticiones de la API, etc. El propósito de esta documentación es evitar los trabajos repetitivos y agilizar la comunicación entre frontend y backend.
+                Además, creé distintos scripts de PowerShell para automatizar las compilaciones y traducciones.
             </ng-container>
 
             <ng-container *ngIf="m.en()">
                 Main developer of a social network at In2art. I was responsible for the frontend, design and part of the backend.
                 Also, I'm proud to say that I built the page from scratch using my experience in Angular, CSS, and TypeScript.<br>
-                The first part of the project, when I did the structure and organization of the frontend, I developed it alone. As the web grew and new sections were added, I splitted the workload among DAM internship students (backend) that I trained myself in Angular, TypeScript, and CSS. Together, we worked as a team to create a true work of art.
+                The first part of the project, when I did the structure and organization of the frontend, I developed it alone. As the web grew and new sections were added, I splitted the workload among DAM internship students (backend) that I trained myself in Angular, TypeScript, and CSS. Together, we worked as a team to create a true work of art.<br><br>
+
+                I also produced extensive documentation with detailed steps to compile the project, upload the web to the server, important files like .htaccess, work with translations, API request parameters, etc. The purpose of this documentation is to avoid repetitive tasks and streamline communication between frontend and backend.
+                Additionally, I created different PowerShell scripts to automate builds and translations.
             </ng-container>
         </p>
-        <!-- <a [href]="getLink('in2art')">in2.art</a> -->
+        <div class="title-skills mt-4 mb-2">
+            <ng-container *ngIf="m.ca()">Tecnologies utilitzades</ng-container>
+            <ng-container *ngIf="m.es()">Tecnologías usadas</ng-container>
+            <ng-container *ngIf="m.en()">Used technologies</ng-container>
+        </div>
+        <div class="skills">
+            <app-skill n="Angular"/>
+            <app-skill n="CSS"/>
+            <app-skill n="TypeScript"/>
+            <app-skill n="JavaScript"/>
+            <app-skill n="JQuery"/>
+            <app-skill n="HTML"/>
+            <app-skill n="Bootstrap"/>
+            <app-skill n="NodeJs"/>
+            <app-skill n="JSON"/>
+            <app-skill n="Apache"/>
+            <app-skill n="MySQL"/>
+            <app-skill n="Git"/>
+            <app-skill n="Bitbucket"/>
+            <app-skill n="Sourcetree"/>
+            <app-skill n="Postman"/>
+            <app-skill n="Asana"/>
+            <app-skill n="PHPMyadmin"/>
+            <app-skill n="Visual Studio Code"/>
+            <app-skill n="Poedit"/>
+            <app-skill n="Windows"/>
+        </div>
     </div>
 
     <!-- Matic -->
     <div id="matic" class="group ocult-animacio h">
         <div class="subtitle mb-2">
             <a [href]="getLink('matic')" class="no-style">
-                Matic <img src="assets/icons/Matic.png" alt="Matic" class="title-icon rounded mb-1"></a>
+                Matic <img src="assets/icons/Matic.png" alt="Matic" class="title-icon rounded mb-1 ml-2"></a>
         </div>
         <p class="text mb-1">
             <ng-container *ngIf="m.ca()">
@@ -58,13 +93,41 @@
                 I also developed specific web pages for billboard screens in multiple cinema locations in Madrid.
             </ng-container>
         </p>
-        <!-- <a [href]="getLink('matic')">www.matic.cat</a> -->
+        <div class="title-skills mt-4 mb-2">
+            <ng-container *ngIf="m.ca()">Tecnologies utilitzades</ng-container>
+            <ng-container *ngIf="m.es()">Tecnologías usadas</ng-container>
+            <ng-container *ngIf="m.en()">Used technologies</ng-container>
+        </div>
+        <div class="skills">
+            <app-skill n="JavaScript"/>
+            <app-skill n="JQuery"/>
+            <app-skill n="CSS"/>
+            <app-skill n="HTML"/>
+            <app-skill n="Bootstrap"/>
+            <app-skill n="XML"/>
+            <app-skill n="UWP"/>
+            <app-skill n="Cordova"/>
+            <app-skill n="Sequelize"/>
+            <app-skill n="JSON"/>
+            <app-skill n="PHP"/>
+            <app-skill n="Apache"/>
+            <app-skill n="MySQL"/>
+            <app-skill n="PHPMyadmin"/>
+            <app-skill n="Filezilla"/>
+            <app-skill n="Visual Studio Code"/>
+            <app-skill n="Windows"/>
+            <app-skill n="Windows Server"/>
+            <app-skill n="Joomla"/>
+            <app-skill n="K2"/>
+            <app-skill n="Akeeba Backup"/>
+            <app-skill n="JCE FileManager"/>
+        </div>
     </div>
     <!-- Indra -->
     <div id="indra" class="group ocult-animacio h">
         <div class="subtitle mb-2">
             <a [href]="getLink('indra')" class="no-style">
-                Indra <img [src]="'assets/icons/'+(m.modeFosc?'indra-d':'indra-l')+'.png'" alt="Indra" class="title-icon rounded mb-1">
+                Indra <img [src]="'assets/icons/'+(m.modeFosc?'indra-d':'indra-l')+'.png'" alt="Indra" class="title-icon rounded mb-1 ml-2">
             </a>
         </div>
         <p class="text mb-1">
@@ -120,13 +183,30 @@
                 <a href="https://www.ibm.com/topics/middleware">Middleware</a> tools.
             </ng-container>
         </p>
-        <!-- <a [href]="getLink('indra')">www.indracompany.com</a> -->
+        <div class="title-skills mt-4 mb-2">
+            <ng-container *ngIf="m.ca()">Tecnologies utilitzades</ng-container>
+            <ng-container *ngIf="m.es()">Tecnologías usadas</ng-container>
+            <ng-container *ngIf="m.en()">Used technologies</ng-container>
+        </div>
+        <div class="skills">
+            <app-skill n="Java"/>
+            <app-skill n="JSP"/>
+            <app-skill n="XML"/>
+            <app-skill n="PL/1"/>
+            <app-skill n="DB2"/>
+            <app-skill n="Netbeans"/>
+            <app-skill n="Eclipse"/>
+            <app-skill n="SVN"/>
+            <app-skill n="Windows"/>
+            <app-skill n="Windows Server"/>
+            <app-skill n="zOS/MVS"/>
+        </div>
     </div>
     <!-- Nexxia -->
     <div id="nexxia" class="group ocult-animacio h">
         <div class="subtitle mb-2">
             <a [href]="getLink('nexxia')" class="no-style">
-                Nexxia Soft <img src="assets/icons/nexxia.jpg" alt="Nexxia" class="title-icon rounded-2 mb-1"></a>
+                Nexxia Soft <img src="assets/icons/nexxia.jpg" alt="Nexxia" class="title-icon rounded-2 mb-1 ml-2"></a>
         </div>
         <p class="text mb-1">
             <ng-container *ngIf="m.ca()">
@@ -144,6 +224,21 @@
                 I also developed several web screens related to the project, using JQuery and Bootstrap.
             </ng-container>
         </p>
-        <!-- <a [href]="getLink('nexxia')">www.nexxiasoft.com</a> -->
+        <div class="title-skills mt-4 mb-2">
+            <ng-container *ngIf="m.ca()">Tecnologies utilitzades</ng-container>
+            <ng-container *ngIf="m.es()">Tecnologías usadas</ng-container>
+            <ng-container *ngIf="m.en()">Used technologies</ng-container>
+        </div>
+        <div class="skills">
+            <app-skill n="JavaScript"/>
+            <app-skill n="JQuery"/>
+            <app-skill n="CSS"/>
+            <app-skill n="HTML"/>
+            <app-skill n="Bootstrap"/>
+            <app-skill n="XML"/>
+            <app-skill n="Delphi"/>
+            <app-skill n="FastReport"/>
+            <app-skill n="Windows"/>
+        </div>
     </div>
 </div>

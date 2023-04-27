@@ -1,5 +1,5 @@
 <div class="content" [style.margin-top.px]="m.u.getAlturaAppbar()">
-    <div class="title h1 mt-0 mb-4 ocult-animacio h">
+    <div class="title h1 mb-5 ocult-animacio h">
         <ng-container *ngIf="m.ca()">Projectes personals</ng-container>
         <ng-container *ngIf="m.es()">Proyectos personales</ng-container>
         <ng-container *ngIf="m.en()">Personal projects</ng-container>
@@ -7,7 +7,7 @@
 
     <!-- Android Apps -->
     <div id="android" class="group ocult-animacio h">
-        <div class="subtitle">
+        <div class="subtitle mb-2">
             <ng-container *ngIf="m.ca()">Apps Android</ng-container>
             <ng-container *ngIf="m.es()">Apps Android</ng-container>
             <ng-container *ngIf="m.en()">Android Apps</ng-container>
@@ -26,14 +26,35 @@
                 When I have free time, I like to develop Android apps and games for the Play Store, either in Android Studio, Unity or Cordova. To do it I use Java, Kotlin, C# and Javascript.
             </ng-container>
         </p>
-        <ng-container *ngIf="m.ca()"><a href="https://play.google.com/store/apps/developer?id=Jordi+Mas+Parramon">Les meves apps a Google Play</a></ng-container>
-        <ng-container *ngIf="m.es()"><a href="https://play.google.com/store/apps/developer?id=Jordi+Mas+Parramon">Mis apps en Google Play</a></ng-container>
-        <ng-container *ngIf="m.en()"><a href="https://play.google.com/store/apps/developer?id=Jordi+Mas+Parramon">My apps in Google Play</a></ng-container>
+        <a href="https://play.google.com/store/apps/developer?id=Jordi+Mas+Parramon">
+            <ng-container *ngIf="m.ca()">Les meves apps a Google Play</ng-container>
+            <ng-container *ngIf="m.es()">Mis apps en Google Play</ng-container>
+            <ng-container *ngIf="m.en()">My apps in Google Play</ng-container>
+        </a>
+        <div class="title-skills mt-4 mb-2">
+            <ng-container *ngIf="m.ca()">Tecnologies utilitzades</ng-container>
+            <ng-container *ngIf="m.es()">Tecnologías usadas</ng-container>
+            <ng-container *ngIf="m.en()">Used technologies</ng-container>
+        </div>
+        <div class="skills">
+            <app-skill n="Android"/>
+            <app-skill n="Kotlin"/>
+            <app-skill n="Java"/>
+            <app-skill n="XML"/>
+            <app-skill n="JSON"/>
+            <app-skill n="C#" />
+            <app-skill n="PHP"/>
+            <app-skill n="MySQL"/>
+            <app-skill n="GitHub"/>
+            <app-skill n="Android Studio"/>
+            <app-skill n="Unity"/>
+            <app-skill n="Windows"/>
+        </div>
     </div>
     
     <!-- Tasker -->
     <div id="tasker" class="group ocult-animacio h">
-        <div class="subtitle">
+        <div class="subtitle mb-2">
             <ng-container *ngIf="m.ca()">Projectes TaskerNet</ng-container>
             <ng-container *ngIf="m.es()">Proyectos TaskerNet</ng-container>
             <ng-container *ngIf="m.en()">TaskerNet projects</ng-container>
@@ -57,19 +78,28 @@
             <ng-container *ngIf="m.es()">Proyectos públicos de Jordi Mas</ng-container>
             <ng-container *ngIf="m.en()">Jordi Mas's Public Shares</ng-container>
         </a>
+        <div class="title-skills mt-4 mb-2">
+            <ng-container *ngIf="m.ca()">Tecnologies utilitzades</ng-container>
+            <ng-container *ngIf="m.es()">Tecnologías usadas</ng-container>
+            <ng-container *ngIf="m.en()">Used technologies</ng-container>
+        </div>
+        <div class="skills">
+            <app-skill n="HTML"/>
+            <app-skill n="CSS"/>
+        </div>
     </div>
 
 
     <!-- Mad Jumpgate -->
     <div id="mad-jumpgate" class="group ocult-animacio h">
-        <div class="subtitle">
+        <div class="subtitle mb-2">
             <ng-container *ngIf="m.ca()">Projecte final 2n DAM</ng-container>
             <ng-container *ngIf="m.es()">Proyecto final 2do DAM</ng-container>
             <ng-container *ngIf="m.en()">Final project for the second year of the Higher Cycle of Multiplatform Application Development (DAM)</ng-container>
             - Mad Jumpgate
             <a href="https://jmaspgames.itch.io/mad-jumpgate" class="link-img ml-1 mb-1"><img src="assets/icons/Mad-jumpgate.png" alt="Mad Jumpgate" class="title-icon rounded"></a>
         </div>
-        <p class="text mb-1">
+        <p class="text mb-4">
             <ng-container *ngIf="m.ca()">
                 Aquest és el meu projecte final del segon curs del Cicle Superior de Desenvolupament d'Aplicacions Multiplataforma (DAM). Em va portar 2 setmanes de feina crear aquest <i><a href="https://ca.wikipedia.org/wiki/Videojoc_d%27acci%C3%B3_en_primera_persona">First Person Shooter</a></i> des de zero, utilitzant Unity. Des del moviment de la càmara i del jugador, passant per les mecàniques de cada tipus d'arma (tant l'usuari com els enemics) i punts de spawn, fins a gestionar l'inventari format per la munició i els subministres.
             </ng-container>
@@ -82,12 +112,24 @@
                 This is my final project for the second year of the Higher Cycle of Multiplatform Application Development (DAM). It took me 2 weeks of work to create this <i><a href="https://en.wikipedia.org/wiki/First-person_shooter">First Person Shooter</a></i> from scratch, using Unity. From the movement of the camera and the player, through the mechanics of shooting each type of weapon (both the user and the enemies) and spawn points, to managing the inventory consisting of ammunition and supplies.
             </ng-container>
         </p>
-        <div class="game-placeholder mt-2" style="width:552px; height:167px;">
+        <div class="game-placeholder" style="width:552px; height:167px;">
             <iframe *ngIf="mostrarWidgetJoc" #game class="game" src="https://itch.io/embed/2011884" width="552" height="167" frameborder="0">
                 <a href="https://jmaspgames.itch.io/mad-jumpgate">Mad Jumpgate by Jordi Mas</a>
             </iframe>
         </div><!-- per a que no salti l'scroll. TODO si la pagina projectes s'emplena, borrar aixo -->
         <!-- <a *ngIf="!mostrarWidgetJoc" href="https://jmaspgames.itch.io/mad-jumpgate">Mad Jumpgate by Jordi Mas</a> -->
-        
+        <div class="title-skills mt-4 mb-2">
+            <ng-container *ngIf="m.ca()">Tecnologies utilitzades</ng-container>
+            <ng-container *ngIf="m.es()">Tecnologías usadas</ng-container>
+            <ng-container *ngIf="m.en()">Used technologies</ng-container>
+        </div>
+        <div class="skills">
+            <app-skill n="C#" />
+            <app-skill n="Unity"/>
+            <app-skill n="XML"/>
+            <app-skill n="JSON"/>
+            <app-skill n="Visual Studio"/>
+            <app-skill n="Windows"/>
+        </div>
     </div>
 </div>

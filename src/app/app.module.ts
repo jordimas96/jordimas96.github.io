@@ -11,6 +11,7 @@ import { ExperiencePageComponent } from './pages/experience-page/experience-page
 import { ProjectsPageComponent } from './pages/projects-page/projects-page.component';
 import { HomePageComponent } from './pages/home-page/home-page.component';
 import { TargetBlankDirective } from './directives/target-blank.directive';
+import { SkillComponent } from './components/skill/skill.component';
 
 @NgModule({
     declarations: [
@@ -28,6 +29,7 @@ import { TargetBlankDirective } from './directives/target-blank.directive';
 
         // Directives //
         TargetBlankDirective,
+         SkillComponent,
     ],
     imports: [
         BrowserModule,

@@ -28,6 +28,9 @@ export class ExperiencePageComponent {
         $(".content>.ocult-animacio").each((i, e) => {
             Utils.fadeIn(e, i * 50);
         });
+        $("app-skill").each((i, e) => {
+            Utils.fadeIn(e, i * 20);
+        });
     }
     getLink(nom) {
         return this.links[nom][this.m.idioma];

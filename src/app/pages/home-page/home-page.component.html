@@ -1,55 +1,57 @@
 <div class="content" [style.margin-top.px]="m.u.getAlturaAppbar()">
     <!-- <div class="title h1 mt-0 mb-4">Jordi Mas Parramon</div> -->
 
-    <div class="row no-gutters">
-        <div class="div-foto col-5 col-sm-4 p-3 p-sm-4 ocult-animacio h">
-            <app-imatge-scroll [src]="'assets/Foto carnet 2020.jpg'"></app-imatge-scroll>
-        </div>
-        <div class="div-text col-7 col-sm-8 p-sm-4 ocult-animacio h">
-            <!-- <h2>Bona tarda</h2>
-            <div class="d-inline"><small style="opacity:0.8">sóc en</small> <h1>Jordi Mas Parramon</h1></div> -->
-
-            <div class="linies">
-                <div class="bondia mb-2">{{getSalutacioSegonsHora()}}</div>
-                <div class="nom">
-                    <span class="emdic">
-                        <ng-container *ngIf="m.ca()">Em dic</ng-container>
-                        <ng-container *ngIf="m.es()">Me llamo</ng-container>
-                        <ng-container *ngIf="m.en()">My name is</ng-container>
-                    </span>
-                    <br *ngIf="m.esMobil()">
-                    Jordi Mas Parramon
-                </div>
-                <div class="programador">
-                    -
-                    <ng-container *ngIf="m.ca()">Programador frontend</ng-container>
-                    <ng-container *ngIf="m.es()">Programador frontend</ng-container>
-                    <ng-container *ngIf="m.en()">Frontend programmer</ng-container>
-                    -
-                </div>
+    <div class="group">
+        <div class="row no-gutters">
+            <div class="div-foto col-5 col-sm-4 p-3 p-sm-4 ocult-animacio h">
+                <app-imatge-scroll src="assets/Foto carnet 2020.jpg"></app-imatge-scroll>
             </div>
-            <!-- Recipient bio pc -->
-            <div *ngIf="m.esPc()" class="text bio mt-4">
+            <div class="div-text col-7 col-sm-8 p-sm-4 ocult-animacio h">
+                <!-- <h2>Bona tarda</h2>
+                <div class="d-inline"><small style="opacity:0.8">sóc en</small> <h1>Jordi Mas Parramon</h1></div> -->
+
+                <div class="linies">
+                    <div class="bondia mb-2">{{getSalutacioSegonsHora()}}</div>
+                    <div class="nom">
+                        <span class="emdic">
+                            <ng-container *ngIf="m.ca()">Em dic</ng-container>
+                            <ng-container *ngIf="m.es()">Me llamo</ng-container>
+                            <ng-container *ngIf="m.en()">My name is</ng-container>
+                        </span>
+                        <br *ngIf="m.esMobil()">
+                        Jordi Mas Parramon
+                    </div>
+                    <div class="programador">
+                        -
+                        <ng-container *ngIf="m.ca()">Programador frontend</ng-container>
+                        <ng-container *ngIf="m.es()">Programador frontend</ng-container>
+                        <ng-container *ngIf="m.en()">Frontend programmer</ng-container>
+                        -
+                    </div>
+                </div>
+                <!-- Recipient bio pc -->
+                <div *ngIf="m.esPc()" class="text bio mt-4">
+                    <div *ngTemplateOutlet="bio"></div>
+                </div>
+                
+            </div>
+        </div>
+        <!-- Recipient bio mobil -->
+        <div class="ocult-animacio h">
+            <div *ngIf="m.esMobil()" class="text bio mt-4">
                 <div *ngTemplateOutlet="bio"></div>
             </div>
-            
         </div>
+        <!-- Template bio -->
+        <ng-template #bio>
+            <ng-container *ngIf="m.ca()">Sóc un apassionat programador amb experiència en Angular, CSS, Javascript, C# i Python, entre altres. En aquesta web, trobaràs informació sobre la meva experiència, habilitats i projectes, així com la meva informació de contacte perquè puguem conversar sobre com et puc ajudar amb el teu proper projecte.</ng-container>
+                
+            <ng-container *ngIf="m.es()">Soy un apasionado programador con experiencia en Angular, CSS, Javascript, C# y Python, entre otros. En esta web, encontrarás información sobre mi experiencia, habilidades y proyectos, así como mi información de contacto para que podamos conversar sobre cómo puedo ayudarte con tu próximo proyecto.</ng-container>
+        
+            <ng-container *ngIf="m.en()">I am a passionate programmer with experience in Angular, CSS, Javascript, C# and Python, among others. On this site, youll find information about my past experience, skills, and projects, as well as my contact information so we can discuss about how I can help with your next project.</ng-container>
+        </ng-template>
     </div>
-    <!-- Recipient bio mobil -->
-    <div class="ocult-animacio h">
-        <div *ngIf="m.esMobil()" class="text bio mt-4">
-            <div *ngTemplateOutlet="bio"></div>
-        </div>
-    </div>
-    <!-- Template bio -->
-    <ng-template #bio>
-        <ng-container *ngIf="m.ca()">Sóc un apassionat programador amb experiència en Angular, CSS, Javascript, C# i Python, entre altres. En aquesta web, trobaràs informació sobre la meva experiència, habilitats i projectes, així com la meva informació de contacte perquè puguem conversar sobre com et puc ajudar amb el teu proper projecte.</ng-container>
-            
-        <ng-container *ngIf="m.es()">Soy un apasionado programador con experiencia en Angular, CSS, Javascript, C# y Python, entre otros. En esta web, encontrarás información sobre mi experiencia, habilidades y proyectos, así como mi información de contacto para que podamos conversar sobre cómo puedo ayudarte con tu próximo proyecto.</ng-container>
     
-        <ng-container *ngIf="m.en()">I am a passionate programmer with experience in Angular, CSS, Javascript, C# and Python, among others. On this site, you'll find information about my past experience, skills, and projects, as well as my contact information so we can discuss about how I can help with your next project.</ng-container>
-    </ng-template>
-
 
     <!-- Skills -->
     <div id="llenguatges" class="group llenguatges ocult-animacio h">
@@ -62,44 +64,43 @@
             <div class="col-12 col-sm-6 mt-4">
                 <div class="titol-tipus-llenguatge mb-2">Frontend</div>
                 <div class="chips">
-                    <div class="chip ocult-animacio -v angular">Angular</div>
-                    <div class="chip ocult-animacio -v javascript">JavaScript</div>
-                    <div class="chip ocult-animacio -v jquery">JQuery</div>
-                    <div class="chip ocult-animacio -v typescript">TypeScript</div>
-                    <div class="chip ocult-animacio -v css">CSS</div>
-                    <div class="chip ocult-animacio -v sass">SASS</div>
-                    <div class="chip ocult-animacio -v html">HTML</div>
-                    <div class="chip ocult-animacio -v bootstrap">Bootstrap</div>
-                    <div class="chip ocult-animacio -v materialize">Materialize</div>
-                    <div class="chip ocult-animacio -v android">Android</div>
-                    <div class="chip ocult-animacio -v kotlin">Kotlin</div>
-                    <div class="chip ocult-animacio -v xml">XML</div>
-                    <div class="chip ocult-animacio -v uwp">UWP</div>
-                    <div class="chip ocult-animacio -v cordova">Cordova</div>
-                    <div class="chip ocult-animacio -v wpf">WPF</div>
-                    <div class="chip ocult-animacio -v delphi">Delphi</div>
+                    <app-skill n="Angular"/>
+                    <app-skill n="JavaScript"/>
+                    <app-skill n="JQuery"/>
+                    <app-skill n="TypeScript"/>
+                    <app-skill n="CSS"/>
+                    <app-skill n="SASS"/>
+                    <app-skill n="HTML"/>
+                    <app-skill n="Bootstrap"/>
+                    <app-skill n="Materialize"/>
+                    <app-skill n="Android"/>
+                    <app-skill n="Kotlin"/>
+                    <app-skill n="XML"/>
+                    <app-skill n="UWP"/>
+                    <app-skill n="Cordova"/>
+                    <app-skill n="WPF"/>
+                    <app-skill n="Delphi"/>
                 </div>
             </div>
 
             <div class="col-12 col-sm-6 mt-4">
                 <div class="titol-tipus-llenguatge mb-2">Backend</div>
                 <div class="chips">
-                    <div class="chip ocult-animacio -v nodejs">NodeJs</div>
-                    <div class="chip ocult-animacio -v sequelize">Sequelize</div>
-                    <div class="chip ocult-animacio -v json">JSON</div>
-                    <div class="chip ocult-animacio -v java">Java</div>
-                    <div class="chip ocult-animacio -v python">Python</div>
-                    <div class="chip ocult-animacio -v csharp">C#</div>
-                    <div class="chip ocult-animacio -v django">Django</div>
-                    <div class="chip ocult-animacio -v php">PHP</div>
-                    <div class="chip ocult-animacio -v rubyonrails">Ruby on Rails</div>
-                    <div class="chip ocult-animacio -v apache">Apache</div>
-                    <div class="chip ocult-animacio -v mysql">MySQL</div>
-                    <div class="chip ocult-animacio -v phpmyadmin">PHPMyadmin</div>
-                    <div class="chip ocult-animacio -v plsql">PL/SQL</div>
-                    <div class="chip ocult-animacio -v jsp">JSP</div>
-                    <div class="chip ocult-animacio -v pl1">PL/1</div>
-                    <div class="chip ocult-animacio -v db2">DB2</div>
+                    <app-skill n="NodeJs"/>
+                    <app-skill n="Sequelize"/>
+                    <app-skill n="JSON"/>
+                    <app-skill n="Java"/>
+                    <app-skill n="Python"/>
+                    <app-skill n="C#"/>
+                    <app-skill n="Django"/>
+                    <app-skill n="PHP"/>
+                    <app-skill n="Ruby on Rails"/>
+                    <app-skill n="Apache"/>
+                    <app-skill n="MySQL"/>
+                    <app-skill n="PL/SQL"/>
+                    <app-skill n="JSP"/>
+                    <app-skill n="PL/1"/>
+                    <app-skill n="DB2"/>
                 </div>
             </div>
 
@@ -110,22 +111,24 @@
                     <ng-container *ngIf="m.en()">Software development tools</ng-container>
                 </div>
                 <div class="chips">
-                    <div class="chip ocult-animacio -v git">Git</div>
-                    <div class="chip ocult-animacio -v github">GitHub</div>
-                    <div class="chip ocult-animacio -v bitbucket">Bitbucket</div>
-                    <div class="chip ocult-animacio -v sourcetree">Sourcetree</div>
-                    <div class="chip ocult-animacio -v postman">Postman</div>
-                    <div class="chip ocult-animacio -v asana">Asana</div>
-                    <div class="chip ocult-animacio -v filezilla">Filezilla</div>
-                    <div class="chip ocult-animacio -v androidstudio">Android Studio</div>
-                    <div class="chip ocult-animacio -v unity">Unity</div>
-                    <div class="chip ocult-animacio -v netbeans">Netbeans</div>
-                    <div class="chip ocult-animacio -v eclipse">Eclipse</div>
-                    <div class="chip ocult-animacio -v svn">SVN</div>
-                    <div class="chip ocult-animacio -v hibernate">Hibernate</div>
-                    <div class="chip ocult-animacio -v vscode">Visual Studio Code</div>
-                    <div class="chip ocult-animacio -v poedit">Poedit</div>
-                    <div class="chip ocult-animacio -v fastreport">FastReport</div>
+                    <app-skill n="Git"/>
+                    <app-skill n="GitHub"/>
+                    <app-skill n="Bitbucket"/>
+                    <app-skill n="Sourcetree"/>
+                    <app-skill n="Postman"/>
+                    <app-skill n="Asana"/>
+                    <app-skill n="PHPMyadmin"/>
+                    <app-skill n="Filezilla"/>
+                    <app-skill n="Android Studio"/>
+                    <app-skill n="Unity"/>
+                    <app-skill n="Visual Studio"/>
+                    <app-skill n="Eclipse"/>
+                    <app-skill n="Netbeans"/>
+                    <app-skill n="SVN"/>
+                    <app-skill n="Hibernate"/>
+                    <app-skill n="Visual Studio Code"/>
+                    <app-skill n="Poedit"/>
+                    <app-skill n="FastReport"/>
                 </div>
             </div>
 
@@ -136,17 +139,17 @@
                     <ng-container *ngIf="m.en()">Virtualization tools and OS</ng-container>
                 </div>
                 <div class="chips">
-                    <div class="chip ocult-animacio -v vmware">VMware</div>
-                    <div class="chip ocult-animacio -v virtualbox">VirtualBox</div>
-                    <div class="chip ocult-animacio -v windows">Windows</div>
-                    <div class="chip ocult-animacio -v winserver">Windows Server</div>
-                    <div class="chip ocult-animacio -v ubuntu">Ubuntu</div>
-                    <div class="chip ocult-animacio -v debian">Debian</div>
-                    <div class="chip ocult-animacio -v redhat">Red Hat</div>
-                    <div class="chip ocult-animacio -v fedora">Fedora</div>
-                    <div class="chip ocult-animacio -v macos">macOS</div>
-                    <div class="chip ocult-animacio -v tails">Tails</div>
-                    <div class="chip ocult-animacio -v zos">zOS/MVS</div>
+                    <app-skill n="VMware"/>
+                    <app-skill n="VirtualBox"/>
+                    <app-skill n="Windows"/>
+                    <app-skill n="Windows Server"/>
+                    <app-skill n="Ubuntu"/>
+                    <app-skill n="Debian"/>
+                    <app-skill n="Red Hat"/>
+                    <app-skill n="Fedora"/>
+                    <app-skill n="macOS"/>
+                    <app-skill n="Tails"/>
+                    <app-skill n="zOS/MVS"/>
                 </div>
             </div>
 
@@ -157,10 +160,10 @@
                     <ng-container *ngIf="m.en()">CMS and web frameworks</ng-container>
                 </div>
                 <div class="chips">
-                    <div class="chip ocult-animacio -v joomla">Joomla</div>
-                    <div class="chip ocult-animacio -v k2">K2</div>
-                    <div class="chip ocult-animacio -v akeeba">Akeeba Backup</div>
-                    <div class="chip ocult-animacio -v jce">JCE FileManager</div>
+                    <app-skill n="Joomla"/>
+                    <app-skill n="K2"/>
+                    <app-skill n="Akeeba Backup"/>
+                    <app-skill n="JCE FileManager"/>
                 </div>
             </div>
             

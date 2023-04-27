@@ -23,6 +23,9 @@ export class ProjectsPageComponent {
         $(".content>.ocult-animacio").each((i, e) => {
             Utils.fadeIn(e, i * 50);
         });
+        $("app-skill").each((i, e) => {
+            Utils.fadeIn(e, i * 20);
+        });
         
 
 

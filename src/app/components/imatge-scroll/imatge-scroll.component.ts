@@ -9,7 +9,7 @@ import { Utils } from 'src/app/services/utils.service';
 })
 export class ImatgeScrollComponent {
 
-    @Input() src!: string;
+    @Input() src: string;
     public transY;
 
     @HostListener('window:scroll', ['$event'])
