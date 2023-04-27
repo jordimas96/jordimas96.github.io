@@ -27,7 +27,7 @@ footer {
 }
 
 ::ng-deep .light footer {
-    box-shadow: 0 0 10px 0px #00000080;
+    box-shadow: 0 0 10px 0px var(--color-fosc-50);
 }
 
 // ::ng-deep .light footer { box-shadow: inset -100px 133px 9px -123px var(--color-clar); border: none; }

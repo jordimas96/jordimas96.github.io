@@ -69,18 +69,18 @@ html {
         --color-clar-50: rgba(255, 236, 210, 0.5);
     }
     &.vespre {
-        --color-fosc:     rgb(0, 0, 42);
-        --color-fosc-90: rgba(0, 0, 42, 0.9);
-        --color-fosc-80: rgba(0, 0, 42, 0.8);
-        --color-fosc-70: rgba(0, 0, 42, 0.7);
-        --color-fosc-60: rgba(0, 0, 42, 0.6);
-        --color-fosc-50: rgba(0, 0, 42, 0.5);
-        --color-clar:     rgb(217, 217, 255);
-        --color-clar-90: rgba(217, 217, 255, 0.9);
-        --color-clar-80: rgba(217, 217, 255, 0.8);
-        --color-clar-70: rgba(217, 217, 255, 0.7);
-        --color-clar-60: rgba(217, 217, 255, 0.6);
-        --color-clar-50: rgba(217, 217, 255, 0.5);
+        --color-fosc:     rgb(20, 0, 41);
+        --color-fosc-90: rgba(20, 0, 41, 0.9);
+        --color-fosc-80: rgba(20, 0, 41, 0.8);
+        --color-fosc-70: rgba(20, 0, 41, 0.7);
+        --color-fosc-60: rgba(20, 0, 41, 0.6);
+        --color-fosc-50: rgba(20, 0, 41, 0.5);
+        --color-clar:     rgb(231, 219, 255);
+        --color-clar-90: rgba(231, 219, 255, 0.9);
+        --color-clar-80: rgba(231, 219, 255, 0.8);
+        --color-clar-70: rgba(231, 219, 255, 0.7);
+        --color-clar-60: rgba(231, 219, 255, 0.6);
+        --color-clar-50: rgba(231, 219, 255, 0.5);
     }
     &.nit {
         --color-fosc:     rgb(16, 16, 16);
@@ -134,16 +134,16 @@ html {
         --color-l-9: #ffecd1;
     }
     &.vespre {
-        --color-l-0: #000e29;
-        --color-l-1: #001d57;
-        --color-l-2: #002e8a;
-        --color-l-3: #003db8;
-        --color-l-4: #0046d1;
-        --color-l-5: #1a53ff;
-        --color-l-6: #4d6aff;
-        --color-l-7: #7a90ff;
-        --color-l-8: #adbbff;
-        --color-l-9: #dbe1ff;
+        --color-l-0: hsl(270, 100%, 8%);
+        --color-l-1: hsl(270, 100%, 17%);
+        --color-l-2: hsl(270, 100%, 27%);
+        --color-l-3: hsl(270, 100%, 36%);
+        --color-l-4: hsl(270, 100%, 45%);
+        --color-l-5: hsl(270, 100%, 55%);
+        --color-l-6: hsl(270, 100%, 65%);
+        --color-l-7: hsl(270, 100%, 74%);
+        --color-l-8: hsl(270, 100%, 84%);
+        --color-l-9: hsl(270, 100%, 93%);
     }
     &.nit {
         --color-l-0: #0f0f0f;
@@ -287,7 +287,7 @@ a:not(.link-img, .no-style) {
     }
 }
 a.no-style {
-    color: var(--text);
+    color: inherit;
     &:hover {
         text-decoration: none;
     }
@@ -337,8 +337,8 @@ img, .noselect {
 
 
 // Tota la pagina //
-::selection { background: var(--text-90); color: var(--fons); }
-::-moz-selection { background: var(--text-90); color: var(--fons); }
+::selection { background: var(--color-7); color: var(--fons); }
+::-moz-selection { background: var(--color-7); color: var(--fons); }
 
 
 

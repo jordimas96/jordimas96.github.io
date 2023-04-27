@@ -20,7 +20,7 @@
         color: var(--text-60);
     }
     .nom {
-        color: var(--text);
+        color: var(--color-5);
         .emdic {
             color: var(--text-70);
         }
@@ -30,12 +30,14 @@
         font-style: italic;
     }
 }
+::ng-deep html.light.matinada .nom { color: var(--color-l-0) !important }
 
 .llenguatges {
     .titol-tipus-llenguatge {
         font-size: 1.4rem;
         color: var(--text-80);
         text-align: center;
+        transition: var(--transicio-colors);
     }
     .chips {
         display: flex;
