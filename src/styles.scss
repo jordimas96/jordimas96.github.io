@@ -214,6 +214,7 @@ body {
 
 
 body {
+    // background: url("assets/fons.png"), var(--fons);
     background: var(--fons);
     color: var(--text);
     margin-bottom: var(--footer-altura);
@@ -384,6 +385,9 @@ img, .noselect {
     }
     .text {
         font-size: 1.1rem;
+    }
+    .skills {
+        justify-content: center;
     }
 }
 
