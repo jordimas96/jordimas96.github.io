@@ -5,7 +5,7 @@
     z-index: 1000;
     background: none;
     backdrop-filter: blur(20px) saturate(1.5);
-    transition: box-shadow 0.3s ease, var(--transicio-colors);
+    transition: box-shadow 0.3s ease, var(--transicio-ocult-animacio);
 
     &:not(.scrolled) {
         backdrop-filter: blur(20px);

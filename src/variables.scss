@@ -17,6 +17,7 @@
     --link: #5fc2ff;
 
     --transicio-colors: background-color 0.3s ease, color 0.15s ease, border-color 0.3s ease, filter 0.3s ease;
+    --transicio-ocult-animacio: transform 0.3s ease, opacity 0.5s ease, font-size 0.3s ease, var(--transicio-colors);
 
     &.light {
         --fons: rgb(255, 255, 255);

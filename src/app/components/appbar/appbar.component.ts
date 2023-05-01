@@ -91,13 +91,14 @@ export class AppbarComponent {
         const horaSeguent = new Date(ara.getFullYear(), ara.getMonth(), ara.getDate(), ara.getHours() + 1, 0, 0, 0);
 
         setTimeout(() => {
-            this.setTemaSegonsHora((new Date().getHours() + 1) % 24);
+            this.setTemaSegonsHora((ara.getHours() + 1) % 24);
+            this.actTema();
         }, horaSeguent.getTime() - ara.getTime());
     }
 
     actTema() {
         $("html")
-            .removeClass()
+            .removeClass("dark light nit matinada mati tarda vespre")
             .addClass(this.m.modeFosc ? "dark" : "light")
             .addClass(this.m.tema);
     }

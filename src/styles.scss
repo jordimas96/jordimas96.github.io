@@ -350,7 +350,7 @@ img, .noselect {
     &.-v { transform: translateY(30px); }
     &.-h { transform: translateX(30px); }
     opacity: 0;
-    transition: transform 0.3s ease, opacity 0.5s ease, font-size 0.3s ease, var(--transicio-colors);
+    transition: var(--transicio-ocult-animacio);
 
     &.mostrat {
         transform: translate(0);
