@@ -15,7 +15,6 @@
 // }
 
 html {
-    font-family: Arial, sans-serif;
     color-scheme: dark;
 
     // Footer //
@@ -214,6 +213,7 @@ body {
 
 
 body {
+    font-family: "Segoe UI", Verdana, Arial, sans-serif !important;
     // background: url("assets/fons.png"), var(--fons);
     background: var(--fons);
     color: var(--text);
@@ -262,7 +262,7 @@ body {
 .skills {
     display: flex;
     flex-wrap: wrap;
-    margin: 0 -0.25rem;
+    margin: -0.25rem;
     app-skill {
         @extend .ocult-animacio, .-v;
     }

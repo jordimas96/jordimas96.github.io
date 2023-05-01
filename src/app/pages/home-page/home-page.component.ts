@@ -38,7 +38,7 @@ export class HomePageComponent {
             Utils.fadeIn(e, i * 50);
         });
 
-        $(".content .chips app-skill").each((i, e) => {
+        $(".content .skills app-skill").each((i, e) => {
             Utils.fadeIn(e, i * 20);
         });
     }

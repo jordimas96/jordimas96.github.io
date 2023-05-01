@@ -39,13 +39,8 @@
         text-align: center;
         transition: var(--transicio-colors);
     }
-    .chips {
-        display: flex;
-        flex-wrap: wrap;
+    .skills {
         justify-content: center;
-        app-skill {
-            @extend .ocult-animacio, .-v;
-        }
     }
 }
 

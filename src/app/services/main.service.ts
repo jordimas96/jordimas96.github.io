@@ -21,6 +21,7 @@ export class MainService {
     public modeFosc: boolean = true;
     public tema: string = "";
     public idioma: string = "en";
+    public scroll = window.pageYOffset;
 
     constructor() {
         this.u = Utils;

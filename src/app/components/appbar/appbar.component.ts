@@ -19,9 +19,9 @@ export class AppbarComponent {
     ngOnInit() {
         this.m.afterRootFadeIn(this.afterRootFadeIn.bind(this));
         
-        this.m.modeFosc = this.getDarkMode();
+        this.setDarkMode();
 
-        this.m.tema = this.getTemaSegonsHora();
+        this.setTemaSegonsHora();
 
 
         // Mostrar boto Dark Mode Auto si cal //
@@ -56,22 +56,19 @@ export class AppbarComponent {
         $(".botoAutoMode").fadeOut(200);
     }
 
-    getDarkMode() {
+    setDarkMode() {
         // Establir variable dark mode //
-        let modeFosc = !!parseInt(Utils.getCookie("darkmode"));
+        this.m.modeFosc = !!parseInt(Utils.getCookie("darkmode"));
         
         // Si no te cookie el traiem de system //
         if (!Utils.hasCookie("darkmode"))
-            modeFosc = Utils.systemDarkMode();
-        
-        return modeFosc;
+            this.m.modeFosc = Utils.systemDarkMode();
     }
     
-    getTemaSegonsHora() {
-        if (Utils.hasCookie("forçartema")) return Utils.getCookie("forçartema");
-        // Colors matinada, matí, tarda, vespre, nit //
-        let horaActual = new Date().getHours();
+    setTemaSegonsHora(horaActual = new Date().getHours()) {
+        if (Utils.hasCookie("forçartema")) { this.m.tema = Utils.getCookie("forçartema"); return; }
         
+        // Colors matinada, matí, tarda, vespre, nit //
         const primeraHoraNit = 1;
         const primeraHoraMatinada = 6;
         const primeraHoraMati = 9;
@@ -79,15 +76,23 @@ export class AppbarComponent {
         const primeraHoraVespre = 20;
         
         if (horaActual >= primeraHoraNit && horaActual < primeraHoraMatinada)
-            return "nit";
+            this.m.tema = "nit";
         else if (horaActual >= primeraHoraMatinada && horaActual < primeraHoraMati)
-            return "matinada";
+            this.m.tema = "matinada";
         else if (horaActual >= primeraHoraMati && horaActual < primeraHoraTarda)
-            return "mati";
+            this.m.tema = "mati";
         else if (horaActual >= primeraHoraTarda && horaActual < primeraHoraVespre)
-            return "tarda";
+            this.m.tema = "tarda";
         else
-            return "vespre";
+            this.m.tema = "vespre";
+        
+        
+        const ara = new Date();
+        const horaSeguent = new Date(ara.getFullYear(), ara.getMonth(), ara.getDate(), ara.getHours() + 1, 0, 0, 0);
+
+        setTimeout(() => {
+            this.setTemaSegonsHora((new Date().getHours() + 1) % 24);
+        }, horaSeguent.getTime() - ara.getTime());
     }
 
     actTema() {
@@ -115,5 +120,16 @@ export class AppbarComponent {
     @HostListener('window:resize', ['$event'])
     onResize(event) {
         this.width = event.target.innerWidth;
+    }
+    @HostListener('window:scroll', ['$event'])
+    onScroll() {
+        this.m.scroll = window.pageYOffset;
+    }
+
+    mostrarOmbra() {
+        return !this.m.modeFosc && this.scrolled();
+    }
+    scrolled() {
+        return this.m.scroll > 0;
     }
 }
