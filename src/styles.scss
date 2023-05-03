@@ -214,7 +214,7 @@ body {
 
 body {
     font-family: "Segoe UI", Verdana, Arial, sans-serif !important;
-    background: var(--fons) url("assets/fons.png");
+    background: var(--fons) url("assets/libelula.png");
     background-attachment: fixed;
     background-size: cover;
     background-position: center;
@@ -259,7 +259,10 @@ body {
     background-color: var(--fons-50);
     backdrop-filter: blur(20px);
     border-radius: 2rem;
-    transition: padding 0.3s ease, var(--transicio-ocult-animacio) !important;
+    transition: padding 0.3s ease, box-shadow 0.3s ease, var(--transicio-ocult-animacio) !important;
+}
+.light .group {
+    @extend .shadow-2;
 }
 
 .group:not(:last-child) {
