@@ -214,8 +214,11 @@ body {
 
 body {
     font-family: "Segoe UI", Verdana, Arial, sans-serif !important;
-    // background: url("assets/fons.png"), var(--fons);
-    background: var(--fons);
+    background: var(--fons) url("assets/fons.png");
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center;
+    // background: var(--color-1);
     color: var(--text);
     margin-bottom: var(--footer-altura);
     // transition: var(--transicio-colors);
@@ -250,6 +253,13 @@ body {
 }
 .title-icon {
     height: 2rem;
+}
+
+.group {
+    background-color: var(--fons-50);
+    backdrop-filter: blur(20px);
+    border-radius: 2rem;
+    transition: padding 0.3s ease, var(--transicio-ocult-animacio) !important;
 }
 
 .group:not(:last-child) {
@@ -374,9 +384,15 @@ img, .noselect {
     .text {
         font-size: 1.1rem;
     }
+    .group {
+        padding: 2rem;
+    }
 }
 // Pantalla Mòbil //
 @media only screen and (max-width: 575px) {
+    .content {
+        padding: 0.5rem 0.5rem 4rem;
+    }
     .title {
         font-size: 2rem;
     }
@@ -385,6 +401,9 @@ img, .noselect {
     }
     .text {
         font-size: 1.1rem;
+    }
+    .group {
+        padding: 1rem;
     }
     .skills {
         justify-content: center;
