@@ -214,7 +214,7 @@ body {
 
 body {
     font-family: "Segoe UI", Verdana, Arial, sans-serif !important;
-    background: var(--fons) url("assets/libelula.png");
+    background: var(--fons) url("assets/background/boles.png");
     background-attachment: fixed;
     background-size: cover;
     background-position: center;
@@ -222,6 +222,7 @@ body {
     color: var(--text);
     margin-bottom: var(--footer-altura);
     // transition: var(--transicio-colors);
+    line-height: 1.4;
     transition: all 0.3s ease;
 }
 
@@ -388,7 +389,7 @@ img, .noselect {
         font-size: 1.1rem;
     }
     .group {
-        padding: 2rem;
+        padding: 1.3rem 2rem 2rem;
     }
 }
 // Pantalla Mòbil //

@@ -33,6 +33,9 @@
 ::ng-deep html.light.matinada .nom { color: var(--color-l-0) !important }
 
 .llenguatges {
+    .subtitle {
+        text-align: center;
+    }
     .titol-tipus-llenguatge {
         font-size: 1.4rem;
         color: var(--text-80);
@@ -41,6 +44,7 @@
     }
     .skills {
         justify-content: center;
+        margin: -0.25rem 0;
     }
 }
 

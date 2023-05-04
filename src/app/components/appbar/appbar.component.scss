@@ -8,7 +8,8 @@
     transition: box-shadow 0.3s ease, var(--transicio-ocult-animacio);
 
     &:not(.scrolled) {
-        backdrop-filter: none;
+        // background: var(--fons-50);
+        // backdrop-filter: none;
     }
 
     .botonsDarkMode {
