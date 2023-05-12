@@ -1,5 +1,4 @@
 .link-title {
-    // background-color: var(--text-10);
     padding: 0.5rem 1rem;
     margin: -0.5rem -1rem;
     border-radius: 10000px;
@@ -13,13 +12,6 @@
 
         transition: transform 0.3s ease, var(--transicio-colors);
     }
-
-    &:hover {
-        .fletxa {
-            transform: translate(0.2rem, -0.35rem);
-            color: var(--text);
-        }
-    }
 }
 
 
@@ -32,10 +24,24 @@
 // Pantalla PC //
 @media only screen and (min-width: 576px) { }
 // Pantalla Mòbil //
-@media only screen and (max-width: 575px) { }
+@media only screen and (max-width: 575px) {
+    .link-title {
+        padding: 0.6rem;
+        margin: -0.6rem;
+    }
+}
 
 // PC //
 @media (pointer: fine) {
+    .link-title {
+        &:hover {
+            .fletxa {
+                transform: translate(0.2rem, -0.35rem);
+                color: var(--text);
+            }
+        }
+    }
+
     ::ng-deep .dark  .link-title:hover { background-color: var(--color-2); }
     ::ng-deep .light .link-title:hover { background-color: var(--color-2); }
 }
