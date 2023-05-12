@@ -29,14 +29,6 @@
 
 
 // Pantalla PC //
-@media only screen and (min-width: 576px) {
-    :root {
-        --footer-altura: 100px;
-    }
-}
+@media only screen and (min-width: 576px) { }
 // Pantalla Mòbil //
-@media only screen and (max-width: 575px) {
-    :root {
-        --footer-altura: 80px;
-    }
-}
+@media only screen and (max-width: 575px) { }
