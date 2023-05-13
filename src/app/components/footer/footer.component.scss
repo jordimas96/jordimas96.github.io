@@ -5,6 +5,7 @@ footer {
     bottom: 0;
     width: 100%;
     backdrop-filter: blur(20px);
+    border-top: 1px solid;
 
     transition: all 0.3s ease;
 
@@ -36,7 +37,11 @@ footer {
     }
 }
 
+::ng-deep .dark footer {
+    border-color: var(--text-20) !important;
+}
 ::ng-deep .light footer {
+    border-color: transparent !important;
     background-color: var(--color-fosc);
     box-shadow: 0 0 10px 0px var(--color-fosc-50);
     backdrop-filter: none;
