@@ -1,2 +1,1 @@
-permissions_policy:
-  - interest-cohort=()
+Permissions-Policy: interest-cohort=()
