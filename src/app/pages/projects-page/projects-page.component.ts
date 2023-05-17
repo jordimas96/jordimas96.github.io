@@ -17,11 +17,6 @@ export class ProjectsPageComponent {
     ngOnInit() {
         this.m.afterRootFadeIn(this.afterRootFadeIn.bind(this));
     }
-    ngAfterViewInit() {
-        setTimeout(() => {
-            this.m.gas.pageView(window.location.pathname);
-        }, 5000);
-    }
 
     afterRootFadeIn() {
         $(".content>.ocult-animacio").each((i, e) => {
