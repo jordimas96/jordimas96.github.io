@@ -33,7 +33,9 @@ export class HomePageComponent {
         this.m.afterRootFadeIn(this.afterRootFadeIn.bind(this));
     }
     ngAfterViewInit() {
-        this.m.gas.pageView("/home");
+        setTimeout(() => {
+            this.m.gas.pageView(window.location.pathname);
+        }, 5000);
     }
 
     afterRootFadeIn() {

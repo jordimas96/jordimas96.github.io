@@ -18,7 +18,9 @@ export class ProjectsPageComponent {
         this.m.afterRootFadeIn(this.afterRootFadeIn.bind(this));
     }
     ngAfterViewInit() {
-        this.m.gas.pageView(window.location.pathname);
+        setTimeout(() => {
+            this.m.gas.pageView(window.location.pathname);
+        }, 5000);
     }
 
     afterRootFadeIn() {
