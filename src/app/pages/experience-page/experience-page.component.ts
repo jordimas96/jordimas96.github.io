@@ -21,12 +21,10 @@ export class ExperiencePageComponent {
 
     ngOnInit() {
         this.m.afterRootFadeIn(this.afterRootFadeIn.bind(this));
+
+        // Google Analytics //
+        this.m.gas.pageView(window.location.pathname);
     }
-    // ngAfterViewInit() {
-    //     setTimeout(() => {
-    //         this.m.gas.pageView(window.location.pathname);
-    //     }, 5000);
-    // }
 
     afterRootFadeIn() {
         $(".content>.ocult-animacio").each((i, e) => {
