@@ -32,11 +32,11 @@ export class HomePageComponent {
     ngOnInit() {
         this.m.afterRootFadeIn(this.afterRootFadeIn.bind(this));
     }
-    // ngAfterViewInit() {
-    //     setTimeout(() => {
-    //         this.m.gas.pageView(window.location.pathname);
-    //     }, 5000);
-    // }
+    ngAfterViewInit() {
+        setTimeout(() => {
+            this.m.gas.pageView(window.location.pathname);
+        }, 5000);
+    }
 
     afterRootFadeIn() {
         $(".content .ocult-animacio:not(.chip)").each((i, e) => {
