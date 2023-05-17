@@ -30,6 +30,8 @@ export class HomePageComponent {
     constructor(public m: MainService) { }
 
     ngOnInit() {
+        this.m.gas.pageView("/home");
+        
         this.m.afterRootFadeIn(this.afterRootFadeIn.bind(this));
     }
 

@@ -12,6 +12,7 @@ import { ProjectsPageComponent } from './pages/projects-page/projects-page.compo
 import { HomePageComponent } from './pages/home-page/home-page.component';
 import { TargetBlankDirective } from './directives/target-blank.directive';
 import { SkillComponent } from './components/skill/skill.component';
+import { GoogleAnalyticsModule } from './google-analytics/google-analytics.module';
 
 @NgModule({
     declarations: [
@@ -35,6 +36,7 @@ import { SkillComponent } from './components/skill/skill.component';
         BrowserModule,
         AppRoutingModule,
         FormsModule,
+        GoogleAnalyticsModule,
     ],
     providers: [],
     bootstrap: [AppComponent]

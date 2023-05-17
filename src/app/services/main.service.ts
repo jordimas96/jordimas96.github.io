@@ -1,3 +1,4 @@
+import { GoogleAnalyticsService } from 'ngx-google-analytics';
 import { HostListener, Injectable } from "@angular/core";
 import { AppbarComponent } from "../components/appbar/appbar.component";
 import { Utils } from "./utils.service";
@@ -23,7 +24,7 @@ export class MainService {
     public idioma: string = "en";
     public scroll = window.pageYOffset;
 
-    constructor() {
+    constructor(public gas: GoogleAnalyticsService) {
         this.u = Utils;
         
         // NOMÉS per poder debugar //

@@ -20,8 +20,9 @@ export class ExperiencePageComponent {
     constructor(public m: MainService) { }
 
     ngOnInit() {
-        this.m.afterRootFadeIn(this.afterRootFadeIn.bind(this));
+        this.m.gas.pageView(window.location.pathname);
         
+        this.m.afterRootFadeIn(this.afterRootFadeIn.bind(this));
     }
 
     afterRootFadeIn() {
