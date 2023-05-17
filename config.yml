@@ -1,1 +1,0 @@
-Permissions-Policy: interest-cohort=()
