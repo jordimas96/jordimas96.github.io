@@ -17,4 +17,12 @@ export class SkillComponent {
             .replaceAll("/", "")
             .replaceAll(" ", "")
     }
+    buscarGoogle(s) {
+        s = s
+            .replaceAll(" ", "+")
+            .replaceAll("#", "sharp");
+        
+        s = `https://www.google.com/search?btnI&q=${s}`;
+        window.open(s, "_blank");
+    }
 }
