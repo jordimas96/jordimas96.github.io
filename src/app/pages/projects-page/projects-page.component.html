@@ -29,11 +29,20 @@
                 I've always put effort into following <a href="https://m2.material.io/">Material Design</a> guidelines in Android, but since Android 12 and the introduction of the third version of Material Design, called <a href="https://m3.material.io/">Material You</a>, I have started to design the UIs following this new style, which offers a modern and pleasant-to-use aesthetic. When it comes to choosing the theme, I use <a href="https://developer.android.com/develop/ui/views/theming/dynamic-colors">Monet's dynamic colors</a>, which offer customization options depending on the wallpaper. In this way, interfaces with unique color combinations can be generated for each user.
             </ng-container>
         </p>
-        <a href="https://play.google.com/store/apps/developer?id=Jordi+Mas+Parramon">
+        <!-- <a href="https://play.google.com/store/apps/developer?id=Jordi+Mas+Parramon">
             <ng-container *ngIf="m.ca()">Les meves apps a Google Play</ng-container>
             <ng-container *ngIf="m.es()">Mis apps en Google Play</ng-container>
             <ng-container *ngIf="m.en()">My apps in Google Play</ng-container>
-        </a>
+        </a> -->
+        <div class="boto-i-qr mt-4">
+            <a href="https://play.google.com/store/apps/developer?id=Jordi+Mas+Parramon" class="no-style boto">
+                <ng-container *ngIf="m.ca()">Les meves apps</ng-container>
+                <ng-container *ngIf="m.es()">Mis apps</ng-container>
+                <ng-container *ngIf="m.en()">My apps</ng-container>
+                <img src="assets/icons/google-play.png" alt="google-play" class="logo ml-2">
+                <!-- <span class="fletxa">↗</span> -->
+            </a>
+        </div>
         <!-- Skills -->
         <div class="title-skills mt-4 mb-2">
             <ng-container *ngIf="m.ca()">Tecnologies utilitzades</ng-container>

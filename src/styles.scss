@@ -341,6 +341,22 @@ body {
     }
 }
 
+// Efecte hover botó gran a web en PC //
+.link-boto {
+    padding: 1rem 1rem;
+    margin: -1rem -1rem;
+    border-radius: 10000px;
+
+    transition: var(--transicio-colors);
+
+    .fletxa {
+        display: inline-block;
+        margin-left: 0.7rem;
+        color: var(--link);
+
+        transition: transform 0.3s ease, var(--transicio-colors);
+    }
+}
 
 
 
@@ -496,6 +512,17 @@ img, .noselect {
             color: var(--fons);
             background-size: 100% 100%;
             border-radius: 0.5rem;
+        }
+    }
+
+    // Efecte hover botó gran a web en PC //
+    .link-boto {
+        &:hover {
+            background-color: var(--color-2) !important;
+            .fletxa {
+                transform: translate(0.2rem, -0.35rem);
+                color: var(--text);
+            }
         }
     }
 }
