@@ -1,7 +1,10 @@
 .group {
 
     .boto-i-qr {
-        
+        display: flex;
+        align-items: start;
+        justify-content: space-around;
+
         a.boto {
             display: inline-block;
             padding: 0.5rem 0.7rem;
@@ -24,6 +27,15 @@
                 color: var(--link);
 
                 transition: transform 0.3s ease, var(--transicio-colors);
+            }
+        }
+
+
+        ::ng-deep qrcode {
+            .qrcode {
+                canvas {
+                    border-radius: 8px !important;
+                }
             }
         }
     }

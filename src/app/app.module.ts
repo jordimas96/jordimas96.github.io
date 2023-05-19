@@ -13,6 +13,7 @@ import { HomePageComponent } from './pages/home-page/home-page.component';
 import { TargetBlankDirective } from './directives/target-blank.directive';
 import { SkillComponent } from './components/skill/skill.component';
 import { GoogleAnalyticsModule } from './google-analytics/google-analytics.module';
+import { QRCodeModule } from 'angularx-qrcode';
 
 @NgModule({
     declarations: [
@@ -37,6 +38,7 @@ import { GoogleAnalyticsModule } from './google-analytics/google-analytics.modul
         AppRoutingModule,
         FormsModule,
         GoogleAnalyticsModule,
+        QRCodeModule,
     ],
     providers: [],
     bootstrap: [AppComponent]
