@@ -35,15 +35,23 @@
             <ng-container *ngIf="m.en()">My apps in Google Play</ng-container>
         </a> -->
         <div class="boto-i-qr mt-4">
-            <a href="https://play.google.com/store/apps/developer?id=Jordi+Mas+Parramon" class="no-style boto">
+            <a href="https://play.google.com/store/apps/developer?id=Jordi+Mas+Parramon" class="no-style boto mb-3">
                 <ng-container *ngIf="m.ca()">Les meves apps</ng-container>
                 <ng-container *ngIf="m.es()">Mis apps</ng-container>
                 <ng-container *ngIf="m.en()">My apps</ng-container>
                 <img src="assets/icons/google-play.png" alt="google-play" class="logo ml-2">
                 <!-- <span class="fletxa">↗</span> -->
             </a>
+            <div *ngIf="!m.esAndroid()" class="div-qr-i-text">
+                <qrcode qrdata="https://play.google.com/store/apps/developer?id=Jordi+Mas+Parramon" [errorCorrectionLevel]="'M'"
+                    [colorDark]="m.tema == 'nit' ? '#000' : m.getColor('--color-l-2')" [colorLight]="m.tema == 'nit' ? '#fff' : m.getColor('--color-l-9')"></qrcode>
 
-            <qrcode *ngIf="m.esPc()" qrdata="https://play.google.com/store/apps/developer?id=Jordi+Mas+Parramon" [errorCorrectionLevel]="'M'"></qrcode>
+                <div class="scan-here mt-2">
+                    <ng-container *ngIf="m.ca()">Escaneja el QR des d'un dispositiu Android<br>per a visitar el meu perfil de Play Store</ng-container>
+                    <ng-container *ngIf="m.es()">Escanea el QR desde un dispositivo Android<br>para visitar mi perfil de Play Store</ng-container>
+                    <ng-container *ngIf="m.en()">Scan here from an Android device<br>to visit my Play Store profile</ng-container>
+                </div>
+            </div>
         </div>
         <!-- Skills -->
         <div class="title-skills mt-4 mb-2">
@@ -74,15 +82,15 @@
         </div>
         <p class="text mb-1">
             <ng-container *ngIf="m.ca()">
-                Una altra de les meves aficions és experimentar amb Android, en específic trastejar amb diferents versions i ampliar-ne les funcionalitats. Una de les maneres de fer-ho és amb <a href="https://play.google.com/store/apps/details?id=net.dinglisch.android.taskerm">Tasker</a>, una app d'automatització de tasques en Android que permet programar funcions senzilles, mitjançant pseudocodi, i ocasionalment també Java i HTML/CSS per a l'estructuració del contingut a mostrar. A través d'aquesta aplicació, he creat nombrosos projectes amb l'objectiu de millorar i ampliar les capacitats d'Android, i he publicat aquells que podrien resultar útils per a altres usuaris.
+                Una altra de les meves aficions és experimentar amb Android, en específic trastejar amb diferents versions i ampliar-ne les funcionalitats. Una de les maneres de fer-ho és amb <a href="https://play.google.com/store/apps/details?id=net.dinglisch.android.taskerm">Tasker</a>, una app d'automatització de tasques en Android que permet programar funcions senzilles, mitjançant pseudocodi, i ocasionalment també Java i HTML/CSS per a l'estructuració del contingut a mostrar. A través d'aquesta aplicació, he creat nombrosos projectes amb l'objectiu de millorar i ampliar les capacitats d'Android, i he publicat aquells que podrien resultar útils per a altres usuaris, alguns d'ells amb centenars de descàrregunes dins la comunitat.
             </ng-container>
             
             <ng-container *ngIf="m.es()">
-                Otra de mis aficiones es experimentar con Android, en específico trastear con diferentes versiones y ampliar sus funcionalidades. Una de las maneras de hacerlo es con <a href="https://play.google.com/store/apps/details?id=net.dinglisch.android.taskerm">Tasker</a>, una app de automatización de tareas en Android que permite programar funciones sencillas, mediante pseudocódigo, y ocasionalmente también Java y HTML/CSS para la estructuración del contenido a mostrar. A través de esta aplicación, he creado numerosos proyectos con el fin de mejorar y ampliar las capacidades de Android, y he publicado aquellos que podrían resultar útiles para otros usuarios.
+                Otra de mis aficiones es experimentar con Android, en específico trastear con diferentes versiones y ampliar sus funcionalidades. Una de las maneras de hacerlo es con <a href="https://play.google.com/store/apps/details?id=net.dinglisch.android.taskerm">Tasker</a>, una app de automatización de tareas en Android que permite programar funciones sencillas, mediante pseudocódigo, y ocasionalmente también Java y HTML/CSS para la estructuración del contenido a mostrar. A través de esta aplicación, he creado numerosos proyectos con el fin de mejorar y ampliar las capacidades de Android, y he publicado aquellos que podrían resultar útiles para otros usuarios, algunos de ellos con cientos de descargas dentro de la comunidad.
             </ng-container>
             
             <ng-container *ngIf="m.en()">
-                Another of my hobbies is experimenting with Android, specifically tinkering with different versions and expanding its functionality. One way to do this is with <a href="https://play.google.com/store/apps/details?id=net.dinglisch.android.taskerm">Tasker</a>, a task automation app on Android that allows you to program simple functions, using pseudocode, and occasionally also Java and HTML/CSS for structuring the content to be displayed. Through this app, I have created numerous projects to enhance and expand the functionality of Android, and I have published the most useful and straightforward ones for other users.
+                Another of my hobbies is experimenting with Android, specifically tinkering with different versions and expanding its functionality. One way to do this is with <a href="https://play.google.com/store/apps/details?id=net.dinglisch.android.taskerm">Tasker</a>, a task automation app on Android that allows you to program simple functions, using pseudocode, and occasionally also Java and HTML/CSS for structuring the content to be displayed. Through this app, I have created numerous projects to enhance and expand the functionality of Android, and I have published the most useful and straightforward ones for other users, some of them with hundreds of downloads within the community.
             </ng-container>
         </p>
         <a href="https://taskernet.com/?user=AS35m8mRntivpH1gAMw7ymN993wqjIo0bD6%2FSevikpiMYXceQJ%2BATvjOUxxvfzAbynKD">
@@ -126,12 +134,20 @@
                 This is my final project for the second year of the Higher Cycle of Multiplatform Application Development (DAM). It took me 2 weeks of work to create this <i><a href="https://en.wikipedia.org/wiki/First-person_shooter">First Person Shooter</a></i> from scratch, using Unity. From the movement of the camera and the player, through the mechanics of shooting each type of weapon (both the user and the enemies) and spawn points, to managing the inventory consisting of ammunition and supplies.
             </ng-container>
         </p>
-        <div class="game-placeholder" style="width:552px; height:167px;">
-            <iframe *ngIf="mostrarWidgetJoc" #game class="game" src="https://itch.io/embed/2011884" width="552" height="167" frameborder="0">
-                <a href="https://jmaspgames.itch.io/mad-jumpgate">Mad Jumpgate by Jordi Mas</a>
-            </iframe>
-        </div><!-- per a que no salti l'scroll. TODO si la pagina projectes s'emplena, borrar aixo -->
-        <!-- <a *ngIf="!mostrarWidgetJoc" href="https://jmaspgames.itch.io/mad-jumpgate">Mad Jumpgate by Jordi Mas</a> -->
+        <div style="position: relative; max-width: 100%;">
+            <div class="game-placeholder" style="width: 552px; height: 167px;">
+                <iframe *ngIf="mostrarWidgetJoc" #game class="game" src="https://itch.io/embed/2011884" width="552" height="167" frameborder="0">
+                    <a href="https://jmaspgames.itch.io/mad-jumpgate">Mad Jumpgate by Jordi Mas</a>
+                </iframe>
+            </div>
+            
+            <div class="joc-nomes-pc" *ngIf="!m.esPc()" style="width: 552px; height: 167px;">
+                <ng-container *ngIf="m.ca()">Aquest joc és només per a ordinador.<br>Accedeix des d'un ordinador per a jugar-hi.</ng-container>
+                <ng-container *ngIf="m.es()">Este juego es sólo para ordenador.<br>Accede desde un ordenador para jugar.</ng-container>
+                <ng-container *ngIf="m.en()">This game is for PC only.<br>Access from a computer to play it.</ng-container>
+            </div>
+        </div>
+
         <!-- Skills -->
         <div class="title-skills mt-4 mb-2">
             <ng-container *ngIf="m.ca()">Tecnologies utilitzades</ng-container>

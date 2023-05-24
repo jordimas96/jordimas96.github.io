@@ -40,8 +40,16 @@ export class MainService {
 
     public log(t) { console.log(t); }
     public logDebug(t) { if (this.debug) console.log(t); }
-    public esMobil() { return this.appbar.width <= 576; }
-    public esPc() { return !this.esMobil(); }
+    public esMobil() { return /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent); }
+    public esPc() { return !this.esMobil() }
+    public esPantallaMobil() { return this.appbar.width <= 576; }
+    public esPantallaPc() { return !this.esPantallaMobil(); }
+
+    public esAndroid() { return /Android/i.test(navigator.userAgent); }
+
+    public getColor(s) {
+        return window.getComputedStyle(document.documentElement).getPropertyValue(s);
+    }
 
     public force(tema) { Utils.setCookie("forçartema", tema) }
     public noforce() { Utils.removeCookie("forçartema") }

@@ -16,7 +16,7 @@
                             <ng-container *ngIf="m.es()">Me llamo</ng-container>
                             <ng-container *ngIf="m.en()">My name is</ng-container>
                         </span>
-                        <br *ngIf="m.esMobil()">
+                        <br *ngIf="m.esPantallaMobil()">
                         Jordi Mas Parramon
                     </div>
                     <div class="programador">
@@ -28,7 +28,7 @@
                     </div>
                 </div>
                 <!-- Recipient bio pc -->
-                <div *ngIf="m.esPc()" class="text bio mt-4">
+                <div *ngIf="m.esPantallaPc()" class="text bio mt-4">
                     <div *ngTemplateOutlet="bio"></div>
                 </div>
                 
@@ -36,7 +36,7 @@
         </div>
         <!-- Recipient bio mobil -->
         <div class="ocult-animacio h">
-            <div *ngIf="m.esMobil()" class="text bio mt-4">
+            <div *ngIf="m.esPantallaMobil()" class="text bio mt-4">
                 <div *ngTemplateOutlet="bio"></div>
             </div>
         </div>
