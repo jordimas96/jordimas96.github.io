@@ -49,12 +49,8 @@
     }
 }
 
-::ng-deep .dark #android .boto-i-qr a.boto {
-    --color-7: #61ffa8;
-}
-::ng-deep .light #android .boto-i-qr a.boto {
-    --color-7: #008039;
-}
+::ng-deep .dark  #android .boto-i-qr a.boto { --color-7: #61ffa8; }
+::ng-deep .light #android .boto-i-qr a.boto { --color-7: #008039; }
 
 .game-placeholder {
     position: relative;

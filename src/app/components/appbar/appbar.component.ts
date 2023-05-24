@@ -29,6 +29,8 @@ export class AppbarComponent {
 
         this.establirIdiomaDefecte();
 
+        // Canviar tema cada 5 segons //
+        // let i = 0; setInterval(() => { this.setTemaSegonsHora(i++ % 24); this.actTema(); }, 1000);
 
 
         this.actTema();
