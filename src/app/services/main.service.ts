@@ -33,26 +33,38 @@ export class MainService {
     }
     onInit() { }
 
-
+    // Idiomes //
     ca() { return this.idioma == "ca" }
     es() { return this.idioma == "es" }
     en() { return this.idioma == "en" }
 
     public log(t) { console.log(t); }
     public logDebug(t) { if (this.debug) console.log(t); }
+
+    // Dispositius //
     public esMobil() { return /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent); }
     public esPc() { return !this.esMobil() }
     public esPantallaMobil() { return this.appbar.width <= 576; }
     public esPantallaPc() { return !this.esPantallaMobil(); }
-
     public esAndroid() { return /Android/i.test(navigator.userAgent); }
 
-    public getColor(s) {
-        return window.getComputedStyle(document.documentElement).getPropertyValue(s);
-    }
-
+    // Forçar temes //
     public force(tema) { Utils.setCookie("forçartema", tema) }
     public noforce() { Utils.removeCookie("forçartema") }
+
+    public getColorQRDark() {
+        if (this.tema == 'nit')
+            return '#000';
+        else
+            return Utils.getColor('--color-l-2');
+    }
+    public getColorQRLight() {
+        if (this.tema == 'nit')
+            return '#fff';
+        else
+            return Utils.getColor('--color-l-9');
+    }
+
 
     // Funcions //
     afterRootFadeIn(funcio: Function) {

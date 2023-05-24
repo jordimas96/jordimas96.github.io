@@ -44,7 +44,7 @@
             </a>
             <div *ngIf="!m.esAndroid()" class="div-qr-i-text">
                 <qrcode qrdata="https://play.google.com/store/apps/developer?id=Jordi+Mas+Parramon" [errorCorrectionLevel]="'M'"
-                    [colorDark]="m.tema == 'nit' ? '#000' : m.getColor('--color-l-2')" [colorLight]="m.tema == 'nit' ? '#fff' : m.getColor('--color-l-9')"></qrcode>
+                    [colorDark]="m.getColorQRDark()" [colorLight]="m.getColorQRLight()"></qrcode>
 
                 <div class="scan-here mt-2">
                     <ng-container *ngIf="m.ca()">Escaneja el QR des d'un dispositiu Android<br>per a visitar el meu perfil de Play Store</ng-container>
@@ -53,6 +53,7 @@
                 </div>
             </div>
         </div>
+        
         <!-- Skills -->
         <div class="title-skills mt-4 mb-2">
             <ng-container *ngIf="m.ca()">Tecnologies utilitzades</ng-container>
@@ -72,6 +73,8 @@
         </div>
     </div>
     
+
+
     <!-- Tasker -->
     <div id="tasker" class="group ocult-animacio h">
         <div class="subtitle mb-2">
@@ -98,6 +101,7 @@
             <ng-container *ngIf="m.es()">Proyectos públicos de Jordi Mas</ng-container>
             <ng-container *ngIf="m.en()">Jordi Mas's Public Shares</ng-container>
         </a>
+
         <!-- Skills -->
         <div class="title-skills mt-4 mb-2">
             <ng-container *ngIf="m.ca()">Tecnologies utilitzades</ng-container>
@@ -110,6 +114,7 @@
             <app-skill n="Java"/>
         </div>
     </div>
+
 
 
     <!-- Mad Jumpgate -->

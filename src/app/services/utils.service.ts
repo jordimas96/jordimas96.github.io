@@ -7,6 +7,13 @@ export class Utils {
 
     constructor() { }
 
+
+    // Utils web //
+
+    public static getColor(s) {
+        return window.getComputedStyle(document.documentElement).getPropertyValue(s);
+    }
+
     // Cookies //
     public static setCookie(cname, cvalue, exdays = 36500) {
         const d = new Date();

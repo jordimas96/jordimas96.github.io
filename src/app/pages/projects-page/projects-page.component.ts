@@ -35,7 +35,7 @@ export class ProjectsPageComponent {
         setTimeout(() => {
             // Mostrar amb fadein el widget quan s'hagi carregat //
             this.game.nativeElement.addEventListener('load', () => {
-                $(".game").css("opacity","1");
+                $(".game").css("opacity", "1");
             });
         }, 0);
     }
