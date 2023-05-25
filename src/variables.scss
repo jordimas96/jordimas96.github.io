@@ -268,10 +268,12 @@
         --color-9: var(--color-l-0);
     }
 
+    --scrollbar-fons: var(--color-clar-30);
     --scrollbar-via: var(--color-l-1);
     --scrollbar-thumb: var(--color-l-9);
 
     &.light {
+        --scrollbar-fons: var(--color-l-9);
         --scrollbar-via: white;
         --scrollbar-thumb: var(--color-l-3);
     }
@@ -279,7 +281,7 @@
 
     // Fons //
     ::-webkit-scrollbar {
-        background: none;
+        background-color: var(--scrollbar-fons);
     }
 
     // Via //
