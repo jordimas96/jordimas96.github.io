@@ -16,7 +16,7 @@
         width: fit-content;
         padding: 0.5rem;
         .botoDarkMode {
-            background-color: var(--fons-50);
+            background-color: var(--color-fosc-50);
             color: var(--color-clar);
             border: 1px solid var(--color-clar-70);
             border-radius: 1000px;
@@ -72,16 +72,10 @@
         }
     }
 }
-// Boto Dark Mode en color negre en mode clar //
+// Boto Dark Mode de color negre en mode clar //
 ::ng-deep html.light .appbar .botoDarkMode {
     background-color: var(--color-fosc) !important;
     border-color: transparent !important;
-}
-// Forçar botons dark mode sembre foscos //
-::ng-deep html.light .appbar {
-    .botoDarkMode {
-        background-color: var(--color-fosc) !important;
-    }
 }
 
 
