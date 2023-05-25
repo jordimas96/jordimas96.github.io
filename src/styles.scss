@@ -70,6 +70,7 @@ body {
 }
 
 .group {
+    color: var(--text);
     background-color: var(--fons-50);
     backdrop-filter: blur(40px);
     @extend .shadow-2;
