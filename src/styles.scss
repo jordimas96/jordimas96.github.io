@@ -179,8 +179,31 @@ img, .noselect {
 
 
 // Tota la pagina //
+
+// Selecció //
 ::selection { background: var(--color-7); color: var(--fons); }
 ::-moz-selection { background: var(--color-7); color: var(--fons); }
+
+// Scrollbar //
+// Fons //
+::-webkit-scrollbar {
+    background-color: var(--scrollbar-fons);
+}
+// Via //
+::-webkit-scrollbar-track {
+    background-color: var(--scrollbar-via);
+    border-radius: 30px;
+}
+// Thumb //
+::-webkit-scrollbar-thumb {
+    background-color: var(--scrollbar-thumb-1);
+    box-shadow: inset -17px 0px 15px -10px var(--scrollbar-thumb-2);
+    border-radius: 30px;
+}
+// Botons //
+// ::-webkit-scrollbar-button {
+//     background-color: none;
+// }
 
 
 

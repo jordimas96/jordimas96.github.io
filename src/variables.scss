@@ -200,41 +200,18 @@
         --color-l-9: #ffffff;
     }
 
+    // Scrollbar //
     --scrollbar-fons: var(--color-clar-30);
     --scrollbar-via: var(--color-l-1);
-    --scrollbar-thumb: var(--color-l-9);
+    --scrollbar-thumb-1: var(--color-l-3);
+    --scrollbar-thumb-2: var(--color-l-7);
 
     &.light {
         --scrollbar-fons: var(--color-l-9);
         --scrollbar-via: white;
-        --scrollbar-thumb: var(--color-l-3);
+        --scrollbar-thumb-1: var(--color-l-3);
+        --scrollbar-thumb-2: var(--color-l-5);
     }
-
-
-    // Fons //
-    ::-webkit-scrollbar {
-        background-color: var(--scrollbar-fons);
-    }
-
-    // Via //
-    ::-webkit-scrollbar-track {
-        background-color: var(--scrollbar-via);
-        border-radius: 30px;
-    }
-
-    // Thumb //
-    ::-webkit-scrollbar-thumb {
-        background-color: var(--scrollbar-thumb);
-        border-radius: 30px;
-    }
-
-    // Botons //
-    // ::-webkit-scrollbar-button {
-    //     background-color: none;
-    // }
-
-    
-
     
 }
 
