@@ -4,8 +4,6 @@
         <button (click)="btnAutoDarkMode_click()" class="botoDarkMode botoAutoMode ml-1" style="display:none;"><b>A</b></button>
     </div>
 
-    
-
     <div class="navegacio col-12 col-md-8 order-3 order-md-2">
         <button routerLinkActive="selected" [routerLinkActiveOptions]="{exact: true}" routerLink="/" (click)="m.u.scroll(0)">
             <ng-container *ngIf="m.ca()">Inici</ng-container>
@@ -25,7 +23,7 @@
     </div>
 
     <div class="idioma col-6 col-md-2 order-2 order-md-3">
-        <select class="select-idioma" [(ngModel)]="m.idioma" id="idioma" name="idioma" (change)="setCookieIdioma()">
+        <select class="select-idioma" [(ngModel)]="m.idioma" id="idioma" name="idioma" (change)="onIdiomaCanviat()">
             <ng-container *ngIf="!m.es()">
                 <option value="ca">Català</option>
                 <option value="es">Español</option>

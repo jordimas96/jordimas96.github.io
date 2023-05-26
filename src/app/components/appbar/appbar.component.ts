@@ -114,9 +114,10 @@ export class AppbarComponent {
         
         // Si l'idioma detectat no es al select, el posem a anglès //
         if (!Utils.arrayConte($("#idioma > option").map((i, e) => $(e).val()).toArray(), this.m.idioma))
-            $("#idioma").val("en");
+            this.m.idioma = "en";
     }
-    setCookieIdioma() {
+    onIdiomaCanviat() {
+        document.documentElement.lang = this.m.idioma;
         Utils.setCookie("lang", this.m.idioma);
     }
     
@@ -129,12 +130,5 @@ export class AppbarComponent {
     @HostListener('window:scroll', ['$event'])
     onScroll() {
         this.m.scroll = window.pageYOffset;
-    }
-
-    mostrarOmbra() {
-        return !this.m.modeFosc && this.scrolled();
-    }
-    scrolled() {
-        return this.m.scroll > 0;
     }
 }
