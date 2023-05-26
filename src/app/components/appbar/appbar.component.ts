@@ -27,7 +27,6 @@ export class AppbarComponent {
         // Mostrar boto Dark Mode Auto si cal //
         if (Utils.hasCookie("darkmode")) $(".botoAutoMode").fadeIn(150);
 
-        this.establirIdiomaDefecte();
 
         // Canviar tema cada 5 segons //
         // let i = 0; setInterval(() => { this.setTemaSegonsHora(i++ % 24); this.actTema(); }, 1000);
@@ -39,6 +38,8 @@ export class AppbarComponent {
     }
 
     afterRootFadeIn() {
+        
+        this.establirIdiomaDefecte();
         
         Utils.fadeIn(".appbar", 200);
     }
@@ -112,8 +113,8 @@ export class AppbarComponent {
         // Detectar idioma i guardar-lo //
         this.m.idioma = Utils.getCookie("lang") || navigator.language.split("-")[0];
         
-        // Si l'idioma detectat no es al select, el posem a anglès //
-        if (!Utils.arrayConte($("#idioma > option").map((i, e) => $(e).val()).toArray(), this.m.idioma))
+        // Si l'idioma detectat no es al select, el posem a anglès per defecte //
+        if (!$("#idioma > option").toArray().map(e => $(e).val()).includes(this.m.idioma))
             this.m.idioma = "en";
     }
     onIdiomaCanviat() {
