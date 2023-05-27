@@ -186,23 +186,26 @@ img, .noselect {
 
 // Scrollbar //
 // Fons //
-::-webkit-scrollbar {
-    background-color: var(--scrollbar-fons);
-}
+::-webkit-scrollbar { background-color: var(--scrollbar-via); }
 // Via //
-::-webkit-scrollbar-track {
-    background-color: var(--scrollbar-via);
-    border-radius: 30px;
-}
+::-webkit-scrollbar-track { background-color: var(--scrollbar-via); }
 // Thumb //
 ::-webkit-scrollbar-thumb {
     background-color: var(--scrollbar-thumb-1);
     box-shadow: inset -17px 0px 15px -10px var(--scrollbar-thumb-2);
-    border-radius: 30px;
+    border: 2px solid var(--scrollbar-via);
+    border-radius: 6px;
+    &:active { background-color: var(--scrollbar-thumb-2); }
 }
 // Botons //
 // ::-webkit-scrollbar-button {
-//     background-color: none;
+//     background-color: var(--scrollbar-thumb-1);
+//     box-shadow: inset -17px 0px 15px -10px var(--scrollbar-thumb-2);
+//     border: 2px solid var(--scrollbar-via);
+//     // border-radius: 30px;
+//     border-radius: 10px 10px 6px 6px;
+//     height: 20px;
+//     &:active { background-color: var(--scrollbar-thumb-2); }
 // }
 
 
