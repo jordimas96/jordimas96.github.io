@@ -19,6 +19,7 @@
             background-color: var(--color-fosc-50);
             color: var(--color-clar);
             border: 1px solid var(--color-clar-70);
+            border: none;
             border-radius: 1000px;
             outline: none;
             cursor: pointer;
@@ -30,28 +31,13 @@
             padding: 0.5rem 1rem;
         }
     }
-
+    
     .navegacio {
-        text-align: center;
+        display: flex;
+        justify-content: center;
+        align-items: center;
 
-        button {
-            background-color: var(--fons-50);
-            color: var(--text);
-            outline: none;
-            cursor: pointer;
-            border: 1px solid var(--text-70);
-            margin: 0.6rem 0.25rem;
-            padding: 0.25rem 1rem;
-            border-radius: 0.6rem;
-
-            transition: border-radius 0.3s ease, font-size 0.3s ease, padding 0.3s ease, var(--transicio-colors);
-
-            &.selected {
-                background-color: var(--text);
-                color: var(--fons);
-                border-radius: 1.6rem;
-            }
-        }
+        padding: 0.5rem;
     }
 
     .idioma {
@@ -61,7 +47,7 @@
         .select-idioma {
             background-color: var(--fons-50);
             color: var(--text);
-            border: 1px solid var(--text-70);
+            border: none;
             border-radius: 5px;
             padding: 0.25rem 0.5rem 0.25rem 1rem;
             margin-top: 0.375rem;
@@ -95,18 +81,12 @@
 }
 // Pantalla PC //
 @media only screen and (min-width: 576px) {
-    .navegacio button {
-        font-size: 1.5rem;
-    }
     .idioma .select-idioma {
         font-size: 1.2rem;
     }
 }
 // Pantalla Mòbil //
 @media only screen and (max-width: 575px) {
-    .navegacio button {
-        font-size: 1.1rem;
-    }
     .idioma .select-idioma {
         font-size: 1.1rem;
     }

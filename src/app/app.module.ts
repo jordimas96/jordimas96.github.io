@@ -14,6 +14,7 @@ import { TargetBlankDirective } from './directives/target-blank.directive';
 import { SkillComponent } from './components/skill/skill.component';
 import { GoogleAnalyticsModule } from './google-analytics/google-analytics.module';
 import { QRCodeModule } from 'angularx-qrcode';
+import { NavegacioTabComponent } from './components/navegacio-tab/navegacio-tab.component';
 
 @NgModule({
     declarations: [
@@ -31,7 +32,8 @@ import { QRCodeModule } from 'angularx-qrcode';
 
         // Directives //
         TargetBlankDirective,
-         SkillComponent,
+        SkillComponent,
+        NavegacioTabComponent,
     ],
     imports: [
         BrowserModule,

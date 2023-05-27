@@ -1,0 +1,17 @@
+<div class="contenidor">
+    <button routerLinkActive="selected" [routerLinkActiveOptions]="{exact: true}" routerLink="/" (click)="m.u.scroll(0)">
+        <ng-container *ngIf="m.ca()">Inici</ng-container>
+        <ng-container *ngIf="m.es()">Inicio</ng-container>
+        <ng-container *ngIf="m.en()">Home</ng-container>
+    </button>
+    <button routerLinkActive="selected" [routerLinkActiveOptions]="{exact: true}" routerLink="/experience" (click)="m.u.scroll(0)">
+        <ng-container *ngIf="m.ca()">Experiència</ng-container>
+        <ng-container *ngIf="m.es()">Experiencia</ng-container>
+        <ng-container *ngIf="m.en()">Experience</ng-container>
+    </button>
+    <button routerLinkActive="selected" [routerLinkActiveOptions]="{exact: true}" routerLink="/projects" (click)="m.u.scroll(0)">
+        <ng-container *ngIf="m.ca()">Projectes</ng-container>
+        <ng-container *ngIf="m.es()">Proyectos</ng-container>
+        <ng-container *ngIf="m.en()">Projects</ng-container>
+    </button>
+</div>
