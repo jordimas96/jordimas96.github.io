@@ -125,14 +125,6 @@
             img.logo {
                 height: 2rem;
             }
-
-            .fletxa {
-                display: inline-block;
-                margin-left: 0.7rem;
-                color: var(--link);
-
-                transition: transform 0.3s ease, var(--transicio-colors);
-            }
         }
 
         .div-qr-i-text {
@@ -154,6 +146,33 @@
         }
     }
 }
+
+.group#tasker {
+
+    .botons {
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+
+        a.boto {
+            display: inline-block;
+            padding: 0.5rem 0.7rem;
+            padding-left: 1rem;
+            font-size: 1.3rem;
+            border-radius: 10000px;
+
+            background-color: var(--color-7);
+            color: var(--fons);
+
+            transition: var(--transicio-colors);
+
+            img.logo {
+                height: 2rem;
+            }
+        }
+    }
+}
+
 
 .game-placeholder {
     position: relative;
@@ -199,7 +218,7 @@
 @media only screen and (min-width: 576px) { }
 // Pantalla Mòbil //
 @media only screen and (max-width: 575px) {
-    .boto-i-qr {
+    .group#android .boto-i-qr, .group#tasker .botons {
         text-align: center;
 
         flex-direction: column;
