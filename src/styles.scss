@@ -195,7 +195,7 @@ img, .noselect {
     box-shadow: inset -17px 0px 15px -10px var(--scrollbar-thumb-2);
     border: 2px solid var(--scrollbar-via);
     border-radius: 6px;
-    &:active { background-color: var(--scrollbar-thumb-2); }
+    &:hover { background-color: var(--scrollbar-thumb-2); }
 }
 // Botons //
 // ::-webkit-scrollbar-button {
