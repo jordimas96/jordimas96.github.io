@@ -1,4 +1,5 @@
 .contenidor {
+    position: relative;
     display: flex;
     flex-wrap: nowrap;
     width: fit-content;
@@ -7,7 +8,9 @@
     border-radius: 1000px;
     margin: auto;
     padding: 0.25rem;
-    overflow: hidden;
+    // overflow: hidden;
+
+    z-index: 0;
 
     transition: var(--transicio-colors);
 
@@ -22,11 +25,12 @@
 
         padding: 0.25rem 1rem;
         border-radius: 1000px;
+        z-index: 2;
 
-        transition: font-size 0.3s ease, var(--transicio-colors);
+        transition: font-size 0.3s ease, padding 0.3s ease, color 0.8s ease;
 
         &.selected {
-            background-color: var(--text);
+            // background-color: var(--text);
             color: var(--fons);
         }
     }
@@ -36,8 +40,22 @@
     // color: var(--text);
 }
 
+.pill {
+    position: absolute;
+    background-color: var(--text);
+    border-radius: 1000px;
+    z-index: 1;
+}
 
 
+
+// Pantalla Gran //
+@media only screen and (min-width: 992px) {
+    button {
+        padding-left: 3rem !important;
+        padding-right: 3rem !important;
+    }
+}
 // Pantalla PC //
 @media only screen and (min-width: 576px) {
     button {
