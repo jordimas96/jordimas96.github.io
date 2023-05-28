@@ -1,11 +1,10 @@
 .contenidor {
     position: relative;
     display: flex;
-    flex-wrap: nowrap;
-    width: fit-content;
+    flex-wrap: wrap;
+    justify-content: center;
     background-color: var(--fons-50);
-    // border: 1px solid var(--color-2);
-    border-radius: 1000px;
+    border-radius: 25px;
     margin: auto;
     padding: 0.25rem;
     // overflow: hidden;
@@ -24,10 +23,9 @@
         cursor: pointer;
 
         padding: 0.25rem 1rem;
-        border-radius: 1000px;
         z-index: 2;
 
-        transition: font-size 0.3s ease, padding 0.3s ease, color 0.8s ease;
+        transition: font-size 0.3s ease, padding 0.3s ease, var(--transicio-colors);
 
         &.selected {
             // background-color: var(--text);
@@ -43,8 +41,10 @@
 .pill {
     position: absolute;
     background-color: var(--text);
-    border-radius: 1000px;
+    border-radius: 25px;
     z-index: 1;
+
+    transition: var(--transicio-colors);
 }
 
 

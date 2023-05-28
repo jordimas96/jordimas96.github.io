@@ -54,7 +54,7 @@ export class NavegacioTabComponent {
         };
         if (animacio) {
             this.movent = true;
-            $(this.pill.nativeElement).animate(canvis, 400, () => { this.movent = false; });
+            $(this.pill.nativeElement).animate(canvis, 300, () => { this.movent = false; });
         }
         else
             $(this.pill.nativeElement).css(canvis);
