@@ -169,8 +169,14 @@ img, .noselect {
 .shadow-3 { box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23) !important; }
 .shadow-4 { box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22) !important; }
 .shadow-5 { box-shadow: 0 19px 38px rgba(0,0,0,0.30), 0 15px 12px rgba(0,0,0,0.22) !important; }
-// M'agrada //
-.shadow { box-shadow: 0 2px 5px 0 rgb(0 0 0 / 16%), 0 2px 10px 0 rgb(0 0 0 / 12%) !important; }
+
+.light {
+    .shadow-1-l { @extend .shadow-1 }
+    .shadow-2-l { @extend .shadow-2 }
+    .shadow-3-l { @extend .shadow-3 }
+    .shadow-4-l { @extend .shadow-4 }
+    .shadow-5-l { @extend .shadow-5 }
+}
 
 
 
