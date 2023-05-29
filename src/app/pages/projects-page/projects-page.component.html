@@ -41,7 +41,6 @@
                 <ng-container *ngIf="m.en()">My apps</ng-container>
                 <img src="assets/icons/google-play.png" alt="google-play" class="logo ml-2">
             </a>
-            {{ m.userAgent() }}
             <div *ngIf="!m.esAndroid()" class="div-qr-i-text">
                 <qrcode qrdata="https://play.google.com/store/apps/developer?id=Jordi+Mas+Parramon" [errorCorrectionLevel]="'M'"
                     colorDark="#005727" colorLight="#b8ffd8"></qrcode>
