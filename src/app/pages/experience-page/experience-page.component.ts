@@ -28,7 +28,7 @@ export class ExperiencePageComponent {
 
     afterRootFadeIn() {
         $(".content>.ocult-animacio").each((i, e) => {
-            Utils.fadeIn(e, i * 50);
+            Utils.fadeIn(e, i * 250);
         });
         $("app-skill").each((i, e) => {
             Utils.fadeIn(e, i * 20);
