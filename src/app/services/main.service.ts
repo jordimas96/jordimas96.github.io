@@ -50,6 +50,8 @@ export class MainService {
     public esPantallaMobil() { return this.appbar.width <= 576; }
     public esPantallaPc() { return !this.esPantallaMobil(); }
     public esAndroid() { return /Android/i.test(navigator.userAgent); }
+    public esApple() { return /Apple/i.test(navigator.userAgent); }
+    public userAgent() { return navigator.userAgent };
 
     // Forçar temes //
     public force(tema) { Utils.setCookie("forçartema", tema) }

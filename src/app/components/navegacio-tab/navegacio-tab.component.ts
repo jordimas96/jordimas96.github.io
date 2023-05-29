@@ -1,4 +1,5 @@
 import { Component, ElementRef, HostListener, ViewChild } from '@angular/core';
+import { ActivatedRoute, NavigationEnd, Router } from '@angular/router';
 import { interval } from 'rxjs';
 import { MainService } from 'src/app/services/main.service';
 
@@ -17,12 +18,25 @@ export class NavegacioTabComponent {
 
     movent = false;
 
-    constructor(public m: MainService, private elementRef: ElementRef) {
+    constructor(public m: MainService,
+        private elementRef: ElementRef,
+        private router: Router
+    ) {
 
     }
     ngOnInit() {
         this.m.afterRootFadeIn(this.afterRootFadeIn.bind(this));
-
+        
+        // Event al canviar la url //
+        this.router.events.subscribe(event => {
+            setTimeout(() => {
+                
+                if (event instanceof NavigationEnd) {
+                    this.botoSeleccionat = document.querySelector("button.selected");
+                    this.actPosPill(true);
+                }
+            }, 0);
+        });
     }
 
     afterRootFadeIn() {
@@ -38,11 +52,11 @@ export class NavegacioTabComponent {
         this.botoSeleccionat = target;
         this.m.u.scroll(0);
 
-        this.actPosPill(true);
+        // this.actPosPill(true);
     }
 
     actPosPill(animacio) {
-        if (!this.botoSeleccionat) this.botoSeleccionat = $("button.selected")[0];
+        if (!this.botoSeleccionat) this.botoSeleccionat = document.querySelector("button.selected");
         let rect = this.botoSeleccionat.getBoundingClientRect();
         let rectComp = this.elementRef.nativeElement.getBoundingClientRect();
 
