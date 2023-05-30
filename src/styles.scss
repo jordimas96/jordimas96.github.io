@@ -37,6 +37,7 @@ body {
     margin-bottom: 100px;
     // transition: var(--transicio-colors);
     line-height: 1.4;
+    overflow-y: scroll;
     transition: all 0.3s ease;
 }
 
@@ -187,8 +188,8 @@ img, .noselect {
 // Tota la pagina //
 
 // Selecció //
-::selection { background: var(--color-7); color: var(--fons); }
-::-moz-selection { background: var(--color-7); color: var(--fons); }
+::selection { background-color: var(--color-7); color: var(--fons); }
+::-moz-selection { background-color: var(--color-7); color: var(--fons); }
 
 // Scrollbar //
 // Fons //
