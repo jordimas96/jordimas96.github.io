@@ -27,16 +27,6 @@ export class NavegacioTabComponent {
     ngOnInit() {
         this.m.afterRootFadeIn(this.afterRootFadeIn.bind(this));
         
-        // Event al canviar la url //
-        this.router.events.subscribe(event => {
-            setTimeout(() => {
-                
-                if (event instanceof NavigationEnd) {
-                    this.botoSeleccionat = document.querySelector("button.selected");
-                    this.actPosPill(true);
-                }
-            }, 0);
-        });
     }
 
     afterRootFadeIn() {
@@ -48,11 +38,19 @@ export class NavegacioTabComponent {
         });
     }
 
-    onClick(target) {
+    onBackPressed() {
+        setTimeout(() => {
+            this.botoSeleccionat = document.querySelector("button.selected");
+            this.actPosPill(true);
+        }, 0);
+        
+    }
+
+    onTabClick(target) {
         this.botoSeleccionat = target;
         this.m.u.scroll(0);
 
-        // this.actPosPill(true);
+        this.actPosPill(true);
     }
 
     actPosPill(animacio) {
@@ -82,5 +80,9 @@ export class NavegacioTabComponent {
         this.actPosPill(false);
     }
 
-    
+    @HostListener('window:popstate', ['$event'])
+    onPopState(event: PopStateEvent) {
+        this.onBackPressed();
+    }
+
 }
