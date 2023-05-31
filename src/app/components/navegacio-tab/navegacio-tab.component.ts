@@ -26,7 +26,7 @@ export class NavegacioTabComponent {
     }
     ngOnInit() {
         this.m.afterRootFadeIn(this.afterRootFadeIn.bind(this));
-        
+
     }
 
     afterRootFadeIn() {
@@ -38,19 +38,20 @@ export class NavegacioTabComponent {
         });
     }
 
-    onBackPressed() {
-        setTimeout(() => {
-            this.botoSeleccionat = document.querySelector("button.selected");
-            this.actPosPill(true);
-        }, 0);
-        
-    }
-
     onTabClick(target) {
         this.botoSeleccionat = target;
         this.m.u.scroll(0);
 
         this.actPosPill(true);
+    }
+
+    onBackPressed() {
+        setTimeout(() => {
+            this.botoSeleccionat = document.querySelector("button.selected");
+            this.m.u.scroll(0);
+
+            this.actPosPill(true);
+        }, 0);
     }
 
     actPosPill(animacio) {
