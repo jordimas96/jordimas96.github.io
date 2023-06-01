@@ -45,11 +45,14 @@ export class MainService {
     public logDebug(t) { if (this.debug) console.log(t); }
 
     // Dispositius //
-    public esMobil() { return /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent); }
-    public esPc() { return !this.esMobil() }
+    // public esMobil() { return /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent); }
+    // public esPc() { return !this.esMobil() }
+    public esMobil() { return this.esPantallaTactil() }
+    public esPc() { return !this.esPantallaTactil() }
     public esPantallaMobil() { return this.appbar.width <= 576; }
     public esPantallaPc() { return !this.esPantallaMobil(); }
     public esAndroid() { return /Android/i.test(navigator.userAgent); }
+    public esPantallaTactil() { return (('ontouchstart' in window) || (navigator.maxTouchPoints > 0) || (navigator.maxTouchPoints > 0)); }
 
     // Forçar temes //
     public force(tema) { Utils.setCookie("forçartema", tema) }

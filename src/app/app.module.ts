@@ -15,6 +15,7 @@ import { SkillComponent } from './components/skill/skill.component';
 import { GoogleAnalyticsModule } from './google-analytics/google-analytics.module';
 import { QRCodeModule } from 'angularx-qrcode';
 import { NavegacioTabComponent } from './components/navegacio-tab/navegacio-tab.component';
+import { MadJumpgateComponent } from './components/mad-jumpgate/mad-jumpgate.component';
 
 @NgModule({
     declarations: [
@@ -34,6 +35,7 @@ import { NavegacioTabComponent } from './components/navegacio-tab/navegacio-tab.
         TargetBlankDirective,
         SkillComponent,
         NavegacioTabComponent,
+        MadJumpgateComponent,
     ],
     imports: [
         BrowserModule,

@@ -1,0 +1,22 @@
+
+
+<!-- <button class="boto mb-4" (click)="goFullScreen()">Full screen</button> -->
+<button *ngIf="!carregar" class="boto mb-4" (click)="iniciarJoc()">
+    <ng-container *ngIf="m.ca()">Carregar joc</ng-container>
+    <ng-container *ngIf="m.es()">Cargar juego</ng-container>
+    <ng-container *ngIf="m.en()">Load game</ng-container>
+</button>
+
+<!-- <br> -->
+
+
+<iframe *ngIf="carregar" src="assets/mad-jumpgate/index.html" width="1920" height="1080" scrolling="no"></iframe>
+<div *ngIf="carregar" class="placeholder"
+[style.width.px]="placeholderWidth"
+[style.height.px]="placeholderHeight"
+></div>
+
+
+
+
+

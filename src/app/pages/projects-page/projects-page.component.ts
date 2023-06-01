@@ -31,13 +31,13 @@ export class ProjectsPageComponent {
         
 
 
-        this.mostrarWidgetJoc = true;
-        setTimeout(() => {
-            // Mostrar amb fadein el widget quan s'hagi carregat //
-            this.game.nativeElement.addEventListener('load', () => {
-                $(".game").css("opacity", "1");
-            });
-        }, 0);
+        // this.mostrarWidgetJoc = true;
+        // setTimeout(() => {
+        //     // Mostrar amb fadein el widget quan s'hagi carregat //
+        //     this.game.nativeElement.addEventListener('load', () => {
+        //         $(".game").css("opacity", "1");
+        //     });
+        // }, 0);
     }
 
 
