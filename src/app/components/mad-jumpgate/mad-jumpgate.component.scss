@@ -12,9 +12,16 @@
 
     transition: var(--transicio-colors);
 
-    &.botoCarregar {
-        
+    &[disabled] {
+        opacity: 0.2;
     }
+}
+
+.missatge-nomes-pc {
+    color: var(--text-80);
+    text-align: center;
+    font-size: 0.9rem;
+    transition: var(--transicio-colors);
 }
 
 
@@ -29,7 +36,9 @@
         border: none;
         // border-radius: 16px;
     }
-    .placeholder { }
+    .placeholder {
+        transition: height 2s ease;
+    }
 
     .botoFullscreen {
         position: absolute;

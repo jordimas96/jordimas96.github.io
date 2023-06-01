@@ -6,11 +6,17 @@
 
 <div *ngIf="!carregarJoc">
 
-    <button class="boto botoCarregar m-auto" (click)="iniciarJoc()">
+    <button class="boto m-auto" (click)="iniciarJoc()" [disabled]="!m.esPc()">
         <ng-container *ngIf="m.ca()">Iniciar joc</ng-container>
         <ng-container *ngIf="m.es()">Iniciar juego</ng-container>
         <ng-container *ngIf="m.en()">Start game</ng-container>
     </button>
+
+    <p *ngIf="!m.esPc()" class="missatge-nomes-pc mt-1">
+        <ng-container *ngIf="m.ca()">Aquest joc és només per a ordinador.<br>Accedeix des d'un ordinador per a jugar-hi.</ng-container>
+        <ng-container *ngIf="m.es()">Este juego es sólo para ordenador.<br>Accede desde un ordenador para jugar.</ng-container>
+        <ng-container *ngIf="m.en()">This game is for PC only.<br>Access from a computer to play it.</ng-container>
+    </p>
 
 
     
