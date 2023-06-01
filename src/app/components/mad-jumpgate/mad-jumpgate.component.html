@@ -1,20 +1,40 @@
 
 
-<!-- <button class="boto mb-4" (click)="goFullScreen()">Full screen</button> -->
-<button *ngIf="!carregar" class="boto mb-4" (click)="iniciarJoc()">
-    <ng-container *ngIf="m.ca()">Carregar joc</ng-container>
-    <ng-container *ngIf="m.es()">Cargar juego</ng-container>
-    <ng-container *ngIf="m.en()">Load game</ng-container>
-</button>
-
-<!-- <br> -->
 
 
-<iframe *ngIf="carregar" src="assets/mad-jumpgate/index.html" width="1920" height="1080" scrolling="no"></iframe>
-<div *ngIf="carregar" class="placeholder"
-[style.width.px]="placeholderWidth"
-[style.height.px]="placeholderHeight"
-></div>
+
+
+<div *ngIf="!carregarJoc">
+
+    <button class="boto botoCarregar m-auto" (click)="iniciarJoc()">
+        <ng-container *ngIf="m.ca()">Iniciar joc</ng-container>
+        <ng-container *ngIf="m.es()">Iniciar juego</ng-container>
+        <ng-container *ngIf="m.en()">Start game</ng-container>
+    </button>
+
+
+    
+</div>
+
+
+
+
+
+
+<div *ngIf="carregarJoc">
+
+    <div class="iframe-i-placeholder">
+        <iframe #iframeRef src="assets/mad-jumpgate/index.html" width="1920" height="1080" scrolling="no"></iframe>
+
+        <div class="placeholder" [style.width.px]="placeholderWidth" [style.height.px]="placeholderHeight"></div>
+
+        <button class="boto botoFullscreen" (click)="fullScreen()"><i class="fa-solid fa-expand"></i></button>
+    </div>
+
+    <!-- <button class="boto mt-2 ml-auto">Full screen</button> -->
+
+</div>
+
 
 
 

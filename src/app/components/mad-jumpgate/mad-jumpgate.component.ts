@@ -1,4 +1,4 @@
-import { Component, ElementRef, HostListener } from '@angular/core';
+import { Component, ElementRef, HostListener, ViewChild } from '@angular/core';
 import { MainService } from 'src/app/services/main.service';
 
 @Component({
@@ -8,52 +8,54 @@ import { MainService } from 'src/app/services/main.service';
 })
 export class MadJumpgateComponent {
 
-    public carregar = false;
-    public fullScreen = false;
+    @ViewChild('iframeRef') iframeRef: ElementRef;
 
-    public placeholderWidth=0;
-    public placeholderHeight=0;
+    public carregarJoc = false;
 
-    constructor(
-        public m: MainService,
-        private elementRef: ElementRef
-    ) {
+    public placeholderWidth = 0;
+    public placeholderHeight = 0;
 
-    }
+    constructor(public m: MainService) { }
 
     ngOnInit() {
         this.m.afterRootFadeIn(this.afterRootFadeIn.bind(this));
 
-        // this.posarIframeDinsLimits();
     }
 
-    afterRootFadeIn() {
-        // this.iniciarJoc();
-    }
+    afterRootFadeIn() { }
     
     
     iniciarJoc() {
-        this.carregar = true;
+        this.carregarJoc = true;
         setTimeout(() => {
             this.posarIframeDinsLimits();
         }, 0);
-    }
-    goFullScreen() {
-        this.fullScreen = true;
     }
 
     @HostListener('window:resize', ['$event'])
     posarIframeDinsLimits() {
         var iframeWidth = 1920;
         var iframeHeight = 1080;
-        if (!this.fullScreen) {
-            this.placeholderWidth = $(".div-mad-jumpgate").innerWidth()!;
-            this.placeholderHeight = iframeHeight * this.placeholderWidth / iframeWidth;
+        this.placeholderWidth = $(".div-mad-jumpgate").innerWidth()!;
+        this.placeholderHeight = iframeHeight * this.placeholderWidth / iframeWidth;
         
 
-            var valorScale = this.placeholderWidth / iframeWidth;
+        var valorScale = this.placeholderWidth / iframeWidth;
 
-            $("iframe").css("transform", `scale(${valorScale})`);
+        $("iframe").css("transform", `scale(${valorScale})`);
+    }
+
+    fullScreen() {
+        const iframe = this.iframeRef.nativeElement;
+
+        if (iframe.requestFullscreen) {
+            iframe.requestFullscreen();
+        } else if (iframe.mozRequestFullScreen) {
+            iframe.mozRequestFullScreen();
+        } else if (iframe.webkitRequestFullscreen) {
+            iframe.webkitRequestFullscreen();
+        } else if (iframe.msRequestFullscreen) {
+            iframe.msRequestFullscreen();
         }
     }
 }
