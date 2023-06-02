@@ -63,6 +63,18 @@ export class Utils {
     public static arrayConte(array, valor) {
         return array.includes(valor);
     }
+    public static mesGran(a, b) {
+        return a > b ? a : b;
+    }
+
+    public static wait(ms: number): Promise<void> {
+        return new Promise(resolve => {
+            setTimeout(resolve, ms);
+        });
+    }
+
+
+
     public static scroll(x) { window.scroll(0, x); }
     public static getAlturaAppbar() {
         return $(".appbar").outerHeight();

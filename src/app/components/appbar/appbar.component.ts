@@ -44,15 +44,83 @@ export class AppbarComponent {
         Utils.fadeIn(".appbar", 200);
     }
 
+    
 
-    btnDarkMode_click() {
+    async animacioDarkMode(numBoto) {
+        // Si es click al auto i no cal fer efecte, no el fem //
+        if (numBoto == "auto" && this.m.modeFosc == Utils.systemDarkMode()) {
+            this.accioAutoDarkMode();
+            return;
+        }
+
+        // Variables //
+        let spread;
+        let x = 0;
+        let y = 0;
+        if (window.innerHeight > window.innerWidth) {
+            spread = window.innerHeight;
+            x = window.innerWidth - window.innerHeight;
+        } else {
+            spread = window.innerWidth;
+            y = window.innerHeight - window.innerWidth;
+        }
+
+        var color = this.m.modeFosc ? "var(--color-clar)" : "var(--color-fosc)";
+
+        $(".botoDarkMode").css({ "box-shadow": `0 0 0 ${color}` });
+        $(".botoDarkMode, .botoAutoMode").prop("disabled", true);
+
+        // 1. Transicio spread, expandir //
+        $(".botoDarkMode")
+            .addClass("transicio-1")
+            .css({
+                "z-index": "10000",
+                "box-shadow": `${x}px ${y}px 2000px ${spread + 1000}px ${color}`
+            });
+
+        
+        
+        
+        await Utils.wait(700);
+        
+        // Acció canviar mode //
+        if (numBoto == "dark") this.accioDarkMode();
+        if (numBoto == "auto") this.accioAutoDarkMode();
+
+        await Utils.wait(300);
+
+
+        $(".botoDarkMode")
+            .removeClass("transicio-1")
+            .addClass("transicio-2");
+            
+        // 2. Transicio color a transparent //
+        $(".botoDarkMode").css({ "box-shadow": `${x}px ${y}px 2000px ${spread + 1000}px transparent` });
+
+
+        await Utils.wait(300);
+
+
+        $(".botoDarkMode").removeClass("transicio-2");
+
+        // 3. Tornar a estat inicial sense transició //
+        $(".botoDarkMode")
+            .css({
+                "z-index": "auto",
+                "box-shadow": "0 0 0 0 transparent"
+            });
+        $(".botoDarkMode, .botoAutoMode").prop("disabled", false);
+
+    }
+
+    accioDarkMode() {
         this.m.modeFosc = !this.m.modeFosc;
         this.actTema();
         Utils.setCookie("darkmode", this.m.modeFosc ? 1 : 0)
         $(".botoAutoMode").fadeIn(200);
     }
 
-    btnAutoDarkMode_click() {
+    accioAutoDarkMode() {
         this.m.modeFosc = Utils.systemDarkMode();
         this.actTema();
         Utils.removeCookie("darkmode");
