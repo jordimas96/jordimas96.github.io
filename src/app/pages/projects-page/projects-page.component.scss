@@ -1,3 +1,5 @@
+@import "src/styles.scss";
+
 #android {
     --color-fosc:     rgb(0, 41, 18);
     --color-fosc-90: rgba(0, 41, 18, 0.9);
@@ -129,6 +131,16 @@
 
         .div-qr-i-text {
             text-align: center;
+
+
+            ::ng-deep qrcode {
+                .qrcode {
+                    canvas {
+                        border-radius: 16px !important;
+                        @extend .shadow-2;
+                    }
+                }
+            }
             .scan-here {
                 font-size: 0.9rem;
                 color: var(--text-80);
@@ -137,13 +149,7 @@
         }
 
 
-        ::ng-deep qrcode {
-            .qrcode {
-                canvas {
-                    border-radius: 16px !important;
-                }
-            }
-        }
+        
     }
 }
 
