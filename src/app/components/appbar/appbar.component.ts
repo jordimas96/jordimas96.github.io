@@ -54,28 +54,42 @@ export class AppbarComponent {
         }
 
         // Variables //
-        let spread;
         let x = 0;
         let y = 0;
+        let spread;
+        let blur = 2000;
         if (window.innerHeight > window.innerWidth) {
             spread = window.innerHeight;
-            x = window.innerWidth - window.innerHeight;
+            // x = window.innerWidth - window.innerHeight;
         } else {
             spread = window.innerWidth;
-            y = window.innerHeight - window.innerWidth;
+            // y = window.innerHeight - window.innerWidth;
         }
+        spread /= 2;
+        x = spread;
+        y = spread;
+
+        // extra per arrodonit (spread amplia els px per les 2 band) -50 -50 0 es simetric
+        x -= 50;
+        y -= 50;
+        spread += 1000;
 
         var color = this.m.modeFosc ? "var(--color-clar)" : "var(--color-fosc)";
 
-        $(".botoDarkMode").css({ "box-shadow": `0 0 0 ${color}` });
+
+        // Transicions //
+
         $(".botoDarkMode, .botoAutoMode").prop("disabled", true);
+        $(".botoDarkMode").css({ "box-shadow": `0 0 0 ${color}` });
+        
+        await Utils.wait(0);
 
         // 1. Transicio spread, expandir //
         $(".botoDarkMode")
             .addClass("transicio-1")
             .css({
                 "z-index": "10000",
-                "box-shadow": `${x}px ${y}px 2000px ${spread + 1000}px ${color}`
+                "box-shadow": `${x}px ${y}px ${blur}px ${spread}px ${color}`
             });
 
         
@@ -95,7 +109,7 @@ export class AppbarComponent {
             .addClass("transicio-2");
             
         // 2. Transicio color a transparent //
-        $(".botoDarkMode").css({ "box-shadow": `${x}px ${y}px 2000px ${spread + 1000}px transparent` });
+        $(".botoDarkMode").css({ "box-shadow": `${x}px ${y}px ${blur}px ${spread}px transparent` });
 
 
         await Utils.wait(300);

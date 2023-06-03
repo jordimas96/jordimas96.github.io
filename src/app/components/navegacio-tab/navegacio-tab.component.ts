@@ -2,6 +2,7 @@ import { Component, ElementRef, HostListener, ViewChild } from '@angular/core';
 import { ActivatedRoute, NavigationEnd, Router } from '@angular/router';
 import { interval } from 'rxjs';
 import { MainService } from 'src/app/services/main.service';
+import { Utils } from 'src/app/services/utils.service';
 
 @Component({
     selector: 'app-navegacio-tab',
@@ -45,13 +46,12 @@ export class NavegacioTabComponent {
         this.actPosPill(true);
     }
 
-    onBackPressed() {
-        setTimeout(() => {
-            this.botoSeleccionat = document.querySelector("button.selected");
-            this.m.u.scroll(0);
+    async onBackPressed() {
+        await Utils.wait(0);
+        this.botoSeleccionat = document.querySelector("button.selected");
+        this.m.u.scroll(0);
 
-            this.actPosPill(true);
-        }, 0);
+        this.actPosPill(true);
     }
 
     actPosPill(animacio) {

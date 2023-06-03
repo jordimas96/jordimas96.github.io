@@ -1,5 +1,6 @@
 import { Component, ElementRef, HostListener, ViewChild } from '@angular/core';
 import { MainService } from 'src/app/services/main.service';
+import { Utils } from 'src/app/services/utils.service';
 
 @Component({
     selector: 'app-mad-jumpgate',
@@ -25,11 +26,12 @@ export class MadJumpgateComponent {
     afterRootFadeIn() { }
     
     
-    iniciarJoc() {
+    async iniciarJoc() {
         this.carregarJoc = true;
-        setTimeout(() => {
-            this.posarIframeDinsLimits();
-        }, 0);
+
+        await Utils.wait(0);
+
+        this.posarIframeDinsLimits();
     }
 
     @HostListener('window:resize', ['$event'])
