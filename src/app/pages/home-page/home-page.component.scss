@@ -24,7 +24,7 @@
     .linies {
         text-align: right;
         & * {
-            transition: font-size 0.3s ease, var(--transicio-colors);
+            transition: font-size 0.3s ease;
         }
 
         .bondia {
@@ -52,7 +52,6 @@
         font-size: 1.4rem;
         color: var(--text-80);
         text-align: center;
-        transition: var(--transicio-colors);
     }
     .skills {
         justify-content: center;

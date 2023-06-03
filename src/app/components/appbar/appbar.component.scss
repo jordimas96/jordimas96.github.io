@@ -30,13 +30,11 @@
             padding: 0.5rem 1.4rem;
             font-size: 1.3rem;
 
-            transition: var(--transicio-colors);
-
             &.transicio-1 {
-                transition: var(--transicio-colors), box-shadow 300ms ease-in;
+                transition: box-shadow 400ms ease-in;
             }
             &.transicio-2 {
-                transition: var(--transicio-colors), box-shadow 300ms ease;
+                transition: box-shadow 400ms ease-in;
             }
         }
         .botoDarkMode {
@@ -71,7 +69,7 @@
             padding: 0.25rem 0.5rem 0.25rem 1rem;
             outline: none;
             cursor: pointer;
-            transition: padding 0.3s ease, font-size 0.3s ease, var(--transicio-colors);
+            transition: padding 0.3s ease, font-size 0.3s ease;
 
             option {
                 background-color: var(--fons);

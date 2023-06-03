@@ -142,17 +142,6 @@
 .link-boto {
     padding: 0.5rem 1rem;
     margin: -0.5rem -1rem;
-    border-radius: 10000px;
-
-    transition: var(--transicio-colors);
-
-    .fletxa {
-        display: inline-block;
-        margin-left: 0.7rem;
-        color: var(--link);
-
-        transition: transform 0.3s ease, var(--transicio-colors);
-    }
 }
 
 

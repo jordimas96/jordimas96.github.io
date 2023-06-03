@@ -122,8 +122,6 @@
             background-color: var(--color-7);
             color: var(--fons);
 
-            transition: var(--transicio-colors);
-
             img.logo {
                 height: 2rem;
             }
@@ -144,7 +142,6 @@
             .scan-here {
                 font-size: 0.9rem;
                 color: var(--text-80);
-                transition: var(--transicio-colors);
             }
         }
 
@@ -169,8 +166,6 @@
 
             background-color: var(--color-7);
             color: var(--fons);
-
-            transition: var(--transicio-colors);
 
             img.logo {
                 height: 2rem;

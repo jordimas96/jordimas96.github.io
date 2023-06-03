@@ -35,10 +35,8 @@ body {
     // background: var(--color-1);
     color: var(--text);
     margin-bottom: 100px;
-    // transition: var(--transicio-colors);
     line-height: 1.4;
     overflow-y: scroll;
-    transition: all 0.3s ease;
 }
 
 // Estils estructura pagines //
@@ -64,7 +62,7 @@ body {
 }
 
 .title, .subtitle, .text {
-    transition: font-size 0.3s ease, var(--transicio-colors);
+    transition: font-size 0.3s ease;
 }
 .title-icon {
     height: 2rem;
@@ -100,14 +98,14 @@ body {
     margin: -1rem -1rem;
     border-radius: 10000px;
 
-    transition: var(--transicio-colors);
+    transition: background-color 0.3s ease;
 
     .fletxa {
         display: inline-block;
         margin-left: 0.7rem;
         color: var(--link);
 
-        transition: transform 0.3s ease, var(--transicio-colors);
+        transition: transform 0.3s ease, color 0.3s ease;
     }
 }
 
@@ -144,7 +142,6 @@ a.no-style {
 .rounded-3 { border-radius: 1rem !important; }
 .rounded-4 { border-radius: 2rem !important; }
 
-.inv-dark { transition: var(--transicio-colors); }
 html.light .inv-dark { filter: invert(1); }
 html.dark .inv-dark-2 { filter: invert(1); }
 

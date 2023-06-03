@@ -13,8 +13,6 @@
 
     z-index: 0;
 
-    transition: var(--transicio-colors);
-
     
     button {
         background: none;
@@ -27,7 +25,7 @@
         padding: 0.25rem 1rem;
         z-index: 2;
 
-        transition: font-size 0.3s ease, padding 0.3s ease, var(--transicio-colors);
+        transition: font-size 0.3s ease, padding 0.3s ease, color 0.3s ease;
 
         &.selected {
             // background-color: var(--text);
@@ -46,8 +44,6 @@
     background-color: var(--text);
     border-radius: 25px; //13px;
     z-index: 1;
-
-    transition: var(--transicio-colors);
 }
 
 

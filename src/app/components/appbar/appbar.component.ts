@@ -47,6 +47,17 @@ export class AppbarComponent {
     
 
     async animacioDarkMode(numBoto) {
+        // Sistema antic sense cortina //
+        // $("*").css("transition", "all 0.3s ease");
+        // await Utils.wait(0);
+        // if (numBoto == "dark") this.accioDarkMode();
+        // if (numBoto == "auto") this.accioAutoDarkMode();
+        // await Utils.wait(300);
+        // $("*").css("transition", "");
+        // return;
+
+
+
         // Si es click al auto i no cal fer efecte, no el fem //
         if (numBoto == "auto" && this.m.modeFosc == Utils.systemDarkMode()) {
             this.accioAutoDarkMode();
@@ -66,6 +77,7 @@ export class AppbarComponent {
 
 
         // Transicions //
+        $("*:not(.botoDarkMode)").css("transition", "none");
 
         $(".botoDarkMode, .botoAutoMode").prop("disabled", true);
 
@@ -87,12 +99,12 @@ export class AppbarComponent {
         
         
         
-        await Utils.wait(300);
+        await Utils.wait(400);
         
         // Acció canviar mode //
         if (numBoto == "dark") this.accioDarkMode();
         if (numBoto == "auto") this.accioAutoDarkMode();
-        await Utils.wait(300);
+        // await Utils.wait(300);
 
         $(".botoDarkMode").removeClass("transicio-1");
         $(".botoDarkMode").css({ "box-shadow": `100vw 100vh ${blur}px ${spread*1.05}px ${color}` });
@@ -106,7 +118,7 @@ export class AppbarComponent {
         $(".botoDarkMode").css({ "box-shadow": `100vw 100vh 0 0 ${color}` });
 
 
-        await Utils.wait(300);
+        await Utils.wait(400);
 
 
         $(".botoDarkMode").removeClass("transicio-2");
@@ -117,6 +129,8 @@ export class AppbarComponent {
                 "z-index": "auto",
                 "box-shadow": "none"
             });
+        
+        $("*:not(.botoDarkMode)").css("transition", "");
         $(".botoDarkMode, .botoAutoMode").prop("disabled", false);
 
     }
