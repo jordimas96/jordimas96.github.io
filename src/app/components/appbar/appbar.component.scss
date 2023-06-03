@@ -33,7 +33,7 @@
             transition: var(--transicio-colors);
 
             &.transicio-1 {
-                transition: var(--transicio-colors), box-shadow 700ms ease-in;
+                transition: var(--transicio-colors), box-shadow 300ms ease-in;
             }
             &.transicio-2 {
                 transition: var(--transicio-colors), box-shadow 300ms ease;

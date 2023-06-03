@@ -54,25 +54,13 @@ export class AppbarComponent {
         }
 
         // Variables //
-        let x = 0;
-        let y = 0;
-        let spread;
-        let blur = 2000;
-        if (window.innerHeight > window.innerWidth) {
-            spread = window.innerHeight;
-            // x = window.innerWidth - window.innerHeight;
-        } else {
-            spread = window.innerWidth;
-            // y = window.innerHeight - window.innerWidth;
-        }
-        spread /= 2;
-        x = spread;
-        y = spread;
+        let spread = Utils.mesGran(window.innerWidth, window.innerHeight);
+        let blur = 1000;
 
         // extra per arrodonit (spread amplia els px per les 2 band) -50 -50 0 es simetric
-        x -= 50;
-        y -= 50;
-        spread += 1000;
+        // spread += 1000;
+        // x -= 50;
+        // y -= 50;
 
         var color = this.m.modeFosc ? "var(--color-clar)" : "var(--color-fosc)";
 
@@ -80,7 +68,12 @@ export class AppbarComponent {
         // Transicions //
 
         $(".botoDarkMode, .botoAutoMode").prop("disabled", true);
-        $(".botoDarkMode").css({ "box-shadow": `0 0 0 ${color}` });
+
+        // Colocar shadow al primer punt //
+        $(".botoDarkMode").css({
+            "z-index": "10000",
+            "box-shadow": `0 0 0 0 ${color}`
+        });
         
         await Utils.wait(0);
 
@@ -88,40 +81,41 @@ export class AppbarComponent {
         $(".botoDarkMode")
             .addClass("transicio-1")
             .css({
-                "z-index": "10000",
-                "box-shadow": `${x}px ${y}px ${blur}px ${spread}px ${color}`
+                "box-shadow": `0 0 ${blur}px ${spread}px ${color}`
             });
 
         
         
         
-        await Utils.wait(700);
+        await Utils.wait(300);
         
         // Acció canviar mode //
         if (numBoto == "dark") this.accioDarkMode();
         if (numBoto == "auto") this.accioAutoDarkMode();
-
         await Utils.wait(300);
 
+        $(".botoDarkMode").removeClass("transicio-1");
+        $(".botoDarkMode").css({ "box-shadow": `100vw 100vh ${blur}px ${spread*1.05}px ${color}` });
+        
+        await Utils.wait(0);
 
-        $(".botoDarkMode")
-            .removeClass("transicio-1")
-            .addClass("transicio-2");
+        $(".botoDarkMode").addClass("transicio-2");
             
         // 2. Transicio color a transparent //
-        $(".botoDarkMode").css({ "box-shadow": `${x}px ${y}px ${blur}px ${spread}px transparent` });
+        // $(".botoDarkMode").css({ "box-shadow": `${x}px ${y}px ${blur}px ${spread}px transparent` });
+        $(".botoDarkMode").css({ "box-shadow": `100vw 100vh 0 0 ${color}` });
 
 
         await Utils.wait(300);
 
 
         $(".botoDarkMode").removeClass("transicio-2");
-
+-
         // 3. Tornar a estat inicial sense transició //
         $(".botoDarkMode")
             .css({
                 "z-index": "auto",
-                "box-shadow": "0 0 0 0 transparent"
+                "box-shadow": "none"
             });
         $(".botoDarkMode, .botoAutoMode").prop("disabled", false);
 
