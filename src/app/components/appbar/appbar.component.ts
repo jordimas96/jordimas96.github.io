@@ -48,11 +48,10 @@ export class AppbarComponent {
 
     async animacioDarkMode(numBoto) {
         // Sistema antic sense cortina //
-        // $("*").css("transition", "all 0.3s ease");
-        // await Utils.wait(0);
+        // $("*").css("transition", "background-color 0.3s linear, color 0.3s linear, border-color 0.3s linear, filter 0.3s linear");
         // if (numBoto == "dark") this.accioDarkMode();
         // if (numBoto == "auto") this.accioAutoDarkMode();
-        // await Utils.wait(300);
+        // await Utils.wait(600);
         // $("*").css("transition", "");
         // return;
 
@@ -65,8 +64,8 @@ export class AppbarComponent {
         }
 
         // Variables //
-        let spread = Utils.mesGran(window.innerWidth, window.innerHeight);
-        let blur = 1000;
+        let spread = Utils.mesGran(window.innerWidth, window.innerHeight) * 1.1;
+        let blur = 500; //200max.... pero si es mes alt es queda mes borros tota la transicio
 
         // extra per arrodonit (spread amplia els px per les 2 band) -50 -50 0 es simetric
         // spread += 1000;
@@ -107,7 +106,7 @@ export class AppbarComponent {
         // await Utils.wait(300);
 
         $(".botoDarkMode").removeClass("transicio-1");
-        $(".botoDarkMode").css({ "box-shadow": `100vw 100vh ${blur}px ${spread*1.05}px ${color}` });
+        $(".botoDarkMode").css({ "box-shadow": `100vw 100vh ${blur}px ${spread}px ${color}` });
         
         await Utils.wait(0);
 
@@ -122,7 +121,7 @@ export class AppbarComponent {
 
 
         $(".botoDarkMode").removeClass("transicio-2");
--
+
         // 3. Tornar a estat inicial sense transició //
         $(".botoDarkMode")
             .css({
