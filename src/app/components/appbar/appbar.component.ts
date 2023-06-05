@@ -65,7 +65,7 @@ export class AppbarComponent {
         }
 
         // Variables //
-        let spread = Utils.mesGran(window.innerWidth, window.innerHeight) * 1.1;
+        let spread = Utils.mesGran(window.innerWidth, window.innerHeight);
         let blur = 500;
         var color = this.m.modeFosc ? "var(--color-clar)" : "var(--color-fosc)";
 
@@ -106,7 +106,7 @@ export class AppbarComponent {
         }
 
         $(".botoDarkMode").removeClass("transicio-1");
-        $(".botoDarkMode").css({ "box-shadow": `100vw 100vh ${blur}px ${spread}px ${color}` });
+        $(".botoDarkMode").css({ "box-shadow": `100vw 100vh ${blur}px ${spread*1.15}px ${color}` });
         
         await Utils.wait(0);
 
