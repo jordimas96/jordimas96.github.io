@@ -2,6 +2,8 @@
 
 .appbar {
     position: fixed;
+    display: flex;
+    align-items: center;
     top: 0;
     width: 100%;
     z-index: 1000;
@@ -17,33 +19,32 @@
     .botonsDarkMode {
         display: flex;
         align-items: center;
-        padding: 0.5rem;
+        padding: 0.25rem 0.5rem;
 
         .botoDarkMode, .botoAutoMode {
-            background-color: var(--color-fosc-50);
-            color: var(--color-clar);
-            border: 1px solid var(--color-clar-70);
+            background-color: var(--text);
+            color: var(--fons);
             border: none;
             border-radius: 1000px;
             outline: none;
             cursor: pointer;
-            padding: 0.5rem 1.4rem;
+            height: 3rem;
             font-size: 1.3rem;
+            transition: background-color 0.3s ease;
+            
 
             &.transicio-1 {
-                transition: box-shadow 400ms ease-in;
+                transition: background-color 0.3s ease, box-shadow 400ms ease-in;
             }
             &.transicio-2 {
-                transition: box-shadow 400ms ease-in;
+                transition: background-color 0.3s ease, box-shadow 400ms ease-in;
             }
         }
         .botoDarkMode {
-            // width: 45px;
-            // height: 45px;
-            // padding: 0;
+            width: 4rem;
         }
         .botoAutoMode {
-            padding: 0.5rem 0.95rem;
+            width: 3rem;
         }
     }
     
@@ -76,11 +77,6 @@
             }
         }
     }
-}
-// Boto Dark Mode de color negre en mode clar //
-::ng-deep html.light .appbar .botoDarkMode, ::ng-deep html.light .appbar .botoAutoMode {
-    background-color: var(--color-fosc) !important;
-    border-color: transparent !important;
 }
 
 

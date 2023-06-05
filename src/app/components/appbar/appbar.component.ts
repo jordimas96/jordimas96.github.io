@@ -60,18 +60,13 @@ export class AppbarComponent {
         // Si es click al auto i no cal fer efecte, no el fem //
         if (numBoto == "auto" && this.m.modeFosc == Utils.systemDarkMode()) {
             this.accioAutoDarkMode();
+            $(".botoAutoMode").fadeOut(200);
             return;
         }
 
         // Variables //
         let spread = Utils.mesGran(window.innerWidth, window.innerHeight) * 1.1;
-        let blur = 500; //200max.... pero si es mes alt es queda mes borros tota la transicio
-
-        // extra per arrodonit (spread amplia els px per les 2 band) -50 -50 0 es simetric
-        // spread += 1000;
-        // x -= 50;
-        // y -= 50;
-
+        let blur = 500;
         var color = this.m.modeFosc ? "var(--color-clar)" : "var(--color-fosc)";
 
 
@@ -100,10 +95,15 @@ export class AppbarComponent {
         
         await Utils.wait(400);
         
-        // Acció canviar mode //
-        if (numBoto == "dark") this.accioDarkMode();
-        if (numBoto == "auto") this.accioAutoDarkMode();
-        // await Utils.wait(300);
+        // Acció canviar mode (instantani) //
+        if (numBoto == "dark") {
+            this.accioDarkMode();
+            $(".botoAutoMode").show();
+        }
+        if (numBoto == "auto") {
+            this.accioAutoDarkMode();
+            $(".botoAutoMode").hide();
+        }
 
         $(".botoDarkMode").removeClass("transicio-1");
         $(".botoDarkMode").css({ "box-shadow": `100vw 100vh ${blur}px ${spread}px ${color}` });
@@ -113,12 +113,10 @@ export class AppbarComponent {
         $(".botoDarkMode").addClass("transicio-2");
             
         // 2. Transicio color a transparent //
-        // $(".botoDarkMode").css({ "box-shadow": `${x}px ${y}px ${blur}px ${spread}px transparent` });
+        // $(".botoDarkMode").css({ "box-shadow": `100vw 100vh ${blur}px ${spread}px transparent` });
         $(".botoDarkMode").css({ "box-shadow": `100vw 100vh 0 0 ${color}` });
 
-
         await Utils.wait(400);
-
 
         $(".botoDarkMode").removeClass("transicio-2");
 
@@ -138,14 +136,12 @@ export class AppbarComponent {
         this.m.modeFosc = !this.m.modeFosc;
         this.actTema();
         Utils.setCookie("darkmode", this.m.modeFosc ? 1 : 0)
-        $(".botoAutoMode").fadeIn(200);
     }
 
     accioAutoDarkMode() {
         this.m.modeFosc = Utils.systemDarkMode();
         this.actTema();
         Utils.removeCookie("darkmode");
-        $(".botoAutoMode").fadeOut(200);
     }
 
     setDarkMode() {
