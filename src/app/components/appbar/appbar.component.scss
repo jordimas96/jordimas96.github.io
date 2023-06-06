@@ -20,6 +20,7 @@
         display: flex;
         align-items: center;
         padding: 0.6rem 0.5rem;
+        transition: padding 0.3s ease;
 
         .botoDarkMode, .botoAutoMode {
             background-color: var(--text);
@@ -28,23 +29,15 @@
             border-radius: 1000px;
             outline: none;
             cursor: pointer;
-            height: 3rem;
-            font-size: 1.3rem;
-            transition: background-color 0.3s linear;
+            transition: background-color 0.3s linear, width 0.3s ease, height 0.3s ease, font-size 0.3s ease;
             
 
             &.transicio-1 {
-                transition: background-color 0.3s linear, box-shadow 400ms ease-in;
+                transition: background-color 0.3s linear, width 0.3s ease, height 0.3s ease, font-size 0.3s ease, box-shadow 400ms ease-in;
             }
             &.transicio-2 {
-                transition: background-color 0.3s linear, box-shadow 400ms ease-in;
+                transition: background-color 0.3s linear, width 0.3s ease, height 0.3s ease, font-size 0.3s ease, box-shadow 400ms ease-in;
             }
-        }
-        .botoDarkMode {
-            width: 4rem;
-        }
-        .botoAutoMode {
-            width: 3rem;
         }
     }
     
@@ -52,15 +45,12 @@
         display: flex;
         justify-content: center;
         align-items: center;
-
-        padding: 0.5rem;
     }
 
     .idioma {
         display: flex;
         align-items: center;
         justify-content: flex-end;
-        padding: 0.5rem;
 
         .select-idioma {
             background-color: var(--fons-50);
@@ -89,14 +79,44 @@
 }
 // Pantalla PC //
 @media only screen and (min-width: 576px) {
-    .idioma .select-idioma {
-        font-size: 1.2rem;
+    .botonsDarkMode {
+        
+        .botoDarkMode, .botoAutoMode {
+            height: 3rem;
+            font-size: 1.3rem;
+        }
+        .botoDarkMode { width: 4rem; }
+        .botoAutoMode { width: 3rem; }
+    }
+    .navegacio {
+        padding: 0.5rem;
+    }
+    .idioma {
+        padding: 0.5rem;
+        .select-idioma {
+            font-size: 1.2rem;
+        }
     }
 }
 // Pantalla Mòbil //
 @media only screen and (max-width: 575px) {
-    .idioma .select-idioma {
-        font-size: 1.1rem;
+    .botonsDarkMode {
+
+        .botoDarkMode, .botoAutoMode {
+            height: 2.5rem;
+            font-size: 1.1rem;
+        }
+        .botoDarkMode { width: 3.5rem; }
+        .botoAutoMode { width: 2.5rem; }
+    }
+    .navegacio {
+        padding: 0.25rem 0.5rem;
+    }
+    .idioma {
+        padding: 0.25rem 0.5rem;
+        .select-idioma {
+            font-size: 1.1rem;
+        }
     }
 }
 
