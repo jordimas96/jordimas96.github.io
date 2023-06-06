@@ -1,48 +1,24 @@
-
-
-
-
-
-
-<div *ngIf="!carregarJoc">
-
-    <button class="boto m-auto" (click)="iniciarJoc()" [disabled]="!m.esPc()">
-        <ng-container *ngIf="m.ca()">Iniciar joc</ng-container>
-        <ng-container *ngIf="m.es()">Iniciar juego</ng-container>
-        <ng-container *ngIf="m.en()">Start game</ng-container>
+<div class="seccio">
+    <button class="boto-desplegable no-style" (click)="toggleSeccio($event.currentTarget)">
+        <div class="text-i-icona">
+            <img src="assets/icons/mad-jumpgate.png" class="icona">
+            <span class="titol">Mad Jumpgate</span>
+        </div>
+        <i class="fa-solid fa-chevron-down fletxa"></i>
     </button>
-
-    <p *ngIf="!m.esPc()" class="missatge-nomes-pc mt-1">
-        <ng-container *ngIf="m.ca()">Aquest joc és només per a ordinador.<br>Accedeix des d'un ordinador per a jugar-hi.</ng-container>
-        <ng-container *ngIf="m.es()">Este juego es sólo para ordenador.<br>Accede desde un ordenador para jugar.</ng-container>
-        <ng-container *ngIf="m.en()">This game is for PC only.<br>Access from a computer to play it.</ng-container>
-    </p>
-
-
+    <div class="contingut" style="display:none;">
+        <div *ngIf="m.esPc()" class="iframe-i-placeholder">
+            <iframe #iframeRef src="assets/mad-jumpgate/index.html" width="1920" height="1080" scrolling="no" *ngIf="carregarJoc"></iframe>
     
-</div>
+            <div class="placeholder" [style.width.px]="placeholderWidth" [style.height.px]="placeholderHeight"></div>
+    
+            <button class="boto botoFullscreen no-style" (click)="fullScreen()"><i class="fa-solid fa-expand"></i></button>
+        </div>
 
-
-
-
-
-
-<div *ngIf="carregarJoc">
-
-    <div class="iframe-i-placeholder">
-        <iframe #iframeRef src="assets/mad-jumpgate/index.html" width="1920" height="1080" scrolling="no"></iframe>
-
-        <div class="placeholder" [style.width.px]="placeholderWidth" [style.height.px]="placeholderHeight"></div>
-
-        <button class="boto botoFullscreen" (click)="fullScreen()"><i class="fa-solid fa-expand"></i></button>
+        <div *ngIf="!m.esPc()" class="missatge-nomes-pc">
+            <ng-container *ngIf="m.ca()">Aquest joc és només per a ordinador.<br>Accedeix des d'un ordinador per a jugar-hi.</ng-container>
+            <ng-container *ngIf="m.es()">Este juego es sólo para ordenador.<br>Accede desde un ordenador para jugar.</ng-container>
+            <ng-container *ngIf="m.en()">This game is for PC only.<br>Access from a computer to play it.</ng-container>
+        </div>
     </div>
-
-    <!-- <button class="boto mt-2 ml-auto">Full screen</button> -->
-
 </div>
-
-
-
-
-
-

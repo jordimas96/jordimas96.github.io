@@ -23,7 +23,9 @@ export class MadJumpgateComponent {
 
     }
 
-    afterRootFadeIn() { }
+    afterRootFadeIn() {
+        this.posarIframeDinsLimits();
+    }
     
     
     async iniciarJoc() {
@@ -38,7 +40,16 @@ export class MadJumpgateComponent {
     posarIframeDinsLimits() {
         var iframeWidth = 1920;
         var iframeHeight = 1080;
-        this.placeholderWidth = $(".div-mad-jumpgate").innerWidth()!;
+
+        // Si el contingut està tancat, no es pot medir l'amplada del placeholder per a redimensionar l'iframe. Amb aquest codi //
+        // obrim el contingut per a mesurar el placeholder i poder establir la mida del placeholder i posteriorment la de l'iframe. //
+        // Ho necessitem per a que el JQuery faci l'animació slideDown bé (necessita saber la distancia total de l'animació que farà jQuery) //
+        if (!$(".contingut").is(":visible")) {
+            $(".contingut").show();
+            this.placeholderWidth = $(".iframe-i-placeholder").innerWidth()!;
+            $(".contingut").hide();
+        } else this.placeholderWidth = $(".iframe-i-placeholder").innerWidth()!;
+            
         this.placeholderHeight = iframeHeight * this.placeholderWidth / iframeWidth;
         
 
@@ -58,6 +69,26 @@ export class MadJumpgateComponent {
             iframe.webkitRequestFullscreen();
         } else if (iframe.msRequestFullscreen) {
             iframe.msRequestFullscreen();
+        }
+    }
+
+    async toggleSeccio(boto) {
+        let $seccio = $(boto).parent();
+        let $fletxa = $seccio.find(".fletxa");
+        let $contingut = $seccio.find(".contingut");
+        let obert = $fletxa.is("[data-open]");
+
+        obert = !obert;
+        if (obert) {
+            $fletxa.attr("data-open", "");
+            $contingut.stop().slideDown(200, () => {
+                this.iniciarJoc();
+            });
+        } else {
+            $fletxa.removeAttr("data-open");
+            $contingut.stop().slideUp(200, () => {
+                // this.carregarJoc = false;
+            });
         }
     }
 }

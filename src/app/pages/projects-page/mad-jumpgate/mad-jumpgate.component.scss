@@ -1,62 +1,119 @@
 @import "src/styles.scss";
 
-.boto {
-    display: block;
-    outline: 0;
-    cursor: pointer;
-    padding: 0.5rem 1rem;
-    border: 0;
-    border-radius: 10000px;
-    font-size: 1.3rem;
+.seccio {
+    margin-bottom: 1rem;
+    border-radius: 2rem;
+    
+    .boto-desplegable {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+        padding: 1rem;
 
-    background-color: var(--color-7);
-    color: var(--fons);
+        .text-i-icona {
+            display: flex;
+            align-items: center;
 
+            .titol {
+                font-size: 1.5rem;
+                color: var(--text);
+            }
+            .icona {
+                height: 3rem;
+                border-radius: 1rem;
+                margin-right: 1rem;
+            }
+        }
+        .fletxa {
+            font-size: 1.5rem;
+            margin-right: 1rem;
+            transition: transform 200ms ease;
+            
+            &[data-open] {
+                transform: rotate(-180deg);
+            }
+        }
+    }
+    .contingut {
+        transition: padding-left 0.3s ease, padding-right 0.3s ease;
 
-    &[disabled] {
-        opacity: 0.2;
+        .iframe-i-placeholder {
+            position: relative;
+            border-radius: 1rem;
+            overflow: hidden;
+        
+            iframe {
+                position: absolute;
+                transform-origin: top left;
+                border: none;
+                // border-radius: 16px;
+            }
+            .placeholder {
+                // transition: height 2s ease;
+            }
+        
+            .botoFullscreen {
+                position: absolute;
+                top: 0; right: 0;
+                margin: 0.5rem;
+                padding: 0;
+                width: 2.7rem;
+                height: 2.7rem;
+                border-radius: 10px;
+                opacity: 0.5;
+        
+                background-color: var(--color-l-7);
+                color: var(--color-fosc);
+        
+                transition: opacity 0.2s ease;
+        
+                &:hover {
+                    opacity: 1;
+                }
+            }
+        }
+        
+        .missatge-nomes-pc {
+            color: var(--text-80);
+            text-align: center;
+            font-size: 0.9rem;
+        }
     }
 }
 
-.missatge-nomes-pc {
-    color: var(--text-80);
-    text-align: center;
-    font-size: 0.9rem;
+::ng-deep .seccio {
+    background-color: var(--color-clar-20);
+}
+::ng-deep .light .seccio {
+    background-color: var(--color-clar-50);
+    // @extend .shadow-1;
 }
 
 
-.iframe-i-placeholder {
-    position: relative;
-    border-radius: 1rem;
-    overflow: hidden;
 
-    iframe {
-        position: absolute;
-        transform-origin: top left;
-        border: none;
-        // border-radius: 16px;
+// #region MEDIA QUERIES //
+///////////////////
+// MEDIA QUERIES //
+///////////////////
+/// 
+// Pantalla PC //
+@media only screen and (min-width: 576px) {
+    .seccio {
+
+        .contingut {
+            padding: 1.5rem;
+            padding-top: 0;
+        }
     }
-    .placeholder {
-        transition: height 2s ease;
-    }
+}
+// Pantalla Mòbil //
+@media only screen and (max-width: 575px) {
+    .seccio {
 
-    .botoFullscreen {
-        position: absolute;
-        top: 0; right: 0;
-        margin: 0.5rem;
-        padding: 0;
-        width: 2.7rem;
-        height: 2.7rem;
-        border-radius: 10px;
-        opacity: 0.5;
-
-        background-color: var(--color-l-7);
-        color: var(--color-fosc);
-
-        transition: opacity 0.2s ease;
-
-        &:hover {
-            opacity: 1;
+        .contingut {
+            padding: 1rem;
+            padding-top: 0;
         }
     }
 }
