@@ -1,0 +1,77 @@
+@import "src/styles.scss";
+
+.seccio {
+    margin-bottom: 1rem;
+    border-radius: 2rem;
+    
+    .boto-desplegable {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+        padding: 1rem;
+
+        .text-i-icona {
+            display: flex;
+            align-items: center;
+
+            .titol {
+                font-size: 1.5rem;
+                color: var(--text);
+            }
+            .icona {
+                height: 3rem;
+                border-radius: 1rem;
+                margin-right: 1rem;
+            }
+        }
+        .fletxa {
+            font-size: 1.5rem;
+            margin-right: 1rem;
+            transition: transform 200ms ease;
+            
+            &[data-open] {
+                transform: rotate(-180deg);
+            }
+        }
+    }
+    .contingut {
+        transition: padding-left 0.3s ease, padding-right 0.3s ease;
+    }
+}
+
+::ng-deep .seccio {
+    background-color: var(--color-clar-20);
+}
+::ng-deep .light .seccio {
+    background-color: var(--color-clar-50);
+    // @extend .shadow-1;
+}
+
+
+
+// #region MEDIA QUERIES //
+///////////////////
+// MEDIA QUERIES //
+///////////////////
+/// 
+// Pantalla PC //
+@media only screen and (min-width: 576px) {
+    .seccio {
+
+        .contingut {
+            padding: 1.5rem;
+            padding-top: 0;
+        }
+    }
+}
+// Pantalla Mòbil //
+@media only screen and (max-width: 575px) {
+    .seccio {
+
+        .contingut {
+            padding: 1rem;
+            padding-top: 0;
+        }
+    }
+}

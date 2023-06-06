@@ -133,6 +133,14 @@ a.no-style {
         text-decoration: none;
     }
 }
+button.no-style {
+    background-color: transparent;
+    color: inherit;
+    border: 0;
+    // border-radius: 1rem;
+    outline: none;
+    cursor: pointer;
+}
 
 
 
