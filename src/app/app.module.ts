@@ -16,6 +16,7 @@ import { GoogleAnalyticsModule } from './google-analytics/google-analytics.modul
 import { QRCodeModule } from 'angularx-qrcode';
 import { NavegacioTabComponent } from './components/navegacio-tab/navegacio-tab.component';
 import { MadJumpgateComponent } from './components/mad-jumpgate/mad-jumpgate.component';
+import { DetallsAndroidAppsComponent } from './pages/projects-page/detalls-android-apps/detalls-android-apps.component';
 
 @NgModule({
     declarations: [
@@ -36,6 +37,7 @@ import { MadJumpgateComponent } from './components/mad-jumpgate/mad-jumpgate.com
         SkillComponent,
         NavegacioTabComponent,
         MadJumpgateComponent,
+        DetallsAndroidAppsComponent,
     ],
     imports: [
         BrowserModule,
