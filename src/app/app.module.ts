@@ -17,6 +17,7 @@ import { QRCodeModule } from 'angularx-qrcode';
 import { NavegacioTabComponent } from './components/navegacio-tab/navegacio-tab.component';
 import { MadJumpgateComponent } from './pages/projects-page/mad-jumpgate/mad-jumpgate.component';
 import { DetallsAndroidAppsComponent } from './pages/projects-page/detalls-android-apps/detalls-android-apps.component';
+import { SmoothMoveDirective } from './directives/smooth-move.directive';
 
 @NgModule({
     declarations: [
@@ -38,6 +39,7 @@ import { DetallsAndroidAppsComponent } from './pages/projects-page/detalls-andro
         NavegacioTabComponent,
         MadJumpgateComponent,
         DetallsAndroidAppsComponent,
+        SmoothMoveDirective,
     ],
     imports: [
         BrowserModule,
