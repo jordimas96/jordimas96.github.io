@@ -32,7 +32,3 @@ export class FooterComponent {
     }
 
 }
-
-// const iconImgs = $('.contact-icons > a');
-//         iconImgs.on('mouseenter', function () { iconImgs.not(this).addClass('blur'); });
-//         iconImgs.on('mouseleave', function () { iconImgs.removeClass('blur'); });
