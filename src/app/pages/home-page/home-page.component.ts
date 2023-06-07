@@ -25,7 +25,12 @@ export class HomePageComponent {
             "Good afternoon!",
             "Good evening!",
         ],
-    }
+    };
+    public nomArxiusCV = {
+        "ca": "CV Jordi Mas Parramon CA.pdf",
+        "es": "CV Jordi Mas Parramon ES (ext).pdf",
+        "en": "CV Jordi Mas Parramon EN.pdf",
+    };
 
     constructor(public m: MainService) { }
 

@@ -112,21 +112,6 @@
         align-items: center;
         justify-content: space-around;
 
-        a.boto {
-            display: inline-block;
-            padding: 0.5rem 0.7rem;
-            padding-left: 1rem;
-            font-size: 1.3rem;
-            border-radius: 10000px;
-
-            background-color: var(--color-7);
-            color: var(--fons);
-
-            img.logo {
-                height: 2rem;
-            }
-        }
-
         .div-qr-i-text {
             text-align: center;
 
@@ -156,21 +141,6 @@
         display: flex;
         align-items: center;
         justify-content: space-around;
-
-        a.boto {
-            display: inline-block;
-            padding: 0.5rem 0.7rem;
-            padding-left: 1rem;
-            font-size: 1.3rem;
-            border-radius: 10000px;
-
-            background-color: var(--color-7);
-            color: var(--fons);
-
-            img.logo {
-                height: 2rem;
-            }
-        }
     }
 }
 

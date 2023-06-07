@@ -41,6 +41,18 @@
             font-style: italic;
         }
     }
+    .bio {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        
+        .boto {
+            padding: 0.9rem 1.1rem;
+            padding-left: 1.3rem;
+            transition: var(--transicio-colors);
+
+        }
+    }
 }
 ::ng-deep html.light.matinada .nom { color: var(--color-l-0) !important }
 
@@ -63,12 +75,25 @@
     .foto-carnet:hover {
         transform: none !important;
     }
+    .boto-cv:hover {
+        background-color: var(--color-l-8) !important;
+    }
+
+    ::ng-deep .light .boto-cv:hover {
+        background-color: var(--color-l-4) !important;
+    }
 }
 // Mòbil //
 @media (pointer: coarse) { }
 
 // Pantalla PC //
 @media only screen and (min-width: 576px) {
+    .group#bio {
+        .div-text {
+            padding: 1.5rem;
+            padding-bottom: 0;
+        }
+    }
     .bondia {
         font-size: 1.8rem;
     }
