@@ -32,38 +32,6 @@
     --color-l-8: hsl(147, 100%, 77%);
     --color-l-9: hsl(147, 100%, 86%);
 }
-#tasker {
-    --color-fosc:     rgb(36, 20, 0);
-    --color-fosc-90: rgba(36, 20, 0, 0.9);
-    --color-fosc-80: rgba(36, 20, 0, 0.8);
-    --color-fosc-70: rgba(36, 20, 0, 0.7);
-    --color-fosc-60: rgba(36, 20, 0, 0.6);
-    --color-fosc-50: rgba(36, 20, 0, 0.5);
-    --color-fosc-40: rgba(36, 20, 0, 0.4);
-    --color-fosc-30: rgba(36, 20, 0, 0.3);
-    --color-fosc-20: rgba(36, 20, 0, 0.2);
-    --color-fosc-10: rgba(36, 20, 0, 0.1);
-    --color-clar:     rgb(255, 235, 209);
-    --color-clar-90: rgba(255, 235, 209, 0.9);
-    --color-clar-80: rgba(255, 235, 209, 0.8);
-    --color-clar-70: rgba(255, 235, 209, 0.7);
-    --color-clar-60: rgba(255, 235, 209, 0.6);
-    --color-clar-50: rgba(255, 235, 209, 0.5);
-    --color-clar-40: rgba(255, 235, 209, 0.4);
-    --color-clar-30: rgba(255, 235, 209, 0.3);
-    --color-clar-20: rgba(255, 235, 209, 0.2);
-    --color-clar-10: rgba(255, 235, 209, 0.1);
-    --color-l-0: hsl(34, 100%, 7%);
-    --color-l-1: hsl(34, 100%, 16%);
-    --color-l-2: hsl(34, 100%, 26%);
-    --color-l-3: hsl(34, 100%, 35%);
-    --color-l-4: hsl(34, 100%, 44%);
-    --color-l-5: hsl(34, 100%, 54%);
-    --color-l-6: hsl(34, 100%, 63%);
-    --color-l-7: hsl(34, 100%, 72%);
-    --color-l-8: hsl(34, 100%, 82%);
-    --color-l-9: hsl(34, 100%, 91%);
-}
 #mad-jumpgate {
     --color-fosc:     rgb(37, 37, 0);
     --color-fosc-90: rgba(37, 37, 0, 0.9);
@@ -96,12 +64,44 @@
     --color-l-8: hsl(60, 100%, 72%);
     --color-l-9: hsl(60, 100%, 91%);
 }
+#tasker {
+    --color-fosc:     rgb(36, 20, 0);
+    --color-fosc-90: rgba(36, 20, 0, 0.9);
+    --color-fosc-80: rgba(36, 20, 0, 0.8);
+    --color-fosc-70: rgba(36, 20, 0, 0.7);
+    --color-fosc-60: rgba(36, 20, 0, 0.6);
+    --color-fosc-50: rgba(36, 20, 0, 0.5);
+    --color-fosc-40: rgba(36, 20, 0, 0.4);
+    --color-fosc-30: rgba(36, 20, 0, 0.3);
+    --color-fosc-20: rgba(36, 20, 0, 0.2);
+    --color-fosc-10: rgba(36, 20, 0, 0.1);
+    --color-clar:     rgb(255, 235, 209);
+    --color-clar-90: rgba(255, 235, 209, 0.9);
+    --color-clar-80: rgba(255, 235, 209, 0.8);
+    --color-clar-70: rgba(255, 235, 209, 0.7);
+    --color-clar-60: rgba(255, 235, 209, 0.6);
+    --color-clar-50: rgba(255, 235, 209, 0.5);
+    --color-clar-40: rgba(255, 235, 209, 0.4);
+    --color-clar-30: rgba(255, 235, 209, 0.3);
+    --color-clar-20: rgba(255, 235, 209, 0.2);
+    --color-clar-10: rgba(255, 235, 209, 0.1);
+    --color-l-0: hsl(34, 100%, 7%);
+    --color-l-1: hsl(34, 100%, 16%);
+    --color-l-2: hsl(34, 100%, 26%);
+    --color-l-3: hsl(34, 100%, 35%);
+    --color-l-4: hsl(34, 100%, 44%);
+    --color-l-5: hsl(34, 100%, 54%);
+    --color-l-6: hsl(34, 100%, 63%);
+    --color-l-7: hsl(34, 100%, 72%);
+    --color-l-8: hsl(34, 100%, 82%);
+    --color-l-9: hsl(34, 100%, 91%);
+}
                  .group#android { background-color: hsla(147, 100%, 14%, 0.5); }
 ::ng-deep .light .group#android { background-color: hsla(147, 100%, 72%, 0.5); }
-                 .group#tasker { background-color: hsla(34, 100%, 25%, 0.5); }
-::ng-deep .light .group#tasker { background-color: hsla(34, 100%, 72%, 0.5); }
                  .group#mad-jumpgate { background-color: hsla(60, 100%, 21%, 0.5); }
 ::ng-deep .light .group#mad-jumpgate { background-color: hsla(60, 100%, 72%, 0.5); }
+                 .group#tasker { background-color: hsla(34, 100%, 25%, 0.5); }
+::ng-deep .light .group#tasker { background-color: hsla(34, 100%, 72%, 0.5); }
 
 
 
