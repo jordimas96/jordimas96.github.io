@@ -54,7 +54,8 @@
         }
     }
 }
-::ng-deep html.light.matinada .nom { color: var(--color-l-0) !important }
+::ng-deep html.light.matinada .nom,
+::ng-deep html.nit .nom { color: var(--text) !important }
 
 .llenguatges {
     .subtitle {
