@@ -14,6 +14,8 @@ export class FooterComponent {
     modeFosc: boolean = true;
     tema: string = "";
     idioma: string = "en";
+
+    colorFirma = Math.floor(Math.random() * 360);
     
 
     constructor(public m: MainService) {
