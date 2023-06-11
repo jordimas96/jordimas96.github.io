@@ -151,7 +151,11 @@
 ///////////////////
 /// 
 // Pantalla PC //
-@media only screen and (min-width: 576px) { }
+@media only screen and (min-width: 576px) {
+    .group#amazfit .boto-i-gif a.boto-icona {
+        padding-right: 0.5rem;
+    }
+}
 // Pantalla Mòbil //
 @media only screen and (max-width: 575px) {
     .group#android .boto-i-qr, .group#tasker .botons, .group#amazfit .boto-i-gif {
@@ -163,8 +167,8 @@
             padding: 1rem 1.4rem !important;
         }
     }
-    .group#amazfit .boto-i-gif a.boto {
-        padding-right: 1rem !important;
+    .group#amazfit .boto-i-gif a.boto-icona {
+        padding-right: 1rem;
     }
 }
 

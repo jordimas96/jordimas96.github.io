@@ -74,10 +74,19 @@
 ::ng-deep .light .group#nexxia { background-color: hsla(46, 100%, 72%, 0.5); }
 
 
+// Efecte hover botó gran a web en PC //
+.link-boto-titol {
+    border-radius: 10000px;
 
-.link-boto {
-    padding: 0.5rem 1rem;
-    margin: -0.5rem -1rem;
+    transition: background-color 0.3s ease;
+
+    .fletxa {
+        display: inline-block;
+        margin-left: 0.7rem;
+        color: var(--link);
+
+        transition: transform 0.3s ease, color 0.3s ease;
+    }
 }
 
 
@@ -88,16 +97,32 @@
 ///////////////////
 /// 
 // Pantalla PC //
-@media only screen and (min-width: 576px) { }
+@media only screen and (min-width: 576px) {
+    .link-boto-titol {
+        padding: 0.5rem 1rem;
+        margin: -0.5rem -1rem;
+    }
+}
 // Pantalla Mòbil //
 @media only screen and (max-width: 575px) {
-    .link-boto {
+    .link-boto-titol {
         padding: 0.6rem;
         margin: -0.6rem;
     }
 }
 
 // PC //
-@media (pointer: fine) { }
+@media (pointer: fine) {
+    // Efecte hover botó gran a web en PC //
+    .link-boto-titol {
+        &:hover {
+            background-color: var(--color-2) !important;
+            .fletxa {
+                transform: translate(0.2rem, -0.35rem);
+                color: var(--text);
+            }
+        }
+    }
+}
 // Mòbil //
 @media (pointer: coarse) { }

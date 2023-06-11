@@ -89,39 +89,26 @@ body {
             @extend .ocult-animacio, .-v;
         }
     }
-
-    a.boto {
-        display: inline-flex;
-        padding: 0.5rem 0.7rem;
-        padding-left: 1rem;
-        font-size: 1.3rem;
-        border-radius: 10000px;
-
-        background-color: var(--color-7);
-        color: var(--fons);
-        text-decoration: none;
-
-        img.logo {
-            height: 2rem;
-            margin-left: 0.5rem;
-        }
-    }
 }
 
-// Efecte hover botó gran a web en PC //
-.link-boto {
-    padding: 1rem 1rem;
-    margin: -1rem -1rem;
+// Estils generals per tots els botons //
+a.boto {
+    display: inline-flex;
+    text-decoration: none;
+
+    padding: 0.5rem 0.7rem;
+    font-size: 1.3rem;
     border-radius: 10000px;
 
-    transition: background-color 0.3s ease;
-
-    .fletxa {
-        display: inline-block;
-        margin-left: 0.7rem;
-        color: var(--link);
-
-        transition: transform 0.3s ease, color 0.3s ease;
+    background-color: var(--color-7);
+    color: var(--fons);
+}
+.boto-icona {
+    padding-left: 1rem !important;
+    
+    img.logo {
+        height: 2rem;
+        margin-left: 0.5rem;
     }
 }
 
@@ -276,6 +263,15 @@ img, .noselect {
         padding: 1.3rem 2rem 2rem;
         border-radius: 2.5rem;
     }
+    .boto-icona {
+        transition: var(--transicio-colors);
+    }
+    .boto-icona:hover {
+        background-color: var(--color-l-9) !important;
+    }
+    ::ng-deep .light .boto-icona:hover {
+        background-color: var(--color-l-3) !important;
+    }
 }
 // Pantalla Mòbil //
 @media only screen and (max-width: 575px) {
@@ -318,17 +314,6 @@ img, .noselect {
             color: var(--fons);
             background-size: 100% 100%;
             border-radius: 0.5rem;
-        }
-    }
-
-    // Efecte hover botó gran a web en PC //
-    .link-boto {
-        &:hover {
-            background-color: var(--color-2) !important;
-            .fletxa {
-                transform: translate(0.2rem, -0.35rem);
-                color: var(--text);
-            }
         }
     }
 }
