@@ -200,23 +200,41 @@
 
 
     <!-- Amazfit Watchfaces -->
-    <div id="amazfit-watchfaces" class="group ocult-animacio h" hidden>
+    <div id="amazfit" class="group ocult-animacio h">
         <div class="subtitle mb-2">
             Amazfit Watchfaces
-            <a href="https://jmaspgames.itch.io/mad-jumpgate" class="link-img ml-1"><img src="assets/icons/amazfit-watchfaces.png" alt="Mad Jumpgate" class="title-icon rounded"></a>
+            <a href="https://amazfitwatchfaces.com/" class="link-img ml-1"><img src="assets/icons/amazfit-watchfaces.png" alt="Mad Jumpgate" class="title-icon rounded"></a>
         </div>
         <p class="text mb-4">
-            <ng-container *ngIf="m.ca()||1">
-                Un àmbit
+            <ng-container *ngIf="m.ca()">
+                Un dels camps en el que vaig descobrir la meva passió pel disseny i la meva habilitat per a trobar solucions als problemes és en el cas de la watchface que vaig fer per la Xiaomi Mi Band 4. Tenia aquesta smartband i vaig notar que li faltava una funció que seria ben convenient: Una llanterna. Com que el hardware i software de la pulsera eren molt limitats i no es podia afegir la funció directament al sistema, vaig optar per una solució més senzilla: crear una watchface blanca que pogués servir com a llanterna i al mateix temps com a rellotge, mostrant a més indicadors bàsics com la data, bateria, nombre de passes, etc. Com que la watchface m'era molt útil, vaig pujar-la a la web de Amazfit Watchfaces per a que els usuaris de la comunitat se la poguessin decarregar.
+                <a href="https://amazfitwatchfaces.com/mi-band-4/view/7773"></a>
             </ng-container>
             
-            <!-- <ng-container *ngIf="m.es()||1">
-                Éste es mi proyecto final del segundo curso del Ciclo Superior de Desarrollo de Aplicaciones Multiplataforma (DAM). Me llevó 2 semanas de trabajo crear ese <i><a href="https://es.wikipedia.org/wiki/Videojuego_de_disparos_en_primera_persona">First Person Shooter</a></i> desde cero, usando Unity. Desde el movimiento de la cámara y del jugador, pasando por las mecánicas de cada tipo de arma (tanto el usuario como los enemigos) y puntos de spawn, hasta gestionar el inventario formado por la munición y los suministros.
+            <ng-container *ngIf="m.es()">
+                Uno de los campos en el que descubrí mi pasión por el diseño y mi habilidad para encontrar soluciones a los problemas fue cuando creé una watchface para la Xiaomi Mi Band 4. Tenía esta smartband y noté que le faltaba una función que sería bien conveniente: Una linterna. Dado que el hardware y software de la pulsera eran muy limitados y no se podía añadir la función directamente al sistema, opté por una solución más sencilla: crear una watchface blanca que pudiera servir como linterna y al mismo tiempo como reloj, mostrando además indicadores básicos como la fecha, batería, número de pasos, etc. Como la watchface me resultaba muy útil, la subí a la web de Amazfit Watchfaces para que los usuarios de la comunidad pudieran descargársela.
             </ng-container>
             
-            <ng-container *ngIf="m.en()||1">
-                This is my final project for the second year of the Higher Cycle of Multiplatform Application Development (DAM). It took me 2 weeks of work to create this <i><a href="https://en.wikipedia.org/wiki/First-person_shooter">First Person Shooter</a></i> from scratch, using Unity. From the movement of the camera and the player, through the mechanics of shooting each type of weapon (both the user and the enemies) and spawn points, to managing the inventory consisting of ammunition and supplies.
-            </ng-container> -->
+            <ng-container *ngIf="m.en()">
+                One of the fields in which I discovered my passion for design and my ability to find solutions to problems was when I created a watchface for the Xiaomi Mi Band 4. I had this smartband and noticed that it was lacking a feature that would be quite convenient: A flashlight. Since the hardware and software of the band were very limited and the function could not be added directly to the system, I opted for a simpler solution: creating a white watchface that could serve as a flashlight and a watch at the same time, also showing basic indicators such as the date, battery level, number of steps, etc. Since the watchface was very useful to me, I uploaded it to the Amazfit Watchfaces website so that users from the community could download it.
+            </ng-container>
         </p>
+        <div class="boto-i-gif mt-4">
+            <a href="https://amazfitwatchfaces.com/mi-band-4/view/7773" class="no-style boto mb-3">
+                <ng-container *ngIf="m.ca()">Les meves watchfaces</ng-container>
+                <ng-container *ngIf="m.es()">Mis watchfaces</ng-container>
+                <ng-container *ngIf="m.en()">My watchfaces</ng-container>
+                <img src="assets/icons/amazfit-watchfaces.png" alt="Amazfit Watchfaces" class="logo rounded-4">
+            </a>
+            <div class="div-gif-i-text">
+                <img src="assets/amazfit-watchfaces/white-screen-flashlight.gif" alt="GIF watchface">
+
+                <div class="text-gif mt-2" hidden>
+                    <ng-container *ngIf="m.ca()">Explicacio GIF</ng-container>
+                    <ng-container *ngIf="m.es()">Explicacio GIF</ng-container>
+                    <ng-container *ngIf="m.en()">Explicacio GIF</ng-container>
+                </div>
+            </div>
+        </div>
     </div>
 </div>

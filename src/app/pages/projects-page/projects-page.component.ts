@@ -30,7 +30,6 @@ export class ProjectsPageComponent {
         });
         
 
-        // window.scrollTo(0,100000)
     }
 
 
