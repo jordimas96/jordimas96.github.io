@@ -27,13 +27,14 @@ html {
 }
 
 body {
-    font-family: "Segoe UI", Verdana, Arial, sans-serif !important;
+    font-family: lato, "Segoe UI", Verdana, Arial, sans-serif;
     background: var(--fons) url("assets/background/boles.png");
     background-attachment: fixed;
     background-size: cover;
     background-position: center;
     // background: var(--color-1);
     color: var(--text);
+    letter-spacing: 0.2px;
     line-height: 1.4;
     overflow-y: scroll;
 }
@@ -94,6 +95,7 @@ body {
 // Estils generals per tots els botons //
 a.boto {
     display: inline-flex;
+    align-items: center;
     text-decoration: none;
 
     padding: 0.5rem 0.7rem;
@@ -263,13 +265,13 @@ img, .noselect {
         padding: 1.3rem 2rem 2rem;
         border-radius: 2.5rem;
     }
-    .boto-icona {
+    .boto {
         transition: var(--transicio-colors);
     }
-    .boto-icona:hover {
+    .boto:hover {
         background-color: var(--color-l-9) !important;
     }
-    ::ng-deep .light .boto-icona:hover {
+    ::ng-deep .light .boto:hover {
         background-color: var(--color-l-3) !important;
     }
 }

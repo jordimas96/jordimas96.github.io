@@ -25,6 +25,7 @@
         .botoDarkMode, .botoAutoMode {
             background-color: var(--text);
             color: var(--fons);
+            font-weight: 800;
             border: none;
             border-radius: 1000px;
             outline: none;
@@ -52,7 +53,7 @@
         align-items: center;
         justify-content: flex-end;
 
-        .select-idioma {
+        select.select-idioma {
             background-color: var(--fons-50);
             color: var(--text);
             border: none;
