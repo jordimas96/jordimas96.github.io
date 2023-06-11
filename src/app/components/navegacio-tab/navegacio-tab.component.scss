@@ -9,7 +9,6 @@
     border-radius: 25px; //15px;
     margin: auto;
     padding: 0.25rem;
-    // overflow: hidden;
 
     z-index: 0;
 
@@ -24,19 +23,15 @@
 
         padding: 0.25rem 1rem;
         z-index: 2;
+        border-radius: 3rem;
 
-        transition: font-size 0.3s ease, padding 0.3s ease, color 0.3s ease;
+        transition: font-size 0.3s ease, padding 0.3s ease, color 0.3s ease, background-color 0.1s ease;
 
         &.selected {
-            // background-color: var(--text);
             color: var(--fons);
         }
     }
     // button:not(.selected) + button:not(.selected) { border-left: 1px solid var(--text-50); } // Separadors //
-}
-
-::ng-deep .vespre.dark .contenidor button.selected {
-    // color: var(--text);
 }
 
 .pill {
@@ -72,6 +67,10 @@
 }
 
 // PC //
-@media (pointer: fine) { }
+@media (pointer: fine) {
+    button:hover {
+        background-color: var(--text-20) !important;
+    }
+}
 // Mòbil //
 @media (pointer: coarse) { }

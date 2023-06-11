@@ -10,6 +10,7 @@
     .div-foto {
         overflow: hidden;
         border-radius: 2rem;
+        transition: border-radius 0.3s ease;
 
         .foto-carnet {
             width: 100%;
@@ -72,6 +73,9 @@
 }
 // PC //
 @media (pointer: fine) {
+    .div-foto:hover {
+        border-radius: 1rem !important;
+    }
     .foto-carnet:hover {
         transform: none !important;
     }

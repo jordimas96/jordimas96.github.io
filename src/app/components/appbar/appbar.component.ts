@@ -164,7 +164,9 @@ export class AppbarComponent {
         const primeraHoraMati = 9;
         const primeraHoraTarda = 15;
         const primeraHoraVespre = 20;
-        
+
+        // |12345|678|901234|56789|01230 //
+
         if (horaActual >= primeraHoraNit && horaActual < primeraHoraMatinada)
             this.m.tema = "nit";
         else if (horaActual >= primeraHoraMatinada && horaActual < primeraHoraMati)
