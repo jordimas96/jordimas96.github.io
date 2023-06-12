@@ -121,7 +121,6 @@
         justify-content: space-around;
 
         .boto {
-            padding-right: 0.5rem;
         }
 
         .div-gif-i-text {
@@ -152,7 +151,7 @@
 /// 
 // Pantalla PC //
 @media only screen and (min-width: 576px) {
-    .group#amazfit .boto-i-gif a.boto-icona {
+    .group#amazfit .boto-i-gif a.boto {
         padding-right: 0.5rem;
     }
 }
@@ -166,7 +165,7 @@
             padding: 1rem 1.4rem !important;
         }
     }
-    .group#amazfit .boto-i-gif a.boto-icona {
+    .group#amazfit .boto-i-gif a.boto {
         padding-right: 1rem;
     }
 }
