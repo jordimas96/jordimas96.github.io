@@ -68,8 +68,13 @@
 
 // PC //
 @media (pointer: fine) {
-    button:hover {
-        background-color: var(--text-20) !important;
+    button {
+        &:hover {
+            background-color: var(--text-20) !important;
+        }
+        &:not(:last-of-type) {
+            margin-right: 0.25rem;
+        }
     }
 }
 // Mòbil //

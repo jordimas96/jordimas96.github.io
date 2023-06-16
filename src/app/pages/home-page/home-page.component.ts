@@ -26,10 +26,10 @@ export class HomePageComponent {
             "Good evening!",
         ],
     };
-    public nomArxiusCV = {
-        "ca": "CV Jordi Mas Parramon CA.pdf",
-        "es": "CV Jordi Mas Parramon ES (ext).pdf",
-        "en": "CV Jordi Mas Parramon EN.pdf",
+    public nomCarpetaCV = {
+        "ca": "CA",
+        "es": "ES (ext)",
+        "en": "EN",
     };
 
     constructor(public m: MainService) { }
@@ -68,5 +68,9 @@ export class HomePageComponent {
             index = 2;
         
         return this.salutacions[this.m.idioma][index] || "Hey!";
+    }
+
+    getRutaCV() {
+        return `assets/CV/${this.nomCarpetaCV[this.m.idioma]}/CV Jordi Mas Parramon.pdf`;
     }
 }

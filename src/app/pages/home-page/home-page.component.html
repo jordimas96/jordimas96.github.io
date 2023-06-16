@@ -50,11 +50,11 @@
             <ng-container *ngIf="m.es()">Soy un apasionado programador frontend con experiencia en Angular, CSS, Javascript, C# y Python, entre otros. En esta web, encontrarás información sobre mi experiencia, habilidades y proyectos, así como mi información de contacto para que podamos conversar sobre diferentes formas de ayudarte con proyectos futuros.</ng-container>
         
             <ng-container *ngIf="m.en()">I am a passionate frontend programmer. I have experience working with Angular, CSS, Javascript, C# and Python, among others. On this site, you will find information about my past experience, skills, and projects, as well as my contact information so we can discuss about different ways on helping you and your business with future projects.</ng-container>
-
-            <a [href]="'assets/cv/' + nomArxiusCV[m.idioma]" class="boto mt-4">
-                <ng-container *ngIf="m.ca()">Descarregar CV</ng-container>
-                <ng-container *ngIf="m.es()">Descargar CV</ng-container>
-                <ng-container *ngIf="m.en()">Download Resume</ng-container>
+            
+            <a [href]="getRutaCV()" class="boto mt-4">
+                <ng-container *ngIf="m.ca()">Obrir CV</ng-container>
+                <ng-container *ngIf="m.es()">Abrir CV</ng-container>
+                <ng-container *ngIf="m.en()">Open Resume</ng-container>
                 <img src="assets/icons/contact/cv.png" alt="Curriculum Vitae" class="logo inv-dark-2">
             </a>
         </ng-template>
