@@ -75,70 +75,84 @@
 
 
 
-.group#android {
-
-    .boto-i-qr {
+.group {
+    .subtitle {
         display: flex;
         align-items: center;
-        justify-content: space-around;
 
-        .div-qr-i-text {
-            text-align: center;
+        a {
+            display: flex;
+            align-items: center;
+        }
+    }
+
+    &#android {
+
+        .boto-i-qr {
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+
+            .div-qr-i-text {
+                text-align: center;
 
 
-            ::ng-deep qrcode {
-                .qrcode {
-                    canvas {
-                        border-radius: 16px !important;
-                        @extend .shadow-2;
+                ::ng-deep qrcode {
+                    .qrcode {
+                        canvas {
+                            border-radius: 16px !important;
+                            @extend .shadow-2;
+                        }
                     }
                 }
+                .scan-here {
+                    font-size: 0.9rem;
+                    color: var(--text-80);
+                }
             }
-            .scan-here {
-                font-size: 0.9rem;
-                color: var(--text-80);
-            }
+
+
+            
         }
+    }
+    
+    &#tasker {
 
-
+        .botons {
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+        }
         
     }
-}
-
-.group#tasker {
-
-    .botons {
-        display: flex;
-        align-items: center;
-        justify-content: space-around;
-    }
-}
-.group#amazfit {
-
-    .boto-i-gif {
-        display: flex;
-        align-items: center;
-        justify-content: space-around;
-
-        .boto {
-        }
-
-        .div-gif-i-text {
-            text-align: center;
     
-    
-            img {
-                border-radius: 11px;
-            }
-            .text-gif {
-                font-size: 0.9rem;
-                color: var(--text-80);
-            }
-        }
+    &#amazfit {
 
+        .boto-i-gif {
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
 
+            .boto {
+            }
+
+            .div-gif-i-text {
+                text-align: center;
         
+        
+                img {
+                    border-radius: 11px;
+                }
+                .text-gif {
+                    font-size: 0.9rem;
+                    color: var(--text-80);
+                }
+            }
+        }
+
     }
+
+
 }
 
 

@@ -153,6 +153,18 @@ button.no-style {
 .rounded-3 { border-radius: 1rem !important; }
 .rounded-4 { border-radius: 2rem !important; }
 
+.g-0   { gap: 0rem !important; }
+.g-0_5 { gap: 0.125rem !important; }
+.g-1   { gap: 0.25rem !important; }
+.g-1_5 { gap: 0.375rem !important; }
+.g-2   { gap: 0.5rem !important; }
+.g-2_5 { gap: 0.75rem !important; }
+.g-3   { gap: 1rem !important; }
+.g-3_5 { gap: 1.25rem !important; }
+.g-4   { gap: 1.5rem !important; }
+.g-4_5 { gap: 2.25rem !important; }
+.g-5   { gap: 3rem !important; }
+
 html.light .inv-dark { filter: invert(1); }
 html.dark .inv-dark-2 { filter: invert(1); }
 
