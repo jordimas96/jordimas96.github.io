@@ -34,10 +34,13 @@ export class HomePageComponent {
 
     constructor(public m: MainService) { }
 
-    ngOnInit() {
+    async ngOnInit() {
         this.m.afterRootFadeIn(this.afterRootFadeIn.bind(this));
 
-        $("body").css("background-position", "top left");
+        // Moviment i animació fons //
+        $("body").css({ "background-position": "top left" });
+        await Utils.wait(0);
+        $("body").css({ "transition": "background-position 0.3s ease" });
 
         // Google Analytics //
         this.m.gas.pageView("/home");

@@ -14,10 +14,13 @@ export class ProjectsPageComponent {
 
     constructor(public m: MainService) { }
 
-    ngOnInit() {
+    async ngOnInit() {
         this.m.afterRootFadeIn(this.afterRootFadeIn.bind(this));
 
-        $("body").css("background-position", "bottom right");
+        // Moviment i animació fons //
+        $("body").css({ "background-position": "bottom right" });
+        await Utils.wait(0);
+        $("body").css({ "transition": "background-position 0.3s ease" });
 
         // Google Analytics //
         this.m.gas.pageView(window.location.pathname);
