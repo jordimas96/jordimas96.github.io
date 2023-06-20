@@ -37,6 +37,8 @@ export class HomePageComponent {
     ngOnInit() {
         this.m.afterRootFadeIn(this.afterRootFadeIn.bind(this));
 
+        $("body").css("background-position", "top left");
+
         // Google Analytics //
         this.m.gas.pageView("/home");
     }

@@ -17,6 +17,8 @@ export class ProjectsPageComponent {
     ngOnInit() {
         this.m.afterRootFadeIn(this.afterRootFadeIn.bind(this));
 
+        $("body").css("background-position", "bottom right");
+
         // Google Analytics //
         this.m.gas.pageView(window.location.pathname);
     }

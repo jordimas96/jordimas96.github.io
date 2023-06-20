@@ -22,6 +22,8 @@ export class ExperiencePageComponent {
     ngOnInit() {
         this.m.afterRootFadeIn(this.afterRootFadeIn.bind(this));
 
+        $("body").css("background-position", "center center");
+
         // Google Analytics //
         this.m.gas.pageView(window.location.pathname);
     }

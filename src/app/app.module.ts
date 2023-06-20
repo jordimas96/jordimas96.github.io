@@ -14,7 +14,7 @@ import { TargetBlankDirective } from './directives/target-blank.directive';
 import { SkillComponent } from './components/skill/skill.component';
 import { GoogleAnalyticsModule } from './google-analytics/google-analytics.module';
 import { QRCodeModule } from 'angularx-qrcode';
-import { NavegacioTabComponent } from './components/navegacio-tab/navegacio-tab.component';
+import { NavegacioTabComponent } from './components/appbar/navegacio-tab/navegacio-tab.component';
 import { MadJumpgateComponent } from './pages/projects-page/mad-jumpgate/mad-jumpgate.component';
 import { DetallsAndroidAppsComponent } from './pages/projects-page/detalls-android-apps/detalls-android-apps.component';
 import { SmoothMoveDirective } from './directives/smooth-move.directive';
