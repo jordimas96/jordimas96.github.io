@@ -27,7 +27,7 @@ html {
 }
 
 body {
-    font-family: lato, "Segoe UI", Verdana, Arial, sans-serif;
+    font-family: lato, Verdana, Arial, sans-serif; //"Segoe UI",
     background: var(--fons) url("assets/background/boles.png");
     background-attachment: fixed;
     background-size: cover;
