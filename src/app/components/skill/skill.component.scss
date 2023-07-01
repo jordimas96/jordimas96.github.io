@@ -3,8 +3,6 @@
 .chip {
     color: var(--fons);
     background-color: var(--text);
-    color: transparent;
-    background-color: transparent;
     font-size: 1rem;
     padding: 0.25rem 0.75rem;
     margin: 0.25rem;
@@ -87,9 +85,3 @@
 .k2             { background-color: #000000; color: #ffffff; }
 .akeebabackup   { background-color: #514f50; color: #38b5b9; }
 .jcefilemanager { background-color: #dddddd; color: #000000; }
-
-
-.agile {
-    background-color: var(--text);
-    color: var(--fons);
-}
