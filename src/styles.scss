@@ -314,20 +314,24 @@ img, .noselect {
 @media (pointer: fine) {
     // Efecte hover links en PC //
     a:not(.link-img, .no-style, .boto) {
+        display: inline-block;
+        position: relative;// fa com el z-index //
         background-image: linear-gradient(0deg, var(--link), var(--link));
         background-size: calc(100% - 12px) 8%;
         background-position: 50% 88%;
         background-repeat: no-repeat;
-        padding: 2px 6px;
+        padding: 0px 6px;
         margin: 0 -6px;
+        border-radius: 0.5rem;
         transition: all 0.3s ease;
-        
+
         &:hover {
             text-decoration: none;
             
             color: var(--fons);
             background-size: 100% 100%;
-            border-radius: 0.5rem;
+            transform: scale(1.05);
+            box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24) !important; // shadow-1 //
         }
     }
 }
