@@ -68,12 +68,13 @@
 
 // PC //
 @media (pointer: fine) {
-    button {
-        &:hover {
-            background-color: var(--text-10) !important;
-        }
-        &:not(:last-of-type) {
-            margin-right: 0.25rem;
+    .contenidor {
+        gap: 0.25rem;
+        
+        button {
+            &:hover {
+                background-color: var(--text-10) !important;
+            }
         }
     }
 }
