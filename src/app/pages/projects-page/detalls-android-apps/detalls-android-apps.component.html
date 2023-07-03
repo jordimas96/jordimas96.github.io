@@ -1,4 +1,4 @@
-<div class="seccio">
+<div class="seccio wallpaper-blurrer">
     <button class="boto-desplegable no-style" (click)="toggleSeccio($event.currentTarget)">
         <div class="text-i-icona">
             <img src="assets/icons/android-apps/wallpaper-blurrer.png" class="icona">
@@ -7,22 +7,27 @@
         <i class="fa-solid fa-chevron-down fletxa"></i>
     </button>
     <div class="contingut" style="display:none;">
-        <ng-container *ngIf="m.ca()">
-            És una aplicació que et permet afegir alguns filtres al fons de pantalla, com ara desenfocament, saturació i canvi de to (canvi de colors) i aplicar-lo a la pantalla d'inici i la de bloqueig. També et permet descarregar la imatge editada.<br>
-            Aquesta app la vaig fer principalment en Kotlin, però amb algunes funcions en Java.
-        </ng-container>
-        <ng-container *ngIf="m.es()">
-            Es una aplicación que te permite añadir algunos filtros al fondo de pantalla, como desenfoque, saturación y cambio de tono (cambio de colores) y aplicarlo a la pantalla de inicio y de bloqueo. También te permite descargar la imagen editada.<br>
-            Esta app la hice principalmente en Kotlin, pero con algunas funciones en Java.
-        </ng-container>
-        <ng-container *ngIf="m.en()">
-            It is an app that lets you add some filters to your wallpaper, such as blur, saturate and hue (change colors) and apply it to your home screen and lock screen. It also lets you download the edited image.<br>
-            I made this app mainly in Kotlin, but with some functions in Java.
-        </ng-container>
+        <div class="text">
+            <ng-container *ngIf="m.ca()">
+                És una aplicació que et permet afegir alguns filtres al fons de pantalla, com ara desenfocament, saturació i canvi de to (canvi de colors) i aplicar-lo a la pantalla d'inici i la de bloqueig. També et permet descarregar la imatge editada.<br>
+                Aquesta app la vaig fer principalment en Kotlin, però amb algunes funcions en Java.
+            </ng-container>
+            <ng-container *ngIf="m.es()">
+                Es una aplicación que te permite añadir algunos filtros al fondo de pantalla, como desenfoque, saturación y cambio de tono (cambio de colores) y aplicarlo a la pantalla de inicio y de bloqueo. También te permite descargar la imagen editada.<br>
+                Esta app la hice principalmente en Kotlin, pero con algunas funciones en Java.
+            </ng-container>
+            <ng-container *ngIf="m.en()">
+                It is an app that lets you add some filters to your wallpaper, such as blur, saturate and hue (change colors) and apply it to your home screen and lock screen. It also lets you download the edited image.<br>
+                I made this app mainly in Kotlin, but with some functions in Java.
+            </ng-container>
+        </div>
+        <div class="imatge">
+            <img src="assets/images/detalls-android/wallpaper-blurrer-foto-1.png" alt="wallpaper-blurrer" class="">
+        </div>
     </div>
 </div>
 
-<div class="seccio">
+<div class="seccio text-mimicker">
     <button class="boto-desplegable no-style" (click)="toggleSeccio($event.currentTarget)">
         <div class="text-i-icona">
             <img src="assets/icons/android-apps/text-mimicker.png" class="icona">
@@ -46,7 +51,7 @@
     </div>
 </div>
 
-<div class="seccio">
+<div class="seccio sus-tracker">
     <button class="boto-desplegable no-style" (click)="toggleSeccio($event.currentTarget)">
         <div class="text-i-icona">
             <img src="assets/icons/android-apps/sus-tracker.png" class="icona">
@@ -55,22 +60,27 @@
         <i class="fa-solid fa-chevron-down fletxa"></i>
     </button>
     <div class="contingut" style="display:none;">
-        <ng-container *ngIf="m.ca()">
-            És una aplicació pensada per utilitzar-se d'eina mentre es juga al popular joc Among Us. Aquesta aplicació ofereix un menú flotant molt convenient per marcar qui és sospitós, innocent o impostor, per descartar els altres tripulants i trobar els impostors.<br>
-            Aquesta app va ser la primera que vaig fer en Android Studio, i la vaig fer principalment en Java.
-        </ng-container>
-        <ng-container *ngIf="m.es()">
-            Es una aplicación pensada para usarse de herramienta mientras se juega al popular juego Among Us. Esta aplicación ofrece un menú flotante muy conveniente para marcar quién es sospechoso, inocente o impostor, para descartar a los demás tripulantes y encontrar a los impostores.<br>
-            Esta app fue la primera que hice en Android Studio, y la hice principalmente en Java.
-        </ng-container>
-        <ng-container *ngIf="m.en()">
-            It is an application designed to be used as a tool while playing the popular game Among Us. This application offers a very convenient floating menu to mark who is suspicious, safe or impostor, to rule out the other crew members and find the impostors.<br>
-            This app was the first one I made in Android Studio, and I made it mainly in Java.
-        </ng-container>
+        <div class="text">
+            <ng-container *ngIf="m.ca()">
+                És una aplicació pensada per utilitzar-se d'eina mentre es juga al popular joc Among Us. Aquesta aplicació ofereix un menú flotant molt convenient per marcar qui és sospitós, innocent o impostor, per descartar els altres tripulants i trobar els impostors.<br>
+                Aquesta app va ser la primera que vaig fer en Android Studio, i la vaig fer principalment en Java.
+            </ng-container>
+            <ng-container *ngIf="m.es()">
+                Es una aplicación pensada para usarse de herramienta mientras se juega al popular juego Among Us. Esta aplicación ofrece un menú flotante muy conveniente para marcar quién es sospechoso, inocente o impostor, para descartar a los demás tripulantes y encontrar a los impostores.<br>
+                Esta app fue la primera que hice en Android Studio, y la hice principalmente en Java.
+            </ng-container>
+            <ng-container *ngIf="m.en()">
+                It is an application designed to be used as a tool while playing the popular game Among Us. This application offers a very convenient floating menu to mark who is suspicious, safe or impostor, to rule out the other crew members and find the impostors.<br>
+                This app was the first one I made in Android Studio, and I made it mainly in Java.
+            </ng-container>
+        </div>
+        <div class="imatge">
+            <img src="assets/images/detalls-android/widget-sus-tracker-1.png" alt="sus-tracker" class="">
+        </div>
     </div>
 </div>
 
-<div class="seccio">
+<div class="seccio breaking-ball">
     <button class="boto-desplegable no-style" (click)="toggleSeccio($event.currentTarget)">
         <div class="text-i-icona">
             <img src="assets/icons/android-apps/breaking-ball.png" class="icona">
