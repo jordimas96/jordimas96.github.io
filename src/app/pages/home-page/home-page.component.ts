@@ -28,7 +28,7 @@ export class HomePageComponent {
     };
     public nomCarpetaCV = {
         "ca": "CA",
-        "es": "ES (ext)",
+        "es": "ES",
         "en": "EN",
     };
 
