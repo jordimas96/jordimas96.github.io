@@ -219,20 +219,21 @@ img, .noselect {
 // Thumb //
 ::-webkit-scrollbar-thumb {
     background-color: var(--scrollbar-thumb-1);
-    box-shadow: inset -17px 0px 15px -10px var(--scrollbar-thumb-2);
+    box-shadow: inset -17px 0px 10px -10px var(--scrollbar-thumb-2);
     border: 2px solid var(--scrollbar-via);
     border-radius: 6px;
-    &:hover { background-color: var(--scrollbar-thumb-2); }
+    &:hover  { background-color: var(--scrollbar-thumb-hover);  box-shadow: none; }
+    &:active { background-color: var(--scrollbar-thumb-active); box-shadow: none; }
 }
 // Botons //
 // ::-webkit-scrollbar-button {
-//     background-color: var(--scrollbar-thumb-1);
-//     box-shadow: inset -17px 0px 15px -10px var(--scrollbar-thumb-2);
+//     background-color: var(--scrollbar-thumb);
+//     box-shadow: inset -17px 0px 15px -10px var(--scrollbar-thumb-hover);
 //     border: 2px solid var(--scrollbar-via);
 //     // border-radius: 30px;
 //     border-radius: 10px 10px 6px 6px;
 //     height: 20px;
-//     &:active { background-color: var(--scrollbar-thumb-2); }
+//     &:active { background-color: var(--scrollbar-thumb-hover); }
 // }
 
 

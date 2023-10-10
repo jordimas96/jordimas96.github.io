@@ -5,6 +5,74 @@
         <ng-container *ngIf="m.en()">Professional experience</ng-container>
     </div>
 
+    <!-- Orange -->
+    <div id="orange" class="group ocult-animacio h">
+        <div class="subtitle mb-2">
+            <a [href]="getLink('orange')" class="no-style link-boto-titol g-3">
+                Orange
+                <img src="assets/icons/orange.svg" alt="In2art" class="title-icon">
+                <span class="fletxa">↗</span>
+            </a>
+        </div>
+        <p class="text mb-1">
+            <ng-container *ngIf="m.ca()">
+                Programador fullstack a Control de Consumos (COCO), una secció d'Orange que s'encarrega de processar els consums dels clients, de gestionar les alertes que es disparen al superar el límit de consum i d'establir-hi bloquejos, amb l'objectiu de detectar usos fraudulents de les línies mòbils i els seus recursos (pagaments des de la SIM, subscripcions, etc).<br><br>
+
+                Vaig participar en el desenvolupament i el manteniment del sistema CRM propi utilitzat per a gestionar els clients, les seves línies i l'aplicació de bloquejos. El frontend del CRM es va implementar utilitzant Angular, mentre que el backend es va construir en Java. Per a gestionar el backend vam utilitzar WebLogic com a servidor d'aplicacions i Maven per a la gestió de projectes.<br><br>
+
+                A més del desenvolupament de programari, també em vaig encarregar del control, gestió i monitorització de màquines, servidors i connexions FTP.<br><br>
+                
+                Vaig treballar en estreta relació amb el client. Ens reuníem diàriament, tant amb el client com amb l'equip, per a mantenir una comunicació efectiva i optimitzar els nostres esforços.
+            </ng-container>
+
+            <ng-container *ngIf="m.es()">
+                Programador fullstack en Control de Consumos (COCO), una sección de Orange que se encarga de procesar los consumos de los clientes, de gestionar las alertas que se disparan al superar el límite de consumo y de establecer bloqueos, con el objetivo de detectar usos fraudulentos de las líneas móviles y sus recursos (pagos desde la SIM, suscripciones, etc).<br><br>
+
+                Participé en el desarrollo y mantenimiento del sistema CRM propio utilizado para gestionar los clientes, sus líneas y la aplicación de bloqueos. El frontend del CRM se implementó utilizando Angular, mientras que el backend se construyó en Java. Para gestionar el backend utilizamos WebLogic como servidor de aplicaciones, y Maven para la gestión de proyectos.<br><br>
+
+                Además del desarrollo de software, también me encargué del control, gestión y monitoreo de máquinas, servidores y conexiones FTP.<br><br>
+
+                Trabajé en estrecha relación con el cliente. Nos reuníamos diariamente, tanto con el cliente como con el equipo, para mantener una comunicación efectiva y optimizar nuestros esfuerzos.
+            </ng-container>
+
+            <ng-container *ngIf="m.en()">
+                Fullstack programmer in Control de Consumos (COCO), a section of Orange that is responsible for processing customer usage, managing alerts triggered by exceeding consumption limits and implementing blocks, with the aim of detecting fraudulent use of mobile lines and their resources (SIM card payments, subscriptions, etc.).<br><br>
+
+                I participated in the development and maintenance of the own CRM system used to manage customers, their lines and the application of blocks. The frontend of the CRM was implemented using Angular, while the backend was built in Java. We used WebLogic as the application server for the backend, and Maven for project management.<br><br>
+
+                In addition to software development, I was also responsible for monitoring and managing machines, servers and FTP connections.<br><br>
+                I worked closely with the client, holding daily meetings with both the client and the team to maintain effective communication and optimize our efforts.
+            </ng-container>
+        </p>
+
+        <!-- Skills -->
+        <div class="title-skills mt-4 mb-2">
+            <ng-container *ngIf="m.ca()">Tecnologies utilitzades</ng-container>
+            <ng-container *ngIf="m.es()">Tecnologías usadas</ng-container>
+            <ng-container *ngIf="m.en()">Used technologies</ng-container>
+        </div>
+        <div class="skills">
+            <app-skill n="Java"/>
+            <app-skill n="SQLDeveloper"/>
+            <app-skill n="WebLogic"/>
+            <app-skill n="Eclipse"/>
+            <app-skill n="Jira"/>
+            <app-skill n="Confluence"/>
+            <app-skill n="GitLab"/>
+            <app-skill n="Maven"/>
+            <app-skill n="JFrog Artifactory"/>
+            <app-skill n="TortoiseGit"/>
+            <app-skill n="WinSCP"/>
+            
+            <!-- <app-skill n="Windows Server"/> -->
+            <app-skill n="Continuous integration"/>
+            <app-skill n="Agile"/>
+            
+        </div>
+    </div>
+
+
+
     <!-- In2art -->
     <div id="in2art" class="group ocult-animacio h">
         <div class="subtitle mb-2">
@@ -16,7 +84,7 @@
         </div>
         <p class="text mb-1">
             <ng-container *ngIf="m.ca()">
-                Principal desenvolupador d'una xarxa social a In2Art. Vaig ser responsable del frontend, disseny i part del backend.
+                Principal desenvolupador d'una xarxa social a In2art. Vaig ser responsable del frontend, disseny i part del backend.
                 A més, estic orgullós de dir que vaig desenvolupar la pàgina des de zero utilitzant la meva experiència a Angular, CSS i TypeScript.<br>
                 La primera part del projecte, quan vaig fer l'estructura i l'organització del frontend, la vaig desenvolupar en solitari. A mesura que la web va anar creixent i es van afegir noves seccions, vaig poder dividir la càrrega de treball entre estudiants de pràctiques de DAM (backend) als que jo mateix vaig formar en Angular, TypeScript i CSS. Junts vam treballar en equip per crear una veritable obra d'art.<br><br>
 
@@ -25,7 +93,7 @@
             </ng-container>
 
             <ng-container *ngIf="m.es()">
-                Principal desarrollador de una red social en In2Art. Fui responsable del frontend, diseño y parte del backend.
+                Principal desarrollador de una red social en In2art. Fui responsable del frontend, diseño y parte del backend.
                 Además, estoy orgulloso de decir que desarrollé la página desde cero utilizando mi experiencia en Angular, CSS y TypeScript.<br>
                 La primera parte del proyecto, cuando hice la estructura y organización del frontend, la desarrollé en solitario. A medida que la web fue creciendo y se añadieron nuevas secciones, pude dividir la carga de trabajo entre estudiantes de prácticas de DAM (backend) a los que yo mismo formé en Angular, TypeScript y CSS. Juntos, trabajamos en equipo para crear una verdadera obra de arte.<br><br>
 
@@ -219,6 +287,7 @@
             <app-skill n="JSP"/>
             <app-skill n="PL/1"/>
             <app-skill n="DB2"/>
+            <app-skill n="Maven"/>
             <app-skill n="Netbeans"/>
             <app-skill n="Eclipse"/>
             <app-skill n="SVN"/>
@@ -226,6 +295,7 @@
             <app-skill n="TeamViewer"/>
             <app-skill n="Remote Desktop"/>
             <app-skill n="zOS/MVS"/>
+            <app-skill n="Continuous integration"/>
             <app-skill n="Agile"/>
         </div>
     </div>
