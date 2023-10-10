@@ -239,7 +239,7 @@ img, .noselect {
 
 
 // ANIMACIONS //
-.ocult-animacio {
+.ocult-animacio:not([hidden]) {
     &.v { transform: translateY(-30px); }
     &.h { transform: translateX(-30px); }
     &.-v { transform: translateY(30px); }

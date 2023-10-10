@@ -47,7 +47,7 @@ export class HomePageComponent {
     }
 
     afterRootFadeIn() {
-        $(".content .ocult-animacio:not(.chip)").each((i, e) => {
+        $(".content .ocult-animacio:not([hidden]):not(.chip)").each((i, e) => {
             Utils.fadeIn(e, i * 100);
         });
 
