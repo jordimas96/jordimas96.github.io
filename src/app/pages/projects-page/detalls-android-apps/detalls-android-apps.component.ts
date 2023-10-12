@@ -1,5 +1,5 @@
 import * as $ from "jquery";
-import { Component, ElementRef, QueryList, ViewChild, ViewChildren } from '@angular/core';
+import { Component, ElementRef, ViewChild } from '@angular/core';
 import { MainService } from 'src/app/services/main.service';
 
 @Component({
@@ -9,7 +9,9 @@ import { MainService } from 'src/app/services/main.service';
 })
 export class DetallsAndroidAppsComponent {
 
-    @ViewChildren('video') videos: QueryList<ElementRef>;
+    @ViewChild('videoWallpaperBlurrer') videoWallpaperBlurrer: ElementRef;
+    @ViewChild('videoSusTracker') videoSusTracker: ElementRef;
+    @ViewChild('videoBreakingBall') videoBreakingBall: ElementRef;
 
     constructor(public m: MainService) { }
 
@@ -17,11 +19,12 @@ export class DetallsAndroidAppsComponent {
         this.m.afterRootFadeIn(this.afterRootFadeIn.bind(this));
 
         // Forçar reproduir vídeos, que a vegades l'autoplay no funciona //
-        setTimeout(() => {
-            this.videos.forEach((video) => {
-                if (video.nativeElement) video.nativeElement.play();
-            });
+        setInterval(() => {
+            if (this.videoWallpaperBlurrer && this.videoWallpaperBlurrer.nativeElement) this.videoWallpaperBlurrer.nativeElement.play();
+            if (this.videoSusTracker && this.videoSusTracker.nativeElement)             this.videoSusTracker.nativeElement.play();
+            if (this.videoBreakingBall && this.videoBreakingBall.nativeElement)         this.videoBreakingBall.nativeElement.play();
         }, 1000);
+        
     }
 
     
