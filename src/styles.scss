@@ -105,20 +105,16 @@ a.boto {
     background-color: var(--color-7);
     color: var(--fons);
 }
-.boto:has(>img) {
-    padding-left: 1rem !important;
-    
-    img.logo {
-        height: 2rem;
-        margin-left: 0.5rem;
-    }
+.boto img.logo {
+    height: 2rem;
+    margin-left: 0.5rem;
 }
 
 
 
 
 
-/* Arreglos */
+/* Arreglos - Fixes */
 .title-icon {
     // display: block;
 }
@@ -143,6 +139,9 @@ button.no-style {
     // border-radius: 1rem;
     outline: none;
     cursor: pointer;
+}
+video {
+    display: block;
 }
 
 

@@ -1,5 +1,5 @@
 import * as $ from "jquery";
-import { Component } from '@angular/core';
+import { Component, ElementRef, QueryList, ViewChild, ViewChildren } from '@angular/core';
 import { MainService } from 'src/app/services/main.service';
 
 @Component({
@@ -9,11 +9,19 @@ import { MainService } from 'src/app/services/main.service';
 })
 export class DetallsAndroidAppsComponent {
 
+    @ViewChildren('video') videos: QueryList<ElementRef>;
+
     constructor(public m: MainService) { }
 
     ngOnInit() {
         this.m.afterRootFadeIn(this.afterRootFadeIn.bind(this));
 
+        // Forçar reproduir vídeos, que a vegades l'autoplay no funciona //
+        setTimeout(() => {
+            this.videos.forEach((video) => {
+                if (video.nativeElement) video.nativeElement.play();
+            });
+        }, 1000);
     }
 
     
