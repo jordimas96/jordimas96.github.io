@@ -74,9 +74,9 @@ body {
             height: 2rem;
         }
     }
-    .group:not(:last-child) {
-        margin-bottom: 4rem;
-    }
+    // .group:not(:last-child) {
+    //     margin-bottom: 4rem;
+    // }
     
 
     .title-skills {
@@ -163,6 +163,12 @@ video {
 .g-4   { gap: 1.5rem !important; }
 .g-4_5 { gap: 2.25rem !important; }
 .g-5   { gap: 3rem !important; }
+
+.m-6 { margin: 4rem; }
+.mt-6 { margin-top: 4rem; }
+.mr-6 { margin-right: 4rem; }
+.mb-6 { margin-bottom: 4rem; }
+.ml-6 { margin-left: 4rem; }
 
 html.light .inv-dark { filter: invert(1); }
 html.dark .inv-dark-2 { filter: invert(1); }

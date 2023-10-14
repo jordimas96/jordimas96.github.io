@@ -18,6 +18,11 @@ import { NavegacioTabComponent } from './components/appbar/navegacio-tab/navegac
 import { MadJumpgateComponent } from './pages/projects-page/mad-jumpgate/mad-jumpgate.component';
 import { DetallsAndroidAppsComponent } from './pages/projects-page/detalls-android-apps/detalls-android-apps.component';
 import { SmoothMoveDirective } from './directives/smooth-move.directive';
+import { NexxiaComponent } from './pages/experience-page/nexxia/nexxia.component';
+import { IndraComponent } from './pages/experience-page/indra/indra.component';
+import { MaticComponent } from './pages/experience-page/matic/matic.component';
+import { In2artComponent } from './pages/experience-page/in2art/in2art.component';
+import { OrangeComponent } from './pages/experience-page/orange/orange.component';
 
 @NgModule({
     declarations: [
@@ -33,13 +38,17 @@ import { SmoothMoveDirective } from './directives/smooth-move.directive';
         ExperiencePageComponent,
         ProjectsPageComponent,
 
-        // Directives //
         TargetBlankDirective,
         SkillComponent,
         NavegacioTabComponent,
         MadJumpgateComponent,
         DetallsAndroidAppsComponent,
         SmoothMoveDirective,
+        NexxiaComponent,
+        IndraComponent,
+        MaticComponent,
+        In2artComponent,
+        OrangeComponent,
     ],
     imports: [
         BrowserModule,
