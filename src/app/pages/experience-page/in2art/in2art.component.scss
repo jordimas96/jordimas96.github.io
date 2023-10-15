@@ -18,5 +18,5 @@
 }
 
 // Colors específics cards //
-                 .group { background-color: hsla(0, 0%, 6%, 0.5); }
-::ng-deep .light .group { background-color: hsla(0, 0%, 100%, 0.5); }
+             .group { background-color: hsla(0, 0%, 6%, 0.5); }
+.light :host .group { background-color: hsla(0, 0%, 100%, 0.5); }

@@ -27,7 +27,7 @@ export class MainService {
     constructor(public gas: GoogleAnalyticsService) {
         this.u = Utils;
         
-        // NOMÉS per poder debugar //
+        // Canviar icona NOMÉS al debugar //
         if (this.debug) {
             window["m"] = this;
             document.title = "Local";
