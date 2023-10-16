@@ -37,6 +37,7 @@ body {
     letter-spacing: 0.2px;
     line-height: 1.4;
     overflow-y: scroll;
+    overflow-x: hidden;
 }
 
 // Estils estructura pagines //
@@ -86,9 +87,6 @@ body {
         display: flex;
         flex-wrap: wrap;
         margin: -0.25rem;
-        app-skill {
-            @extend .ocult-animacio, .-v;
-        }
     }
 }
 
@@ -244,7 +242,7 @@ img, .noselect {
 
 
 // ANIMACIONS //
-.ocult-animacio:not([hidden]) {
+.ocult-animacio {
     &.v { transform: translateY(-30px); }
     &.h { transform: translateX(-30px); }
     &.-v { transform: translateY(30px); }
@@ -257,6 +255,7 @@ img, .noselect {
         opacity: 1;
     }
 }
+app-skill { @extend .ocult-animacio, .-v; }
 
 
 // #region MEDIA QUERIES //
@@ -268,7 +267,7 @@ img, .noselect {
 // Pantalla PC //
 @media only screen and (min-width: 576px) {
     .content {
-        padding: 1rem 1rem 4rem;
+        padding: 1rem 1rem 0rem;
     }
     .title {
         font-size: 2.5rem;
@@ -296,7 +295,7 @@ img, .noselect {
 // Pantalla Mòbil //
 @media only screen and (max-width: 575px) {
     .content {
-        padding: 0.5rem 0.5rem 4rem;
+        padding: 0.5rem 0.5rem 0rem;
     }
     .title {
         font-size: 2rem;

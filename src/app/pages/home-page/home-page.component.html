@@ -1,7 +1,7 @@
 <div class="content" [style.margin-top.px]="m.u.getAlturaAppbar()">
     <!-- <div class="title h1 mt-0 mb-4">Jordi Mas Parramon</div> -->
 
-    <div class="group mt-5" id="bio">
+    <div class="group mt-5 mb-6 ocult-animacio -v" id="bio">
         <div class="row no-gutters">
             <div class="col-5 col-sm-4 p-3 p-sm-4 ocult-animacio h">
                 <div class="div-foto shadow-2-l">
@@ -38,10 +38,8 @@
             </div>
         </div>
         <!-- Recipient bio mobil -->
-        <div class="ocult-animacio h">
-            <div *ngIf="m.esPantallaMobil()" class="text bio mt-4">
-                <div *ngTemplateOutlet="bio"></div>
-            </div>
+        <div *ngIf="m.esPantallaMobil()" class="text bio mt-4">
+            <div *ngTemplateOutlet="bio"></div>
         </div>
         <!-- Template bio -->
         <ng-template #bio>
@@ -62,7 +60,7 @@
     
 
     <!-- Skills -->
-    <div id="llenguatges" class="group llenguatges ocult-animacio h">
+    <div id="llenguatges" class="group llenguatges mb-6 ocult-animacio h">
         <div class="subtitle mb-2">
             <ng-container *ngIf="m.ca()">Habilitats en programació</ng-container>
             <ng-container *ngIf="m.es()">Habilidades en programación</ng-container>

@@ -42,6 +42,8 @@ export class AppbarComponent {
         this.establirIdiomaDefecte();
         
         Utils.fadeIn(".appbar", 200);
+
+        $("body").css({ "transition": "background-position 0.3s ease" });
     }
 
     

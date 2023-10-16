@@ -39,20 +39,18 @@ export class HomePageComponent {
 
         // Moviment i animació fons //
         $("body").css({ "background-position": "top left" });
-        await Utils.wait(0);
-        $("body").css({ "transition": "background-position 0.3s ease" });
 
         // Google Analytics //
         this.m.gas.pageView("/home");
     }
 
     afterRootFadeIn() {
-        $(".content .ocult-animacio:not([hidden]):not(.chip)").each((i, e) => {
+        $(".content .ocult-animacio:not(app-skill)").each((i, e) => {
             Utils.fadeIn(e, i * 100);
         });
 
         $(".content .skills app-skill").each((i, e) => {
-            Utils.fadeIn(e, i * 20);
+            Utils.fadeIn(e, i * 20 + 400);
         });
     }
 

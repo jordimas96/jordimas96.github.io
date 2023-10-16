@@ -32,6 +32,7 @@ export class MainService {
             window["m"] = this;
             document.title = "Local";
             document.querySelector("link[rel*='icon']")!["href"] = "assets/favicon-local.png";
+            document.body.style.overflowX = "visible";
         }
     }
     onInit() { }

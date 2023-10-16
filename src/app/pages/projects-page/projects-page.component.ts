@@ -19,19 +19,17 @@ export class ProjectsPageComponent {
 
         // Moviment i animació fons //
         $("body").css({ "background-position": "bottom right" });
-        await Utils.wait(0);
-        $("body").css({ "transition": "background-position 0.3s ease" });
 
         // Google Analytics //
         this.m.gas.pageView(window.location.pathname);
     }
 
     afterRootFadeIn() {
-        $(".content>.ocult-animacio:not([hidden])").each((i, e) => {
-            Utils.fadeIn(e, i * 250);
+        $(".ocult-animacio").each((i, e) => {
+            Utils.fadeIn(e, i * 100);
         });
         $("app-skill").each((i, e) => {
-            Utils.fadeIn(e, i * 20);
+            Utils.fadeIn(e, i * 20 + 200);
         });
         
 
