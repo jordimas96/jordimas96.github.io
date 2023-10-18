@@ -1,0 +1,81 @@
+@import "src/styles.scss";
+
+.group {
+    --color-fosc-rgb-vals-test: rgb(20, 0, 36);
+    --color-clar-rgb-vals-test: rgb(255, 243, 209);
+    --color-fosc-rgb-vals: 20, 0, 36;
+    --color-clar-rgb-vals: 255, 243, 209;
+    --color-l-0: hsl(273, 100%, 7%);
+    --color-l-1: hsl(273, 100%, 16%);
+    --color-l-2: hsl(273, 100%, 26%);
+    --color-l-3: hsl(273, 100%, 35%);
+    --color-l-4: hsl(273, 100%, 44%);
+    --color-l-5: hsl(44, 100%, 44%);
+    --color-l-6: hsl(44, 100%, 58%);
+    --color-l-7: hsl(44, 100%, 65%);
+    --color-l-8: hsl(44, 100%, 72%);
+    --color-l-9: hsl(44, 100%, 91%);
+}
+
+             .group { background-color: hsla(273, 100%, 15%, 0.5); }
+.light :host .group { background-color: hsla(44, 100%, 72%, 0.5); }
+
+
+
+.group {
+
+    .boto-i-gif {
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        gap: 1rem;
+
+        .boto { }
+
+        .div-gif-i-text {
+            text-align: center;
+    
+            img {
+                border-radius: 11px;
+            }
+            .text-gif {
+                font-size: 0.9rem;
+                color: var(--text-80);
+            }
+        }
+    }
+}
+
+
+
+
+// #region MEDIA QUERIES //
+///////////////////
+// MEDIA QUERIES //
+///////////////////
+/// 
+// Pantalla PC //
+@media only screen and (min-width: 576px) {
+    .group .boto-i-gif a.boto {
+        padding-right: 0.5rem;
+    }
+}
+// Pantalla Mòbil //
+@media only screen and (max-width: 575px) {
+    .group .boto-i-gif {
+        text-align: center;
+        flex-direction: column;
+
+        a.boto {
+            padding: 1rem 1.4rem !important;
+        }
+    }
+    .group .boto-i-gif a.boto {
+        padding-right: 1rem;
+    }
+}
+
+// PC //
+@media (pointer: fine) { }
+// Mòbil //
+@media (pointer: coarse) { }

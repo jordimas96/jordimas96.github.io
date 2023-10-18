@@ -1,0 +1,59 @@
+@import "src/styles.scss";
+
+.group {
+    --color-fosc-rgb-vals-test: rgb(36, 20, 0);
+    --color-clar-rgb-vals-test: rgb(255, 235, 209);
+    --color-fosc-rgb-vals: 36, 20, 0;
+    --color-clar-rgb-vals: 255, 235, 209;
+    --color-l-0: hsl(34, 100%, 7%);
+    --color-l-1: hsl(34, 100%, 16%);
+    --color-l-2: hsl(34, 100%, 26%);
+    --color-l-3: hsl(34, 100%, 35%);
+    --color-l-4: hsl(34, 100%, 44%);
+    --color-l-5: hsl(34, 100%, 54%);
+    --color-l-6: hsl(34, 100%, 63%);
+    --color-l-7: hsl(34, 100%, 72%);
+    --color-l-8: hsl(34, 100%, 82%);
+    --color-l-9: hsl(34, 100%, 91%);
+}
+
+             .group { background-color: hsla(34, 100%, 25%, 0.5); }
+.light :host .group { background-color: hsla(34, 100%, 72%, 0.5); }
+
+
+
+.group {
+    .botons {
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        gap: 1rem;
+    }
+}
+
+
+
+
+// #region MEDIA QUERIES //
+///////////////////
+// MEDIA QUERIES //
+///////////////////
+/// 
+// Pantalla PC //
+@media only screen and (min-width: 576px) { }
+// Pantalla Mòbil //
+@media only screen and (max-width: 575px) {
+    .group#tasker .botons {
+        text-align: center;
+        flex-direction: column;
+
+        a.boto {
+            padding: 1rem 1.4rem !important;
+        }
+    }
+}
+
+// PC //
+@media (pointer: fine) { }
+// Mòbil //
+@media (pointer: coarse) { }

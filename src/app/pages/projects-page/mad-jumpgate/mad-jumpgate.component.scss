@@ -1,94 +1,25 @@
 @import "src/styles.scss";
 
-.seccio {
-    border-radius: 2rem;
-    
-    .boto-desplegable {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        width: 100%;
-        padding: 1rem;
-
-        .text-i-icona {
-            display: flex;
-            align-items: center;
-
-            .titol {
-                font-size: 1.5rem;
-                color: var(--text);
-            }
-            .icona {
-                height: 3rem;
-                border-radius: 1rem;
-                margin-right: 1rem;
-            }
-        }
-        .fletxa {
-            font-size: 1.5rem;
-            margin-right: 1rem;
-            margin-left: 1rem;
-            transition: transform 200ms ease;
-            
-            &[data-open] {
-                transform: rotate(-180deg);
-            }
-        }
-    }
-    .contingut {
-        transition: padding-left 0.3s ease, padding-right 0.3s ease;
-
-        .iframe-i-placeholder {
-            position: relative;
-            border-radius: 1rem;
-            overflow: hidden;
-        
-            iframe {
-                position: absolute;
-                transform-origin: top left;
-                border: none;
-                // border-radius: 16px;
-            }
-            .placeholder {
-                // transition: height 2s ease;
-            }
-        
-            .botoFullscreen {
-                position: absolute;
-                top: 0; right: 0;
-                margin: 0.5rem;
-                padding: 0;
-                width: 2.7rem;
-                height: 2.7rem;
-                border-radius: 10px;
-                opacity: 0.5;
-        
-                background-color: var(--color-l-7);
-                color: var(--color-fosc);
-        
-                transition: opacity 0.2s ease;
-        
-                &:hover {
-                    opacity: 1;
-                }
-            }
-        }
-        
-        .missatge-nomes-pc {
-            color: var(--text-80);
-            text-align: center;
-            font-size: 0.9rem;
-        }
-    }
+.group {
+    --color-fosc-rgb-vals-test: rgb(37, 37, 0);
+    --color-clar-rgb-vals-test: rgb(255, 255, 209);
+    --color-fosc-rgb-vals: 37, 37, 0;
+    --color-clar-rgb-vals: 255, 255, 209;
+    --color-l-0: hsl(60, 100%, 7%);
+    --color-l-1: hsl(60, 100%, 14%);
+    --color-l-2: hsl(60, 100%, 19%);
+    --color-l-3: hsl(60, 100%, 28%);
+    --color-l-4: hsl(60, 100%, 35%);
+    --color-l-5: hsl(60, 100%, 44%);
+    --color-l-6: hsl(60, 100%, 58%);
+    --color-l-7: hsl(60, 100%, 65%);
+    --color-l-8: hsl(60, 100%, 72%);
+    --color-l-9: hsl(60, 100%, 91%);
 }
 
-::ng-deep .seccio {
-    background-color: var(--color-clar-20);
-}
-::ng-deep .light .seccio {
-    background-color: var(--color-clar-50);
-    // @extend .shadow-1;
-}
+             .group { background-color: hsla(60, 100%, 21%, 0.5); }
+.light :host .group { background-color: hsla(60, 100%, 72%, 0.5); }
+
 
 
 
@@ -98,22 +29,11 @@
 ///////////////////
 /// 
 // Pantalla PC //
-@media only screen and (min-width: 576px) {
-    .seccio {
-
-        .contingut {
-            padding: 1.5rem;
-            padding-top: 0;
-        }
-    }
-}
+@media only screen and (min-width: 576px) { }
 // Pantalla Mòbil //
-@media only screen and (max-width: 575px) {
-    .seccio {
+@media only screen and (max-width: 575px) { }
 
-        .contingut {
-            padding: 1rem;
-            padding-top: 0;
-        }
-    }
-}
+// PC //
+@media (pointer: fine) { }
+// Mòbil //
+@media (pointer: coarse) { }

@@ -1,24 +1,50 @@
-<div class="seccio">
-    <button class="boto-desplegable no-style" (click)="toggleSeccio($event.currentTarget)">
-        <div class="text-i-icona">
-            <img src="assets/icons/mad-jumpgate.png" class="icona">
-            <span class="titol">Mad Jumpgate</span>
-        </div>
-        <i class="fa-solid fa-chevron-down fletxa"></i>
-    </button>
-    <div class="contingut" style="display:none;">
-        <div *ngIf="m.esPc()" class="iframe-i-placeholder">
-            <iframe #iframeRef src="assets/mad-jumpgate/index.html" width="1920" height="1080" scrolling="no" *ngIf="carregarJoc"></iframe>
-    
-            <div class="placeholder" [style.width.px]="placeholderWidth" [style.height.px]="placeholderHeight"></div>
-    
-            <button class="boto botoFullscreen no-style" (click)="fullScreen()"><i class="fa-solid fa-expand"></i></button>
-        </div>
+<div id="mad-jumpgate" class="group mb-6 ocult-animacio h">
+    <div class="subtitle mb-2 g-2_5">
+        <ng-container *ngIf="m.ca()">Projecte final de DAM - Mad Jumpgate</ng-container>
+        <ng-container *ngIf="m.es()">Proyecto final de DAM - Mad Jumpgate</ng-container>
+        <ng-container *ngIf="m.en()">Final project of DAM - Mad Jumpgate</ng-container>
+        <a href="https://jmaspgames.itch.io/mad-jumpgate" class="link-img"><img src="assets/icons/mad-jumpgate.png" alt="Mad Jumpgate" class="title-icon rounded"></a>
+    </div>
+    <p class="text mb-4">
+        <ng-container *ngIf="m.ca()">
+            Aquest és el meu projecte final del segon curs del Cicle Superior de Desenvolupament d'Aplicacions Multiplataforma (DAM). Em va portar 2 setmanes de feina crear aquest <i><a href="https://ca.wikipedia.org/wiki/Videojoc_d%27acci%C3%B3_en_primera_persona">First Person Shooter</a></i> des de zero, utilitzant Unity. Des del moviment de la càmara i del jugador, passant per les mecàniques de cada tipus d'arma (tant l'usuari com els enemics) i punts de spawn, fins a gestionar l'inventari format per la munició i els subministraments.
+        </ng-container>
+        
+        <ng-container *ngIf="m.es()">
+            Éste es mi proyecto final del segundo curso del Ciclo Superior de Desarrollo de Aplicaciones Multiplataforma (DAM). Me llevó 2 semanas de trabajo crear ese <i><a href="https://es.wikipedia.org/wiki/Videojuego_de_disparos_en_primera_persona">First Person Shooter</a></i> desde cero, usando Unity. Desde el movimiento de la cámara y del jugador, pasando por las mecánicas de cada tipo de arma (tanto el usuario como los enemigos) y puntos de spawn, hasta gestionar el inventario formado por la munición y los suministros.
+        </ng-container>
+        
+        <ng-container *ngIf="m.en()">
+            This is my final project for the second year of the Higher Cycle of Multiplatform Application Development (DAM). It took me 2 weeks of work to create this <i><a href="https://en.wikipedia.org/wiki/First-person_shooter">First Person Shooter</a></i> from scratch, using Unity. From the movement of the camera and the player, through the mechanics of shooting each type of weapon (both the user and the enemies) and spawn points, to managing the inventory consisting of ammunition and supplies.
+        </ng-container>
+    </p>
 
-        <div *ngIf="!m.esPc()" class="missatge-nomes-pc">
+    <!-- Mad jumpgate - itch.io -->
+    <!-- <div style="position: relative; max-width: 100%;">
+        <div class="game-placeholder" style="width: 552px; height: 167px;">
+            <iframe *ngIf="mostrarWidgetJoc" #game class="game" src="https://itch.io/embed/2011884" width="552" height="167" frameborder="0">
+                <a href="https://jmaspgames.itch.io/mad-jumpgate">Mad Jumpgate by Jordi Mas</a>
+            </iframe>
+        </div>
+        
+        <div class="joc-nomes-pc" *ngIf="!m.esPc()" style="width: 552px; height: 167px;">
             <ng-container *ngIf="m.ca()">Aquest joc és només per a ordinador.<br>Accedeix des d'un ordinador per a jugar-hi.</ng-container>
             <ng-container *ngIf="m.es()">Este juego es sólo para ordenador.<br>Accede desde un ordenador para jugar.</ng-container>
             <ng-container *ngIf="m.en()">This game is for PC only.<br>Access from a computer to play it.</ng-container>
         </div>
+    </div> -->
+    
+    <app-mad-jumpgate-joc/>
+
+    <!-- Skills -->
+    <div class="title-skills mt-4 mb-2">
+        <ng-container *ngIf="m.ca()">Tecnologies utilitzades</ng-container>
+        <ng-container *ngIf="m.es()">Tecnologías usadas</ng-container>
+        <ng-container *ngIf="m.en()">Used technologies</ng-container>
+    </div>
+    <div class="skills">
+        <app-skill n="C#" />
+        <app-skill n="Unity"/>
+        <app-skill n="Visual Studio"/>
     </div>
 </div>

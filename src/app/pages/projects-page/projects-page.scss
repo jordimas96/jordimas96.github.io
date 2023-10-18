@@ -1,0 +1,31 @@
+@import "src/styles.scss";
+
+.group {
+    .subtitle {
+        display: flex;
+        align-items: center;
+
+        a {
+            display: flex;
+            align-items: center;
+        }
+    }
+}
+
+
+
+
+// #region MEDIA QUERIES //
+///////////////////
+// MEDIA QUERIES //
+///////////////////
+/// 
+// Pantalla PC //
+@media only screen and (min-width: 576px) { }
+// Pantalla Mòbil //
+@media only screen and (max-width: 575px) { }
+
+// PC //
+@media (pointer: fine) { }
+// Mòbil //
+@media (pointer: coarse) { }

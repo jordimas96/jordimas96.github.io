@@ -1,0 +1,78 @@
+@import "src/styles.scss";
+
+.group {
+    --color-fosc-rgb-vals-test: rgb(0, 41, 18);
+    --color-clar-rgb-vals-test: rgb(184, 255, 216);
+    --color-fosc-rgb-vals: 0, 41, 18;
+    --color-clar-rgb-vals: 184, 255, 216;
+    --color-l-0: hsl(147, 100%, 8%);
+    --color-l-1: hsl(147, 100%, 17%);
+    --color-l-2: hsl(147, 100%, 25%);
+    --color-l-3: hsl(147, 100%, 34%);
+    --color-l-4: hsl(147, 100%, 43%);
+    --color-l-5: hsl(147, 100%, 51%);
+    --color-l-6: hsl(147, 100%, 60%);
+    --color-l-7: hsl(147, 100%, 69%);
+    --color-l-8: hsl(147, 100%, 77%);
+    --color-l-9: hsl(147, 100%, 86%);
+}
+
+             .group { background-color: hsla(147, 100%, 14%, 0.5); }
+.light :host .group { background-color: hsla(147, 100%, 72%, 0.5); }
+
+
+
+.group {
+
+    .boto-i-qr {
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        gap: 1rem;
+
+        .div-qr-i-text {
+            text-align: center;
+
+            ::ng-deep qrcode {
+                .qrcode {
+                    canvas {
+                        border-radius: 16px !important;
+                        @extend .shadow-2;
+                    }
+                }
+            }
+            
+            .scan-here {
+                font-size: 0.9rem;
+                color: var(--text-80);
+            }
+        }
+    }
+}
+
+
+
+
+// #region MEDIA QUERIES //
+///////////////////
+// MEDIA QUERIES //
+///////////////////
+/// 
+// Pantalla PC //
+@media only screen and (min-width: 576px) { }
+// Pantalla Mòbil //
+@media only screen and (max-width: 575px) {
+    .group#android .boto-i-qr {
+        text-align: center;
+        flex-direction: column;
+
+        a.boto {
+            padding: 1rem 1.4rem !important;
+        }
+    }
+}
+
+// PC //
+@media (pointer: fine) { }
+// Mòbil //
+@media (pointer: coarse) { }

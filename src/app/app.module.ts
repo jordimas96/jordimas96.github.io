@@ -15,14 +15,19 @@ import { SkillComponent } from './components/skill/skill.component';
 import { GoogleAnalyticsModule } from './google-analytics/google-analytics.module';
 import { QRCodeModule } from 'angularx-qrcode';
 import { NavegacioTabComponent } from './components/appbar/navegacio-tab/navegacio-tab.component';
-import { MadJumpgateComponent } from './pages/projects-page/mad-jumpgate/mad-jumpgate.component';
-import { DetallsAndroidAppsComponent } from './pages/projects-page/detalls-android-apps/detalls-android-apps.component';
+import { MadJumpgateJocComponent } from './pages/projects-page/mad-jumpgate/mad-jumpgate-joc/mad-jumpgate-joc.component';
+import { DetallsAndroidAppsComponent } from './pages/projects-page/android-apps/detalls-android-apps/detalls-android-apps.component';
 import { SmoothMoveDirective } from './directives/smooth-move.directive';
-import { NexxiaComponent } from './pages/experience-page/nexxia/nexxia.component';
-import { IndraComponent } from './pages/experience-page/indra/indra.component';
-import { MaticComponent } from './pages/experience-page/matic/matic.component';
-import { In2artComponent } from './pages/experience-page/in2art/in2art.component';
-import { OrangeComponent } from './pages/experience-page/orange/orange.component';
+import { NexxiaComponent } from './pages/experience-page/1 nexxia/nexxia.component';
+import { IndraComponent } from './pages/experience-page/2 indra/indra.component';
+import { MaticComponent } from './pages/experience-page/3 matic/matic.component';
+import { In2artComponent } from './pages/experience-page/4 in2art/in2art.component';
+import { OrangeComponent } from './pages/experience-page/5 orange/orange.component';
+import { AmazfitWatchfacesComponent } from './pages/projects-page/amazfit-watchfaces/amazfit-watchfaces.component';
+import { AndroidAppsComponent } from './pages/projects-page/android-apps/android-apps.component';
+import { CustomRomsComponent } from './pages/projects-page/custom-roms/custom-roms.component';
+import { MadJumpgateComponent } from './pages/projects-page/mad-jumpgate/mad-jumpgate.component';
+import { TaskerComponent } from './pages/projects-page/tasker/tasker.component';
 
 @NgModule({
     declarations: [
@@ -41,7 +46,7 @@ import { OrangeComponent } from './pages/experience-page/orange/orange.component
         TargetBlankDirective,
         SkillComponent,
         NavegacioTabComponent,
-        MadJumpgateComponent,
+        MadJumpgateJocComponent,
         DetallsAndroidAppsComponent,
         SmoothMoveDirective,
         NexxiaComponent,
@@ -49,6 +54,11 @@ import { OrangeComponent } from './pages/experience-page/orange/orange.component
         MaticComponent,
         In2artComponent,
         OrangeComponent,
+        AmazfitWatchfacesComponent,
+        AndroidAppsComponent,
+        CustomRomsComponent,
+        MadJumpgateComponent,
+        TaskerComponent,
     ],
     imports: [
         BrowserModule,
