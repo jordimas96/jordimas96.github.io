@@ -19,7 +19,7 @@ import { MadJumpgateJocComponent } from './pages/projects-page/mad-jumpgate/mad-
 import { DetallsAndroidAppsComponent } from './pages/projects-page/android-apps/detalls-android-apps/detalls-android-apps.component';
 import { SmoothMoveDirective } from './directives/smooth-move.directive';
 import { NexxiaComponent } from './pages/experience-page/1 nexxia/nexxia.component';
-import { IndraComponent } from './pages/experience-page/2 indra/indra.component';
+import { IndraComponent } from './pages/experience-page/2 indra/indra.component';  
 import { MaticComponent } from './pages/experience-page/3 matic/matic.component';
 import { In2artComponent } from './pages/experience-page/4 in2art/in2art.component';
 import { OrangeComponent } from './pages/experience-page/5 orange/orange.component';
