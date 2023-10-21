@@ -1,0 +1,7 @@
+// Commit i push ràpid
+ng build; git add .; git commit -m "(from git)"; git push
+
+
+
+// Forçar push quan falli a sourcetree
+git push origin experience-subdivided-into-components

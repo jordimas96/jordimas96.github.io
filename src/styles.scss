@@ -197,12 +197,20 @@ img, .noselect {
 									supported by Chrome, Edge, Opera and Firefox */
 }
 
+// Ombres //
 .shadow-1 { box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24) !important; }
 .shadow-2 { box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23) !important; }
 .shadow-3 { box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23) !important; }
 .shadow-4 { box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22) !important; }
 .shadow-5 { box-shadow: 0 19px 38px rgba(0,0,0,0.30), 0 15px 12px rgba(0,0,0,0.22) !important; }
 
+.drop-shadow-1 { filter: drop-shadow(0 1px 2px rgba(0,0,0,0.24)) !important; }
+.drop-shadow-2 { filter: drop-shadow(0 3px 6px rgba(0,0,0,0.23)) !important; }
+.drop-shadow-3 { filter: drop-shadow(0 6px 6px rgba(0,0,0,0.23)) !important; }
+.drop-shadow-4 { filter: drop-shadow(0 10px 10px rgba(0,0,0,0.22)) !important; }
+.drop-shadow-5 { filter: drop-shadow(0 15px 12px rgba(0,0,0,0.22)) !important; }
+
+// Ombres que només funcionen en mode clar //
 .light {
     .shadow-1-l { @extend .shadow-1; }
     .shadow-2-l { @extend .shadow-2; }
