@@ -1,10 +1,12 @@
 import { GoogleAnalyticsService } from 'ngx-google-analytics';
-import { HostListener, Injectable } from "@angular/core";
+import { Injectable } from "@angular/core";
 import { AppbarComponent } from "../components/appbar/appbar.component";
 import { Utils } from "./utils.service";
-
+import { Router, ActivatedRoute } from '@angular/router';
 
 // https://developerslogblog.wordpress.com/2019/04/23/how-to-use-angular-services-to-share-data-between-components/ //
+
+enum Area { Front, Back, Full };
 
 @Injectable({
     providedIn: 'root'
@@ -23,8 +25,16 @@ export class MainService {
     public tema: string = "";
     public idioma: string = "en";
     public scroll = window.pageYOffset;
+    public area: Area;
+    public areaCodi = "web"; // web, info, details //
+    public discret = 0;
+    
 
-    constructor(public gas: GoogleAnalyticsService) {
+    constructor(
+        private router: Router,
+        private route: ActivatedRoute,
+        public gas: GoogleAnalyticsService
+    ) {
         this.u = Utils;
         
         // Canviar icona NOMÉS al debugar //
@@ -36,6 +46,20 @@ export class MainService {
         }
     }
     onInit() { }
+
+    public llegirParams(params) {
+        params.subscribe(params => {
+            this.areaCodi = params["area"] || "web";
+
+            // Segons el paràmetre, se'n va a una versió o a una altra de la web //
+            switch (this.areaCodi) {
+                case "web": this.area = Area.Front; break;
+                case "info": this.area = Area.Back; break;
+                case "details": this.area = Area.Full; break;
+                default: this.router.navigate([`/${location.pathname.split("/")[1]}/web`]); return;
+            }
+        });
+    }
 
     // Idiomes //
     ca() { return this.idioma == "ca" }
@@ -54,6 +78,11 @@ export class MainService {
     public esPantallaPc() { return !this.esPantallaMobil(); }
     public esAndroid() { return /Android/i.test(navigator.userAgent); }
     public esPantallaTactil() { return (('ontouchstart' in window) || (navigator.maxTouchPoints > 0) || (navigator.maxTouchPoints > 0)); }
+
+    // Area //
+    public front() { return this.area == Area.Front }
+    public back() { return this.area == Area.Back }
+    public full() { return this.area == Area.Full }
 
     // Forçar temes //
     public force(tema) { Utils.setCookie("forçartema", tema) }

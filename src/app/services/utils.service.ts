@@ -56,9 +56,9 @@ export class Utils {
 
 
     // Utils //
-    public static objPle(obj) {
+    public static objPle(obj): boolean {
         if (!obj) return false;
-        else return JSON.stringify(obj) != "{}";
+        else return !!Object.keys(obj).length;
     }
     public static arrayConte(array, valor) {
         return array.includes(valor);

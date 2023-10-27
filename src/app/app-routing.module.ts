@@ -7,19 +7,24 @@ import { ProjectsPageComponent } from './pages/projects-page/projects-page.compo
 const routes: Routes = [
     {
         path: "",
+        redirectTo: "home/web",
+        pathMatch: "full"
+    },
+    {
+        path: "home/:area",
         component: HomePageComponent
     },
     {
-        path: "experience",
+        path: "experience/:area",
         component: ExperiencePageComponent
     },
     {
-        path: "projects",
+        path: "projects/:area",
         component: ProjectsPageComponent
     },
     {
         path: "**",
-        redirectTo: ""
+        redirectTo: "home/web"
     },
 
 ];

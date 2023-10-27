@@ -1,4 +1,5 @@
 import { Component, ViewChild } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
 import { MainService } from 'src/app/services/main.service';
 import { Utils } from 'src/app/services/utils.service';
 
@@ -12,7 +13,7 @@ export class ProjectsPageComponent {
     @ViewChild('game') game;
     public mostrarWidgetJoc = false;
 
-    constructor(public m: MainService) { }
+    constructor(public m: MainService, private route: ActivatedRoute) { m.llegirParams(this.route.params); }
 
     async ngOnInit() {
         this.m.afterRootFadeIn(this.afterRootFadeIn.bind(this));
