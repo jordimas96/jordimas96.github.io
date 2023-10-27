@@ -210,6 +210,13 @@ export class AppbarComponent {
         document.documentElement.lang = this.m.idioma;
         Utils.setCookie("lang", this.m.idioma);
     }
+
+
+    // Debug //
+    canviarVersio(value) {
+        this.m.router.navigate([`/${location.pathname.split("/")[1]}/${value}`]).then(() => location.reload())
+    }
+
     
 
     // Funcions //

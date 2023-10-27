@@ -31,8 +31,8 @@ export class MainService {
     
 
     constructor(
-        private router: Router,
-        private route: ActivatedRoute,
+        public router: Router,
+        public route: ActivatedRoute,
         public gas: GoogleAnalyticsService
     ) {
         this.u = Utils;
@@ -56,7 +56,7 @@ export class MainService {
                 case "web": this.area = Area.Front; break;
                 case "info": this.area = Area.Back; break;
                 case "details": this.area = Area.Full; break;
-                default: this.router.navigate([`/${location.pathname.split("/")[1]}/web`]); return;
+                default: this.router.navigate([`/${Utils.getRouteActual()}/web`]); return;
             }
         });
     }

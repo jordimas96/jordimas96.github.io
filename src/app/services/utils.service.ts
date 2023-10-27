@@ -66,6 +66,9 @@ export class Utils {
     public static mesGran(a, b) {
         return a > b ? a : b;
     }
+    public static getRouteActual() {
+        return location.pathname.split("/")[1];
+    }
 
     public static wait(ms: number): Promise<void> {
         return new Promise(resolve => {
