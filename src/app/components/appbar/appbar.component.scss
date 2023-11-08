@@ -26,6 +26,7 @@
             background-color: var(--text);
             color: var(--fons);
             font-weight: 800;
+            padding: initial; // iPhone/iPad fix //
             border: none;
             border-radius: 1000px;
             outline: none;
