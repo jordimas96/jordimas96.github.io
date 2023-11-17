@@ -13,7 +13,7 @@
 
     &:not(.scrolled) {
         // background: var(--fons-50);
-        // backdrop-filter: none;
+        backdrop-filter: blur(20px) saturate(1);
     }
 
     .botonsDarkMode {

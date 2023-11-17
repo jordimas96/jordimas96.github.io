@@ -19,5 +19,13 @@
         <app-in2art class="d-block mb-6" />
         <app-nexxia class="d-block mb-6" />
     </ng-container>
+
+    <div class="mb-6 text-center ocult-animacio h">
+        <button class="boto botoSeguentPagina m-auto" (click)="m.u.getDocument().querySelector('#projects').click()">
+            <ng-container *ngIf="m.ca()">Projectes</ng-container>
+            <ng-container *ngIf="m.es()">Proyectos</ng-container>
+            <ng-container *ngIf="m.en()">Projects</ng-container>
+        </button>
+    </div>
     
 </div>

@@ -11,4 +11,12 @@
     <app-tasker />
     <app-amazfit-watchfaces />
 
+    <div class="mb-6 text-center ocult-animacio h">
+        <button class="boto botoSeguentPagina m-auto" (click)="m.u.getDocument().querySelector('#home').click()">
+            <ng-container *ngIf="m.ca()">Inici</ng-container>
+            <ng-container *ngIf="m.es()">Inicio</ng-container>
+            <ng-container *ngIf="m.en()">Home</ng-container>
+        </button>
+    </div>
+
 </div>

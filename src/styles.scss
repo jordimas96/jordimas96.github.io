@@ -86,13 +86,16 @@ body {
     }
 }
 
-// Estils generals per tots els botons //
-a.boto, button.boto {
+// Estils generals per tots els ns (<button> i <a>) //
+.boto {
     display: inline-flex;
     align-items: center;
     text-decoration: none;
+    cursor: pointer;
 
     padding: 0.5rem 0.7rem;
+    border: none;
+    outline: none !important;
     font-size: 1.3rem;
     border-radius: 10000px;
 
@@ -102,6 +105,13 @@ a.boto, button.boto {
 .boto img.logo {
     height: 2rem;
     margin-left: 0.5rem;
+}
+
+.botoSeguentPagina {
+    padding: 2rem 4rem;
+    border-radius: 2rem;
+    font-size: 1.5rem;
+    
 }
 
 
@@ -130,7 +140,6 @@ button.no-style {
     background-color: transparent;
     color: inherit;
     border: 0;
-    // border-radius: 1rem;
     outline: none;
     cursor: pointer;
 }
@@ -294,7 +303,7 @@ app-skill { @extend .ocult-animacio, .-v; }
         border-radius: 2.5rem;
     }
     .boto {
-        transition: var(--transicio-colors);
+        transition: border-radius 0.3s ease, var(--transicio-colors);
     }
     .boto:hover {
         background-color: var(--color-l-9) !important;
@@ -350,6 +359,8 @@ app-skill { @extend .ocult-animacio, .-v; }
             box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24) !important; // shadow-1 //
         }
     }
+    .botoSeguentPagina:hover { border-radius: 3rem; }
+    
 }
 // Mòbil //
 @media (pointer: coarse) { }

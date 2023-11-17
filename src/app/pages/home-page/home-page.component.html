@@ -217,4 +217,13 @@
         </div>
         
     </div>
+
+    <div class="mb-6 text-center ocult-animacio h">
+        <button class="boto botoSeguentPagina m-auto" (click)="m.u.getDocument().querySelector('#experience').click()">
+            <ng-container *ngIf="m.ca()">Experiència</ng-container>
+            <ng-container *ngIf="m.es()">Experiencia</ng-container>
+            <ng-container *ngIf="m.en()">Experience</ng-container>
+        </button>
+    </div>
+    
 </div>

@@ -20,7 +20,7 @@ export class MainService {
 
     // Variables //
     public tempsDelayCarregaPag = 1000;
-    public readonly debug = window.location.origin.includes("localhost") || window.location.origin.includes("192.168.1");
+    public readonly debug = window.location.origin.includes("localhost") || window.location.origin.includes("192.168.1.");
     public modeFosc: boolean = true;
     public tema: string = "";
     public idioma: string = "en";

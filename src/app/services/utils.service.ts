@@ -10,6 +10,8 @@ export class Utils {
 
     // Utils web //
 
+    public static getDocument() { return document; }
+
     public static getColor(s) {
         return window.getComputedStyle(document.documentElement).getPropertyValue(s);
     }
