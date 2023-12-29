@@ -190,7 +190,8 @@ export class AppbarComponent {
         }, horaSeguent.getTime() - ara.getTime());
     }
 
-    actTema() {
+    actTema(tema?) {
+        if (tema) this.m.tema = tema;
         $("html")
             .removeClass("dark light nit matinada mati tarda vespre")
             .addClass(this.m.modeFosc ? "dark" : "light")

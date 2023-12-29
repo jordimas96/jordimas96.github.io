@@ -79,12 +79,12 @@ export class MainService {
     public esAndroid() { return /Android/i.test(navigator.userAgent); }
     public esPantallaTactil() { return (('ontouchstart' in window) || (navigator.maxTouchPoints > 0) || (navigator.maxTouchPoints > 0)); }
 
-    // Area //
+    // Area de programació //
     public front() { return this.area == Area.Front }
     public back() { return this.area == Area.Back }
     public full() { return this.area == Area.Full }
 
-    // Forçar temes //
+    // Forçar temes - debug //
     public force(tema) { Utils.setCookie("forçartema", tema) }
     public noforce() { Utils.removeCookie("forçartema") }
 

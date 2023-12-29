@@ -98,7 +98,7 @@
             <ng-container *ngIf="m.en()">Programming skills</ng-container>
         </div>
         <div class="row no-gutters justify-content-center">
-            <div class="col-12 col-sm-6 mt-4">
+            <div class="col-12 col-sm-6 mt-4" [ngClass]="{'order-1': !m.back(), 'order-2': m.back()}">
                 <div class="titol-tipus-llenguatge mb-2">Frontend</div>
                 <div class="skills">
                     <app-skill n="Angular"/>
@@ -120,7 +120,7 @@
                 </div>
             </div>
 
-            <div class="col-12 col-sm-6 mt-4">
+            <div class="col-12 col-sm-6 mt-4" [ngClass]="{'order-1': m.back(), 'order-2': !m.back()}">
                 <div class="titol-tipus-llenguatge mb-2">Backend</div>
                 <div class="skills">
                     <app-skill n="NodeJs"/>
@@ -142,7 +142,7 @@
                 </div>
             </div>
 
-            <div class="col-12 col-sm-6 mt-4">
+            <div class="col-12 col-sm-6 mt-4 order-3">
                 <div class="titol-tipus-llenguatge mb-2">
                     <ng-container *ngIf="m.ca()">Eines de desenvolupament</ng-container>
                     <ng-container *ngIf="m.es()">Herramientas de desarrollo</ng-container>
