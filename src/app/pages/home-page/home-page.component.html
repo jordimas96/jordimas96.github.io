@@ -15,75 +15,99 @@
                     <div class="bondia mb-2">{{getSalutacioSegonsHora()}}</div>
                     <div class="nom">
                         <span class="emdic">
-                            <ng-container *ngIf="m.ca()">Em dic</ng-container>
-                            <ng-container *ngIf="m.es()">Me llamo</ng-container>
-                            <ng-container *ngIf="m.en()">My name is</ng-container>
+                            @if (m.ca()) { Em dic }
+                            @if (m.es()) { Me llamo }
+                            @if (m.en()) { My name is }
                         </span>
-                        <br *ngIf="m.esPantallaMobil()">
+                        @if (m.esPantallaMobil()) {
+                            <br>
+                        }
                         Jordi Mas Parramon
                     </div>
                     <div class="programador">
                         -
-                        <ng-container *ngIf="m.front()">
-                            <ng-container *ngIf="m.ca()">Programador frontend</ng-container>
-                            <ng-container *ngIf="m.es()">Programador frontend</ng-container>
-                            <ng-container *ngIf="m.en()">Frontend programmer</ng-container>
-                        </ng-container>
-                        <ng-container *ngIf="m.back()">
-                            <ng-container *ngIf="m.ca()">Programador backend</ng-container>
-                            <ng-container *ngIf="m.es()">Programador backend</ng-container>
-                            <ng-container *ngIf="m.en()">Backend programmer</ng-container>
-                        </ng-container>
-                        <ng-container *ngIf="m.full()">
-                            <ng-container *ngIf="m.ca()">Programador fullstack</ng-container>
-                            <ng-container *ngIf="m.es()">Programador fullstack</ng-container>
-                            <ng-container *ngIf="m.en()">Fullstack programmer</ng-container>
-                        </ng-container>
+                        @if (m.front()) {
+                            @if (m.ca()) { Programador frontend }
+                            @if (m.es()) { Programador frontend }
+                            @if (m.en()) { Frontend programmer }
+                        }
+                        @if (m.back()) {
+                            @if (m.ca()) { Programador backend }
+                            @if (m.es()) { Programador backend }
+                            @if (m.en()) { Backend programmer }
+                        }
+                        @if (m.full()) {
+                            @if (m.ca()) { Programador fullstack }
+                            @if (m.es()) { Programador fullstack }
+                            @if (m.en()) { Fullstack programmer }
+                        }
                         -
                     </div>
                 </div>
                 <!-- Recipient bio pc -->
-                <div *ngIf="m.esPantallaPc()" class="text bio mt-4">
-                    <div *ngTemplateOutlet="bio"></div>
-                </div>
+                @if (m.esPantallaPc()) {
+                    <div class="text bio mt-4">
+                        <div *ngTemplateOutlet="bio"></div>
+                    </div>
+                }
                 
             </div>
         </div>
         <!-- Recipient bio mobil -->
-        <div *ngIf="m.esPantallaMobil()" class="text bio mt-4">
-            <div *ngTemplateOutlet="bio"></div>
-        </div>
+        @if (m.esPantallaMobil()) {
+            <div class="text bio mt-4">
+                <div *ngTemplateOutlet="bio"></div>
+            </div>
+        }
         <!-- Template bio -->
         <ng-template #bio>
-            <ng-container *ngIf="m.front()">
-                <ng-container *ngIf="m.ca()">Sóc un apassionat programador frontend amb experiència en Angular, CSS, Javascript, jQuery, Python i C#, entre altres. Els meus esforços se centren en la creació d'interfícies d'usuari atractives, intuïtives i adaptades a les necessitats de l'usuari per proporcionar-los una experiència agradable.<br>
-                En aquesta web, trobaràs informació sobre la meva experiència, habilitats i projectes, així com la meva informació de contacte perquè puguem conversar sobre diferents maneres d'ajudar-te amb projectes futurs.</ng-container>
-                <ng-container *ngIf="m.es()">Soy un apasionado programador frontend con experiencia en Angular, CSS, Javascript, jQuery, Python y C#, entre otros. Mis esfuerzos se centran en la creación de interfaces de usuario atractivas, intuitivas y adaptadas a las necesidades del usuario para proporcionarles una experiencia agradable.<br>
-                En esta web, encontrarás información sobre mi experiencia, habilidades y proyectos, así como mi información de contacto para que podamos conversar sobre diferentes formas de ayudarte con proyectos futuros.</ng-container>
-                <ng-container *ngIf="m.en()">I am a passionate frontend programmer. I have experience working with Angular, CSS, Javascript, jQuery, Python and C#, among others. My efforts focus on creating attractive, intuitive user interfaces adapted to user needs to provide them with a pleasant experience.<br>
-                On this site, you will find information about my past experience, skills, and projects, as well as my contact information so we can discuss about different ways on helping you and your business with future projects.</ng-container>
-            </ng-container>
-            <ng-container *ngIf="m.back()">
-                <ng-container *ngIf="m.ca()">Sóc un apassionat programador backend amb experiència en Java, NodeJs, Python, C#, PHP i SQL, entre altres. El meu objectiu principal és construir servidors robustos i escalables, garantint un rendiment òptim i una gestió eficient de dades.<br>
-                En aquesta web, trobaràs informació sobre la meva experiència, habilitats i projectes, així com la meva informació de contacte perquè puguem conversar sobre diferents maneres d'ajudar-te amb projectes futurs.</ng-container>
-                <ng-container *ngIf="m.es()">Soy un apasionado programador backend con experiencia en Java, NodeJs, Python, C#, PHP y SQL, entre otros. Mi principal objetivo es construir servidores robustos y escalables, garantizando un rendimiento óptimo y una gestión eficiente de datos.<br>
-                En esta web, encontrarás información sobre mi experiencia, habilidades y proyectos, así como mi información de contacto para que podamos conversar sobre diferentes formas de ayudarte con proyectos futuros.</ng-container>
-                <ng-container *ngIf="m.en()">I am a passionate backend programmer. I have experience working with Java, NodeJs, Python, C#, PHP and SQL, among others. My main goal is to build robust and scalable servers, guaranteeing optimal performance and efficient data management.<br>
-                On this site, you will find information about my past experience, skills, and projects, as well as my contact information so we can discuss about different ways on helping you and your business with future projects.</ng-container>
-            </ng-container>
-            <ng-container *ngIf="m.full()">
-                <ng-container *ngIf="m.ca()">Sóc un apassionat programador fullstack amb experiència en Angular, Java, NodeJs, CSS i Python, entre altres. Aquesta àmplia gamma d'habilitats em permet treballar en projectes de principi a fi, creant interfícies d'usuari atractives i servidors sòlids per a solucions completes i ben integrades.<br>
-                En aquesta web, trobaràs informació sobre la meva experiència, habilitats i projectes, així com la meva informació de contacte perquè puguem conversar sobre diferents maneres d'ajudar-te amb projectes futurs.</ng-container>
-                <ng-container *ngIf="m.es()">Soy un apasionado programador fullstack con experiencia en Angular, Java, NodeJs, CSS y Python, entre otros. Esta amplia gama de habilidades me permite trabajar en proyectos de principio a fin, creando interfaces de usuario atractivas y servidores sólidos para soluciones completas y bien integradas.<br>
-                En esta web, encontrarás información sobre mi experiencia, habilidades y proyectos, así como mi información de contacto para que podamos conversar sobre diferentes formas de ayudarte con proyectos futuros.</ng-container>
-                <ng-container *ngIf="m.en()">I am a passionate fullstack programmer. I have experience working with Angular, Java, NodeJs, CSS and Python, among others. This broad range of skills allows me to work on projects from start to finish, creating attractive user interfaces and robust servers for complete, well-integrated solutions.<br>
-                On this site, you will find information about my past experience, skills, and projects, as well as my contact information so we can discuss about different ways on helping you and your business with future projects.</ng-container>
-            </ng-container>
+            @if (m.front()) {
+                @if (m.ca()) {
+                    Sóc un apassionat programador frontend amb experiència en Angular, CSS, Javascript, jQuery, Python i C#, entre altres. Els meus esforços se centren en la creació d'interfícies d'usuari atractives, intuïtives i adaptades a les necessitats de l'usuari per proporcionar-los una experiència agradable.<br>
+                    En aquesta web, trobaràs informació sobre la meva experiència, habilitats i projectes, així com la meva informació de contacte perquè puguem conversar sobre diferents maneres d'ajudar-te amb projectes futurs.
+                }
+                @if (m.es()) {
+                    Soy un apasionado programador frontend con experiencia en Angular, CSS, Javascript, jQuery, Python y C#, entre otros. Mis esfuerzos se centran en la creación de interfaces de usuario atractivas, intuitivas y adaptadas a las necesidades del usuario para proporcionarles una experiencia agradable.<br>
+                    En esta web, encontrarás información sobre mi experiencia, habilidades y proyectos, así como mi información de contacto para que podamos conversar sobre diferentes formas de ayudarte con proyectos futuros.
+                }
+                @if (m.en()) {
+                    I am a passionate frontend programmer. I have experience working with Angular, CSS, Javascript, jQuery, Python and C#, among others. My efforts focus on creating attractive, intuitive user interfaces adapted to user needs to provide them with a pleasant experience.<br>
+                    On this site, you will find information about my past experience, skills, and projects, as well as my contact information so we can discuss about different ways on helping you and your business with future projects.
+                }
+            }
+            @if (m.back()) {
+                @if (m.ca()) {
+                    Sóc un apassionat programador backend amb experiència en Java, NodeJs, Python, C#, PHP i SQL, entre altres. El meu objectiu principal és construir servidors robustos i escalables, garantint un rendiment òptim i una gestió eficient de dades.<br>
+                    En aquesta web, trobaràs informació sobre la meva experiència, habilitats i projectes, així com la meva informació de contacte perquè puguem conversar sobre diferents maneres d'ajudar-te amb projectes futurs.
+                }
+                @if (m.es()) {
+                    Soy un apasionado programador backend con experiencia en Java, NodeJs, Python, C#, PHP y SQL, entre otros. Mi principal objetivo es construir servidores robustos y escalables, garantizando un rendimiento óptimo y una gestión eficiente de datos.<br>
+                    En esta web, encontrarás información sobre mi experiencia, habilidades y proyectos, así como mi información de contacto para que podamos conversar sobre diferentes formas de ayudarte con proyectos futuros.
+                }
+                @if (m.en()) {
+                    I am a passionate backend programmer. I have experience working with Java, NodeJs, Python, C#, PHP and SQL, among others. My main goal is to build robust and scalable servers, guaranteeing optimal performance and efficient data management.<br>
+                    On this site, you will find information about my past experience, skills, and projects, as well as my contact information so we can discuss about different ways on helping you and your business with future projects.
+                }
+            }
+            @if (m.full()) {
+                @if (m.ca()) {
+                    Sóc un apassionat programador fullstack amb experiència en Angular, Java, NodeJs, CSS i Python, entre altres. Aquesta àmplia gamma d'habilitats em permet treballar en projectes de principi a fi, creant interfícies d'usuari atractives i servidors sòlids per a solucions completes i ben integrades.<br>
+                    En aquesta web, trobaràs informació sobre la meva experiència, habilitats i projectes, així com la meva informació de contacte perquè puguem conversar sobre diferents maneres d'ajudar-te amb projectes futurs.
+                }
+                @if (m.es()) {
+                    Soy un apasionado programador fullstack con experiencia en Angular, Java, NodeJs, CSS y Python, entre otros. Esta amplia gama de habilidades me permite trabajar en proyectos de principio a fin, creando interfaces de usuario atractivas y servidores sólidos para soluciones completas y bien integradas.<br>
+                    En esta web, encontrarás información sobre mi experiencia, habilidades y proyectos, así como mi información de contacto para que podamos conversar sobre diferentes formas de ayudarte con proyectos futuros.
+                }
+                @if (m.en()) {
+                    I am a passionate fullstack programmer. I have experience working with Angular, Java, NodeJs, CSS and Python, among others. This broad range of skills allows me to work on projects from start to finish, creating attractive user interfaces and robust servers for complete, well-integrated solutions.<br>
+                    On this site, you will find information about my past experience, skills, and projects, as well as my contact information so we can discuss about different ways on helping you and your business with future projects.
+                }
+            }
 
             <a [href]="getRutaCV()" class="boto mt-4 pl-3">
-                <ng-container *ngIf="m.ca()">Obrir CV</ng-container>
-                <ng-container *ngIf="m.es()">Abrir CV</ng-container>
-                <ng-container *ngIf="m.en()">Open Resume</ng-container>
+                @if (m.ca()) { Obrir CV }
+                @if (m.es()) { Abrir CV }
+                @if (m.en()) { Open Resume }
                 <img src="assets/icons/contact/cv.png" alt="Curriculum Vitae" class="logo inv-dark-2">
             </a>
         </ng-template>
@@ -93,9 +117,9 @@
     <!-- Skills -->
     <div id="llenguatges" class="group llenguatges mb-6 ocult-animacio h">
         <div class="subtitle mb-2">
-            <ng-container *ngIf="m.ca()">Habilitats en programació</ng-container>
-            <ng-container *ngIf="m.es()">Habilidades en programación</ng-container>
-            <ng-container *ngIf="m.en()">Programming skills</ng-container>
+            @if (m.ca()) { Habilitats en programació }
+            @if (m.es()) { Habilidades en programación }
+            @if (m.en()) { Programming skills }
         </div>
         <div class="row no-gutters justify-content-center">
             <div class="col-12 col-sm-6 mt-4" [ngClass]="{'order-1': !m.back(), 'order-2': m.back()}">
@@ -144,9 +168,9 @@
 
             <div class="col-12 col-sm-6 mt-4 order-3">
                 <div class="titol-tipus-llenguatge mb-2">
-                    <ng-container *ngIf="m.ca()">Eines de desenvolupament</ng-container>
-                    <ng-container *ngIf="m.es()">Herramientas de desarrollo</ng-container>
-                    <ng-container *ngIf="m.en()">Software development tools</ng-container>
+                    @if (m.ca()) { Eines de desenvolupament }
+                    @if (m.es()) { Herramientas de desarrollo }
+                    @if (m.en()) { Software development tools }
                 </div>
                 <div class="skills">
                     <app-skill n="Git"/>
@@ -181,9 +205,9 @@
 
             <!-- <div class="col-12 col-sm-6 mt-4">
                 <div class="titol-tipus-llenguatge mb-2">
-                    <ng-container *ngIf="m.ca()">Eines de virtualització i SO</ng-container>
-                    <ng-container *ngIf="m.es()">Herramientas de virtualización y SO</ng-container>
-                    <ng-container *ngIf="m.en()">Virtualization tools and OS</ng-container>
+                    @if (m.ca()) { Eines de virtualització i SO }
+                    @if (m.es()) { Herramientas de virtualización y SO }
+                    @if (m.en()) { Virtualization tools and OS }
                 </div>
                 <div class="skills">
                     <app-skill n="VMware"/>
@@ -202,9 +226,9 @@
 
             <!-- <div class="col-12 col-sm-6 mt-4">
                 <div class="titol-tipus-llenguatge mb-2">
-                    <ng-container *ngIf="m.ca()">CMS i frameworks web</ng-container>
-                    <ng-container *ngIf="m.es()">CMS y frameworks web</ng-container>
-                    <ng-container *ngIf="m.en()">CMS and web frameworks</ng-container>
+                    @if (m.ca()) { CMS i frameworks web }
+                    @if (m.es()) { CMS y frameworks web }
+                    @if (m.en()) { CMS and web frameworks }
                 </div>
                 <div class="skills">
                     <app-skill n="Joomla"/>
@@ -220,9 +244,9 @@
 
     <div class="mb-6 text-center ocult-animacio h">
         <button class="boto botoSeguentPagina m-auto" (click)="m.u.getDocument().querySelector('#experience').click()">
-            <ng-container *ngIf="m.ca()">Experiència</ng-container>
-            <ng-container *ngIf="m.es()">Experiencia</ng-container>
-            <ng-container *ngIf="m.en()">Experience</ng-container>
+            @if (m.ca()) { Experiència }
+            @if (m.es()) { Experiencia }
+            @if (m.en()) { Experience }
         </button>
     </div>
     

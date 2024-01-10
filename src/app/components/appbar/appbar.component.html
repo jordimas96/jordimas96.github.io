@@ -15,28 +15,29 @@
 
     <div class="idioma col-6 col-md-2 order-2 order-md-3">
         <select class="select-idioma" [(ngModel)]="m.idioma" id="idioma" title="Language" (change)="onIdiomaCanviat()">
-            <ng-container *ngIf="!m.es()">
+            @if (!m.es()) {
                 <option value="ca">Català</option>
                 <option value="es">Español</option>
                 <option value="en">English</option>
-            </ng-container>
-            <ng-container *ngIf="m.es()">
+            } @else {
                 <option value="es">Español</option>
                 <option value="ca">Català</option>
                 <option value="en">English</option>
-            </ng-container>
+            }
         </select>
     </div>
 
     <!-- Debug -->
-    <div *ngIf="m.debug && m.u.hasCookie('numRandom')" style="position:absolute;top:56px;left:6px;cursor:pointer;border-radius:8px;background-color:#000;"
-        onclick="$(this).hide()">
-        998
-    </div>
-    <!-- <div *ngIf="m.debug" [style]="'position:absolute;top:'+m.u.getAlturaAppbar()+'px'">
-        <button class="boto border-0 mr-1 py-0 px-2" style="font-size:1rem;cursor:pointer" (click)="canviarVersio('web')">Front</button>
-        <button class="boto border-0 mr-1 py-0 px-2" style="font-size:1rem;cursor:pointer" (click)="canviarVersio('info')">Back</button>
-        <button class="boto border-0 mr-1 py-0 px-2" style="font-size:1rem;cursor:pointer" (click)="canviarVersio('details')">Full</button>
-    </div> -->
+    @if (m.debug && m.u.hasCookie('numRandom')) {
+        <div style="position:absolute;top:56px;left:6px;cursor:pointer;border-radius:8px;background-color:#000;"
+            onclick="$(this).hide()">
+            998
+        </div>
+        <!-- <div *ngIf="m.debug" [style]="'position:absolute;top:'+m.u.getAlturaAppbar()+'px'">
+            <button class="boto border-0 mr-1 py-0 px-2" style="font-size:1rem;cursor:pointer" (click)="canviarVersio('web')">Front</button>
+            <button class="boto border-0 mr-1 py-0 px-2" style="font-size:1rem;cursor:pointer" (click)="canviarVersio('info')">Back</button>
+            <button class="boto border-0 mr-1 py-0 px-2" style="font-size:1rem;cursor:pointer" (click)="canviarVersio('details')">Full</button>
+        </div> -->
+    }
 
 </div>

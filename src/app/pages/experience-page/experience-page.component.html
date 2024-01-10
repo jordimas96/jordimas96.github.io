@@ -1,30 +1,29 @@
 <div class="content" [style.margin-top.px]="m.u.getAlturaAppbar()">
     <div class="title h1 mb-5 ocult-animacio h">
-        <ng-container *ngIf="m.ca()">Experiència professional</ng-container>
-        <ng-container *ngIf="m.es()">Experiencia profesional</ng-container>
-        <ng-container *ngIf="m.en()">Professional experience</ng-container>
+        @if (m.ca()) { Experiència professional }
+        @if (m.es()) { Experiencia profesional }
+        @if (m.en()) { Professional experience }
     </div>
 
-    <ng-container *ngIf="m.front() || m.full()">
-        <!-- <app-orange class="d-block mb-6" /> -->
+    @if (m.front() || m.full()) {
+        <app-orange class="d-block mb-6" />
         <app-in2art class="d-block mb-6" />
         <app-matic class="d-block mb-6" />
         <app-indra class="d-block mb-6" />
         <app-nexxia class="d-block mb-6" />
-    </ng-container>
-    <ng-container *ngIf="m.back()">
-        <!-- <app-orange class="d-block mb-6" /> -->
+    } @else {
+        <app-orange class="d-block mb-6" />
         <app-indra class="d-block mb-6" />
         <app-matic class="d-block mb-6" />
         <app-in2art class="d-block mb-6" />
         <app-nexxia class="d-block mb-6" />
-    </ng-container>
+    }
 
     <div class="mb-6 text-center ocult-animacio h">
         <button class="boto botoSeguentPagina m-auto" (click)="m.u.getDocument().querySelector('#projects').click()">
-            <ng-container *ngIf="m.ca()">Projectes</ng-container>
-            <ng-container *ngIf="m.es()">Proyectos</ng-container>
-            <ng-container *ngIf="m.en()">Projects</ng-container>
+            @if (m.ca()) { Projectes }
+            @if (m.es()) { Proyectos }
+            @if (m.en()) { Projects }
         </button>
     </div>
     

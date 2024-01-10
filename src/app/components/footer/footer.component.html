@@ -16,12 +16,12 @@
             <img src="assets/icons/contact/email.png" alt="Email" title="Email me!" class="title-icon p-1 rounded-2">
         </a>
     </div>
-    
 
-    
+
+
     <div class="developed-by" [style]="'color:hsl('+colorFirma+'deg 100% 86.47% / 70%);'">
-        <ng-container *ngIf="m.ca()"> - Desenvolupat per Jordi Mas - </ng-container>
-        <ng-container *ngIf="m.es()"> - Desarrollado por Jordi Mas - </ng-container>
-        <ng-container *ngIf="m.en()"> - Developed by Jordi Mas - </ng-container>
+        @if (m.ca()) { - Desenvolupat per Jordi Mas - }
+        @if (m.es()) { - Desarrollado por Jordi Mas - }
+        @if (m.en()) { - Developed by Jordi Mas - }
     </div>
 </footer>

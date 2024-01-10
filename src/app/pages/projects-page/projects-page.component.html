@@ -1,8 +1,8 @@
 <div class="content" [style.margin-top.px]="m.u.getAlturaAppbar()">
     <div class="title h1 mb-5 ocult-animacio h">
-        <ng-container *ngIf="m.ca()">Projectes personals</ng-container>
-        <ng-container *ngIf="m.es()">Proyectos personales</ng-container>
-        <ng-container *ngIf="m.en()">Personal projects</ng-container>
+        @if (m.ca()) { Projectes personals }
+        @if (m.es()) { Proyectos personales }
+        @if (m.en()) { Personal projects }
     </div>
 
     <app-android-apps />
@@ -13,9 +13,9 @@
 
     <div class="mb-6 text-center ocult-animacio h">
         <button class="boto botoSeguentPagina m-auto" (click)="m.u.getDocument().querySelector('#home').click()">
-            <ng-container *ngIf="m.ca()">Inici</ng-container>
-            <ng-container *ngIf="m.es()">Inicio</ng-container>
-            <ng-container *ngIf="m.en()">Home</ng-container>
+            @if (m.ca()) { Inici }
+            @if (m.es()) { Inicio }
+            @if (m.en()) { Home }
         </button>
     </div>
 

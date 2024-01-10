@@ -1,18 +1,18 @@
 <div class="contenidor">
     <button id="home" routerLinkActive="selected" [routerLinkActiveOptions]="{exact: true}" [routerLink]="['/home', m.areaCodi]" (click)="onTabClick($event.target)">
-        <ng-container *ngIf="m.ca()">Inici</ng-container>
-        <ng-container *ngIf="m.es()">Inicio</ng-container>
-        <ng-container *ngIf="m.en()">Home</ng-container>
+        @if (m.ca()) { Inici }
+        @if (m.es()) { Inicio }
+        @if (m.en()) { Home }
     </button>
     <button id="experience" routerLinkActive="selected" [routerLinkActiveOptions]="{exact: true}" [routerLink]="['/experience', m.areaCodi]" (click)="onTabClick($event.target)">
-        <ng-container *ngIf="m.ca()">Experiència</ng-container>
-        <ng-container *ngIf="m.es()">Experiencia</ng-container>
-        <ng-container *ngIf="m.en()">Experience</ng-container>
+        @if (m.ca()) { Experiència }
+        @if (m.es()) { Experiencia }
+        @if (m.en()) { Experience }
     </button>
     <button id="projects" routerLinkActive="selected" [routerLinkActiveOptions]="{exact: true}" [routerLink]="['/projects', m.areaCodi]" (click)="onTabClick($event.target)">
-        <ng-container *ngIf="m.ca()">Projectes</ng-container>
-        <ng-container *ngIf="m.es()">Proyectos</ng-container>
-        <ng-container *ngIf="m.en()">Projects</ng-container>
+        @if (m.ca()) { Projectes }
+        @if (m.es()) { Proyectos }
+        @if (m.en()) { Projects }
     </button>
     
     <div #pill class="pill"></div>
