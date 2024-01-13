@@ -16,6 +16,17 @@
         backdrop-filter: blur(20px) saturate(1);
     }
 
+    &.ocult-animacio {
+        transform: translateY(-30px);
+        opacity: 0;
+        transition: var(--transicio-ocult-animacio);
+    
+        &.mostrat {
+            transform: translate(0);
+            opacity: 1;
+        }
+    }
+
     .botonsDarkMode {
         display: flex;
         align-items: center;

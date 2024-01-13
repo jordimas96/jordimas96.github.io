@@ -262,20 +262,38 @@ img, .noselect {
 
 
 // ANIMACIONS //
+// .ocult-animacio {
+//     &.v { transform: translateY(-30px); }
+//     &.h { transform: translateX(-30px); }
+//     &.-v { transform: translateY(30px); }
+//     &.-h { transform: translateX(30px); }
+//     opacity: 0;
+//     transition: var(--transicio-ocult-animacio);
+
+//     &.mostrat {
+//         transform: translate(0);
+//         opacity: 1;
+//     }
+// }
+// app-skill { @extend .ocult-animacio, .-v; }
 .ocult-animacio {
-    &.v { transform: translateY(-30px); }
-    &.h { transform: translateX(-30px); }
-    &.-v { transform: translateY(30px); }
-    &.-h { transform: translateX(30px); }
+    // Estil iPhone control center //
+    --a: translate(0px);
+    &.v { --a: translateY(0%); transform-origin: top; }
+    &.h { --a: translateX(10%); transform-origin: left; }
+    &.-v { --a: translateY(-0%); transform-origin: bottom; }
+    &.-h { --a: translateX(-10%); transform-origin: right; }
+
+    // transform-origin: top;
+    transform: var(--a) scale(0.8);
     opacity: 0;
     transition: var(--transicio-ocult-animacio);
 
     &.mostrat {
-        transform: translate(0);
+        transform: translate(0) scale(1);
         opacity: 1;
     }
 }
-app-skill { @extend .ocult-animacio, .-v; }
 
 
 // #region MEDIA QUERIES //

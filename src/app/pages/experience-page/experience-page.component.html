@@ -1,25 +1,25 @@
 <div class="content" [style.margin-top.px]="m.u.getAlturaAppbar()">
-    <div class="title h1 mb-5 ocult-animacio h">
+    <div class="title h1 mb-5 ocult-animacio v">
         @if (m.ca()) { Experiència professional }
         @if (m.es()) { Experiencia profesional }
         @if (m.en()) { Professional experience }
     </div>
 
     @if (m.front() || m.full()) {
-        <app-orange class="d-block mb-6" />
-        <app-in2art class="d-block mb-6" />
-        <app-matic class="d-block mb-6" />
-        <app-indra class="d-block mb-6" />
-        <app-nexxia class="d-block mb-6" />
+        @defer (on viewport) { <app-orange /> } @placeholder { <div id="orange" style="height:600px"></div> }
+        @defer (on viewport) { <app-in2art /> } @placeholder { <div id="in2art" style="height:600px"></div> }
+        @defer (on viewport) { <app-matic />  } @placeholder { <div id="matic" style="height:600px"></div> }
+        @defer (on viewport) { <app-indra />  } @placeholder { <div id="indra" style="height:650px"></div> }
+        @defer (on viewport) { <app-nexxia /> } @placeholder { <div id="nexxia" style="height:300px"></div> }
     } @else {
-        <app-orange class="d-block mb-6" />
-        <app-indra class="d-block mb-6" />
-        <app-matic class="d-block mb-6" />
-        <app-in2art class="d-block mb-6" />
-        <app-nexxia class="d-block mb-6" />
+        @defer (on viewport) { <app-orange /> } @placeholder { <div id="orange" style="height:600px"></div> }
+        @defer (on viewport) { <app-indra />  } @placeholder { <div id="indra" style="height:650px"></div> }
+        @defer (on viewport) { <app-matic />  } @placeholder { <div id="matic" style="height:600px"></div> }
+        @defer (on viewport) { <app-in2art /> } @placeholder { <div id="in2art" style="height:600px"></div> }
+        @defer (on viewport) { <app-nexxia /> } @placeholder { <div id="nexxia" style="height:300px"></div> }
     }
 
-    <div class="mb-6 text-center ocult-animacio h">
+    <div class="mb-6 text-center ocult-animacio v">
         <button class="boto botoSeguentPagina m-auto" (click)="m.u.getDocument().querySelector('#projects').click()">
             @if (m.ca()) { Projectes }
             @if (m.es()) { Proyectos }

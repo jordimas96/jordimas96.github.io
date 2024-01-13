@@ -23,6 +23,17 @@ footer {
             img.title-icon {
                 height: 2.2rem;
             }
+            
+            &.ocult-animacio {
+                transform: translateY(30px);
+                opacity: 0;
+                transition: var(--transicio-ocult-animacio);
+            
+                &.mostrat {
+                    transform: translate(0);
+                    opacity: 1;
+                }
+            }
         }
     }
     .developed-by {

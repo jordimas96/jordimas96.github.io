@@ -26,11 +26,8 @@ export class ProjectsPageComponent {
     }
 
     afterRootFadeIn() {
-        $(".ocult-animacio").each((i, e) => {
+        $(".ocult-animacio:not(.chip):not(.chip)").each((i, e) => {
             Utils.fadeIn(e, i * 100);
-        });
-        $("app-skill").each((i, e) => {
-            Utils.fadeIn(e, i * 20 + 200);
         });
         
 

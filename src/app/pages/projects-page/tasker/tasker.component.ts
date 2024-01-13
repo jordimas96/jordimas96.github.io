@@ -1,13 +1,19 @@
-import { Component } from '@angular/core';
+import { Component, ElementRef } from '@angular/core';
 import { MainService } from 'src/app/services/main.service';
+import { CardComponent } from '../../../components/card/card.component';
 
 @Component({
     selector: 'app-tasker',
     templateUrl: './tasker.component.html',
     styleUrls: ['./tasker.component.scss', '../projects-page.scss']
 })
-export class TaskerComponent {
+export class TaskerComponent extends CardComponent {
 
-    constructor(public m: MainService) { }
-
+    constructor(
+        public override m: MainService,
+        public override rootElement: ElementRef,
+    ) {
+        super(m, rootElement);
+    }
+    
 }

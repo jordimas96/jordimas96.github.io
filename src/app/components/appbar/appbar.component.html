@@ -1,4 +1,4 @@
-<div class="appbar row no-gutters ocult-animacio v" [ngClass]="{'shadow-3':m.scroll>0&&!m.modeFosc, 'scrolled':m.scroll>0}">
+<div class="appbar row no-gutters ocult-animacio" [ngClass]="{'shadow-3':m.scroll>0&&!m.modeFosc, 'scrolled':m.scroll>0}">
     <div class="botonsDarkMode col-6 col-md-2 order-1 order-md-1">
         <button (click)="animacioDarkMode('dark');" class="botoDarkMode" [title]="m.modeFosc ? 'Light mode' : 'Dark mode'">
             <i *ngIf="m.modeFosc" class="fa-solid fa-sun"></i>

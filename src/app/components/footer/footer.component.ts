@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, ElementRef } from '@angular/core';
 import { Utils } from '../../services/utils.service';
 import * as $ from "jquery";
 import { MainService } from 'src/app/services/main.service';
@@ -18,7 +18,10 @@ export class FooterComponent {
     colorFirma = Math.floor(Math.random() * 360);
     
 
-    constructor(public m: MainService) {
+    constructor(
+        public m: MainService,
+        public rootElement: ElementRef,
+    ) {
         // m.footer = this;
     }
 
@@ -28,7 +31,7 @@ export class FooterComponent {
     }
 
     afterRootFadeIn() {
-        $(".contact-icons a").each((i, e) => {
+        $(this.rootElement.nativeElement).find(".contact-icons a").each((i, e) => {
             Utils.fadeIn(e, i * 100);
         });
     }

@@ -46,12 +46,14 @@ export class HomePageComponent {
     }
 
     afterRootFadeIn() {
-        $(".content .ocult-animacio:not(app-skill)").each((i, e) => {
+        // Home - Bio i Cards //
+        $(".content .ocult-animacio:not(.chip)").each((i, e) => {
             Utils.fadeIn(e, i * 100);
         });
 
-        $(".content .skills app-skill").each((i, e) => {
-            Utils.fadeIn(e, i * 20 + 400);
+        // Home - Skills //
+        $(".content .ocult-animacio.chip").each((i, e) => {
+            Utils.fadeIn(e, i * 10 + 400);
         });
     }
 
