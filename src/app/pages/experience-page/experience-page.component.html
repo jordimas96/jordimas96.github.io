@@ -6,17 +6,17 @@
     </div>
 
     @if (m.front() || m.full()) {
-        @defer (on viewport) { <app-orange /> } @placeholder { <div id="orange" style="height:600px"></div> }
-        @defer (on viewport) { <app-in2art /> } @placeholder { <div id="in2art" style="height:600px"></div> }
-        @defer (on viewport) { <app-matic />  } @placeholder { <div id="matic" style="height:600px"></div> }
-        @defer (on viewport) { <app-indra />  } @placeholder { <div id="indra" style="height:650px"></div> }
-        @defer (on viewport) { <app-nexxia /> } @placeholder { <div id="nexxia" style="height:300px"></div> }
+        <app-orange />
+        <app-in2art />
+        <app-matic />
+        <app-indra />
+        <app-nexxia />
     } @else {
-        @defer (on viewport) { <app-orange /> } @placeholder { <div id="orange" style="height:600px"></div> }
-        @defer (on viewport) { <app-indra />  } @placeholder { <div id="indra" style="height:650px"></div> }
-        @defer (on viewport) { <app-matic />  } @placeholder { <div id="matic" style="height:600px"></div> }
-        @defer (on viewport) { <app-in2art /> } @placeholder { <div id="in2art" style="height:600px"></div> }
-        @defer (on viewport) { <app-nexxia /> } @placeholder { <div id="nexxia" style="height:300px"></div> }
+        <app-orange />
+        <app-indra />
+        <app-matic />
+        <app-in2art />
+        <app-nexxia />
     }
 
     <div class="mb-6 text-center ocult-animacio v">

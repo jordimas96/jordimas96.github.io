@@ -1,4 +1,4 @@
-import { Component, ViewChild } from '@angular/core';
+import { Component } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { MainService } from 'src/app/services/main.service';
 import { Utils } from 'src/app/services/utils.service';
@@ -9,9 +9,6 @@ import { Utils } from 'src/app/services/utils.service';
     styleUrls: ['./projects-page.component.scss']
 })
 export class ProjectsPageComponent {
-
-    @ViewChild('game') game;
-    public mostrarWidgetJoc = false;
 
     constructor(public m: MainService, private route: ActivatedRoute) { m.llegirParams(this.route.params); }
 
@@ -26,7 +23,7 @@ export class ProjectsPageComponent {
     }
 
     afterRootFadeIn() {
-        $(".ocult-animacio:not(.chip):not(.chip)").each((i, e) => {
+        $(".ocult-animacio:not(.group):not(.chip)").each((i, e) => {
             Utils.fadeIn(e, i * 100);
         });
         

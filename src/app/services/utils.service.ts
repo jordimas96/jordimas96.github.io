@@ -96,6 +96,11 @@ export class Utils {
             $(selector).addClass("mostrat");
         }, retard);
     }
+    public static fadeOut(selector, retard = 0) {
+        setTimeout(() => {
+            $(selector).removeClass("mostrat");
+        }, retard);
+    }
 
 
 

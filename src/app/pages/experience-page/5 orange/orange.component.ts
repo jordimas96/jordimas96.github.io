@@ -1,4 +1,4 @@
-import { Component, ViewEncapsulation, ElementRef } from '@angular/core';
+import { Component, ElementRef } from '@angular/core';
 import { CardComponent } from '../../../components/card/card.component';
 import { MainService } from 'src/app/services/main.service';
 
