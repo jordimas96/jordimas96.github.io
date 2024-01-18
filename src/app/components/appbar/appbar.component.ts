@@ -186,8 +186,11 @@ export class AppbarComponent {
         const horaSeguent = new Date(ara.getFullYear(), ara.getMonth(), ara.getDate(), ara.getHours() + 1, 0, 0, 0);
 
         setTimeout(() => {
+            let temaVell = this.m.tema;
             this.setTemaSegonsHora((ara.getHours() + 1) % 24);
             this.actTema();
+            if (temaVell != this.m.tema)
+                console.log("Theme changed because it's " + (ara.getHours()) + ":00");
         }, horaSeguent.getTime() - ara.getTime());
     }
 
