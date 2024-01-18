@@ -107,6 +107,11 @@ body {
     margin-left: 0.5rem;
 }
 
+.botoText {
+    background-color: transparent;
+    color: var(--text);
+}
+
 .botoSeguentPagina {
     padding: 2rem 4rem;
     border-radius: 2rem;
@@ -323,11 +328,14 @@ img, .noselect {
     .boto {
         transition: border-radius 0.3s ease, var(--transicio-colors);
     }
-    .boto:hover {
+    .boto:not(.botoText):hover {
         background-color: var(--color-l-9) !important;
     }
-    ::ng-deep .light .boto:hover {
+    ::ng-deep .light .boto:not(.botoText):hover {
         background-color: var(--color-l-3) !important;
+    }
+    .boto.botoText:hover {
+        color: var(--color-7);
     }
 }
 // Pantalla Mòbil //

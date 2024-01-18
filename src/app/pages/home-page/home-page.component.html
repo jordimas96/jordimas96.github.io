@@ -166,7 +166,7 @@
                 </div>
             </div>
 
-            <div class="col-12 col-sm-6 mt-4 order-3">
+            <div class="col-12 col-sm-12 mt-4 order-3">
                 <div class="titol-tipus-llenguatge mb-2">
                     @if (m.ca()) { Eines de desenvolupament }
                     @if (m.es()) { Herramientas de desarrollo }
@@ -203,40 +203,53 @@
                 </div>
             </div>
 
-            <!-- <div class="col-12 col-sm-6 mt-4">
-                <div class="titol-tipus-llenguatge mb-2">
-                    @if (m.ca()) { Eines de virtualització i SO }
-                    @if (m.es()) { Herramientas de virtualización y SO }
-                    @if (m.en()) { Virtualization tools and OS }
+            @defer (on interaction) {
+                <div class="col-12 col-sm-6 mt-4 order-4">
+                    <div class="titol-tipus-llenguatge mb-2">
+                        @if (m.ca()) { Eines de virtualització i SO }
+                        @if (m.es()) { Herramientas de virtualización y SO }
+                        @if (m.en()) { Virtualization tools and OS }
+                    </div>
+                    <div class="skills">
+                        <app-skill n="VMware"/>
+                        <app-skill n="VirtualBox"/>
+                        <app-skill n="Windows"/>
+                        <app-skill n="Windows Server"/>
+                        <app-skill n="Ubuntu"/>
+                        <app-skill n="Debian"/>
+                        <app-skill n="Red Hat"/>
+                        <app-skill n="Fedora"/>
+                        <app-skill n="macOS"/>
+                        <app-skill n="Tails"/>
+                        <app-skill n="zOS/MVS"/>
+                    </div>
                 </div>
-                <div class="skills">
-                    <app-skill n="VMware"/>
-                    <app-skill n="VirtualBox"/>
-                    <app-skill n="Windows"/>
-                    <app-skill n="Windows Server"/>
-                    <app-skill n="Ubuntu"/>
-                    <app-skill n="Debian"/>
-                    <app-skill n="Red Hat"/>
-                    <app-skill n="Fedora"/>
-                    <app-skill n="macOS"/>
-                    <app-skill n="Tails"/>
-                    <app-skill n="zOS/MVS"/>
-                </div>
-            </div> -->
 
-            <!-- <div class="col-12 col-sm-6 mt-4">
-                <div class="titol-tipus-llenguatge mb-2">
-                    @if (m.ca()) { CMS i frameworks web }
-                    @if (m.es()) { CMS y frameworks web }
-                    @if (m.en()) { CMS and web frameworks }
+                <div class="col-12 col-sm-6 mt-4 order-5">
+                    <div class="titol-tipus-llenguatge mb-2">
+                        @if (m.ca()) { CMS i frameworks web }
+                        @if (m.es()) { CMS y frameworks web }
+                        @if (m.en()) { CMS and web frameworks }
+                    </div>
+                    <div class="skills">
+                        <app-skill n="Joomla"/>
+                        <app-skill n="K2"/>
+                        <app-skill n="Akeeba Backup"/>
+                        <app-skill n="JCE FileManager"/>
+                    </div>
                 </div>
-                <div class="skills">
-                    <app-skill n="Joomla"/>
-                    <app-skill n="K2"/>
-                    <app-skill n="Akeeba Backup"/>
-                    <app-skill n="JCE FileManager"/>
+            }
+            @placeholder {
+                <div class="col-12 col-sm-12 mt-4 order-4 text-center">
+                    <button class="boto botoText botoVeureMes">
+                        @if (m.ca()) { Veure més }
+                        @if (m.es()) { Ver más }
+                        @if (m.en()) { See more }
+                        <br>
+                        <i class="fa-solid fa-chevron-down"></i>
+                    </button>
                 </div>
-            </div> -->
+            }
             
         </div>
         
@@ -247,6 +260,7 @@
             @if (m.ca()) { Experiència }
             @if (m.es()) { Experiencia }
             @if (m.en()) { Experience }
+            <i class="fa-solid fa-chevron-right ml-2"></i>
         </button>
     </div>
     

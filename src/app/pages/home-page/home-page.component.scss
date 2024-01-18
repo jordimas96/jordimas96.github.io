@@ -71,6 +71,22 @@
         margin: -0.25rem 0;
     }
 }
+
+.botoVeureMes {
+    display: inline;
+    font-size: 1.6rem;
+
+    i {
+        display: block;
+        transition: transform 0.3s ease;
+    }
+
+    &:hover {
+        i {
+            transform: translateY(0.5rem);
+        }
+    }
+}
 // PC //
 @media (pointer: fine) {
     .div-foto:hover {
