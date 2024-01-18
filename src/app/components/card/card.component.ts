@@ -3,7 +3,7 @@ import { MainService } from 'src/app/services/main.service';
 import { Utils } from 'src/app/services/utils.service';
 
 @Component({
-    templateUrl: './card.component.html',
+    template: '',
 })
 export class CardComponent {
 

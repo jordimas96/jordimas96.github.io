@@ -41,7 +41,7 @@ export class NavegacioTabComponent {
 
     onTabClick(target) {
         this.botoSeleccionat = target;
-        this.m.u.scroll(0);
+        Utils.scroll(0);
 
         this.actPosPill(true);
     }
@@ -49,7 +49,7 @@ export class NavegacioTabComponent {
     async onBackPressed() {
         await Utils.wait(0);
         this.botoSeleccionat = document.querySelector("button.selected");
-        this.m.u.scroll(0);
+        Utils.scroll(0);
 
         this.actPosPill(true);
     }

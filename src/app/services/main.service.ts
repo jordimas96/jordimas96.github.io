@@ -35,7 +35,7 @@ export class MainService {
         public route: ActivatedRoute,
         public gas: GoogleAnalyticsService
     ) {
-        this.u = Utils;
+        this.u = Utils; // TODO: pendent de portar a dalt
         
         // Canviar icona NOMÉS al debugar //
         if (this.debug) {
@@ -65,6 +65,7 @@ export class MainService {
     ca() { return this.idioma == "ca" }
     es() { return this.idioma == "es" }
     en() { return this.idioma == "en" }
+    getIdiomaNum() { return ["ca", "es", "en"].indexOf(this.idioma) }
 
     public log(t) { console.log(t); }
     public logDebug(t) { if (this.debug) console.log(t); }

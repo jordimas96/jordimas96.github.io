@@ -1,14 +1,13 @@
 import { Component } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
-import { MainService } from 'src/app/services/main.service';
 import { Utils } from 'src/app/services/utils.service';
+import { PageComponent } from './../page/page.component';
 
 @Component({
     selector: 'app-home-page',
     templateUrl: './home-page.component.html',
     styleUrls: ['./home-page.component.scss']
 })
-export class HomePageComponent {
+export class HomePageComponent extends PageComponent {
 
     public salutacions = {
         "ca": [
@@ -27,16 +26,10 @@ export class HomePageComponent {
             "Good evening!",
         ],
     };
-    public nomCarpetaCV = {
-        "ca": "CA",
-        "es": "ES",
-        "en": "EN",
-    };
-
-    constructor(public m: MainService, private route: ActivatedRoute) { m.llegirParams(this.route.params); }
-
-    async ngOnInit() {
-        this.m.afterRootFadeIn(this.afterRootFadeIn.bind(this));
+    
+    
+    override async ngOnInit() {
+        super.ngOnInit();
 
         // Moviment i animació fons //
         $("body").css({ "background-position": "top left" });
@@ -45,7 +38,9 @@ export class HomePageComponent {
         this.m.gas.pageView("/home");
     }
 
-    afterRootFadeIn() {
+    override afterRootFadeIn() {
+        super.afterRootFadeIn();
+
         // Home - Bio i Cards //
         $(".content .ocult-animacio:not(.chip)").each((i, e) => {
             Utils.fadeIn(e, i * 100);
@@ -60,7 +55,7 @@ export class HomePageComponent {
 
     getSalutacioSegonsHora() {
         let horaActual = new Date().getHours();
-        let index;
+        let index: number;
 
         const primeraHoraMati = 5;
         const primeraHoraTarda = 15;
@@ -77,6 +72,6 @@ export class HomePageComponent {
     }
 
     getRutaCV() {
-        return `assets/CV/${this.nomCarpetaCV[this.m.idioma]}/CV Jordi Mas Parramon.pdf`;
+        return `assets/CV/${this.m.idioma.toUpperCase()}/CV Jordi Mas Parramon.pdf`;
     }
 }

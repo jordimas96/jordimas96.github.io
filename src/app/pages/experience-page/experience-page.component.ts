@@ -1,19 +1,16 @@
 import { Component } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
-import { MainService } from 'src/app/services/main.service';
 import { Utils } from 'src/app/services/utils.service';
+import { PageComponent } from '../page/page.component';
 
 @Component({
     selector: 'app-experience-page',
     templateUrl: './experience-page.component.html',
     styleUrls: ['./experience-page.component.scss']
 })
-export class ExperiencePageComponent {
+export class ExperiencePageComponent extends PageComponent {
 
-    constructor(public m: MainService, private route: ActivatedRoute) { m.llegirParams(this.route.params); }
-
-    async ngOnInit() {
-        this.m.afterRootFadeIn(this.afterRootFadeIn.bind(this));
+    override async ngOnInit() {
+        super.ngOnInit();
 
         // Moviment i animació fons //
         $("body").css({ "background-position": "center center" });
@@ -22,7 +19,9 @@ export class ExperiencePageComponent {
         this.m.gas.pageView(window.location.pathname);
     }
 
-    afterRootFadeIn() {
+    override afterRootFadeIn() {
+        super.afterRootFadeIn();
+
         $(".ocult-animacio:not(.group):not(.chip)").each((i, e) => {
             Utils.fadeIn(e, i * 100);
         });
