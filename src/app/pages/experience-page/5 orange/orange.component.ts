@@ -1,6 +1,6 @@
 import { Component, ElementRef } from '@angular/core';
-import { CardComponent } from '../../../components/card/card.component';
 import { MainService } from 'src/app/services/main.service';
+import { CardComponent } from '../../../components/card/card.component';
 
 @Component({
     selector: 'app-orange',

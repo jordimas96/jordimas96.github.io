@@ -1,4 +1,4 @@
-import { Directive, ElementRef, Renderer2, AfterViewInit, OnDestroy } from '@angular/core';
+import { AfterViewInit, Directive, ElementRef, OnDestroy, Renderer2 } from '@angular/core';
 
 @Directive({
     selector: '[smoothMove]'

@@ -1,6 +1,6 @@
 import { Component, HostListener, Input } from '@angular/core';
 import { MainService } from 'src/app/services/main.service';
-import { Utils } from 'src/app/services/utils.service';
+import { Utils } from 'src/app/shared/utils';
 
 @Component({
     selector: 'app-imatge-scroll',

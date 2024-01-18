@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { Utils } from 'src/app/services/utils.service';
+import { Utils } from 'src/app/shared/utils';
 import { PageComponent } from '../page/page.component';
 
 @Component({

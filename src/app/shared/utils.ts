@@ -1,13 +1,7 @@
-import { Injectable } from '@angular/core';
 
-@Injectable({
-    providedIn: 'root'
-})
+
 export class Utils {
-
-    constructor() { }
-
-
+    
     // Utils web //
 
     public static getDocument() { return document; }

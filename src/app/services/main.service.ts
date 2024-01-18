@@ -1,8 +1,8 @@
-import { GoogleAnalyticsService } from 'ngx-google-analytics';
 import { Injectable } from "@angular/core";
+import { ActivatedRoute, Router } from '@angular/router';
+import { GoogleAnalyticsService } from 'ngx-google-analytics';
 import { AppbarComponent } from "../components/appbar/appbar.component";
-import { Utils } from "./utils.service";
-import { Router, ActivatedRoute } from '@angular/router';
+import { Utils } from "../shared/utils";
 
 // https://developerslogblog.wordpress.com/2019/04/23/how-to-use-angular-services-to-share-data-between-components/ //
 

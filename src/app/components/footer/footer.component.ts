@@ -1,7 +1,7 @@
 import { Component, ElementRef } from '@angular/core';
-import { Utils } from '../../services/utils.service';
 import * as $ from "jquery";
 import { MainService } from 'src/app/services/main.service';
+import { Utils } from '../../shared/utils';
 
 
 @Component({
