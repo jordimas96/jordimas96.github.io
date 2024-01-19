@@ -1,0 +1,55 @@
+// ANIMACIONS //
+// v1
+// .ocult-animacio {
+//     &.v { transform: translateY(-30px); }
+//     &.h { transform: translateX(-30px); }
+//     &.-v { transform: translateY(30px); }
+//     &.-h { transform: translateX(30px); }
+//     opacity: 0;
+//     transition: transform 0.3s ease, opacity 0.5s ease;
+
+//     &.mostrat {
+//         transform: translate(0);
+//         opacity: 1;
+//     }
+// }
+// app-skill { @extend .ocult-animacio, .-v; }
+
+// Original 2a revisio (abans de appMostrarAmbAnimacio)
+// .ocult-animacio {
+//     // TODO: hauria de ser el normal -> normal, v -> appbar, -v -> footer icons
+//     // Estil iPhone control center //
+//     --a: translate(0px);
+//     &.v { --a: translateY(0%); transform-origin: top; }
+//     &.h { --a: translateX(10%); transform-origin: left; }
+//     &.-v { --a: translateY(-0%); transform-origin: bottom; }
+//     &.-h { --a: translateX(-10%); transform-origin: right; }
+
+//     transform: var(--a) scale(0.8);
+//     opacity: 0;
+
+//     &.mostrat {
+//         transform: translate(0) scale(1);
+//         opacity: 1;
+
+//         transition: transform 0.3s ease, opacity 0.5s ease;
+//     }
+// }
+
+.ocult-animacio {
+    // Estil iPhone control center //
+    --trans: translate(0px) scale(0.8);
+    transform-origin: top;
+    &.v { --trans: translateY(-30px); transform-origin: center; }
+    &.-v { --trans: translateY(30px); transform-origin: center; }
+
+    transform: var(--trans);
+    opacity: 0;
+
+    &.mostrat {
+        transform: translate(0) scale(1);
+        opacity: 1;
+
+        transition: transform 0.3s ease, opacity 0.5s ease;
+    }
+}

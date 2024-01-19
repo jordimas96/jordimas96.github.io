@@ -1,4 +1,4 @@
-<div id="tasker" [class.mostrat]="mostrat" class="group mb-6 ocult-animacio v">
+<div id="tasker" class="group mb-6" appMostrarAmbAnimacio>
     <div class="subtitle mb-2 g-2">
         @if (m.ca()) { Projectes TaskerNet }
         @if (m.es()) { Proyectos TaskerNet }
@@ -20,14 +20,14 @@
     </p>
 
     <div class="botons mt-4 mb-5">
-        <a href="https://taskernet.com/?user=AS35m8mRntivpH1gAMw7ymN993wqjIo0bD6%2FSevikpiMYXceQJ%2BATvjOUxxvfzAbynKD" class="boto pl-3">
+        <a href="https://taskernet.com/?user=AS35m8mRntivpH1gAMw7ymN993wqjIo0bD6%2FSevikpiMYXceQJ%2BATvjOUxxvfzAbynKD" class="boto pl-3" appMostrarAmbAnimacio>
             @if (m.ca()) { Els meus projectes }
             @if (m.es()) { Mis proyectos }
             @if (m.en()) { My projects }
             <img src="assets/icons/tasker.png" alt="Tasker" class="logo ombra">
         </a>
 
-        <a href="https://play.google.com/store/apps/details?id=net.dinglisch.android.taskerm" class="boto pl-3">
+        <a href="https://play.google.com/store/apps/details?id=net.dinglisch.android.taskerm" class="boto pl-3" appMostrarAmbAnimacio>
             @if (m.ca()) { Descarregar Tasker }
             @if (m.es()) { Descargar Tasker }
             @if (m.en()) { Download Tasker }

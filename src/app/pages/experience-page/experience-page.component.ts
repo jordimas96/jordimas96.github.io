@@ -1,5 +1,4 @@
 import { Component } from '@angular/core';
-import { Utils } from 'src/app/shared/utils';
 import { PageComponent } from '../page/page.component';
 
 @Component({
@@ -21,10 +20,6 @@ export class ExperiencePageComponent extends PageComponent {
 
     override afterRootFadeIn() {
         super.afterRootFadeIn();
-
-        $(".ocult-animacio:not(.group):not(.chip)").each((i, e) => {
-            Utils.fadeIn(e, i * 100);
-        });
     }
 
 }

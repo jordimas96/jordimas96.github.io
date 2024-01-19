@@ -9,22 +9,11 @@
     z-index: 1000;
     background: none;
     backdrop-filter: blur(20px) saturate(1.5);
-    transition: box-shadow 0.3s ease, var(--transicio-ocult-animacio);
+    transition: box-shadow 0.3s ease, var(--transicio-ocult-animacio) !important;
 
     &:not(.scrolled) {
         // background: var(--fons-50);
         backdrop-filter: blur(20px) saturate(1);
-    }
-
-    &.ocult-animacio {
-        transform: translateY(-30px);
-        opacity: 0;
-        transition: var(--transicio-ocult-animacio);
-    
-        &.mostrat {
-            transform: translate(0);
-            opacity: 1;
-        }
     }
 
     .botonsDarkMode {

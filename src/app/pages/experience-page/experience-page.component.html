@@ -1,5 +1,5 @@
 <div class="content" [style.margin-top.px]="m.u.getAlturaAppbar()">
-    <div class="title h1 mb-5 ocult-animacio v">
+    <div class="title h1 mb-5" appMostrarAmbAnimacio>
         @if (m.ca()) { Experiència professional }
         @if (m.es()) { Experiencia profesional }
         @if (m.en()) { Professional experience }
@@ -19,7 +19,7 @@
         <app-nexxia />
     }
 
-    <div class="mb-6 text-center ocult-animacio v">
+    <div class="mb-6 text-center" appMostrarAmbAnimacio>
         <button class="boto botoSeguentPagina m-auto" (click)="m.u.getDocument().querySelector('#projects').click()">
             @if (m.ca()) { Projectes }
             @if (m.es()) { Proyectos }

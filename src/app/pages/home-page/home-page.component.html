@@ -1,15 +1,15 @@
 <div class="content" [style.margin-top.px]="m.u.getAlturaAppbar()">
     <!-- <div class="title h1 mt-0 mb-4">Jordi Mas Parramon</div> -->
 
-    <div class="group mt-5 mb-6 ocult-animacio v" id="bio">
+    <div class="group mt-5 mb-6" id="bio">
         <div class="row no-gutters">
-            <div class="col-5 col-sm-4 p-3 p-sm-4 ocult-animacio v">
+            <div class="col-5 col-sm-4 p-3 p-sm-4" appMostrarAmbAnimacio>
                 <div class="div-foto shadow-2-l">
                     <!-- <app-imatge-scroll src="assets/Foto carnet 2020.jpg"></app-imatge-scroll> -->
                     <img src="assets/Foto carnet 2020.jpg" alt="Foto" class="foto-carnet">
                 </div>
             </div>
-            <div class="div-text col-7 col-sm-8 px-sm-4 pt-sm-4 ocult-animacio v">
+            <div class="div-text col-7 col-sm-8 px-sm-4 pt-sm-4" appMostrarAmbAnimacio>
 
                 <div class="linies">
                     <div class="bondia mb-2">{{getSalutacioSegonsHora()}}</div>
@@ -19,9 +19,7 @@
                             @if (m.es()) { Me llamo }
                             @if (m.en()) { My name is }
                         </span>
-                        @if (m.esPantallaMobil()) {
-                            <br>
-                        }
+                        @if (m.esPantallaMobil()) { <br> }
                         Jordi Mas Parramon
                     </div>
                     <div class="programador">
@@ -104,7 +102,7 @@
                 }
             }
 
-            <a [href]="getRutaCV()" class="boto mt-4 pl-3">
+            <a [href]="getRutaCV()" class="boto mt-4 pl-3" appMostrarAmbAnimacio>
                 @if (m.ca()) { Obrir CV }
                 @if (m.es()) { Abrir CV }
                 @if (m.en()) { Open Resume }
@@ -115,7 +113,7 @@
     
 
     <!-- Skills -->
-    <div id="llenguatges" class="group llenguatges mb-6 ocult-animacio v">
+    <div id="llenguatges" class="group llenguatges mb-6" appMostrarAmbAnimacio>
         <div class="subtitle mb-2">
             @if (m.ca()) { Habilitats en programació }
             @if (m.es()) { Habilidades en programación }
@@ -241,7 +239,7 @@
             }
             @placeholder {
                 <div class="col-12 col-sm-12 mt-4 order-4 text-center">
-                    <button class="boto botoText botoVeureMes">
+                    <button class="boto botoText botoVeureMes" appMostrarAmbAnimacio>
                         @if (m.ca()) { Veure més }
                         @if (m.es()) { Ver más }
                         @if (m.en()) { See more }
@@ -255,7 +253,7 @@
         
     </div>
 
-    <div class="mb-6 text-center ocult-animacio v">
+    <div class="mb-6 text-center" appMostrarAmbAnimacio>
         <button class="boto botoSeguentPagina m-auto" (click)="m.u.getDocument().querySelector('#experience').click()">
             @if (m.ca()) { Experiència }
             @if (m.es()) { Experiencia }

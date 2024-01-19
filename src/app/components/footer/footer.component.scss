@@ -22,17 +22,6 @@ footer {
             img.title-icon {
                 height: 2.2rem;
             }
-            
-            &.ocult-animacio {
-                transform: translateY(30px);
-                opacity: 0;
-                transition: var(--transicio-ocult-animacio);
-            
-                &.mostrat {
-                    transform: translate(0);
-                    opacity: 1;
-                }
-            }
         }
     }
     .developed-by {
@@ -66,7 +55,7 @@ footer {
 // PC //
 @media (pointer: fine) {
     footer .contact-icons a {
-        transition: var(--transicio-ocult-animacio), var(--transicio-colors);
+        transition: font-size 0.3s ease, var(--transicio-ocult-animacio), var(--transicio-colors) !important;
 
         &:hover {
             transform: scale(1.3);

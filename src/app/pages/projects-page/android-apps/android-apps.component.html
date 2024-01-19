@@ -1,4 +1,4 @@
-<div id="android" [class.mostrat]="mostrat" class="group mb-6 ocult-animacio v">
+<div id="android" class="group mb-6" appMostrarAmbAnimacio>
     <div class="subtitle mb-2 g-2_5">
         @if (m.ca()) { Apps Android }
         @if (m.es()) { Apps Android }
@@ -48,14 +48,14 @@
         @if (m.en()) { My apps in Google Play }
     </a> -->
     <div class="boto-i-qr">
-        <a href="https://play.google.com/store/apps/developer?id=Jordi+Mas+Parramon" class="boto pl-3">
+        <a href="https://play.google.com/store/apps/developer?id=Jordi+Mas+Parramon" class="boto pl-3" appMostrarAmbAnimacio>
             @if (m.ca()) { Les meves apps }
             @if (m.es()) { Mis apps }
             @if (m.en()) { My apps }
             <img src="assets/icons/play-store.png" alt="Google Play Store" class="logo">
         </a>
         @if (!m.esAndroid()) {
-            <div class="div-qr-i-text">
+            <div class="div-qr-i-text" appMostrarAmbAnimacio>
                 <qrcode qrdata="https://play.google.com/store/apps/developer?id=Jordi+Mas+Parramon" [errorCorrectionLevel]="'M'"
                     colorDark="#005727" colorLight="#b8ffd8"></qrcode>
 

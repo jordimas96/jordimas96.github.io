@@ -41,8 +41,6 @@ export class AppbarComponent {
     afterRootFadeIn() {
         
         this.establirIdiomaDefecte();
-        
-        Utils.fadeIn(".appbar", 200);
 
         $("body").css({ "transition": "background-position 0.3s ease" });
     }

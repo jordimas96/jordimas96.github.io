@@ -9,6 +9,7 @@ import { NavegacioTabComponent } from './components/appbar/navegacio-tab/navegac
 import { FooterComponent } from './components/footer/footer.component';
 import { ImatgeScrollComponent } from './components/imatge-scroll/imatge-scroll.component';
 import { SkillComponent } from './components/skill/skill.component';
+import { MostrarAmbAnimacioDirective } from './directives/mostrar-amb-animacio.directive';
 import { SmoothMoveDirective } from './directives/smooth-move.directive';
 import { TargetBlankDirective } from './directives/target-blank.directive';
 import { GoogleAnalyticsModule } from './google-analytics/google-analytics.module';
@@ -48,6 +49,7 @@ import { TaskerComponent } from './pages/projects-page/tasker/tasker.component';
         MadJumpgateJocComponent,
         DetallsAndroidAppsComponent,
         SmoothMoveDirective,
+        MostrarAmbAnimacioDirective,
         NexxiaComponent,
         IndraComponent,
         MaticComponent,

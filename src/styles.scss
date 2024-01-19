@@ -1,5 +1,6 @@
 // Variables //
 @import "./variables.scss";
+@import "./app/directives/mostrar-amb-animacio.styles.scss";
 
 // Per aplicar un estil saltant-se l'encapsulació d'Angular //
 // :host ::ng-deep
@@ -58,7 +59,7 @@ body {
         background-color: var(--fons-50);
         backdrop-filter: blur(40px);
         @extend .shadow-2;
-        transition: padding 0.3s ease, border-radius 0.3s ease, box-shadow 0.3s ease, var(--transicio-ocult-animacio) !important;
+        transition: padding 0.3s ease, border-radius 0.3s ease, box-shadow 0.3s ease, font-size 0.3s ease, var(--transicio-ocult-animacio) !important;
     
         .subtitle {
             color: var(--text);
@@ -265,40 +266,6 @@ img, .noselect {
 // }
 
 
-
-// ANIMACIONS //
-// .ocult-animacio {
-//     &.v { transform: translateY(-30px); }
-//     &.h { transform: translateX(-30px); }
-//     &.-v { transform: translateY(30px); }
-//     &.-h { transform: translateX(30px); }
-//     opacity: 0;
-//     transition: var(--transicio-ocult-animacio);
-
-//     &.mostrat {
-//         transform: translate(0);
-//         opacity: 1;
-//     }
-// }
-// app-skill { @extend .ocult-animacio, .-v; }
-.ocult-animacio {
-    // Estil iPhone control center //
-    --a: translate(0px);
-    &.v { --a: translateY(0%); transform-origin: top; }
-    &.h { --a: translateX(10%); transform-origin: left; }
-    &.-v { --a: translateY(-0%); transform-origin: bottom; }
-    &.-h { --a: translateX(-10%); transform-origin: right; }
-
-    // transform-origin: top;
-    transform: var(--a) scale(0.8);
-    opacity: 0;
-    transition: var(--transicio-ocult-animacio);
-
-    &.mostrat {
-        transform: translate(0) scale(1);
-        opacity: 1;
-    }
-}
 
 
 // #region MEDIA QUERIES //

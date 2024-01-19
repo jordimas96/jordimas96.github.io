@@ -35,10 +35,6 @@ export class FooterComponent {
         } catch (e) { }
     }
 
-    afterRootFadeIn() {
-        $(this.rootElement.nativeElement).find(".contact-icons a").each((i, e) => {
-            Utils.fadeIn(e, i * 100);
-        });
-    }
+    afterRootFadeIn() { }
 
 }

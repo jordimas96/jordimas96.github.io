@@ -40,16 +40,6 @@ export class HomePageComponent extends PageComponent {
 
     override afterRootFadeIn() {
         super.afterRootFadeIn();
-
-        // Home - Bio i Cards //
-        $(".content .ocult-animacio:not(.chip)").each((i, e) => {
-            Utils.fadeIn(e, i * 100);
-        });
-
-        // Home - Skills //
-        $(".content .ocult-animacio.chip").each((i, e) => {
-            Utils.fadeIn(e, i * 10 + 400);
-        });
     }
 
 

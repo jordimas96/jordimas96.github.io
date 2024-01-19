@@ -1,4 +1,4 @@
-<div id="amazfit" [class.mostrat]="mostrat" class="group mb-6 ocult-animacio v">
+<div id="amazfit" class="group mb-6" appMostrarAmbAnimacio>
     <div class="subtitle mb-2 g-2_5">
         Amazfit Watchfaces
         <a href="https://amazfitwatchfaces.com/" class="link-img"><img src="assets/icons/amazfit-watchfaces.png" alt="Mad Jumpgate" class="title-icon rounded"></a>
@@ -23,13 +23,13 @@
         }
     </p>
     <div class="boto-i-gif">
-        <a href="https://amazfitwatchfaces.com/mi-band-4/view/7773" class="boto pl-3">
+        <a href="https://amazfitwatchfaces.com/mi-band-4/view/7773" class="boto pl-3" appMostrarAmbAnimacio>
             @if (m.ca()) { Les meves watchfaces }
             @if (m.es()) { Mis watchfaces }
             @if (m.en()) { My watchfaces }
             <img src="assets/icons/amazfit-watchfaces.png" alt="Amazfit Watchfaces" class="logo rounded-4">
         </a>
-        <div class="div-gif-i-text">
+        <div class="div-gif-i-text" appMostrarAmbAnimacio>
             <img src="assets/images/amazfit-watchfaces/white-screen-flashlight.gif" alt="GIF watchface">
 
             <div class="text-gif mt-2" hidden>
