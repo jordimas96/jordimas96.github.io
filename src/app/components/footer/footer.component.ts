@@ -10,12 +10,10 @@ import { Utils } from '../../shared/utils';
     styleUrls: ['./footer.component.scss']
 })
 export class FooterComponent {
-    
-    modeFosc: boolean = true;
-    tema: string = "";
-    idioma: string = "en";
 
-    colorFirma = Math.floor(Math.random() * 360);
+    public colorFirma = Math.floor(Math.random() * 360);
+    public bateria = 100;
+    public carregant = true;
     
 
     constructor(
@@ -28,6 +26,13 @@ export class FooterComponent {
     ngOnInit() {
         this.m.afterRootFadeIn(this.afterRootFadeIn.bind(this));
 
+        // Fill battery info //
+        try {
+            (navigator as any).getBattery().then(bateria => {
+                this.bateria = bateria.level * 100;
+                this.carregant = bateria.charging;
+            })
+        } catch (e) { }
     }
 
     afterRootFadeIn() {

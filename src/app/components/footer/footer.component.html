@@ -1,5 +1,5 @@
 <footer>
-    <div class="contact-icons">
+    <div class="contact-icons mb-3">
         <a href="https://www.linkedin.com/in/jordimas96" class="link-img ocult-animacio -v">
             <img src="assets/icons/contact/linkedin.png" alt="LinkedIn" title="LinkedIn" class="title-icon">
         </a>
@@ -24,4 +24,11 @@
         @if (m.es()) { - Desarrollado por Jordi Mas - }
         @if (m.en()) { - Developed by Jordi Mas - }
     </div>
+    @if (bateria < 20 && !carregant) {
+        <div class="chargeYourPhone mt-2">
+            @if (m.ca()) { Carrega el mòbil! }
+            @if (m.es()) { ¡Carga el móvil! }
+            @if (m.en()) { Charge your phone! }
+        </div>
+    }
 </footer>

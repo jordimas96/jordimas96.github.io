@@ -14,7 +14,6 @@ footer {
         justify-content: center;
 
         padding: 0 5rem;
-        margin-bottom: 1rem;
 
         a {
             padding: 0.5rem;
@@ -39,6 +38,11 @@ footer {
     .developed-by {
         // font-family: consolas;
         color: var(--color-clar-70);
+        font-style: italic;
+        text-align: center;
+    }
+    .chargeYourPhone {
+        color: red;
         font-style: italic;
         text-align: center;
     }
