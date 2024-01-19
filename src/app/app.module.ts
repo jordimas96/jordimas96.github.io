@@ -37,29 +37,34 @@ import { TaskerComponent } from './pages/projects-page/tasker/tasker.component';
         AppbarComponent,
         FooterComponent,
         ImatgeScrollComponent,
+        NavegacioTabComponent,
+        SkillComponent,
     
         // Pages //
         HomePageComponent,
         ExperiencePageComponent,
         ProjectsPageComponent,
 
-        TargetBlankDirective,
-        SkillComponent,
-        NavegacioTabComponent,
-        MadJumpgateJocComponent,
-        DetallsAndroidAppsComponent,
-        SmoothMoveDirective,
+        // Directives //
         MostrarAmbAnimacioDirective,
+        SmoothMoveDirective,
+        TargetBlankDirective,
+
+
         NexxiaComponent,
         IndraComponent,
         MaticComponent,
         In2artComponent,
         OrangeComponent,
-        AmazfitWatchfacesComponent,
+
         AndroidAppsComponent,
-        CustomRomsComponent,
         MadJumpgateComponent,
+        CustomRomsComponent,
         TaskerComponent,
+        AmazfitWatchfacesComponent,
+
+        DetallsAndroidAppsComponent,
+        MadJumpgateJocComponent,
     ],
     imports: [
         BrowserModule,
