@@ -7,7 +7,7 @@ export class TargetBlankDirective {
 
     // This directive changes the default behavior of the <a> links //
     // They will take you to a new page if it's not specified that //
-    // they should remain on the same page usinf target = "_self" //
+    // they should remain on the same page using target = "_self" //
 
     constructor(private renderer: Renderer2, private el: ElementRef) { }
 
