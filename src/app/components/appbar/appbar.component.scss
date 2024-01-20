@@ -9,7 +9,7 @@
     z-index: 1000;
     background: none;
     backdrop-filter: blur(20px) saturate(1.5);
-    transition: box-shadow 0.3s ease;
+    transition: box-shadow 0.3s;
 
     &:not(.scrolled) {
         // background: var(--fons-50);
@@ -20,7 +20,7 @@
         display: flex;
         align-items: center;
         padding: 0.6rem 0.5rem;
-        transition: padding 0.3s ease;
+        transition: padding 0.3s ;
 
         .botoDarkMode, .botoAutoMode {
             background-color: var(--text);
@@ -47,6 +47,8 @@
         display: flex;
         justify-content: center;
         align-items: center;
+
+        transition: padding 0.3s;
     }
 
     .idioma {
@@ -62,7 +64,7 @@
             padding: 0.25rem 0.5rem 0.25rem 1rem;
             outline: none;
             cursor: pointer;
-            transition: padding 0.3s ease, font-size 0.3s ease;
+            transition: padding 0.3s, font-size 0.3s;
 
             option {
                 background-color: var(--fons);

@@ -30,7 +30,7 @@
             font-size: 1.5rem;
             margin-right: 1rem;
             margin-left: 1rem;
-            transition: transform 200ms ease;
+            transition: transform 200ms;
             
             &[data-open] {
                 transform: rotate(-180deg);
@@ -38,7 +38,7 @@
         }
     }
     .contingut {
-        transition: padding-left 0.3s ease, padding-right 0.3s ease;
+        transition: padding-left 0.3s, padding-right 0.3s;
     }
 }
 

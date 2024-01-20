@@ -28,7 +28,7 @@
             font-size: 1.5rem;
             margin-right: 1rem;
             margin-left: 1rem;
-            transition: transform 200ms ease;
+            transition: transform 200ms;
             
             &[data-open] {
                 transform: rotate(-180deg);
@@ -36,7 +36,7 @@
         }
     }
     .contingut {
-        transition: padding-left 0.3s ease, padding-right 0.3s ease;
+        transition: padding-left 0.3s, padding-right 0.3s;
 
         .iframe-i-placeholder {
             position: relative;
@@ -50,7 +50,7 @@
                 // border-radius: 16px;
             }
             .placeholder {
-                // transition: height 2s ease;
+                // transition: height 2s;
             }
         
             .botoFullscreen {
@@ -66,7 +66,7 @@
                 background-color: var(--color-l-7);
                 color: var(--color-fosc);
         
-                transition: opacity 0.2s ease;
+                transition: opacity 0.2s;
         
                 &:hover {
                     opacity: 1;

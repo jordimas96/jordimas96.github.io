@@ -15,12 +15,12 @@
             // per l'efecte hover botó gran a web en PC //
             border-radius: 10000px;
 
-            transition: background-color 0.3s ease;
+            transition: background-color 0.3s;
 
             .fletxa {
                 color: var(--link);
 
-                transition: transform 0.3s ease, color 0.3s ease;
+                transition: transform 0.3s, color 0.3s;
             }
         }
     }

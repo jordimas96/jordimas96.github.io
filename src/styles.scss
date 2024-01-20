@@ -8,7 +8,7 @@
 // Per a més efectivitat (si el primer no funciona) //
 // ::ng-deep
 
-// * { transition: all 0.3s ease; }
+// * { transition: all 0.3s; }
 
 // /* Función para agregar un valor alfa a un color */
 // @function color($color, $alpha: 1) {
@@ -47,19 +47,21 @@ body {
     margin: auto;
     font-size: 1.1rem;
     // margin-bottom: 1000px;
+    transition: padding 0.3s;
 
     .title {
         margin-top: 1.5rem;
         margin-bottom: 1rem;
         text-align: center;
         color: var(--text);
+        transition: font-size 0.3s;
     }
     .group {
         color: var(--text);
         background-color: var(--fons-50);
         backdrop-filter: blur(40px);
         @extend .shadow-2;
-        transition: padding 0.3s ease, border-radius 0.3s ease, box-shadow 0.3s ease, font-size 0.3s ease;
+        transition: padding 0.3s, border-radius 0.3s, box-shadow 0.3s, font-size 0.3s;
     
         .subtitle {
             color: var(--text);
@@ -70,7 +72,7 @@ body {
         }
 
         .title, .subtitle, .text {
-            transition: font-size 0.3s ease;
+            transition: font-size 0.3s;
         }
         .title-icon {
             height: 2rem;
@@ -338,7 +340,7 @@ img, .noselect {
         padding: 0px 6px;
         margin: 0 -6px;
         border-radius: 0.5rem;
-        transition: all 0.3s ease;
+        transition: all 0.3s;
 
         &:hover {
             text-decoration: none;
@@ -350,7 +352,7 @@ img, .noselect {
         }
     }
     .boto {
-        transition: border-radius 0.3s ease, var(--transicio-colors);
+        transition: border-radius 0.3s, var(--transicio-colors);
     }
     .botoSeguentPagina:hover { border-radius: 3rem; }
     

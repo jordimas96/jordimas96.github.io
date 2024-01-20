@@ -42,7 +42,7 @@ export class AppbarComponent {
         
         this.establirIdiomaDefecte();
 
-        $("body").css({ "transition": "background-position 0.3s ease" });
+        $("body").css({ "transition": "background-position 0.3s" });
     }
 
     

@@ -30,7 +30,7 @@ export class MostrarAmbAnimacioDirective implements OnInit, OnDestroy {
                     
                     this.timeoutTreureAnimacio = setTimeout(() => {
                         this.renderer.removeClass(entry.target, 'animacio');
-                    }, 500);
+                    }, 300);
                 } else {
                     this.renderer.removeClass(entry.target, 'mostrat');
                     clearTimeout(this.timeoutTreureAnimacio);

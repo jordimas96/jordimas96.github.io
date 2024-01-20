@@ -36,7 +36,7 @@ export class SmoothMoveDirective implements AfterViewInit, OnDestroy {
         this.renderer.setStyle(this.duplicateElement, 'position', 'absolute');
         this.renderer.setStyle(this.duplicateElement, 'top', '0');
         this.renderer.setStyle(this.duplicateElement, 'left', '0');
-        this.renderer.setStyle(this.duplicateElement, 'transition', 'all 0.3s ease');
+        this.renderer.setStyle(this.duplicateElement, 'transition', 'all 0.3s');
         // this.renderer.setStyle(this.duplicateElement, 'will-change', 'transform');
 
         // Clonar contenido estático

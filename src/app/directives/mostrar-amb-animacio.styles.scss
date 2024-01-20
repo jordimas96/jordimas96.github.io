@@ -6,7 +6,7 @@
 //     &.-v { transform: translateY(30px); }
 //     &.-h { transform: translateX(30px); }
 //     opacity: 0;
-//     transition: transform 0.3s ease, opacity 0.5s ease;
+//     transition: transform 0.3s, opacity 0.5s;
 
 //     &.mostrat {
 //         transform: translate(0);
@@ -32,7 +32,7 @@
 //         transform: translate(0) scale(1);
 //         opacity: 1;
 
-//         transition: transform 0.3s ease, opacity 0.5s ease;
+//         transition: transform 0.3s, opacity 0.5s;
 //     }
 // }
 
@@ -52,6 +52,6 @@
     }
 
     &.animacio {
-        transition: transform 0.3s ease, opacity 0.5s ease !important;
+        transition: transform 0.3s, opacity 0.3s !important;
     }
 }

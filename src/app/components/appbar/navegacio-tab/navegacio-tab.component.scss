@@ -9,9 +9,8 @@
     border-radius: 25px; //15px;
     margin: auto;
     padding: 0.25rem;
-
     z-index: 0;
-
+    transition: padding 0.3s;
     
     button {
         background: none;
@@ -25,7 +24,7 @@
         z-index: 2;
         border-radius: 3rem;
 
-        transition: font-size 0.3s ease, padding 0.3s ease, color 0.3s ease, background-color 0.1s ease;
+        transition: font-size 0.3s, padding 0.3s, color 0.3s, background-color 0.1s;
 
         &.selected {
             color: var(--fons);
