@@ -55,7 +55,7 @@ footer {
 // PC //
 @media (pointer: fine) {
     footer .contact-icons a {
-        transition: font-size 0.3s ease, var(--transicio-ocult-animacio), var(--transicio-colors) !important;
+        transition: font-size 0.3s ease, var(--transicio-colors) !important;
 
         &:hover {
             transform: scale(1.3);

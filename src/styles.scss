@@ -59,7 +59,7 @@ body {
         background-color: var(--fons-50);
         backdrop-filter: blur(40px);
         @extend .shadow-2;
-        transition: padding 0.3s ease, border-radius 0.3s ease, box-shadow 0.3s ease, font-size 0.3s ease, var(--transicio-ocult-animacio) !important;
+        transition: padding 0.3s ease, border-radius 0.3s ease, box-shadow 0.3s ease, font-size 0.3s ease;
     
         .subtitle {
             color: var(--text);
@@ -350,7 +350,7 @@ img, .noselect {
         }
     }
     .boto {
-        transition: border-radius 0.3s ease, var(--transicio-colors), var(--transicio-ocult-animacio) !important;
+        transition: border-radius 0.3s ease, var(--transicio-colors);
     }
     .botoSeguentPagina:hover { border-radius: 3rem; }
     

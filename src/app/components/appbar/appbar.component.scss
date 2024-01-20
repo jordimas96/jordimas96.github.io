@@ -9,7 +9,7 @@
     z-index: 1000;
     background: none;
     backdrop-filter: blur(20px) saturate(1.5);
-    transition: box-shadow 0.3s ease, var(--transicio-ocult-animacio) !important;
+    transition: box-shadow 0.3s ease;
 
     &:not(.scrolled) {
         // background: var(--fons-50);

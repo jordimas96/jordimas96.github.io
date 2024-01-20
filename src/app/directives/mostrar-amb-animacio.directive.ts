@@ -5,40 +5,43 @@ import { Utils } from '../shared/utils';
     selector: '[appMostrarAmbAnimacio]'
 })
 export class MostrarAmbAnimacioDirective implements OnInit, OnDestroy {
-    private observer: IntersectionObserver;
 
-    constructor(private el: ElementRef, private renderer: Renderer2) {
+    private observer: IntersectionObserver;
+    private timeoutTreureAnimacio: NodeJS.Timeout;
+
+    constructor(
+        private el: ElementRef,
+        private renderer: Renderer2
+    ) {
         renderer.addClass(el.nativeElement, 'ocult-animacio');
     }
 
-    ngOnInit(): void {
+    ngOnInit() {
 
-        this.createObserver();
-        this.observeElement();
-    }
-
-    ngOnDestroy(): void {
-        this.disconnectObserver();
-    }
-
-    private createObserver(): void {
         this.observer = new IntersectionObserver(entries => {
             entries.forEach(async entry => {
                 if (entry.isIntersecting) {
+                    // Retard animació //
                     await Utils.wait(100 + Math.random() * 150);
+                    
+                    this.renderer.addClass(entry.target, 'animacio');
+                    
                     this.renderer.addClass(entry.target, 'mostrat');
+                    
+                    this.timeoutTreureAnimacio = setTimeout(() => {
+                        this.renderer.removeClass(entry.target, 'animacio');
+                    }, 500);
                 } else {
                     this.renderer.removeClass(entry.target, 'mostrat');
+                    clearTimeout(this.timeoutTreureAnimacio);
                 }
             });
         });
-    }
 
-    private observeElement(): void {
         this.observer.observe(this.el.nativeElement);
     }
 
-    private disconnectObserver(): void {
+    ngOnDestroy() {
         if (this.observer) {
             this.observer.disconnect();
         }
