@@ -1,0 +1,66 @@
+<div id="evora" class="group mb-6" appMostrarAmbAnimacio>
+    <div class="subtitle mb-2">
+        <a [href]="getLink()" class="no-style link-boto-titol g-3">
+            Evora IT
+            <img src="assets/icons/evora.png" alt="EvoraIT" class="title-icon">
+            <span class="fletxa">↗</span>
+        </a>
+    </div>
+    <p class="text mb-1">
+        @if (m.ca()) {
+            Programador frontend a Evora IT Solutions, una empresa multinacional amb seu a Munic, Alemanya, especialitzada en la creació de solucions per a clients al sector mèdic. Vaig formar part d'un equip multicultural, on la comunicació i la feina es duien a terme exclusivament en anglès.<br><br>
+
+            L'aplicació estava desenvolupada en Angular amb NgRx, i tenia com a objectiu facilitar la gestió del manteniment i substitució dels dispositius mèdics.<br><br>
+
+            Vaig participar en l'equip d'actualització de la versió d'Angular de l'aplicació, resolent els errors sorgits durant aquest procés. La migració va ser d'<a href="https://blog.angular.io/angular-v12-is-now-available-32ed51fbfd49">Angular 12</a> fins a la versió més recent, <a href="https://blog.angular.io/introducing-angular-v17-4d7033312e4b">Angular 17</a>.<br>
+            A més, vaig realitzar un anàlisi detallat de l'impacte que tindria la implementació de les noves característiques d'Angular 17 a la nostra aplicació.<br><br>
+
+            També vaig participar en la conversió de l'aplicació a PWA, amb l'objectiu d'ampliar la seva accessibilitat a altres dispositius, més enllà dels iPads dels tècnics de la nostra empresa client.
+        }
+
+        @if (m.es()) {
+            Programador frontend en Evora IT Solutions, una empresa multinacional con sede en Munich, Alemania, especializada en la creación de soluciones para clientes en el sector médico. Formé parte de un equipo multicultural, donde la comunicación y el trabajo se llevaban a cabo exclusivamente en inglés.<br><br>
+
+            La aplicación estaba desarrollada en Angular con NgRx, y tenía como objetivo facilitar la gestión del mantenimiento y sustitución de los dispositivos médicos.<br><br>
+
+            Participé en el equipo de actualización de la versión de Angular de la aplicación, resolviendo los errores surgidos durante ese proceso. La migración fue de <a href="https://blog.angular.io/angular-v12-is-now-available-32ed51fbfd49">Angular 12</a> hasta la versión más reciente, <a href="https://blog.angular.io/introducing-angular-v17-4d7033312e4b">Angular 17</a>.<br>
+            Además, realicé un análisis detallado del impacto que tendría la implementación de las nuevas características de Angular 17 en nuestra aplicación.<br><br>
+
+            También participé en la conversión de la aplicación a PWA, con el propósito de ampliar su accesibilidad a otros dispositivos, más allá de los iPads de los técnicos de nuestra empresa cliente.
+        }
+
+        @if (m.en()) {
+            Frontend programmer at Evora IT Solutions, a multinational company based in Munich, Germany, specialized in creating solutions for clients in the medical sector. I was part of a multicultural team, where communication and work were exclusively in English. <br> <br>
+
+            The application was developed in Angular with NgRx, and its objective was to facilitate the management of maintenance and replacement of medical devices.<br><br>
+
+            I participated in the Angular version update team of the application, resolving errors that appeared during that process. The migration was from <a href="https://blog.angular.io/angular-v12-is-now-available-32ed51fbfd49">Angular 12</a> to the most recent version, <a href="https://blog.angular.io/introducing-angular-v17-4d7033312e4b">Angular 17</a>.<br>
+            Additionally, I performed a detailed analysis of the impact of implementing the new Angular 17 features on our application.<br><br>
+
+            I also participated in the conversion of the application to PWA, with the purpose of expanding its accessibility to other devices, beyond the iPads of the technicians of our client company.
+        }
+    </p>
+
+    <!-- Skills -->
+    <div class="title-skills mt-4 mb-2">
+        @if (m.ca()) { Tecnologies utilitzades }
+        @if (m.es()) { Tecnologías usadas }
+        @if (m.en()) { Used technologies }
+    </div>
+    <div class="skills">
+        <app-skill n="Angular"/>
+        <app-skill n="NgRx"/>
+        <app-skill n="TypeScript"/>
+        <app-skill n="CSS"/>
+        <app-skill n="PWA"/>
+        <app-skill n="Cordova"/>
+        <app-skill n="Git"/>
+        <app-skill n="Jira"/>
+        <app-skill n="Confluence"/>
+        
+        <app-skill n="Continuous integration"/>
+        <app-skill n="Agile"/>
+        <app-skill n="MVC"/>
+        
+    </div>
+</div>

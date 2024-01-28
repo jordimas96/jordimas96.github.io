@@ -18,6 +18,7 @@ import { IndraComponent } from './pages/experience-page/2 indra/indra.component'
 import { MaticComponent } from './pages/experience-page/3 matic/matic.component';
 import { In2artComponent } from './pages/experience-page/4 in2art/in2art.component';
 import { OrangeComponent } from './pages/experience-page/5 orange/orange.component';
+import { EvoraComponent } from './pages/experience-page/6 evora/evora.component';
 import { ExperiencePageComponent } from './pages/experience-page/experience-page.component';
 import { HomePageComponent } from './pages/home-page/home-page.component';
 import { AmazfitWatchfacesComponent } from './pages/projects-page/amazfit-watchfaces/amazfit-watchfaces.component';
@@ -56,6 +57,7 @@ import { TaskerComponent } from './pages/projects-page/tasker/tasker.component';
         MaticComponent,
         In2artComponent,
         OrangeComponent,
+        EvoraComponent,
 
         AndroidAppsComponent,
         MadJumpgateComponent,
