@@ -1,5 +1,4 @@
 import { Component } from '@angular/core';
-import { Utils } from 'src/app/shared/utils';
 import { PageComponent } from './../page/page.component';
 
 @Component({
@@ -10,21 +9,9 @@ import { PageComponent } from './../page/page.component';
 export class HomePageComponent extends PageComponent {
 
     public salutacions = {
-        "ca": [
-            "Bon dia!",
-            "Bona tarda!",
-            "Bona nit!",
-        ],
-        "es": [
-            "¡Buenos días!",
-            "¡Buenas tardes!",
-            "¡Buenas noches!",
-        ],
-        "en": [
-            "Good morning!",
-            "Good afternoon!",
-            "Good evening!",
-        ],
+        "ca": ["Bon dia!", "Bona tarda!", "Bona nit!"],
+        "es": ["¡Buenos días!", "¡Buenas tardes!", "¡Buenas noches!"],
+        "en": ["Good morning!", "Good afternoon!", "Good evening!"],
     };
     
     

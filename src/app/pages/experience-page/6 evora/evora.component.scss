@@ -1,31 +1,32 @@
 @import "src/styles.scss";
 
+// Colors logo //
+// .a { color: hsla(212, 64%, 37%, 0.5) }
+// .a { color: hsla(9, 83%, 48%, 0.5) }
+// .a { color: hsla(41, 100%, 48%, 0.5) }
+
 .group {
     --color-fosc-rgb-vals-test: rgb(0, 19, 41);
     --color-clar-rgb-vals-test: rgb(255, 222, 209);
     --color-fosc-rgb-vals: 0, 19, 41;
     --color-clar-rgb-vals: 255, 222, 209;
-    // 212
     --color-l-0: hsl(212, 100%, 8%);
     --color-l-1: hsl(212, 100%, 17%);
     --color-l-2: hsl(212, 100%, 25%);
     --color-l-3: hsl(212, 100%, 34%);
     --color-l-4: hsl(212, 100%, 43%);
-    --color-l-5: hsl(17, 100%, 50%);
-    --color-l-6: hsl(17, 100%, 63%);
-    --color-l-7: hsl(17, 100%, 72%);
-    --color-l-8: hsl(17, 100%, 82%);
-    --color-l-9: hsl(17, 100%, 91%);
+    --color-l-5: hsl(41, 100%, 50%);
+    --color-l-6: hsl(41, 100%, 63%);
+    --color-l-7: hsl(41, 100%, 72%);
+    --color-l-8: hsl(41, 100%, 82%);
+    --color-l-9: hsl(41, 100%, 91%);
 }
 
 // Colors específics cards //
-.fsd { color: hsl(212, 64%, 37%); }
-.fsd { color: hsl(9, 83%, 48%); }
-.fsd { color: hsl(41, 100%, 48%); }
-             .group { background-color: hsla(212, 100%, 25%, 0.5); }
-.light :host .group { background-color: hsla(17, 100%, 72%, 0.5); }
-//              .group { background: linear-gradient(45deg, hsla(9, 83%, 48%, 0.5), hsla(212, 64%, 37%, 0.5)); }
-// .light :host .group { background: linear-gradient(45deg, hsla(41, 100%, 72%, 0.5), hsla(9, 83%, 72%, 0.5), hsla(212, 64%, 72%, 0.5)); }
+            //  .group { background-color: hsla(212, 100%, 25%, 0.5); }
+             .group { background: linear-gradient(45deg, hsla(9, 100%, 25%, 0.5) 15%, hsla(212, 100%, 25%, 0.5) 65%); }
+.light :host .group { background: linear-gradient(45deg, hsla(41, 100%, 72%, 0.5), hsla(9, 83%, 72%, 0.5), hsla(212, 64%, 72%, 0.5)); }
+
 
 
 
