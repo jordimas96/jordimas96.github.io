@@ -20,3 +20,25 @@
 // Colors específics cards //
              .group { background-color: hsla(0, 0%, 6%, 0.5); }
 .light :host .group { background-color: hsla(0, 0%, 100%, 0.5); }
+
+
+
+
+// PC //
+@media (pointer: fine) {
+    a.link-boto-titol:hover {
+        img.title-icon {
+            transform-origin: 50% 200%;
+            animation: saludar 0.5s linear;
+        }
+    }
+    @keyframes saludar {
+        0% { transform: rotate(0deg); }
+        25% { transform: rotate(-7.5deg); }
+        50% { transform: rotate(0deg); }
+        75% { transform: rotate(-7.5deg); }
+        100% { transform: rotate(0deg); animation-timing-function: ease-out; }
+    }
+}
+// Mòbil //
+@media (pointer: coarse) { }
