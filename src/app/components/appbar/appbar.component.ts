@@ -220,7 +220,7 @@ export class AppbarComponent {
 
     // Debug //
     canviarVersio(value) {
-        this.m.router.navigate([`/${location.pathname.split("/")[1]}/${value}`]).then(() => location.reload())
+        this.m.router.navigate([`/${location.pathname.split("/")[1]}/${value}`]);
     }
 
     

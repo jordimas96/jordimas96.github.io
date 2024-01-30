@@ -104,6 +104,14 @@ export class HomePageComponent extends PageComponent {
         return "";
     }
 
+    getTecnologies() {
+        return [
+            `Angular, CSS, Javascript, jQuery, Python ${this.m.conjuncio} C#`, // Front //
+            `Java, NodeJs, Python, C#, PHP ${this.m.conjuncio} SQL`, // Back //
+            `Angular, Java, NodeJs, CSS ${this.m.conjuncio} Python`, // Full //
+        ][this.m.area];
+    }
+
     getRutaCV() {
         return `assets/CV/${this.m.idioma.toUpperCase()}/CV Jordi Mas Parramon.pdf`;
     }

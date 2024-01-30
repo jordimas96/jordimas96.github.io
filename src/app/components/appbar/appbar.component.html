@@ -18,26 +18,21 @@
             @if (!m.es) {
                 <option value="ca">Català</option>
                 <option value="es">Español</option>
-                <option value="en">English</option>
             } @else {
                 <option value="es">Español</option>
                 <option value="ca">Català</option>
-                <option value="en">English</option>
             }
+            <option value="en">English</option>
         </select>
     </div>
 
     <!-- Debug -->
-    @if (m.debug && m.u.hasCookie('numRandom')) {
-        <div style="position:absolute;top:56px;left:6px;cursor:pointer;border-radius:8px;background-color:#000;"
-            onclick="$(this).hide()">
-            998
-        </div>
-        <!-- <div *ngIf="m.debug" [style]="'position:absolute;top:'+m.u.getAlturaAppbar()+'px'">
+    @if (m.debug) {
+        <div *ngIf="m.debug" [style]="'position:absolute;top:'+m.u.getAlturaAppbar()+'px'">
             <button class="boto border-0 mr-1 py-0 px-2" style="font-size:1rem;cursor:pointer" (click)="canviarVersio('web')">Front</button>
             <button class="boto border-0 mr-1 py-0 px-2" style="font-size:1rem;cursor:pointer" (click)="canviarVersio('info')">Back</button>
             <button class="boto border-0 mr-1 py-0 px-2" style="font-size:1rem;cursor:pointer" (click)="canviarVersio('details')">Full</button>
-        </div> -->
+        </div>
     }
 
 </div>
