@@ -59,7 +59,6 @@ body {
     .group {
         color: var(--text);
         background-color: var(--fons-50);
-        // --link: var(--color-7);
         backdrop-filter: blur(40px);
         @extend .shadow-2;
         transition: padding 0.3s, border-radius 0.3s, box-shadow 0.3s, font-size 0.3s;

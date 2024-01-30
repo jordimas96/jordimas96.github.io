@@ -17,8 +17,8 @@
     --color-l-9: hsl(60, 100%, 91%);
 }
 
-             .group { background-color: hsla(60, 100%, 21%, 0.5); }
-.light :host .group { background-color: hsla(60, 100%, 72%, 0.5); }
+             .group { background-color: hsla(60, 100%, 21%, 0.5); --link: var(--color-l-7); }
+.light :host .group { background-color: hsla(60, 100%, 72%, 0.5); --link: var(--color-l-3); }
 
 
 
