@@ -46,6 +46,10 @@
         display: flex;
         flex-direction: column;
         align-items: center;
+
+        .tempsExp {
+            cursor: help;
+        }
         
         .boto {
             padding: 0.9rem 1.1rem;

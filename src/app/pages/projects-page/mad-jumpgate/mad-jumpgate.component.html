@@ -1,20 +1,20 @@
 <div id="mad-jumpgate" class="group mb-6" appMostrarAmbAnimacio>
     <div class="subtitle mb-2 g-2_5">
-        @if (m.ca()) { Projecte final de DAM - Mad Jumpgate }
-        @if (m.es()) { Proyecto final de DAM - Mad Jumpgate }
-        @if (m.en()) { Final project of DAM - Mad Jumpgate }
+        @if (m.ca) { Projecte final de DAM - Mad Jumpgate }
+        @if (m.es) { Proyecto final de DAM - Mad Jumpgate }
+        @if (m.en) { Final project of DAM - Mad Jumpgate }
         <a href="https://jmaspgames.itch.io/mad-jumpgate" class="link-img"><img src="assets/icons/mad-jumpgate.png" alt="Mad Jumpgate" class="title-icon rounded"></a>
     </div>
     <p class="text mb-4">
-        @if (m.ca()) {
+        @if (m.ca) {
             Aquest és el meu projecte final del segon curs del Cicle Superior de Desenvolupament d'Aplicacions Multiplataforma (DAM). Em va portar 2 setmanes de feina crear aquest <i><a href="https://ca.wikipedia.org/wiki/Videojoc_d%27acci%C3%B3_en_primera_persona">First Person Shooter</a></i> des de zero, utilitzant Unity. Des del moviment de la càmara i del jugador, passant per les mecàniques de cada tipus d'arma (tant l'usuari com els enemics) i punts de spawn, fins a gestionar l'inventari format per la munició i els subministraments.
         }
         
-        @if (m.es()) {
+        @if (m.es) {
             Éste es mi proyecto final del segundo curso del Ciclo Superior de Desarrollo de Aplicaciones Multiplataforma (DAM). Me llevó 2 semanas de trabajo crear ese <i><a href="https://es.wikipedia.org/wiki/Videojuego_de_disparos_en_primera_persona">First Person Shooter</a></i> desde cero, usando Unity. Desde el movimiento de la cámara y del jugador, pasando por las mecánicas de cada tipo de arma (tanto el usuario como los enemigos) y puntos de spawn, hasta gestionar el inventario formado por la munición y los suministros.
         }
         
-        @if (m.en()) {
+        @if (m.en) {
             This is my final project for the second year of the Higher Cycle of Multiplatform Application Development (DAM). It took me 2 weeks of work to create this <i><a href="https://en.wikipedia.org/wiki/First-person_shooter">First Person Shooter</a></i> from scratch, using Unity. From the movement of the camera and the player, through the mechanics of shooting each type of weapon (both the user and the enemies) and spawn points, to managing the inventory consisting of ammunition and supplies.
         }
     </p>
@@ -31,9 +31,9 @@
         
         @if (!m.esPc()) {
             <div class="joc-nomes-pc" style="width: 552px; height: 167px;">
-                @if (m.ca()) { Aquest joc és només per a ordinador.<br>Accedeix des d'un ordinador per a jugar-hi. }
-                @if (m.es()) { Este juego es sólo para ordenador.<br>Accede desde un ordenador para jugar. }
-                @if (m.en()) { This game is for PC only.<br>Access from a computer to play it. }
+                @if (m.ca) { Aquest joc és només per a ordinador.<br>Accedeix des d'un ordinador per a jugar-hi. }
+                @if (m.es) { Este juego es sólo para ordenador.<br>Accede desde un ordenador para jugar. }
+                @if (m.en) { This game is for PC only.<br>Access from a computer to play it. }
             </div>
         }
     </div> -->
@@ -42,9 +42,9 @@
 
     <!-- Skills -->
     <div class="title-skills mt-4 mb-2">
-        @if (m.ca()) { Tecnologies utilitzades }
-        @if (m.es()) { Tecnologías usadas }
-        @if (m.en()) { Used technologies }
+        @if (m.ca) { Tecnologies utilitzades }
+        @if (m.es) { Tecnologías usadas }
+        @if (m.en) { Used technologies }
     </div>
     <div class="skills">
         <app-skill n="C#" />

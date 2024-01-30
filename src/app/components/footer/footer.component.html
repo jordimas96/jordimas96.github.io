@@ -20,15 +20,15 @@
 
 
     <div class="developed-by" [style]="'color:hsl('+colorFirma+'deg 100% 86.47% / 70%);'">
-        @if (m.ca()) { - Desenvolupat per Jordi Mas - }
-        @if (m.es()) { - Desarrollado por Jordi Mas - }
-        @if (m.en()) { - Developed by Jordi Mas - }
+        @if (m.ca) { - Desenvolupat per Jordi Mas - }
+        @if (m.es) { - Desarrollado por Jordi Mas - }
+        @if (m.en) { - Developed by Jordi Mas - }
     </div>
     @if (bateria < 20 && !carregant) {
         <div class="chargeYourPhone mt-2">
-            @if (m.ca()) { Carrega el mòbil! }
-            @if (m.es()) { ¡Carga el móvil! }
-            @if (m.en()) { Charge your phone! }
+            @if (m.ca) { Carrega el mòbil! }
+            @if (m.es) { ¡Carga el móvil! }
+            @if (m.en) { Charge your phone! }
         </div>
     }
 </footer>

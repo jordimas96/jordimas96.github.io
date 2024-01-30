@@ -1,18 +1,18 @@
 <div class="contenidor">
     <button id="home" routerLinkActive="selected" [routerLinkActiveOptions]="{exact: true}" [routerLink]="['/home', m.areaCodi]" (click)="onTabClick($event.target)">
-        @if (m.ca()) { Inici }
-        @if (m.es()) { Inicio }
-        @if (m.en()) { Home }
+        @if (m.ca) { Inici }
+        @if (m.es) { Inicio }
+        @if (m.en) { Home }
     </button>
     <button id="experience" routerLinkActive="selected" [routerLinkActiveOptions]="{exact: true}" [routerLink]="['/experience', m.areaCodi]" (click)="onTabClick($event.target)">
-        @if (m.ca()) { Experiència }
-        @if (m.es()) { Experiencia }
-        @if (m.en()) { Experience }
+        @if (m.ca) { Experiència }
+        @if (m.es) { Experiencia }
+        @if (m.en) { Experience }
     </button>
     <button id="projects" routerLinkActive="selected" [routerLinkActiveOptions]="{exact: true}" [routerLink]="['/projects', m.areaCodi]" (click)="onTabClick($event.target)">
-        @if (m.ca()) { Projectes }
-        @if (m.es()) { Proyectos }
-        @if (m.en()) { Projects }
+        @if (m.ca) { Projectes }
+        @if (m.es) { Proyectos }
+        @if (m.en) { Projects }
     </button>
     
     <div #pill class="pill"></div>

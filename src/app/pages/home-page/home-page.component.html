@@ -15,9 +15,9 @@
                     <div class="bondia mb-2">{{getSalutacioSegonsHora()}}</div>
                     <div class="nom">
                         <span class="emdic">
-                            @if (m.ca()) { Em dic }
-                            @if (m.es()) { Me llamo }
-                            @if (m.en()) { My name is }
+                            @if (m.ca) { Em dic }
+                            @if (m.es) { Me llamo }
+                            @if (m.en) { My name is }
                         </span>
                         @if (m.esPantallaMobil()) { <br> }
                         Jordi Mas Parramon
@@ -25,19 +25,19 @@
                     <div class="programador">
                         -
                         @if (m.front()) {
-                            @if (m.ca()) { Programador frontend }
-                            @if (m.es()) { Programador frontend }
-                            @if (m.en()) { Frontend programmer }
+                            @if (m.ca) { Programador frontend }
+                            @if (m.es) { Programador frontend }
+                            @if (m.en) { Frontend programmer }
                         }
                         @if (m.back()) {
-                            @if (m.ca()) { Programador backend }
-                            @if (m.es()) { Programador backend }
-                            @if (m.en()) { Backend programmer }
+                            @if (m.ca) { Programador backend }
+                            @if (m.es) { Programador backend }
+                            @if (m.en) { Backend programmer }
                         }
                         @if (m.full()) {
-                            @if (m.ca()) { Programador fullstack }
-                            @if (m.es()) { Programador fullstack }
-                            @if (m.en()) { Fullstack programmer }
+                            @if (m.ca) { Programador fullstack }
+                            @if (m.es) { Programador fullstack }
+                            @if (m.en) { Fullstack programmer }
                         }
                         -
                     </div>
@@ -61,52 +61,52 @@
         <ng-template #bio>
             <span>
                 @if (m.front()) {
-                    @if (m.ca()) {
-                        Sóc un apassionat programador frontend amb <span [title]="getTextExp()">{{anysExp}} anys d'experiència</span> en Angular, CSS, Javascript, jQuery, Python i C#, entre altres. Els meus esforços se centren en la creació d'interfícies d'usuari atractives, intuïtives i adaptades a les necessitats de l'usuari per proporcionar-los una experiència agradable.<br>
+                    @if (m.ca) {
+                        Sóc un apassionat programador frontend amb <span [title]="getTextExp()" class="tempsExp">{{anysExp}} anys d'experiència</span> en Angular, CSS, Javascript, jQuery, Python i C#, entre altres. Els meus esforços se centren en la creació d'interfícies d'usuari atractives, intuïtives i adaptades a les necessitats de l'usuari per proporcionar-los una experiència agradable.<br>
                     }
-                    @if (m.es()) {
-                        Soy un apasionado programador frontend con <span [title]="getTextExp()">{{anysExp}} años de experiencia</span> en Angular, CSS, Javascript, jQuery, Python y C#, entre otros. Mis esfuerzos se centran en la creación de interfaces de usuario atractivas, intuitivas y adaptadas a las necesidades del usuario para proporcionarles una experiencia agradable.<br>
+                    @if (m.es) {
+                        Soy un apasionado programador frontend con <span [title]="getTextExp()" class="tempsExp">{{anysExp}} años de experiencia</span> en Angular, CSS, Javascript, jQuery, Python y C#, entre otros. Mis esfuerzos se centran en la creación de interfaces de usuario atractivas, intuitivas y adaptadas a las necesidades del usuario para proporcionarles una experiencia agradable.<br>
                     }
-                    @if (m.en()) {
-                        I am a passionate frontend programmer. I have <span [title]="getTextExp()">{{anysExp}} years of experience</span> working with Angular, CSS, Javascript, jQuery, Python and C#, among others. My efforts focus on creating attractive, intuitive user interfaces adapted to user needs to provide them with a pleasant experience.<br>
+                    @if (m.en) {
+                        I am a passionate frontend programmer with <span [title]="getTextExp()" class="tempsExp">{{anysExp}} years of experience</span> working with Angular, CSS, Javascript, jQuery, Python and C#, among others. My efforts focus on creating attractive, intuitive user interfaces adapted to user needs to provide them with a pleasant experience.<br>
                     }
                 }
                 @if (m.back()) {
-                    @if (m.ca()) {
-                        Sóc un apassionat programador backend amb <span [title]="getTextExp()">{{anysExp}} anys d'experiència</span> en Java, NodeJs, Python, C#, PHP i SQL, entre altres. El meu objectiu principal és construir servidors robustos i escalables per a obtenir un rendiment òptim i una gestió eficient de dades.<br>
+                    @if (m.ca) {
+                        Sóc un apassionat programador backend amb <span [title]="getTextExp()" class="tempsExp">{{anysExp}} anys d'experiència</span> en Java, NodeJs, Python, C#, PHP i SQL, entre altres. El meu objectiu principal és construir servidors robustos i escalables per a obtenir un rendiment òptim i una gestió eficient de dades.<br>
                     }
-                    @if (m.es()) {
-                        Soy un apasionado programador backend con <span [title]="getTextExp()">{{anysExp}} años de experiencia</span> en Java, NodeJs, Python, C#, PHP y SQL, entre otros. Mi principal objetivo es construir servidores robustos y escalables para conseguir un rendimiento óptimo y una gestión eficiente de datos.<br>
+                    @if (m.es) {
+                        Soy un apasionado programador backend con <span [title]="getTextExp()" class="tempsExp">{{anysExp}} años de experiencia</span> en Java, NodeJs, Python, C#, PHP y SQL, entre otros. Mi principal objetivo es construir servidores robustos y escalables para conseguir un rendimiento óptimo y una gestión eficiente de datos.<br>
                     }
-                    @if (m.en()) {
-                        I am a passionate backend programmer. I have <span [title]="getTextExp()">{{anysExp}} years of experience</span> working with Java, NodeJs, Python, C#, PHP and SQL, among others. My main goal is to build robust and scalable servers in order to get an optimal performance and efficient data management.<br>
+                    @if (m.en) {
+                        I am a passionate backend programmer with <span [title]="getTextExp()" class="tempsExp">{{anysExp}} years of experience</span> working with Java, NodeJs, Python, C#, PHP and SQL, among others. My main goal is to build robust and scalable servers in order to get an optimal performance and efficient data management.<br>
                     }
                 }
                 @if (m.full()) {
-                    @if (m.ca()) {
-                        Sóc un apassionat programador fullstack amb <span [title]="getTextExp()">{{anysExp}} anys d'experiència</span> en Angular, Java, NodeJs, CSS i Python, entre altres. Aquesta àmplia gamma d'habilitats em permet treballar en projectes de principi a fi, creant interfícies d'usuari atractives i servidors sòlids per a solucions completes i ben integrades.<br>
+                    @if (m.ca) {
+                        Sóc un apassionat programador fullstack amb <span [title]="getTextExp()" class="tempsExp">{{anysExp}} anys d'experiència</span> en Angular, Java, NodeJs, CSS i Python, entre altres. Aquesta àmplia gamma d'habilitats em permet treballar en projectes de principi a fi, creant interfícies d'usuari atractives i servidors sòlids per a solucions completes i ben integrades.<br>
                     }
-                    @if (m.es()) {
-                        Soy un apasionado programador fullstack con <span [title]="getTextExp()">{{anysExp}} años de experiencia</span> en Angular, Java, NodeJs, CSS y Python, entre otros. Esta amplia gama de habilidades me permite trabajar en proyectos de principio a fin, creando interfaces de usuario atractivas y servidores sólidos para soluciones completas y bien integradas.<br>
+                    @if (m.es) {
+                        Soy un apasionado programador fullstack con <span [title]="getTextExp()" class="tempsExp">{{anysExp}} años de experiencia</span> en Angular, Java, NodeJs, CSS y Python, entre otros. Esta amplia gama de habilidades me permite trabajar en proyectos de principio a fin, creando interfaces de usuario atractivas y servidores sólidos para soluciones completas y bien integradas.<br>
                     }
-                    @if (m.en()) {
-                        I am a passionate fullstack programmer. I have <span [title]="getTextExp()">{{anysExp}} years of experience</span> working with Angular, Java, NodeJs, CSS and Python, among others. This broad range of skills allows me to work on projects from start to finish, creating attractive user interfaces and robust servers for complete, well-integrated solutions.<br>
+                    @if (m.en) {
+                        I am a passionate fullstack programmer with <span [title]="getTextExp()" class="tempsExp">{{anysExp}} years of experience</span> working with Angular, Java, NodeJs, CSS and Python, among others. This broad range of skills allows me to work on projects from start to finish, creating attractive user interfaces and robust servers for complete, well-integrated solutions.<br>
                     }
                 }
-                @if (m.ca()) {
+                @if (m.ca) {
                     En aquesta web, trobaràs informació sobre la meva experiència, habilitats i projectes, així com la meva informació de contacte perquè puguem conversar sobre diferents maneres d'ajudar-te amb projectes futurs.
                 }
-                @if (m.es()) {
+                @if (m.es) {
                     En esta web, encontrarás información sobre mi experiencia, habilidades y proyectos, así como mi información de contacto para que podamos conversar sobre diferentes formas de ayudarte con proyectos futuros.
                 }
-                @if (m.en()) {
+                @if (m.en) {
                     On this site, you will find information about my past experience, skills, and projects, as well as my contact information so we can discuss about different ways on helping you and your business with future projects.
                 }
             </span>
             <a [href]="getRutaCV()" class="boto mt-4 pl-3" appMostrarAmbAnimacio>
-                @if (m.ca()) { Obrir CV }
-                @if (m.es()) { Abrir CV }
-                @if (m.en()) { Open Resume }
+                @if (m.ca) { Obrir CV }
+                @if (m.es) { Abrir CV }
+                @if (m.en) { Open Resume }
                 <img src="assets/icons/contact/cv.png" alt="Curriculum Vitae" class="logo inv-dark-2">
             </a>
         </ng-template>
@@ -116,9 +116,9 @@
     <!-- Skills -->
     <div id="llenguatges" class="group llenguatges mb-6" appMostrarAmbAnimacio>
         <div class="subtitle mb-2">
-            @if (m.ca()) { Habilitats en programació }
-            @if (m.es()) { Habilidades en programación }
-            @if (m.en()) { Programming skills }
+            @if (m.ca) { Habilitats en programació }
+            @if (m.es) { Habilidades en programación }
+            @if (m.en) { Programming skills }
         </div>
         <div class="row no-gutters justify-content-center">
             <div class="col-12 col-sm-6" [ngClass]="{'order-1': !m.back(), 'order-2': m.back()}">
@@ -169,9 +169,9 @@
 
             <div class="col-12 col-sm-12 order-3">
                 <div class="titol-tipus-llenguatge mt-4 mb-2">
-                    @if (m.ca()) { Eines de desenvolupament }
-                    @if (m.es()) { Herramientas de desarrollo }
-                    @if (m.en()) { Software development tools }
+                    @if (m.ca) { Eines de desenvolupament }
+                    @if (m.es) { Herramientas de desarrollo }
+                    @if (m.en) { Software development tools }
                 </div>
                 <div class="skills">
                     <app-skill n="Git"/>
@@ -206,9 +206,9 @@
 
             <div id="seccioBotoVeureMes" class="col-12 col-sm-12 order-6 text-center">
                 <button class="boto botoText botoVeureMes pt-4" (click)="obrirVeureMesSkills()" appMostrarAmbAnimacio>
-                    @if (m.ca()) { Veure més }
-                    @if (m.es()) { Ver más }
-                    @if (m.en()) { See more }
+                    @if (m.ca) { Veure més }
+                    @if (m.es) { Ver más }
+                    @if (m.en) { See more }
                     <br>
                     <i class="fa-solid fa-chevron-down"></i>
                 </button>
@@ -216,9 +216,9 @@
 
             <div class="col-12 col-sm-6 order-4 skills-ocultes" style="display:none;">
                 <div class="titol-tipus-llenguatge mt-4 mb-2">
-                    @if (m.ca()) { Eines de virtualització i SO }
-                    @if (m.es()) { Herramientas de virtualización y SO }
-                    @if (m.en()) { Virtualization tools and OS }
+                    @if (m.ca) { Eines de virtualització i SO }
+                    @if (m.es) { Herramientas de virtualización y SO }
+                    @if (m.en) { Virtualization tools and OS }
                 </div>
                 <div class="skills">
                     <app-skill n="VMware"/>
@@ -237,9 +237,9 @@
 
             <div class="col-12 col-sm-6 order-5 skills-ocultes" style="display:none;">
                 <div class="titol-tipus-llenguatge mt-4 mb-2">
-                    @if (m.ca()) { CMS i frameworks web }
-                    @if (m.es()) { CMS y frameworks web }
-                    @if (m.en()) { CMS and web frameworks }
+                    @if (m.ca) { CMS i frameworks web }
+                    @if (m.es) { CMS y frameworks web }
+                    @if (m.en) { CMS and web frameworks }
                 </div>
                 <div class="skills">
                     <app-skill n="Joomla"/>
@@ -255,9 +255,9 @@
 
     <div class="mb-6 text-center" appMostrarAmbAnimacio>
         <button class="boto botoSeguentPagina m-auto" (click)="m.u.getDocument().querySelector('#experience').click()">
-            @if (m.ca()) { Experiència }
-            @if (m.es()) { Experiencia }
-            @if (m.en()) { Experience }
+            @if (m.ca) { Experiència }
+            @if (m.es) { Experiencia }
+            @if (m.en) { Experience }
             <i class="fa-solid fa-chevron-right ml-2"></i>
         </button>
     </div>

@@ -20,13 +20,13 @@ export class HomePageComponent extends PageComponent {
         ["2021-8-31", "2023-6-30"], // In2art // -
         ["2023-7-1", "2023-8-22"], // CodiTramuntana // -
         ["2023-8-23", "2023-11-3"], // Orange //
-        ["2023-11-6", ""], // Evora // -
+        ["2023-11-6", ], // Evora // -
 
     ];
 
     public anysExp: number;
     public anysMesosDiesExp: Array<number>;
-    
+
     override async ngOnInit() {
         super.ngOnInit();
 
@@ -87,11 +87,11 @@ export class HomePageComponent extends PageComponent {
         return this.construirCadenaTempsExp(anys, mesos, dies);
     }
     construirCadenaTempsExp(anys: number, mesos: number, dies: number) {
-        const index = this.m.getIdiomaIndex();
+        const index = this.m.idiomaIndex;
         const textAnys = [["any", "anys"], ["año", "años"], ["year", "years"]][index];
         const textMesos = [["mes", "mesos"], ["mes", "meses"], ["month", "months"]][index];
         const textDies = [["dia", "dies"], ["día", "días"], ["day", "days"]][index];
-        const conjuncio = ["i", "y", "and"][index];
+        const conjuncio = this.m.conjuncio;
 
         let cadenes: Array<string> = [];
         if (anys > 0) cadenes.push(anys + " " + (anys == 1 ? textAnys[0] : textAnys[1]));

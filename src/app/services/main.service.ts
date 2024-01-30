@@ -23,12 +23,18 @@ export class MainService {
     public readonly debug = window.location.origin.includes("localhost") || window.location.origin.includes("192.168.1.");
     public modeFosc: boolean = true;
     public tema: string = "";
-    public idioma: string = "en";
     public scroll = window.pageYOffset;
     public area: Area;
     public areaCodi = "web"; // web, info, details //
     public discret = 0;
-    
+
+    // Idiomes //
+    public idioma: string = "en";
+    public idiomaIndex: number = 2;
+    public conjuncio: string = "and";
+    public ca: boolean;
+    public es: boolean;
+    public en: boolean;
 
     constructor(
         public router: Router,
@@ -62,10 +68,14 @@ export class MainService {
     }
 
     // Idiomes //
-    ca() { return this.idioma == "ca" }
-    es() { return this.idioma == "es" }
-    en() { return this.idioma == "en" }
-    getIdiomaIndex() { return ["ca", "es", "en"].indexOf(this.idioma) }
+    idiomaCanviat() {
+        this.idiomaIndex = ["ca", "es", "en"].indexOf(this.idioma);
+        this.conjuncio = ["i", "y", "and"][this.idiomaIndex];
+
+        this.ca = this.idioma == "ca";
+        this.es = this.idioma == "es";
+        this.en = this.idioma == "en";
+    }
 
     public log(t) { console.log(t); }
     public logDebug(t) { if (this.debug) console.log(t); }

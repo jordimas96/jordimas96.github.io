@@ -208,10 +208,13 @@ export class AppbarComponent {
         // Si l'idioma detectat no es al select, el posem a anglès per defecte //
         if (!$("#idioma > option").toArray().map(e => $(e).val()).includes(this.m.idioma))
             this.m.idioma = "en";
+        
+        this.m.idiomaCanviat();
     }
     onIdiomaCanviat() {
         document.documentElement.lang = this.m.idioma;
         Utils.setCookie("lang", this.m.idioma);
+        this.m.idiomaCanviat();
     }
 
 
