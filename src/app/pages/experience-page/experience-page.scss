@@ -7,6 +7,7 @@
     .subtitle {
         display: flex;
         align-items: center;
+        justify-content: space-between;
 
         .link-boto-titol {
             display: flex;
@@ -22,6 +23,11 @@
 
                 transition: transform 0.3s, color 0.3s;
             }
+        }
+
+        .practiques {
+            font-size: 1rem;
+            color: var(--text-60);
         }
     }
 }
