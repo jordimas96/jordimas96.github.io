@@ -59,49 +59,50 @@
         }
         <!-- Template bio -->
         <ng-template #bio>
-            @if (m.front()) {
+            <span>
+                @if (m.front()) {
+                    @if (m.ca()) {
+                        Sóc un apassionat programador frontend amb <span [title]="getTextExp()">{{anysExp}} anys d'experiència</span> en Angular, CSS, Javascript, jQuery, Python i C#, entre altres. Els meus esforços se centren en la creació d'interfícies d'usuari atractives, intuïtives i adaptades a les necessitats de l'usuari per proporcionar-los una experiència agradable.<br>
+                    }
+                    @if (m.es()) {
+                        Soy un apasionado programador frontend con <span [title]="getTextExp()">{{anysExp}} años de experiencia</span> en Angular, CSS, Javascript, jQuery, Python y C#, entre otros. Mis esfuerzos se centran en la creación de interfaces de usuario atractivas, intuitivas y adaptadas a las necesidades del usuario para proporcionarles una experiencia agradable.<br>
+                    }
+                    @if (m.en()) {
+                        I am a passionate frontend programmer. I have <span [title]="getTextExp()">{{anysExp}} years of experience</span> working with Angular, CSS, Javascript, jQuery, Python and C#, among others. My efforts focus on creating attractive, intuitive user interfaces adapted to user needs to provide them with a pleasant experience.<br>
+                    }
+                }
+                @if (m.back()) {
+                    @if (m.ca()) {
+                        Sóc un apassionat programador backend amb <span [title]="getTextExp()">{{anysExp}} anys d'experiència</span> en Java, NodeJs, Python, C#, PHP i SQL, entre altres. El meu objectiu principal és construir servidors robustos i escalables per a obtenir un rendiment òptim i una gestió eficient de dades.<br>
+                    }
+                    @if (m.es()) {
+                        Soy un apasionado programador backend con <span [title]="getTextExp()">{{anysExp}} años de experiencia</span> en Java, NodeJs, Python, C#, PHP y SQL, entre otros. Mi principal objetivo es construir servidores robustos y escalables para conseguir un rendimiento óptimo y una gestión eficiente de datos.<br>
+                    }
+                    @if (m.en()) {
+                        I am a passionate backend programmer. I have <span [title]="getTextExp()">{{anysExp}} years of experience</span> working with Java, NodeJs, Python, C#, PHP and SQL, among others. My main goal is to build robust and scalable servers in order to get an optimal performance and efficient data management.<br>
+                    }
+                }
+                @if (m.full()) {
+                    @if (m.ca()) {
+                        Sóc un apassionat programador fullstack amb <span [title]="getTextExp()">{{anysExp}} anys d'experiència</span> en Angular, Java, NodeJs, CSS i Python, entre altres. Aquesta àmplia gamma d'habilitats em permet treballar en projectes de principi a fi, creant interfícies d'usuari atractives i servidors sòlids per a solucions completes i ben integrades.<br>
+                    }
+                    @if (m.es()) {
+                        Soy un apasionado programador fullstack con <span [title]="getTextExp()">{{anysExp}} años de experiencia</span> en Angular, Java, NodeJs, CSS y Python, entre otros. Esta amplia gama de habilidades me permite trabajar en proyectos de principio a fin, creando interfaces de usuario atractivas y servidores sólidos para soluciones completas y bien integradas.<br>
+                    }
+                    @if (m.en()) {
+                        I am a passionate fullstack programmer. I have <span [title]="getTextExp()">{{anysExp}} years of experience</span> working with Angular, Java, NodeJs, CSS and Python, among others. This broad range of skills allows me to work on projects from start to finish, creating attractive user interfaces and robust servers for complete, well-integrated solutions.<br>
+                    }
+                }
                 @if (m.ca()) {
-                    Sóc un apassionat programador frontend amb experiència en Angular, CSS, Javascript, jQuery, Python i C#, entre altres. Els meus esforços se centren en la creació d'interfícies d'usuari atractives, intuïtives i adaptades a les necessitats de l'usuari per proporcionar-los una experiència agradable.<br>
                     En aquesta web, trobaràs informació sobre la meva experiència, habilitats i projectes, així com la meva informació de contacte perquè puguem conversar sobre diferents maneres d'ajudar-te amb projectes futurs.
                 }
                 @if (m.es()) {
-                    Soy un apasionado programador frontend con experiencia en Angular, CSS, Javascript, jQuery, Python y C#, entre otros. Mis esfuerzos se centran en la creación de interfaces de usuario atractivas, intuitivas y adaptadas a las necesidades del usuario para proporcionarles una experiencia agradable.<br>
                     En esta web, encontrarás información sobre mi experiencia, habilidades y proyectos, así como mi información de contacto para que podamos conversar sobre diferentes formas de ayudarte con proyectos futuros.
                 }
                 @if (m.en()) {
-                    I am a passionate frontend programmer. I have experience working with Angular, CSS, Javascript, jQuery, Python and C#, among others. My efforts focus on creating attractive, intuitive user interfaces adapted to user needs to provide them with a pleasant experience.<br>
                     On this site, you will find information about my past experience, skills, and projects, as well as my contact information so we can discuss about different ways on helping you and your business with future projects.
                 }
-            }
-            @if (m.back()) {
-                @if (m.ca()) {
-                    Sóc un apassionat programador backend amb experiència en Java, NodeJs, Python, C#, PHP i SQL, entre altres. El meu objectiu principal és construir servidors robustos i escalables, garantint un rendiment òptim i una gestió eficient de dades.<br>
-                    En aquesta web, trobaràs informació sobre la meva experiència, habilitats i projectes, així com la meva informació de contacte perquè puguem conversar sobre diferents maneres d'ajudar-te amb projectes futurs.
-                }
-                @if (m.es()) {
-                    Soy un apasionado programador backend con experiencia en Java, NodeJs, Python, C#, PHP y SQL, entre otros. Mi principal objetivo es construir servidores robustos y escalables, garantizando un rendimiento óptimo y una gestión eficiente de datos.<br>
-                    En esta web, encontrarás información sobre mi experiencia, habilidades y proyectos, así como mi información de contacto para que podamos conversar sobre diferentes formas de ayudarte con proyectos futuros.
-                }
-                @if (m.en()) {
-                    I am a passionate backend programmer. I have experience working with Java, NodeJs, Python, C#, PHP and SQL, among others. My main goal is to build robust and scalable servers, guaranteeing optimal performance and efficient data management.<br>
-                    On this site, you will find information about my past experience, skills, and projects, as well as my contact information so we can discuss about different ways on helping you and your business with future projects.
-                }
-            }
-            @if (m.full()) {
-                @if (m.ca()) {
-                    Sóc un apassionat programador fullstack amb experiència en Angular, Java, NodeJs, CSS i Python, entre altres. Aquesta àmplia gamma d'habilitats em permet treballar en projectes de principi a fi, creant interfícies d'usuari atractives i servidors sòlids per a solucions completes i ben integrades.<br>
-                    En aquesta web, trobaràs informació sobre la meva experiència, habilitats i projectes, així com la meva informació de contacte perquè puguem conversar sobre diferents maneres d'ajudar-te amb projectes futurs.
-                }
-                @if (m.es()) {
-                    Soy un apasionado programador fullstack con experiencia en Angular, Java, NodeJs, CSS y Python, entre otros. Esta amplia gama de habilidades me permite trabajar en proyectos de principio a fin, creando interfaces de usuario atractivas y servidores sólidos para soluciones completas y bien integradas.<br>
-                    En esta web, encontrarás información sobre mi experiencia, habilidades y proyectos, así como mi información de contacto para que podamos conversar sobre diferentes formas de ayudarte con proyectos futuros.
-                }
-                @if (m.en()) {
-                    I am a passionate fullstack programmer. I have experience working with Angular, Java, NodeJs, CSS and Python, among others. This broad range of skills allows me to work on projects from start to finish, creating attractive user interfaces and robust servers for complete, well-integrated solutions.<br>
-                    On this site, you will find information about my past experience, skills, and projects, as well as my contact information so we can discuss about different ways on helping you and your business with future projects.
-                }
-            }
-
+            </span>
             <a [href]="getRutaCV()" class="boto mt-4 pl-3" appMostrarAmbAnimacio>
                 @if (m.ca()) { Obrir CV }
                 @if (m.es()) { Abrir CV }

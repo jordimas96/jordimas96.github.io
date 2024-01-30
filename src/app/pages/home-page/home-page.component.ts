@@ -13,7 +13,19 @@ export class HomePageComponent extends PageComponent {
         "es": ["¡Buenos días!", "¡Buenas tardes!", "¡Buenas noches!"],
         "en": ["Good morning!", "Good afternoon!", "Good evening!"],
     };
-    
+
+    private experiencia = [
+        ["2017-9-4", "2019-3-8"], // Indra //
+        ["2020-9-7", "2021-6-25"], // Matic //
+        ["2021-8-31", "2023-6-30"], // In2art // -
+        ["2023-7-1", "2023-8-22"], // CodiTramuntana // -
+        ["2023-8-23", "2023-11-3"], // Orange //
+        ["2023-11-6", ""], // Evora // -
+
+    ];
+
+    public anysExp: number;
+    public anysMesosDiesExp: Array<number>;
     
     override async ngOnInit() {
         super.ngOnInit();
@@ -23,6 +35,8 @@ export class HomePageComponent extends PageComponent {
 
         // Google Analytics //
         this.m.gas.pageView("/home");
+
+        this.calcularAnysExperiencia();
     }
 
     override afterRootFadeIn() {
@@ -46,6 +60,48 @@ export class HomePageComponent extends PageComponent {
             index = 2;
         
         return this.salutacions[this.m.idioma][index] || "Hey!";
+    }
+
+    calcularAnysExperiencia() {
+        let diesTotals = 0;
+        this.experiencia.forEach(e => {
+            let dataInicial = new Date(e[0]);
+            let dataFinal = e[1] ? new Date(e[1]) : new Date();
+            diesTotals += (dataFinal.valueOf() - dataInicial.valueOf()) / (24 * 3600 * 1000);
+        });
+
+        const anys = Math.floor(diesTotals / 365);
+        diesTotals %= 365;
+        const mesos = Math.floor(diesTotals / 30);
+        diesTotals %= 30;
+        const dies = Math.floor(diesTotals);
+
+        this.anysMesosDiesExp = [anys, mesos, dies];
+        this.anysExp = anys;
+        if (mesos >= 6)
+            this.anysExp++;
+    }
+    getTextExp() {
+        const [anys, mesos, dies] = this.anysMesosDiesExp;
+        
+        return this.construirCadenaTempsExp(anys, mesos, dies);
+    }
+    construirCadenaTempsExp(anys: number, mesos: number, dies: number) {
+        const index = this.m.getIdiomaIndex();
+        const textAnys = [["any", "anys"], ["año", "años"], ["year", "years"]][index];
+        const textMesos = [["mes", "mesos"], ["mes", "meses"], ["month", "months"]][index];
+        const textDies = [["dia", "dies"], ["día", "días"], ["day", "days"]][index];
+        const conjuncio = ["i", "y", "and"][index];
+
+        let cadenes: Array<string> = [];
+        if (anys > 0) cadenes.push(anys + " " + (anys == 1 ? textAnys[0] : textAnys[1]));
+        if (mesos > 0) cadenes.push(mesos + " " + (mesos == 1 ? textMesos[0] : textMesos[1]));
+        if (dies > 0) cadenes.push(dies + " " + (dies == 1 ? textDies[0] : textDies[1]));
+
+        if (cadenes.length == 3) return `${cadenes[0]}, ${cadenes[1]} ${conjuncio} ${cadenes[2]}`;
+        if (cadenes.length == 2) return `${cadenes[0]} ${conjuncio} ${cadenes[1]}`;
+        if (cadenes.length == 1) return `${cadenes[0]}`;
+        return "";
     }
 
     getRutaCV() {

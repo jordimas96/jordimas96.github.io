@@ -65,7 +65,7 @@ export class MainService {
     ca() { return this.idioma == "ca" }
     es() { return this.idioma == "es" }
     en() { return this.idioma == "en" }
-    getIdiomaNum() { return ["ca", "es", "en"].indexOf(this.idioma) }
+    getIdiomaIndex() { return ["ca", "es", "en"].indexOf(this.idioma) }
 
     public log(t) { console.log(t); }
     public logDebug(t) { if (this.debug) console.log(t); }
