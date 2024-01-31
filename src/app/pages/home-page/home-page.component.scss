@@ -49,6 +49,8 @@
 
         .tempsExp {
             cursor: help;
+            color: var(--color-7);
+            font-weight: bold;
         }
         
         .boto {
@@ -60,6 +62,10 @@
 }
 ::ng-deep html.light.matinada .nom,
 ::ng-deep html.nit .nom { color: var(--text) !important }
+::ng-deep html.nit .tempsExp { color: var(--text); }
+::ng-deep html.nit .tempsExp,
+::ng-deep .light .tempsExp { font-weight: 900 !important; }
+
 
 .llenguatges {
     .subtitle {
