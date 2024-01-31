@@ -1,10 +1,10 @@
 @import "src/styles.scss";
 
 .group {
-    --color-fosc-rgb-vals-test: rgb(37, 37, 0);
-    --color-clar-rgb-vals-test: rgb(255, 255, 209);
-    --color-fosc-rgb-vals: 37, 37, 0;
-    --color-clar-rgb-vals: 255, 255, 209;
+    --color-fosc-hsl-vals-test: hsl(60, 100%, 7%);
+    --color-clar-hsl-vals-test: hsl(60, 100%, 91%);
+    --color-fosc-hsl-vals: 60, 100%, 7%;
+    --color-clar-hsl-vals: 60, 100%, 91%;
     --color-l-0: hsl(60, 100%, 7%);
     --color-l-1: hsl(60, 100%, 14%);
     --color-l-2: hsl(60, 100%, 19%);

@@ -28,34 +28,34 @@
 
     // Temes //
     &.matinada {
-        --color-fosc-rgb-vals-test: rgb(37, 37, 0);
-        --color-clar-rgb-vals-test: rgb(255, 255, 209);
-        --color-fosc-rgb-vals: 37, 37, 0;
-        --color-clar-rgb-vals: 255, 255, 209;
+        --color-fosc-hsl-vals-test: hsl(60, 100%, 7%);
+        --color-clar-hsl-vals-test: hsl(60, 100%, 91%);
+        --color-fosc-hsl-vals: 60, 100%, 7%;
+        --color-clar-hsl-vals: 60, 100%, 91%;
     }
     &.mati {
-        --color-fosc-rgb-vals-test: rgb(0, 26, 39);
-        --color-clar-rgb-vals-test: rgb(186, 232, 255);
-        --color-fosc-rgb-vals: 0, 26, 39;
-        --color-clar-rgb-vals: 186, 232, 255;
+        --color-fosc-hsl-vals-test: hsl(200, 100%, 8%);
+        --color-clar-hsl-vals-test: hsl(200, 100%, 86%);
+        --color-fosc-hsl-vals: 200, 100%, 8%;
+        --color-clar-hsl-vals: 200, 100%, 86%;
     }
     &.tarda {
-        --color-fosc-rgb-vals-test: rgb(34, 19, 0);
-        --color-clar-rgb-vals-test: rgb(255, 236, 210);
-        --color-fosc-rgb-vals: 34, 19, 0;
-        --color-clar-rgb-vals: 255, 236, 210;
+        --color-fosc-hsl-vals-test: hsl(34, 100%, 7%);
+        --color-clar-hsl-vals-test: hsl(35, 100%, 91%);
+        --color-fosc-hsl-vals: 34, 100%, 7%;
+        --color-clar-hsl-vals: 35, 100%, 91%;
     }
     &.vespre {
-        --color-fosc-rgb-vals-test: rgb(20, 0, 41);
-        --color-clar-rgb-vals-test: rgb(231, 219, 255);
-        --color-fosc-rgb-vals: 20, 0, 41;
-        --color-clar-rgb-vals: 231, 219, 255;
+        --color-fosc-hsl-vals-test: hsl(269, 100%, 8%);
+        --color-clar-hsl-vals-test: hsl(260, 100%, 93%);
+        --color-fosc-hsl-vals: 269, 100%, 8%;
+        --color-clar-hsl-vals: 260, 100%, 93%;
     }
     &.nit {
-        --color-fosc-rgb-vals-test: rgb(0, 0, 0);
-        --color-clar-rgb-vals-test: rgb(255, 255, 255);
-        --color-fosc-rgb-vals: 0, 0, 0;
-        --color-clar-rgb-vals: 255, 255, 255;
+        --color-fosc-hsl-vals-test: hsl(0, 0%, 0%);
+        --color-clar-hsl-vals-test: hsl(0, 0%, 100%);
+        --color-fosc-hsl-vals: 0, 0%, 0%;
+        --color-clar-hsl-vals: 0, 0%, 100%;
     }
     // Paleta 2 //
     &.matinada {
@@ -140,26 +140,26 @@
 
 // Establir variables mode fosc i clar //
 :root, .group {
-    --color-fosc:    rgba(var(--color-fosc-rgb-vals), 1.0);
-    --color-fosc-90: rgba(var(--color-fosc-rgb-vals), 0.9);
-    --color-fosc-80: rgba(var(--color-fosc-rgb-vals), 0.8);
-    --color-fosc-70: rgba(var(--color-fosc-rgb-vals), 0.7);
-    --color-fosc-60: rgba(var(--color-fosc-rgb-vals), 0.6);
-    --color-fosc-50: rgba(var(--color-fosc-rgb-vals), 0.5);
-    --color-fosc-40: rgba(var(--color-fosc-rgb-vals), 0.4);
-    --color-fosc-30: rgba(var(--color-fosc-rgb-vals), 0.3);
-    --color-fosc-20: rgba(var(--color-fosc-rgb-vals), 0.2);
-    --color-fosc-10: rgba(var(--color-fosc-rgb-vals), 0.1);
-    --color-clar:    rgba(var(--color-clar-rgb-vals), 1.0);
-    --color-clar-90: rgba(var(--color-clar-rgb-vals), 0.9);
-    --color-clar-80: rgba(var(--color-clar-rgb-vals), 0.8);
-    --color-clar-70: rgba(var(--color-clar-rgb-vals), 0.7);
-    --color-clar-60: rgba(var(--color-clar-rgb-vals), 0.6);
-    --color-clar-50: rgba(var(--color-clar-rgb-vals), 0.5);
-    --color-clar-40: rgba(var(--color-clar-rgb-vals), 0.4);
-    --color-clar-30: rgba(var(--color-clar-rgb-vals), 0.3);
-    --color-clar-20: rgba(var(--color-clar-rgb-vals), 0.2);
-    --color-clar-10: rgba(var(--color-clar-rgb-vals), 0.1);
+    --color-fosc:    hsla(var(--color-fosc-hsl-vals), 1.0);
+    --color-fosc-90: hsla(var(--color-fosc-hsl-vals), 0.9);
+    --color-fosc-80: hsla(var(--color-fosc-hsl-vals), 0.8);
+    --color-fosc-70: hsla(var(--color-fosc-hsl-vals), 0.7);
+    --color-fosc-60: hsla(var(--color-fosc-hsl-vals), 0.6);
+    --color-fosc-50: hsla(var(--color-fosc-hsl-vals), 0.5);
+    --color-fosc-40: hsla(var(--color-fosc-hsl-vals), 0.4);
+    --color-fosc-30: hsla(var(--color-fosc-hsl-vals), 0.3);
+    --color-fosc-20: hsla(var(--color-fosc-hsl-vals), 0.2);
+    --color-fosc-10: hsla(var(--color-fosc-hsl-vals), 0.1);
+    --color-clar:    hsla(var(--color-clar-hsl-vals), 1.0);
+    --color-clar-90: hsla(var(--color-clar-hsl-vals), 0.9);
+    --color-clar-80: hsla(var(--color-clar-hsl-vals), 0.8);
+    --color-clar-70: hsla(var(--color-clar-hsl-vals), 0.7);
+    --color-clar-60: hsla(var(--color-clar-hsl-vals), 0.6);
+    --color-clar-50: hsla(var(--color-clar-hsl-vals), 0.5);
+    --color-clar-40: hsla(var(--color-clar-hsl-vals), 0.4);
+    --color-clar-30: hsla(var(--color-clar-hsl-vals), 0.3);
+    --color-clar-20: hsla(var(--color-clar-hsl-vals), 0.2);
+    --color-clar-10: hsla(var(--color-clar-hsl-vals), 0.1);
 
     --fons: var(--color-fosc);
     --fons-90: var(--color-fosc-90);
