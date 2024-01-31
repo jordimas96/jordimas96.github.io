@@ -15,6 +15,9 @@ export class HomePageComponent extends PageComponent {
     };
 
     private experiencia = [
+        ["2016-2-1", "2016-7-14"], // DSET //
+        ["2016-10-17", "2017-2-28"], // Nexxia //
+        ["2017-7-3", "2017-7-31"], // Beca Indra //
         ["2017-9-4", "2019-3-8"], // Indra //
         ["2020-9-7", "2021-6-25"], // Matic //
         ["2021-8-31", "2023-6-30"], // In2art // -
@@ -113,7 +116,7 @@ export class HomePageComponent extends PageComponent {
     }
 
     getRutaCV() {
-        return `assets/CV/${this.m.idioma.toUpperCase()}/CV Jordi Mas Parramon.pdf`;
+        return `assets/documents/CV/${this.m.idioma.toUpperCase()}/CV Jordi Mas Parramon.pdf`;
     }
 
     obrirVeureMesSkills() {
