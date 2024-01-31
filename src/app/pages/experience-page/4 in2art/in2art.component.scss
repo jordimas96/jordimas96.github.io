@@ -29,14 +29,14 @@
     a.link-boto-titol:hover {
         img.title-icon {
             transform-origin: 50% 200%;
-            animation: saludar 0.5s linear;
+            animation: saludar 0.45s linear;
         }
     }
     @keyframes saludar {
         0% { transform: rotate(0deg); }
-        25% { transform: rotate(-7.5deg); }
+        25% { transform: rotate(7.5deg); }
         50% { transform: rotate(0deg); }
-        75% { transform: rotate(-7.5deg); }
+        75% { transform: rotate(7.5deg); }
         100% { transform: rotate(0deg); }
     }
 }
