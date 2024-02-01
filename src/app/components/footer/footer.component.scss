@@ -13,13 +13,28 @@ footer {
         flex-wrap: wrap;
         justify-content: center;
 
-        a {
+        a.link-img {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+
+            border-radius: 1rem;
             padding: 0.5rem;
-            border-radius: 16px;
+            padding-bottom: 0.5rem;
             
-            img.title-icon {
+            img.footer-icon {
                 height: 2.2rem;
             }
+        }
+        .footer-icon-text {
+            font-size: 0.6rem;
+            color: var(--color-clar);
+            margin: 0 -0.2rem;
+
+            opacity: 0;
+            transform: translateY(-100%) scale(0);
+
+            transition: transform 0.3s, opacity 0.3s, margin 0.3s;
         }
     }
     .developed-by {
@@ -52,14 +67,26 @@ footer {
 
 // PC //
 @media (pointer: fine) {
-    footer .contact-icons a {
+    footer .contact-icons a.link-img {
         transition: font-size 0.3s, transform 0.3s, var(--transicio-colors);
 
         &:hover {
-            transform: scale(1.3);
             background-color: var(--color-l-3);
+            transform: scale(1.3);
+
+            .footer-icon-text {
+                opacity: 1;
+                transform: translateY(0.1rem);
+            }
         }
     }
 }
 // Mòbil //
-@media (pointer: coarse) { }
+@media (pointer: coarse) {
+    .contact-icons {
+        margin-bottom: 1rem;
+    }
+    .footer-icon-text {
+        display: none;
+    }
+}
