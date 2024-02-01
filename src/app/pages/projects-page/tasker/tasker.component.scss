@@ -23,11 +23,22 @@
 
 
 .group {
+    a.link-img {
+        img.title-icon {
+            transition: transform 0.3s;
+        }
+    }
     .botons {
         display: flex;
         align-items: center;
         justify-content: space-around;
         gap: 1rem;
+        
+        .boto {
+            .logo {
+                transition: transform 0.3s;
+            }
+        }
     }
 }
 
@@ -58,6 +69,20 @@
 }
 
 // PC //
-@media (pointer: fine) { }
+@media (pointer: fine) {
+    a.link-img:hover {
+        img.title-icon {
+            transform: rotate(360deg) scale(1.4);
+        }
+    }
+
+    .botons {
+        .boto:hover {
+            .logo.tasker {
+                transform: rotate(360deg);
+            }
+        }
+    }
+}
 // Mòbil //
 @media (pointer: coarse) { }

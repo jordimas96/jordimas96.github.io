@@ -1,0 +1,25 @@
+
+
+
+
+
+
+
+a.link-img {
+    img.title-icon {
+        transition: transform 0.3s;
+    }
+}
+
+
+
+// PC //
+@media (pointer: fine) {
+    a.link-img:hover {
+        img.title-icon {
+            transform: scale(1.4);
+        }
+    }
+}
+// Mòbil //
+@media (pointer: coarse) { }
