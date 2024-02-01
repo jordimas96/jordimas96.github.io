@@ -29,16 +29,16 @@
         hsla(9, 100%, 25%, 0.5) 15%,
         hsla(212, 100%, 25%, 0.5) 65%);
 
-        --link: var(--color-l-6);
-    }
+    --link: var(--color-l-6);
+}
 .light :host .group {
     background: linear-gradient(45deg,
         hsla(41, 100%, 72%, 0.5),
         hsla(9, 83%, 72%, 0.5),
         hsla(212, 64%, 72%, 0.5));
         
-        --link: var(--color-l-4);
-    }
+    --link: var(--color-l-4);
+}
 
 
 
@@ -57,7 +57,7 @@ a.link-boto-titol {
 @media (pointer: fine) {
     a.link-boto-titol:hover {
         img.title-icon {
-            transform: rotate(360deg);
+            transform: rotate(360deg) scale(1.2);
         }
     }
 }

@@ -20,3 +20,27 @@
 // Colors específics cards //
              .group { background-color: hsla(356, 100%, 15%, 0.5); --link: var(--color-l-7); }
 .light :host .group { background-color: hsla(356, 100%, 72%, 0.5); --link: var(--color-l-2); }
+
+
+
+
+
+
+a.link-boto-titol {
+    img.title-icon {
+        transition: transform 0.3s;
+    }
+}
+
+
+
+// PC //
+@media (pointer: fine) {
+    a.link-boto-titol:hover {
+        img.title-icon {
+            transform: scale(1.2);
+        }
+    }
+}
+// Mòbil //
+@media (pointer: coarse) { }

@@ -21,3 +21,26 @@
              .group { background-color: hsla(28, 100%, 25%, 0.5); }
 .light :host .group { background-color: hsla(28, 100%, 72%, 0.5); }
 
+
+
+
+
+
+a.link-boto-titol {
+    img.title-icon {
+        transition: transform 0.3s;
+    }
+}
+
+
+
+// PC //
+@media (pointer: fine) {
+    a.link-boto-titol:hover {
+        img.title-icon {
+            transform: scale(1.2);
+        }
+    }
+}
+// Mòbil //
+@media (pointer: coarse) { }
