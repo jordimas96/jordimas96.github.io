@@ -24,7 +24,7 @@
 
 // Colors específics cards //
 // .group { background-color: hsla(212, 100%, 25%, 0.5); }
-.group {
+.dark :host .group {
     background: linear-gradient(45deg,
         hsla(9, 100%, 25%, 0.5) 15%,
         hsla(212, 100%, 25%, 0.5) 65%);

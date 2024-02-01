@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { PageComponent } from '../page/page.component';
+import { PageComponent } from '../page.component';
 
 @Component({
     selector: 'app-experience-page',

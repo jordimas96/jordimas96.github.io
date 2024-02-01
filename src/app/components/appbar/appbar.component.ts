@@ -185,14 +185,14 @@ export class AppbarComponent {
 
         setTimeout(() => {
             let temaVell = this.m.tema;
-            this.setTemaSegonsHora((ara.getHours() + 1) % 24);
+            this.setTemaSegonsHora(horaSeguent.getHours());
             this.actTema();
             if (temaVell != this.m.tema)
-                console.log("Theme changed because it's " + (ara.getHours()) + ":00");
+                console.log("Theme changed because it's " + (horaSeguent.getHours()) + ":00");
         }, horaSeguent.getTime() - ara.getTime());
     }
 
-    actTema(tema?) {
+    actTema(tema?: string) {
         if (tema) this.m.tema = tema;
         $("html")
             .removeClass("dark light nit matinada mati tarda vespre")

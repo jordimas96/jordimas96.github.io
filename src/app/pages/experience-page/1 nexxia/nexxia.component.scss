@@ -18,7 +18,7 @@
 }
 
 // Colors específics cards //
-             .group { background-color: hsla(46, 100%, 21%, 0.5); --link: var(--color-l-6); }
+.dark  :host .group { background-color: hsla(46, 100%, 21%, 0.5); --link: var(--color-l-6); }
 .light :host .group { background-color: hsla(46, 100%, 72%, 0.5); --link: var(--color-l-3); }
 
 
