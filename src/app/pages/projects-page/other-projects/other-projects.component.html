@@ -1,0 +1,54 @@
+<div id="other" class="group mb-6" appMostrarAmbAnimacio>
+    <div class="subtitle mb-2 g-2_5">
+        @if (m.ca) { Altres projectes }
+        @if (m.es) { Otros proyectos }
+        @if (m.en) { Other projects }
+        <a href="https://github.com/jordimas96?tab=repositories" class="link-img"><img src="assets/icons/contact/github.png" alt="GitHub" class="title-icon py-1"></a>
+    </div>
+    <p class="text mb-4">
+        @if (m.ca) {
+            Tinc alguns projectes de GitHub sobre diversos temes, per exemple:
+            <br><br><br>
+    
+            <a href="https://jordimas96.github.io/rounded-corners-test/">Rounded Corners Test</a>: Aquest és un petit projecte per a desenvolupar i provar una nova directiva per adaptar automàticament el border-radius dels fills perquè coincideixi amb la dels pares, calculant tots els espais pel camí.
+            <br><br>
+    
+            <a href="https://jordimas96.github.io/evorait-task_materials_ngrx/">Evora materials task</a>: Una petita tasca que vaig fer amb Angular i NgRx per a una entrevista per a una empresa. Vaig utilitzar aquest projecte també per implementar les noves característiques d'Anglar 17.
+        }
+
+
+        @if (m.es) {
+            Tengo algunos proyectos de GitHub sobre varios temas, por ejemplo:
+            <br><br><br>
+        
+            <a href="https://jordimas96.github.io/rounded-corners-test/">Rounded Corners Test</a>: Este es un pequeño sitio web para desarrollar y probar una nueva directiva para adaptar automáticamente el border-radius de los hijos para que coincida con la de los padres, calculando todo el espaciado por el camino.
+            <br><br>
+        
+            <a href="https://jordimas96.github.io/evorait-task_materials_ngrx/">Evora materials task</a>: Una pequeña tarea que hice con Angular y NgRx para una entrevista para una empresa. Utilicé este proyecto también para implementar las nuevas características de Anglar 17.
+        }
+
+
+        @if (m.en) {
+            I have some GitHub projects on many topics, for example:
+            <br><br><br>
+            
+            <a href="https://jordimas96.github.io/rounded-corners-test/">Rounded Corners Test</a>: This is a small website to develop and test a new directive that will automatically adapt the border radius of the children to match that of the parents, calculating all the spacing along the way.
+            <br><br>
+            
+            <a href="https://jordimas96.github.io/evorait-task_materials_ngrx/">Evora materials task</a>: A small task I made with Angular and NgRx for an interview for a company. I used it also to implement the new features from Anglar 17.
+        }
+    </p>
+    
+    <!-- Skills -->
+    <div class="title-skills mt-4 mb-2">
+        @if (m.ca) { Tecnologies utilitzades }
+        @if (m.es) { Tecnologías usadas }
+        @if (m.en) { Used technologies }
+    </div>
+    <div class="skills">
+        <app-skill n="Angular"/>
+        <app-skill n="CSS"/>
+        <app-skill n="Javascript"/>
+        <app-skill n="NgRx"/>
+    </div>
+</div>

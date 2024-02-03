@@ -27,6 +27,7 @@ import { DetallsAndroidAppsComponent } from './pages/projects-page/android-apps/
 import { CustomRomsComponent } from './pages/projects-page/custom-roms/custom-roms.component';
 import { MadJumpgateJocComponent } from './pages/projects-page/mad-jumpgate/mad-jumpgate-joc/mad-jumpgate-joc.component';
 import { MadJumpgateComponent } from './pages/projects-page/mad-jumpgate/mad-jumpgate.component';
+import { OtherProjectsComponent } from './pages/projects-page/other-projects/other-projects.component';
 import { ProjectsPageComponent } from './pages/projects-page/projects-page.component';
 import { TaskerComponent } from './pages/projects-page/tasker/tasker.component';
 
@@ -64,6 +65,7 @@ import { TaskerComponent } from './pages/projects-page/tasker/tasker.component';
         CustomRomsComponent,
         TaskerComponent,
         AmazfitWatchfacesComponent,
+        OtherProjectsComponent,
 
         DetallsAndroidAppsComponent,
         MadJumpgateJocComponent,
