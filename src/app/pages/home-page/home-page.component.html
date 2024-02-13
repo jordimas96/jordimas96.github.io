@@ -113,17 +113,23 @@
     </div>
     
 
+
+
+
+
+
+
     <!-- Skills -->
     <div id="llenguatges" class="group llenguatges mb-6" appMostrarAmbAnimacio>
-        <div class="subtitle mb-2">
+        <div class="subtitle">
             @if (m.ca) { Habilitats en programació }
             @if (m.es) { Habilidades en programación }
             @if (m.en) { Programming skills }
         </div>
-        <div class="row no-gutters justify-content-center">
+        <div class="row no-gutters justify-content-center m-0">
             <div class="col-12 col-sm-6" [ngClass]="{'order-1': !m.back(), 'order-2': m.back()}">
-                <div class="titol-tipus-llenguatge mt-4 mb-2">Frontend</div>
-                <div class="skills">
+                <div class="titol-tipus-llenguatge mb-2 mt-5">Frontend</div>
+                <div class="skills px-1">
                     <app-skill n="Angular"/>
                     <app-skill n="NgRx"/>
                     <app-skill n="JavaScript"/>
@@ -146,8 +152,8 @@
             </div>
 
             <div class="col-12 col-sm-6" [ngClass]="{'order-1': m.back(), 'order-2': !m.back()}">
-                <div class="titol-tipus-llenguatge mt-4 mb-2">Backend</div>
-                <div class="skills">
+                <div class="titol-tipus-llenguatge mb-2 mt-5">Backend</div>
+                <div class="skills px-1">
                     <app-skill n="NodeJs"/>
                     <app-skill n="Java"/>
                     <app-skill n="Sequelize"/>
@@ -168,12 +174,12 @@
             </div>
 
             <div class="col-12 col-sm-12 order-3">
-                <div class="titol-tipus-llenguatge mt-4 mb-2">
+                <div class="titol-tipus-llenguatge mb-2 mt-5">
                     @if (m.ca) { Eines de desenvolupament }
                     @if (m.es) { Herramientas de desarrollo }
                     @if (m.en) { Software development tools }
                 </div>
-                <div class="skills">
+                <div class="skills px-1">
                     <app-skill n="Git"/>
                     <app-skill n="GitHub"/>
                     <!-- <app-skill n="Bitbucket"/> -->
@@ -204,8 +210,8 @@
                 </div>
             </div>
 
-            <div id="seccioBotoVeureMes" class="col-12 col-sm-12 order-6 text-center">
-                <button class="boto botoText botoVeureMes pt-4" (click)="obrirVeureMesSkills()" appMostrarAmbAnimacio>
+            <div class="seccioBotoVeureMes col-12 col-sm-12 order-6 text-center">
+                <button class="boto botoText botoVeureMes mt-4" (click)="obrirVeureMesSkills()" appMostrarAmbAnimacio>
                     @if (m.ca) { Veure més }
                     @if (m.es) { Ver más }
                     @if (m.en) { See more }
@@ -215,12 +221,12 @@
             </div>
 
             <div class="col-12 col-sm-6 order-4 skills-ocultes" style="display:none;">
-                <div class="titol-tipus-llenguatge mt-4 mb-2">
+                <div class="titol-tipus-llenguatge mb-2 mt-5">
                     @if (m.ca) { Eines de virtualització i SO }
                     @if (m.es) { Herramientas de virtualización y SO }
                     @if (m.en) { Virtualization tools and OS }
                 </div>
-                <div class="skills">
+                <div class="skills px-1">
                     <app-skill n="VMware"/>
                     <app-skill n="VirtualBox"/>
                     <app-skill n="Windows"/>
@@ -236,12 +242,12 @@
             </div>
 
             <div class="col-12 col-sm-6 order-5 skills-ocultes" style="display:none;">
-                <div class="titol-tipus-llenguatge mt-4 mb-2">
+                <div class="titol-tipus-llenguatge mb-2 mt-5">
                     @if (m.ca) { CMS i frameworks web }
                     @if (m.es) { CMS y frameworks web }
                     @if (m.en) { CMS and web frameworks }
                 </div>
-                <div class="skills">
+                <div class="skills px-1">
                     <app-skill n="Joomla"/>
                     <app-skill n="K2"/>
                     <app-skill n="Akeeba Backup"/>

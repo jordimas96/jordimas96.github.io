@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { BrowserModule } from '@angular/platform-browser';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { QRCodeModule } from 'angularx-qrcode';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -72,6 +73,7 @@ import { TaskerComponent } from './pages/projects-page/tasker/tasker.component';
     ],
     imports: [
         BrowserModule,
+        NgbModule,
         AppRoutingModule,
         FormsModule,
         GoogleAnalyticsModule,

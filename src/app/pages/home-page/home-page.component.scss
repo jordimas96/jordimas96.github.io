@@ -11,6 +11,7 @@
         overflow: hidden;
         border-radius: 2rem;
         transition: border-radius 0.3s;
+        // -webkit-box-reflect: below 0px linear-gradient(to bottom, rgb(0 0 0 / 0%) 50%, rgb(0 0 0 / 15%));
 
         .foto-carnet {
             width: 100%;
@@ -83,25 +84,33 @@
     }
     .skills {
         justify-content: center;
-        margin: -0.25rem 0;
     }
 }
 
-.botoVeureMes {
-    display: inline;
-    font-size: 1.6rem;
+.seccioBotoVeureMes {
+    
+    .botoVeureMes {
+        display: inline;
+        font-size: 1.6rem;
 
-    i {
-        display: block;
-        transition: transform 0.3s;
-    }
-
-    &:hover {
         i {
-            transform: translateY(0.5rem);
+            display: block;
+            transition: transform 0.3s;
+        }
+
+        &:hover {
+            i {
+                transform: translateY(0.5rem);
+            }
         }
     }
 }
+
+// div#llenguatges * {
+//     transition: all 0.3s !important;
+// }
+
+
 // PC //
 @media (pointer: fine) {
     .div-foto:hover {
