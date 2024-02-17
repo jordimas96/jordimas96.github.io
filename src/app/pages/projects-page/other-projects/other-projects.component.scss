@@ -31,6 +31,18 @@
             transition: transform 0.3s;
         }
     }
+
+    .text {
+        .repo {
+            img {
+                height: 1.6rem;
+                margin-top: -0.2rem;
+            }
+            a {
+                text-transform: capitalize;
+            }
+        }
+    }
 }
 
 

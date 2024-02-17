@@ -31,6 +31,7 @@ import { MadJumpgateComponent } from './pages/projects-page/mad-jumpgate/mad-jum
 import { OtherProjectsComponent } from './pages/projects-page/other-projects/other-projects.component';
 import { ProjectsPageComponent } from './pages/projects-page/projects-page.component';
 import { TaskerComponent } from './pages/projects-page/tasker/tasker.component';
+import { HttpClientModule } from '@angular/common/http'; 
 
 @NgModule({
     declarations: [
@@ -78,6 +79,7 @@ import { TaskerComponent } from './pages/projects-page/tasker/tasker.component';
         FormsModule,
         GoogleAnalyticsModule,
         QRCodeModule,
+        HttpClientModule,
     ],
     providers: [],
     bootstrap: [AppComponent]

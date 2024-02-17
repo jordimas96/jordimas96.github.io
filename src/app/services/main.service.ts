@@ -99,19 +99,6 @@ export class MainService {
     public force(tema) { Utils.setCookie("forçartema", tema) }
     public noforce() { Utils.removeCookie("forçartema") }
 
-    public getColorQRDark() {
-        if (this.tema == 'nit')
-            return '#000';
-        else
-            return Utils.getColor('--color-l-2');
-    }
-    public getColorQRLight() {
-        if (this.tema == 'nit')
-            return '#fff';
-        else
-            return Utils.getColor('--color-l-9');
-    }
-
 
     // Funcions //
     afterRootFadeIn(funcio: Function) {

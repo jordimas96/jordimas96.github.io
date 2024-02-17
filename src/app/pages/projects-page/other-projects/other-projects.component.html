@@ -3,41 +3,25 @@
         @if (m.ca) { Altres projectes }
         @if (m.es) { Otros proyectos }
         @if (m.en) { Other projects }
-        <a href="https://github.com/jordimas96?tab=repositories" class="link-img"><img src="assets/icons/contact/github.png" alt="GitHub" class="title-icon py-1"></a>
+        <a href="https://github.com/jordimas96?tab=repositories" class="link-img"><img src="assets/icons/contact/github.png" alt="GitHub" class="title-icon inv-dark py-1"></a>
     </div>
-    <p class="text mb-4">
-        @if (m.ca) {
-            Tinc alguns projectes de GitHub sobre diversos temes, per exemple:
-            <br><br><br>
-    
-            <a href="https://jordimas96.github.io/rounded-corners-directive/">Rounded Corners Directive</a>: Aquest és un petit projecte per desenvolupar i provar una nova directiva per adaptar automàticament el border-radius dels fills perquè coincideixi amb el dels pares, calculant tots els espais pel camí.
+    <div class="text mb-4">
+        @if (m.ca) { Tinc alguns projectes de GitHub sobre diversos temes, per exemple: }
+        @if (m.es) { Tengo algunos proyectos de GitHub sobre varios temas, por ejemplo: }
+        @if (m.en) { I have some GitHub projects on many topics, for example: }
+        <br><br>
+
+        @for(repo of repos; track repos["id"]) {
+
+            <div class="repo">
+                <img [src]="repo.iconUrl" [alt]="repo.nameFormated" class="mr-2">
+                <a [href]="repo.url">{{repo.nameFormated}}</a>: {{repo.text}}
+            </div>
+
             <br><br>
-    
-            <a href="https://jordimas96.github.io/evorait-task_materials_ngrx/">Evora materials task</a>: Una petita tasca que vaig fer amb Angular i NgRx per a una entrevista per a una empresa. Vaig utilitzar aquest projecte també per implementar les noves característiques d'Anglar 17.
+
         }
-
-
-        @if (m.es) {
-            Tengo algunos proyectos de GitHub sobre varios temas, por ejemplo:
-            <br><br><br>
-        
-            <a href="https://jordimas96.github.io/rounded-corners-directive/">Rounded Corners Directive</a>: Éste es un pequeño proyecto para desarrollar y probar una nueva directiva para adaptar automáticamente el border-radius de los hijos para que coincida con el de los padres, calculando todos los espacios por el camino.
-            <br><br>
-        
-            <a href="https://jordimas96.github.io/evorait-task_materials_ngrx/">Evora materials task</a>: Una pequeña tarea que hice con Angular y NgRx para una entrevista para una empresa. Utilicé este proyecto también para implementar las nuevas características de Anglar 17.
-        }
-
-
-        @if (m.en) {
-            I have some GitHub projects on many topics, for example:
-            <br><br><br>
-            
-            <a href="https://jordimas96.github.io/rounded-corners-directive/">Rounded Corners Directive</a>: This is a small website to develop and test a new directive for angular that will automatically adapt the border radius of the children to match the one from the parents, calculating all the spacing along the way.
-            <br><br>
-            
-            <a href="https://jordimas96.github.io/evorait-task_materials_ngrx/">Evora materials task</a>: A small task I made with Angular and NgRx for an interview for a company. I used it also to implement the new features from Anglar 17.
-        }
-    </p>
+    </div>
     
     <!-- Skills -->
     <div class="title-skills mt-4 mb-2">
