@@ -32,33 +32,57 @@ export class OtherProjectsComponent extends CardComponent {
 
 
     async carregarInfoProjects() {
-        this.repos = await this.ps.getRepositorisGitHubProjects();
+        let repos = await this.ps.getRepositorisGitHubProjects();
 
-        // Order repos by topics[]:"pop-order-X"
+        // Order repos //
+        repos.forEach((repo: any) => {
 
-        this.repos = await Promise.all(this.repos.map(async (repo) => {
+            let order: any = repo.topics.find((topic: string) => topic.startsWith("pop-order-"));
             
+            if (order != null) {
+                order = parseFloat(order.split("pop-order-")[1]);
+                if (Number.isNaN(order))
+                    order = null;
+            }
+            if (order == null)
+                order = Infinity;
+
+            repo.order = order;
+        });
+        repos.sort((a, b) => a.order - b.order);
+        
+
+        this.repos = await Promise.all(repos.map(async (repo) => {
+
             return {
                 name: repo.name,
                 nameFormated: repo.name.replace(/[-_]+/g, " "),
-                text: await this.getReadme(repo.name),
+                text: await this.getReadmes(repo.name),
                 url: repo.homepage,
                 iconUrl: `https://raw.githubusercontent.com/jordimas96/${repo.name}/main/docs/favicon.ico`,
+                order: repo.order,
             }
         }));
         
     }
 
 
-    async getReadme(repoName: string) {
-        let idioma = this.m.idioma;
+    async getReadmes(repoName: string) {
 
-        let textReadme = await this.ps.getReadme(repoName, idioma);
+        let [ca, es, en] = await Promise.all([
+            this.ps.getReadme(repoName, "ca"),
+            this.ps.getReadme(repoName, "es"),
+            this.ps.getReadme(repoName, "en"),
+        ]);
 
-        if (!textReadme && idioma != "en")
-            textReadme = await this.ps.getReadme(repoName, "en");
+        if (!es) es = en;
+        if (!ca) ca = es;
 
-        return this.processarReadme(textReadme || "");
+        ca = this.processarReadme(ca || "");
+        es = this.processarReadme(es || "");
+        en = this.processarReadme(en || "");
+
+        return { ca, es, en };
     }
 
     processarReadme(text: string) {

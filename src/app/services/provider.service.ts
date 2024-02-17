@@ -41,7 +41,8 @@ export class ProviderService {
                     resolve(data);
                 },
                 (error) => {
-                    console.log(`${repoName}: Readme file not found in language '${idioma}', using english by default.`);
+                    if (idioma == "ca") console.log(`${repoName}: Readme file in catalan not found, using spanish.`);
+                    if (idioma == "es") console.log(`${repoName}: Readme file in spanish not found, using english by default.`);
                     
                     resolve(null);
                 }

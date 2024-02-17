@@ -11,16 +11,16 @@
         @if (m.en) { I have some GitHub projects on many topics, for example: }
         <br><br>
 
-        @for(repo of repos; track repos["id"]) {
+        @for(repo of repos; track repos["name"]) {
 
-            <div class="repo">
+            <div class="repo" appMostrarAmbAnimacio>
                 <img [src]="repo.iconUrl" [alt]="repo.nameFormated" class="mr-2">
-                <a [href]="repo.url">{{repo.nameFormated}}</a>: {{repo.text}}
+                <a [href]="repo.url">{{repo.nameFormated}}</a>: {{repo.text[m.idioma]}}
             </div>
 
-            <br><br>
+            <br>
 
-        }
+        } @empty { <i class="ml-4">No projects found</i> }
     </div>
     
     <!-- Skills -->
