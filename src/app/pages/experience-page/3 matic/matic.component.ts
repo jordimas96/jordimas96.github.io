@@ -5,7 +5,7 @@ import { CardComponent } from '../../../components/card/card.component';
 @Component({
     selector: 'app-matic',
     templateUrl: './matic.component.html',
-    styleUrls: ['./matic.component.scss', '../experience-page.scss']
+    styleUrls: ['./matic.component.scss', '../experience-page.scss', '../../../components/card/card.scss']
 })
 export class MaticComponent extends CardComponent {
     

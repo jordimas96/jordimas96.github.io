@@ -5,7 +5,7 @@ import { CardComponent } from '../../../components/card/card.component';
 @Component({
     selector: 'app-in2art',
     templateUrl: './in2art.component.html',
-    styleUrls: ['./in2art.component.scss', '../experience-page.scss']
+    styleUrls: ['./in2art.component.scss', '../experience-page.scss', '../../../components/card/card.scss']
 })
 export class In2artComponent extends CardComponent {
     

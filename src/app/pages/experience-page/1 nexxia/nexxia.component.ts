@@ -5,7 +5,7 @@ import { CardComponent } from '../../../components/card/card.component';
 @Component({
     selector: 'app-nexxia',
     templateUrl: './nexxia.component.html',
-    styleUrls: ['./nexxia.component.scss', '../experience-page.scss']
+    styleUrls: ['./nexxia.component.scss', '../experience-page.scss', '../../../components/card/card.scss']
 })
 export class NexxiaComponent extends CardComponent {
     

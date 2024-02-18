@@ -5,7 +5,7 @@ import { CardComponent } from '../../../components/card/card.component';
 @Component({
     selector: 'app-orange',
     templateUrl: './orange.component.html',
-    styleUrls: ['./orange.component.scss', '../experience-page.scss']
+    styleUrls: ['./orange.component.scss', '../experience-page.scss', '../../../components/card/card.scss']
 })
 export class OrangeComponent extends CardComponent {
     

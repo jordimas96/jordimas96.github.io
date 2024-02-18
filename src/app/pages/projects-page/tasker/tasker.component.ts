@@ -5,7 +5,7 @@ import { CardComponent } from '../../../components/card/card.component';
 @Component({
     selector: 'app-tasker',
     templateUrl: './tasker.component.html',
-    styleUrls: ['./tasker.component.scss', '../projects-page.scss']
+    styleUrls: ['./tasker.component.scss', '../projects-page.scss', '../../../components/card/card.scss']
 })
 export class TaskerComponent extends CardComponent {
 

@@ -5,7 +5,7 @@ import { CardComponent } from '../../../components/card/card.component';
 @Component({
     selector: 'app-evora',
     templateUrl: './evora.component.html',
-    styleUrls: ['./evora.component.scss', '../experience-page.scss']
+    styleUrls: ['./evora.component.scss', '../experience-page.scss', '../../../components/card/card.scss']
 })
 export class EvoraComponent extends CardComponent {
     

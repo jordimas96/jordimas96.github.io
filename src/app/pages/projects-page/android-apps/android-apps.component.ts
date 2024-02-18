@@ -5,7 +5,7 @@ import { CardComponent } from '../../../components/card/card.component';
 @Component({
     selector: 'app-android-apps',
     templateUrl: './android-apps.component.html',
-    styleUrls: ['./android-apps.component.scss', '../projects-page.scss']
+    styleUrls: ['./android-apps.component.scss', '../projects-page.scss', '../../../components/card/card.scss']
 })
 export class AndroidAppsComponent extends CardComponent {
 

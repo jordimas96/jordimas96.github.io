@@ -50,36 +50,6 @@ body {
     // margin-bottom: 1000px;
     transition: padding 0.3s;
 
-    .title {
-        margin-top: 1.5rem;
-        margin-bottom: 1rem;
-        text-align: center;
-        color: var(--text);
-        transition: font-size 0.3s;
-    }
-    .group {
-        color: var(--text);
-        background-color: var(--fons-50);
-        backdrop-filter: blur(40px);
-        @extend .shadow-2;
-        transition: padding 0.3s, border-radius 0.3s, box-shadow 0.3s, font-size 0.3s;
-    
-        .subtitle {
-            color: var(--text);
-        }
-        .text {
-            text-align: justify;
-            color: var(--text-80);
-        }
-
-        .title, .subtitle, .text {
-            transition: font-size 0.3s;
-        }
-        .title-icon {
-            height: 2rem;
-        }
-    }
-
     .title-skills {
         font-size: 1.25rem;
     }
@@ -188,6 +158,13 @@ video {
 .mb-6 { margin-bottom: 4rem; }
 .ml-6 { margin-left: 4rem; }
 
+.m-n1 { margin: -0.25rem !important; }
+.m-n2 { margin: -0.5rem !important; }
+.m-n3 { margin: -1rem !important; }
+.m-n4 { margin: -1.5rem !important; }
+.m-n5 { margin: -3rem !important; }
+.m-n6 { margin: -4rem !important; }
+
 .flex-1  { flex: 1; }
 .flex-2  { flex: 2; }
 .flex-3  { flex: 3; }
@@ -285,12 +262,6 @@ img, .noselect {
 @media only screen and (min-width: 992px) { }
 // Pantalla PC //
 @media only screen and (min-width: 576px) {
-    .content {
-        padding: 1rem 1rem 0rem;
-    }
-    .title {
-        font-size: 2.5rem;
-    }
     .subtitle {
         font-size: 1.75rem;
     }
@@ -313,12 +284,6 @@ img, .noselect {
 }
 // Pantalla Mòbil //
 @media only screen and (max-width: 575px) {
-    .content {
-        padding: 0.5rem 0.5rem 0rem;
-    }
-    .title {
-        font-size: 2rem;
-    }
     .subtitle {
         font-size: 1.4rem;
     }

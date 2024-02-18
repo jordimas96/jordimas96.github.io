@@ -5,7 +5,7 @@ import { CardComponent } from '../../../components/card/card.component';
 @Component({
     selector: 'app-amazfit-watchfaces',
     templateUrl: './amazfit-watchfaces.component.html',
-    styleUrls: ['./amazfit-watchfaces.component.scss', '../projects-page.scss']
+    styleUrls: ['./amazfit-watchfaces.component.scss', '../projects-page.scss', '../../../components/card/card.scss']
 })
 export class AmazfitWatchfacesComponent extends CardComponent {
 

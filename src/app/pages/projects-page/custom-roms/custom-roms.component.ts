@@ -5,7 +5,7 @@ import { CardComponent } from '../../../components/card/card.component';
 @Component({
     selector: 'app-custom-roms',
     templateUrl: './custom-roms.component.html',
-    styleUrls: ['./custom-roms.component.scss', '../projects-page.scss']
+    styleUrls: ['./custom-roms.component.scss', '../projects-page.scss', '../../../components/card/card.scss']
 })
 export class CustomRomsComponent extends CardComponent {
 

@@ -5,7 +5,7 @@ import { CardComponent } from '../../../components/card/card.component';
 @Component({
     selector: 'app-indra',
     templateUrl: './indra.component.html',
-    styleUrls: ['./indra.component.scss', '../experience-page.scss']
+    styleUrls: ['./indra.component.scss', '../experience-page.scss', '../../../components/card/card.scss']
 })
 export class IndraComponent extends CardComponent {
     

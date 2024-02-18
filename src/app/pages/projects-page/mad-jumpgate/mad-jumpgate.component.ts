@@ -5,7 +5,7 @@ import { CardComponent } from '../../../components/card/card.component';
 @Component({
     selector: 'app-mad-jumpgate',
     templateUrl: './mad-jumpgate.component.html',
-    styleUrls: ['./mad-jumpgate.component.scss', '../projects-page.scss']
+    styleUrls: ['./mad-jumpgate.component.scss', '../projects-page.scss', '../../../components/card/card.scss']
 })
 export class MadJumpgateComponent extends CardComponent {
 

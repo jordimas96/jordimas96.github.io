@@ -5,22 +5,29 @@
         @if (m.en) { Other projects }
         <a href="https://github.com/jordimas96?tab=repositories" class="link-img"><img src="assets/icons/contact/github.png" alt="GitHub" class="title-icon inv-dark py-1"></a>
     </div>
-    <div class="text mb-4">
+    <div class="mb-4">
         @if (m.ca) { Tinc alguns projectes de GitHub sobre diversos temes, per exemple: }
         @if (m.es) { Tengo algunos proyectos de GitHub sobre varios temas, por ejemplo: }
         @if (m.en) { I have some GitHub projects on many topics, for example: }
         <br><br>
 
-        @for(repo of repos; track repos["name"]) {
+        <div class="repos row no-gutters m-n2">
+            @for(repo of repos; track repos["name"]) {
 
-            <div class="repo" appMostrarAmbAnimacio>
-                <img [src]="repo.iconUrl" [alt]="repo.nameFormated" class="mr-2">
-                <a [href]="repo.url">{{repo.nameFormated}}</a>: {{repo.text[m.idioma]}}
-            </div>
+                <div class="col-12 col-sm-6 p-2">
+                    
+                    <a [href]="repo.url" class="no-style">
+                        <div class="repo p-4" appMostrarAmbAnimacio>
+                            <img [src]="repo.iconUrl" [alt]="repo.nameFormated" class="mb-2">
+                            <div class="title mb-1">{{repo.nameFormated}}</div>
+                            <div class="text">{{repo.text[m.idioma]}}</div>
+                        </div>
+                    </a>
 
-            <br>
+                </div>
 
-        } @empty { <i class="ml-4">No projects found</i> }
+            } @empty { <i class="ml-4">No projects found</i> }
+        </div>
     </div>
     
     <!-- Skills -->
