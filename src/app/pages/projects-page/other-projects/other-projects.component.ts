@@ -52,7 +52,7 @@ export class OtherProjectsComponent extends CardComponent {
             repo.order = order;
         });
         repos.sort((a, b) => a.order - b.order);
-        
+
 
         this.repos = await Promise.all(repos.map(async (repo) => {
 
@@ -63,6 +63,7 @@ export class OtherProjectsComponent extends CardComponent {
                 url: repo.homepage,
                 iconUrl: `https://raw.githubusercontent.com/jordimas96/${repo.name}/main/docs/favicon.ico`,
                 order: repo.order,
+                cardHue: [...repo.name].reduce((suma, v) => suma + v.charCodeAt(), 0) % 360,
             }
         }));
         
@@ -94,6 +95,11 @@ export class OtherProjectsComponent extends CardComponent {
     }
 
 
+    getColorRepoCards(hue) {
+        // 200 100 86 0.2 // ... 0.5 //
+        let a = this.m.modeFosc ? 0.2 : 0.5;
+        return `hsla(${hue}, 100%, 86%, ${a})`;
+    }
 
 
 
