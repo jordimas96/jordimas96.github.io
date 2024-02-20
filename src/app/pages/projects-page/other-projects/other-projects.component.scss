@@ -1,25 +1,25 @@
 @import "src/styles.scss";
 
-// .group {
-//     --color-fosc-hsl-vals-test: hsl(0, 0%, 6%);
-//     --color-clar-hsl-vals-test: hsl(0, 0%, 100%);
-//     --color-fosc-hsl-vals: 0, 0%, 6%;
-//     --color-clar-hsl-vals: 0, 0%, 100%;
-//     --color-l-0: hsl(0, 0%, 6%);
-//     --color-l-1: hsl(0, 0%, 16%);
-//     --color-l-2: hsl(0, 0%, 27%);
-//     --color-l-3: hsl(0, 0%, 37%);
-//     --color-l-4: hsl(0, 0%, 48%);
-//     --color-l-5: hsl(0, 0%, 58%);
-//     --color-l-6: hsl(0, 0%, 69%);
-//     --color-l-7: hsl(0, 0%, 79%);
-//     --color-l-8: hsl(0, 0%, 89%);
-//     --color-l-9: hsl(0, 0%, 100%);
-// }
+.group {
+    --color-fosc-hsl-vals-test: hsl(0, 0%, 6%);
+    --color-clar-hsl-vals-test: hsl(0, 0%, 100%);
+    --color-fosc-hsl-vals: 0, 0%, 6%;
+    --color-clar-hsl-vals: 0, 0%, 100%;
+    --color-l-0: hsl(0, 0%, 6%);
+    --color-l-1: hsl(0, 0%, 16%);
+    --color-l-2: hsl(0, 0%, 27%);
+    --color-l-3: hsl(0, 0%, 37%);
+    --color-l-4: hsl(0, 0%, 48%);
+    --color-l-5: hsl(0, 0%, 58%);
+    --color-l-6: hsl(0, 0%, 69%);
+    --color-l-7: hsl(0, 0%, 79%);
+    --color-l-8: hsl(0, 0%, 89%);
+    --color-l-9: hsl(0, 0%, 100%);
+}
 
-// // Colors específics cards //
-// .dark  :host .group { background-color: hsla(0, 0%, 6%, 0.5); }
-// .light :host .group { background-color: hsla(0, 0%, 100%, 0.5); }
+// Colors específics cards //
+.dark  :host .group { background-color: hsla(0, 0%, 6%, 0.5); }
+.light :host .group { background-color: hsla(0, 0%, 100%, 0.5); }
 
 
 
@@ -35,16 +35,16 @@
     .repos {
 
         .repo {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
+            text-align: center;
             
             border-radius: 2rem;
-            
+
+            transform-origin: center;
+            transition: transform 0.3s;
             
             img {
                 height: 4rem;
-                margin-top: -0.2rem;
+                transition: transform 0.3s;
             }
             .title {
                 font-size: 1.6rem;
@@ -73,6 +73,14 @@
     a.link-img:hover {
         img.title-icon {
             transform: scale(1.4);
+        }
+    }
+
+    .group .repos .repo:hover {
+        transform: scale(1.06);
+        img {
+            transform: scale(1.2);
+
         }
     }
 }
