@@ -70,13 +70,15 @@ export class HomePageComponent extends PageComponent {
         this.experiencia.forEach(e => {
             let dataInicial = new Date(e[0]);
             let dataFinal = e[1] ? new Date(e[1]) : new Date();
-            diesTotals += (dataFinal.valueOf() - dataInicial.valueOf()) / (24 * 3600 * 1000);
+            diesTotals += (dataFinal.valueOf() - dataInicial.valueOf()) / (24 * 60 * 60 * 1000);
         });
+        
+        diesTotals = Math.round(diesTotals);
 
-        const anys = Math.floor(diesTotals / 365);
-        diesTotals %= 365;
-        const mesos = Math.floor(diesTotals / 30);
-        diesTotals %= 30;
+        const anys = Math.floor(diesTotals / 365.24);
+        diesTotals %= 365.24;
+        const mesos = Math.floor(diesTotals / 30.44);
+        diesTotals %= 30.44;
         const dies = Math.floor(diesTotals);
 
         this.anysMesosDiesExp = [anys, mesos, dies];
