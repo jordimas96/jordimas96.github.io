@@ -96,7 +96,7 @@ export class MainService {
     public full() { return this.area == Area.Full }
 
     // Forçar temes - debug //
-    public force(tema) { Utils.setCookie("forçartema", tema) }
+    public force(tema) { Utils.setCookieDays("forçartema", tema) }
     public noforce() { Utils.removeCookie("forçartema") }
 
 

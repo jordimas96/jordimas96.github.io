@@ -46,14 +46,14 @@ footer {
         text-align: center;
     }
     @keyframes colorChange {
-        0%   { color: hsla(0,   100, 86, 0.7); }
-        8%   { color: hsla(30,  100, 86, 0.7); }
-        16%  { color: hsla(60,  100, 86, 0.7); }
-        33%  { color: hsla(120, 100, 86, 0.7); }
-        50%  { color: hsla(180, 100, 86, 0.7); }
-        66%  { color: hsla(240, 100, 86, 0.7); }
-        83%  { color: hsla(300, 100, 86, 0.7); }
-        100% { color: hsla(360, 100, 86, 0.7); }
+        0%   { color: hsla(0,   100%, 86%, 0.7); }
+        8%   { color: hsla(30,  100%, 86%, 0.7); }
+        16%  { color: hsla(60,  100%, 86%, 0.7); }
+        33%  { color: hsla(120, 100%, 86%, 0.7); }
+        50%  { color: hsla(180, 100%, 86%, 0.7); }
+        66%  { color: hsla(240, 100%, 86%, 0.7); }
+        83%  { color: hsla(300, 100%, 86%, 0.7); }
+        100% { color: hsla(360, 100%, 86%, 0.7); }
     }
     .chargeYourPhone {
         color: red;

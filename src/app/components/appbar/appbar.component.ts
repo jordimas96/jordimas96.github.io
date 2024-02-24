@@ -136,7 +136,7 @@ export class AppbarComponent {
     accioDarkMode() {
         this.m.modeFosc = !this.m.modeFosc;
         this.actTema();
-        Utils.setCookie("darkmode", this.m.modeFosc ? 1 : 0)
+        Utils.setCookieDays("darkmode", this.m.modeFosc ? 1 : 0)
     }
 
     accioAutoDarkMode() {
@@ -213,7 +213,7 @@ export class AppbarComponent {
     }
     onIdiomaCanviat() {
         document.documentElement.lang = this.m.idioma;
-        Utils.setCookie("lang", this.m.idioma);
+        Utils.setCookieDays("lang", this.m.idioma);
         this.m.idiomaCanviat();
     }
 

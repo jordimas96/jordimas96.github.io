@@ -2,6 +2,7 @@ import { Component, ElementRef } from '@angular/core';
 import { ProviderService } from 'src/app/services/provider.service';
 import { CardComponent } from '../../../components/card/card.component';
 import { MainService } from './../../../services/main.service';
+import { Utils } from 'src/app/shared/utils';
 
 @Component({
     selector: 'app-other-projects',
@@ -9,6 +10,8 @@ import { MainService } from './../../../services/main.service';
     styleUrls: ['./other-projects.component.scss', '../projects-page.scss', '../../../components/card/card.scss']
 })
 export class OtherProjectsComponent extends CardComponent {
+
+    public readonly USE_CACHE = true;
 
     public repos: Array<any> = [];
 
@@ -32,8 +35,16 @@ export class OtherProjectsComponent extends CardComponent {
 
 
     async carregarInfoProjects() {
-        // this.repos = this.getRepos_MOCK(); return;
+
+        // The api of GitHub only lets 60 queries for hour for unauthenticated users //
+        // Si n'hi ha, carreguem des de caché //
+        if (this.USE_CACHE) {
+            this.repos = JSON.parse(Utils.getCookie("otherProjects_info") || <any>null);
+            if (this.repos) return;
+        }
+
         
+        // Si no, fem petició //
         let repos = await this.ps.getRepositorisGitHubProjects();
 
         // Order repos //
@@ -73,7 +84,8 @@ export class OtherProjectsComponent extends CardComponent {
                 cardHue: huesPredefinits[repo.name] || [...repo.name].reduce((suma, v) => suma + v.charCodeAt(), 0) % 360,
             }
         }));
-        console.log(this.repos);
+
+        Utils.setCookie("otherProjects_info", JSON.stringify(this.repos), 60);
         
     }
 
@@ -107,40 +119,6 @@ export class OtherProjectsComponent extends CardComponent {
         // 200 100 86 0.2 // ... 0.5 //
         let alfa = this.m.modeFosc ? 0.35 : 0.5;
         return `hsla(${hue}, 100%, 75%, ${alfa})`;
-    }
-
-
-
-
-
-    
-    getRepos_MOCK() {
-        return [
-            {
-                "name": "rounded-corners-directive",
-                "nameFormated": "rounded corners directive",
-                "text": {
-                    "ca": "Aquest és un petit projecte per desenvolupar i provar una nova directiva per adaptar automàticament el border-radius dels fills perquè coincideixi amb el dels pares, calculant tots els espais pel camí.",
-                    "es": "Éste es un pequeño proyecto para desarrollar y probar una nueva directiva para adaptar automáticamente el border-radius de los hijos para que coincida con el de los padres, calculando todos los espacios por el camino.",
-                    "en": "This is a small website to develop and test a new directive for angular that will automatically adapt the border radius of the children to match the one from the parents, calculating all the spacing along the way."
-                },
-                "url": "https://jordimas96.github.io/rounded-corners-directive/",
-                "iconUrl": "https://raw.githubusercontent.com/jordimas96/rounded-corners-directive/main/docs/favicon.ico",
-                "order": 5
-            },
-            {
-                "name": "evorait-task_materials_ngrx",
-                "nameFormated": "evorait task materials ngrx",
-                "text": {
-                    "ca": "Una petita tasca que vaig fer amb Angular i NgRx per a una entrevista per a una empresa. Vaig utilitzar aquest projecte també per implementar les noves característiques d'Angular 17.",
-                    "es": "Una pequeña tarea que hice con Angular y NgRx para una entrevista para una empresa. Utilicé este proyecto también para implementar las nuevas características de Angular 17.",
-                    "en": "A small task I made with Angular and NgRx for an interview for a company. I used it also to implement the new features from Angular 17."
-                },
-                "url": "https://jordimas96.github.io/evorait-task_materials_ngrx/",
-                "iconUrl": "https://raw.githubusercontent.com/jordimas96/evorait-task_materials_ngrx/main/docs/favicon.ico",
-                "order": 20
-            }
-        ];
     }
     
 }

@@ -7,11 +7,14 @@ export class Utils {
     public static getDocument() { return document; }
 
     // Cookies //
-    public static setCookie(cname, cvalue, exdays = 36500) {
+    public static setCookie(cname, cvalue, exseconds = 3600) {
         const d = new Date();
-        d.setTime(d.getTime() + (exdays * 24 * 60 * 60 * 1000));
+        d.setTime(d.getTime() + (exseconds * 1000));
         let expires = "expires=" + d.toUTCString();
         document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/";
+    }
+    public static setCookieDays(cname, cvalue, exdays = 36500) {
+        this.setCookie(cname, cvalue, exdays * 24 * 60 * 60);
     }
     public static getCookie(cname) {
         let name = cname + "=";
