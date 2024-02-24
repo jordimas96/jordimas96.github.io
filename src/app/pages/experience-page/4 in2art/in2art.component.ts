@@ -15,6 +15,8 @@ export class In2artComponent extends CardComponent {
         en: "https://in2.art/en",
     };
 
+    public isDown = false; // I have no way to actually know it, just manually checking the web //
+
     constructor(
         public override m: MainService,
         public override rootElement: ElementRef,
