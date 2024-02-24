@@ -15,7 +15,7 @@ export class ProjectsPageComponent extends PageComponent {
         $("body").css({ "background-position": "bottom right" });
 
         // Google Analytics //
-        this.m.gas.pageView(window.location.pathname);
+        if (!this.m.debug) this.m.gas.pageView(window.location.pathname);
     }
 
     override afterRootFadeIn() {

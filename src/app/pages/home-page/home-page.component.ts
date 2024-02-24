@@ -15,8 +15,8 @@ export class HomePageComponent extends PageComponent {
     };
 
     private experiencia = [
-        ["2016-2-1", "2016-7-14"], // DSET //
-        ["2016-10-17", "2017-2-28"], // Nexxia //
+        ["2016-2-1", "2016-7-14"], // DSET (Pràctiques) //
+        ["2016-10-17", "2017-2-28"], // Nexxia (Pràctiques) //
         ["2017-7-3", "2017-7-31"], // Beca Indra //
         ["2017-9-4", "2019-3-8"], // Indra //
         ["2020-9-7", "2021-6-25"], // Matic //
@@ -37,7 +37,7 @@ export class HomePageComponent extends PageComponent {
         $("body").css({ "background-position": "top left" });
 
         // Google Analytics //
-        this.m.gas.pageView("/home");
+        if (!this.m.debug) this.m.gas.pageView(window.location.pathname);
 
         this.calcularAnysExperiencia();
     }

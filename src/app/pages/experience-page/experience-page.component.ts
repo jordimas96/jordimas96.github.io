@@ -15,7 +15,7 @@ export class ExperiencePageComponent extends PageComponent {
         $("body").css({ "background-position": "center center" });
 
         // Google Analytics //
-        this.m.gas.pageView(window.location.pathname);
+        if (!this.m.debug) this.m.gas.pageView(window.location.pathname);
     }
 
     override afterRootFadeIn() {
