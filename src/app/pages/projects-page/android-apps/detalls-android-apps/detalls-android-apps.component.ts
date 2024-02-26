@@ -13,6 +13,10 @@ export class DetallsAndroidAppsComponent {
 
     ngOnInit() {
         this.m.afterRootFadeIn(this.afterRootFadeIn.bind(this));
+
+        // Deshabilitar control dels videos des de les tecles multimedia del teclat //
+        navigator.mediaSession.setActionHandler('play', function() { });
+        navigator.mediaSession.setActionHandler('pause', function() { });
     }
 
     
