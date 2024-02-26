@@ -49,6 +49,7 @@
         align-items: center;
 
         .tempsExp {
+            cursor: pointer;
             color: var(--color-7);
             font-weight: bold;
             display: inline-block;
@@ -117,12 +118,24 @@
         width: max-content;
         padding: 0.3rem 0.8rem;
         margin-left: -0.8rem;
+        margin-top: 5px;
         border-radius: 0.7rem;
         background-color: var(--text);
         color: var(--fons);
         font-weight: normal;
 
         @extend .shadow-2;
+
+        &::after {
+            content: " ";
+            position: absolute;
+            bottom: 100%;
+            left: 50%;
+            margin-left: -5px;
+            border-width: 5px;
+            border-style: solid;
+            border-color: transparent transparent var(--text) transparent;
+          }
     }
     &:hover > div { visibility: visible; }
 }
