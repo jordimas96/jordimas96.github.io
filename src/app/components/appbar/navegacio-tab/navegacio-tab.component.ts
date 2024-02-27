@@ -13,15 +13,14 @@ export class NavegacioTabComponent {
 
     @ViewChild("pill") pill: ElementRef;
 
-    botoSeleccionat;
+    public botoSeleccionat;
 
     public rect: any;
 
-    movent = false;
+    public movent = false;
 
     constructor(public m: MainService,
-        private elementRef: ElementRef,
-        private router: Router
+        private elementRef: ElementRef
     ) {
 
     }

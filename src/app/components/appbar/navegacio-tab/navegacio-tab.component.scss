@@ -6,7 +6,7 @@
     flex-wrap: wrap;
     justify-content: center;
     background-color: var(--fons-50);
-    border-radius: 25px; //15px;
+    border-radius: 1.5rem; //1rem
     margin: auto;
     padding: 0.25rem;
     z-index: 0;
@@ -22,7 +22,7 @@
 
         padding: 0.25rem 1rem;
         z-index: 2;
-        border-radius: 3rem;
+        border-radius: 1.5rem; //0.75rem
 
         transition: font-size 0.3s, padding 0.3s, color 0.3s, background-color 0.1s;
 
@@ -36,7 +36,7 @@
 .pill {
     position: absolute;
     background-color: var(--text);
-    border-radius: 25px; //13px;
+    border-radius: 1.5rem; //0.75rem
     z-index: 1;
 }
 
