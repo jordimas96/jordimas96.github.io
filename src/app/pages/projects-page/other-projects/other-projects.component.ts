@@ -40,7 +40,10 @@ export class OtherProjectsComponent extends CardComponent {
         // Si n'hi ha, carreguem des de caché //
         if (this.USE_CACHE) {
             this.repos = JSON.parse(Utils.getCookie("otherProjects_info") || <any>null);
-            if (this.repos) return;
+            if (this.repos) {
+                console.log("Content of other projects loaded from cache");
+                return;
+            }
         }
 
         
@@ -79,7 +82,8 @@ export class OtherProjectsComponent extends CardComponent {
                 nameFormated: repo.name.replace(/[-_]+/g, " "),
                 text: await this.getReadmes(repo.name),
                 url: `https://jordimas96.github.io/${repo.name}`,
-                iconUrl: `https://raw.githubusercontent.com/jordimas96/${repo.name}/main/docs/favicon.ico`,
+                iconUrl1: `https://raw.githubusercontent.com/jordimas96/${repo.name}/main/docs/favicon.ico`,
+                iconUrl2: `https://raw.githubusercontent.com/jordimas96/${repo.name}/main/favicon.ico`,
                 order: repo.order,
                 cardHue: huesPredefinits[repo.name] || [...repo.name].reduce((suma, v) => suma + v.charCodeAt(), 0) % 360,
             }

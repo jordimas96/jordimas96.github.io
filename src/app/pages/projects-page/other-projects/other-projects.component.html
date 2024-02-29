@@ -18,7 +18,8 @@
                     
                     <a [href]="repo.url" class="no-style">
                         <div class="repo p-4" [style.backgroundColor]="getColorRepoCards(repo.cardHue)" appMostrarAmbAnimacio>
-                            <img [src]="repo.iconUrl" [alt]="repo.nameFormated" class="mb-2 shadow-filter-1" (error)="repo.iconUrl=null" *ngIf="repo.iconUrl">
+                            <img [src]="repo.iconUrl1" [alt]="repo.nameFormated" class="mb-2 shadow-filter-1" (error)="repo.iconUrl1=null" *ngIf="repo.iconUrl1">
+                            <img [src]="repo.iconUrl2" [alt]="repo.nameFormated" class="mb-2 shadow-filter-1" (error)="repo.iconUrl2=null" *ngIf="repo.iconUrl2">
                             <div class="title mb-1">{{repo.nameFormated}}</div>
                             <div class="text">{{repo.text[m.idioma]}}</div>
                         </div>
