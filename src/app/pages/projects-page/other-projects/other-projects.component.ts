@@ -73,6 +73,7 @@ export class OtherProjectsComponent extends CardComponent {
             // Color card //
             let huesPredefinits = {
                 "rounded-corners-directive": 160,
+                "electricity-rate-2016": 87,
                 "evorait-task_materials_ngrx": 201,
             };
 
