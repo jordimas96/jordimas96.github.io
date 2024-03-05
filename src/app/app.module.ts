@@ -32,6 +32,9 @@ import { OtherProjectsComponent } from './pages/projects-page/other-projects/oth
 import { ProjectsPageComponent } from './pages/projects-page/projects-page.component';
 import { TaskerComponent } from './pages/projects-page/tasker/tasker.component';
 import { HttpClientModule } from '@angular/common/http'; 
+import { NgxMasonryModule } from 'ngx-masonry';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+
 
 @NgModule({
     declarations: [
@@ -80,6 +83,8 @@ import { HttpClientModule } from '@angular/common/http';
         GoogleAnalyticsModule,
         QRCodeModule,
         HttpClientModule,
+        NgxMasonryModule,
+        BrowserAnimationsModule,
     ],
     providers: [],
     bootstrap: [AppComponent]

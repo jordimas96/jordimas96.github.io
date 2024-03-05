@@ -25,6 +25,7 @@
     "jquery": "^3.6.4",
     "latest-version": "^7.0.0",
     "ngx-google-analytics": "^14.0.1",
+    "ngx-masonry": "^14.0.1",
     "nvm": "^0.0.4",
     "rxjs": "~7.8.0",
     "sass-functions": "^2.0.1",

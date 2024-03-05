@@ -26,6 +26,8 @@
 
 
 .group {
+    overflow: hidden;
+    
     a.link-img {
         img.title-icon {
             transition: transform 0.3s;
