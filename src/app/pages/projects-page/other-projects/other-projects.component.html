@@ -17,7 +17,7 @@
                 <div ngxMasonryItem class="col-12 col-md-6 p-2">
                     
                     <a [href]="repo.url" class="no-style">
-                        <div class="repo p-4" [style.backgroundColor]="getColorRepoCards(repo.cardHue)" appMostrarAmbAnimacio>
+                        <div class="repo p-4 {{repo.name}}" [style.backgroundColor]="getColorRepoCards(repo.cardHue)" appMostrarAmbAnimacio>
                             <img [src]="repo.iconUrl1" [alt]="repo.nameFormated" class="mb-2 shadow-filter-1" (error)="repo.iconUrl1=null" *ngIf="repo.iconUrl1">
                             <img [src]="repo.iconUrl2" [alt]="repo.nameFormated" class="mb-2 shadow-filter-1" (error)="repo.iconUrl2=null" *ngIf="repo.iconUrl2">
                             <div class="title mb-1">{{repo.nameFormated}}</div>
