@@ -75,7 +75,7 @@ export class Utils {
 
     public static scroll(x) { window.scroll(0, x); }
     public static getAlturaAppbar() {
-        return $(".appbar").outerHeight();
+        return $(".appbar").outerHeight() || 0;
     }
 
 

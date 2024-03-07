@@ -35,7 +35,7 @@ export class AppbarComponent {
         this.actTema();
 
         // Delay inicial pagina root //
-        // setTimeout(() => { $("app-root").fadeIn(300); }, this.m.tempsDelayCarregaPag);
+        setTimeout(() => { $("app-root").fadeIn(300); }, this.m.tempsDelayCarregaPag);
     }
 
     afterRootFadeIn() {

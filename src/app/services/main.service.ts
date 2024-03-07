@@ -24,6 +24,8 @@ export class MainService {
     public modeFosc: boolean = true;
     public tema: string = "";
     public scroll = window.pageYOffset;
+    public fragment = "";
+
     public area: Area;
     public areaCodi = "web"; // web, info, details //
     public discret = 0;
@@ -53,8 +55,8 @@ export class MainService {
     }
     onInit() { }
 
-    public llegirParams(params) {
-        params.subscribe(params => {
+    public llegirParams(route) {
+        route.params.subscribe(params => {
             this.areaCodi = params["area"] || "web";
 
             // Segons el paràmetre, se'n va a una versió o a una altra de la web //
@@ -65,6 +67,10 @@ export class MainService {
                 default: this.router.navigate([`/${Utils.getRouteActual()}/web`]); return;
             }
         });
+        route.fragment.subscribe(fragment => {
+            if (fragment)
+                this.fragment = fragment;
+        })
     }
 
     // Idiomes //
@@ -102,8 +108,16 @@ export class MainService {
 
     // Funcions //
     afterRootFadeIn(funcio: Function) {
-        setTimeout(() => {
+        setTimeout(async () => {
             funcio();
+
+            await Utils.wait(200)
+            const element = document.getElementById(this.fragment);
+
+            if (element)
+                Utils.scroll(element.offsetTop - Utils.getAlturaAppbar() - 25);
+                
+        
         }, $("app-root").is(":visible") ? 0 : this.tempsDelayCarregaPag); // Retard fadein pagina //
     }
 
