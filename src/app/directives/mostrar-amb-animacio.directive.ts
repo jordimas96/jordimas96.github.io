@@ -42,7 +42,7 @@ export class MostrarAmbAnimacioDirective implements OnInit, OnDestroy {
             // Recuperem delay de les dades de l'element prèviament guardades. Si no hi és, el calculem //
             let delay = this.el["animationDelay"];
             if (!delay) {
-                delay = 100 + this.getPositionAmongSiblings() * 30
+                delay = 100 + this.getPositionAmongSiblings() * 5
                 this.el["animationDelay"] = delay;
             }
 
