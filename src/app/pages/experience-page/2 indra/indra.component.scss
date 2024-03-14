@@ -1,6 +1,6 @@
 @import "src/styles.scss";
 
-.group {
+.tema-indra {
     --color-fosc-hsl-vals-test: hsl(193, 100%, 8%);
     --color-clar-hsl-vals-test: hsl(193, 100%, 86%);
     --color-fosc-hsl-vals: 193, 100%, 8%;
@@ -18,8 +18,8 @@
 }
 
 // Colors específics cards //
-.dark  :host .group { background-color: hsla(193, 100%, 16%, 0.5); --link: var(--color-l-6); }
-.light :host .group { background-color: hsla(193, 100%, 62%, 0.5); --link: var(--color-l-3); }
+.dark  :host .tema-indra { background-color: hsla(193, 100%, 16%, 0.5); --link: var(--color-l-6); }
+.light :host .tema-indra { background-color: hsla(193, 100%, 62%, 0.5); --link: var(--color-l-3); }
 
 
 

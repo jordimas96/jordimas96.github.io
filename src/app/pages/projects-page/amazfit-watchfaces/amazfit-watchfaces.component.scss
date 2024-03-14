@@ -1,26 +1,5 @@
 @import "src/styles.scss";
 
-.group {
-    --color-fosc-hsl-vals-test: hsl(273, 100%, 7%);
-    --color-clar-hsl-vals-test: hsl(44, 100%, 91%);
-    --color-fosc-hsl-vals: 273, 100%, 7%;
-    --color-clar-hsl-vals: 44, 100%, 91%;
-    --color-l-0: hsl(273, 100%, 7%);
-    --color-l-1: hsl(273, 100%, 16%);
-    --color-l-2: hsl(273, 100%, 26%);
-    --color-l-3: hsl(273, 100%, 35%);
-    --color-l-4: hsl(273, 100%, 44%);
-    --color-l-5: hsl(44, 100%, 44%);
-    --color-l-6: hsl(44, 100%, 58%);
-    --color-l-7: hsl(44, 100%, 65%);
-    --color-l-8: hsl(44, 100%, 72%);
-    --color-l-9: hsl(44, 100%, 91%);
-}
-
-// Colors específics cards //
-.dark  :host .group { background-color: hsla(273, 100%, 15%, 0.5); }
-.light :host .group { background-color: hsla(44, 100%, 72%, 0.5); }
-
 
 
 .group {
