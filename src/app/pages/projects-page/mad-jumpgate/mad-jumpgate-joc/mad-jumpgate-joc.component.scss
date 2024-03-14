@@ -47,7 +47,8 @@
                 position: absolute;
                 transform-origin: top left;
                 border: none;
-                // border-radius: 16px;
+                border-radius: 1rem;
+                z-index: 1;
             }
             .placeholder {
                 // transition: height 2s;
@@ -63,6 +64,7 @@
                 height: 2.7rem;
                 border-radius: 10px;
                 opacity: 0.5;
+                z-index: 2;
         
                 background-color: var(--color-l-7);
                 color: var(--color-fosc);
