@@ -5,21 +5,12 @@
         @if (m.en) { Professional experience }
     </div>
 
-    @if (m.front() || m.full()) {
-        <app-evora />
-        <app-orange />
-        <app-in2art />
-        <app-matic />
-        <app-indra />
-        <app-nexxia />
-    } @else {
-        <app-evora />
-        <app-orange />
-        <app-indra />
-        <app-matic />
-        <app-in2art />
-        <app-nexxia />
-    }
+    <app-evora />
+    <app-orange />
+    <app-in2art />
+    <app-matic />
+    <app-indra />
+    <app-nexxia />
 
     <div class="mb-6 text-center" appMostrarAmbAnimacio>
         <button class="boto botoSeguentPagina m-auto" (click)="m.u.getDocument().querySelector('#navegacio-tab-projects').click()">

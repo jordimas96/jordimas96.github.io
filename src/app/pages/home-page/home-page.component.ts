@@ -34,7 +34,7 @@ export class HomePageComponent extends PageComponent {
         super.ngOnInit();
 
         // Moviment i animació fons //
-        $("body").css({ "background-position": "top left" });
+        // $("body").css({ "background-position": "top left" });
 
         // Google Analytics //
         if (!this.m.debug) this.m.gas.pageView(window.location.pathname);
@@ -107,14 +107,6 @@ export class HomePageComponent extends PageComponent {
         if (cadenes.length == 2) return `${cadenes[0]} ${conjuncio} ${cadenes[1]}`;
         if (cadenes.length == 1) return `${cadenes[0]}`;
         return "";
-    }
-
-    getTecnologies() {
-        return [
-            `Angular, CSS, Javascript, jQuery, Python ${this.m.conjuncio} C#`, // Front //
-            `Java, NodeJs, Python, C#, PHP ${this.m.conjuncio} SQL`, // Back //
-            `Angular, Java, NodeJs, CSS ${this.m.conjuncio} Python`, // Full //
-        ][this.m.area];
     }
 
     getRutaCV() {

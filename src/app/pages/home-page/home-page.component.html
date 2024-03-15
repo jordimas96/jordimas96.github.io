@@ -24,21 +24,9 @@
                     </div>
                     <div class="programador">
                         -
-                        @if (m.front()) {
-                            @if (m.ca) { Programador frontend }
-                            @if (m.es) { Programador frontend }
-                            @if (m.en) { Frontend programmer }
-                        }
-                        @if (m.back()) {
-                            @if (m.ca) { Programador backend }
-                            @if (m.es) { Programador backend }
-                            @if (m.en) { Backend programmer }
-                        }
-                        @if (m.full()) {
-                            @if (m.ca) { Programador fullstack }
-                            @if (m.es) { Programador fullstack }
-                            @if (m.en) { Fullstack programmer }
-                        }
+                        @if (m.ca) { Programador frontend }
+                        @if (m.es) { Programador frontend }
+                        @if (m.en) { Frontend programmer }
                         -
                     </div>
                 </div>
@@ -60,64 +48,25 @@
         <!-- Template bio -->
         <ng-template #bio>
             <span>
-                @if (m.front()) {
-                    @if (m.ca) {
-                        Sóc un apassionat programador especialitzat en frontend, amb
-                        <span class="tempsExp tooltipExp">{{anysExp}} anys d'experiència<div>{{getTextExp()}}</div></span>
-                        en {{getTecnologies()}}, entre altres. Els meus esforços se centren en l'ús del meu enginy per a la creació d'interfícies d'usuari atractives, intuïtives i personalitzades per proporcionar una experiència d'usuari agradable.<br><br>
-                    }
-                    @if (m.es) {
-                        Soy un apasionado programador especializado en frontend, con
-                        <span class="tempsExp tooltipExp">{{anysExp}} años de experiencia<div>{{getTextExp()}}</div></span>
-                        en {{getTecnologies()}}, entre otros. Mis esfuerzos se centran en el uso de mi ingenio para la creación de interfaces de usuario atractivas, intuitivas y personalizadas para proporcionar una experiencia de usuario agradable.<br><br>
-                    }
-                    @if (m.en) {
-                        I am a passionate programmer specialized in frontend, with
-                        <span class="tempsExp tooltipExp">{{anysExp}} years of experience<div>{{getTextExp()}}</div></span>
-                        working with {{getTecnologies()}}, among others. My efforts focus on using my ingenuity to creating attractive, intuitive and personalized user interfaces to provide them with a pleasant user experience.<br><br>
-                    }
-                }
-                @if (m.back()) {
-                    @if (m.ca) {
-                        Sóc un apassionat programador especialitzat en backend, amb
-                        <span class="tempsExp tooltipExp">{{anysExp}} anys d'experiència<div>{{getTextExp()}}</div></span>
-                        en Java, {{getTecnologies()}}, entre altres. Els meus esforços se centren en l'ús del meu enginy per a construir servidors robustos i escalables per a obtenir un rendiment òptim i una gestió eficient de dades.<br><br>
-                    }
-                    @if (m.es) {
-                        Soy un apasionado programador especializado en backend, con
-                        <span class="tempsExp tooltipExp">{{anysExp}} años de experiencia<div>{{getTextExp()}}</div></span>
-                        en Java, {{getTecnologies()}}, entre otros. Mis esfuerzos se centran en el uso de mi ingenio para construir servidores robustos y escalables para conseguir un rendimiento óptimo y una gestión eficiente de datos.<br><br>
-                    }
-                    @if (m.en) {
-                        I am a passionate programmer specialized in backend, with
-                        <span class="tempsExp tooltipExp">{{anysExp}} years of experience<div>{{getTextExp()}}</div></span>
-                        working with Java, {{getTecnologies()}}, among others. My efforts focus on using my ingenuity to build robust and scalable servers in order to get an optimal performance and efficient data management.<br><br>
-                    }
-                }
-                @if (m.full()) {
-                    @if (m.ca) {
-                        Sóc un apassionat programador especialitzat en fullstack, amb
-                        <span class="tempsExp tooltipExp">{{anysExp}} anys d'experiència<div>{{getTextExp()}}</div></span>
-                        en {{getTecnologies()}}, entre altres. Els meus esforços se centren en l'ús del meu enginy per a crear i treballar en projectes de principi a fi, creant interfícies d'usuari atractives i servidors sòlids per a solucions completes i ben integrades.<br><br>
-                    }
-                    @if (m.es) {
-                        Soy un apasionado programador especializado en fullstack, con
-                        <span class="tempsExp tooltipExp">{{anysExp}} años de experiencia<div>{{getTextExp()}}</div></span>
-                        en {{getTecnologies()}}, entre otros. Mis esfuerzos se centran en el uso de mi ingenio para crear y trabajar en proyectos de principio a fin, creando interfaces de usuario atractivas y servidores sólidos para soluciones completas y bien integradas.<br><br>
-                    }
-                    @if (m.en) {
-                        I am a passionate programmer specialized in fullstack, with
-                        <span class="tempsExp tooltipExp">{{anysExp}} years of experience<div>{{getTextExp()}}</div></span>
-                        working with {{getTecnologies()}}, among others. My efforts focus on using my ingenuity to build and work on projects from start to finish, creating attractive user interfaces and robust servers for complete, well-integrated solutions.<br><br>
-                    }
-                }
                 @if (m.ca) {
+                    Sóc un apassionat programador especialitzat en frontend, amb
+                    <span class="tempsExp tooltipExp">{{anysExp}} anys d'experiència<div>{{getTextExp()}}</div></span>
+                    en Angular, CSS, Javascript, jQuery, Python i C#, entre altres. Els meus esforços se centren en l'ús del meu enginy per a la creació d'interfícies d'usuari atractives, intuïtives i personalitzades per proporcionar una experiència d'usuari agradable.
+                    <br><br>
                     En aquesta web, trobaràs detalls sobre la meva experiència, habilitats i projectes destacats, així com la meva informació de contacte perquè puguem conversar sobre diferents maneres d'ajudar-te amb projectes futurs.
                 }
                 @if (m.es) {
+                    Soy un apasionado programador especializado en frontend, con
+                    <span class="tempsExp tooltipExp">{{anysExp}} años de experiencia<div>{{getTextExp()}}</div></span>
+                    en Angular, CSS, Javascript, jQuery, Python y C#, entre otros. Mis esfuerzos se centran en el uso de mi ingenio para la creación de interfaces de usuario atractivas, intuitivas y personalizadas para proporcionar una experiencia de usuario agradable.
+                    <br><br>
                     En esta web, encontrarás detalles sobre mi experiencia, habilidades y proyectos destacados, así como mi información de contacto para que podamos conversar sobre diferentes formas de ayudarte con proyectos futuros.
                 }
                 @if (m.en) {
+                    I am a passionate programmer specialized in frontend, with
+                    <span class="tempsExp tooltipExp">{{anysExp}} years of experience<div>{{getTextExp()}}</div></span>
+                    working with Angular, CSS, Javascript, jQuery, Python and C#, among others. My efforts focus on using my ingenuity to creating attractive, intuitive and personalized user interfaces to provide them with a pleasant user experience.
+                    <br><br>
                     On this site, you will find details about my past experience, skills, and featured projects, as well as my contact information so we can discuss about different ways on helping you and your business with future projects.
                 }
             </span>
@@ -145,7 +94,7 @@
             @if (m.en) { Programming skills }
         </div>
         <div class="row no-gutters justify-content-center m-0">
-            <div class="col-12 col-sm-6" [ngClass]="{'order-1': !m.back(), 'order-2': m.back()}">
+            <div class="col-12 col-sm-6">
                 <div class="titol-tipus-llenguatge mb-2 mt-5">Frontend</div>
                 <div class="skills px-1">
                     <app-skill n="Angular"/>
@@ -169,7 +118,7 @@
                 </div>
             </div>
 
-            <div class="col-12 col-sm-6" [ngClass]="{'order-1': m.back(), 'order-2': !m.back()}">
+            <div class="col-12 col-sm-6">
                 <div class="titol-tipus-llenguatge mb-2 mt-5">Backend</div>
                 <div class="skills px-1">
                     <app-skill n="NodeJs"/>
@@ -191,7 +140,7 @@
                 </div>
             </div>
 
-            <div class="col-12 col-sm-12 order-3">
+            <div class="col-12 col-sm-12">
                 <div class="titol-tipus-llenguatge mb-2 mt-5">
                     @if (m.ca) { Eines de desenvolupament }
                     @if (m.es) { Herramientas de desarrollo }
@@ -228,7 +177,7 @@
                 </div>
             </div>
 
-            <div class="seccioBotoVeureMes col-12 col-sm-12 order-4 text-center">
+            <div class="seccioBotoVeureMes col-12 col-sm-12 text-center">
                 <button class="boto botoText botoVeureMes mt-4" (click)="obrirVeureMesSkills()" appMostrarAmbAnimacio>
                     @if (m.ca) { Veure més }
                     @if (m.es) { Ver más }
@@ -238,7 +187,7 @@
                 </button>
             </div>
 
-            <div class="col-12 col-sm-6 order-4 skills-ocultes" style="display:none;">
+            <div class="col-12 col-sm-6 skills-ocultes" style="display:none;">
                 <div class="titol-tipus-llenguatge mb-2 mt-5">
                     @if (m.ca) { Eines de virtualització i SO }
                     @if (m.es) { Herramientas de virtualización y SO }
@@ -259,7 +208,7 @@
                 </div>
             </div>
 
-            <div class="col-12 col-sm-6 order-5 skills-ocultes" style="display:none;">
+            <div class="col-12 col-sm-6 skills-ocultes" style="display:none;">
                 <div class="titol-tipus-llenguatge mb-2 mt-5">
                     @if (m.ca) { CMS i frameworks web }
                     @if (m.es) { CMS y frameworks web }

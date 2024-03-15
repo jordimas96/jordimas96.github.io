@@ -12,7 +12,7 @@ export class ExperiencePageComponent extends PageComponent {
         super.ngOnInit();
 
         // Moviment i animació fons //
-        $("body").css({ "background-position": "center center" });
+        // $("body").css({ "background-position": "center center" });
 
         // Google Analytics //
         if (!this.m.debug) this.m.gas.pageView(window.location.pathname);

@@ -42,16 +42,16 @@ export class AppbarComponent {
         
         this.establirIdiomaDefecte();
 
-        $("body").css({ "transition": "background-position 0.3s" });
+        // $("body").css({ "transition": "background-position 0.3s" });
     }
 
     
 
-    async animacioDarkMode(numBoto) {
+    async animacioDarkMode(nomBoto) {
         // Sistema antic sense cortina //
         // $("*").css("transition", "background-color 0.3s linear, color 0.3s linear, border-color 0.3s linear, filter 0.3s linear");
-        // if (numBoto == "dark") this.accioDarkMode();
-        // if (numBoto == "auto") this.accioAutoDarkMode();
+        // if (nomBoto == "dark") this.accioDarkMode();
+        // if (nomBoto == "auto") this.accioAutoDarkMode();
         // await Utils.wait(600);
         // $("*").css("transition", "");
         // return;
@@ -59,7 +59,7 @@ export class AppbarComponent {
 
 
         // Si es click al auto i no cal fer efecte, no el fem //
-        if (numBoto == "auto" && this.m.modeFosc == Utils.systemDarkMode()) {
+        if (nomBoto == "auto" && this.m.modeFosc == Utils.systemDarkMode()) {
             this.accioAutoDarkMode();
             $(".botoAutoMode").fadeOut(200);
             return;
@@ -97,11 +97,11 @@ export class AppbarComponent {
         await Utils.wait(400);
         
         // Acció canviar mode (instantani) //
-        if (numBoto == "dark") {
+        if (nomBoto == "dark") {
             this.accioDarkMode();
             $(".botoAutoMode").show();
         }
-        if (numBoto == "auto") {
+        if (nomBoto == "auto") {
             this.accioAutoDarkMode();
             $(".botoAutoMode").hide();
         }
