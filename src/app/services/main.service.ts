@@ -68,7 +68,7 @@ export class MainService {
     // public esPc() { return !this.esMobil() }
     public esMobil() { return this.esPantallaTactil() }
     public esPc() { return !this.esPantallaTactil() }
-    public esPantallaMobil() { return this.appbar.width <= 576; }
+    public esPantallaMobil() { return this.appbar.width < 576; }
     public esPantallaPc() { return !this.esPantallaMobil(); }
     public esAndroid() { return /Android/i.test(navigator.userAgent); }
     public esPantallaTactil() { return (('ontouchstart' in window) || (navigator.maxTouchPoints > 0) || (navigator.maxTouchPoints > 0)); }

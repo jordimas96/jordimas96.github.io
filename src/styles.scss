@@ -41,7 +41,6 @@ body {
     line-height: 1.4;
     overflow-y: scroll;
     overflow-x: hidden;
-    transition: background-position 0.3s;
 }
 
 // Estils estructura pagines //
@@ -50,7 +49,6 @@ body {
     margin: auto;
     font-size: 1.1rem;
     // margin-bottom: 1000px;
-    transition: padding 0.3s;
 
     .title-skills {
         font-size: 1.25rem;
@@ -66,7 +64,6 @@ body {
     background-color: var(--fons-50);
     backdrop-filter: blur(40px);
     @extend .shadow-2;
-    transition: padding 0.3s, border-radius 0.3s, box-shadow 0.3s, font-size 0.3s;
 
     .subtitle {
         color: var(--text);
@@ -74,10 +71,6 @@ body {
     .text {
         text-align: justify;
         color: var(--text-80);
-    }
-
-    .title, .subtitle, .text {
-        transition: font-size 0.3s;
     }
     .title-icon {
         height: 2rem;
