@@ -44,6 +44,8 @@ export class MainService {
             document.title = "Local";
             document.querySelector("link[rel*='icon']")!["href"] = "assets/favicon-local.png";
             document.body.style.overflowX = "visible";
+        } else {
+            this.printarFirmaAConsola();
         }
     }
     onInit() { }
@@ -70,6 +72,16 @@ export class MainService {
     public esPantallaPc() { return !this.esPantallaMobil(); }
     public esAndroid() { return /Android/i.test(navigator.userAgent); }
     public esPantallaTactil() { return (('ontouchstart' in window) || (navigator.maxTouchPoints > 0) || (navigator.maxTouchPoints > 0)); }
+
+    public printarFirmaAConsola() {
+        const text = "%c" +
+            "         __              ___ __  ___              \n" +
+            "        / /___  ________/ (_)  |/  /___ ______    \n" +
+            "   __  / / __ \\/ __/ __  / / /|_/ / __ \`/ ___/  \n" +
+            "  / /_/ / /_/ / / / /_/ / / /  / / /_/ (__  )     \n" +
+            "  \\____/\\____/_/  \\__,_/_/_/  /_/\\__,_/____/  \n";
+        console.log(text, "color: #0cf; font-weight: bold");
+    }
 
     // Forçar temes - debug //
     public force(tema) { Utils.setCookieDays("forçartema", tema) }
