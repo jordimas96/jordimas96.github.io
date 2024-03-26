@@ -41,7 +41,7 @@ export class OtherProjectsComponent extends CardComponent {
         if (this.USE_CACHE) {
             this.repos = JSON.parse(Utils.getCookie("otherProjects_info") || <any>null);
             if (this.repos) {
-                console.log("Content of other projects loaded from cache");
+                console.log("Content of \"other projects\" loaded from cache");
                 return;
             }
         }
