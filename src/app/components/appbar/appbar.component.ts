@@ -183,10 +183,15 @@ export class AppbarComponent {
         const ara = new Date();
         const horaSeguent = new Date(ara.getFullYear(), ara.getMonth(), ara.getDate(), ara.getHours() + 1, 0, 0, 0);
 
-        setTimeout(() => {
+        setTimeout(async () => {
             let temaVell = this.m.tema;
             this.setTemaSegonsHora(horaSeguent.getHours());
+
+            $("*").css("transition", "color 1s, background-color 1s");
             this.actTema();
+            await Utils.wait(1000);
+            $("*").css("transition", "");
+
             if (temaVell != this.m.tema)
                 console.log("Theme changed because it's " + (horaSeguent.getHours()) + ":00");
         }, horaSeguent.getTime() - ara.getTime());
