@@ -50,16 +50,6 @@ export class MainService {
     }
     onInit() { }
 
-    // Idiomes //
-    idiomaCanviat() {
-        this.idiomaIndex = ["ca", "es", "en"].indexOf(this.idioma);
-        this.conjuncio = ["i", "y", "and"][this.idiomaIndex];
-
-        this.ca = this.idioma == "ca";
-        this.es = this.idioma == "es";
-        this.en = this.idioma == "en";
-    }
-
     public log(t) { console.log(t); }
     public logDebug(t) { if (this.debug) console.log(t); }
 

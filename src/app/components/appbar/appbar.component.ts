@@ -10,7 +10,7 @@ import { Utils } from '../../shared/utils';
     styleUrls: ['./appbar.component.scss']
 })
 export class AppbarComponent {
-    
+
     public width = window.innerWidth;
 
     constructor(public m: MainService) {
@@ -18,7 +18,7 @@ export class AppbarComponent {
     }
     ngOnInit() {
         this.m.afterRootFadeIn(this.afterRootFadeIn.bind(this));
-        
+
         this.setDarkMode();
 
         this.setTemaSegonsHora();
@@ -39,13 +39,10 @@ export class AppbarComponent {
     }
 
     afterRootFadeIn() {
-        
-        this.establirIdiomaDefecte();
-
         // $("body").css({ "transition": "background-position 0.3s" });
     }
 
-    
+
 
     async animacioDarkMode(nomBoto) {
         // Sistema antic sense cortina //
@@ -81,7 +78,7 @@ export class AppbarComponent {
             "z-index": "10000",
             "box-shadow": `0 0 0 0 ${color}`
         });
-        
+
         await Utils.wait(0);
 
         // 1. Transicio spread, expandir //
@@ -91,11 +88,11 @@ export class AppbarComponent {
                 "box-shadow": `0 0 ${blur}px ${spread}px ${color}`
             });
 
-        
-        
-        
+
+
+
         await Utils.wait(400);
-        
+
         // Acció canviar mode (instantani) //
         if (nomBoto == "dark") {
             this.accioDarkMode();
@@ -107,12 +104,12 @@ export class AppbarComponent {
         }
 
         $(".botoDarkMode").removeClass("transicio-1");
-        $(".botoDarkMode").css({ "box-shadow": `100vw 100vh ${blur}px ${spread*1.15}px ${color}` });
-        
+        $(".botoDarkMode").css({ "box-shadow": `100vw 100vh ${blur}px ${spread * 1.15}px ${color}` });
+
         await Utils.wait(0);
 
         $(".botoDarkMode").addClass("transicio-2");
-            
+
         // 2. Transicio color a transparent //
         // $(".botoDarkMode").css({ "box-shadow": `100vw 100vh ${blur}px ${spread}px transparent` });
         $(".botoDarkMode").css({ "box-shadow": `100vw 100vh 0 0 ${color}` });
@@ -127,7 +124,7 @@ export class AppbarComponent {
                 "z-index": "auto",
                 "box-shadow": "none"
             });
-        
+
         $("*:not(.botoDarkMode)").css("transition", "");
         $(".botoDarkMode, .botoAutoMode").prop("disabled", false);
 
@@ -148,17 +145,17 @@ export class AppbarComponent {
     setDarkMode() {
         // Establir variable dark mode //
         this.m.modeFosc = !!parseInt(Utils.getCookie("darkmode"));
-        
+
         // Si no te cookie el traiem de system //
         if (!Utils.hasCookie("darkmode"))
             this.m.modeFosc = Utils.systemDarkMode();
     }
-    
+
     setTemaSegonsHora(horaActual = new Date().getHours()) {
         if (Utils.hasCookie("forçartema")) { this.m.tema = Utils.getCookie("forçartema"); return; }
-        
+
         // this.m.tema = "mati"; return;
-        
+
         // Colors matinada, matí, tarda, vespre, nit //
         const primeraHoraNit = 1;
         const primeraHoraMatinada = 6;
@@ -178,8 +175,8 @@ export class AppbarComponent {
             this.m.tema = "tarda";
         else
             this.m.tema = "vespre";
-        
-        
+
+
         const ara = new Date();
         const horaSeguent = new Date(ara.getFullYear(), ara.getMonth(), ara.getDate(), ara.getHours() + 1, 0, 0, 0);
 
@@ -198,31 +195,14 @@ export class AppbarComponent {
     }
 
     actTema(tema?: string | number) {
-        
+
         if (typeof (tema) == "string") this.m.tema = tema;
         if (typeof (tema) == "number") this.m.tema = ["matinada", "mati", "tarda", "vespre", "nit"][tema - 1];
-        
+
         $("html")
             .removeClass("dark light nit matinada mati tarda vespre")
             .addClass(this.m.modeFosc ? "dark" : "light")
             .addClass(this.m.tema);
-    }
-
-    // Idioma //
-    establirIdiomaDefecte() {
-        // Detectar idioma i guardar-lo //
-        this.m.idioma = Utils.getCookie("lang") || navigator.language.split("-")[0];
-        
-        // Si l'idioma detectat no es al select, el posem a anglès per defecte //
-        if (!$("#idioma > option").toArray().map(e => $(e).val()).includes(this.m.idioma))
-            this.m.idioma = "en";
-        
-        this.m.idiomaCanviat();
-    }
-    onIdiomaCanviat() {
-        document.documentElement.lang = this.m.idioma;
-        Utils.setCookieDays("lang", this.m.idioma);
-        this.m.idiomaCanviat();
     }
 
 
@@ -231,7 +211,7 @@ export class AppbarComponent {
         this.m.router.navigate([`/${location.pathname.split("/")[1]}/${value}`]);
     }
 
-    
+
 
     // Funcions //
     @HostListener('window:resize', ['$event'])

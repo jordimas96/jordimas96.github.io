@@ -7,6 +7,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { AppbarComponent } from './components/appbar/appbar.component';
 import { NavegacioTabComponent } from './components/appbar/navegacio-tab/navegacio-tab.component';
+import { SelectorIdiomaComponent } from './components/appbar/selector-idioma/selector-idioma.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { ImatgeScrollComponent } from './components/imatge-scroll/imatge-scroll.component';
 import { SkillComponent } from './components/skill/skill.component';
@@ -45,6 +46,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
         FooterComponent,
         ImatgeScrollComponent,
         NavegacioTabComponent,
+        SelectorIdiomaComponent,
         SkillComponent,
     
         // Pages //

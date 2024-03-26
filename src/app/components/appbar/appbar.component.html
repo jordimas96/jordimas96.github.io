@@ -14,16 +14,7 @@
     </div>
 
     <div class="idioma col-6 col-md-2 order-2 order-md-3">
-        <select class="select-idioma" [(ngModel)]="m.idioma" id="idioma" title="Language" (change)="onIdiomaCanviat()">
-            @if (!m.es) {
-                <option value="ca">Català</option>
-                <option value="es">Español</option>
-            } @else {
-                <option value="es">Español</option>
-                <option value="ca">Català</option>
-            }
-            <option value="en">English</option>
-        </select>
+        <app-selector-idioma />
     </div>
 
     <!-- Debug -->
