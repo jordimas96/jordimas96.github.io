@@ -4,9 +4,20 @@
         <meta charset="utf-8">
         <title>GitHub Pages Issue</title>
         <script type="text/javascript">
+            
             var pathSegmentsToKeep = 0;
-
             var l = window.location;
+
+            // First, try to simplyfy the url from "url/xxx/yyy" to "url/xxx" //
+            // var segments = l.pathname.slice(1).split("/");
+            // if (segments.length > 1) {
+            //     l.replace(
+            //         l.protocol + '//' + l.hostname + (l.port ? ':' + l.port : '') + "/" +
+            //         segments[0]
+            //     );
+            // }
+
+            // If not working, do the former replace //
             l.replace(
                 l.protocol + '//' + l.hostname + (l.port ? ':' + l.port : '') +
                 l.pathname.split('/').slice(0, 1 + pathSegmentsToKeep).join('/') + '/?/' +
@@ -14,6 +25,7 @@
                 (l.search ? '&' + l.search.slice(1).replace(/&/g, '~and~') : '') +
                 l.hash
             );
+
         </script>
     </head>
     <body>
