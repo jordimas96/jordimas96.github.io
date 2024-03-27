@@ -4,6 +4,8 @@ I am a passionate programmer specialized in frontend, with some years of experie
 
 On this site, you will find details about my past experience, skills, and featured projects, as well as my contact information so we can discuss about different ways on helping you and your business with future projects.
 
+https://jordimas96.github.io/
+
 
 ```
         __              ___ __  ___          
