@@ -1,0 +1,46 @@
+.botoDarkMode {
+}
+.botoDarkMode, .botoAutoMode {
+    position: relative;
+    background-color: var(--text);
+    color: var(--fons);
+    font-weight: 800;
+    padding: initial; // iPhone/iPad fix //
+    border: none;
+    border-radius: 1000px;
+    outline: none;
+    cursor: pointer;
+    transition: background-color 0.3s linear, width 0.3s ease, height 0.3s ease, font-size 0.3s ease;
+    
+
+    &.transicio-1 {
+        transition: background-color 0.3s linear, width 0.3s ease, height 0.3s ease, font-size 0.3s ease, box-shadow 400ms ease-in;
+    }
+    &.transicio-2 {
+        transition: background-color 0.3s linear, width 0.3s ease, height 0.3s ease, font-size 0.3s ease, box-shadow 400ms ease-in;
+    }
+}
+
+
+
+
+
+
+// Pantalla PC //
+@media only screen and (min-width: 576px) {
+    .botoDarkMode, .botoAutoMode {
+        height: 3rem;
+        font-size: 1.3rem;
+    }
+    .botoDarkMode { width: 4rem; }
+    .botoAutoMode { width: 3rem; }
+}
+// Pantalla Mòbil //
+@media only screen and (max-width: 575px) {
+    .botoDarkMode, .botoAutoMode {
+        height: 2.5rem;
+        font-size: 1.1rem;
+    }
+    .botoDarkMode { width: 3.5rem; }
+    .botoAutoMode { width: 2.5rem; }
+}

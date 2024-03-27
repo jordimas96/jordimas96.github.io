@@ -21,27 +21,7 @@
         display: flex;
         align-items: center;
         padding: 0.6rem 0.5rem;
-        transition: padding 0.3s ;
-
-        .botoDarkMode, .botoAutoMode {
-            background-color: var(--text);
-            color: var(--fons);
-            font-weight: 800;
-            padding: initial; // iPhone/iPad fix //
-            border: none;
-            border-radius: 1000px;
-            outline: none;
-            cursor: pointer;
-            transition: background-color 0.3s linear, width 0.3s ease, height 0.3s ease, font-size 0.3s ease;
-            
-
-            &.transicio-1 {
-                transition: background-color 0.3s linear, width 0.3s ease, height 0.3s ease, font-size 0.3s ease, box-shadow 400ms ease-in;
-            }
-            &.transicio-2 {
-                transition: background-color 0.3s linear, width 0.3s ease, height 0.3s ease, font-size 0.3s ease, box-shadow 400ms ease-in;
-            }
-        }
+        transition: padding 0.3s;
     }
     
     .navegacio {
@@ -63,13 +43,6 @@
 // Pantalla PC //
 @media only screen and (min-width: 576px) {
     .botonsDarkMode {
-        
-        .botoDarkMode, .botoAutoMode {
-            height: 3rem;
-            font-size: 1.3rem;
-        }
-        .botoDarkMode { width: 4rem; }
-        .botoAutoMode { width: 3rem; }
     }
     .navegacio {
         padding: 0.5rem;
@@ -81,13 +54,6 @@
 // Pantalla Mòbil //
 @media only screen and (max-width: 575px) {
     .botonsDarkMode {
-
-        .botoDarkMode, .botoAutoMode {
-            height: 2.5rem;
-            font-size: 1.1rem;
-        }
-        .botoDarkMode { width: 3.5rem; }
-        .botoAutoMode { width: 2.5rem; }
     }
     .navegacio {
         padding: 0.25rem 0.5rem;

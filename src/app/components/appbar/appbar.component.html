@@ -1,29 +1,14 @@
 <div class="appbar row no-gutters v" [ngClass]="{'shadow-3':m.scroll>0&&!m.modeFosc, 'scrolled':m.scroll>0}" appMostrarAmbAnimacio>
     <div class="botonsDarkMode col-6 col-md-2 order-1 order-md-1">
-        <button (click)="animacioDarkMode('dark');" class="botoDarkMode" [title]="m.modeFosc ? 'Light mode' : 'Dark mode'">
-            <i *ngIf="m.modeFosc" class="fa-solid fa-sun"></i>
-            <i *ngIf="!m.modeFosc" class="fa-solid fa-moon"></i>
-        </button>
-        <button (click)="animacioDarkMode('auto');" class="botoAutoMode ml-1" title="Auto dark mode" style="display:none;">
-            <i class="fa-solid fa-a"></i>
-        </button>
+        <app-dark-mode />
     </div>
 
     <div class="navegacio col-12 col-md-8 order-3 order-md-2">
-        <app-navegacio-tab></app-navegacio-tab>
+        <app-navegacio-tab />
     </div>
 
     <div class="idioma col-6 col-md-2 order-2 order-md-3">
         <app-selector-idioma />
     </div>
-
-    <!-- Debug -->
-    <!-- @if (m.debug) {
-        <div *ngIf="m.debug" [style]="'position:absolute;top:'+m.u.getAlturaAppbar()+'px'">
-            <button class="boto border-0 mr-1 py-0 px-2" style="font-size:1rem;cursor:pointer" (click)="canviarVersio('web')">Front</button>
-            <button class="boto border-0 mr-1 py-0 px-2" style="font-size:1rem;cursor:pointer" (click)="canviarVersio('info')">Back</button>
-            <button class="boto border-0 mr-1 py-0 px-2" style="font-size:1rem;cursor:pointer" (click)="canviarVersio('details')">Full</button>
-        </div>
-    } -->
 
 </div>

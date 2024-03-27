@@ -6,6 +6,7 @@ import { QRCodeModule } from 'angularx-qrcode';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { AppbarComponent } from './components/appbar/appbar.component';
+import { DarkModeComponent } from './components/appbar/dark-mode/dark-mode.component';
 import { NavegacioTabComponent } from './components/appbar/navegacio-tab/navegacio-tab.component';
 import { SelectorIdiomaComponent } from './components/appbar/selector-idioma/selector-idioma.component';
 import { FooterComponent } from './components/footer/footer.component';
@@ -45,6 +46,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
         AppbarComponent,
         FooterComponent,
         ImatgeScrollComponent,
+        DarkModeComponent,
         NavegacioTabComponent,
         SelectorIdiomaComponent,
         SkillComponent,
