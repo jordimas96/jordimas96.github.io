@@ -121,7 +121,7 @@ export class OtherProjectsComponent extends CardComponent {
 
 
     getColorRepoCards(hue) {
-        let alfa = this.m.modeFosc ? 0.35 : 0.5;
+        let alfa = this.m.ts.modeFosc ? 0.35 : 0.5;
         return `hsla(${hue}, 100%, 75%, ${alfa})`;
     }
     

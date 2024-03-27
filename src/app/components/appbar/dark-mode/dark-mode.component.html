@@ -1,6 +1,6 @@
-<button (click)="animacioDarkMode('dark');" class="botoDarkMode" [title]="m.modeFosc ? 'Light mode' : 'Dark mode'">
-    <i *ngIf="m.modeFosc" class="fa-solid fa-sun"></i>
-    <i *ngIf="!m.modeFosc" class="fa-solid fa-moon"></i>
+<button (click)="animacioDarkMode('dark');" class="botoDarkMode" [title]="m.ts.modeFosc ? 'Light mode' : 'Dark mode'">
+    <i *ngIf="m.ts.modeFosc" class="fa-solid fa-sun"></i>
+    <i *ngIf="!m.ts.modeFosc" class="fa-solid fa-moon"></i>
 </button>
 <button (click)="animacioDarkMode('auto');" class="botoAutoMode ml-1" title="Auto dark mode" style="display:none;">
     <i class="fa-solid fa-a"></i>

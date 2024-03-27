@@ -3,6 +3,7 @@ import { ActivatedRoute, Router } from '@angular/router';
 import { GoogleAnalyticsService } from 'ngx-google-analytics';
 import { AppbarComponent } from "../components/appbar/appbar.component";
 import { Utils } from "../shared/utils";
+import { ThemeService } from "./theme.service";
 
 // https://developerslogblog.wordpress.com/2019/04/23/how-to-use-angular-services-to-share-data-between-components/ //
 
@@ -19,8 +20,6 @@ export class MainService {
     // Variables //
     public tempsDelayCarregaPag = 1000;
     public readonly debug = window.location.origin.includes("localhost") || window.location.origin.includes("192.168.1.");
-    public modeFosc: boolean = true;
-    public tema: string = "";
     public scroll = window.pageYOffset;
 
     // Idiomes //
@@ -34,7 +33,8 @@ export class MainService {
     constructor(
         public router: Router,
         public route: ActivatedRoute,
-        public gas: GoogleAnalyticsService
+        public gas: GoogleAnalyticsService,
+        public ts: ThemeService
     ) {
         this.u = Utils;
         
