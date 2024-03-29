@@ -14,6 +14,11 @@
         @if (m.es) { Proyectos }
         @if (m.en) { Projects }
     </button>
+    <button id="navegacio-tab-art" routerLinkActive="selected" [routerLinkActiveOptions]="{exact: true}" [routerLink]="['/art']" (click)="onTabClick($event.target)">
+        @if (m.ca) { Art }
+        @if (m.es) { Arte }
+        @if (m.en) { Art }
+    </button>
     
     <div #pill class="pill"></div>
     

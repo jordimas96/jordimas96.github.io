@@ -10,12 +10,6 @@ export class ProjectsPageComponent extends PageComponent {
 
     override async ngOnInit() {
         super.ngOnInit();
-
-        // Moviment i animació fons //
-        // $("body").css({ "background-position": "bottom right" });
-
-        // Google Analytics //
-        if (!this.m.debug) this.m.gas.pageView(window.location.pathname);
     }
 
     override afterRootFadeIn() {

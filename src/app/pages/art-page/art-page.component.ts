@@ -2,11 +2,11 @@ import { Component } from '@angular/core';
 import { PageComponent } from '../page.component';
 
 @Component({
-    selector: 'app-experience-page',
-    templateUrl: './experience-page.component.html',
-    styleUrls: ['./experience-page.component.scss', '../page.scss']
+    selector: 'app-art-page',
+    templateUrl: './art-page.component.html',
+    styleUrls: ['./art-page.component.scss', '../page.scss']
 })
-export class ExperiencePageComponent extends PageComponent {
+export class ArtPageComponent extends PageComponent {
 
     override async ngOnInit() {
         super.ngOnInit();
@@ -15,5 +15,6 @@ export class ExperiencePageComponent extends PageComponent {
     override afterRootFadeIn() {
         super.afterRootFadeIn();
     }
+
 
 }

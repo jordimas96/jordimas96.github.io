@@ -33,12 +33,6 @@ export class HomePageComponent extends PageComponent {
     override async ngOnInit() {
         super.ngOnInit();
 
-        // Moviment i animació fons //
-        // $("body").css({ "background-position": "top left" });
-
-        // Google Analytics //
-        if (!this.m.debug) this.m.gas.pageView(window.location.pathname);
-
         this.calcularAnysExperiencia();
     }
 

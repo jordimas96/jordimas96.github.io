@@ -10,15 +10,14 @@
     <app-other-projects />
     <app-custom-roms />
     <app-tasker />
-    <app-amazfit-watchfaces />
 
     
     <div class="mb-6 text-center" appMostrarAmbAnimacio>
-        <button class="boto botoSeguentPagina m-auto" (click)="m.u.getDocument().querySelector('#navegacio-tab-home').click()">
-            <i class="fa-solid fa-chevron-left mr-2"></i>
-            @if (m.ca) { Inici }
-            @if (m.es) { Inicio }
-            @if (m.en) { Home }
+        <button class="boto botoSeguentPagina m-auto" (click)="m.u.getDocument().querySelector('#navegacio-tab-art').click()">
+            @if (m.ca) { Art }
+            @if (m.es) { Arte }
+            @if (m.en) { Art }
+            <i class="fa-solid fa-chevron-right mx-2"></i>
         </button>
     </div>
 

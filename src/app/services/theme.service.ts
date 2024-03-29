@@ -1,9 +1,5 @@
 import { Injectable } from "@angular/core";
-import { ActivatedRoute, Router } from '@angular/router';
-import { GoogleAnalyticsService } from 'ngx-google-analytics';
-import { AppbarComponent } from "../components/appbar/appbar.component";
 import { Utils } from "../shared/utils";
-import { MainService } from "./main.service";
 
 @Injectable({
     providedIn: 'root'
