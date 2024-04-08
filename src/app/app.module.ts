@@ -21,6 +21,7 @@ import { TargetBlankDirective } from './directives/target-blank.directive';
 import { GoogleAnalyticsModule } from './google-analytics/google-analytics.module';
 import { AmazfitWatchfacesComponent } from './pages/art-page/amazfit-watchfaces/amazfit-watchfaces.component';
 import { ArtPageComponent } from './pages/art-page/art-page.component';
+import { IconsComponent } from './pages/art-page/icons/icons.component';
 import { NexxiaComponent } from './pages/experience-page/1 nexxia/nexxia.component';
 import { IndraComponent } from './pages/experience-page/2 indra/indra.component';
 import { MaticComponent } from './pages/experience-page/3 matic/matic.component';
@@ -78,6 +79,7 @@ import { TaskerComponent } from './pages/projects-page/tasker/tasker.component';
         OtherProjectsComponent,
 
         AmazfitWatchfacesComponent,
+        IconsComponent,
 
         DetallsAndroidAppsComponent,
         MadJumpgateJocComponent,
