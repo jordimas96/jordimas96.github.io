@@ -9,11 +9,12 @@ import { NgxMasonryModule } from 'ngx-masonry';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { AppbarComponent } from './components/appbar/appbar.component';
-import { DarkModeComponent } from './components/appbar/dark-mode/dark-mode.component';
+import { DarkModeComponent } from './components/sidebar/dark-mode/dark-mode.component';
 import { NavegacioTabComponent } from './components/appbar/navegacio-tab/navegacio-tab.component';
 import { SelectorIdiomaComponent } from './components/appbar/selector-idioma/selector-idioma.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { ImatgeScrollComponent } from './components/imatge-scroll/imatge-scroll.component';
+import { SidebarComponent } from './components/sidebar/sidebar.component';
 import { SkillComponent } from './components/skill/skill.component';
 import { MostrarAmbAnimacioDirective } from './directives/mostrar-amb-animacio.directive';
 import { SmoothMoveDirective } from './directives/smooth-move.directive';
@@ -46,6 +47,7 @@ import { TaskerComponent } from './pages/projects-page/tasker/tasker.component';
 
         // Components //
         AppbarComponent,
+        SidebarComponent,
         FooterComponent,
         ImatgeScrollComponent,
         DarkModeComponent,

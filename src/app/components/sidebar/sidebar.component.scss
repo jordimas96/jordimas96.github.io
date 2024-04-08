@@ -1,0 +1,99 @@
+@import "src/styles.scss";
+
+
+
+
+
+.sidebar {
+    position: fixed;
+    top: 0;
+    height: 100%;
+    width: 400px;
+    transform: translate(-100%);
+    background-color: transparent;
+    backdrop-filter: blur(100px);
+
+
+    z-index: 1101;
+
+    transition: transform 0.3s;
+
+    &.open {
+        transform: none;
+        @extend .shadow-5
+    }
+
+    .divBotoSidebar {
+        button {
+            font-size: 2rem;
+        }
+    }
+
+    .seccions {
+        display: flex;
+        flex-direction: column;
+        
+        overflow: hidden;
+        
+        button {
+            font-size: 2rem;
+            width: 100%;
+            padding: 1rem;
+
+            &:hover {
+                filter: brightness(2) grayscale(0.8);
+            }
+        }
+    }
+
+
+    app-dark-mode {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        margin: 1rem;
+    }
+}
+.backdrop {
+    position: fixed;
+    right: 0;
+    top: 0;
+    height: 100%;
+    width: 0;
+    z-index: 1100;
+}
+.sidebar.open + .backdrop {
+    width: calc(100% - 400px);
+}
+
+
+
+
+
+
+
+
+
+// Pantalla PC //
+@media only screen and (min-width: 576px) {
+}
+// Pantalla Mòbil //
+@media only screen and (max-width: 575px) {
+    .sidebar {
+        width: 80%;
+
+        .seccions {
+            
+            button {
+                font-size: 1.5rem;
+            }
+        }
+
+        app-dark-mode {
+            margin: 0.5rem;
+        }
+    }
+    .sidebar.open + .backdrop {
+        width: 20%;
+    }
+}

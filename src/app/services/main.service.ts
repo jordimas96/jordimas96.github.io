@@ -4,6 +4,7 @@ import { GoogleAnalyticsService } from 'ngx-google-analytics';
 import { AppbarComponent } from "../components/appbar/appbar.component";
 import { Utils } from "../shared/utils";
 import { ThemeService } from "./theme.service";
+import { SidebarComponent } from "../components/sidebar/sidebar.component";
 
 // https://developerslogblog.wordpress.com/2019/04/23/how-to-use-angular-services-to-share-data-between-components/ //
 
@@ -13,6 +14,7 @@ import { ThemeService } from "./theme.service";
 export class MainService {
     // Components //
     public appbar!: AppbarComponent;
+    public sidebar: SidebarComponent;
 
     // Services //
     public u;

@@ -13,7 +13,7 @@
     <app-nexxia />
 
     <div class="mb-6 text-center" appMostrarAmbAnimacio>
-        <button class="boto botoSeguentPagina m-auto" (click)="m.u.getDocument().querySelector('#navegacio-tab-projects').click()">
+        <button class="boto botoSeguentPagina m-auto" (click)="m.u.scroll(0);" [routerLink]="['/projects']">
             @if (m.ca) { Projectes }
             @if (m.es) { Proyectos }
             @if (m.en) { Projects }

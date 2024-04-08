@@ -63,7 +63,7 @@ export class DarkModeComponent {
 
         // Colocar shadow al primer punt //
         $(".botoDarkMode").css({
-            "z-index": "10000",
+            "z-index": "1000000",
             "box-shadow": `0 0 0 0 ${color}`
         });
 
@@ -92,15 +92,15 @@ export class DarkModeComponent {
         }
 
         $(".botoDarkMode").removeClass("transicio-1");
-        $(".botoDarkMode").css({ "box-shadow": `100vw 100vh ${blur}px ${spread * 1.15}px ${color}` });
+        $(".botoDarkMode").css({ "box-shadow": `100vw -100vh ${blur}px ${spread * 1.15}px ${color}` });
 
         await Utils.wait(0);
 
         $(".botoDarkMode").addClass("transicio-2");
 
-        // 2. Transicio color a transparent //
+        // 2. Transicio marxar cortina //
         // $(".botoDarkMode").css({ "box-shadow": `100vw 100vh ${blur}px ${spread}px transparent` });
-        $(".botoDarkMode").css({ "box-shadow": `100vw 100vh 0 0 ${color}` });
+        $(".botoDarkMode").css({ "box-shadow": `100vw -100vh 0 0 ${color}` });
 
         await Utils.wait(400);
 

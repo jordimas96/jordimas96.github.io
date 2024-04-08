@@ -12,14 +12,14 @@ export class ThemeService {
     constructor() {
         
         this.setTemaSegonsHora();
-        this.actTema();
+        
+        setTimeout(() => {
+            this.actTema();
+        }, 0);
 
         // Canviar tema cada 5 segons //
         // let i = 0; setInterval(() => { this.setTemaSegonsHora(i++ % 24); this.actTema(); }, 1000);
         
-    }
-
-    ngOnInit() {
     }
 
     setTemaSegonsHora(horaActual = new Date().getHours()) {
