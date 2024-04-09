@@ -42,28 +42,33 @@
 
 
 
+// Pantalla Mòbil //
+@media only screen and (max-width: 575px) {
+    // .contenidor {
+    //     padding: 0.2rem;
+    // }
+    // button {
+    //     font-size: 1.2rem;
+    // }
+}
+
+// Pantalla PC //
+@media only screen and (min-width: 576px) {
+    button {
+        font-size: 1.1rem;
+    }
+}
+
 // Pantalla Gran //
 @media only screen and (min-width: 992px) {
     button {
+        font-size: 1.5rem;
         padding-left: 3rem !important;
         padding-right: 3rem !important;
     }
 }
-// Pantalla PC //
-@media only screen and (min-width: 576px) {
-    button {
-        font-size: 1.5rem;
-    }
-}
-// Pantalla Mòbil //
-@media only screen and (max-width: 575px) {
-    .contenidor {
-        padding: 0.2rem;
-    }
-    button {
-        font-size: 1.2rem;
-    }
-}
+
+
 
 // PC //
 @media (pointer: fine) {
