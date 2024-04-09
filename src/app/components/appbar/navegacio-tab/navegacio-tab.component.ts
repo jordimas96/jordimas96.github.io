@@ -1,4 +1,5 @@
 import { Component, ElementRef, HostListener, ViewChild } from '@angular/core';
+import { NavigationEnd, Router } from '@angular/router';
 import { interval } from 'rxjs';
 import { MainService } from 'src/app/services/main.service';
 import { Utils } from 'src/app/shared/utils';
@@ -18,10 +19,21 @@ export class NavegacioTabComponent {
 
     public movent = false;
 
-    constructor(public m: MainService,
+    constructor(
+        public m: MainService,
+        private router: Router,
         private elementRef: ElementRef
     ) {
+        this.router.events.subscribe(async event => {
+            if (event instanceof NavigationEnd) {
+                // When screen changed //
+                await Utils.wait(0);
+                this.botoSeleccionat = document.querySelector("button.selected");
+                Utils.scroll(0);
 
+                this.actPosPill(true);
+            }
+        });
     }
     ngOnInit() {
         this.m.afterRootFadeIn(this.afterRootFadeIn.bind(this));
@@ -35,21 +47,6 @@ export class NavegacioTabComponent {
             if (!this.movent)
                 this.actPosPill(false);
         });
-    }
-
-    onTabClick(target) {
-        this.botoSeleccionat = target;
-        Utils.scroll(0);
-
-        this.actPosPill(true);
-    }
-
-    async onBackPressed() {
-        await Utils.wait(0);
-        this.botoSeleccionat = document.querySelector("button.selected");
-        Utils.scroll(0);
-
-        this.actPosPill(true);
     }
 
     actPosPill(animacio) {
@@ -77,11 +74,6 @@ export class NavegacioTabComponent {
     @HostListener('window:scroll', ['$event'])
     onResize() {
         this.actPosPill(false);
-    }
-
-    @HostListener('window:popstate', ['$event'])
-    onPopState(event: PopStateEvent) {
-        this.onBackPressed();
     }
 
 }
