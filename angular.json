@@ -28,6 +28,7 @@
             "assets": [
               "src/favicon.ico",
               "src/assets",
+              "src/pages",
               "src/404.html",
               "src/github-pages-routing-problem-fix.js"
             ],
@@ -97,7 +98,8 @@
             "inlineStyleLanguage": "scss",
             "assets": [
               "src/favicon.ico",
-              "src/assets"
+              "src/assets",
+              "src/pages"
             ],
             "styles": [
               "node_modules/bootstrap/scss/bootstrap.scss",

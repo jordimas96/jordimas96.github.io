@@ -5,7 +5,30 @@
 .group {
 
 }
+.icon-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
 
+    gap: 1rem;
+
+    img {
+        width: 100px;
+        border-radius: 6.25%;
+
+        transition: transform 0.3s, filter 0.3s;
+
+        &:hover {
+            transform: scale(1.5);
+            @extend .shadow-filter-5;
+            z-index: 2;
+        }
+
+        &.round {
+            border-radius: 50%;
+        }
+    }
+}
 
 
 
