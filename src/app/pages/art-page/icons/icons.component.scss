@@ -15,6 +15,7 @@
     img {
         width: 100px;
         border-radius: 6.25%;
+        transform-origin: center;
 
         transition: transform 0.3s, filter 0.3s;
 

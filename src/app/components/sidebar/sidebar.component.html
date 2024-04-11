@@ -10,14 +10,32 @@
 
 
     <div class="seccions mt-5">
-        <button class="botoText"            (click)="m.u.scroll(0); open=false;" [routerLink]="['/']">Home</button>
-        <button class="botoText tema-evora" (click)="m.u.scroll(0); open=false;" [routerLink]="['/experience']">Experience</button>
-        <button class="botoText tema-android" (click)="m.u.scroll(0); open=false;" [routerLink]="['/projects']">Projects</button>
-        <button class="botoText tema-amazfit" (click)="m.u.scroll(0); open=false;" [routerLink]="['/art']">Art</button>
+        <button class="botoText" (click)="m.u.scroll(0); open=false;" [routerLink]="['/']">
+            @if (m.ca) { Inici }
+            @if (m.es) { Inicio }
+            @if (m.en) { Home }
+        </button>
+        <button class="botoText tema-evora" (click)="m.u.scroll(0); open=false;" [routerLink]="['/experience']">
+            @if (m.ca) { Experiència }
+            @if (m.es) { Experiencia }
+            @if (m.en) { Experience }
+        </button>
+        <button class="botoText tema-android" (click)="m.u.scroll(0); open=false;" [routerLink]="['/projects']">
+            @if (m.ca) { Projectes }
+            @if (m.es) { Proyectos }
+            @if (m.en) { Projects }
+        </button>
+        <button class="botoText tema-amazfit" (click)="m.u.scroll(0); open=false;" [routerLink]="['/art']">
+            @if (m.ca) { Art }
+            @if (m.es) { Arte }
+            @if (m.en) { Art }
+        </button>
     </div>
 
-
-    <app-dark-mode />
+    <div class="barraInferior p-3">
+        <app-dark-mode />
+        <app-selector-idioma />
+    </div>
 
 
 

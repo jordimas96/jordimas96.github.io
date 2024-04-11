@@ -46,18 +46,18 @@
 
 // Pantalla Mòbil //
 @media only screen and (max-width: 575px) {
-    // .contenidor {
-    //     padding: 0.2rem;
-    // }
-    // button {
-    //     font-size: 1.2rem;
-    // }
+    .contenidor {
+        padding: 0.2rem;
+    }
+    button {
+        font-size: 0.9rem;
+    }
 }
 
 // Pantalla PC //
 @media only screen and (min-width: 576px) {
     button {
-        font-size: 1.1rem;
+        font-size: 1.2rem;
     }
 }
 

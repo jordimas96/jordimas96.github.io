@@ -1,16 +1,13 @@
-<div class="appbar row no-gutters v" [ngClass]="{'shadow-3':m.scroll>0&&!m.ts.modeFosc, 'scrolled':m.scroll>0}" appMostrarAmbAnimacio>
-    <div class="divBotoSidebar col-4 col-sm-1">
-        <button class="botoText px-3" (mouseover)="m.sidebar.obrir()" (click)="m.sidebar.obrir()">
-            <i class="fa-solid fa-bars"></i>
-        </button>
-    </div>
+<div class="appbar v" [ngClass]="{'shadow-3':m.scroll>0&&!m.ts.modeFosc, 'scrolled':m.scroll>0}" appMostrarAmbAnimacio>
+    
+    <button class="botoObrirSidebar botoText" (mouseover)="m.sidebar.obrir()" (click)="m.sidebar.obrir()">
+        <i class="fa-solid fa-bars"></i>
+    </button>
+    
+    <app-navegacio-tab />
 
-    <div class="navegacio col-12 col-sm-9 d-none d-sm-flex">
-        <app-navegacio-tab />
-    </div>
-
-    <div class="idioma col-8 col-sm-2">
-        <app-selector-idioma />
+    <div class="botoObrirSidebar botoText opacity-0 d-none d-sm-block">
+        <i class="fa-solid fa-bars"></i>
     </div>
 
 </div>

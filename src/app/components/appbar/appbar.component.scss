@@ -2,11 +2,14 @@
 
 .appbar {
     position: fixed;
-    display: flex;
-    align-items: center;
     top: 0rem;
     left: 0rem;
     right: 0rem;
+    
+    display: flex;
+    justify-content: space-between;
+    align-items: stretch;
+
     z-index: 1000;
     background: none;
     backdrop-filter: blur(20px) saturate(1.5);
@@ -17,50 +20,35 @@
         backdrop-filter: blur(20px) saturate(1);
     }
 
-    .divBotoSidebar {
-        button {
-            font-size: 2rem;
+    .botoObrirSidebar {
+        padding: 0.5rem;
+        font-size: 2rem;
+        i {
+            display: block;
         }
     }
-
-    .botonsDarkMode {
-        display: flex;
-        align-items: center;
-        padding: 0.6rem 0.5rem;
-        transition: padding 0.3s;
-    }
-    
-    .navegacio {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-
-        transition: padding 0.3s;
+    app-navegacio-tab {
+        margin: 0.5rem;
     }
 
-    .idioma {
-        display: flex;
-        align-items: center;
-        justify-content: flex-end;
-    }
 }
 
 
 // Pantalla PC //
 @media only screen and (min-width: 576px) {
-    .navegacio {
-        padding: 0.5rem;
-    }
-    .idioma {
-        padding: 0.5rem;
+    .appbar {
+        .botoObrirSidebar {
+            padding: 0.5rem 1.5rem;
+        }
     }
 }
 // Pantalla Mòbil //
 @media only screen and (max-width: 575px) {
-    .navegacio {
-        padding: 0.25rem 0.5rem;
-    }
-    .idioma {
-        padding: 0.25rem 0.5rem;
+    .appbar {
+        .botoObrirSidebar {
+        }
+        app-navegacio-tab {
+            margin-left: 0;
+        }
     }
 }
