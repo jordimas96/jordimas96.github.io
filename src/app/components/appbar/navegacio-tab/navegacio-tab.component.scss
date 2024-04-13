@@ -8,7 +8,7 @@
     background-color: var(--fons-50);
     border-radius: 1.25rem; //1rem
     width: fit-content;
-    padding: 0.25rem;
+    padding: 0.2rem;
     z-index: 0;
     transition: padding 0.3s;
     
@@ -20,11 +20,12 @@
         border: none;
         cursor: pointer;
 
-        padding: 0.25rem 1rem;
-        // padding: 0.125rem 0.5rem;
+        // padding: 0.25rem 1rem;
+        padding: 0.125rem 0.5rem;
+        font-size: 1rem;
+        border-radius: 1rem; //0.75rem
 
         z-index: 2;
-        border-radius: 1rem; //0.75rem
 
         transition: font-size 0.3s, padding 0.3s, color 0.3s, background-color 0.1s;
 
@@ -44,29 +45,33 @@
 
 
 
-// Pantalla Mòbil //
-@media only screen and (max-width: 575px) {
-    .contenidor {
-        padding: 0.2rem;
-    }
-    button {
-        font-size: 0.9rem;
-    }
-}
-
-// Pantalla PC //
+// Pantalla Tablet //
 @media only screen and (min-width: 576px) {
-    button {
-        font-size: 1.2rem;
+    .contenidor {
+        button {
+            font-size: 1.2rem;
+        }
+    }
+}
+// Pantalla PC //
+@media only screen and (min-width: 768px) {
+    .contenidor {
+        button {
+            font-size: 1.3rem;
+            padding-left: 1.5rem !important;
+            padding-right: 1.5rem !important;
+        }
     }
 }
 
-// Pantalla Gran //
+// Pantalla Molt Gran //
 @media only screen and (min-width: 992px) {
-    button {
-        font-size: 1.5rem;
-        padding-left: 3rem !important;
-        padding-right: 3rem !important;
+    .contenidor {
+        button {
+            font-size: 1.5rem;
+            padding-left: 3rem !important;
+            padding-right: 3rem !important;
+        }
     }
 }
 

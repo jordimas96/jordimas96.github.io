@@ -2,22 +2,22 @@
 
 
 ::ng-deep .content {
+    padding: 0.5rem 0.5rem 0rem;
+
     .content-title {
         margin-top: 1.5rem;
         margin-bottom: 1rem;
         text-align: center;
         color: var(--text);
+        font-size: 2rem;
         transition: font-size 0.3s;
     }
 }
 
 
-// #region MEDIA QUERIES //
-///////////////////
-// MEDIA QUERIES //
-///////////////////
-/// 
-// Pantalla PC //
+// Pantalla Mòbil //
+@media only screen and (max-width: 575px) { }
+// Pantalla Tablet //
 @media only screen and (min-width: 576px) {
     .content {
         padding: 1rem 1rem 0rem;
@@ -26,15 +26,10 @@
         font-size: 2.5rem;
     }
 }
-// Pantalla Mòbil //
-@media only screen and (max-width: 575px) {
-    .content {
-        padding: 0.5rem 0.5rem 0rem;
-    }
-    .content-title {
-        font-size: 2rem;
-    }
-}
+// Pantalla PC //
+@media only screen and (min-width: 768px) { }
+// Pantalla Molt Gran //
+@media only screen and (min-width: 992px) { }
 
 // PC //
 @media (pointer: fine) { }

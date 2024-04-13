@@ -10,8 +10,8 @@
     }
     .botons {
         display: flex;
-        align-items: center;
         justify-content: space-around;
+        align-items: center;
         gap: 1rem;
         
         .boto {
@@ -25,24 +25,27 @@
 
 
 
-// #region MEDIA QUERIES //
-///////////////////
-// MEDIA QUERIES //
-///////////////////
-/// 
-// Pantalla PC //
-@media only screen and (min-width: 576px) { }
 // Pantalla Mòbil //
 @media only screen and (max-width: 575px) {
-    .group#tasker .botons {
-        text-align: center;
+    .group .botons {
         flex-direction: column;
-
-        a.boto {
-            padding: 1rem 1.4rem !important;
+    }
+}
+// Pantalla Tablet //
+@media only screen and (min-width: 576px) {
+    .group {
+        .botons {
+            a.boto {
+                padding: 0.5rem !important;
+                padding-left: 1rem !important;
+            }
         }
     }
 }
+// Pantalla PC //
+@media only screen and (min-width: 768px) { }
+// Pantalla Molt Gran //
+@media only screen and (min-width: 992px) { }
 
 // PC //
 @media (pointer: fine) {

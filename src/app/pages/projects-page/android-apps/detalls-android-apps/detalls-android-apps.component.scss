@@ -9,27 +9,27 @@
         justify-content: space-between;
         align-items: center;
         width: 100%;
-        padding: 1rem;
+        padding: 0.5rem;
 
         .text-i-icona {
             display: flex;
             align-items: center;
+            gap: 1rem;
 
+            img.icona {
+                height: 4rem;
+                border-radius: 1.5rem;
+            }
             .titol {
                 font-size: 1.4rem;
                 color: var(--text);
                 text-align: left;
             }
-            .icona {
-                height: 3rem;
-                border-radius: 1rem;
-                margin-right: 1rem;
-            }
         }
-        .fletxa {
+        i.fletxa {
             font-size: 1.5rem;
-            margin-right: 1rem;
-            margin-left: 1rem;
+            margin-right: 1.5rem;
+            margin-left: 1.5rem;
             transition: transform 200ms;
             
             &[data-open] {
@@ -38,6 +38,8 @@
         }
     }
     .contingut {
+        padding: 1rem;
+        padding-top: 0.5rem;
         transition: padding-left 0.3s, padding-right 0.3s;
     }
 }
@@ -92,22 +94,6 @@
 
 
 
-// #region MEDIA QUERIES //
-///////////////////
-// MEDIA QUERIES //
-///////////////////
-
-
-// Pantalla PC //
-@media only screen and (min-width: 576px) {
-    .seccio {
-
-        .contingut {
-            padding: 1.5rem;
-            padding-top: 0;
-        }
-    }
-}
 // Pantalla Mòbil o tablet petita //
 @media only screen and (max-width: 768px) {
     .wallpaper-blurrer,
@@ -135,18 +121,24 @@
 }
 // Pantalla Mòbil //
 @media only screen and (max-width: 575px) {
-    .seccio {
-
-        .contingut {
-            padding: 1rem;
-            padding-top: 0;
-        }
-    }
-
     .sus-tracker .contingut .video {
         margin-bottom: 0.25rem;
     }
 }
+// Pantalla Tablet //
+@media only screen and (min-width: 576px) {
+    .seccio {
+
+        .contingut {
+            padding: 1.5rem;
+            padding-top: 1rem;
+        }
+    }
+}
+// Pantalla PC //
+@media only screen and (min-width: 768px) { }
+// Pantalla Molt Gran //
+@media only screen and (min-width: 992px) { }
 
 // PC //
 @media (pointer: fine) { }

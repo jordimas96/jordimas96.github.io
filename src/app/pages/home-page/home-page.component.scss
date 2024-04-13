@@ -139,39 +139,12 @@
 }
 
 
-// PC //
-@media (pointer: fine) {
-    .div-foto {
-        transition: border-radius 0.3s;
-        &:hover {
-            border-radius: 1rem !important;
-        }
-    }
-    .foto-carnet {
-        transition: transform 0.3s;
-        &:hover {
-            transform: none !important;
-        }
-    }
-}
-// Mòbil //
-@media (pointer: coarse) { }
 
-// Pantalla PC //
-@media only screen and (min-width: 576px) {
-    .bondia {
-        font-size: 1.8rem;
-    }
-    .nom {
-        font-size: 1.7rem;
-        .emdic {
-            font-size: 1.4rem;
-        }
-    }
-    .programador {
-        font-size: 1.2rem;
-    }
-}
+
+
+
+
+
 // Pantalla Mòbil //
 @media only screen and (max-width: 575px) {
     .bondia {
@@ -189,3 +162,42 @@
         font-size: 0.9rem;
     }
 }
+// Pantalla Tablet //
+@media only screen and (min-width: 576px) {
+    .bondia {
+        font-size: 1.8rem;
+    }
+    .nom {
+        font-size: 1.7rem;
+        .emdic {
+            font-size: 1.4rem;
+        }
+    }
+    .programador {
+        font-size: 1.2rem;
+    }
+}
+// Pantalla PC //
+@media only screen and (min-width: 768px) { }
+// Pantalla Molt Gran //
+@media only screen and (min-width: 992px) { }
+
+
+
+// PC //
+@media (pointer: fine) {
+    .div-foto {
+        transition: border-radius 0.3s;
+        &:hover {
+            border-radius: 1rem !important;
+        }
+    }
+    .foto-carnet {
+        transition: transform 0.3s;
+        &:hover {
+            transform: none !important;
+        }
+    }
+}
+// Mòbil //
+@media (pointer: coarse) { }

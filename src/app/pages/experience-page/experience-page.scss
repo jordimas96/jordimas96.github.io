@@ -13,6 +13,9 @@
             display: flex;
             align-items: center;
 
+            padding: 0.6rem;
+            margin: -0.6rem;
+            
             // per l'efecte hover botó gran a web en PC //
             border-radius: 10000px;
 
@@ -34,25 +37,22 @@
 
 
 
-// #region MEDIA QUERIES //
-///////////////////
-// MEDIA QUERIES //
-///////////////////
-/// 
-// Pantalla PC //
-@media only screen and (min-width: 576px) {
+
+
+
+// Pantalla Mòbil //
+@media only screen and (max-width: 575px) {
     .link-boto-titol {
         padding: 0.5rem 1rem;
         margin: -0.5rem -1rem;
     }
 }
-// Pantalla Mòbil //
-@media only screen and (max-width: 575px) {
-    .link-boto-titol {
-        padding: 0.6rem;
-        margin: -0.6rem;
-    }
-}
+// Pantalla Tablet //
+@media only screen and (min-width: 576px) { }
+// Pantalla PC //
+@media only screen and (min-width: 768px) { }
+// Pantalla Molt Gran //
+@media only screen and (min-width: 992px) { }
 
 // PC //
 @media (pointer: fine) {

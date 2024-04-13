@@ -11,14 +11,11 @@
 
     .boto-i-gif {
         display: flex;
-        align-items: center;
         justify-content: space-around;
+        align-items: center;
         gap: 1rem;
 
-        .boto { }
-
         .div-gif-i-text {
-            text-align: center;
     
             img {
                 // box-shadow: 0px 0px 10px 0px white;
@@ -35,31 +32,29 @@
 
 
 
-// #region MEDIA QUERIES //
-///////////////////
-// MEDIA QUERIES //
-///////////////////
-/// 
-// Pantalla PC //
-@media only screen and (min-width: 576px) {
-    .group .boto-i-gif a.boto {
-        padding-right: 0.5rem;
-    }
-}
+
 // Pantalla Mòbil //
 @media only screen and (max-width: 575px) {
     .group .boto-i-gif {
-        text-align: center;
         flex-direction: column;
-
-        a.boto {
-            padding: 1rem 1.4rem !important;
-        }
-    }
-    .group .boto-i-gif a.boto {
-        padding-right: 1rem;
     }
 }
+// Pantalla Tablet //
+@media only screen and (min-width: 576px) {
+    .group {
+        .boto-i-gif {
+            a.boto {
+                padding: 0.5rem !important;
+                padding-left: 1rem !important;
+            }
+        }
+    }
+}
+// Pantalla PC //
+@media only screen and (min-width: 768px) { }
+// Pantalla Molt Gran //
+@media only screen and (min-width: 992px) { }
+
 
 // PC //
 @media (pointer: fine) {

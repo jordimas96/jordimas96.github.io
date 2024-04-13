@@ -30,11 +30,21 @@
     app-navegacio-tab {
         margin: 0.5rem;
     }
+    app-selector-idioma {
+        align-items: center;
+    }
 
 }
 
-
-// Pantalla PC //
+// Pantalla Mòbil //
+@media only screen and (max-width: 575px) {
+    .appbar {
+        app-navegacio-tab {
+            margin-left: 0;
+        }
+    }
+}
+// Pantalla Tablet //
 @media only screen and (min-width: 576px) {
     .appbar {
         .botoObrirSidebar {
@@ -42,13 +52,7 @@
         }
     }
 }
-// Pantalla Mòbil //
-@media only screen and (max-width: 575px) {
-    .appbar {
-        .botoObrirSidebar {
-        }
-        app-navegacio-tab {
-            margin-left: 0;
-        }
-    }
-}
+// Pantalla PC //
+@media only screen and (min-width: 768px) { }
+// Pantalla Molt Gran //
+@media only screen and (min-width: 992px) { }

@@ -8,7 +8,7 @@
     position: fixed;
     top: 0;
     height: 100%;
-    width: 400px;
+    width: 80%;
     transform: translate(-100%);
     background-color: transparent;
     backdrop-filter: blur(100px);
@@ -38,7 +38,7 @@
         overflow: hidden;
         
         button {
-            font-size: 2rem;
+            font-size: 1.5rem;
             width: 100%;
             padding: 1rem;
 
@@ -67,7 +67,7 @@
     z-index: 1100;
 }
 .sidebar.open + .backdrop {
-    width: calc(100% - 400px);
+    width: 20%;
 }
 
 
@@ -76,24 +76,24 @@
 
 
 
-
-
-// Pantalla PC //
-@media only screen and (min-width: 576px) {
-}
 // Pantalla Mòbil //
-@media only screen and (max-width: 575px) {
+@media only screen and (max-width: 575px) { }
+// Pantalla Tablet //
+@media only screen and (min-width: 576px) {
     .sidebar {
-        width: 80%;
-
+        width: 400px;
+        
         .seccions {
-            
             button {
-                font-size: 1.5rem;
+                font-size: 2rem;
             }
         }
     }
     .sidebar.open + .backdrop {
-        width: 20%;
+        width: calc(100% - 400px);
     }
 }
+// Pantalla PC //
+@media only screen and (min-width: 768px) { }
+// Pantalla Molt Gran //
+@media only screen and (min-width: 992px) { }

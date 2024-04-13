@@ -18,22 +18,12 @@
         transition: background-color 0.3s linear, width 0.3s ease, height 0.3s ease, font-size 0.3s ease, box-shadow 400ms ease-in;
     }
 }
-.botoDarkMode {
-}
+.botoDarkMode { }
+.botoAutoMode { }
 
 
 
 
-
-// Pantalla PC //
-@media only screen and (min-width: 576px) {
-    .botoDarkMode, .botoAutoMode {
-        height: 3rem;
-        font-size: 1.3rem;
-    }
-    .botoDarkMode { width: 4rem; }
-    .botoAutoMode { width: 3rem; }
-}
 // Pantalla Mòbil //
 @media only screen and (max-width: 575px) {
     .botoDarkMode, .botoAutoMode {
@@ -43,3 +33,16 @@
     .botoDarkMode { width: 3.5rem; }
     .botoAutoMode { width: 2.5rem; }
 }
+// Pantalla Tablet //
+@media only screen and (min-width: 576px) {
+    .botoDarkMode, .botoAutoMode {
+        height: 3rem;
+        font-size: 1.3rem;
+    }
+    .botoDarkMode { width: 4rem; }
+    .botoAutoMode { width: 3rem; }
+}
+// Pantalla PC //
+@media only screen and (min-width: 768px) { }
+// Pantalla Molt Gran //
+@media only screen and (min-width: 992px) { }

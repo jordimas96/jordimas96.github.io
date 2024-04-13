@@ -1,9 +1,12 @@
 .select-idioma {
     background-color: var(--fons-50);
     color: var(--text);
+    font-size: 1.1rem;
+
     border: none;
     border-radius: 5px;
     padding: 0.25rem 0.5rem 0.25rem 1rem;
+
     outline: none;
     cursor: pointer;
 
@@ -13,23 +16,21 @@
 }
 
 
-// Pantalla Gran //
-@media only screen and (min-width: 992px) {
-    .select-idioma {
-        padding-left: 2rem !important;
-        padding-right: 1.5rem !important;
-    }
-}
-// Pantalla PC //
+// Pantalla Mòbil //
+@media only screen and (max-width: 575px) { }
+// Pantalla Tablet //
 @media only screen and (min-width: 576px) {
     .select-idioma {
         font-size: 1.2rem;
     }
 }
-// Pantalla Mòbil //
-@media only screen and (max-width: 575px) {
+// Pantalla PC //
+@media only screen and (min-width: 768px) { }
+// Pantalla Molt Gran //
+@media only screen and (min-width: 992px) {
     .select-idioma {
-        font-size: 1.1rem;
+        padding-left: 2rem !important;
+        padding-right: 1.5rem !important;
     }
 }
 
