@@ -22,29 +22,18 @@
         }
 
         <app-detalls-android-apps/>
+        <br>
 
         @if (m.ca) {
-            @if (m.esAndroid()) {
-                Les meves aplicacions estan disponibles a la Play Store:
-            } @else {
-                Les meves aplicacions estan disponibles a la Play Store. Podeu escanejar el codi QR des d'un dispositiu Android per visitar el meu perfil a la Play Store:
-            }
+            Les meves aplicacions estan disponibles a diferents botigues d'aplicacions:
         }
         
         @if (m.es) {
-            @if (m.esAndroid()) {
-                Mis aplicaciones están disponibles en la Play Store:
-            } @else {
-                Mis aplicaciones están disponibles en la Play Store. Puedes escanear el código QR desde un dispositivo Android para visitar mi perfil en la Play Store:
-            }
+            Mis aplicaciones están disponibles en diferentes tiendas de aplicaciones:
         }
         
         @if (m.en) {
-            @if (m.esAndroid()) {
-                My apps are available on the Play Store:
-            } @else {
-                My apps are available on the Play Store. You can scan the QR code from an Android device to visit my profile on the Play Store:
-            }
+            My apps are available on different app markets:
         }
     </p>
     <!-- <a href="https://jordimas96.github.io/pages/play-store">
@@ -52,22 +41,39 @@
         @if (m.es) { Mis apps en Google Play }
         @if (m.en) { My apps in Google Play }
     </a> -->
-    <div class="boto-i-qr">
-        <a href="https://jordimas96.github.io/pages/play-store" class="boto pl-3" appMostrarAmbAnimacio>
-            @if (m.ca) { Les meves apps }
-            @if (m.es) { Mis apps }
-            @if (m.en) { My apps }
-            <img src="assets/icons/play-store.png" alt="Google Play Store" class="logo">
-        </a>
+    <div class="boto-i-qr row no-gutters mb-4">
+        <div class="col-6 col-sm-6 text-center">
+            <a href="https://jordimas96.github.io/pages/play-store" class="boto pl-3" appMostrarAmbAnimacio>
+                Play Store
+                <img src="assets/icons/play-store.png" alt="Google Play Store" class="logo">
+            </a>
+        </div>
         @if (!m.esAndroid()) {
-            <div class="div-qr-i-text" appMostrarAmbAnimacio>
+            <div class="div-qr-i-text col-6 col-sm-6" appMostrarAmbAnimacio>
                 <qrcode qrdata="https://jordimas96.github.io/pages/play-store" [errorCorrectionLevel]="'M'"
-                    colorDark="#005727" colorLight="#b8ffd8"></qrcode>
+                    colorDark="#005727" colorLight="#b8ffd8" title="Play Store"></qrcode>
 
                 <div class="scan-here mt-2">
                     @if (m.ca) { Escaneja el QR des d'un dispositiu Android<br>per a visitar el meu perfil de Play Store }
                     @if (m.es) { Escanea el QR desde un dispositivo Android<br>para visitar mi perfil de Play Store }
                     @if (m.en) { Scan here from an Android device<br>to visit my Play Store profile }
+                </div>
+            </div>
+        }
+        <div class="col-6 col-sm-6 text-center">
+            <a href="https://jordimas96.github.io/r/amazon-appstore" class="boto botoAmazon tema-amazon-apps p-2 pb-1" appMostrarAmbAnimacio>
+                <img src="assets/icons/amazon-appstore.png" alt="Amazon Appstore" class="logo">
+            </a>
+        </div>
+        @if (!m.esAndroid()) {
+            <div class="div-qr-i-text tema-amazon-apps col-6 col-sm-6" appMostrarAmbAnimacio>
+                <qrcode qrdata="https://jordimas96.github.io/r/amazon-appstore" [errorCorrectionLevel]="'M'"
+                    colorDark="#222f3f" colorLight="#b8f0ff" title="Amazon Appstore"></qrcode>
+
+                <div class="scan-here mt-2">
+                    @if (m.ca) { Escaneja el QR des d'un dispositiu Android<br>per a visitar el meu perfil de Amazon Appstore }
+                    @if (m.es) { Escanea el QR desde un dispositivo Android<br>para visitar mi perfil de Amazon Appstore }
+                    @if (m.en) { Scan here from an Android device<br>to visit my Amazon Appstore profile }
                 </div>
             </div>
         }

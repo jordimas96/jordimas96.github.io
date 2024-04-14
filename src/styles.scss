@@ -115,7 +115,6 @@ body {
     padding: 2rem 4rem;
     border-radius: 2rem;
     font-size: 1.5rem;
-    
 }
 
 
@@ -306,15 +305,6 @@ img, .noselect {
             font-size: 1.75rem;
         }
     }
-    .boto:not(.botoText):hover {
-        background-color: var(--color-l-9) !important;
-    }
-    ::ng-deep .light .boto:not(.botoText):hover {
-        background-color: var(--color-l-3) !important;
-    }
-    .boto.botoText:hover {
-        color: var(--color-6);
-    }
     .skills {
         justify-content: flex-start;
     }
@@ -326,6 +316,16 @@ img, .noselect {
 
 // PC //
 @media (pointer: fine) {
+    // Efecte hover botons en PC //
+    .boto:not(.botoText):hover {
+        // background-color: var(--color-l-9) !important;
+        // box-shadow: inset 0 0 0 1000px var(--color-clar-40) !important;
+    }
+    ::ng-deep .light .boto:not(.botoText):hover {
+        // background-color: var(--color-l-3) !important;
+        // box-shadow: inset 0 0 0 1000px var(--color-clar-40) !important;
+    }
+
     // Efecte hover links en PC //
     a:not(.link-img, .no-style, .boto) {
         display: inline-block;
@@ -353,6 +353,10 @@ img, .noselect {
         transition: border-radius 0.3s, var(--transicio-colors);
     }
     .botoSeguentPagina:hover { border-radius: 3rem; }
+
+    .hoverWhiter:hover {
+        box-shadow: inset 0 0 0 1000px #fff3 !important;
+    }
     
 }
 // Mòbil //

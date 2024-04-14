@@ -10,10 +10,8 @@
     }
 
     .boto-i-qr {
-        display: flex;
         align-items: center;
-        justify-content: space-around;
-        gap: 1rem;
+        row-gap: 1rem;
 
         .div-qr-i-text {
             text-align: center;
@@ -35,6 +33,18 @@
     }
 }
 
+.botoAmazon {
+    background-color: #222f3f !important;
+    color: #03cbfe !important;
+    padding: 1rem !important;
+    padding-bottom: 0.5rem !important;
+
+    img {
+        height: 1.5rem !important;
+    }
+
+}
+
 
 // Afegim filtre forçat per a que es vegi bé l'icona en mode clar //
 .light :host .subtitle .title-icon {
@@ -50,16 +60,7 @@
     }
 }
 // Pantalla Tablet //
-@media only screen and (min-width: 576px) {
-    .group {
-        .boto-i-qr {
-            a.boto {
-                padding: 0.5rem !important;
-                padding-left: 1rem !important;
-            }
-        }
-    }
-}
+@media only screen and (min-width: 576px) { }
 // Pantalla PC //
 @media only screen and (min-width: 768px) { }
 // Pantalla Molt Gran //
