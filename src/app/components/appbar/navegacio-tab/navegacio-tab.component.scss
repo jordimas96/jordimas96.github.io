@@ -13,6 +13,8 @@
     transition: padding 0.3s;
     
     button {
+        @extend .boing;
+
         background: none;
         color: var(--text);
 
@@ -27,7 +29,7 @@
 
         z-index: 2;
 
-        transition: font-size 0.3s, padding 0.3s, color 0.3s, background-color 0.1s;
+        transition: font-size 0.3s, padding 0.3s, color 0.3s, background-color 0.1s, transform 0.1s;
 
         &.selected {
             color: var(--fons);

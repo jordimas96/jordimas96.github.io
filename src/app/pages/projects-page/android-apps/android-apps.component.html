@@ -53,7 +53,7 @@
                 <qrcode qrdata="https://jordimas96.github.io/pages/play-store" [errorCorrectionLevel]="'M'"
                     colorDark="#005727" colorLight="#b8ffd8" title="Play Store"></qrcode>
 
-                <div class="scan-here mt-2">
+                <div class="scan-here">
                     @if (m.ca) { Escaneja el QR des d'un dispositiu Android<br>per a visitar el meu perfil de Play Store }
                     @if (m.es) { Escanea el QR desde un dispositivo Android<br>para visitar mi perfil de Play Store }
                     @if (m.en) { Scan here from an Android device<br>to visit my Play Store profile }
@@ -68,9 +68,9 @@
         @if (!m.esAndroid()) {
             <div class="div-qr-i-text tema-amazon-apps col-6 col-sm-6" appMostrarAmbAnimacio>
                 <qrcode qrdata="https://jordimas96.github.io/r/amazon-appstore" [errorCorrectionLevel]="'M'"
-                    colorDark="#222f3f" colorLight="#b8f0ff" title="Amazon Appstore"></qrcode>
+                    colorDark="#152939" colorLight="#b8f0ff" title="Amazon Appstore"></qrcode>
 
-                <div class="scan-here mt-2">
+                <div class="scan-here">
                     @if (m.ca) { Escaneja el QR des d'un dispositiu Android<br>per a visitar el meu perfil de Amazon Appstore }
                     @if (m.es) { Escanea el QR desde un dispositivo Android<br>para visitar mi perfil de Amazon Appstore }
                     @if (m.en) { Scan here from an Android device<br>to visit my Amazon Appstore profile }

@@ -8,14 +8,14 @@
     border-radius: 1000px;
     outline: none;
     cursor: pointer;
-    transition: background-color 0.3s linear, width 0.3s ease, height 0.3s ease, font-size 0.3s ease;
+    transition: background-color 0.3s linear, width 0.3s, height 0.3s, font-size 0.3s, transform 0.1s;
     
 
     &.transicio-1 {
-        transition: background-color 0.3s linear, width 0.3s ease, height 0.3s ease, font-size 0.3s ease, box-shadow 400ms ease-in;
+        transition: background-color 0.3s linear, width 0.3s, height 0.3s, font-size 0.3s, box-shadow 400ms ease-in;
     }
     &.transicio-2 {
-        transition: background-color 0.3s linear, width 0.3s ease, height 0.3s ease, font-size 0.3s ease, box-shadow 400ms ease-in;
+        transition: background-color 0.3s linear, width 0.3s, height 0.3s, font-size 0.3s, box-shadow 400ms ease-in;
     }
 }
 .botoDarkMode { }
