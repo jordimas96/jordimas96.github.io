@@ -12,8 +12,14 @@
 
     gap: 1rem;
 
-    img {
+    > * {
         width: 100px;
+
+        &.round {
+            border-radius: 50%;
+        }
+    }
+    img {
         border-radius: 6.25%;
         transform-origin: center;
 
@@ -24,9 +30,18 @@
             @extend .shadow-filter-5;
             z-index: 2;
         }
+    }
+    div {
+        display: flex;
+        flex-wrap: wrap;
+        align-content: space-between;
+        justify-content: space-between;
 
-        &.round {
-            border-radius: 50%;
+        img {
+            width: 48%;
+            height: 48%;
+            background-color: #2f3539;
+            border-radius: 0.7rem;
         }
     }
 }
