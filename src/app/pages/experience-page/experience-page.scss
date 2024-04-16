@@ -13,8 +13,8 @@
             display: flex;
             align-items: center;
 
-            padding: 0.6rem;
-            margin: -0.6rem;
+            padding: 0.6rem 1.3rem;
+            margin: -0.6rem -1.3rem;
             
             // per l'efecte hover botó gran a web en PC //
             border-radius: 10000px;
@@ -42,9 +42,13 @@
 
 // Pantalla Mòbil //
 @media only screen and (max-width: 575px) {
-    .link-boto-titol {
-        padding: 0.5rem 1rem;
-        margin: -0.5rem -1rem;
+    .group {
+        .subtitle {
+            .link-boto-titol {
+                padding: 0.5rem 1rem;
+                margin: -0.5rem;
+            }
+        }
     }
 }
 // Pantalla Tablet //

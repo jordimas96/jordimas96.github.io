@@ -101,6 +101,9 @@ body {
     background-color: var(--color-7);
     color: var(--fons);
 }
+.botoAmbIcona {
+    padding: 0.5rem 0.5rem 0.5rem 1rem;
+}
 .boto, a {
     @extend .boing;
 }

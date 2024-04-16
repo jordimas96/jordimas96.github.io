@@ -1,6 +1,7 @@
 @import "src/styles.scss";
 
 .seccio {
+    margin-bottom: 1rem;
     border-radius: 2rem;
     
     .boto-desplegable {
@@ -8,20 +9,20 @@
         justify-content: space-between;
         align-items: center;
         width: 100%;
-        padding: 1rem;
+        padding: 0.5rem;
 
         .text-i-icona {
             display: flex;
             align-items: center;
+            gap: 1rem;
 
+            .icona {
+                height: 4rem;
+                border-radius: 1.5rem;
+            }
             .titol {
                 font-size: 1.5rem;
                 color: var(--text);
-            }
-            .icona {
-                height: 3rem;
-                border-radius: 1rem;
-                margin-right: 1rem;
             }
         }
         .fletxa {
@@ -36,8 +37,7 @@
         }
     }
     .contingut {
-        padding: 1rem;
-        padding-top: 0;
+        padding: 0.5rem 1rem 1rem;
         transition: padding-left 0.3s, padding-right 0.3s;
 
         .iframe-i-placeholder {
@@ -104,8 +104,7 @@
 @media only screen and (min-width: 576px) {
     .seccio {
         .contingut {
-            padding: 1.5rem;
-            padding-top: 0;
+            padding: 0.5rem 1.5rem 1.5rem;
         }
     }
 }

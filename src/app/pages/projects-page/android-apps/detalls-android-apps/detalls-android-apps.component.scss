@@ -16,17 +16,16 @@
             align-items: center;
             gap: 1rem;
 
-            img.icona {
+            .icona {
                 height: 4rem;
                 border-radius: 1.5rem;
             }
             .titol {
                 font-size: 1.4rem;
                 color: var(--text);
-                text-align: left;
             }
         }
-        i.fletxa {
+        .fletxa {
             font-size: 1.5rem;
             margin-right: 1.5rem;
             margin-left: 1.5rem;
@@ -38,8 +37,7 @@
         }
     }
     .contingut {
-        padding: 1rem;
-        padding-top: 0.5rem;
+        padding: 0.5rem 1rem 1rem;
         transition: padding-left 0.3s, padding-right 0.3s;
     }
 }
@@ -130,8 +128,7 @@
     .seccio {
 
         .contingut {
-            padding: 1.5rem;
-            padding-top: 1rem;
+            padding: 1rem 1.5rem 1.5rem;
         }
     }
 }

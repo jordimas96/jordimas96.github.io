@@ -40,8 +40,13 @@
         img {
             width: 48%;
             height: 48%;
+            padding: 0.2rem;
             background-color: #2f3539;
             border-radius: 0.7rem;
+
+            &:hover {
+                transform: scale(2.5);
+            }
         }
     }
 }

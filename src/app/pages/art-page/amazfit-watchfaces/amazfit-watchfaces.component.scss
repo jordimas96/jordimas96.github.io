@@ -19,6 +19,7 @@
     
             img {
                 // box-shadow: 0px 0px 10px 0px white;
+                // box-shadow: 0 0 6px 5px white;
                 border-radius: 11px;
             }
             .text-gif {
@@ -41,14 +42,6 @@
 }
 // Pantalla Tablet //
 @media only screen and (min-width: 576px) {
-    .group {
-        .boto-i-gif {
-            a.boto {
-                padding: 0.5rem !important;
-                padding-left: 1rem !important;
-            }
-        }
-    }
 }
 // Pantalla PC //
 @media only screen and (min-width: 768px) { }

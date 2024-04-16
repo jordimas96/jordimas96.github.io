@@ -15,6 +15,7 @@
         gap: 1rem;
         
         .boto {
+
             .logo {
                 transition: transform 0.3s;
             }
@@ -33,14 +34,7 @@
 }
 // Pantalla Tablet //
 @media only screen and (min-width: 576px) {
-    .group {
-        .botons {
-            a.boto {
-                padding: 0.5rem !important;
-                padding-left: 1rem !important;
-            }
-        }
-    }
+    
 }
 // Pantalla PC //
 @media only screen and (min-width: 768px) { }
