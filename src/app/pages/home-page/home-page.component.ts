@@ -104,7 +104,7 @@ export class HomePageComponent extends PageComponent {
     }
 
     getRutaCV() {
-        return `assets/documents/CV/${this.m.idioma.toUpperCase()}/CV Jordi Mas Parramon.pdf`;
+        return `assets/documents/CV/CV Jordi Mas Parramon ${this.m.idioma.toUpperCase()}.pdf`;
     }
 
     obrirVeureMesSkills() {
