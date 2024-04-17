@@ -42,14 +42,14 @@
         @if (m.en) { My apps in Google Play }
     </a> -->
     <div class="boto-i-qr row no-gutters mb-4">
-        <div class="col-6 col-sm-6 text-center">
+        <div class="col-6">
             <a href="/pages/play-store/play-store.html" class="boto botoAmbIcona" appMostrarAmbAnimacio>
                 Play Store
                 <img src="assets/icons/play-store.png" alt="Google Play Store" class="logo">
             </a>
         </div>
         @if (!m.esAndroid()) {
-            <div class="div-qr-i-text col-6 col-sm-6" appMostrarAmbAnimacio>
+            <div class="col-6" appMostrarAmbAnimacio>
                 <qrcode qrdata="https://jordimas96.github.io/pages/play-store/play-store.html" [errorCorrectionLevel]="'M'"
                     colorDark="#005727" colorLight="#b8ffd8" title="Play Store"></qrcode>
 
@@ -60,13 +60,13 @@
                 </div>
             </div>
         }
-        <div class="col-6 col-sm-6 text-center">
+        <div class="col-6">
             <a [href]="getAmazonLink_apps()" class="boto botoAmazon tema-amazon-apps p-2 pb-1" appMostrarAmbAnimacio>
                 <img src="assets/icons/amazon-appstore.png" alt="Amazon Appstore" class="logo">
             </a>
         </div>
         @if (!m.esAndroid()) {
-            <div class="div-qr-i-text tema-amazon-apps col-6 col-sm-6" appMostrarAmbAnimacio>
+            <div class="col-6 tema-amazon-apps" appMostrarAmbAnimacio>
                 <qrcode [qrdata]="getAmazonLink_apps()" [errorCorrectionLevel]="'M'"
                     colorDark="#152939" colorLight="#b8f0ff" title="Amazon Appstore"></qrcode>
 

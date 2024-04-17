@@ -10,24 +10,21 @@
     }
 
     .boto-i-qr {
+        text-align: center;
         align-items: center;
-        row-gap: 1rem;
+        row-gap: 2rem;
 
-        .div-qr-i-text {
-            text-align: center;
-
-            ::ng-deep qrcode {
-                .qrcode {
-                    canvas {
-                        border-radius: 16px !important;
-                    }
+        ::ng-deep qrcode {
+            .qrcode {
+                canvas {
+                    border-radius: 16px !important;
                 }
             }
-            
-            .scan-here {
-                font-size: 0.9rem;
-                color: var(--text-80);
-            }
+        }
+        
+        .scan-here {
+            font-size: 0.9rem;
+            color: var(--text-80);
         }
     }
 }
@@ -56,6 +53,7 @@
 @media only screen and (max-width: 575px) {
     .group .boto-i-qr {
         flex-direction: column;
+        row-gap: 1rem;
     }
 }
 // Pantalla Tablet //
