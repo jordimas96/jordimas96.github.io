@@ -15,5 +15,11 @@ export class AndroidAppsComponent extends CardComponent {
     ) {
         super(m, rootElement);
     }
+
+
+    getAmazonLink_apps() {
+        const com = this.m.en ? "com" : "es";
+        return `https://www.amazon.${com}/s?rh=p_4%3AJMasDev`;
+    }
     
 }

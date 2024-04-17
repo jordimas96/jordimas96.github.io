@@ -21,6 +21,21 @@ export class DetallsAndroidAppsComponent {
 
     
     afterRootFadeIn() { }
+
+
+    
+    getAmazonLink_breakingBall() {
+        const com = this.m.en ? "com" : "es";
+        return `https://www.amazon.${com}/JMasDev-Breaking-Ball/dp/B0D1KXQR85`;
+    }
+    getAmazonLink_wallpaperBlurrer() {
+        const com = this.m.en ? "com" : "es";
+        return `https://www.amazon.${com}/JMasDev-Wallpaper-Blurrer/dp/B0CYHC4TT6`;
+    }
+    getAmazonLink_textMimicker() {
+        const com = this.m.en ? "com" : "es";
+        return `https://www.amazon.${com}/JMasDev-Text-Mimicker/dp/B0CXQFNMS5`;
+    }
   
   
     toggleSeccio(boto) {

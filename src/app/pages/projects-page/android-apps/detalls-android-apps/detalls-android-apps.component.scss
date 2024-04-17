@@ -39,6 +39,22 @@
     .contingut {
         padding: 0.5rem 1rem 1rem;
         transition: padding-left 0.3s, padding-right 0.3s;
+
+        .iconesStores {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1rem;
+
+            a {
+                display: block;
+                border-radius: 50%;
+                overflow: hidden;
+
+                .logo {
+                    height: 3rem;
+                }
+            }
+        }
     }
 }
 
@@ -50,9 +66,7 @@
         display: flex;
         flex-direction: row;
         gap: 1rem;
-        .text {
-
-        }
+        .info { }
         .video {
             align-self: center;
             video {
@@ -67,7 +81,7 @@
         display: flex;
         flex-direction: column;
         gap: 1rem;
-        .text { }
+        .info { }
         .video {
             align-self: center;
             video {
@@ -119,6 +133,9 @@
 }
 // Pantalla Mòbil //
 @media only screen and (max-width: 575px) {
+    .iconesStores {
+        justify-content: center;
+    }
     .sus-tracker .contingut .video {
         margin-bottom: 0.25rem;
     }

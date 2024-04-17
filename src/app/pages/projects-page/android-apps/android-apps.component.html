@@ -61,13 +61,13 @@
             </div>
         }
         <div class="col-6 col-sm-6 text-center">
-            <a href="https://jordimas96.github.io/r/amazon-appstore" class="boto botoAmazon tema-amazon-apps p-2 pb-1" appMostrarAmbAnimacio>
+            <a [href]="getAmazonLink_apps()" class="boto botoAmazon tema-amazon-apps p-2 pb-1" appMostrarAmbAnimacio>
                 <img src="assets/icons/amazon-appstore.png" alt="Amazon Appstore" class="logo">
             </a>
         </div>
         @if (!m.esAndroid()) {
             <div class="div-qr-i-text tema-amazon-apps col-6 col-sm-6" appMostrarAmbAnimacio>
-                <qrcode qrdata="https://jordimas96.github.io/r/amazon-appstore" [errorCorrectionLevel]="'M'"
+                <qrcode [qrdata]="getAmazonLink_apps()" [errorCorrectionLevel]="'M'"
                     colorDark="#152939" colorLight="#b8f0ff" title="Amazon Appstore"></qrcode>
 
                 <div class="scan-here">

@@ -56,7 +56,6 @@ body {
     .skills {
         display: flex;
         flex-wrap: wrap;
-        justify-content: center;
         gap: 0.5rem;
     }
 }
@@ -130,7 +129,7 @@ body {
 	cursor: pointer;
 
     transform-origin: center;
-    transform: scale(1);
+
     transition: transform 0.1s, border-radius 0.3s;
 
     &:active {
@@ -319,6 +318,12 @@ img, .noselect {
 ///////////////////
 // MEDIA QUERIES //
 ///////////////////
+/// // Pantalla Mòbil //
+@media only screen and (max-width: 575px) {
+    .skills {
+        justify-content: center;
+    }
+}
 // Pantalla Tablet //
 @media only screen and (min-width: 576px) {
     .group {
@@ -328,9 +333,6 @@ img, .noselect {
         .subtitle {
             font-size: 1.75rem;
         }
-    }
-    .skills {
-        justify-content: flex-start;
     }
 }
 // Pantalla PC //
