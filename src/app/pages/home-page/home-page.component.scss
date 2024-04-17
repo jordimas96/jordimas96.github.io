@@ -2,11 +2,10 @@
 
 // opacity: primary (87%), secondary (60%), tertiary (38%) //
 
-.group#bio {
+.bio {
     .div-text {
         align-self: center;
     }
-
     .div-foto {
         overflow: hidden;
         border-radius: 2rem;
@@ -17,29 +16,16 @@
             height: 100%;
             transform: scale(1.1);
             transform-origin: top;
-            
         }
-        
     }
     .linies {
         text-align: right;
-        & * {
-            // transition: font-size 0.3s;
-        }
-
-        .bondia {
-            color: var(--text-60);
-        }
+        .bondia { }
         .nom {
             color: var(--color-6);
-            .emdic {
-                color: var(--text-70);
-            }
+            .emdic { }
         }
-        .programador {
-            color: var(--text-70);
-            font-style: italic;
-        }
+        .programador { }
     }
     .bio {
         display: flex;
@@ -52,7 +38,6 @@
             font-weight: bold;
             display: inline-block;
         }
-        
         .boto {
             padding: 0.9rem 1.1rem;
             padding-left: 1.3rem !important;
@@ -68,13 +53,10 @@
 
 
 .llenguatges {
-    .subtitle {
-        text-align: center;
-    }
+    text-align: center;
+
     .titol-tipus-llenguatge {
         font-size: 1.4rem;
-        color: var(--text-80);
-        text-align: center;
     }
     .skills {
         justify-content: center;
@@ -99,10 +81,6 @@
         }
     }
 }
-
-// div#llenguatges * {
-//     transition: all 0.3s !important;
-// }
 
 
 // Tooltip //

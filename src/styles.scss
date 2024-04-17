@@ -225,6 +225,16 @@ video {
 .flex-11 { flex: 11; }
 .flex-12 { flex: 12; }
 
+.text-10 { color: var(--text-10); }
+.text-20 { color: var(--text-20); }
+.text-30 { color: var(--text-30); }
+.text-40 { color: var(--text-40); }
+.text-50 { color: var(--text-50); }
+.text-60 { color: var(--text-60); }
+.text-70 { color: var(--text-70); }
+.text-80 { color: var(--text-80); }
+.text-90 { color: var(--text-90); }
+
 html.light .inv-dark { filter: invert(1); }
 html.dark .inv-dark-2 { filter: invert(1); }
 

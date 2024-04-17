@@ -1,7 +1,7 @@
 <div class="content" [style.margin-top.px]="m.u.getAlturaAppbar()">
     <!-- <div class="content-title h1 mt-0 mb-4">Jordi Mas Parramon</div> -->
 
-    <div class="group mt-5 mb-6" id="bio" appMostrarAmbAnimacio>
+    <div class="group bio mt-5 mb-6" id="bio" appMostrarAmbAnimacio>
         <div class="row no-gutters">
             <div class="col-5 col-sm-4 p-3 p-sm-4" appMostrarAmbAnimacio>
                 <div class="div-foto shadow-2-l">
@@ -12,9 +12,9 @@
             <div class="div-text col-7 col-sm-8 px-sm-4 pt-sm-4" appMostrarAmbAnimacio>
 
                 <div class="linies">
-                    <div class="bondia mb-2">{{getSalutacioSegonsHora()}}</div>
+                    <div class="bondia text-60 mb-2">{{getSalutacioSegonsHora()}}</div>
                     <div class="nom">
-                        <span class="emdic">
+                        <span class="emdic text-70">
                             @if (m.ca) { Em dic }
                             @if (m.es) { Me llamo }
                             @if (m.en) { My name is }
@@ -22,7 +22,7 @@
                         @if (m.esPantallaMobil()) { <br> }
                         Jordi Mas Parramon
                     </div>
-                    <div class="programador">
+                    <div class="programador text-70 font-italic">
                         -
                         @if (m.ca) { Programador frontend }
                         @if (m.es) { Programador frontend }
@@ -188,7 +188,7 @@
             </div>
 
             <div class="col-12 col-sm-6 skills-ocultes" style="display:none;">
-                <div class="titol-tipus-llenguatge mb-2 mt-5">
+                <div class="titol-tipus-llenguatge text-80 mb-2 mt-5">
                     @if (m.ca) { Eines de virtualització i SO }
                     @if (m.es) { Herramientas de virtualización y SO }
                     @if (m.en) { Virtualization tools and OS }
