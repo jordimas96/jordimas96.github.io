@@ -1,4 +1,4 @@
-<select class="select-idioma" [(ngModel)]="m.idioma" id="idioma" title="Language" (change)="onIdiomaCanviat()">
+<select class="select-idioma" [value]="m.idioma" id="idioma" title="Language" (change)="idiomaCanviat($event.target)">
     @if (!m.es) {
         <option value="ca">Català</option>
         <option value="es">Español</option>

@@ -18,19 +18,10 @@
             transform-origin: top;
         }
     }
-    .linies {
-        text-align: right;
-        .bondia { }
-        .nom {
-            color: var(--color-6);
-            .emdic { }
-        }
-        .programador { }
+    .nom {
+        color: var(--color-6);
     }
     .bio {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
 
         .tempsExp {
             cursor: pointer;

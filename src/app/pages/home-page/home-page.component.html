@@ -11,7 +11,7 @@
             </div>
             <div class="div-text col-7 col-sm-8 px-sm-4 pt-sm-4" appMostrarAmbAnimacio>
 
-                <div class="linies">
+                <div class="text-right">
                     <div class="bondia text-60 mb-2">{{getSalutacioSegonsHora()}}</div>
                     <div class="nom">
                         <span class="emdic text-70">
@@ -32,7 +32,7 @@
                 </div>
                 <!-- Recipient bio pc -->
                 @if (m.esPantallaPc()) {
-                    <div class="text bio mt-4">
+                    <div class="bio text-center text-80 mt-4">
                         <div *ngTemplateOutlet="bio"></div>
                     </div>
                 }
@@ -41,35 +41,41 @@
         </div>
         <!-- Recipient bio mobil -->
         @if (m.esPantallaMobil()) {
-            <div class="text bio mt-4">
+            <div class="bio text-center text-80 mt-4">
                 <div *ngTemplateOutlet="bio"></div>
             </div>
         }
         <!-- Template bio -->
         <ng-template #bio>
-            <span>
+            <div class="text-justify">
                 @if (m.ca) {
-                    Sóc un apassionat programador especialitzat en frontend, amb
+                    Sóc un apassionat programador especialitzat en frontend i UI/UX, amb
                     <span class="tempsExp tooltipExp">{{anysExp}} anys d'experiència<div>{{getTextExp()}}</div></span>
-                    en Angular, CSS, Javascript, jQuery, Python i C#, entre altres. Els meus esforços se centren en l'ús del meu enginy per a la creació d'interfícies d'usuari atractives, intuïtives i personalitzades per proporcionar una experiència d'usuari agradable.
+                    en Angular, CSS, Javascript, jQuery, Python i C#, entre altres. També he participat en fullstack, backend i Android quan ha sigut necessari.
                     <br><br>
-                    En aquesta web, trobaràs detalls sobre la meva experiència, habilitats i projectes destacats, així com la meva informació de contacte perquè puguem conversar sobre diferents maneres d'ajudar-te amb projectes futurs.
+                    Els meus esforços se centren en la creació d'interfícies d'usuari atractives, intuïtives, ergonòmiques i personalitzades per a proporcionar una experiència d'usuari tan agradable com sigui possible.
+                    <br><br>
+                    En aquesta web trobaràs detalls sobre la meva experiència, habilitats i projectes destacats, així com la meva informació de contacte perquè puguem conversar sobre diferents maneres d'ajudar-te amb projectes futurs, ja sigui en desenvolupament frontend, disseny UI/UX o qualsevol altra tasca relacionada.
                 }
                 @if (m.es) {
-                    Soy un apasionado programador especializado en frontend, con
+                    Soy un apasionado programador especializado en frontend y UI/UX, con
                     <span class="tempsExp tooltipExp">{{anysExp}} años de experiencia<div>{{getTextExp()}}</div></span>
-                    en Angular, CSS, Javascript, jQuery, Python y C#, entre otros. Mis esfuerzos se centran en el uso de mi ingenio para la creación de interfaces de usuario atractivas, intuitivas y personalizadas para proporcionar una experiencia de usuario agradable.
+                    en Angular, CSS, Javascript, jQuery, Python y C#, entre otros. También he participado en fullstack, backend y Android cuando ha sido necesario.
                     <br><br>
-                    En esta web, encontrarás detalles sobre mi experiencia, habilidades y proyectos destacados, así como mi información de contacto para que podamos conversar sobre diferentes formas de ayudarte con proyectos futuros.
+                    Mis esfuerzos se centran en la creación de interfaces de usuario atractivas, intuitivas, ergonómicas y personalizadas para proporcionar una experiencia de usuario lo más agradable posible.
+                    <br><br>
+                    En esta web encontrarás detalles sobre mi experiencia, habilidades y proyectos destacados, así como mi información de contacto para que podamos conversar sobre diferentes formas de ayudarte con proyectos futuros, ya sea desarrollo frontend, diseño UI/UX o cualquier otra tarea relacionada.
                 }
                 @if (m.en) {
-                    I am a passionate programmer specialized in frontend, with
+                    I am a passionate programmer specialized in frontend and UI/UX, with
                     <span class="tempsExp tooltipExp">{{anysExp}} years of experience<div>{{getTextExp()}}</div></span>
-                    working with Angular, CSS, Javascript, jQuery, Python and C#, among others. My efforts focus on using my ingenuity to creating attractive, intuitive and personalized user interfaces to provide them with a pleasant user experience.
+                    working with Angular, CSS, Javascript, jQuery, Python and C#, among others. I have also participated in fullstack, backend and Android when necessary.
                     <br><br>
-                    On this site, you will find details about my past experience, skills, and featured projects, as well as my contact information so we can discuss about different ways on helping you and your business with future projects.
+                    My efforts focus on creating attractive, intuitive, ergonomic and personalized user interfaces to provide the most pleasant user experience possible.
+                    <br><br>
+                    On this website you will find details about my past experience, skills and featured projects, as well as my contact information so we can discuss different ways on helping you and your business with future projects, whether it is frontend development, UI/UX design or any other related task.
                 }
-            </span>
+            </div>
             <a [href]="getRutaCV()" class="boto mt-4 pl-3" appMostrarAmbAnimacio>
                 @if (m.ca) { Obrir CV }
                 @if (m.es) { Abrir CV }

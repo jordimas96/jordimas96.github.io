@@ -19,17 +19,6 @@ export class SelectorIdiomaComponent {
         this.establirIdiomaDefecte();
     }
 
-
-    idiomaCanviat() {
-        this.m.idiomaIndex = ["ca", "es", "en"].indexOf(this.m.idioma);
-        this.m.conjuncio = ["i", "y", "and"][this.m.idiomaIndex];
-
-        this.m.ca = this.m.idioma == "ca";
-        this.m.es = this.m.idioma == "es";
-        this.m.en = this.m.idioma == "en";
-    }
-
-
     establirIdiomaDefecte() {
         // Detectar idioma i guardar-lo //
         this.m.idioma = Utils.getCookie("lang") || navigator.language.split("-")[0];
@@ -40,10 +29,20 @@ export class SelectorIdiomaComponent {
         
         this.idiomaCanviat();
     }
-    onIdiomaCanviat() {
+
+    idiomaCanviat(target?) {
+        // Variables MainService //
+        if (target) this.m.idioma = target.value;
+        this.m.idiomaIndex = ["ca", "es", "en"].indexOf(this.m.idioma);
+        this.m.conjuncio = ["i", "y", "and"][this.m.idiomaIndex];
+
+        this.m.ca = this.m.idioma == "ca";
+        this.m.es = this.m.idioma == "es";
+        this.m.en = this.m.idioma == "en";
+
+
         document.documentElement.lang = this.m.idioma;
         Utils.setCookieDays("lang", this.m.idioma);
-        this.idiomaCanviat();
     }
 
 }
