@@ -42,7 +42,7 @@
 
 
 // Afegim filtre forçat per a que es vegi bé l'icona en mode clar //
-.light :host .subtitle .title-icon {
+.light :host .group-title .title-icon {
     filter: brightness(0.7) saturate(2);
 }
 

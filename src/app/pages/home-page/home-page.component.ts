@@ -108,7 +108,7 @@ export class HomePageComponent extends PageComponent {
     }
 
     obrirVeureMesSkills() {
-        $(".seccioBotoVeureMes").slideUp();
+        $("#divBotoVeureMes").slideUp();
         $(".skills-ocultes").slideDown();
     }
 

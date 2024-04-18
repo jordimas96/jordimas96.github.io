@@ -4,7 +4,7 @@
 
 
 .group {
-    .subtitle {
+    .group-title {
         display: flex;
         align-items: center;
         justify-content: space-between;
@@ -38,7 +38,7 @@
 // Pantalla Mòbil //
 @media only screen and (max-width: 575px) {
     .group {
-        .subtitle {
+        .group-title {
             .link-boto-titol {
                 padding: 0.5rem 1rem;
                 margin: -0.5rem;

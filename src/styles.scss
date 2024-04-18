@@ -48,9 +48,8 @@ body {
     max-width: 940px;
     margin: auto;
     font-size: 1.1rem;
-    // margin-bottom: 1000px;
 
-    .title-skills {
+    .skills-title {
         font-size: 1.25rem;
     }
     .skills {
@@ -68,9 +67,8 @@ body {
     padding: 1rem;
     border-radius: 2rem;
 
-    .subtitle {
-        color: var(--text);
-        font-size: 1.4rem;
+    .group-title {
+        font-size: 1.75rem;
     }
     .text {
         color: var(--text-80);
@@ -330,6 +328,11 @@ img, .noselect {
 ///////////////////
 /// // Pantalla Mòbil //
 @media only screen and (max-width: 575px) {
+    .group {
+        .group-title {
+            font-size: 1.4rem;
+        }
+    }
     .skills {
         justify-content: center;
     }
@@ -339,10 +342,6 @@ img, .noselect {
     .group {
         padding: 1.3rem 2rem 2rem;
         border-radius: 2.5rem;
-
-        .subtitle {
-            font-size: 1.75rem;
-        }
     }
 }
 // Pantalla PC //
