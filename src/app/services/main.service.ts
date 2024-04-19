@@ -63,7 +63,9 @@ export class MainService {
     public esPantallaMobil() { return this.appbar.width < 576; }
     public esPantallaPc() { return !this.esPantallaMobil(); }
     public esAndroid() { return /Android/i.test(navigator.userAgent); }
+    public esIOS() { return /iPad|iPhone|iPod/.test(navigator.userAgent); }
     public esSamsung() { return /SAMSUNG|SGH-[I|N|T]|GT-[I|P|N]|SM-[N|P|T|Z|G]|SHV-E|SCH-[I|J|R|S]|SPH-L/i.test(navigator.userAgent); }
+    public esXiaomi() { return /XiaoMi\/MiuiBrowser/i.test(navigator.userAgent); }
     public esPantallaTactil() { return (('ontouchstart' in window) || (navigator.maxTouchPoints > 0) || (navigator.maxTouchPoints > 0)); }
 
     public printarFirmaAConsola() {
