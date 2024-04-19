@@ -7,7 +7,6 @@
     justify-content: center;
     background-color: var(--fons-50);
     border-radius: 1.25rem; //1rem
-    width: fit-content;
     padding: 0.2rem;
     z-index: 0;
     transition: padding 0.3s;
@@ -47,6 +46,13 @@
 
 
 
+
+
+
+
+
+// Pantalla Mòbil //
+@media only screen and (max-width: 575px) { }
 // Pantalla Tablet //
 @media only screen and (min-width: 576px) {
     .contenidor {
@@ -60,8 +66,7 @@
     .contenidor {
         button {
             font-size: 1.3rem;
-            padding-left: 1.5rem !important;
-            padding-right: 1.5rem !important;
+            padding: 0.125rem 1.5rem !important;
         }
     }
 }
@@ -69,10 +74,10 @@
 // Pantalla Molt Gran //
 @media only screen and (min-width: 992px) {
     .contenidor {
+        width: fit-content;
         button {
             font-size: 1.5rem;
-            padding-left: 3rem !important;
-            padding-right: 3rem !important;
+            padding: 0.125rem 3rem !important;
         }
     }
 }

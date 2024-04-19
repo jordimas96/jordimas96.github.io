@@ -3,6 +3,8 @@
 @import "./variables.scss";
 @import "./app/directives/mostrar-amb-animacio.styles.scss";
 @import "./squircle.scss";
+@import "./extra-styles/spacing.scss";
+@import "./extra-styles/sizing.scss";
 
 // Per aplicar un estil saltant-se l'encapsulació d'Angular //
 // :host ::ng-deep
@@ -185,44 +187,6 @@ video {
 .rounded-3 { border-radius: 1rem !important; }
 .rounded-4 { border-radius: 2rem !important; }
 
-// .gap-0   { gap: 0rem !important; }
-.gap-0_5 { gap: 0.125rem !important; }
-// .gap-1   { gap: 0.25rem !important; }
-.gap-1_5 { gap: 0.375rem !important; }
-// .gap-2   { gap: 0.5rem !important; }
-.gap-2_5 { gap: 0.75rem !important; }
-// .gap-3   { gap: 1rem !important; }
-.gap-3_5 { gap: 1.25rem !important; }
-// .gap-4   { gap: 1.5rem !important; }
-.gap-4_5 { gap: 2.25rem !important; }
-// .gap-5   { gap: 3rem !important; }
-
-.m-6 { margin: 4rem; }
-.mt-6 { margin-top: 4rem; }
-.mr-6 { margin-right: 4rem; }
-.mb-6 { margin-bottom: 4rem; }
-.ml-6 { margin-left: 4rem; }
-
-.m-n1 { margin: -0.25rem !important; }
-.m-n2 { margin: -0.5rem !important; }
-.m-n3 { margin: -1rem !important; }
-.m-n4 { margin: -1.5rem !important; }
-.m-n5 { margin: -3rem !important; }
-.m-n6 { margin: -4rem !important; }
-
-.flex-1  { flex: 1; }
-.flex-2  { flex: 2; }
-.flex-3  { flex: 3; }
-.flex-4  { flex: 4; }
-.flex-5  { flex: 5; }
-.flex-6  { flex: 6; }
-.flex-7  { flex: 7; }
-.flex-8  { flex: 8; }
-.flex-9  { flex: 9; }
-.flex-10 { flex: 10; }
-.flex-11 { flex: 11; }
-.flex-12 { flex: 12; }
-
 .text-10 { color: var(--text-10); }
 .text-20 { color: var(--text-20); }
 .text-30 { color: var(--text-30); }
@@ -326,7 +290,7 @@ img, .noselect {
 ///////////////////
 // MEDIA QUERIES //
 ///////////////////
-/// // Pantalla Mòbil //
+// Pantalla Mòbil //
 @media only screen and (max-width: 575px) {
     .group {
         .group-title {
