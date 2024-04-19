@@ -2,7 +2,12 @@
     <button class="boto-desplegable no-style" (click)="toggleSeccio($event.currentTarget)">
         <div class="text-i-icona">
             <img src="assets/icons/mad-jumpgate.png" class="icona">
-            <span class="titol">Mad Jumpgate</span>
+            <span class="titol">
+                Mad Jumpgate -
+                @if(m.ca) { Jugar aquí }
+                @if(m.es) { Jugar aquí }
+                @if(m.en) { Play here }
+            </span>
         </div>
         <i class="fa-solid fa-chevron-down fletxa"></i>
     </button>
