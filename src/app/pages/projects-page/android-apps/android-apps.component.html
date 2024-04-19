@@ -5,7 +5,7 @@
         @if (m.en) { Android Apps }
         <a href="https://www.android.com/" class="link-img"><img src="assets/icons/android.png" alt="Android" class="title-icon py-1"></a>
     </div>
-    <p class="text mb-4">
+    <div class="text mb-4">
         @if (m.ca) {
             Quan tinc temps lliure, m'agrada desenvolupar aplicacions per a Android i jocs per a la Play Store, ja sigui en Android Studio com en Unity. Per fer-ho, utilitzo majoritàriament Java, Kotlin i C#.<br>
             Sempre m'he esforçat a seguir les directrius de <a href="https://m2.material.io/">Material Design</a> en Android, però des d'Android 12 i la introducció de la tercera versió de Material Design, anomenada <a href="https://m3.material.io/">Material You</a>, he començat a dissenyar les interfícies seguint aquest nou estil, que ofereix una estètica moderna i agradable d'utilitzar. Seguint aquesta línia, a l'hora de triar el tema, utilitzo els <a href="https://developer.android.com/develop/ui/views/theming/dynamic-colors">colors dinàmics de Monet</a>, que ofereixen opcions de personalització segons el fons de pantalla. D'aquesta manera es poden generar interfícies amb combinacions de colors úniques per a cada usuari.<br><br>
@@ -24,23 +24,10 @@
         <app-detalls-android-apps/>
         <br>
 
-        @if (m.ca) {
-            Les meves aplicacions estan disponibles a diferents botigues d'aplicacions:
-        }
-        
-        @if (m.es) {
-            Mis aplicaciones están disponibles en diferentes tiendas de aplicaciones:
-        }
-        
-        @if (m.en) {
-            My apps are available on different app markets:
-        }
-    </p>
-    <!-- <a href="https://jordimas96.github.io/pages/play-store/play-store.html">
-        @if (m.ca) { Les meves apps a Google Play }
-        @if (m.es) { Mis apps en Google Play }
-        @if (m.en) { My apps in Google Play }
-    </a> -->
+        @if (m.ca) { Les meves aplicacions estan disponibles a diferents botigues: }
+        @if (m.es) { Mis aplicaciones están disponibles en diferentes tiendas: }
+        @if (m.en) { My apps are available on different markets: }
+    </div>
     <div class="boto-i-qr row no-gutters mb-4">
         <div class="col-6">
             <a href="/pages/play-store/play-store.html" class="boto botoAmbIcona" appMostrarAmbAnimacio>

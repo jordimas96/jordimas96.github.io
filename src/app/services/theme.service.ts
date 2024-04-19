@@ -25,7 +25,7 @@ export class ThemeService {
     setTemaSegonsHora(horaActual = new Date().getHours()) {
         if (Utils.hasCookie("forçartema")) { this.tema = Utils.getCookie("forçartema"); return; }
 
-        // this.tema = "mati"; return;
+        // this.tema = "matinada"; return;
 
         // Colors: matinada, matí, tarda, vespre, nit //
         const primeraHoraNit = 1;

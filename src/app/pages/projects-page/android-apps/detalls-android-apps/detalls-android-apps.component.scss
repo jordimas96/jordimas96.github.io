@@ -120,31 +120,34 @@
 
 // Pantalla Mòbil o tablet petita //
 @media only screen and (max-width: 768px) {
-    .wallpaper-blurrer,
-    .text-mimicker,
-    .breaking-ball {
-
+    .text-mimicker {
         .contingut {
             flex-direction: column;
             .video {
                 video {
+                    max-width: 100%;
                     margin: auto;
                 }
             }
         }
     }
-    .wallpaper-blurrer .contingut .video video {
-        max-width: 75%;
-    }
-    .text-mimicker .contingut .video video {
-        max-width: 100%;
-    }
-    .breaking-ball .contingut .video video {
-        max-width: 75%;
-    }
 }
 // Pantalla Mòbil //
 @media only screen and (max-width: 575px) {
+    .wallpaper-blurrer,
+    .breaking-ball {
+        .contingut {
+            flex-direction: column;
+            .video {
+                video {
+                    max-width: 75%;
+                    margin: auto;
+                }
+            }
+        }
+    }
+
+    
     .iconesStores {
         justify-content: center;
     }
