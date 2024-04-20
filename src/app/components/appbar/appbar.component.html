@@ -1,7 +1,7 @@
 <div class="appbar v" [ngClass]="{'shadow-3':m.scroll>0&&!m.ts.modeFosc, 'scrolled':m.scroll>0}" appMostrarAmbAnimacio>
     
-    <button class="botoObrirSidebar botoText" (mouseover)="m.sidebar.obrir()" (click)="m.sidebar.obrir()">
-        <i class="fa-solid fa-bars"></i>
+    <button class="botoSidebar botoText" (click)="m.sidebar.obrir()" (mouseover)="m.sidebar.obrir()">
+        <i class="fa-solid fa-bars d-block"></i>
     </button>
     
     <app-navegacio-tab class="w-100 w-lg-auto" />

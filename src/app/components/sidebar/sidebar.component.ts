@@ -27,11 +27,14 @@ export class SidebarComponent {
 
 
     obrir() {
+        // Get the middle point of scroll, for the transform-origin of the .content element //
+        const scroll = (document.documentElement.scrollTop + document.documentElement.clientHeight / 2) / document.documentElement.scrollHeight * 100;
+
         this.open = true;
-        // $(".content").css({ "transform": "translateX(200px)" });
+        $(".content").css({"transform-origin":`100% ${scroll}%`, "transform": "scale(0.95)" });
     }
     tancar() {
         this.open = false;
-        // $(".content").css({ "transform": "translateX(0)" });
+        $(".content").css({ "transform": "scale(1)" });
     }
 }
