@@ -1,15 +1,15 @@
 import { Component, ElementRef } from '@angular/core';
 import { ProviderService } from 'src/app/services/provider.service';
 import { CardComponent } from '../../../components/card/card.component';
-import { MainService } from './../../../services/main.service';
+import { MainService } from '../../../services/main.service';
 import { Utils } from 'src/app/shared/utils';
 
 @Component({
-    selector: 'app-other-projects',
-    templateUrl: './other-projects.component.html',
-    styleUrls: ['./other-projects.component.scss', '../projects-page.scss', '../../../components/card/card.scss']
+    selector: 'app-github-projects',
+    templateUrl: './github-projects.component.html',
+    styleUrls: ['./github-projects.component.scss', '../projects-page.scss', '../../../components/card/card.scss']
 })
-export class OtherProjectsComponent extends CardComponent {
+export class GithubProjectsComponent extends CardComponent {
 
     public readonly USE_CACHE = true;
 

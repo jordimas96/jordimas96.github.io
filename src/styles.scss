@@ -115,6 +115,7 @@ body {
 .botoText {
     background-color: transparent;
     color: var(--text);
+    padding: 0;
     border: none;
 }
 
@@ -131,10 +132,10 @@ body {
 
     transform-origin: center;
 
-    transition: transform 0.1s, border-radius 0.3s;
+    transition: transform 0.1s, border-radius 0.3s, color 0.3s;
 
     &:active {
-        transform: scale(0.9);
+        transform: scale(0.9) !important;
     }
     &:disabled {
 		pointer-events: none;

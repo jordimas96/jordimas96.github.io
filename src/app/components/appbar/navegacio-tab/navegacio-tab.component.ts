@@ -51,7 +51,10 @@ export class NavegacioTabComponent {
 
     actPosPill(animacio) {
         if (!this.botoSeleccionat) this.botoSeleccionat = document.querySelector("button.selected");
-        if (!this.botoSeleccionat) return;
+        if (!this.botoSeleccionat) {
+            $(this.pill.nativeElement).css({ top: 0, left: 0, width: 0, height: 0 });
+            return;
+        }
         
         let rect = this.botoSeleccionat.getBoundingClientRect();
         let rectComp = this.elementRef.nativeElement.getBoundingClientRect();

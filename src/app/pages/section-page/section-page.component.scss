@@ -1,0 +1,79 @@
+@import "src/styles.scss";
+
+
+// ::ng-deep app-appbar app-navegacio-tab .contenidor button {
+//     background-color: var(--text) !important;
+//     color: var(--fons) !important;
+// }
+
+.botoBack {
+    font-size: 1.5rem;
+    color: var(--color-7);
+}
+
+
+
+.sectionList {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.5rem;
+
+    button {
+        color: var(--text);
+        background-color: var(--fons-50);
+        backdrop-filter: blur(40px);
+        padding: 1rem 2rem;
+        font-size: 1.7rem;
+        border-radius: 1.5rem;
+    }
+}
+
+
+
+// Pantalla Mòbil //
+@media only screen and (max-width: 575px) {
+    .sectionList {
+        button {
+            padding: 0.5rem 1rem;
+            font-size: 1.3rem;
+            border-radius: 1rem;
+        }
+    }
+}
+// Pantalla Tablet //
+@media only screen and (min-width: 576px) { }
+// Pantalla PC //
+@media only screen and (min-width: 768px) { }
+// Pantalla Molt Gran //
+@media only screen and (min-width: 992px) { }
+
+// PC //
+@media (pointer: fine) {
+    .botoBack {
+
+        &:hover {
+
+            i {
+                transform: translateX(-0.25rem);
+            }
+        }
+        i {
+            transition: transform 0.3s;
+        }
+    }
+    .sectionList {
+        button {
+            transition: transform 0.3s;
+
+            &:hover {
+                transform: scale(1.1);
+                z-index: 1;
+            }
+        }
+    }
+    ::ng-deep .dark .botoBack:hover { color: var(--color-l-5); }
+    // ::ng-deep .light .botoBack:hover { color: var(--color-l-3); }
+}
+// Mòbil //
+@media (pointer: coarse) { }

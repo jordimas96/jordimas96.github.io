@@ -235,14 +235,14 @@
     --color-fosc-hsl-vals: 147, 100%, 8%;
     --color-clar-hsl-vals: 147, 100%, 86%;
     --color-l-0: hsl(147, 100%, 8%);
-    --color-l-1: hsl(147, 100%, 17%);
-    --color-l-2: hsl(147, 100%, 25%);
-    --color-l-3: hsl(147, 100%, 34%);
-    --color-l-4: hsl(147, 100%, 43%);
-    --color-l-5: hsl(147, 100%, 51%);
+    --color-l-1: hsl(147, 100%, 15%);
+    --color-l-2: hsl(147, 100%, 23%);
+    --color-l-3: hsl(147, 100%, 30%);
+    --color-l-4: hsl(147, 100%, 37%);
+    --color-l-5: hsl(147, 100%, 45%);
     --color-l-6: hsl(147, 100%, 60%);
-    --color-l-7: hsl(147, 100%, 69%);
-    --color-l-8: hsl(147, 100%, 77%);
+    --color-l-7: hsl(147, 100%, 72%);
+    --color-l-8: hsl(147, 100%, 80%);
     --color-l-9: hsl(147, 100%, 86%);
 }
 .dark  :host .tema-android { background-color: hsla(147, 100%, 14%, 0.5); --link: var(--color-l-5); }
@@ -254,14 +254,14 @@
     --color-fosc-hsl-vals: 60, 100%, 7%;
     --color-clar-hsl-vals: 60, 100%, 91%;
     --color-l-0: hsl(60, 100%, 7%);
-    --color-l-1: hsl(60, 100%, 14%);
-    --color-l-2: hsl(60, 100%, 19%);
-    --color-l-3: hsl(60, 100%, 28%);
+    --color-l-1: hsl(60, 100%, 12%);
+    --color-l-2: hsl(60, 100%, 18%);
+    --color-l-3: hsl(60, 100%, 26%);
     --color-l-4: hsl(60, 100%, 35%);
     --color-l-5: hsl(60, 100%, 44%);
     --color-l-6: hsl(60, 100%, 58%);
-    --color-l-7: hsl(60, 100%, 65%);
-    --color-l-8: hsl(60, 100%, 72%);
+    --color-l-7: hsl(60, 100%, 75%);
+    --color-l-8: hsl(60, 100%, 83%);
     --color-l-9: hsl(60, 100%, 91%);
 }
 .dark  :host .tema-mad-jumpgate { background-color: hsla(60, 100%, 21%, 0.5); --link: var(--color-l-7); }
@@ -477,6 +477,25 @@
 .dark  :host .tema-matic { background-color: hsla(356, 100%, 15%, 0.5); --link: var(--color-l-7); }
 .light :host .tema-matic { background-color: hsla(356, 100%, 72%, 0.5); --link: var(--color-l-2); }
 
+.tema-indra {
+    --color-fosc-hsl-vals-test: hsl(193, 100%, 8%);
+    --color-clar-hsl-vals-test: hsl(193, 100%, 86%);
+    --color-fosc-hsl-vals: 193, 100%, 8%;
+    --color-clar-hsl-vals: 193, 100%, 86%;
+    --color-l-0: hsl(193, 100%, 8%);
+    --color-l-1: hsl(193, 100%, 17%);
+    --color-l-2: hsl(193, 100%, 25%);
+    --color-l-3: hsl(193, 100%, 34%);
+    --color-l-4: hsl(193, 100%, 43%);
+    --color-l-5: hsl(193, 100%, 51%);
+    --color-l-6: hsl(193, 100%, 60%);
+    --color-l-7: hsl(193, 100%, 69%);
+    --color-l-8: hsl(193, 100%, 77%);
+    --color-l-9: hsl(193, 100%, 86%);
+}
+.dark  :host .tema-indra { background-color: hsla(193, 100%, 16%, 0.5); --link: var(--color-l-6); }
+.light :host .tema-indra { background-color: hsla(193, 100%, 62%, 0.5); --link: var(--color-l-3); }
+
 .tema-nexxia {
     --color-fosc-hsl-vals-test: hsl(45, 100%, 7%);
     --color-clar-hsl-vals-test: hsl(46, 100%, 91%);
@@ -485,12 +504,12 @@
     --color-l-0: hsl(46, 100%, 7%);
     --color-l-1: hsl(46, 100%, 14%);
     --color-l-2: hsl(46, 100%, 19%);
-    --color-l-3: hsl(46, 100%, 28%);
+    --color-l-3: hsl(46, 100%, 25%);
     --color-l-4: hsl(46, 100%, 35%);
     --color-l-5: hsl(46, 100%, 44%);
     --color-l-6: hsl(46, 100%, 58%);
-    --color-l-7: hsl(46, 100%, 65%);
-    --color-l-8: hsl(46, 100%, 72%);
+    --color-l-7: hsl(46, 100%, 70%);
+    --color-l-8: hsl(46, 100%, 80%);
     --color-l-9: hsl(46, 100%, 91%);
 }
 .dark  :host .tema-nexxia { background-color: hsla(46, 100%, 21%, 0.5); --link: var(--color-l-6); }
