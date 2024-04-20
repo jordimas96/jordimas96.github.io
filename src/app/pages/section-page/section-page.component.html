@@ -1,0 +1,64 @@
+<div class="content" [style.margin-top.px]="m.u.getAlturaAppbar()">
+    <!-- <div class="content-title h1 mb-5" appMostrarAmbAnimacio>
+        @if (m.ca) { Secció }
+        @if (m.es) { Sección }
+        @if (m.en) { Section }
+    </div> -->
+
+    @if(m.esPantallaPc()) { <div class="pt-5"></div> }
+
+
+
+    @switch (section) {
+        @case ("android")      { <app-android-apps />       }
+        @case ("mad-jumpgate") { <app-mad-jumpgate />       }
+        @case ("github")       { <app-other-projects />     }
+        @case ("custom-roms")  { <app-custom-roms />        }
+        @case ("tasker")       { <app-tasker />             }
+        @case ("icons")        { <app-icons />              }
+        @case ("amazfit")      { <app-amazfit-watchfaces /> }
+        @case ("evora")        { <app-evora />              }
+        @case ("orange")       { <app-orange />             }
+        @case ("in2art")       { <app-in2art />             }
+        @case ("matic")        { <app-matic />              }
+        @case ("indra")        { <app-indra />              }
+        @case ("nexxia")       { <app-nexxia />             }
+        @default {
+            <h2 class="text-center my-5">Invalid section name</h2>
+            <h2 class="text-center my-5"><a href="/" target="_self">Go home</a></h2>
+        }
+    }
+
+
+
+
+
+
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+
+
+    
+    
+    <!-- <div class="mb-6 text-center" appMostrarAmbAnimacio>
+        <button class="boto botoSeguentPagina m-auto" (click)="m.u.scroll(0);" [routerLink]="['/art']">
+            @if (m.ca) { Art }
+            @if (m.es) { Arte }
+            @if (m.en) { Art }
+            <i class="fa-solid fa-chevron-right mx-2"></i>
+        </button>
+    </div> -->
+
+</div>

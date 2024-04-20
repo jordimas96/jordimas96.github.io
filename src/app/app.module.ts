@@ -39,6 +39,7 @@ import { MadJumpgateComponent } from './pages/projects-page/mad-jumpgate/mad-jum
 import { OtherProjectsComponent } from './pages/projects-page/other-projects/other-projects.component';
 import { ProjectsPageComponent } from './pages/projects-page/projects-page.component';
 import { TaskerComponent } from './pages/projects-page/tasker/tasker.component';
+import { SectionPageComponent } from './pages/section-page/section-page.component';
 
 
 @NgModule({
@@ -60,6 +61,7 @@ import { TaskerComponent } from './pages/projects-page/tasker/tasker.component';
         ExperiencePageComponent,
         ProjectsPageComponent,
         ArtPageComponent,
+        SectionPageComponent,
 
         // Directives //
         MostrarAmbAnimacioDirective,

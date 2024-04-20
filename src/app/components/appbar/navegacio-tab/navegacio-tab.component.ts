@@ -51,6 +51,8 @@ export class NavegacioTabComponent {
 
     actPosPill(animacio) {
         if (!this.botoSeleccionat) this.botoSeleccionat = document.querySelector("button.selected");
+        if (!this.botoSeleccionat) return;
+        
         let rect = this.botoSeleccionat.getBoundingClientRect();
         let rectComp = this.elementRef.nativeElement.getBoundingClientRect();
 
