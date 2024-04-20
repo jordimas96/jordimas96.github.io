@@ -9,26 +9,36 @@ import { PageComponent } from '../page.component';
 export class SectionPageComponent extends PageComponent {
 
     public section: string;
+    public optionBack: number = 0;
     public urlGoBack: string = "";
 
     override async ngOnInit() {
         super.ngOnInit();
 
-        // this.section = location.pathname.split("/section/")[1];
         this.route.params.subscribe(params => {
             this.section = params['section'];
             
-            if ("android" || "mad-jumpgate" || "github" || "custom-roms" || "tasker")
-                this.urlGoBack = "projects";
-            else if ("icons" || "amazfit")
-                this.urlGoBack = "art";
-            else if ("evora" || "orange" || "in2art" || "matic" || "indra" || "nexxia")
-                this.urlGoBack = "experience";
+            if (["evora", "orange", "in2art", "matic", "indra", "nexxia"].includes(this.section))
+                this.optionBack = 1;
+            else if (["android", "mad-jumpgate", "github", "custom-roms", "tasker"].includes(this.section))
+                this.optionBack = 2;
+            else if (["icons", "amazfit"].includes(this.section))
+                this.optionBack = 3;
             
+            this.urlGoBack = "/" + ["", "experience", "projects", "art"][this.optionBack];
         });
     }
 
     override afterRootFadeIn() {
         super.afterRootFadeIn();
+    }
+
+    getNameGoBack() {
+        return [
+            ["Inici", "Inicio", "Home"],
+            ["Experiència", "Experiencia", "Experience"],
+            ["Projectes", "Proyectos", "Projects"],
+            ["Art", "Arte", "Art"],
+        ][this.optionBack][this.m.idiomaIndex];
     }
 }

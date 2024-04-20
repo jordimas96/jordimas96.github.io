@@ -7,11 +7,9 @@
 
     <!-- @if(m.esPantallaPc()) { <div class="pt-5"></div> } -->
 
-    <button [routerLink]="'/'+urlGoBack" class="botoBack botoText boing mt-3 mb-4 ml-4" appMostrarAmbAnimacio>
+    <button [routerLink]="urlGoBack" class="botoBack botoText boing mt-3 mb-4 ml-4" appMostrarAmbAnimacio>
         <i class="fa-solid fa-chevron-left mr-2"></i>
-        @if(m.ca) { Enrere }
-        @if(m.es) { Atrás }
-        @if(m.en) { Back }
+        {{ getNameGoBack() }}
     </button>
 
 
@@ -19,7 +17,7 @@
     @switch (section) {
         @case ("android")      { <app-android-apps />       }
         @case ("mad-jumpgate") { <app-mad-jumpgate />       }
-        @case ("github")       { <app-github-projects />     }
+        @case ("github")       { <app-github-projects />    }
         @case ("custom-roms")  { <app-custom-roms />        }
         @case ("tasker")       { <app-tasker />             }
         @case ("icons")        { <app-icons />              }
@@ -74,7 +72,7 @@
     
     
     <!-- <div class="mb-6 text-center" appMostrarAmbAnimacio>
-        <button class="boto botoSeguentPagina m-auto" (click)="m.u.scroll(0);" [routerLink]="['/art']">
+        <button class="boto botoSeguentPagina m-auto" (click)="m.u.scroll(0);" routerLink="/art">
             @if (m.ca) { Art }
             @if (m.es) { Arte }
             @if (m.en) { Art }
