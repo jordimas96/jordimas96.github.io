@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { MainService } from 'src/app/services/main.service';
+import { Utils } from '../shared/utils';
 
 @Component({
     template: '',
@@ -18,5 +19,13 @@ export class PageComponent {
     }
 
     afterRootFadeIn() { }
+
+    scrollTo(id) {
+        const element = document.getElementById(id);
+
+        if (element) {
+            window.scrollTo({ top: element.offsetTop - (Utils.getAlturaAppbar() + 40) });
+        }
+    }
 
 }

@@ -3,6 +3,8 @@ import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { provideAnimationsAsync } from '@angular/platform-browser/animations/async';
+import { DragDropModule } from '@angular/cdk/drag-drop';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { QRCodeModule } from 'angularx-qrcode';
 import { NgxMasonryModule } from 'ngx-masonry';
@@ -55,7 +57,7 @@ import { SectionPageComponent } from './pages/section-page/section-page.componen
         NavegacioTabComponent,
         SelectorIdiomaComponent,
         SkillComponent,
-    
+
         // Pages //
         HomePageComponent,
         ExperiencePageComponent,
@@ -95,11 +97,14 @@ import { SectionPageComponent } from './pages/section-page/section-page.componen
         FormsModule,
         GoogleAnalyticsModule,
         QRCodeModule,
+        DragDropModule,
         HttpClientModule,
         NgxMasonryModule,
         BrowserAnimationsModule,
     ],
-    providers: [],
+    providers: [
+        provideAnimationsAsync()
+    ],
     bootstrap: [AppComponent]
 })
 export class AppModule { }

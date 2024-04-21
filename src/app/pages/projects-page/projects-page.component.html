@@ -5,6 +5,14 @@
         @if (m.en) { Personal projects }
     </div>
 
+    <div class="index">
+        <button class="boto tema-android"      (click)="scrollTo('android')"      >Apps Android</button>
+        <button class="boto tema-mad-jumpgate" (click)="scrollTo('mad-jumpgate')" >Mad Jumpgate</button>
+        <button class="boto tema-github"       (click)="scrollTo('github')"       >GitHub Projects</button>
+        <button class="boto"                   (click)="scrollTo('custom-roms')"  >Custom ROMs</button>
+        <button class="boto tema-tasker"       (click)="scrollTo('tasker')"       >Tasker</button>
+    </div>
+
     <app-android-apps />
     <app-mad-jumpgate />
     <app-github-projects />
