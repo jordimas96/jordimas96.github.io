@@ -1,5 +1,5 @@
 @if(vistaMobil()) {
-    <div #index class="index mobil" [style.top.px]="m.appbar.height()">
+    <div #index class="index mobil" [style.top.px]="m.appbar.height()" (mousemove)="scrollOnHover($event)">
 
         @for (o of getOpcions(); track o.id) {
             @if(idExists(o.id)) {

@@ -28,7 +28,6 @@ export class IndexComponent {
     scrollTo(id: string) {
         const element = document.getElementById(id);
         let offset = this.m.appbar.height();
-console.log(this.index.nativeElement.offsetHeight);
 
         if (this.vistaMobil())
             offset += this.index.nativeElement.offsetHeight;
@@ -48,6 +47,15 @@ console.log(this.index.nativeElement.offsetHeight);
     public vistaMobil() {
         // return false;
         return window.innerWidth < 1300;
+    }
+
+    public scrollOnHover(event: MouseEvent) {
+        let i = this.index.nativeElement;
+        let pos = event.clientX / i.clientWidth;
+
+        pos = pos * 1.5 - 0.25;
+
+        i.scrollLeft = pos * (i.scrollWidth - i.clientWidth);
     }
 
     public getOpcions() {
