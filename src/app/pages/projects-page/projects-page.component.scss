@@ -1,61 +1,19 @@
-.index {
-    display: flex;
-    flex-wrap: nowrap;
-    justify-content: flex-start;
-    gap: 0.5rem;
-    margin: 0 -0.5rem 2rem;
-    padding: 0 0.5rem;
-    overflow-x: scroll;
-    &::-webkit-scrollbar { display: none; }
 
-    button {
-        color: var(--text);
-        background-color: var(--fons-50);
-        backdrop-filter: blur(40px);
-        padding: 1rem 2rem;
-        font-size: 1.7rem;
-        border-radius: 1.5rem;
-        flex-shrink: 0;
-    }
-}
 
 
 
 
 
 // Pantalla Mòbil //
-@media only screen and (max-width: 575px) {
-    .index {
-        button {
-            padding: 0.5rem 1rem;
-            font-size: 1.3rem;
-            border-radius: 1rem;
-        }
-    }
-}
+@media only screen and (max-width: 575px) { }
 // Pantalla Tablet //
-@media only screen and (min-width: 576px) {
-    .index {
-        display: none;
-    }
-}
+@media only screen and (min-width: 576px) { }
 // Pantalla PC //
 @media only screen and (min-width: 768px) { }
 // Pantalla Molt Gran //
 @media only screen and (min-width: 992px) { }
 
 // PC //
-@media (pointer: fine) {
-    .index {
-        button {
-            transition: transform 0.3s;
-
-            &:hover {
-                transform: scale(1.1);
-                z-index: 1;
-            }
-        }
-    }
-}
+@media (pointer: fine) { }
 // Mòbil //
 @media (pointer: coarse) { }

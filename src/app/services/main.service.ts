@@ -2,9 +2,10 @@ import { Injectable } from "@angular/core";
 import { ActivatedRoute, Router } from '@angular/router';
 import { GoogleAnalyticsService } from 'ngx-google-analytics';
 import { AppbarComponent } from "../components/appbar/appbar.component";
+import { IndexComponent } from "../components/index/index.component";
+import { SidebarComponent } from "../components/sidebar/sidebar.component";
 import { Utils } from "../shared/utils";
 import { ThemeService } from "./theme.service";
-import { SidebarComponent } from "../components/sidebar/sidebar.component";
 
 // https://developerslogblog.wordpress.com/2019/04/23/how-to-use-angular-services-to-share-data-between-components/ //
 
@@ -15,6 +16,7 @@ export class MainService {
     // Components //
     public appbar!: AppbarComponent;
     public sidebar: SidebarComponent;
+    public index: IndexComponent;
 
     // Services //
     public u;
@@ -23,6 +25,7 @@ export class MainService {
     public tempsDelayCarregaPag = 1000;
     public readonly debug = window.location.origin.includes("localhost") || window.location.origin.includes("192.168.1.");
     public scroll = window.pageYOffset;
+    public window = window;
 
     // Idiomes //
     public idioma: string = "en";
@@ -60,13 +63,14 @@ export class MainService {
     // public esPc() { return !this.esMobil() }
     public esMobil() { return this.esPantallaTactil() }
     public esPc() { return !this.esPantallaTactil() }
-    public esPantallaMobil() { return this.appbar.width < 576; }
+    public esPantallaMobil() { return window.innerWidth < 576; }
     public esPantallaPc() { return !this.esPantallaMobil(); }
     public esAndroid() { return /Android/i.test(navigator.userAgent); }
     public esIOS() { return /iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent); }
     public esSamsung() { return /SAMSUNG|SGH-[I|N|T]|GT-[I|P|N]|SM-[N|P|T|Z|G]|SHV-E|SCH-[I|J|R|S]|SPH-L/i.test(navigator.userAgent); }
     public esXiaomi() { return /XiaoMi\/MiuiBrowser/i.test(navigator.userAgent); }
     public esPantallaTactil() { return (('ontouchstart' in window) || (navigator.maxTouchPoints > 0) || (navigator.maxTouchPoints > 0)); }
+    public getAmpladaScrollbar() { return this.window.innerWidth - this.appbar.width(); }
 
     public printarFirmaAConsola() {
         const text = "%c" +

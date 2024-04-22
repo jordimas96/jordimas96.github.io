@@ -1,24 +1,27 @@
-<div class="content" [style.margin-top.px]="m.u.getAlturaAppbar()">
-    <div class="content-title h1 mb-5" appMostrarAmbAnimacio>
+<div id="page" class="page">
+    <div class="page-title mb-5" appMostrarAmbAnimacio>
         @if (m.ca) { Experiència professional }
         @if (m.es) { Experiencia profesional }
         @if (m.en) { Professional experience }
     </div>
 
-    <app-evora />
-    <app-orange />
-    <app-in2art />
-    <app-matic />
-    <app-indra />
-    <app-nexxia />
+    <div class="content">
 
-    <div class="mb-6 text-center" appMostrarAmbAnimacio>
-        <button class="boto botoSeguentPagina m-auto" (click)="m.u.scroll(0);" routerLink="/projects">
-            @if (m.ca) { Projectes }
-            @if (m.es) { Proyectos }
-            @if (m.en) { Projects }
-            <i class="fa-solid fa-chevron-right ml-2"></i>
-        </button>
-    </div>
+        <app-evora />
+        <app-orange />
+        <app-in2art />
+        <app-matic />
+        <app-indra />
+        <app-nexxia />
+
+        <div class="mb-6 text-center" appMostrarAmbAnimacio>
+            <button class="boto botoSeguentPagina m-auto" (click)="m.u.scroll(0);" routerLink="/projects">
+                @if (m.ca) { Projectes }
+                @if (m.es) { Proyectos }
+                @if (m.en) { Projects }
+                <i class="fa-solid fa-chevron-right ml-2"></i>
+            </button>
+        </div>
     
+    </div>
 </div>

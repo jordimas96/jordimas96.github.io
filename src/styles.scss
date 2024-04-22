@@ -46,11 +46,14 @@ body {
 }
 
 // Estils estructura pagines //
-.content {
-    max-width: 940px;
-    margin: auto;
+.page {
     font-size: 1.1rem;
     transition: transform 0.3s;
+
+    .content {
+        max-width: 940px;
+        margin: auto;
+    }
 
     .skills-title {
         font-size: 1.25rem;

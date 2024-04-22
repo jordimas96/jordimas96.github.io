@@ -5,14 +5,14 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    background-color: var(--fons-50);
+    background-color: var(--fons-40);
     border-radius: 1.25rem; //1rem
     padding: 0.2rem;
     z-index: 0;
     transition: padding 0.3s;
     
     button {
-        @extend .boing;
+        // @extend .boing;
 
         background: none;
         color: var(--text);
@@ -39,7 +39,7 @@
 
 .pill {
     position: absolute;
-    background-color: var(--text);
+    background-color: var(--text-90);
     border-radius: 1rem; //0.75rem
     z-index: 1;
 }

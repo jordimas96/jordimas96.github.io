@@ -1,21 +1,25 @@
-<div class="content" [style.margin-top.px]="m.u.getAlturaAppbar()">
-    <div class="content-title h1 mb-5" appMostrarAmbAnimacio>
+<div id="page" class="page">
+    <div class="page-title mb-5" appMostrarAmbAnimacio>
         @if (m.ca) { Projectes artístics }
         @if (m.es) { Proyectos artísticos }
         @if (m.en) { Artistic projects }
     </div>
 
-    <app-icons />
-    <app-amazfit-watchfaces />
 
-    
-    <div class="mb-6 text-center" appMostrarAmbAnimacio>
-        <button class="boto botoSeguentPagina m-auto" (click)="m.u.scroll(0);" routerLink="/">
-            <i class="fa-solid fa-chevron-left mr-2"></i>
-            @if (m.ca) { Inici }
-            @if (m.es) { Inicio }
-            @if (m.en) { Home }
-        </button>
+    <div class="content">
+
+        <app-icons />
+        <app-amazfit-watchfaces />
+
+        
+        <div class="mb-6 text-center" appMostrarAmbAnimacio>
+            <button class="boto botoSeguentPagina m-auto" (click)="m.u.scroll(0);" routerLink="/">
+                <i class="fa-solid fa-chevron-left mr-2"></i>
+                @if (m.ca) { Inici }
+                @if (m.es) { Inicio }
+                @if (m.en) { Home }
+            </button>
+        </div>
+
     </div>
-
 </div>

@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { MainService } from 'src/app/services/main.service';
+import { Utils } from 'src/app/shared/utils';
 
 
 @Component({
@@ -27,14 +28,14 @@ export class SidebarComponent {
 
 
     obrir() {
-        // Get the middle point of scroll, for the transform-origin of the .content element //
+        // Get the middle point of scroll, for the transform-origin of the .page element //
         const scroll = (document.documentElement.scrollTop + document.documentElement.clientHeight / 2) / document.documentElement.scrollHeight * 100;
 
         this.open = true;
-        $(".content").css({"transform-origin":`100% ${scroll}%`, "transform": "scale(0.95)" });
+        $("#page, .index-mobil, .index-pc").css({ "transform-origin": `100% ${scroll}%`, "transform": "scale(0.95)" });
     }
     tancar() {
         this.open = false;
-        $(".content").css({ "transform": "scale(1)" });
+        $("#page, .index-mobil, .index-pc").css({ "transform": "" });
     }
 }

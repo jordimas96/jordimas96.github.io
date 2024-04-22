@@ -1,10 +1,10 @@
+import { DragDropModule } from '@angular/cdk/drag-drop';
 import { HttpClientModule } from '@angular/common/http';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { provideAnimationsAsync } from '@angular/platform-browser/animations/async';
-import { DragDropModule } from '@angular/cdk/drag-drop';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { QRCodeModule } from 'angularx-qrcode';
 import { NgxMasonryModule } from 'ngx-masonry';
@@ -14,6 +14,7 @@ import { AppbarComponent } from './components/appbar/appbar.component';
 import { NavegacioTabComponent } from './components/appbar/navegacio-tab/navegacio-tab.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { ImatgeScrollComponent } from './components/imatge-scroll/imatge-scroll.component';
+import { IndexComponent } from './components/index/index.component';
 import { DarkModeComponent } from './components/sidebar/dark-mode/dark-mode.component';
 import { SelectorIdiomaComponent } from './components/sidebar/selector-idioma/selector-idioma.component';
 import { SidebarComponent } from './components/sidebar/sidebar.component';
@@ -51,6 +52,7 @@ import { SectionPageComponent } from './pages/section-page/section-page.componen
         // Components //
         AppbarComponent,
         SidebarComponent,
+        IndexComponent,
         FooterComponent,
         ImatgeScrollComponent,
         DarkModeComponent,

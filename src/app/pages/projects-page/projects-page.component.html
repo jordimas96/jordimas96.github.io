@@ -1,32 +1,27 @@
-<div class="content" [style.margin-top.px]="m.u.getAlturaAppbar()">
-    <div class="content-title h1 mb-5" appMostrarAmbAnimacio>
+<div id="page" class="page">
+    <div class="page-title mb-5" appMostrarAmbAnimacio>
         @if (m.ca) { Projectes personals }
         @if (m.es) { Proyectos personales }
         @if (m.en) { Personal projects }
     </div>
 
-    <div class="index">
-        <button class="boto tema-android"      (click)="scrollTo('android')"      >Apps Android</button>
-        <button class="boto tema-mad-jumpgate" (click)="scrollTo('mad-jumpgate')" >Mad Jumpgate</button>
-        <button class="boto tema-github"       (click)="scrollTo('github')"       >GitHub Projects</button>
-        <button class="boto"                   (click)="scrollTo('custom-roms')"  >Custom ROMs</button>
-        <button class="boto tema-tasker"       (click)="scrollTo('tasker')"       >Tasker</button>
+    <div class="content">
+
+        <app-android-apps />
+        <app-mad-jumpgate />
+        <app-github-projects />
+        <app-custom-roms />
+        <app-tasker />
+
+        
+        <div class="mb-6 text-center" appMostrarAmbAnimacio>
+            <button class="boto botoSeguentPagina m-auto" (click)="m.u.scroll(0);" routerLink="/art">
+                @if (m.ca) { Art }
+                @if (m.es) { Arte }
+                @if (m.en) { Art }
+                <i class="fa-solid fa-chevron-right mx-2"></i>
+            </button>
+        </div>
+
     </div>
-
-    <app-android-apps />
-    <app-mad-jumpgate />
-    <app-github-projects />
-    <app-custom-roms />
-    <app-tasker />
-
-    
-    <div class="mb-6 text-center" appMostrarAmbAnimacio>
-        <button class="boto botoSeguentPagina m-auto" (click)="m.u.scroll(0);" routerLink="/art">
-            @if (m.ca) { Art }
-            @if (m.es) { Arte }
-            @if (m.en) { Art }
-            <i class="fa-solid fa-chevron-right mx-2"></i>
-        </button>
-    </div>
-
 </div>

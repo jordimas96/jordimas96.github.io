@@ -16,5 +16,4 @@ export class ProjectsPageComponent extends PageComponent {
         super.afterRootFadeIn();
     }
 
-
 }

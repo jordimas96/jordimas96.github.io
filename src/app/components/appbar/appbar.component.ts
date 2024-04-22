@@ -1,4 +1,4 @@
-import { Component, HostListener } from '@angular/core';
+import { Component, ElementRef, HostListener, ViewChild } from '@angular/core';
 import * as $ from "jquery";
 import { MainService } from 'src/app/services/main.service';
 
@@ -10,7 +10,7 @@ import { MainService } from 'src/app/services/main.service';
 })
 export class AppbarComponent {
 
-    public width = window.innerWidth;
+    @ViewChild('appbar') appbar: ElementRef;
 
     constructor(public m: MainService) {
         m.appbar = this;
@@ -22,16 +22,17 @@ export class AppbarComponent {
         setTimeout(() => { $("app-root").fadeIn(300); }, this.m.tempsDelayCarregaPag);
     }
 
-    afterRootFadeIn() {
-        // $("body").css({ "transition": "background-position 0.3s" });
+    afterRootFadeIn() { }
+
+    width() {
+        return this.appbar.nativeElement.offsetWidth || 0;
+    }
+    height() {
+        return this.appbar.nativeElement.offsetHeight || 0;
     }
 
 
     // Funcions //
-    @HostListener('window:resize', ['$event'])
-    onResize(event) {
-        this.width = event.target.innerWidth;
-    }
     @HostListener('window:scroll', ['$event'])
     onScroll() {
         this.m.scroll = window.pageYOffset;

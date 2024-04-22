@@ -1,0 +1,19 @@
+@if(vistaMobil()) {
+    <div #index class="index mobil" [style.top.px]="m.appbar.height()">
+
+        @for (o of getOpcions(); track o.id) {
+            @if(idExists(o.id)) {
+                <button class="boto tema-{{o.id}}" (click)="scrollTo(o.id)" appMostrarAmbAnimacio>{{o.nom}}</button>
+            }
+        }
+    </div>
+} @else {
+    <div #index class="index pc" [style.top.px]="m.appbar.height()">
+
+        @for (o of getOpcions(); track o.id) {
+            @if(idExists(o.id)) {
+                <button class="boto tema-{{o.id}}" (click)="scrollTo(o.id)" appMostrarAmbAnimacio>{{o.nom}}</button>
+            }
+        }
+    </div>
+}

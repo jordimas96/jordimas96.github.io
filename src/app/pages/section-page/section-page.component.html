@@ -1,5 +1,5 @@
-<div class="content" [style.margin-top.px]="m.u.getAlturaAppbar()">
-    <!-- <div class="content-title h1 mb-5" appMostrarAmbAnimacio>
+<div id="page" class="page">
+    <!-- <div class="page-title mb-5" appMostrarAmbAnimacio>
         @if (m.ca) { Secció }
         @if (m.es) { Sección }
         @if (m.en) { Section }
@@ -14,25 +14,27 @@
 
 
 
-    @switch (section) {
-        @case ("android")      { <app-android-apps />       }
-        @case ("mad-jumpgate") { <app-mad-jumpgate />       }
-        @case ("github")       { <app-github-projects />    }
-        @case ("custom-roms")  { <app-custom-roms />        }
-        @case ("tasker")       { <app-tasker />             }
-        @case ("icons")        { <app-icons />              }
-        @case ("amazfit")      { <app-amazfit-watchfaces /> }
-        @case ("evora")        { <app-evora />              }
-        @case ("orange")       { <app-orange />             }
-        @case ("in2art")       { <app-in2art />             }
-        @case ("matic")        { <app-matic />              }
-        @case ("indra")        { <app-indra />              }
-        @case ("nexxia")       { <app-nexxia />             }
-        @default {
-            <h2 class="text-center my-5">Invalid section name</h2>
-            <!-- <h2 class="text-center my-5"><a href="/" target="_self">Go home</a></h2> -->
+    <div class="content">
+
+        @switch (section) {
+            @case ("android")      { <app-android-apps />       }
+            @case ("mad-jumpgate") { <app-mad-jumpgate />       }
+            @case ("github")       { <app-github-projects />    }
+            @case ("custom-roms")  { <app-custom-roms />        }
+            @case ("tasker")       { <app-tasker />             }
+            @case ("icons")        { <app-icons />              }
+            @case ("amazfit")      { <app-amazfit-watchfaces /> }
+            @case ("evora")        { <app-evora />              }
+            @case ("orange")       { <app-orange />             }
+            @case ("in2art")       { <app-in2art />             }
+            @case ("matic")        { <app-matic />              }
+            @case ("indra")        { <app-indra />              }
+            @case ("nexxia")       { <app-nexxia />             }
+            @default {
+                <h2 class="text-center my-5">Invalid section name</h2>
+                <!-- <h2 class="text-center my-5"><a href="/" target="_self">Go home</a></h2> -->
+            }
         }
-    }
 
 
 
@@ -40,44 +42,45 @@
 
 
 
-    
-    
-    
-    <div class="sectionList mb-5">
-        @if(section != "android") {      <button class="boto tema-android"      routerLink="/section/android"      >Apps Android</button>       }
-        @if(section != "mad-jumpgate") { <button class="boto tema-mad-jumpgate" routerLink="/section/mad-jumpgate" >Mad Jumpgate</button>       }
-        @if(section != "github") {       <button class="boto tema-github"       routerLink="/section/github"       >GitHub Projects</button>    }
-        @if(section != "custom-roms") {  <button class="boto "                  routerLink="/section/custom-roms"  >Custom ROMs</button>        }
-        @if(section != "tasker") {       <button class="boto tema-tasker"       routerLink="/section/tasker"       >Tasker</button>             }
-        @if(section != "icons") {        <button class="boto tema-icons"        routerLink="/section/icons"        >Icons</button>              }
-        @if(section != "amazfit") {      <button class="boto tema-amazfit"      routerLink="/section/amazfit"      >Amazfit Watchfaces</button> }
-        @if(section != "evora") {        <button class="boto tema-evora"        routerLink="/section/evora"        >Evora IT</button>           }
-        @if(section != "orange") {       <button class="boto tema-orange"       routerLink="/section/orange"       >Orange</button>             }
-        @if(section != "in2art") {       <button class="boto tema-in2art"       routerLink="/section/in2art"       >In2art</button>             }
-        @if(section != "matic") {        <button class="boto tema-matic"        routerLink="/section/matic"        >Matic</button>              }
-        @if(section != "indra") {        <button class="boto tema-indra"        routerLink="/section/indra"        >Indra</button>              }
-        @if(section != "nexxia") {       <button class="boto tema-nexxia"       routerLink="/section/nexxia"       >Nexxia</button>             }
+        
+        
+        
+        <div class="sectionList mb-5">
+            @if(section != "android") {      <button class="boto tema-android"      routerLink="/section/android"      >Apps Android</button>       }
+            @if(section != "mad-jumpgate") { <button class="boto tema-mad-jumpgate" routerLink="/section/mad-jumpgate" >Mad Jumpgate</button>       }
+            @if(section != "github") {       <button class="boto tema-github"       routerLink="/section/github"       >GitHub Projects</button>    }
+            @if(section != "custom-roms") {  <button class="boto "                  routerLink="/section/custom-roms"  >Custom ROMs</button>        }
+            @if(section != "tasker") {       <button class="boto tema-tasker"       routerLink="/section/tasker"       >Tasker</button>             }
+            @if(section != "icons") {        <button class="boto tema-icons"        routerLink="/section/icons"        >Icons</button>              }
+            @if(section != "amazfit") {      <button class="boto tema-amazfit"      routerLink="/section/amazfit"      >Amazfit Watchfaces</button> }
+            @if(section != "evora") {        <button class="boto tema-evora"        routerLink="/section/evora"        >Evora IT</button>           }
+            @if(section != "orange") {       <button class="boto tema-orange"       routerLink="/section/orange"       >Orange</button>             }
+            @if(section != "in2art") {       <button class="boto tema-in2art"       routerLink="/section/in2art"       >In2art</button>             }
+            @if(section != "matic") {        <button class="boto tema-matic"        routerLink="/section/matic"        >Matic</button>              }
+            @if(section != "indra") {        <button class="boto tema-indra"        routerLink="/section/indra"        >Indra</button>              }
+            @if(section != "nexxia") {       <button class="boto tema-nexxia"       routerLink="/section/nexxia"       >Nexxia</button>             }
+        </div>
+        
+        
+        
+        
+        
+        
+        
+        
+        
+
+
+        
+        
+        <!-- <div class="mb-6 text-center" appMostrarAmbAnimacio>
+            <button class="boto botoSeguentPagina m-auto" (click)="m.u.scroll(0);" routerLink="/art">
+                @if (m.ca) { Art }
+                @if (m.es) { Arte }
+                @if (m.en) { Art }
+                <i class="fa-solid fa-chevron-right mx-2"></i>
+            </button>
+        </div> -->
+
     </div>
-    
-    
-    
-    
-    
-    
-    
-    
-    
-
-
-    
-    
-    <!-- <div class="mb-6 text-center" appMostrarAmbAnimacio>
-        <button class="boto botoSeguentPagina m-auto" (click)="m.u.scroll(0);" routerLink="/art">
-            @if (m.ca) { Art }
-            @if (m.es) { Arte }
-            @if (m.en) { Art }
-            <i class="fa-solid fa-chevron-right mx-2"></i>
-        </button>
-    </div> -->
-
 </div>

@@ -1,0 +1,106 @@
+@import "src/styles.scss";
+
+
+
+
+.index {
+    transition: transform 0.3s;
+
+    button {
+        color: var(--text);
+        background-color: var(--fons-50);
+        backdrop-filter: blur(40px);
+    }
+}
+
+.index.mobil {
+    position: sticky;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    gap: 0.5rem;
+
+    width: max-content;
+    max-width: 100%;
+    margin: auto;
+    padding: 0.5rem;
+
+    overflow: hidden;
+    overflow-x: scroll;
+    &::-webkit-scrollbar { display: none; }
+
+    z-index: 1005;
+
+    button {
+        display: block;
+        flex-shrink: 0;
+
+        font-size: 1.5rem;
+        padding: 1rem 2rem;
+        border-radius: 1.5rem;
+    }
+}
+
+.index.pc {
+    position: fixed;
+    
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+
+    padding: 0.5rem;
+    width: calc((100% - 940px) / 2);
+    min-width: 10rem;
+    max-width: 16rem;
+
+    z-index: 1005;
+
+    button {
+        display: flex;
+        justify-content: center;
+
+        font-size: 1.7rem;
+        padding: 1rem 2rem;
+        border-radius: 1.5rem;
+    }
+}
+
+
+
+
+
+// Pantalla Mòbil //
+@media only screen and (max-width: 575px) {
+    .index.mobil {
+        button {
+            padding: 0.5rem 1rem;
+            font-size: 1rem;
+            border-radius: 1rem;
+        }
+    }
+
+}
+// Pantalla Tablet //
+@media only screen and (min-width: 576px) {
+}
+// Pantalla PC //
+@media only screen and (min-width: 768px) { }
+// Pantalla Molt Gran //
+@media only screen and (min-width: 992px) { }
+
+// PC //
+@media (pointer: fine) {
+    // .index {
+    //     button {
+    //         transition: transform 0.3s;
+
+    //         &:hover {
+    //             transform: scale(1.1);
+    //             z-index: 1;
+    //         }
+    //     }
+    // }
+}
+// Mòbil //
+@media (pointer: coarse) { }
