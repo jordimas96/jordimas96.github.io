@@ -50,6 +50,8 @@ export class IndexComponent {
     }
 
     public scrollOnHover(event: MouseEvent) {
+        if (this.m.esPantallaTactil()) return;
+        
         let i = this.index.nativeElement;
         let pos = event.clientX / i.clientWidth;
 
