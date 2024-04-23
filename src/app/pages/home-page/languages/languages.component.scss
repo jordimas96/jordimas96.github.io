@@ -1,0 +1,67 @@
+@import "src/styles.scss";
+
+
+
+.llenguatges {
+    .titol-llenguatges {
+        font-size: 1.75rem;
+    }
+
+    .titol-tipus-llenguatge {
+        color: var(--text-80);
+        margin: 3rem 0 0.5rem;
+        font-size: 1.4rem;
+    }
+    .skills {
+        padding: 0 0.25rem;
+        justify-content: center;
+    }
+
+    .botoVeureMes {
+        display: inline;
+        font-size: 1.6rem;
+
+        i {
+            display: block;
+            transition: transform 0.3s;
+        }
+
+        &:hover {
+            i {
+                transform: translateY(0.5rem);
+            }
+        }
+    }
+}
+
+
+
+
+
+// Pantalla Mòbil //
+@media only screen and (max-width: 575px) {
+
+    .llenguatges {
+        .titol-llenguatges {
+            font-size: 1.4rem;
+        }
+    }
+
+}
+// Pantalla Tablet //
+@media only screen and (min-width: 576px) { }
+// Pantalla PC //
+@media only screen and (min-width: 768px) { }
+// Pantalla Molt Gran //
+@media only screen and (min-width: 992px) { }
+
+// PC //
+@media (pointer: fine) {
+
+    .botoVeureMes:hover {
+        color: var(--color-6);
+    }
+
+}
+// Mòbil //
+@media (pointer: coarse) { }

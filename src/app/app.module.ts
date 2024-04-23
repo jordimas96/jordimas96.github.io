@@ -33,7 +33,9 @@ import { In2artComponent } from './pages/experience-page/4 in2art/in2art.compone
 import { OrangeComponent } from './pages/experience-page/5 orange/orange.component';
 import { EvoraComponent } from './pages/experience-page/6 evora/evora.component';
 import { ExperiencePageComponent } from './pages/experience-page/experience-page.component';
+import { BioComponent } from './pages/home-page/bio/bio.component';
 import { HomePageComponent } from './pages/home-page/home-page.component';
+import { LanguagesComponent } from './pages/home-page/languages/languages.component';
 import { AndroidAppsComponent } from './pages/projects-page/android-apps/android-apps.component';
 import { DetallsAndroidAppsComponent } from './pages/projects-page/android-apps/detalls-android-apps/detalls-android-apps.component';
 import { CustomRomsComponent } from './pages/projects-page/custom-roms/custom-roms.component';
@@ -72,6 +74,9 @@ import { SectionPageComponent } from './pages/section-page/section-page.componen
         SmoothMoveDirective,
         TargetBlankDirective,
 
+
+        BioComponent,
+        LanguagesComponent,
 
         NexxiaComponent,
         IndraComponent,

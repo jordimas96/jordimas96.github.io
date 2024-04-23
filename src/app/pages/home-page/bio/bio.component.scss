@@ -1,0 +1,162 @@
+@import "src/styles.scss";
+
+
+
+// opacity: primary (87%), secondary (60%), tertiary (38%) //
+
+.foto-carnet {
+    overflow: hidden;
+    border-radius: 2rem;
+
+    img {
+        width: 100%;
+        height: 100%;
+        transform: scale(1.1);
+        transform-origin: top;
+    }
+}
+
+.bondia {
+    font-size: 1.8rem;
+}
+.emdicjordi {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    align-items: baseline;
+    column-gap: 0.25rem;
+
+    .emdic {
+        font-size: 1.4rem;
+        margin-bottom: -0.4rem;
+    }
+    .jordi {
+        font-size: 1.7rem;
+        color: var(--color-6);
+    }
+}
+.programador {
+    font-size: 1.2rem;
+}
+
+.bio {
+    .tempsExp {
+        cursor: pointer;
+        color: var(--color-7);
+        font-weight: bold;
+        display: inline-block;
+    }
+    .boto {
+        padding: 0.9rem 1.1rem;
+        padding-left: 1.3rem !important;
+    }
+}
+
+
+
+
+
+
+::ng-deep html.light.matinada .jordi,
+::ng-deep html.nit .jordi { color: var(--text) !important }
+::ng-deep html.nit .tempsExp { color: var(--text); }
+::ng-deep html.nit .tempsExp,
+::ng-deep .light .tempsExp { font-weight: 900 !important; }
+
+
+
+
+// Tooltip //
+.tooltipExp {
+    position: relative;
+
+    > div {
+        visibility: hidden;
+        position: absolute;
+        width: max-content;
+        padding: 0.3rem 0.8rem;
+        margin-left: -0.8rem;
+        margin-top: 5px;
+        border-radius: 0.7rem;
+        background-color: var(--text);
+        color: var(--fons);
+        font-weight: normal;
+        user-select: none;
+
+        @extend .shadow-2;
+
+        &::after {
+            content: " ";
+            position: absolute;
+            bottom: 100%;
+            left: 50%;
+            margin-left: -5px;
+            border-width: 5px;
+            border-style: solid;
+            border-color: transparent transparent var(--text) transparent;
+          }
+    }
+    &:hover > div { visibility: visible; }
+}
+
+
+
+
+
+
+
+// Pantalla Mòbil //
+@media only screen and (max-width: 575px) {
+
+    .bondia {
+        font-size: 1.5rem;
+    }
+    .emdicjordi {
+        flex-direction: column;
+        align-items: flex-end;
+
+        .emdic {
+            font-size: 1.1rem;
+        }
+        .jordi {
+            font-size: 1.25rem;
+        }
+    }
+    .programador {
+        font-size: 0.9rem;
+    }
+
+}
+// Pantalla Tablet //
+@media only screen and (min-width: 576px) {
+
+    .foto-carnet {
+        -webkit-box-reflect: below 0px linear-gradient(to bottom, rgb(0 0 0 / 0%) 50%, rgb(0 0 0 / 15%));
+    }
+
+}
+// Pantalla PC //
+@media only screen and (min-width: 768px) { }
+// Pantalla Molt Gran //
+@media only screen and (min-width: 992px) { }
+
+// PC //
+@media (pointer: fine) {
+
+    .foto-carnet {
+        transition: border-radius 0.3s;
+
+        &:hover {
+            border-radius: 1rem !important;
+        }
+        img {
+            transition: transform 0.3s;
+            &:hover {
+                transform: none !important;
+            }
+        }
+    }
+
+}
+// Mòbil //
+@media (pointer: coarse) { }

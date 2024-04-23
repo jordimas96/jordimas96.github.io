@@ -11,7 +11,7 @@
         @if (m.en) { I have some GitHub projects on many topics: }
         <br><br>
 
-        <ngx-masonry class="repos row no-gutters m-n2" [ordered]="true">
+        <ngx-masonry class="repos row m-n2" [ordered]="true">
             @for(repo of repos; track repos["name"]) {
 
                 <div ngxMasonryItem class="col-12 col-md-6 p-2 boing" [attr.aria-order]="repo.order">

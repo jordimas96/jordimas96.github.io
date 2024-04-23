@@ -63,7 +63,7 @@ export class IndexComponent {
     public getOpcions() {
         return [
             { id: "bio",          nom: ["Sobre mi", "Sobre mí", "About me"][this.m.idiomaIndex] },
-            { id: "skills",       nom: ["Habilitats", "Habilidades", "Skills"][this.m.idiomaIndex] },
+            { id: "languages",    nom: ["Habilitats", "Habilidades", "Skills"][this.m.idiomaIndex] },
             { id: "evora",        nom: "Evora IT"           },
             { id: "orange",       nom: "Orange"             },
             { id: "in2art",       nom: "In2art"             },

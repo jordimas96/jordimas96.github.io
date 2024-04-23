@@ -178,10 +178,17 @@ video {
     display: block;
 }
 
+
 // Bugs llibreries (?)
 // Bootstrap 5 //
-.row.no-gutters {
-    margin: 0;
+.row {
+    margin-left: 0;
+    margin-right: 0;
+}
+// Fix meu per a aquesta web (l'efecte de no-gutters) //
+.row > * {
+    padding-left: 0;
+    padding-right: 0;
 }
 
 
