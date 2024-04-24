@@ -1,8 +1,11 @@
 @import "src/styles.scss";
 
 .chip {
-    color: var(--fons);
-    background-color: var(--text);
+    --text: var(--color-0);
+    --fons: var(--color-8);
+
+    color: var(--text);
+    background-color: var(--fons);
     font-size: 1rem;
     padding: 0.25rem 0.75rem;
     border-radius: 1rem;
@@ -15,84 +18,150 @@
         0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
 }
 
-.angular          { background-color: #dd0031; color: #ffffff; }
-.javascript       { background-color: #ffdf00; color: #000000; }
-.jquery           { background-color: #1e2e3b; color: #21ace2; }
-.typescript       { background-color: #0078cf; color: #ffffff; }
-.ngrx             { background-color: #412846; color: #c141d8; }
-.css              { background-color: #2196f3; color: #ffffff; }
-.sass             { background-color: #d56fa4; color: #ffffff; }
-.html5            { background-color: #e64c18; color: #ffffff; }
-.bootstrap        { background-color: #563d7c; color: #ffffff; }
-.materialize      { background-color: #f6a2ad; color: #000000; }
-.android          { background-color: #3DDC84; color: #153b4c; }
-.kotlin           { background-color: #b11cda; color: #ffffff; }
-.xml              { background-color: #f67d01; color: #ffffff; }
-.uwp              { background-color: #0072c6; color: #ffffff; }
-.cordova          { background-color: #364451; color: #35e9f6; }
-.pwa              { background-color: #5f17ca; color: #ffffff; }
-.wpf              { background-color: #044a88; color: #ffffff; }
-.delphi           { background-color: #9e0f20; color: #ffffff; }
-.nodejs           { background-color: #83cd29; color: #333333; }
-.sequelize        { background-color: #02aeee; color: #ffffff; }
-.json             { background-color: #3e3e3e; color: #ffffff; }
-.java             { background-color: #007396; color: #ffffff; }
-.python           { background-color: #3572A5; color: #ffe364; }
-.csharp           { background-color: #953dac; color: #ffffff; }
-.django           { background-color: #003e2b; color: #ffffff; }
-.php              { background-color: #777bb3; color: #ffffff; }
-.rubyonrails      { background-color: #cc0000; color: #ffffff; }
-.apache           { background-color: #c4203c; color: #ffffff; }
-.xampp            { background-color: #fb7b1f; color: #ffffff; }
-.mysql            { background-color: #00618a; color: #e48e00; }
-.sqldeveloper     { background-color: #b9ceec; color: #166309; }
-.phpmyadmin       { background-color: #6c78af; color: #f89c0e; }
-.plsql            { background-color: #e11a1f; color: #ffffff; }
-.jsp              { background-color: #5382a1; color: #e56f1f; }
-.pl1              { background-color: #000000; color: #00d200; }
-.db2              { background-color: #009a2c; color: #ffffff; }
-.git              { background-color: #f05133; color: #413000; }
-.github           { background-color: #ffffff; color: #000000; }
-.bitbucket        { background-color: #2684ff; color: #ffffff; }
-.sourcetree       { background-color: #2684ff; color: #ffffff; }
-.postman          { background-color: #ee6d3f; color: #ffffff; }
-.asana            { background-color: #ff5878; color: #1d3042; }
-.filezilla        { background-color: #8f0000; color: #ffffff; }
-.androidstudio    { background-color: #3DDC84; color: #153b4c; }
-.powershell       { background-color: #012456; color: #eeedf0; }
-.unity            { background-color: #222c37; color: #ffffff; }
-.visualstudio     { background-color: #a377db; color: #ffffff; }
-.eclipse          { background-color: #2c2255; color: #f7941e; }
-.netbeans         { background-color: #7c9bd2; color: #ffffff; }
-.svn              { background-color: #809cc9; color: #ffffff; }
-.weblogic         { background-color: #e41b1f; color: #ffffff; }
-.jira             { background-color: #2684ff; color: #ffffff; }
-.confluence       { background-color: #2582fd; color: #ffffff; }
-.gitlab           { background-color: #e34329; color: #ffffff; }
-.maven            { background-color: #700225; color: #ffffff; }
-.jfrogartifactory { background-color: #41bf47; color: #ffffff; }
-.tortoisegit      { background-color: #4a8fb5; color: #ffffff; }
-.winscp           { background-color: #49d4eb; color: #ffffff; }
-.hibernate        { background-color: #59666c; color: #bcae79; }
-.vscode           { background-color: #3aa8f2; color: #ffffff; }
-.poedit           { background-color: #dbcb44; color: #000000; }
-.fastreport       { background-color: #b5110f; color: #1d1d1b; }
-.teamviewer       { background-color: #0879d7; color: #ffffff; }
-.anydesk          { background-color: #fc4236; color: #ffffff; }
-.remotedesktop    { background-color: #001cc9; color: #c5d3ff; }
-.vmware           { background-color: #ffffff; color: #545256; }
-.virtualbox       { background-color: #cee4fb; color: #183861; }
-.windows          { background-color: #00aeef; color: #ffffff; }
-.windowsserver    { background-color: #37689d; color: #c9c5be; }
-.ubuntu           { background-color: #9b0583; color: #ffffff; }
-.debian           { background-color: #d70751; color: #ffffff; }
-.redhat           { background-color: #e20000; color: #ffffff; }
-.fedora           { background-color: #243f73; color: #ffffff; }
-.macos            { background-color: #eeeeee; color: #444444; }
-.tails            { background-color: #55347b; color: #ffffff; }
-.zosmvs           { background-color: #000000; color: #00ff00; }
-.joomla           { background-color: #5091cd; color: #ffffff; }
-.k2               { background-color: #000000; color: #ffffff; }
-.akeebabackup     { background-color: #514f50; color: #38b5b9; }
-.jcefilemanager   { background-color: #dddddd; color: #000000; }
+.showTime {
+    display: flex;
+    justify-content: space-between;
+    gap: 0.5rem;
 
+    position: relative;
+
+    height: 1.9rem;
+    padding-right: 0.25rem;
+
+    // box-shadow: 0px 30px 25px -30px #00000045 inset, 0px -30px 25px -30px #ffffff45 inset !important;
+    box-shadow: none !important;
+
+    .nom {
+        width: 140px;
+    }
+    .barra {
+        flex: 1;
+        // background-color: rgba(255, 255, 255, 0.4);
+        border-radius: 1rem;
+
+        position: relative;
+
+        .nivell {
+            position: absolute;
+            height: 100%;
+            min-width: 30px;
+
+            padding: 0 0.25rem;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            // background-color: var(--color-9);
+            // color: var(--color-0);
+            // background-color: var(--text);
+            // color: var(--fons);
+            background-color: white;
+            color: var(--color-l-0);
+            font-size: 0.85rem;
+
+            border-radius: 1rem;
+            
+            box-shadow:
+                0px 30px 25px -30px #ffffff45 inset, 0px -30px 25px -30px #00000045 inset
+        }
+    }
+    // .textExp {
+    //     position: absolute;
+    //     right: 0;
+    //     margin-right: 1rem;
+    //     color: var(--text);
+    // }
+
+}
+
+
+
+
+
+
+
+
+
+
+
+.angular          { --fons: #dd0031; --text: #ffffff; }
+.javascript       { --fons: #ffdf00; --text: #000000; }
+.jquery           { --fons: #1e2e3b; --text: #21ace2; }
+.typescript       { --fons: #0078cf; --text: #ffffff; }
+.ngrx             { --fons: #412846; --text: #c141d8; }
+.css              { --fons: #2196f3; --text: #ffffff; }
+.sass             { --fons: #d56fa4; --text: #ffffff; }
+.html5            { --fons: #e64c18; --text: #ffffff; }
+.bootstrap        { --fons: #563d7c; --text: #ffffff; }
+.materialize      { --fons: #f6a2ad; --text: #000000; }
+.android          { --fons: #3DDC84; --text: #153b4c; }
+.kotlin           { --fons: #b11cda; --text: #ffffff; }
+.xml              { --fons: #f67d01; --text: #ffffff; }
+.uwp              { --fons: #0072c6; --text: #ffffff; }
+.cordova          { --fons: #364451; --text: #35e9f6; }
+.pwa              { --fons: #5f17ca; --text: #ffffff; }
+.wpf              { --fons: #044a88; --text: #ffffff; }
+.delphi           { --fons: #9e0f20; --text: #ffffff; }
+.nodejs           { --fons: #83cd29; --text: #333333; }
+.sequelize        { --fons: #02aeee; --text: #ffffff; }
+.json             { --fons: #3e3e3e; --text: #ffffff; }
+.java             { --fons: #007396; --text: #ffffff; }
+.python           { --fons: #3572A5; --text: #ffe364; }
+.csharp           { --fons: #953dac; --text: #ffffff; }
+.django           { --fons: #003e2b; --text: #ffffff; }
+.php              { --fons: #777bb3; --text: #ffffff; }
+.rubyonrails      { --fons: #cc0000; --text: #ffffff; }
+.apache           { --fons: #c4203c; --text: #ffffff; }
+.xampp            { --fons: #fb7b1f; --text: #ffffff; }
+.mysql            { --fons: #00618a; --text: #e48e00; }
+.sqldeveloper     { --fons: #b9ceec; --text: #166309; }
+.phpmyadmin       { --fons: #6c78af; --text: #f89c0e; }
+.plsql            { --fons: #e11a1f; --text: #ffffff; }
+.jsp              { --fons: #5382a1; --text: #e56f1f; }
+.pl1              { --fons: #000000; --text: #00d200; }
+.db2              { --fons: #009a2c; --text: #ffffff; }
+.git              { --fons: #f05133; --text: #413000; }
+.github           { --fons: #ffffff; --text: #000000; }
+.bitbucket        { --fons: #2684ff; --text: #ffffff; }
+.sourcetree       { --fons: #2684ff; --text: #ffffff; }
+.postman          { --fons: #ee6d3f; --text: #ffffff; }
+.asana            { --fons: #ff5878; --text: #1d3042; }
+.filezilla        { --fons: #8f0000; --text: #ffffff; }
+.androidstudio    { --fons: #3DDC84; --text: #153b4c; }
+.powershell       { --fons: #012456; --text: #eeedf0; }
+.unity            { --fons: #222c37; --text: #ffffff; }
+.visualstudio     { --fons: #a377db; --text: #ffffff; }
+.eclipse          { --fons: #2c2255; --text: #f7941e; }
+.netbeans         { --fons: #7c9bd2; --text: #ffffff; }
+.svn              { --fons: #809cc9; --text: #ffffff; }
+.weblogic         { --fons: #e41b1f; --text: #ffffff; }
+.jira             { --fons: #2684ff; --text: #ffffff; }
+.confluence       { --fons: #2582fd; --text: #ffffff; }
+.gitlab           { --fons: #e34329; --text: #ffffff; }
+.maven            { --fons: #700225; --text: #ffffff; }
+.jfrogartifactory { --fons: #41bf47; --text: #ffffff; }
+.tortoisegit      { --fons: #4a8fb5; --text: #ffffff; }
+.winscp           { --fons: #49d4eb; --text: #ffffff; }
+.hibernate        { --fons: #59666c; --text: #bcae79; }
+.vscode           { --fons: #3aa8f2; --text: #ffffff; }
+.poedit           { --fons: #dbcb44; --text: #000000; }
+.fastreport       { --fons: #b5110f; --text: #1d1d1b; }
+.teamviewer       { --fons: #0879d7; --text: #ffffff; }
+.anydesk          { --fons: #fc4236; --text: #ffffff; }
+.remotedesktop    { --fons: #001cc9; --text: #c5d3ff; }
+.vmware           { --fons: #ffffff; --text: #545256; }
+.virtualbox       { --fons: #cee4fb; --text: #183861; }
+.windows          { --fons: #00aeef; --text: #ffffff; }
+.windowsserver    { --fons: #37689d; --text: #c9c5be; }
+.ubuntu           { --fons: #9b0583; --text: #ffffff; }
+.debian           { --fons: #d70751; --text: #ffffff; }
+.redhat           { --fons: #e20000; --text: #ffffff; }
+.fedora           { --fons: #243f73; --text: #ffffff; }
+.macos            { --fons: #eeeeee; --text: #444444; }
+.tails            { --fons: #55347b; --text: #ffffff; }
+.zosmvs           { --fons: #000000; --text: #00ff00; }
+.joomla           { --fons: #5091cd; --text: #ffffff; }
+.k2               { --fons: #000000; --text: #ffffff; }
+.akeebabackup     { --fons: #514f50; --text: #38b5b9; }
+.jcefilemanager   { --fons: #dddddd; --text: #000000; }

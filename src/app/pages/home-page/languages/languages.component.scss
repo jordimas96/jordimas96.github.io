@@ -7,14 +7,33 @@
         font-size: 1.75rem;
     }
 
-    .titol-tipus-llenguatge {
-        color: var(--text-80);
-        margin: 3rem 0 0.5rem;
-        font-size: 1.4rem;
+    .botoShowTime {
+        font-size: 1.1rem;
+        padding: 0.2rem 0.8rem;
     }
-    .skills {
-        padding: 0 0.25rem;
-        justify-content: center;
+
+    .tipus-llenguatge {
+        padding-top: 3rem;
+        &.showTime:first-child {
+            padding-top: 1.5rem;
+        }
+
+        .titol-tipus-llenguatge {
+            color: var(--text-80);
+            margin-bottom: 0.5rem;
+            font-size: 1.4rem;
+        }
+        .skills {
+            padding: 0 0.25rem;
+            justify-content: center;
+            
+            &.showTime {
+                display: flex;
+                flex-direction: column;
+                padding: 0;
+                
+            }
+        }
     }
 
     .botoVeureMes {
@@ -44,6 +63,9 @@
     .llenguatges {
         .titol-llenguatges {
             font-size: 1.4rem;
+        }
+        .skills {
+            padding: 0;
         }
     }
 

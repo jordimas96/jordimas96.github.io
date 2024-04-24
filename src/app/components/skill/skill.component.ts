@@ -11,6 +11,8 @@ export class SkillComponent {
     constructor(public m: MainService) { }
 
     @Input("n") nom: string;
+    @Input("showTime") showTime: boolean;
+    @Input("ampladaNom") ampladaNom: number;
 
     normalitzar(s) {
         return s
@@ -32,4 +34,13 @@ export class SkillComponent {
     getAnysExp() {
         return this.m.exp.getTextExp(this.nom);
     }
-}
+    getTextCurt(skill: string) {
+        if (!this.m.exp.experienciaPerSkills[skill])
+            return "";
+        else
+            return this.m.exp.construirCadenaTempsExpCurta(this.m.exp.experienciaPerSkills[skill].anysMesosDies);
+    }
+    getNivellBarra() {
+        return (this.m.exp.getSkill(this.nom).diesTotals || 0) / this.m.exp.getSkill("_total").diesTotals * 100;
+    }
+};

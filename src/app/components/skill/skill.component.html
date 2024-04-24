@@ -1,7 +1,23 @@
-<div
-    class="chip {{normalitzar(nom)}}"
-    [title]="getAnysExp()"
-    appMostrarAmbAnimacio>
-    {{nom}}
-     <!-- - {{m.exp.getSkill(nom).diesTotals}} -->
-</div>
+@if (!showTime) {
+    <div
+        class="chip {{normalitzar(nom)}}"
+        [title]="getAnysExp()"
+        appMostrarAmbAnimacio>
+        {{nom}}
+        <!-- - {{m.exp.getSkill(nom).diesTotals}} -->
+    </div>
+} @else {
+    <div
+        class="chip showTime {{normalitzar(nom)}}"
+        appMostrarAmbAnimacio>
+        <div class="nom">
+            {{nom}}
+        </div>
+        <div class="barra">
+            <div class="nivell" [style.width.%]="getNivellBarra()"> {{getTextCurt(nom)}} </div>
+        </div>
+        <!-- <div class="textExp">
+            {{getTextCurt(nom)}}
+        </div> -->
+    </div>
+}

@@ -4,87 +4,100 @@
         @if (m.es) { Habilidades en programación }
         @if (m.en) { Programming skills }
     </div>
+
+    <button class="boto botoShowTime mt-2 mb-0" (click)="showExpTime_click()">
+        @if (m.ca) { {{ showTime ? "Ocultar temps" : "Mostrar temps" }} }
+        @if (m.es) { {{ showTime ? "Ocultar tiempo" : "Mostrar tiempo" }} }
+        @if (m.en) { {{ showTime ? "Hide time" : "Show time" }} }
+    </button>
+
     <div class="row justify-content-center">
-        <div class="col-12 col-sm-6">
+        <div class="tipus-llenguatge col-12" [ngClass]="showTime ? 'col-sm-12' : 'col-sm-6'">
             <div class="titol-tipus-llenguatge">Frontend</div>
-            <div class="skills">
-                <app-skill n="Angular"/>
-                <app-skill n="NgRx"/>
-                <app-skill n="JavaScript"/>
-                <app-skill n="JQuery"/>
-                <app-skill n="CSS"/>
-                <app-skill n="SASS"/>
-                <app-skill n="TypeScript"/>
-                <app-skill n="PWA"/>
-                <app-skill n="HTML5"/>
-                <app-skill n="Bootstrap"/>
-                <app-skill n="Materialize"/>
-                <app-skill n="Android"/>
-                <app-skill n="Kotlin"/>
-                <!-- <app-skill n="XML"/> -->
-                <app-skill n="UWP"/>
-                <app-skill n="Cordova"/>
-                <!-- <app-skill n="WPF"/> -->
-                <!-- <app-skill n="Delphi"/> -->
+            <div class="skills" [class.showTime]="showTime">
+                @if(showTime) {
+                    <app-skill n="Frontend" [showTime]="showTime" />
+                }
+                <app-skill n="Angular" [showTime]="showTime" />
+                <app-skill n="NgRx" [showTime]="showTime" />
+                <app-skill n="JavaScript" [showTime]="showTime" />
+                <app-skill n="JQuery" [showTime]="showTime" />
+                <app-skill n="CSS" [showTime]="showTime" />
+                <app-skill n="SASS" [showTime]="showTime" />
+                <app-skill n="TypeScript" [showTime]="showTime" />
+                <app-skill n="PWA" [showTime]="showTime" />
+                <app-skill n="HTML5" [showTime]="showTime" />
+                <app-skill n="Bootstrap" [showTime]="showTime" />
+                <app-skill n="Materialize" [showTime]="showTime" />
+                <app-skill n="Android" [showTime]="showTime" />
+                <app-skill n="Kotlin" [showTime]="showTime" />
+                <app-skill n="UWP" [showTime]="showTime" />
+                <app-skill n="Delphi" [showTime]="showTime" />
+                <app-skill n="Cordova" [showTime]="showTime" />
+                <!-- <app-skill n="XML" [showTime]="showTime" /> -->
+                <!-- <app-skill n="WPF" [showTime]="showTime" /> -->
             </div>
         </div>
 
-        <div class="col-12 col-sm-6">
+        <div class="tipus-llenguatge col-12" [ngClass]="showTime ? 'col-sm-12' : 'col-sm-6'">
             <div class="titol-tipus-llenguatge">Backend</div>
-            <div class="skills">
-                <app-skill n="NodeJs"/>
-                <app-skill n="Java"/>
-                <app-skill n="Sequelize"/>
-                <!-- <app-skill n="JSON"/> -->
-                <app-skill n="Python"/>
-                <app-skill n="C#"/>
-                <!-- <app-skill n="Django"/> -->
-                <app-skill n="PHP"/>
-                <!-- <app-skill n="Ruby on Rails"/> -->
-                <app-skill n="Apache"/>
-                <!-- <app-skill n="XAMPP"/> -->
-                <app-skill n="MySQL"/>
-                <app-skill n="PL/SQL"/>
-                <!-- <app-skill n="JSP"/> -->
-                <!-- <app-skill n="PL/1"/> -->
-                <!-- <app-skill n="DB2"/> -->
+            <div class="skills" [class.showTime]="showTime">
+                @if(showTime) {
+                    <app-skill n="Backend" [showTime]="showTime" />
+                }
+                <app-skill n="NodeJs" [showTime]="showTime" />
+                <app-skill n="Java" [showTime]="showTime" />
+                <app-skill n="JSP" [showTime]="showTime" />
+                <app-skill n="Sequelize" [showTime]="showTime" />
+                <!-- <app-skill n="JSON" [showTime]="showTime" /> -->
+                <app-skill n="Python" [showTime]="showTime" />
+                <app-skill n="C#" [showTime]="showTime" />
+                <!-- <app-skill n="Django" [showTime]="showTime" /> -->
+                <app-skill n="PHP" [showTime]="showTime" />
+                <!-- <app-skill n="Ruby on Rails" [showTime]="showTime" /> -->
+                <app-skill n="Apache" [showTime]="showTime" />
+                <!-- <app-skill n="XAMPP" [showTime]="showTime" /> -->
+                <app-skill n="MySQL" [showTime]="showTime" />
+                <app-skill n="PL/SQL" [showTime]="showTime" />
+                <!-- <app-skill n="PL/1" [showTime]="showTime" /> -->
+                <!-- <app-skill n="DB2" [showTime]="showTime" /> -->
             </div>
         </div>
 
-        <div class="col-12 col-sm-12">
+        <div class="tipus-llenguatge col-12 col-sm-12">
             <div class="titol-tipus-llenguatge">
                 @if (m.ca) { Eines de desenvolupament }
                 @if (m.es) { Herramientas de desarrollo }
                 @if (m.en) { Software development tools }
             </div>
-            <div class="skills">
-                <app-skill n="Git"/>
-                <app-skill n="GitHub"/>
-                <!-- <app-skill n="Bitbucket"/> -->
-                <app-skill n="Sourcetree"/>
-                <app-skill n="Postman"/>
-                <!-- <app-skill n="Asana"/> -->
-                <app-skill n="SQL Developer"/>
-                <app-skill n="PHPMyadmin"/>
-                <!-- <app-skill n="Filezilla"/> -->
-                <app-skill n="Android Studio"/>
-                <!-- <app-skill n="PowerShell"/> -->
-                <app-skill n="Unity"/>
-                <app-skill n="Visual Studio"/>
-                <app-skill n="Eclipse"/>
-                <!-- <app-skill n="Netbeans"/> -->
-                <!-- <app-skill n="SVN"/> -->
-                <!-- <app-skill n="Hibernate"/> -->
-                <!-- <app-skill n="VSCode"/> -->
-                <app-skill n="Joomla"/>
-                <!-- <app-skill n="Poedit"/> -->
-                <!-- <app-skill n="FastReport"/> -->
-                <app-skill n="Agile"/>
-                <app-skill n="MVC"/>
-                <app-skill n="Responsive Web Design"/>
-                <!-- <app-skill n="TeamViewer"/> -->
-                <!-- <app-skill n="AnyDesk"/> -->
-                <!-- <app-skill n="Remote Desktop"/> -->
+            <div class="skills" [class.showTime]="showTime">
+                <app-skill n="Git" [showTime]="showTime" />
+                <app-skill n="GitHub" [showTime]="showTime" />
+                <!-- <app-skill n="Bitbucket" [showTime]="showTime" /> -->
+                <app-skill n="Sourcetree" [showTime]="showTime" />
+                <app-skill n="Postman" [showTime]="showTime" />
+                <!-- <app-skill n="Asana" [showTime]="showTime" /> -->
+                <app-skill n="SQL Developer" [showTime]="showTime" />
+                <app-skill n="PHPMyadmin" [showTime]="showTime" />
+                <!-- <app-skill n="Filezilla" [showTime]="showTime" /> -->
+                <app-skill n="Android Studio" [showTime]="showTime" />
+                <!-- <app-skill n="PowerShell" [showTime]="showTime" /> -->
+                <app-skill n="Unity" [showTime]="showTime" />
+                <app-skill n="Visual Studio" [showTime]="showTime" />
+                <app-skill n="Eclipse" [showTime]="showTime" />
+                <!-- <app-skill n="Netbeans" [showTime]="showTime" /> -->
+                <!-- <app-skill n="SVN" [showTime]="showTime" /> -->
+                <!-- <app-skill n="Hibernate" [showTime]="showTime" /> -->
+                <!-- <app-skill n="VSCode" [showTime]="showTime" /> -->
+                <app-skill n="Joomla" [showTime]="showTime" />
+                <!-- <app-skill n="Poedit" [showTime]="showTime" /> -->
+                <!-- <app-skill n="FastReport" [showTime]="showTime" /> -->
+                <app-skill n="Agile" [showTime]="showTime" />
+                <app-skill n="MVC" [showTime]="showTime" />
+                <app-skill n="Responsive Design" [showTime]="showTime" />
+                <!-- <app-skill n="TeamViewer" [showTime]="showTime" /> -->
+                <!-- <app-skill n="AnyDesk" [showTime]="showTime" /> -->
+                <!-- <app-skill n="Remote Desktop" [showTime]="showTime" /> -->
             </div>
         </div>
 
@@ -98,38 +111,38 @@
             </button>
         </div>
 
-        <div class="col-12 col-sm-6 skills-ocultes" style="display:none;">
+        <div class="tipus-llenguatge skills-ocultes col-12" [ngClass]="showTime ? 'col-sm-12' : 'col-sm-6'" style="display:none;">
             <div class="titol-tipus-llenguatge">
                 @if (m.ca) { Eines de virtualització i SO }
                 @if (m.es) { Herramientas de virtualización y SO }
                 @if (m.en) { Virtualization tools and OS }
             </div>
-            <div class="skills">
-                <app-skill n="VMware"/>
-                <app-skill n="VirtualBox"/>
-                <app-skill n="Windows"/>
-                <app-skill n="Windows Server"/>
-                <app-skill n="Ubuntu"/>
-                <app-skill n="Debian"/>
-                <app-skill n="Red Hat"/>
-                <app-skill n="Fedora"/>
-                <app-skill n="macOS"/>
-                <app-skill n="Tails"/>
-                <app-skill n="zOS/MVS"/>
+            <div class="skills" [class.showTime]="showTime">
+                <app-skill n="VMware" [showTime]="showTime" />
+                <app-skill n="VirtualBox" [showTime]="showTime" />
+                <app-skill n="Windows" [showTime]="showTime" />
+                <app-skill n="Windows Server" [showTime]="showTime" />
+                <app-skill n="Ubuntu" [showTime]="showTime" />
+                <app-skill n="Debian" [showTime]="showTime" />
+                <app-skill n="Red Hat" [showTime]="showTime" />
+                <app-skill n="Fedora" [showTime]="showTime" />
+                <app-skill n="macOS" [showTime]="showTime" />
+                <app-skill n="Tails" [showTime]="showTime" />
+                <app-skill n="zOS/MVS" [showTime]="showTime" />
             </div>
         </div>
 
-        <div class="col-12 col-sm-6 skills-ocultes" style="display:none;">
+        <div class="tipus-llenguatge skills-ocultes col-12" [ngClass]="showTime ? 'col-sm-12' : 'col-sm-6'" style="display:none;">
             <div class="titol-tipus-llenguatge">
                 @if (m.ca) { CMS i frameworks web }
                 @if (m.es) { CMS y frameworks web }
                 @if (m.en) { CMS and web frameworks }
             </div>
-            <div class="skills">
-                <app-skill n="Joomla"/>
-                <app-skill n="K2"/>
-                <app-skill n="Akeeba Backup"/>
-                <app-skill n="JCE FileManager"/>
+            <div class="skills" [class.showTime]="showTime">
+                <app-skill n="Joomla" [showTime]="showTime" />
+                <app-skill n="K2" [showTime]="showTime" />
+                <app-skill n="Akeeba Backup" [showTime]="showTime" />
+                <app-skill n="JCE FileManager" [showTime]="showTime" />
             </div>
         </div>
         

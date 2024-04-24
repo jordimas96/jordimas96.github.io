@@ -23,6 +23,7 @@ export class ExperienceCalculatorService {
             nom: "DSET (Pràctiques)",
             dates: ["2016-2-1", "2016-7-14"],
             skills: [
+                "Frontend",
                 "JavaScript", "CSS", "HTML5", "Cordova",
                 "Fedora", "macOS",
                 "VMware", "VirtualBox",
@@ -32,15 +33,17 @@ export class ExperienceCalculatorService {
             nom: "Nexxia (Pràctiques)",
             dates: ["2016-10-17", "2017-2-28"],
             skills: [
+                "Frontend",
                 "JavaScript", "JQuery", "CSS", "HTML5", "Bootstrap",
                 "Delphi", "FastReport",
-                "Responsive Web Design",
+                "Responsive Design",
             ]
         },
         { // Beca Indra //
             nom: "Beca Indra",
             dates: ["2017-7-3", "2017-7-31"],
             skills: [
+                "Backend",
                 "Java", "JSP", "Maven",
                 "Netbeans", "Eclipse", "SVN",
                 "Windows Server", "Remote Desktop", "TeamViewer",
@@ -51,6 +54,7 @@ export class ExperienceCalculatorService {
             nom: "Indra",
             dates: ["2017-9-4", "2019-3-8"],
             skills: [
+                "Backend",
                 "Java", "JSP", "Maven",
                 "SQL Developer",
                 "Netbeans", "Eclipse", "SVN",
@@ -62,6 +66,7 @@ export class ExperienceCalculatorService {
             nom: "Matic",
             dates: ["2020-9-7", "2021-6-25"],
             skills: [
+                "Frontend", "Backend",
                 "JavaScript", "JQuery", "CSS", "HTML5", "Bootstrap", "Materialize",
                 "Cordova", "UWP",
                 "NodeJs", "Sequelize", "PHP",
@@ -70,13 +75,14 @@ export class ExperienceCalculatorService {
                 "PowerShell",
                 "Joomla", "K2", "Akeeba Backup", "JCE FileManager",
                 "Windows Server", "Remote Desktop", "AnyDesk",
-                "Agile", "MVC", "Responsive Web Design",
+                "Agile", "MVC", "Responsive Design",
             ]
         },
         { // In2art // -
             nom: "In2art",
             dates: ["2021-8-31", "2023-6-30"],
             skills: [
+                "Frontend",
                 "Angular", "CSS", "SASS", "TypeScript", "JavaScript", "JQuery", "HTML5", "Bootstrap", "Materialize",
                 "NodeJs",
                 "JSON",
@@ -84,13 +90,14 @@ export class ExperienceCalculatorService {
                 "Filezilla", "Apache", "Git", "Sourcetree",
                 "PowerShell",
                 "Postman", "Asana", "Poedit",
-                "MVC", "Agile", "Responsive Web Design",
+                "MVC", "Agile", "Responsive Design",
             ]
         },
         { // CodiTramuntana // -
             nom: "CodiTramuntana",
             dates: ["2023-7-1", "2023-8-22"],
             skills: [
+                "Frontend", "Backend",
                 "Ruby on Rails",
                 "Red Hat",
                 "SQL Developer",
@@ -101,6 +108,7 @@ export class ExperienceCalculatorService {
             nom: "Orange",
             dates: ["2023-8-23", "2023-11-3"],
             skills: [
+                "Backend",
                 "Java", "WebLogic", "Eclipse", "Maven",
                 "SQL Developer",
                 "Jira", "Confluence", "GitLab", "JFrog Artifactory",
@@ -113,6 +121,7 @@ export class ExperienceCalculatorService {
             nom: "Evora",
             dates: ["2023-11-6",],
             skills: [
+                "Frontend",
                 "Angular", "NgRx", "TypeScript", "JavaScript", "CSS", "SASS", "Materialize",
                 "PWA", "Cordova",
                 "Git",
@@ -200,6 +209,7 @@ export class ExperienceCalculatorService {
         return this.construirCadenaTempsExp(this.experienciaPerSkills[skill].anysMesosDies);
     }
     construirCadenaTempsExp([anys, mesos, dies]: Array<number>) {
+        // 5 años, 9 meses y 29 días // 5 años y 10 meses // 5 años y 1 día //
         const index = this.m.idiomaIndex;
         const textAnys = [["any", "anys"], ["año", "años"], ["year", "years"]][index];
         const textMesos = [["mes", "mesos"], ["mes", "meses"], ["month", "months"]][index];
@@ -215,6 +225,19 @@ export class ExperienceCalculatorService {
         if (cadenes.length == 2) return `${cadenes[0]} ${conjuncio} ${cadenes[1]}`;
         if (cadenes.length == 1) return `${cadenes[0]}`;
         return "";
+    }
+    construirCadenaTempsExpCurta([anys, mesos, dies]: Array<number>) {
+        if (dies && dies >= 15)
+            mesos++;
+
+        const index = this.m.idiomaIndex;
+        const textAnys = ["a", "a", "y"][index];
+
+        let text: string = "";
+        if (anys > 0) text += anys + textAnys+" ";
+        if (mesos > 0) text += mesos + "m";
+
+        return text;
     }
 
 }
