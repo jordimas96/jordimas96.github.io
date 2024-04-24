@@ -12,7 +12,7 @@ export class SkillComponent {
 
     @Input("n") nom: string;
 
-    nomAClasse(s) {
+    normalitzar(s) {
         return s
             .normalize()
             .toLowerCase()
@@ -30,19 +30,6 @@ export class SkillComponent {
     }
 
     getAnysExp() {
-        let n = {
-            "angular": 2.5,
-            "jquery": 4,
-            "javascript": 4,
-            "css": 4,
-        }[this.nomAClasse(this.nom)] || "";
-        if (!n) return "";
-        else {
-            return [
-                `${n} anys d'experiència`,
-                `${n} años de experiencia`,
-                `${n} experience years`,
-            ][this.m.idiomaIndex];
-        }
+        return this.m.exp.getTextExp(this.nom);
     }
 }

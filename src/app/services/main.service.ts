@@ -5,6 +5,7 @@ import { AppbarComponent } from "../components/appbar/appbar.component";
 import { IndexComponent } from "../components/index/index.component";
 import { SidebarComponent } from "../components/sidebar/sidebar.component";
 import { Utils } from "../shared/utils";
+import { ExperienceCalculatorService } from "./experience-calculator.service";
 import { ThemeService } from "./theme.service";
 
 // https://developerslogblog.wordpress.com/2019/04/23/how-to-use-angular-services-to-share-data-between-components/ //
@@ -17,6 +18,7 @@ export class MainService {
     public appbar!: AppbarComponent;
     public sidebar: SidebarComponent;
     public index: IndexComponent;
+    public exp: ExperienceCalculatorService;
 
     // Services //
     public u;
@@ -39,9 +41,14 @@ export class MainService {
         public router: Router,
         public route: ActivatedRoute,
         public gas: GoogleAnalyticsService,
-        public ts: ThemeService
+        public ts: ThemeService,
     ) {
         this.u = Utils;
+
+        // Inicialitzar serveis //
+        new ExperienceCalculatorService(this);
+
+        
         
         // Ajustos NOMÉS al debugar //
         if (this.debug) {

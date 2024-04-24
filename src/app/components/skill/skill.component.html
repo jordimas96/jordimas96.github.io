@@ -1,3 +1,7 @@
-<div class="chip {{nomAClasse(nom)}}" appMostrarAmbAnimacio>{{nom}}</div>
-<!-- [title]="getAnysExp()" -->
-<!-- (click)="buscarGoogle(nom)" -->
+<div
+    class="chip {{normalitzar(nom)}}"
+    [title]="getAnysExp()"
+    appMostrarAmbAnimacio>
+    {{nom}}
+     <!-- - {{m.exp.getSkill(nom).diesTotals}} -->
+</div>
