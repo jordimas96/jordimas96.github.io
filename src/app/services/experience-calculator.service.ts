@@ -108,8 +108,9 @@ export class ExperienceCalculatorService {
             nom: "Orange",
             dates: ["2023-08-23", "2023-11-03"],
             skills: [
-                "Backend",
+                "Frontend", "Backend",
                 "Java", "WebLogic", "Eclipse", "Maven",
+                "Angular",
                 "SQL Developer",
                 "Jira", "Confluence", "GitLab", "JFrog Artifactory",
                 "TortoiseGit",
