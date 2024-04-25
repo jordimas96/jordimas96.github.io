@@ -2,7 +2,7 @@
 
 .chip {
     --text: var(--color-0);
-    --fons: var(--color-6);
+    --fons: var(--color-9);
 
     color: var(--text);
     background-color: var(--fons);
@@ -19,6 +19,9 @@
 }
 
 .showTime {
+    --text: var(--color-0);
+    --fons: var(--color-6);
+
     display: flex;
     justify-content: space-between;
     gap: 0.5rem;
