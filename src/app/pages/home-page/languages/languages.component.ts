@@ -42,10 +42,14 @@ export class LanguagesComponent extends CardComponent {
 
         Utils.setCookieDays("showTime", this.showTime ? 1 : 0);
     }
-    sort_click(sorted?) {
+    async sort_click(sorted?) {
         if (sorted != undefined) this.sorted = sorted
         else this.sorted = !this.sorted;
 
+        // Enviem els divs molt lluny i els fem tornar per a llançar l'efecte de appMostrarAmbAnimacio //
+        $("app-skill").css({ "transform": "translateY(-100000px)" });
+        await Utils.wait(10);
+        
         // Afegim o traiem l'estil order per a ordenar elements dins el flex //
         if (this.sorted) {
             $("app-skill").each((i, e) => {
@@ -55,6 +59,10 @@ export class LanguagesComponent extends CardComponent {
         } else {
             $("app-skill").css("order", "");
         }
+        
+        await Utils.wait(10);
+        $("app-skill").css({ "transform": "" });
+
     }
 
     obrirVeureMesSkills() {
