@@ -35,5 +35,5 @@ export class LanguagesComponent extends CardComponent {
         $("#divBotoVeureMes").slideUp();
         $(".skills-ocultes").slideDown();
     }
-    
+
 }

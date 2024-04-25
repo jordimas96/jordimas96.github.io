@@ -2,7 +2,7 @@
 
 .chip {
     --text: var(--color-0);
-    --fons: var(--color-8);
+    --fons: var(--color-6);
 
     color: var(--text);
     background-color: var(--fons);
@@ -77,8 +77,9 @@
 
 
 
-
-
+::ng-deep .vespre .chip {
+    --fons: var(--color-8);
+}
 
 
 

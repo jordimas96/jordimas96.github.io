@@ -41,7 +41,7 @@
         <div class="text-justify">
             @if (m.ca) {
                 Sóc un apassionat programador especialitzat en frontend i UI/UX, amb
-                <span class="tempsExp tooltipExp">{{anysExp}} anys d'experiència<div>{{m.exp.getTextExp("_total")}}</div></span>
+                <span class="tempsExp tooltipExp">{{anysExp || "diversos"}} anys d'experiència<div>{{m.exp.getTextExp("_total")}}</div></span>
                 en Angular, CSS, Javascript, jQuery, Python i C#, entre altres. També he participat en fullstack, backend i Android quan ha sigut necessari.
                 <br><br>
                 Els meus esforços se centren en la creació d'interfícies d'usuari atractives, intuïtives, ergonòmiques i personalitzades per a proporcionar una experiència d'usuari tan agradable com sigui possible.
@@ -50,7 +50,7 @@
             }
             @if (m.es) {
                 Soy un apasionado programador especializado en frontend y UI/UX, con
-                <span class="tempsExp tooltipExp">{{anysExp}} años de experiencia<div>{{m.exp.getTextExp("_total")}}</div></span>
+                <span class="tempsExp tooltipExp">{{anysExp || "varios"}} años de experiencia<div>{{m.exp.getTextExp("_total")}}</div></span>
                 en Angular, CSS, Javascript, jQuery, Python y C#, entre otros. También he participado en fullstack, backend y Android cuando ha sido necesario.
                 <br><br>
                 Mis esfuerzos se centran en la creación de interfaces de usuario atractivas, intuitivas, ergonómicas y personalizadas para proporcionar una experiencia de usuario lo más agradable posible.
@@ -59,7 +59,7 @@
             }
             @if (m.en) {
                 I am a passionate programmer specialized in frontend and UI/UX, with
-                <span class="tempsExp tooltipExp">{{anysExp}} years of experience<div>{{m.exp.getTextExp("_total")}}</div></span>
+                <span class="tempsExp tooltipExp">{{anysExp || "some"}} years of experience<div>{{m.exp.getTextExp("_total")}}</div></span>
                 working with Angular, CSS, Javascript, jQuery, Python and C#, among others. I have also participated in fullstack, backend and Android when necessary.
                 <br><br>
                 My efforts focus on creating attractive, intuitive, ergonomic and personalized user interfaces to provide the most pleasant user experience possible.

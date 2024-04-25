@@ -21,7 +21,7 @@ export class ExperienceCalculatorService {
     private experienciaJSON = [
         { // DSET (Pràctiques) //
             nom: "DSET (Pràctiques)",
-            dates: ["2016-2-1", "2016-7-14"],
+            dates: ["2016-02-01", "2016-07-14"],
             skills: [
                 "Frontend",
                 "JavaScript", "CSS", "HTML5", "Cordova",
@@ -31,7 +31,7 @@ export class ExperienceCalculatorService {
         },
         { // Nexxia (Pràctiques) //
             nom: "Nexxia (Pràctiques)",
-            dates: ["2016-10-17", "2017-2-28"],
+            dates: ["2016-10-17", "2017-02-28"],
             skills: [
                 "Frontend",
                 "JavaScript", "JQuery", "CSS", "HTML5", "Bootstrap",
@@ -41,7 +41,7 @@ export class ExperienceCalculatorService {
         },
         { // Beca Indra //
             nom: "Beca Indra",
-            dates: ["2017-7-3", "2017-7-31"],
+            dates: ["2017-07-03", "2017-07-31"],
             skills: [
                 "Backend",
                 "Java", "JSP", "Maven",
@@ -52,7 +52,7 @@ export class ExperienceCalculatorService {
         },
         { // Indra //
             nom: "Indra",
-            dates: ["2017-9-4", "2019-3-8"],
+            dates: ["2017-09-04", "2019-03-08"],
             skills: [
                 "Backend",
                 "Java", "JSP", "Maven",
@@ -64,7 +64,7 @@ export class ExperienceCalculatorService {
         },
         { // Matic //
             nom: "Matic",
-            dates: ["2020-9-7", "2021-6-25"],
+            dates: ["2020-09-07", "2021-06-25"],
             skills: [
                 "Frontend", "Backend",
                 "JavaScript", "JQuery", "CSS", "HTML5", "Bootstrap", "Materialize",
@@ -80,7 +80,7 @@ export class ExperienceCalculatorService {
         },
         { // In2art // -
             nom: "In2art",
-            dates: ["2021-8-31", "2023-6-30"],
+            dates: ["2021-08-31", "2023-06-30"],
             skills: [
                 "Frontend",
                 "Angular", "CSS", "SASS", "TypeScript", "JavaScript", "JQuery", "HTML5", "Bootstrap", "Materialize",
@@ -95,7 +95,7 @@ export class ExperienceCalculatorService {
         },
         { // CodiTramuntana // -
             nom: "CodiTramuntana",
-            dates: ["2023-7-1", "2023-8-22"],
+            dates: ["2023-07-01", "2023-08-22"],
             skills: [
                 "Frontend", "Backend",
                 "Ruby on Rails",
@@ -106,7 +106,7 @@ export class ExperienceCalculatorService {
         },
         { // Orange //
             nom: "Orange",
-            dates: ["2023-8-23", "2023-11-3"],
+            dates: ["2023-08-23", "2023-11-03"],
             skills: [
                 "Backend",
                 "Java", "WebLogic", "Eclipse", "Maven",
@@ -119,7 +119,7 @@ export class ExperienceCalculatorService {
         },
         { // Evora // -
             nom: "Evora",
-            dates: ["2023-11-6",],
+            dates: ["2023-11-06",],
             skills: [
                 "Frontend",
                 "Angular", "NgRx", "TypeScript", "JavaScript", "CSS", "SASS", "Materialize",
