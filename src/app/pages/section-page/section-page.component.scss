@@ -6,12 +6,16 @@
 //     color: var(--fons) !important;
 // }
 
+::ng-deep app-index {
+    display: none !important;
+}
+
+
+
 .botoBack {
     font-size: 1.5rem;
     color: var(--color-7);
 }
-
-
 
 .sectionList {
     display: flex;

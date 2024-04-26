@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { NavigationEnd } from '@angular/router';
 import { MainService } from 'src/app/services/main.service';
 import { Utils } from 'src/app/shared/utils';
 
@@ -20,6 +21,12 @@ export class SidebarComponent {
     ngOnInit() {
         this.m.afterRootFadeIn(this.afterRootFadeIn.bind(this));
 
+        this.m.router.events.subscribe(event => {
+            if (event instanceof NavigationEnd) {
+                this.m.u.scroll(0);
+                this.open = false;
+            }
+        });
     }
 
     afterRootFadeIn() {

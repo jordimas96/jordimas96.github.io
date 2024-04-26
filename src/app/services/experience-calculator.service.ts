@@ -227,6 +227,24 @@ export class ExperienceCalculatorService {
         if (cadenes.length == 1) return `${cadenes[0]}`;
         return "";
     }
+    construirCadenaTempsExp_anysMesos([anys, mesos, dies]: Array<number>) {
+        // 5 años y 10 meses // 6 años //
+        if (dies && dies >= 15)
+            mesos++;
+
+        const index = this.m.idiomaIndex;
+        const textAnys = [["any", "anys"], ["año", "años"], ["year", "years"]][index];
+        const textMesos = [["mes", "mesos"], ["mes", "meses"], ["month", "months"]][index];
+        const conjuncio = this.m.conjuncio;
+
+        let cadenes: Array<string> = [];
+        if (anys > 0) cadenes.push(anys + " " + (anys == 1 ? textAnys[0] : textAnys[1]));
+        if (mesos > 0) cadenes.push(mesos + " " + (mesos == 1 ? textMesos[0] : textMesos[1]));
+        
+        if (cadenes.length == 2) return `${cadenes[0]} ${conjuncio} ${cadenes[1]}`;
+        if (cadenes.length == 1) return `${cadenes[0]}`;
+        return "";
+    }
     construirCadenaTempsExpCurta([anys, mesos, dies]: Array<number>) {
         if (dies && dies >= 15)
             mesos++;

@@ -7,6 +7,8 @@
 
     <div class="botonsCanviarVista mt-2 mb-0">
         <button class="boto botoShowTime" (click)="showExpTime_click()">
+            @if(showTime) { <i class="fa-regular fa-calendar-minus"></i> }
+            @else { <i class="fa-regular fa-calendar-plus"></i> }
             @if (m.ca) { {{ showTime ? "Ocultar temps" : "Mostrar temps" }} }
             @if (m.es) { {{ showTime ? "Ocultar tiempo" : "Mostrar tiempo" }} }
             @if (m.en) { {{ showTime ? "Hide time" : "Show time" }} }

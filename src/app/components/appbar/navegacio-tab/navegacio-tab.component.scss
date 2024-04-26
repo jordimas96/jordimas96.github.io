@@ -23,8 +23,8 @@
 
         // padding: 0.25rem 1rem;
         padding: 0.125rem 0.5rem;
-        font-size: 1rem;
-        border-radius: 1rem; //0.75rem
+        font-size: 1.2rem;
+        border-radius: 10rem; //0.75rem
 
         z-index: 2;
 
@@ -40,7 +40,7 @@
 .pill {
     position: absolute;
     background-color: var(--text-90);
-    border-radius: 1rem; //0.75rem
+    border-radius: 10rem; //0.75rem
     z-index: 1;
 }
 

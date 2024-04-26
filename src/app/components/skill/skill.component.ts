@@ -40,6 +40,12 @@ export class SkillComponent {
         else
             return this.m.exp.construirCadenaTempsExpCurta(this.m.exp.experienciaPerSkills[skill].anysMesosDies);
     }
+    getText(skill: string) {
+        if (!this.m.exp.experienciaPerSkills[skill])
+            return "";
+        else
+            return this.m.exp.construirCadenaTempsExp_anysMesos(this.m.exp.experienciaPerSkills[skill].anysMesosDies);
+    }
     getNivellBarra() {
         return (this.m.exp.getSkill(this.nom).diesTotals || 0) / this.m.exp.getSkill("_total").diesTotals * 100;
     }
