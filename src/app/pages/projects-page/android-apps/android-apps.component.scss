@@ -2,7 +2,7 @@
 
 
 
-.group {
+.section {
     a.link-img {
         img.title-icon {
             transition: transform 0.3s;
@@ -42,7 +42,7 @@
 
 
 // Afegim filtre forçat per a que es vegi bé l'icona en mode clar //
-.light :host .group-title .title-icon {
+.light :host .section-title .title-icon {
     filter: brightness(0.7) saturate(2);
 }
 
@@ -50,7 +50,7 @@
 
 // Pantalla Mòbil //
 @media only screen and (max-width: 575px) {
-    .group .boto-i-qr {
+    .section .boto-i-qr {
         flex-direction: column;
         row-gap: 1rem;
     }

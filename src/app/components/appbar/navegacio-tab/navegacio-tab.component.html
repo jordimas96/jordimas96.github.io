@@ -1,20 +1,20 @@
-<div class="contenidor">
-    <button id="navegacio-tab-home" class="flex-4" routerLinkActive="selected" [routerLinkActiveOptions]="{exact: true}" routerLink="/">
+<nav>
+    <button id="navegacio-tab-home" class="flex-4" routerLinkActive="selected" [routerLinkActiveOptions]="{exact: true}" routerLink="/" (click)="m.u.scroll(0)">
         @if (m.ca) { Inici }
         @if (m.es) { Inicio }
         @if (m.en) { Home }
     </button>
-    <button id="navegacio-tab-experience" class="flex-10" routerLinkActive="selected" [routerLinkActiveOptions]="{exact: true}" routerLink="/experience">
+    <button id="navegacio-tab-experience" class="flex-10" routerLinkActive="selected" [routerLinkActiveOptions]="{exact: true}" routerLink="/experience" (click)="m.u.scroll(0)">
         @if (m.ca) { Experiència }
         @if (m.es) { Experiencia }
         @if (m.en) { Experience }
     </button>
-    <button id="navegacio-tab-projects" class="flex-8" routerLinkActive="selected" [routerLinkActiveOptions]="{exact: true}" routerLink="/projects">
+    <button id="navegacio-tab-projects" class="flex-8" routerLinkActive="selected" [routerLinkActiveOptions]="{exact: true}" routerLink="/projects" (click)="m.u.scroll(0)">
         @if (m.ca) { Projectes }
         @if (m.es) { Proyectos }
         @if (m.en) { Projects }
     </button>
-    <button id="navegacio-tab-art" class="flex-3" routerLinkActive="selected" [routerLinkActiveOptions]="{exact: true}" routerLink="/art">
+    <button id="navegacio-tab-art" class="flex-3" routerLinkActive="selected" [routerLinkActiveOptions]="{exact: true}" routerLink="/art" (click)="m.u.scroll(0)">
         @if (m.ca) { Art }
         @if (m.es) { Arte }
         @if (m.en) { Art }
@@ -22,6 +22,6 @@
     
     <div #pill class="pill"></div>
     
-</div>
+</nav>
 
 <!-- Jordi Mas Parramon - xordimas@gmail.com - https://github.com/jordimas96 -->

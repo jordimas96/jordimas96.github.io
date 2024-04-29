@@ -2,7 +2,7 @@
 
 
 
-.group {
+.section {
     overflow: hidden;
     
     a.link-img {
@@ -51,7 +51,7 @@
         }
     }
 
-    .group .repos .repo:hover {
+    .section .repos .repo:hover {
         transform: scale(1.06);
         img {
             transform: scale(1.2);

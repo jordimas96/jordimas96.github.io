@@ -1,4 +1,4 @@
-<div id="languages" class="group llenguatges text-center mb-6" >
+<section id="languages" class="llenguatges section text-center mb-6" >
     <div class="titol-llenguatges">
         @if (m.ca) { Habilitats en programació }
         @if (m.es) { Habilidades en programación }
@@ -22,7 +22,7 @@
     </div>
 
     <div class="row justify-content-center">
-        <div class="tipus-llenguatge col-12 col-lg-6">
+        <div class="tipus-llenguatge col-12 col-lg-6" [ngClass]="!showTime ? 'col-sm-6' : ''">
             <div class="titol-tipus-llenguatge">Frontend</div>
             <div class="skills" [class.showTime]="showTime">
                 @if(showTime) {
@@ -49,7 +49,7 @@
             </div>
         </div>
 
-        <div class="tipus-llenguatge col-12 col-lg-6">
+        <div class="tipus-llenguatge col-12 col-lg-6" [ngClass]="!showTime ? 'col-sm-6' : ''">
             <div class="titol-tipus-llenguatge">Backend</div>
             <div class="skills" [class.showTime]="showTime">
                 @if(showTime) {
@@ -158,4 +158,4 @@
         
     </div>
     
-</div>
+</section>

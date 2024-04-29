@@ -132,9 +132,9 @@
 }
 
 // Establir variables mode fosc i clar //
-// Afegeixo els .group per a que utilitzin els colors respectius segons les variables. //
+// Afegeixo els .section per a que utilitzin els colors respectius segons les variables. //
 // Caldria afegir aquí totes les classes a on es necessitessin remapejar els colors //
-:root, :root .group, :root [class^="tema-"], [class*="tema-"] {
+:root, :root .section, :root [class^="tema-"], [class*="tema-"] {
     --color-fosc:    hsla(var(--color-fosc-hsl-vals), 1.0);
     --color-fosc-90: hsla(var(--color-fosc-hsl-vals), 0.9);
     --color-fosc-80: hsla(var(--color-fosc-hsl-vals), 0.8);
@@ -189,7 +189,7 @@
     --color-9: var(--color-l-9);
 }
 
-:root.light, :root.light .group, :root.light [class^="tema-"], :root.light [class*="tema-"] {
+:root.light, :root.light .section, :root.light [class^="tema-"], :root.light [class*="tema-"] {
     --fons: var(--color-clar);
     --fons-90: var(--color-clar-90);
     --fons-80: var(--color-clar-80);

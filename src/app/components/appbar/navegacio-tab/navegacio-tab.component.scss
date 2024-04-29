@@ -1,6 +1,6 @@
 @import "src/styles.scss";
 
-.contenidor {
+nav {
     position: relative;
     display: flex;
     flex-wrap: wrap;
@@ -55,7 +55,7 @@
 @media only screen and (max-width: 575px) { }
 // Pantalla Tablet //
 @media only screen and (min-width: 576px) {
-    .contenidor {
+    nav {
         button {
             font-size: 1.2rem;
         }
@@ -63,7 +63,7 @@
 }
 // Pantalla PC //
 @media only screen and (min-width: 768px) {
-    .contenidor {
+    nav {
         button {
             font-size: 1.3rem;
             padding: 0.125rem 1.5rem !important;
@@ -73,7 +73,7 @@
 
 // Pantalla Molt Gran //
 @media only screen and (min-width: 992px) {
-    .contenidor {
+    nav {
         width: fit-content;
         button {
             font-size: 1.5rem;
@@ -86,7 +86,7 @@
 
 // PC //
 @media (pointer: fine) {
-    .contenidor {
+    nav {
         gap: 0.25rem;
         
         button {

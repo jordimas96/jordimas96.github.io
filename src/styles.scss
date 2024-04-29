@@ -64,7 +64,7 @@ body {
         gap: 0.5rem;
     }
 }
-.group {
+.section {
     color: var(--text);
     background-color: var(--fons-50);
     backdrop-filter: blur(40px);
@@ -73,7 +73,7 @@ body {
     padding: 1rem;
     border-radius: 2rem;
 
-    .group-title {
+    .section-title {
         font-size: 1.75rem;
     }
     .text {
@@ -304,8 +304,8 @@ img, .noselect {
 ///////////////////
 // Pantalla Mòbil //
 @media only screen and (max-width: 575px) {
-    .group {
-        .group-title {
+    .section {
+        .section-title {
             font-size: 1.4rem;
         }
     }
@@ -315,7 +315,7 @@ img, .noselect {
 }
 // Pantalla Tablet //
 @media only screen and (min-width: 576px) {
-    .group {
+    .section {
         padding: 1.3rem 2rem 2rem;
         border-radius: 2.5rem;
     }
