@@ -83,7 +83,7 @@ export class ExperienceCalculatorService {
             dates: ["2021-08-31", "2023-06-30"],
             skills: [
                 "Frontend",
-                "Angular", "CSS", "SASS", "TypeScript", "JavaScript", "JQuery", "HTML5", "Bootstrap", "Materialize",
+                "Angular", "CSS", "SASS", "TypeScript", "JavaScript", "JQuery", "HTML5", "Bootstrap", "Materialize", "i18n",
                 "NodeJs",
                 "JSON",
                 "MySQL", "PHPMyadmin",

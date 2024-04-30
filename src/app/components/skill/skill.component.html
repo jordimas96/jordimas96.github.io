@@ -9,6 +9,7 @@
 } @else {
     <div
         class="chip showTime {{normalitzar(nom)}}"
+        [title]="getAnysExp()"
         appMostrarAmbAnimacio>
         <div class="nom">
             {{nom}}
