@@ -14,7 +14,8 @@ export class PageComponent {
         this.m.afterRootFadeIn(this.afterRootFadeIn.bind(this));
         
         // Google Analytics //
-        if (!this.m.debug) this.m.gas.pageView(window.location.pathname);
+        if (!localStorage.getItem("googleAnalyticsBlocked"))
+            this.m.gas.pageView(window.location.pathname);
     }
 
     afterRootFadeIn() { }

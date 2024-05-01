@@ -24,11 +24,15 @@
     <!-- Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-W0GMXKXDST"></script>
     <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag(){ dataLayer.push(arguments); }
-        gtag('js', new Date());
+        if (!localStorage.getItem("googleAnalyticsBlocked")) {
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){ dataLayer.push(arguments); }
+            gtag('js', new Date());
 
-        gtag('config', 'G-W0GMXKXDST');
+            gtag('config', 'G-W0GMXKXDST');
+        } else {
+            window['ga-disable-G-W0GMXKXDST'] = true;
+        }
     </script>
     
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">

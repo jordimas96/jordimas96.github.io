@@ -45,4 +45,28 @@ export class SidebarComponent {
         this.open = false;
         $("#page, .index-mobil, .index-pc").css({ "transform": "" });
     }
+
+
+    // Google Analytics //
+    private numClicks = 1;
+    private lastClickTime: number = 0;
+    blockAnalyticsClick() {
+        if (localStorage.getItem("googleAnalyticsBlocked")) return;
+
+        const currentTime = Date.now();
+        const elapsedTime = currentTime - this.lastClickTime;
+        this.lastClickTime = currentTime;
+    
+        if (elapsedTime < 300)
+            this.numClicks++;
+        else
+            this.numClicks = 1;
+
+        if (this.m.debug) console.log("click " + this.numClicks);        
+    
+        if (this.numClicks >= 10) {
+            Utils.blockGoogleAnalytics();
+            alert("Google Analytics blocked on this device");
+        }
+    }
 }

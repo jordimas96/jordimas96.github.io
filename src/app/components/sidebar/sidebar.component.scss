@@ -71,9 +71,14 @@
     width: 20%;
 }
 
-
-
-
+// Google Analytics //
+.hiddenButtonBlockGoogleAnalytics {
+    position: absolute;
+    top: 0; right: 0;
+    width: 20px;
+    height: 20px;
+    opacity: 0;
+}
 
 
 

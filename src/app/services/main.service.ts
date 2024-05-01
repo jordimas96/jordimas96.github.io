@@ -56,9 +56,14 @@ export class MainService {
             document.title = "Local";
             document.querySelector("link[rel*='icon']")!["href"] = "assets/favicon-local.ico";
             document.body.style.overflowX = "visible";
+
+            // Google Analytics //
+            localStorage.setItem("googleAnalyticsBlocked", "1");
         } else {
             this.printarFirmaAConsola();
         }
+        if (localStorage.getItem("googleAnalyticsBlocked"))
+            Utils.blockGoogleAnalytics();
     }
     onInit() { }
 
