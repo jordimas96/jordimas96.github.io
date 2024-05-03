@@ -30,11 +30,12 @@ export class ThemeService {
         // Colors: matinada, matí, tarda, vespre, nit //
         const primeraHoraNit = 1;
         const primeraHoraMatinada = 6;
-        const primeraHoraMati = 9;
+        const primeraHoraMati = 10;
         const primeraHoraTarda = 15;
         const primeraHoraVespre = 20;
 
-        // |12345|678|901234|56789|01230 //
+        // |12345|6789|01234|56789|01230 //
+        //   Nit  mtnd mati   trd  vesp //
 
         if (horaActual >= primeraHoraNit && horaActual < primeraHoraMatinada)
             this.tema = "nit";

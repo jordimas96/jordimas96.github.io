@@ -1,24 +1,27 @@
 @if (!showTime) {
-    <div
-        class="chip {{normalitzar(nom)}}"
-        [title]="getAnysExp()"
-        appMostrarAmbAnimacio>
-        {{nom}}
-        <!-- - {{m.exp.getSkill(nom).diesTotals}} -->
-    </div>
+    <section class="{{normalitzar(nom)}}">
+        <div
+            class="chip"
+            [title]="getAnysExp()"
+            appMostrarAmbAnimacio>
+            {{nom}}
+            <!-- - {{m.exp.getSkill(nom).diesTotals}} -->
+        </div>
+    </section>
 } @else {
-    <div
-        class="chip showTime {{normalitzar(nom)}}"
-        [title]="getAnysExp()"
-        appMostrarAmbAnimacio>
-        <div class="nom">
+    <section class="showTime {{normalitzar(nom)}}" appMostrarAmbAnimacio>
+        <div
+            class="chip"
+            [title]="getAnysExp()">
             {{nom}}
         </div>
+
         <div class="barra">
             <div class="nivell" [style.width.%]="getNivellBarra()"> {{getTextCurt(nom)}} </div>
         </div>
         <!-- <div class="textExp">
             {{getTextCurt(nom)}}
         </div> -->
-    </div>
+
+    </section>
 }
