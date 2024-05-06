@@ -20,12 +20,17 @@ section.showTime {
     display: flex;
     gap: 0.25rem;
 
+    width: 100%;
     padding: 0.25rem;
     border-radius: 1.2rem;
 
     cursor: default;
 
     // box-shadow: 0px 30px 25px -30px #00000045 inset, 0px -30px 25px -30px #ffffff45 inset !important;
+
+    &:hover {
+        filter: brightness(1.25);
+    }
 
     .chip {
         width: 163px;
@@ -81,17 +86,23 @@ section.showTime {
 // Tooltip //
 .tooltipExp {
     position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 
     > .tooltip-card {
         visibility: hidden;
         position: absolute;
         // left: 0; right: 0;
         // translate: -50%;
+        max-width: 80%;
         padding: 0.3rem 0.8rem;
+        top: 100%;
         margin-top: 5px;
-        border-radius: 0.7rem;
+        border-radius: 1rem;
         background-color: hsl(var(--h), var(--s), 90%);
-        color: var(--color-fosc);
+        color: hsl(var(--h), var(--s), 20%);
+        white-space: pre-line;
         user-select: none;
         z-index: 1000;
 
@@ -105,7 +116,7 @@ section.showTime {
             margin-left: -5px;
             border-width: 5px;
             border-style: solid;
-            border-color: transparent transparent hsl(var(--h), var(--s), 95%) transparent;
+            border-color: transparent transparent hsl(var(--h), var(--s), 90%) transparent;
           }
     }
     &:hover > .tooltip-card { visibility: visible; }

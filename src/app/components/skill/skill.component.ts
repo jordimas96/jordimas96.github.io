@@ -35,24 +35,33 @@ export class SkillComponent {
     getAnysExp() {
         return this.m.exp.getTextExp(this.nom);
     }
-    getTextCurt(skill: string) {
-        if (!this.m.exp.experienciaPerSkills[skill])
+    getTextCurt() {
+        if (!this.m.exp.experienciaPerSkills[this.nom])
             return "";
         else
-            return this.m.exp.construirCadenaTempsExpCurta(this.m.exp.experienciaPerSkills[skill].anysMesosDies);
+            return this.m.exp.construirCadenaTempsExpCurta(this.m.exp.experienciaPerSkills[this.nom].anysMesosDies);
     }
-    getText(skill: string) {
-        if (!this.m.exp.experienciaPerSkills[skill])
+    getText_anysMesosDies() {
+        if (!this.m.exp.experienciaPerSkills[this.nom])
             return "";
         else
-            return this.m.exp.construirCadenaTempsExp_anysMesos(this.m.exp.experienciaPerSkills[skill].anysMesosDies);
+            return this.m.exp.construirCadenaTempsExp(this.m.exp.experienciaPerSkills[this.nom].anysMesosDies);
+    }
+    getText_anysMesos() {
+        if (!this.m.exp.experienciaPerSkills[this.nom])
+            return "";
+        else
+            return this.m.exp.construirCadenaTempsExp_anysMesos(this.m.exp.experienciaPerSkills[this.nom].anysMesosDies);
     }
     getNivellBarra() {
         return (this.m.exp.getSkill(this.nom).diesTotals || 0) / this.m.exp.getSkill("_total").diesTotals * 100;
     }
     getTextTooltip() {
         if (this.m.exp.getSkill(this.nom).empreses?.length) {
-            return Utils.addConjunctionBetweenThe2Last(this.m.exp.getSkill(this.nom).empreses, this.m.conjuncio);
+            return this.getText_anysMesosDies() + // 2 years, 6 months and 9 days //
+                "\n" +
+                ["en", "en", "in"][this.m.idiomaIndex] + " " + // in //
+                Utils.addConjunctionBetweenThe2Last(this.m.exp.getSkill(this.nom).empreses, this.m.conjuncio); // Evora, Orange and In2art //
         } else {
             return [
                 "Experiència només en projectes personals",
@@ -60,5 +69,14 @@ export class SkillComponent {
                 "Experience in personal projects only"
             ][this.m.idiomaIndex];
         }
+    }
+
+
+    // Strings //
+    experienciaEn_string() {
+        return ["Experiència en", "Experiencia en", "Experience in"][this.m.idiomaIndex];
+    }
+    en_string() {
+        return ["en", "en", "in"][this.m.idiomaIndex];
     }
 };

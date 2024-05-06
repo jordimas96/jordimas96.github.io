@@ -19,7 +19,7 @@
             </div>
 
             <div class="barra">
-                <div class="nivell" [style.width.%]="getNivellBarra()"> {{getTextCurt(nom)}} </div>
+                <div class="nivell" [style.width.%]="getNivellBarra()"> {{getTextCurt()}} </div>
             </div>
             <!-- <div class="textExp">
                 {{getTextCurt(nom)}}
@@ -28,7 +28,7 @@
         </section>
 
         <div class="tooltip-card">
-            <b>{{nom}}:</b><br>
+            {{experienciaEn_string()}} <b>{{nom}}:</b><br>
             {{getTextTooltip()}}
         </div>
     </span>
