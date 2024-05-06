@@ -11,7 +11,7 @@ export class ExperiencePageComponent extends PageComponent {
     override async ngOnInit() {
         super.ngOnInit();
 
-        if (!this.m.debug) document.title = "Jordi Mas Parramon | Experience";
+        if (!this.m.debug) document.title = "Jordi Mas Parramon - Experience";
     }
 
     override afterRootFadeIn() {

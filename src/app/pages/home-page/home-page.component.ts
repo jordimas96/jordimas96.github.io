@@ -11,7 +11,7 @@ export class HomePageComponent extends PageComponent {
     override async ngOnInit() {
         super.ngOnInit();
 
-        if (!this.m.debug) document.title = "Jordi Mas Parramon | Home";
+        if (!this.m.debug) document.title = "Jordi Mas Parramon - Home";
     }
 
     override afterRootFadeIn() {

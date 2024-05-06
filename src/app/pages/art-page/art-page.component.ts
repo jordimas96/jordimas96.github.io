@@ -11,7 +11,7 @@ export class ArtPageComponent extends PageComponent {
     override async ngOnInit() {
         super.ngOnInit();
 
-        if (!this.m.debug) document.title = "Jordi Mas Parramon | Art";
+        if (!this.m.debug) document.title = "Jordi Mas Parramon - Art";
     }
 
     override afterRootFadeIn() {
