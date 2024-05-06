@@ -6,7 +6,7 @@ nav {
     flex-wrap: wrap;
     justify-content: center;
     background-color: var(--fons-40);
-    border-radius: 1.25rem; //1rem
+    border-radius: 1.2rem; //1rem
     padding: 0.2rem;
     z-index: 0;
     transition: padding 0.3s;
@@ -42,6 +42,7 @@ nav {
     background-color: var(--text-90);
     border-radius: 10rem; //0.75rem
     z-index: 1;
+    // box-shadow: rgba(255, 255, 255, 0.27) 0px 30px 25px -30px inset, rgba(0, 0, 0, 0.27) 0px -30px 25px -30px inset;
 }
 
 
@@ -75,6 +76,7 @@ nav {
 @media only screen and (min-width: 992px) {
     nav {
         width: fit-content;
+        border-radius: 1.35rem;
         button {
             font-size: 1.5rem;
             padding: 0.125rem 3rem !important;

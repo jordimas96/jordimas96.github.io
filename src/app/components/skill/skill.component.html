@@ -9,19 +9,27 @@
         </div>
     </section>
 } @else {
-    <section class="showTime {{normalitzar(nom)}}" appMostrarAmbAnimacio>
-        <div
-            class="chip"
-            [title]="getAnysExp()">
-            {{nom}}
-        </div>
+    <span class="tooltipExp {{normalitzar(nom)}}">
 
-        <div class="barra">
-            <div class="nivell" [style.width.%]="getNivellBarra()"> {{getTextCurt(nom)}} </div>
-        </div>
-        <!-- <div class="textExp">
-            {{getTextCurt(nom)}}
-        </div> -->
+        <section class="showTime" appMostrarAmbAnimacio>
+            <div
+                class="chip"
+                [title]="getAnysExp()">
+                {{nom}}
+            </div>
 
-    </section>
+            <div class="barra">
+                <div class="nivell" [style.width.%]="getNivellBarra()"> {{getTextCurt(nom)}} </div>
+            </div>
+            <!-- <div class="textExp">
+                {{getTextCurt(nom)}}
+            </div> -->
+
+        </section>
+
+        <div class="tooltip-card">
+            <b>{{nom}}:</b><br>
+            {{getTextTooltip()}}
+        </div>
+    </span>
 }

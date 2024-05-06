@@ -10,6 +10,8 @@ export class ProjectsPageComponent extends PageComponent {
 
     override async ngOnInit() {
         super.ngOnInit();
+
+        if (!this.m.debug) document.title = "Jordi Mas Parramon | Projects";
     }
 
     override afterRootFadeIn() {

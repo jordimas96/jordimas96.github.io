@@ -20,23 +20,24 @@ export class ExperienceCalculatorService {
 
     private experienciaJSON = [
         { // DSET (Pràctiques) //
-            nom: "DSET (Pràctiques)",
+            nom: "DSET",
             dates: ["2016-02-01", "2016-07-14"],
             skills: [
                 "Frontend",
                 "JavaScript", "CSS", "HTML5", "Cordova",
-                "Fedora", "macOS",
                 "VMware", "VirtualBox",
+                "Fedora", "macOS",
             ]
         },
         { // Nexxia (Pràctiques) //
-            nom: "Nexxia (Pràctiques)",
+            nom: "Nexxia",
             dates: ["2016-10-17", "2017-02-28"],
             skills: [
                 "Frontend",
                 "JavaScript", "JQuery", "CSS", "HTML5", "Bootstrap",
                 "Delphi", "FastReport",
                 "Responsive Design",
+                "Windows",
             ]
         },
         { // Beca Indra //
@@ -48,6 +49,7 @@ export class ExperienceCalculatorService {
                 "Netbeans", "Eclipse", "SVN",
                 "Windows Server", "Remote Desktop", "TeamViewer",
                 "PL/1", "DB2", "zOS/MVS",
+                "Windows",
             ]
         },
         { // Indra //
@@ -60,6 +62,7 @@ export class ExperienceCalculatorService {
                 "Netbeans", "Eclipse", "SVN",
                 "Windows Server", "Remote Desktop", "TeamViewer",
                 "Agile", "Continuous integration",
+                "Windows",
             ]
         },
         { // Matic //
@@ -76,6 +79,7 @@ export class ExperienceCalculatorService {
                 "Joomla", "K2", "Akeeba Backup", "JCE FileManager",
                 "Windows Server", "Remote Desktop", "AnyDesk",
                 "Agile", "MVC", "Responsive Design",
+                "Windows",
             ]
         },
         { // In2art // -
@@ -91,6 +95,7 @@ export class ExperienceCalculatorService {
                 "PowerShell",
                 "Postman", "Asana", "Poedit",
                 "MVC", "Agile", "Responsive Design",
+                "Windows",
             ]
         },
         { // CodiTramuntana // -
@@ -99,9 +104,9 @@ export class ExperienceCalculatorService {
             skills: [
                 "Frontend", "Backend",
                 "Ruby on Rails",
-                "Red Hat",
                 "SQL Developer",
                 "WinSCP", //?
+                "Red Hat",
             ]
         },
         { // Orange //
@@ -116,6 +121,7 @@ export class ExperienceCalculatorService {
                 "TortoiseGit",
                 "WinSCP", "Windows Server",
                 "MVC", "Agile", "Continuous integration",
+                "Windows",
             ]
         },
         { // Evora // -
@@ -128,12 +134,13 @@ export class ExperienceCalculatorService {
                 "Git",
                 "Jira", "Confluence",
                 "MVC", "Agile", "Continuous integration",
+                "Windows",
             ]
         },
 
     ];
 
-    public experienciaPerSkills: any = { "_total": { diesTotals: 0 } };
+    public experienciaPerSkills: any = { "_total": { diesTotals: 0, empreses: [] } };
 
     constructor(public m: MainService) {
         m.exp = this;
@@ -173,8 +180,10 @@ export class ExperienceCalculatorService {
 
             empresa.skills.forEach(skill => {
                 if (this.experienciaPerSkills[skill] === undefined)
-                    this.experienciaPerSkills[skill] = { diesTotals: 0 };
+                    this.experienciaPerSkills[skill] = { diesTotals: 0, empreses: [] };
                 this.experienciaPerSkills[skill].diesTotals += diesTotals;
+
+                this.experienciaPerSkills[skill].empreses.push(empresa.nom);
             });
             
             this.experienciaPerSkills["_total"].diesTotals += diesTotals;
@@ -199,6 +208,7 @@ export class ExperienceCalculatorService {
 
             this.experienciaPerSkills[skill].anysMesosDies = anysMesosDies;
             this.experienciaPerSkills[skill].anysAprox = anysAprox;
+            this.experienciaPerSkills[skill].empreses.reverse();
         }
 
     }

@@ -1,5 +1,6 @@
 import { Component, Input } from '@angular/core';
 import { MainService } from 'src/app/services/main.service';
+import { Utils } from 'src/app/shared/utils';
 
 @Component({
     selector: 'app-skill',
@@ -48,5 +49,16 @@ export class SkillComponent {
     }
     getNivellBarra() {
         return (this.m.exp.getSkill(this.nom).diesTotals || 0) / this.m.exp.getSkill("_total").diesTotals * 100;
+    }
+    getTextTooltip() {
+        if (this.m.exp.getSkill(this.nom).empreses?.length) {
+            return Utils.addConjunctionBetweenThe2Last(this.m.exp.getSkill(this.nom).empreses, this.m.conjuncio);
+        } else {
+            return [
+                "Experiència només en projectes personals",
+                "Experiencia sólo en proyectos personales",
+                "Experience in personal projects only"
+            ][this.m.idiomaIndex];
+        }
     }
 };

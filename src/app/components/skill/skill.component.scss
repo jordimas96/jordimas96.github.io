@@ -50,7 +50,7 @@ section.showTime {
             justify-content: center;
             align-items: center;
 
-            background-color: hsl(var(--h), var(--s), 70%);
+            background-color: hsl(var(--h), var(--s), var(--l));
             color: var(--color-l-0);
             font-size: 0.85rem;
             font-weight: 800;
@@ -78,88 +78,122 @@ section.showTime {
 
 
 
+// Tooltip //
+.tooltipExp {
+    position: relative;
+
+    > .tooltip-card {
+        visibility: hidden;
+        position: absolute;
+        // left: 0; right: 0;
+        // translate: -50%;
+        padding: 0.3rem 0.8rem;
+        margin-top: 5px;
+        border-radius: 0.7rem;
+        background-color: hsl(var(--h), var(--s), 90%);
+        color: var(--color-fosc);
+        user-select: none;
+        z-index: 1000;
+
+        @extend .shadow-3;
+
+        &::after {
+            content: " ";
+            position: absolute;
+            bottom: 100%;
+            left: 50%;
+            margin-left: -5px;
+            border-width: 5px;
+            border-style: solid;
+            border-color: transparent transparent hsl(var(--h), var(--s), 95%) transparent;
+          }
+    }
+    &:hover > .tooltip-card { visibility: visible; }
+}
 
 
-section {
-    --h: 0; --s: 0%;
-    &.angular          { --h: 347; --s: 100%; .chip { background-color: #dd0031; color: #ffffff; } } // hsl(347, 100%, 43%);
-    &.javascript       { --h:  52; --s: 100%; .chip { background-color: #ffdf00; color: #000000; } } // hsl(52, 100%, 50%);
-    &.jquery           { --h: 197; --s:  77%; .chip { background-color: #1e2e3b; color: #21ace2; } } // hsl(197, 77%, 51%);
-    &.typescript       { --h: 205; --s: 100%; .chip { background-color: #0078cf; color: #ffffff; } } // hsl(205, 100%, 41%);
-    &.ngrx             { --h: 291; --s:  66%; .chip { background-color: #412846; color: #c141d8; } } // hsl(291, 66%, 55%);
-    &.css              { --h: 207; --s:  90%; .chip { background-color: #2196f3; color: #ffffff; } } // hsl(207, 90%, 54%);
-    &.sass             { --h: 329; --s:  55%; .chip { background-color: #d56fa4; color: #ffffff; } } // hsl(329, 55%, 64%);
-    &.html5            { --h:  15; --s:  81%; .chip { background-color: #e64c18; color: #ffffff; } } // hsl(15, 81%, 50%);
-    &.bootstrap        { --h: 264; --s:  34%; .chip { background-color: #563d7c; color: #ffffff; } } // hsl(264, 34%, 36%);
-    &.materialize      { --h: 352; --s:  82%; .chip { background-color: #f6a2ad; color: #000000; } } // hsl(352, 82%, 80%);
-    &.android          { --h: 147; --s:  69%; .chip { background-color: #3DDC84; color: #153b4c; } } // hsl(147, 69%, 55%);
-    &.kotlin           { --h: 287; --s:  77%; .chip { background-color: #b11cda; color: #ffffff; } } // hsl(287, 77%, 48%);
-    &.xml              { --h:  30; --s:  99%; .chip { background-color: #f67d01; color: #ffffff; } } // hsl(30, 99%, 48%);
-    &.uwp              { --h: 205; --s: 100%; .chip { background-color: #0072c6; color: #ffffff; } } // hsl(205, 100%, 39%);
-    &.cordova          { --h: 184; --s:  91%; .chip { background-color: #364451; color: #35e9f6; } } // hsl(184, 91%, 59%);
-    &.pwa              { --h: 264; --s:  80%; .chip { background-color: #5f17ca; color: #ffffff; } } // hsl(264, 80%, 44%);
-    &.wpf              { --h: 208; --s:  94%; .chip { background-color: #044a88; color: #ffffff; } } // hsl(208, 94%, 27%);
-    &.delphi           { --h: 353; --s:  83%; .chip { background-color: #9e0f20; color: #ffffff; } } // hsl(353, 83%, 34%);
-    &.nodejs           { --h:  87; --s:  67%; .chip { background-color: #83cd29; color: #333333; } } // hsl(87, 67%, 48%);
-    &.sequelize        { --h: 196; --s:  98%; .chip { background-color: #02aeee; color: #ffffff; } } // hsl(196, 98%, 47%);
-    &.json             { --h:   0; --s:   0%; .chip { background-color: #3e3e3e; color: #ffffff; } } // hsl(0, 0%, 24%);
-    &.java             { --h: 194; --s: 100%; .chip { background-color: #007396; color: #ffffff; } } // hsl(194, 100%, 29%);
-    &.python           { --h:  49; --s: 100%; .chip { background-color: #3572A5; color: #ffe364; } } // hsl(49, 100%, 70%);
-    &.csharp           { --h: 288; --s:  48%; .chip { background-color: #953dac; color: #ffffff; } } // hsl(288, 48%, 46%);
-    &.django           { --h: 162; --s: 100%; .chip { background-color: #003e2b; color: #ffffff; } } // hsl(162, 100%, 12%);
-    &.php              { --h: 236; --s:  28%; .chip { background-color: #777bb3; color: #ffffff; } } // hsl(236, 28%, 58%);
-    &.rubyonrails      { --h:   0; --s: 100%; .chip { background-color: #cc0000; color: #ffffff; } } // hsl(0, 100%, 40%);
-    &.apache           { --h: 350; --s:  72%; .chip { background-color: #c4203c; color: #ffffff; } } // hsl(350, 72%, 45%);
-    &.xampp            { --h:  25; --s:  96%; .chip { background-color: #fb7b1f; color: #ffffff; } } // hsl(25, 96%, 55%);
-    &.mysql            { --h:  37; --s: 100%; .chip { background-color: #00618a; color: #e48e00; } } // hsl(37, 100%, 45%);
-    &.sqldeveloper     { --h: 111; --s:  83%; .chip { background-color: #b9ceec; color: #166309; } } // hsl(111, 83%, 21%);
-    &.phpmyadmin       { --h:  36; --s:  94%; .chip { background-color: #6c78af; color: #f89c0e; } } // hsl(36, 94%, 51%);
-    &.plsql            { --h: 358; --s:  79%; .chip { background-color: #e11a1f; color: #ffffff; } } // hsl(358, 79%, 49%);
-    &.jsp              { --h:  24; --s:  79%; .chip { background-color: #5382a1; color: #e56f1f; } } // hsl(24, 79%, 51%);
-    &.pl1              { --h: 120; --s: 100%; .chip { background-color: #000000; color: #00d200; } } // hsl(120, 100%, 41%);
-    &.db2              { --h: 137; --s: 100%; .chip { background-color: #009a2c; color: #ffffff; } } // hsl(137, 100%, 30%);
-    &.git              { --h:  10; --s:  86%; .chip { background-color: #f05133; color: #413000; } } // hsl(10, 86%, 57%);
-    &.github           { --h:   0; --s:   0%; .chip { background-color: #ffffff; color: #000000; } } // hsl(0, 0%, 0%);
-    &.bitbucket        { --h: 214; --s: 100%; .chip { background-color: #2684ff; color: #ffffff; } } // hsl(214, 100%, 57%);
-    &.sourcetree       { --h: 214; --s: 100%; .chip { background-color: #2684ff; color: #ffffff; } } // hsl(214, 100%, 57%);
-    &.postman          { --h:  16; --s:  84%; .chip { background-color: #ee6d3f; color: #ffffff; } } // hsl(16, 84%, 59%);
-    &.asana            { --h: 349; --s: 100%; .chip { background-color: #ff5878; color: #1d3042; } } // hsl(349, 100%, 67%);
-    &.filezilla        { --h:   0; --s: 100%; .chip { background-color: #8f0000; color: #ffffff; } } // hsl(0, 100%, 28%);
-    &.androidstudio    { --h: 147; --s:  69%; .chip { background-color: #3DDC84; color: #153b4c; } } // hsl(147, 69%, 55%);
-    &.powershell       { --h: 215; --s:  98%; .chip { background-color: #012456; color: #eeedf0; } } // hsl(215, 98%, 17%);
-    &.unity            { --h: 211; --s:  24%; .chip { background-color: #222c37; color: #ffffff; } } // hsl(211, 24%, 17%);
-    &.visualstudio     { --h: 266; --s:  58%; .chip { background-color: #a377db; color: #ffffff; } } // hsl(266, 58%, 66%);
-    &.eclipse          { --h: 252; --s:  43%; .chip { background-color: #2c2255; color: #f7941e; } } // hsl(252, 43%, 23%);
-    &.netbeans         { --h: 218; --s:  49%; .chip { background-color: #7c9bd2; color: #ffffff; } } // hsl(218, 49%, 65%);
-    &.svn              { --h: 217; --s:  40%; .chip { background-color: #809cc9; color: #ffffff; } } // hsl(217, 40%, 65%);
-    &.weblogic         { --h: 359; --s:  79%; .chip { background-color: #e41b1f; color: #ffffff; } } // hsl(359, 79%, 50%);
-    &.jira             { --h: 214; --s: 100%; .chip { background-color: #2684ff; color: #ffffff; } } // hsl(214, 100%, 57%);
-    &.confluence       { --h: 214; --s:  98%; .chip { background-color: #2582fd; color: #ffffff; } } // hsl(214, 98%, 57%);
-    &.gitlab           { --h:   8; --s:  77%; .chip { background-color: #e34329; color: #ffffff; } } // hsl(8, 77%, 53%);
-    &.maven            { --h: 341; --s:  96%; .chip { background-color: #700225; color: #ffffff; } } // hsl(341, 96%, 22%);
-    &.jfrogartifactory { --h: 123; --s:  50%; .chip { background-color: #41bf47; color: #ffffff; } } // hsl(123, 50%, 50%);
-    &.tortoisegit      { --h: 201; --s:  42%; .chip { background-color: #4a8fb5; color: #ffffff; } } // hsl(201, 42%, 50%);
-    &.winscp           { --h: 189; --s:  80%; .chip { background-color: #49d4eb; color: #ffffff; } } // hsl(189, 80%, 60%);
-    &.hibernate        { --h:  47; --s:  33%; .chip { background-color: #59666c; color: #bcae79; } } // hsl(47, 33%, 61%);
-    &.vscode           { --h: 204; --s:  88%; .chip { background-color: #3aa8f2; color: #ffffff; } } // hsl(204, 88%, 59%);
-    &.poedit           { --h:  54; --s:  68%; .chip { background-color: #dbcb44; color: #000000; } } // hsl(54, 68%, 56%);
-    &.fastreport       { --h:   1; --s:  85%; .chip { background-color: #b5110f; color: #1d1d1b; } } // hsl(1, 85%, 38%);
-    &.teamviewer       { --h: 207; --s:  93%; .chip { background-color: #0879d7; color: #ffffff; } } // hsl(207, 93%, 44%);
-    &.anydesk          { --h:   4; --s:  97%; .chip { background-color: #fc4236; color: #ffffff; } } // hsl(4, 97%, 60%);
-    &.remotedesktop    { --h: 232; --s: 100%; .chip { background-color: #001cc9; color: #c5d3ff; } } // hsl(232, 100%, 39%);
-    &.vmware           { --h: 270; --s:   2%; .chip { background-color: #ffffff; color: #545256; } } // hsl(270, 2%, 33%);
-    &.virtualbox       { --h: 214; --s:  60%; .chip { background-color: #cee4fb; color: #183861; } } // hsl(214, 60%, 24%);
-    &.windows          { --h: 196; --s: 100%; .chip { background-color: #00aeef; color: #ffffff; } } // hsl(196, 100%, 47%);
-    &.windowsserver    { --h: 211; --s:  48%; .chip { background-color: #37689d; color: #c9c5be; } } // hsl(211, 48%, 42%);
-    &.ubuntu           { --h: 310; --s:  94%; .chip { background-color: #9b0583; color: #ffffff; } } // hsl(310, 94%, 31%);
-    &.debian           { --h: 339; --s:  94%; .chip { background-color: #d70751; color: #ffffff; } } // hsl(339, 94%, 44%);
-    &.redhat           { --h:   0; --s: 100%; .chip { background-color: #e20000; color: #ffffff; } } // hsl(0, 100%, 44%);
-    &.fedora           { --h: 219; --s:  52%; .chip { background-color: #243f73; color: #ffffff; } } // hsl(219, 52%, 30%);
-    &.macos            { --h:   0; --s:   0%; .chip { background-color: #eeeeee; color: #444444; } } // hsl(0, 0%, 93%);
-    &.tails            { --h: 268; --s:  41%; .chip { background-color: #55347b; color: #ffffff; } } // hsl(268, 41%, 34%);
-    &.zosmvs           { --h: 120; --s: 100%; .chip { background-color: #000000; color: #00ff00; } } // hsl(120, 100%, 50%);
-    &.joomla           { --h: 209; --s:  56%; .chip { background-color: #5091cd; color: #ffffff; } } // hsl(209, 56%, 56%);
-    &.k2               { --h:   0; --s:   0%; .chip { background-color: #000000; color: #ffffff; } } // hsl(0, 0%, 0%);
-    &.akeebabackup     { --h: 182; --s:  54%; .chip { background-color: #514f50; color: #38b5b9; } } // hsl(182, 54%, 47%);
-    &.jcefilemanager   { --h:   0; --s:   0%; .chip { background-color: #dddddd; color: #000000; } } // hsl(0, 0%, 87%);
+
+
+:host {
+    --h: 0; --s: 0%; --l: 100%;
+    .angular          { --h: 347; --s: 100%; --l: 70%; .chip { background-color: #dd0031; color: #ffffff; } } // hsl(347, 100%, 43%);
+    .javascript       { --h:  52; --s: 100%; --l: 70%; .chip { background-color: #ffdf00; color: #000000; } } // hsl(52, 100%, 50%);
+    .jquery           { --h: 197; --s:  77%; --l: 70%; .chip { background-color: #1e2e3b; color: #21ace2; } } // hsl(197, 77%, 51%);
+    .typescript       { --h: 205; --s: 100%; --l: 70%; .chip { background-color: #0078cf; color: #ffffff; } } // hsl(205, 100%, 41%);
+    .ngrx             { --h: 291; --s:  66%; --l: 70%; .chip { background-color: #412846; color: #c141d8; } } // hsl(291, 66%, 55%);
+    .css              { --h: 207; --s:  90%; --l: 70%; .chip { background-color: #2196f3; color: #ffffff; } } // hsl(207, 90%, 54%);
+    .sass             { --h: 329; --s:  55%; --l: 70%; .chip { background-color: #d56fa4; color: #ffffff; } } // hsl(329, 55%, 64%);
+    .html5            { --h:  15; --s:  81%; --l: 70%; .chip { background-color: #e64c18; color: #ffffff; } } // hsl(15, 81%, 50%);
+    .bootstrap        { --h: 264; --s:  34%; --l: 70%; .chip { background-color: #563d7c; color: #ffffff; } } // hsl(264, 34%, 36%);
+    .materialize      { --h: 352; --s:  82%; --l: 70%; .chip { background-color: #f6a2ad; color: #000000; } } // hsl(352, 82%, 80%);
+    .android          { --h: 147; --s:  69%; --l: 70%; .chip { background-color: #3DDC84; color: #153b4c; } } // hsl(147, 69%, 55%);
+    .kotlin           { --h: 287; --s:  77%; --l: 70%; .chip { background-color: #b11cda; color: #ffffff; } } // hsl(287, 77%, 48%);
+    .xml              { --h:  30; --s:  99%; --l: 70%; .chip { background-color: #f67d01; color: #ffffff; } } // hsl(30, 99%, 48%);
+    .uwp              { --h: 205; --s: 100%; --l: 70%; .chip { background-color: #0072c6; color: #ffffff; } } // hsl(205, 100%, 39%);
+    .cordova          { --h: 184; --s:  91%; --l: 70%; .chip { background-color: #364451; color: #35e9f6; } } // hsl(184, 91%, 59%);
+    .pwa              { --h: 264; --s:  80%; --l: 70%; .chip { background-color: #5f17ca; color: #ffffff; } } // hsl(264, 80%, 44%);
+    .wpf              { --h: 208; --s:  94%; --l: 70%; .chip { background-color: #044a88; color: #ffffff; } } // hsl(208, 94%, 27%);
+    .delphi           { --h: 353; --s:  83%; --l: 70%; .chip { background-color: #9e0f20; color: #ffffff; } } // hsl(353, 83%, 34%);
+    .nodejs           { --h:  87; --s:  67%; --l: 70%; .chip { background-color: #83cd29; color: #333333; } } // hsl(87, 67%, 48%);
+    .sequelize        { --h: 196; --s:  98%; --l: 70%; .chip { background-color: #02aeee; color: #ffffff; } } // hsl(196, 98%, 47%);
+    .json             { --h:   0; --s:   0%; --l: 70%; .chip { background-color: #3e3e3e; color: #ffffff; } } // hsl(0, 0%, 24%);
+    .java             { --h: 194; --s: 100%; --l: 70%; .chip { background-color: #007396; color: #ffffff; } } // hsl(194, 100%, 29%);
+    .python           { --h:  49; --s: 100%; --l: 70%; .chip { background-color: #3572A5; color: #ffe364; } } // hsl(49, 100%, 70%);
+    .csharp           { --h: 288; --s:  48%; --l: 70%; .chip { background-color: #953dac; color: #ffffff; } } // hsl(288, 48%, 46%);
+    .django           { --h: 162; --s: 100%; --l: 70%; .chip { background-color: #003e2b; color: #ffffff; } } // hsl(162, 100%, 12%);
+    .php              { --h: 236; --s:  28%; --l: 70%; .chip { background-color: #777bb3; color: #ffffff; } } // hsl(236, 28%, 58%);
+    .rubyonrails      { --h:   0; --s: 100%; --l: 70%; .chip { background-color: #cc0000; color: #ffffff; } } // hsl(0, 100%, 40%);
+    .apache           { --h: 350; --s:  72%; --l: 70%; .chip { background-color: #c4203c; color: #ffffff; } } // hsl(350, 72%, 45%);
+    .xampp            { --h:  25; --s:  96%; --l: 70%; .chip { background-color: #fb7b1f; color: #ffffff; } } // hsl(25, 96%, 55%);
+    .mysql            { --h:  37; --s: 100%; --l: 70%; .chip { background-color: #00618a; color: #e48e00; } } // hsl(37, 100%, 45%);
+    .sqldeveloper     { --h: 111; --s:  83%; --l: 70%; .chip { background-color: #b9ceec; color: #166309; } } // hsl(111, 83%, 21%);
+    .phpmyadmin       { --h:  36; --s:  94%; --l: 70%; .chip { background-color: #6c78af; color: #f89c0e; } } // hsl(36, 94%, 51%);
+    .plsql            { --h: 358; --s:  79%; --l: 70%; .chip { background-color: #e11a1f; color: #ffffff; } } // hsl(358, 79%, 49%);
+    .jsp              { --h:  24; --s:  79%; --l: 70%; .chip { background-color: #5382a1; color: #e56f1f; } } // hsl(24, 79%, 51%);
+    .pl1              { --h: 120; --s: 100%; --l: 70%; .chip { background-color: #000000; color: #00d200; } } // hsl(120, 100%, 41%);
+    .db2              { --h: 137; --s: 100%; --l: 70%; .chip { background-color: #009a2c; color: #ffffff; } } // hsl(137, 100%, 30%);
+    .git              { --h:  10; --s:  86%; --l: 70%; .chip { background-color: #f05133; color: #413000; } } // hsl(10, 86%, 57%);
+    .github           { --h:   0; --s:   0%; --l: 70%; .chip { background-color: #ffffff; color: #000000; } } // hsl(0, 0%, 0%);
+    .bitbucket        { --h: 214; --s: 100%; --l: 70%; .chip { background-color: #2684ff; color: #ffffff; } } // hsl(214, 100%, 57%);
+    .sourcetree       { --h: 214; --s: 100%; --l: 70%; .chip { background-color: #2684ff; color: #ffffff; } } // hsl(214, 100%, 57%);
+    .postman          { --h:  16; --s:  84%; --l: 70%; .chip { background-color: #ee6d3f; color: #ffffff; } } // hsl(16, 84%, 59%);
+    .asana            { --h: 349; --s: 100%; --l: 70%; .chip { background-color: #ff5878; color: #1d3042; } } // hsl(349, 100%, 67%);
+    .filezilla        { --h:   0; --s: 100%; --l: 70%; .chip { background-color: #8f0000; color: #ffffff; } } // hsl(0, 100%, 28%);
+    .androidstudio    { --h: 147; --s:  69%; --l: 70%; .chip { background-color: #3DDC84; color: #153b4c; } } // hsl(147, 69%, 55%);
+    .powershell       { --h: 215; --s:  98%; --l: 70%; .chip { background-color: #012456; color: #eeedf0; } } // hsl(215, 98%, 17%);
+    .unity            { --h: 211; --s:  24%; --l: 70%; .chip { background-color: #222c37; color: #ffffff; } } // hsl(211, 24%, 17%);
+    .visualstudio     { --h: 266; --s:  58%; --l: 70%; .chip { background-color: #a377db; color: #ffffff; } } // hsl(266, 58%, 66%);
+    .eclipse          { --h: 252; --s:  43%; --l: 70%; .chip { background-color: #2c2255; color: #f7941e; } } // hsl(252, 43%, 23%);
+    .netbeans         { --h: 218; --s:  49%; --l: 70%; .chip { background-color: #7c9bd2; color: #ffffff; } } // hsl(218, 49%, 65%);
+    .svn              { --h: 217; --s:  40%; --l: 70%; .chip { background-color: #809cc9; color: #ffffff; } } // hsl(217, 40%, 65%);
+    .weblogic         { --h: 359; --s:  79%; --l: 70%; .chip { background-color: #e41b1f; color: #ffffff; } } // hsl(359, 79%, 50%);
+    .jira             { --h: 214; --s: 100%; --l: 70%; .chip { background-color: #2684ff; color: #ffffff; } } // hsl(214, 100%, 57%);
+    .confluence       { --h: 214; --s:  98%; --l: 70%; .chip { background-color: #2582fd; color: #ffffff; } } // hsl(214, 98%, 57%);
+    .gitlab           { --h:   8; --s:  77%; --l: 70%; .chip { background-color: #e34329; color: #ffffff; } } // hsl(8, 77%, 53%);
+    .maven            { --h: 341; --s:  96%; --l: 70%; .chip { background-color: #700225; color: #ffffff; } } // hsl(341, 96%, 22%);
+    .jfrogartifactory { --h: 123; --s:  50%; --l: 70%; .chip { background-color: #41bf47; color: #ffffff; } } // hsl(123, 50%, 50%);
+    .tortoisegit      { --h: 201; --s:  42%; --l: 70%; .chip { background-color: #4a8fb5; color: #ffffff; } } // hsl(201, 42%, 50%);
+    .winscp           { --h: 189; --s:  80%; --l: 70%; .chip { background-color: #49d4eb; color: #ffffff; } } // hsl(189, 80%, 60%);
+    .hibernate        { --h:  47; --s:  33%; --l: 70%; .chip { background-color: #59666c; color: #bcae79; } } // hsl(47, 33%, 61%);
+    .vscode           { --h: 204; --s:  88%; --l: 70%; .chip { background-color: #3aa8f2; color: #ffffff; } } // hsl(204, 88%, 59%);
+    .poedit           { --h:  54; --s:  68%; --l: 70%; .chip { background-color: #dbcb44; color: #000000; } } // hsl(54, 68%, 56%);
+    .fastreport       { --h:   1; --s:  85%; --l: 70%; .chip { background-color: #b5110f; color: #1d1d1b; } } // hsl(1, 85%, 38%);
+    .teamviewer       { --h: 207; --s:  93%; --l: 70%; .chip { background-color: #0879d7; color: #ffffff; } } // hsl(207, 93%, 44%);
+    .anydesk          { --h:   4; --s:  97%; --l: 70%; .chip { background-color: #fc4236; color: #ffffff; } } // hsl(4, 97%, 60%);
+    .remotedesktop    { --h: 232; --s: 100%; --l: 70%; .chip { background-color: #001cc9; color: #c5d3ff; } } // hsl(232, 100%, 39%);
+    .vmware           { --h: 270; --s:   2%; --l: 70%; .chip { background-color: #ffffff; color: #545256; } } // hsl(270, 2%, 33%);
+    .virtualbox       { --h: 214; --s:  60%; --l: 70%; .chip { background-color: #cee4fb; color: #183861; } } // hsl(214, 60%, 24%);
+    .windows          { --h: 196; --s: 100%; --l: 70%; .chip { background-color: #00aeef; color: #ffffff; } } // hsl(196, 100%, 47%);
+    .windowsserver    { --h: 211; --s:  48%; --l: 70%; .chip { background-color: #37689d; color: #c9c5be; } } // hsl(211, 48%, 42%);
+    .ubuntu           { --h: 310; --s:  94%; --l: 70%; .chip { background-color: #9b0583; color: #ffffff; } } // hsl(310, 94%, 31%);
+    .debian           { --h: 339; --s:  94%; --l: 70%; .chip { background-color: #d70751; color: #ffffff; } } // hsl(339, 94%, 44%);
+    .redhat           { --h:   0; --s: 100%; --l: 70%; .chip { background-color: #e20000; color: #ffffff; } } // hsl(0, 100%, 44%);
+    .fedora           { --h: 219; --s:  52%; --l: 70%; .chip { background-color: #243f73; color: #ffffff; } } // hsl(219, 52%, 30%);
+    .macos            { --h:   0; --s:   0%; --l: 70%; .chip { background-color: #eeeeee; color: #444444; } } // hsl(0, 0%, 93%);
+    .tails            { --h: 268; --s:  41%; --l: 70%; .chip { background-color: #55347b; color: #ffffff; } } // hsl(268, 41%, 34%);
+    .zosmvs           { --h: 120; --s: 100%; --l: 70%; .chip { background-color: #000000; color: #00ff00; } } // hsl(120, 100%, 50%);
+    .joomla           { --h: 209; --s:  56%; --l: 70%; .chip { background-color: #5091cd; color: #ffffff; } } // hsl(209, 56%, 56%);
+    .k2               { --h:   0; --s:   0%; --l: 70%; .chip { background-color: #000000; color: #ffffff; } } // hsl(0, 0%, 0%);
+    .akeebabackup     { --h: 182; --s:  54%; --l: 70%; .chip { background-color: #514f50; color: #38b5b9; } } // hsl(182, 54%, 47%);
+    .jcefilemanager   { --h:   0; --s:   0%; --l: 70%; .chip { background-color: #dddddd; color: #000000; } } // hsl(0, 0%, 87%);
 }

@@ -51,6 +51,12 @@ export class Utils {
 
 
     // Utils //
+    public static addConjunctionBetweenThe2Last(array: Array<string>, conjunction: string) {
+        if (array.length < 2) return array;
+        let text = array.join(", ");
+        let index = text.lastIndexOf(", ");
+        return text.substring(0, index) + " " + conjunction + " " + text.substring(index + 1);
+    }
     public static objPle(obj): boolean {
         if (!obj) return false;
         else return !!Object.keys(obj).length;
