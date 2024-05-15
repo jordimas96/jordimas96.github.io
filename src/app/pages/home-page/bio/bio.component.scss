@@ -82,6 +82,7 @@
         color: var(--fons);
         font-weight: normal;
         user-select: none;
+        pointer-events: none;
 
         @extend .shadow-2;
 

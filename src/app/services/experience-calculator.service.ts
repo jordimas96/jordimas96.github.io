@@ -45,7 +45,7 @@ export class ExperienceCalculatorService {
             dates: ["2017-07-03", "2017-07-31"],
             skills: [
                 "Backend",
-                "Java", "JSP", "Maven",
+                "Java", "JSP", "Maven", "Microservices",
                 "Netbeans", "Eclipse", "SVN",
                 "Windows Server", "Remote Desktop", "TeamViewer",
                 "PL/1", "DB2", "zOS/MVS",
@@ -57,7 +57,7 @@ export class ExperienceCalculatorService {
             dates: ["2017-09-04", "2019-03-08"],
             skills: [
                 "Backend",
-                "Java", "JSP", "Maven",
+                "Java", "JSP", "Maven", "Microservices",
                 "SQL Developer",
                 "Netbeans", "Eclipse", "SVN",
                 "Windows Server", "Remote Desktop", "TeamViewer",
@@ -114,7 +114,7 @@ export class ExperienceCalculatorService {
             dates: ["2023-08-23", "2023-11-03"],
             skills: [
                 "Frontend", "Backend",
-                "Java", "WebLogic", "Eclipse", "Maven",
+                "Java", "WebLogic", "Eclipse", "Maven", "Microservices",
                 "Angular",
                 "SQL Developer",
                 "Jira", "Confluence", "GitLab", "JFrog Artifactory",
@@ -131,6 +131,7 @@ export class ExperienceCalculatorService {
                 "Frontend",
                 "Angular", "NgRx", "TypeScript", "JavaScript", "CSS", "SASS", "Materialize",
                 "PWA", "Cordova",
+                "Microservices",
                 "Git",
                 "Jira", "Confluence",
                 "MVC", "Agile", "Continuous integration",

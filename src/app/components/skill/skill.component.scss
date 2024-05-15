@@ -104,6 +104,7 @@ section.showTime {
         color: hsl(var(--h), var(--s), 20%);
         white-space: pre-line;
         user-select: none;
+        pointer-events: none;
         z-index: 1000;
 
         @extend .shadow-3;

@@ -65,16 +65,16 @@
                 width: 2.7rem;
                 height: 2.7rem;
                 border-radius: 10px;
-                opacity: 0.5;
                 z-index: 2;
         
-                background-color: var(--color-l-7);
                 color: var(--color-fosc);
+                background-color: hsla(60, 100%, 75%, 0.3);
+                backdrop-filter: blur(6px);
         
-                transition: opacity 0.2s;
+                transition: background-color 0.2s;
         
                 &:hover {
-                    opacity: 1;
+                    background-color: hsla(60, 100%, 75%, 0.8);
                 }
             }
         }
