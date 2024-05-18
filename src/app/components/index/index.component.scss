@@ -96,10 +96,11 @@
 @media (pointer: fine) {
     .index {
         button {
-            transition: scale 0.15s;
+            transition: transform 0.15s;
 
             &:hover {
-                scale: 1.06;
+                // scale: 1.06;
+                filter: brightness(1.5);
                 z-index: 1;
             }
         }

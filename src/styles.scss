@@ -212,6 +212,7 @@ video {
 
 html.light .inv-dark { filter: invert(1); }
 html.dark .inv-dark-2 { filter: invert(1); }
+.filter-invert, .invert { filter: invert(1); }
 
 img, .nodrag {
     -webkit-user-drag: none;

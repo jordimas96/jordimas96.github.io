@@ -33,8 +33,8 @@
             @case ("indra")        { <app-indra />              }
             @case ("nexxia")       { <app-nexxia />             }
             @default {
-                <h2 class="text-center my-5">Invalid section name</h2>
-                <!-- <h2 class="text-center my-5"><a href="/" target="_self">Go home</a></h2> -->
+                <h2 class="text-center mt-5">Invalid section name</h2>
+                <!-- <h2 class="text-center mt-5"><a href="/" target="_self">Go home</a></h2> -->
             }
         }
 
@@ -47,7 +47,7 @@
         
         
         
-        <div class="sectionList mb-5">
+        <div class="sectionList mt-6 mb-5">
             @if(section != "android") {      <button class="boto tema-android"      routerLink="/section/android"      >Apps Android</button>       }
             @if(section != "mad-jumpgate") { <button class="boto tema-mad-jumpgate" routerLink="/section/mad-jumpgate" >Mad Jumpgate</button>       }
             @if(section != "github") {       <button class="boto tema-github"       routerLink="/section/github"       >GitHub Projects</button>    }
@@ -76,7 +76,7 @@
         
         
         <!-- <div class="mb-6 text-center" appMostrarAmbAnimacio>
-            <button class="boto botoSeguentPagina m-auto" routerLink="/art">
+            <button class="boto botoSeguentPagina align-self-center" routerLink="/art">
                 @if (m.ca) { Art }
                 @if (m.es) { Arte }
                 @if (m.en) { Art }

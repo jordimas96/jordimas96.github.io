@@ -1,21 +1,17 @@
 <div id="page" class="page">
     <!-- <div class="page-title mt-0 mb-4">Jordi Mas Parramon</div> -->
 
-    <div class="content">
-
+    <div class="content mb-6 d-flex flex-column gap-6">
 
         <app-bio />
         <app-languages />
 
-
-        <div class="mb-6 text-center" appMostrarAmbAnimacio>
-            <button class="boto botoSeguentPagina m-auto" routerLink="/experience">
-                @if (m.ca) { Experiència }
-                @if (m.es) { Experiencia }
-                @if (m.en) { Experience }
-                <i class="fa-solid fa-chevron-right"></i>
-            </button>
-        </div>
+        <button class="boto botoSeguentPagina align-self-center" routerLink="/experience" appMostrarAmbAnimacio>
+            @if (m.ca) { Experiència }
+            @if (m.es) { Experiencia }
+            @if (m.en) { Experience }
+            <i class="fa-solid fa-chevron-right"></i>
+        </button>
 
     </div>
 </div>

@@ -5,21 +5,17 @@
         @if (m.en) { Artistic projects }
     </div>
 
-
-    <div class="content">
+    <div class="content mb-6 d-flex flex-column gap-6">
 
         <app-icons />
         <app-amazfit-watchfaces />
 
-        
-        <div class="mb-6 text-center" appMostrarAmbAnimacio>
-            <button class="boto botoSeguentPagina m-auto" routerLink="/">
-                <i class="fa-solid fa-chevron-left"></i>
-                @if (m.ca) { Inici }
-                @if (m.es) { Inicio }
-                @if (m.en) { Home }
-            </button>
-        </div>
+        <button class="boto botoSeguentPagina align-self-center" routerLink="/" appMostrarAmbAnimacio>
+            <i class="fa-solid fa-chevron-left"></i>
+            @if (m.ca) { Inici }
+            @if (m.es) { Inicio }
+            @if (m.en) { Home }
+        </button>
 
     </div>
 </div>
