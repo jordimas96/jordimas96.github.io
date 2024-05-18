@@ -75,6 +75,10 @@ export class GithubProjectsComponent extends CardComponent {
                 "rounded-corners-directive": 160,
                 "electricity-rate-2016": 87,
                 "evorait-task_materials_ngrx": 201,
+                "color-harmonizer": 261,
+                "navigation-tab": 265,
+                "icon-editor-2016": 360,
+                "meme-generator-2016": 21,
             };
 
 
@@ -123,6 +127,9 @@ export class GithubProjectsComponent extends CardComponent {
     getColorRepoCards(hue) {
         let alfa = this.m.ts.modeFosc ? 0.35 : 0.5;
         return `hsla(${hue}, 100%, 75%, ${alfa})`;
+    }
+    getColorImgShadow(hue) {
+        return `hsl(${hue}, 100%, 50%)`;
     }
     
 }
