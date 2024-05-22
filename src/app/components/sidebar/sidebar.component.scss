@@ -107,3 +107,12 @@
 @media only screen and (min-width: 768px) { }
 // Pantalla Molt Gran //
 @media only screen and (min-width: 992px) { }
+
+// PC //
+@media (pointer: fine) {
+    .botoSidebar {
+        visibility: hidden;
+    }
+}
+// Mòbil //
+@media (pointer: coarse) { }

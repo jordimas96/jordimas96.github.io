@@ -22,7 +22,11 @@ export class AppbarComponent {
         setTimeout(() => { $("app-root").fadeIn(300); }, this.m.tempsDelayCarregaPag);
     }
 
-    afterRootFadeIn() { }
+    afterRootFadeIn() {
+        document.body.addEventListener("mouseleave", () => {
+            this.m.sidebar.tancar()
+        });
+    }
 
     width() {
         return this.appbar.nativeElement.offsetWidth || 0;

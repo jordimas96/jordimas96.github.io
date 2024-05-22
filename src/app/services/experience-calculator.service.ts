@@ -242,6 +242,9 @@ export class ExperienceCalculatorService {
         // 5 años y 10 meses // 6 años //
         if (dies && dies >= 15)
             mesos++;
+        if (mesos >= 12) {
+            mesos = 0; anys++;
+        }
 
         const index = this.m.idiomaIndex;
         const textAnys = [["any", "anys"], ["año", "años"], ["year", "years"]][index];
@@ -259,6 +262,9 @@ export class ExperienceCalculatorService {
     construirCadenaTempsExpCurta([anys, mesos, dies]: Array<number>) {
         if (dies && dies >= 15)
             mesos++;
+        if (mesos >= 12) {
+            mesos = 0; anys++;
+        }
 
         const index = this.m.idiomaIndex;
         const textAnys = ["a", "a", "y"][index];
