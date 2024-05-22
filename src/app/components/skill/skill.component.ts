@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, ElementRef, Input, Renderer2 } from '@angular/core';
 import { MainService } from 'src/app/services/main.service';
 import { Utils } from 'src/app/shared/utils';
 
@@ -9,7 +9,11 @@ import { Utils } from 'src/app/shared/utils';
 })
 export class SkillComponent {
 
-    constructor(public m: MainService) { }
+    constructor(
+        public m: MainService,
+        private el: ElementRef,
+        private renderer: Renderer2,
+    ) { }
 
     @Input("n") nom: string;
     @Input("showTime") showTime: boolean;
@@ -70,6 +74,29 @@ export class SkillComponent {
             ][this.m.idiomaIndex];
         }
     }
+
+    correctTooltipPosition() {
+        const tooltipCard = this.el.nativeElement.querySelector('.tooltip-card');
+        const content = document.querySelector('.content');
+
+        this.renderer.removeStyle(tooltipCard, "translate");
+    
+        if (tooltipCard && content) {
+            const tooltipRect = tooltipCard.getBoundingClientRect();
+            const contentRect = content.getBoundingClientRect();
+    
+            let offset = 0;
+            if (tooltipRect.left < contentRect.left)
+                offset = contentRect.left - tooltipRect.left;
+            if (tooltipRect.right > contentRect.right)
+                offset = contentRect.right - tooltipRect.right;
+
+            if (offset)
+                this.renderer.setStyle(tooltipCard, "translate", `${offset}px`);
+            
+        }
+    }
+    
 
 
     // Strings //

@@ -1,35 +1,18 @@
-@if (!showTime) {
-    <section class="{{normalitzar(nom)}}">
-        <div
-            class="chip"
-            [title]="getAnysExp()"
-            appMostrarAmbAnimacio>
-            {{nom}}
-            <!-- - {{m.exp.getSkill(nom).diesTotals}} -->
-        </div>
-    </section>
-} @else {
-    <span class="tooltipExp {{normalitzar(nom)}}">
-
+<span class="tooltipExp {{normalitzar(nom)}}" (mouseenter)="correctTooltipPosition()">
+    @if (!showTime) {
+        <section class="{{normalitzar(nom)}}">
+            <div class="chip" appMostrarAmbAnimacio>{{nom}}</div>
+        </section>
+    } @else {
         <section class="showTime" appMostrarAmbAnimacio>
-            <div
-                class="chip"
-                [title]="getAnysExp()">
-                {{nom}}
-            </div>
-
+            <div class="chip">{{nom}}</div>
             <div class="barra">
                 <div class="nivell" [style.width.%]="getNivellBarra()"> {{getTextCurt()}} </div>
             </div>
-            <!-- <div class="textExp">
-                {{getTextCurt(nom)}}
-            </div> -->
-
         </section>
-
-        <div class="tooltip-card">
-            {{experienciaEn_string()}} <b>{{nom}}:</b><br>
-            {{getTextTooltip()}}
-        </div>
-    </span>
-}
+    }
+    <div class="tooltip-card">
+        {{experienciaEn_string()}} <b>{{nom}}:</b><br>
+        {{getTextTooltip()}}
+    </div>
+</span>

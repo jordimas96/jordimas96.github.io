@@ -66,12 +66,6 @@ section.showTime {
                 0px 30px 25px -30px #ffffff45 inset, 0px -30px 25px -30px #00000045 inset
         }
     }
-    // .textExp {
-    //     position: absolute;
-    //     right: 0;
-    //     margin-right: 1rem;
-    //     color: var(--text);
-    // }
 
 }
 
@@ -91,36 +85,30 @@ section.showTime {
     align-items: center;
 
     > .tooltip-card {
-        visibility: hidden;
+        display: none;
         position: absolute;
         // left: 0; right: 0;
         // translate: -50%;
-        max-width: 80%;
+        // max-width: 80%;
+        width: max-content;
         padding: 0.3rem 0.8rem;
         top: 100%;
         margin-top: 5px;
         border-radius: 1rem;
         background-color: hsl(var(--h), var(--s), 90%);
         color: hsl(var(--h), var(--s), 20%);
+        text-align: center;
         white-space: pre-line;
         user-select: none;
         pointer-events: none;
         z-index: 1000;
 
         @extend .shadow-3;
-
-        &::after {
-            content: " ";
-            position: absolute;
-            bottom: 100%;
-            left: 50%;
-            margin-left: -5px;
-            border-width: 5px;
-            border-style: solid;
-            border-color: transparent transparent hsl(var(--h), var(--s), 90%) transparent;
-          }
     }
-    &:hover > .tooltip-card { visibility: visible; }
+    &:hover > .tooltip-card { display: block; }
+}
+.showTime + .tooltip-card {
+    max-width: 80%;
 }
 
 
