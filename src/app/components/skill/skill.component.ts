@@ -40,32 +40,32 @@ export class SkillComponent {
         return this.m.exp.getTextExp(this.nom);
     }
     getTextCurt() {
-        if (!this.m.exp.experienciaPerSkills[this.nom])
+        if (!this.m.exp.getSkill(this.nom))
             return "";
         else
-            return this.m.exp.construirCadenaTempsExpCurta(this.m.exp.experienciaPerSkills[this.nom].anysMesosDies);
+            return this.m.exp.construirCadenaTempsExpCurta(this.m.exp.getSkill(this.nom)?.anysMesosDies);
     }
     getText_anysMesosDies() {
-        if (!this.m.exp.experienciaPerSkills[this.nom])
+        if (!this.m.exp.getSkill(this.nom))
             return "";
         else
-            return this.m.exp.construirCadenaTempsExp(this.m.exp.experienciaPerSkills[this.nom].anysMesosDies);
+            return this.m.exp.construirCadenaTempsExp(this.m.exp.getSkill(this.nom)?.anysMesosDies);
     }
     getText_anysMesos() {
-        if (!this.m.exp.experienciaPerSkills[this.nom])
+        if (!this.m.exp.getSkill(this.nom))
             return "";
         else
-            return this.m.exp.construirCadenaTempsExp_anysMesos(this.m.exp.experienciaPerSkills[this.nom].anysMesosDies);
+            return this.m.exp.construirCadenaTempsExp_anysMesos(this.m.exp.getSkill(this.nom)?.anysMesosDies);
     }
     getNivellBarra() {
-        return (this.m.exp.getSkill(this.nom).diesTotals || 0) / this.m.exp.getSkill("_total").diesTotals * 100;
+        return (this.m.exp.getSkill(this.nom)?.diesTotals || 0) / this.m.exp.getSkill("_total")?.diesTotals * 100;
     }
     getTextTooltip() {
-        if (this.m.exp.getSkill(this.nom).empreses?.length) {
+        if (this.m.exp.getSkill(this.nom)?.empreses?.length) {
             return this.getText_anysMesosDies() + // 2 years, 6 months and 9 days //
                 "\n" +
                 ["en", "en", "in"][this.m.idiomaIndex] + " " + // in //
-                Utils.addConjunctionBetweenThe2Last(this.m.exp.getSkill(this.nom).empreses, this.m.conjuncio); // Evora, Orange and In2art //
+                Utils.addConjunctionBetweenThe2Last(this.m.exp.getSkill(this.nom)?.empreses, this.m.conjuncio); // Evora, Orange and In2art //
         } else {
             return [
                 "Experiència només en projectes personals",

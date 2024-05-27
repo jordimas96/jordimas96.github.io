@@ -34,7 +34,7 @@ export class ExperienceCalculatorService {
             dates: ["2016-10-17", "2017-02-28"],
             skills: [
                 "Frontend",
-                "JavaScript", "JQuery", "CSS", "HTML5", "Bootstrap",
+                "JavaScript", "jQuery", "CSS", "HTML5", "Bootstrap",
                 "Delphi", "FastReport",
                 "Responsive Design",
                 "Windows",
@@ -70,7 +70,7 @@ export class ExperienceCalculatorService {
             dates: ["2020-09-07", "2021-06-25"],
             skills: [
                 "Frontend", "Backend",
-                "JavaScript", "JQuery", "CSS", "HTML5", "Bootstrap", "Materialize",
+                "JavaScript", "jQuery", "CSS", "HTML5", "Bootstrap", "Materialize",
                 "Cordova", "UWP",
                 "NodeJs", "Sequelize", "PHP",
                 "MySQL", "PHPMyadmin", "SQL Developer",
@@ -87,7 +87,7 @@ export class ExperienceCalculatorService {
             dates: ["2021-08-31", "2023-06-30"],
             skills: [
                 "Frontend",
-                "Angular", "CSS", "SASS", "TypeScript", "JavaScript", "JQuery", "HTML5", "Bootstrap", "Materialize", "i18n",
+                "Angular", "CSS", "SASS", "TypeScript", "JavaScript", "jQuery", "HTML5", "Bootstrap", "Materialize", "i18n",
                 "NodeJs",
                 "JSON",
                 "MySQL", "PHPMyadmin",
@@ -214,7 +214,16 @@ export class ExperienceCalculatorService {
 
     }
     getSkill(skill) {
-        return this.experienciaPerSkills[skill] || {};
+        if (!skill) return null;
+        let res = this.experienciaPerSkills[skill];
+        if (res) return res;
+
+        // Per si la skill esta mal escrita (majuscules, etc) //
+        for (var key in this.experienciaPerSkills) {
+            if (this.normalitzar(key) == this.normalitzar(skill))
+                return this.experienciaPerSkills[key];
+        }
+        return null;
     }
     getTextExp(skill: string) {
         if (!this.experienciaPerSkills[skill]) return "";
@@ -274,6 +283,16 @@ export class ExperienceCalculatorService {
         if (mesos > 0) text += mesos + "m";
 
         return text;
+    }
+
+
+    normalitzar(s) {
+        return s
+            .normalize()
+            .toLowerCase()
+            .replaceAll("#", "sharp")
+            .replaceAll("/", "")
+            .replaceAll(" ", "")
     }
 
 }

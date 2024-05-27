@@ -43,7 +43,7 @@ export class MadJumpgateJocComponent {
 
         // Si el contingut està tancat, no es pot medir l'amplada del placeholder per a redimensionar l'iframe. Amb aquest codi //
         // obrim el contingut per a mesurar el placeholder i poder establir la mida del placeholder i posteriorment la de l'iframe. //
-        // Ho necessitem per a que el JQuery faci l'animació slideDown bé (necessita saber la distancia total de l'animació que farà jQuery) //
+        // Ho necessitem per a que el jQuery faci l'animació slideDown bé (necessita saber la distancia total de l'animació que farà jQuery) //
         if (!$(".contingut").is(":visible")) {
             $(".contingut").show();
             this.placeholderWidth = $(".iframe-i-placeholder").innerWidth()!;

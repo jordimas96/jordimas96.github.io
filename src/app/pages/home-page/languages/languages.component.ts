@@ -53,7 +53,7 @@ export class LanguagesComponent extends CardComponent {
         // Afegim o traiem l'estil order per a ordenar elements dins el flex //
         if (this.sorted) {
             $("app-skill").each((i, e) => {
-                let order = this.m.exp.getSkill(e.getAttribute("n")).diesTotals || 0;
+                let order = this.m.exp.getSkill(e.getAttribute("n"))?.diesTotals || 0;
                 e.style.order = -order + "";
             });
         } else {
