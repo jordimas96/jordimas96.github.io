@@ -40,18 +40,34 @@
     
     <app-mad-jumpgate-joc/>
 
-    <div class="iconesStores shadow-filter-1 mt-4">
-        @if (m.esPc()) {
-            <a href="https://jordimas96.github.io/pages/mad-jumpgate" class="no-style boing bg-white" [class.apple-squircle]="m.esIOS()" appMostrarAmbAnimacio>
-                <img src="assets/images/mad-jumpgate/icons/unity.png" alt="Direct link" title="Direct link" class="logo">
-            </a>
-            <a href="https://jmaspgames.itch.io/mad-jumpgate" class="no-style boing" [class.apple-squircle]="m.esIOS()" appMostrarAmbAnimacio>
-                <img src="assets/images/mad-jumpgate/icons/itch-io.svg" alt="itch.io" title="itch.io" class="logo">
-            </a>
-        }
-        <a href="https://youtu.be/TwJ3bpvQ4qA" class="no-style boing bg-white" [class.samsung-squircle]="m.esSamsung()" [class.xiaomi-rounded]="m.esXiaomi()" [class.apple-squircle]="m.esIOS()" appMostrarAmbAnimacio>
-            <img src="assets/images/mad-jumpgate/icons/youtube.png" alt="Gameplay in YouTube" title="Gameplay in YouTube" class="logo">
-        </a>
+    <div class="d-flex gap-3 mt-3">
+        <div class="seccioIcones play p-3" *ngIf="m.esPc()">
+            <div class="titol text-80">
+                @if(m.ca) { Jugar }
+                @if(m.es) { Jugar }
+                @if(m.en) { Play }
+            </div>
+            <div class="contingut shadow-filter-1">
+                <a href="https://jordimas96.github.io/pages/mad-jumpgate" class="no-style boing bg-white" [class.apple-squircle]="m.esIOS()" appMostrarAmbAnimacio>
+                    <img src="assets/images/mad-jumpgate/icons/unity.png" alt="Direct link" title="Direct link" class="logo">
+                </a>
+                <a href="https://jmaspgames.itch.io/mad-jumpgate" class="no-style boing" [class.apple-squircle]="m.esIOS()" appMostrarAmbAnimacio>
+                    <img src="assets/images/mad-jumpgate/icons/itch-io.svg" alt="itch.io" title="itch.io" class="logo">
+                </a>
+            </div>
+        </div>
+        <div class="seccioIcones gameplay p-3">
+            <div class="titol text-80">
+                @if(m.ca) { Veure gameplay }
+                @if(m.es) { Ver gameplay }
+                @if(m.en) { Watch gameplay }
+            </div>
+            <div class="contingut shadow-filter-1">
+                <a href="https://youtu.be/TwJ3bpvQ4qA" class="no-style boing bg-white" [class.samsung-squircle]="m.esSamsung()" [class.xiaomi-rounded]="m.esXiaomi()" [class.apple-squircle]="m.esIOS()" appMostrarAmbAnimacio>
+                    <img src="assets/images/mad-jumpgate/icons/youtube.png" alt="Gameplay in YouTube" title="Gameplay in YouTube" class="logo">
+                </a>
+            </div>
+        </div>
     </div>
 
     <!-- Skills -->

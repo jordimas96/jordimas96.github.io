@@ -42,16 +42,16 @@ export class DetallsAndroidAppsComponent {
         let $seccio = $(boto).parent();
         let $fletxa = $seccio.find(".fletxa");
         let $contingut = $seccio.find(".contingut");
-        let obert = $fletxa.is("[data-open]");
+        let obert = $seccio.is("[data-open]");
         let $video = $seccio.find("video");
 
         obert = !obert;
         if (obert) {
-            $fletxa.attr("data-open", "");
+            $seccio.attr("data-open", "");
             $contingut.stop().slideDown(200);
             $video[0].play();
         } else {
-            $fletxa.removeAttr("data-open");
+            $seccio.removeAttr("data-open");
             $contingut.stop().slideUp(200);
             $video[0].pause();
         }

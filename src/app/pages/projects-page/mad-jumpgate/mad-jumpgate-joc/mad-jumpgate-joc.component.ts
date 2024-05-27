@@ -76,16 +76,16 @@ export class MadJumpgateJocComponent {
         let $seccio = $(boto).parent();
         let $fletxa = $seccio.find(".fletxa");
         let $contingut = $seccio.find(".contingut");
-        let obert = $fletxa.is("[data-open]");
+        let obert = $seccio.is("[data-open]");
 
         obert = !obert;
         if (obert) {
-            $fletxa.attr("data-open", "");
+            $seccio.attr("data-open", "");
             $contingut.stop().slideDown(200, () => {
                 this.iniciarJoc();
             });
         } else {
-            $fletxa.removeAttr("data-open");
+            $seccio.removeAttr("data-open");
             $contingut.stop().slideUp(200, () => {
                 // this.carregarJoc = false;
             });

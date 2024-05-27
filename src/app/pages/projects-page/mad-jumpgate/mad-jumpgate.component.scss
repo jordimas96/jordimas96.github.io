@@ -8,20 +8,45 @@ a.link-img {
     }
 }
 
-.iconesStores {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 1rem;
+.seccioIcones {
+    // .play
+    // .gameplay
 
-    a {
-        display: block;
-        border-radius: 50%;
-        overflow: hidden;
+    border-radius: 1.25rem;
 
-        .logo {
-            height: 3rem;
+    .titol {
+        font-size: 1rem;
+        line-height: 1rem;
+        text-align: center;
+
+        padding: 0 0.25rem;
+        margin-bottom: 1rem;
+
+    }
+    .contingut {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 1rem;
+
+        a {
+            display: block;
+            border-radius: 50%;
+            overflow: hidden;
+    
+            .logo {
+                height: 3rem;
+            }
         }
     }
+}
+
+::ng-deep .seccioIcones {
+    background-color: var(--color-clar-20);
+}
+::ng-deep .light .seccioIcones {
+    background-color: var(--color-clar-50);
+    // @extend .shadow-1;
 }
 
 
