@@ -1,5 +1,7 @@
 @import "src/styles.scss";
 
+:host { display: block; }
+
 .seccio {
     margin-bottom: 1rem;
     border-radius: 2rem;

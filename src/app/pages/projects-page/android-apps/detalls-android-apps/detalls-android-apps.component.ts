@@ -40,7 +40,6 @@ export class DetallsAndroidAppsComponent {
   
     toggleSeccio(boto) {
         let $seccio = $(boto).parent();
-        let $fletxa = $seccio.find(".fletxa");
         let $contingut = $seccio.find(".contingut");
         let obert = $seccio.is("[data-open]");
         let $video = $seccio.find("video");

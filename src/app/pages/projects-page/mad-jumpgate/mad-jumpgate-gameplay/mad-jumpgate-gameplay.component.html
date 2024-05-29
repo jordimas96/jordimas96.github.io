@@ -1,0 +1,24 @@
+<div class="seccio" appMostrarAmbAnimacio>
+    <button class="boto-desplegable no-style" (click)="toggleSeccio($event.currentTarget)">
+        <div class="text-i-icona">
+            <img src="assets/images/mad-jumpgate/icons/miniatura-gameplay.png" class="icona">
+            <span class="titol">
+                @if(m.esPantallaPc()) { Mad Jumpgate - }
+                @if(m.ca) { Veure gameplay }
+                @if(m.es) { Ver gameplay }
+                @if(m.en) { Watch gameplay }
+            </span>
+        </div>
+        <i class="fa-solid fa-chevron-down fletxa"></i>
+    </button>
+    <div class="contingut" style="display:none;">
+
+        <div class="iframe-i-placeholder" appMostrarAmbAnimacio>
+            @if (carregarVideo) {
+                <iframe #iframeRef [width]="placeholderWidth" [height]="placeholderHeight" src="https://www.youtube.com/embed/TwJ3bpvQ4qA?si=vdVvicJhPCClGwrQ" title="Mad Jumpgate gameplay" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            }
+        
+            <div class="placeholder" [style.width.px]="placeholderWidth" [style.height.px]="placeholderHeight"></div>
+        </div>
+    </div>
+</div>

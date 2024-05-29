@@ -3,15 +3,15 @@ import { MainService } from 'src/app/services/main.service';
 import { Utils } from 'src/app/shared/utils';
 
 @Component({
-    selector: 'app-mad-jumpgate-joc',
-    templateUrl: './mad-jumpgate-joc.component.html',
-    styleUrls: ['./mad-jumpgate-joc.component.scss']
+    selector: 'app-mad-jumpgate-gameplay',
+    templateUrl: './mad-jumpgate-gameplay.component.html',
+    styleUrls: ['./mad-jumpgate-gameplay.component.scss']
 })
-export class MadJumpgateJocComponent {
+export class MadJumpgateGameplayComponent {
 
     @ViewChild('iframeRef') iframeRef: ElementRef;
 
-    public carregarJoc = false;
+    public carregarVideo = false;
 
     public placeholderWidth = 0;
     public placeholderHeight = 0;
@@ -20,7 +20,7 @@ export class MadJumpgateJocComponent {
 
     ngOnInit() {
         this.m.afterRootFadeIn(this.afterRootFadeIn.bind(this));
-
+        
     }
 
     afterRootFadeIn() {
@@ -28,8 +28,8 @@ export class MadJumpgateJocComponent {
     }
     
     
-    async iniciarJoc() {
-        this.carregarJoc = true;
+    async iniciarVideo() {
+        this.carregarVideo = true;
 
         await Utils.wait(0);
 
@@ -38,23 +38,21 @@ export class MadJumpgateJocComponent {
 
     @HostListener('window:resize', ['$event'])
     posarIframeDinsLimits() {
-        var iframeWidth = 1920;
-        var iframeHeight = 1080;
 
         // Si el contingut està tancat, no es pot medir l'amplada del placeholder per a redimensionar l'iframe. Amb aquest codi //
         // obrim el contingut per a mesurar el placeholder i poder establir la mida del placeholder i posteriorment la de l'iframe. //
         // Ho necessitem per a que el jQuery faci l'animació slideDown bé (necessita saber la distancia total de l'animació que farà jQuery) //
-        let $root = $("app-mad-jumpgate-joc");
+        let $root = $("app-mad-jumpgate-gameplay");
         if (!$root.find(".contingut").is(":visible")) {
             $root.find(".contingut").show();
             this.placeholderWidth = $root.find(".iframe-i-placeholder").innerWidth()!;
             $root.find(".contingut").hide();
         } else this.placeholderWidth = $root.find(".iframe-i-placeholder").innerWidth()!;
-            
-        this.placeholderHeight = iframeHeight * this.placeholderWidth / iframeWidth;
-        
 
-        var valorScale = this.placeholderWidth / iframeWidth;
+        // Relació 16:9 //
+        this.placeholderHeight = this.placeholderWidth / 16 * 9;
+
+        var valorScale = this.placeholderWidth / this.placeholderWidth;
 
         $root.find("iframe").css("transform", `scale(${valorScale})`);
     }
@@ -75,7 +73,6 @@ export class MadJumpgateJocComponent {
 
     async toggleSeccio(boto) {
         let $seccio = $(boto).parent();
-        let $fletxa = $seccio.find(".fletxa");
         let $contingut = $seccio.find(".contingut");
         let obert = $seccio.is("[data-open]");
 
@@ -83,12 +80,12 @@ export class MadJumpgateJocComponent {
         if (obert) {
             $seccio.attr("data-open", "");
             $contingut.stop().slideDown(200, () => {
-                this.iniciarJoc();
+                this.iniciarVideo();
             });
         } else {
             $seccio.removeAttr("data-open");
             $contingut.stop().slideUp(200, () => {
-                // this.carregarJoc = false;
+                // this.carregarVideo = false;
             });
         }
     }

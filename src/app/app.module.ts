@@ -40,6 +40,7 @@ import { AndroidAppsComponent } from './pages/projects-page/android-apps/android
 import { DetallsAndroidAppsComponent } from './pages/projects-page/android-apps/detalls-android-apps/detalls-android-apps.component';
 import { CustomRomsComponent } from './pages/projects-page/custom-roms/custom-roms.component';
 import { GithubProjectsComponent } from './pages/projects-page/github-projects/github-projects.component';
+import { MadJumpgateGameplayComponent } from './pages/projects-page/mad-jumpgate/mad-jumpgate-gameplay/mad-jumpgate-gameplay.component';
 import { MadJumpgateJocComponent } from './pages/projects-page/mad-jumpgate/mad-jumpgate-joc/mad-jumpgate-joc.component';
 import { MadJumpgateComponent } from './pages/projects-page/mad-jumpgate/mad-jumpgate.component';
 import { ProjectsPageComponent } from './pages/projects-page/projects-page.component';
@@ -95,6 +96,7 @@ import { SectionPageComponent } from './pages/section-page/section-page.componen
         IconsComponent,
 
         DetallsAndroidAppsComponent,
+        MadJumpgateGameplayComponent,
         MadJumpgateJocComponent,
     ],
     imports: [

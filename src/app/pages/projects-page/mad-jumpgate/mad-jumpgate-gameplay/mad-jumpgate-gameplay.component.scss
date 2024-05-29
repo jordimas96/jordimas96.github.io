@@ -50,43 +50,6 @@
                 border-radius: 1rem;
                 z-index: 1;
             }
-            .placeholder {
-                // transition: height 2s;
-            }
-        
-            .botoFullscreen {
-                display: inline-block;
-                position: absolute;
-                top: 0; right: 0;
-                margin: 0.5rem;
-                padding: 0;
-                width: 2.7rem;
-                height: 2.7rem;
-                border-radius: 10px;
-                z-index: 2;
-        
-                color: var(--color-fosc);
-                background-color: hsla(60, 100%, 75%, 0.3);
-                backdrop-filter: blur(6px);
-        
-                transition: background-color 0.2s;
-        
-                &:hover {
-                    background-color: hsla(60, 100%, 75%, 0.8);
-                }
-            }
-        }
-        
-        .missatge-nomes-pc {
-            text-align: center;
-            div:nth-child(1) {
-                font-size: 1.3rem;
-                color: var(--text-90);
-            }
-            div:nth-child(2) {
-                font-size: 0.9rem;
-                color: var(--text-70);
-            }
         }
     }
 }

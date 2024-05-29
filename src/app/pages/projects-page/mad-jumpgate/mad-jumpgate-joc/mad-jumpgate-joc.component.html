@@ -26,10 +26,19 @@
                 <button class="boto botoFullscreen no-style" (click)="fullScreen()"><i class="fa-solid fa-expand"></i></button>
             </div>
         } @else {
-            <div class="missatge-nomes-pc text-80">
-                @if (m.ca) { Aquest joc és només per a ordinador.<br>Accedeix des d'un ordinador per a jugar-hi. }
-                @if (m.es) { Este juego es sólo para ordenador.<br>Accede desde un ordenador para jugar. }
-                @if (m.en) { This game is for PC only.<br>Access from a computer to play it. }
+            <div class="missatge-nomes-pc">
+                @if (m.ca) {
+                    <div appMostrarAmbAnimacio>Aquest joc és només per a ordinador</div>
+                    <div appMostrarAmbAnimacio>Accedeix des d'un ordinador per a jugar-hi</div>
+                }
+                @if (m.es) {
+                    <div appMostrarAmbAnimacio>Este juego es sólo para ordenador</div>
+                    <div appMostrarAmbAnimacio>Accede desde un ordenador para jugar</div>
+                }
+                @if (m.en) {
+                    <div appMostrarAmbAnimacio>This game is for PC only</div>
+                    <div appMostrarAmbAnimacio>Access from a computer to play it</div>
+                }
             </div>
         }
     </div>
