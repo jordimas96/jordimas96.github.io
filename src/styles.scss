@@ -107,7 +107,7 @@ body {
 .botoAmbIcona {
     padding: 0.5rem 0.5rem 0.5rem 1rem;
 }
-.boto, a {
+.boto, a:not(.no-style) {
     @extend .boing;
 }
 
@@ -209,6 +209,26 @@ video {
 .text-70 { color: var(--text-70); }
 .text-80 { color: var(--text-80); }
 .text-90 { color: var(--text-90); }
+
+.color-clar-10 { color: var(--color-clar-10); }
+.color-clar-20 { color: var(--color-clar-20); }
+.color-clar-30 { color: var(--color-clar-30); }
+.color-clar-40 { color: var(--color-clar-40); }
+.color-clar-50 { color: var(--color-clar-50); }
+.color-clar-60 { color: var(--color-clar-60); }
+.color-clar-70 { color: var(--color-clar-70); }
+.color-clar-80 { color: var(--color-clar-80); }
+.color-clar-90 { color: var(--color-clar-90); }
+
+.color-fosc-10 { color: var(--color-fosc-10); }
+.color-fosc-20 { color: var(--color-fosc-20); }
+.color-fosc-30 { color: var(--color-fosc-30); }
+.color-fosc-40 { color: var(--color-fosc-40); }
+.color-fosc-50 { color: var(--color-fosc-50); }
+.color-fosc-60 { color: var(--color-fosc-60); }
+.color-fosc-70 { color: var(--color-fosc-70); }
+.color-fosc-80 { color: var(--color-fosc-80); }
+.color-fosc-90 { color: var(--color-fosc-90); }
 
 html.light .inv-dark { filter: invert(1); }
 html.dark .inv-dark-2 { filter: invert(1); }

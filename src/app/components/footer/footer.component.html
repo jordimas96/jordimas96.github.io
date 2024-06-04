@@ -1,5 +1,5 @@
 <footer>
-    <div class="contact-icons">
+    <!-- <div class="contact-icons">
         <a href="https://www.linkedin.com/in/jordimas96" class="link-img no-style -v" appMostrarAmbAnimacio>
             <img src="assets/icons/contact/linkedin.png" alt="LinkedIn" class="footer-icon boing">
             <div class="footer-icon-text">LinkedIn</div>
@@ -16,10 +16,101 @@
             <img src="assets/icons/contact/email.png" alt="Email" class="footer-icon boing p-1 rounded-2">
             <div class="footer-icon-text">Email me!</div>
         </a>
-        <!-- <a href="https://www.youtube.com/playlist?list=PLuIrb7i3EMtOB_S2yQPbJ4nhHhdl3TYHM" class="link-img no-style -v" appMostrarAmbAnimacio>
+        <a href="https://www.youtube.com/playlist?list=PLuIrb7i3EMtOB_S2yQPbJ4nhHhdl3TYHM" class="link-img no-style -v" appMostrarAmbAnimacio>
             <img src="assets/icons/contact/youtube.png" alt="YouTube" class="footer-icon boing p-1">
             <div class="footer-icon-text">YouTube</div>
-        </a> -->
+        </a>
+    </div> -->
+
+    <h2 class="titol text-center mb-5">
+        @if (m.ca) { Les meves xarxes }
+        @if (m.es) { Mis redes }
+        @if (m.en) { My networks }
+    </h2>
+    <div class="contact-cards mt-3 mb-5">
+        <!-- LinkedIn -->
+        <a href="https://www.linkedin.com/in/jordimas96" class="_card no-style d-flex flex-column gap-2 ressaltarHover" appMostrarAmbAnimacio>
+            <div class="header d-flex align-items-center gap-3">
+                <img src="assets/icons/contact/linkedin.png" alt="LinkedIn" class="icona">
+                <div class="titol">
+                    Jordi Mas Parramon
+                    <svg class="color-clar-60" style="height:1.5rem" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" id="verified-medium" aria-hidden="true" role="none" data-supported-dps="24x24" fill="currentColor">
+                        <path d="M18.5 11c0 3.79-2.29 6.76-6.09 8.21l-.4.14-.38-.14C7.8 17.76 5.5 14.78 5.5 11V6.8L12 4.63l6.5 2.17V11zm-6.49-9L3 5v6c0 5 3.12 8.81 7.77 10.56L12 22l1.27-.44C17.9 19.81 21.01 16 21.01 11V5l-8.99-3zm-1.62 10.63L14.11 8h3.21l-5.85 7.28-.87 1.09-.99-.99-2.96-2.97 1.77-1.77 1.98 1.98z" fill="currentColor" fill-rule="evenodd"></path>
+                    </svg>
+                </div>
+            </div>
+            <div class="flex-grow-1 d-flex flex-column justify-content-evenly align-items-center gap-1">
+                <div class="text color-clar-70">
+                    @if (m.ca) { Programador frontend }
+                    @if (m.es) { Programador frontend }
+                    @if (m.en) { Frontend programmer }
+                </div>
+                <div class="text color-clar-50">
+                    104
+                    @if (m.ca) { conexions }
+                    @if (m.es) { conexiones }
+                    @if (m.en) { connections }
+                </div>
+            </div>
+        </a>
+        <!-- GitHub -->
+        <a href="https://github.com/jordimas96" class="_card no-style d-flex flex-column gap-2 ressaltarHover" appMostrarAmbAnimacio>
+            <div class="header d-flex align-items-center gap-3">
+                <img src="assets/icons/contact/github.png" alt="GitHub" class="icona">
+                <div class="titol">jordimas96</div>
+            </div>
+            <div class="text color-clar-70 px-3 fw-bold flex-grow-1 d-flex justify-content-center align-items-center">
+                13
+                @if (m.ca) { repositoris }
+                @if (m.es) { repositorios públicos }
+                @if (m.en) { repositories }
+            </div>
+        </a>
+        <!-- Google Play Store -->
+        <a href="https://jordimas96.github.io/pages/play-store/play-store.html" class="_card no-style d-flex flex-column gap-2 ressaltarHover" appMostrarAmbAnimacio>
+            <div class="header d-flex align-items-center gap-3">
+                <img src="assets/icons/contact/play-store.png" alt="Google Play Store" class="icona">
+                <div class="titol">
+                    @if (m.ca) { Pàgina de desenvolupador de Jordi Mas }
+                    @if (m.es) { Página de desarrollador de Jordi Mas }
+                    @if (m.en) { Jordi Mas's developer page }
+                </div>
+            </div>
+            <div class="flex-grow-1 d-flex flex-column align-items-center gap-2">
+                <div class="text color-clar-70 fw-bold">
+                    21k+
+                    @if (m.ca) { descàrregues }
+                    @if (m.es) { descargas }
+                    @if (m.en) { downloadss }
+                </div>
+                <div class="text color-clar-70">4 apps</div>
+            </div>
+        </a>
+        <!-- Email -->
+        <a href="mailto:xordimas@gmail.com" class="_card no-style d-flex flex-column gap-2 ressaltarHover" appMostrarAmbAnimacio>
+            <div class="header d-flex align-items-center gap-3">
+                <img src="assets/icons/contact/email.png" alt="Email" class="icona p-1">
+                <div class="titol">
+                    @if (m.ca) { Envia'm un correu! }
+                    @if (m.es) { Envíame un correo! }
+                    @if (m.en) { Email me! }
+                </div>
+            </div>
+            <div class="text color-clar-70 flex-grow-1 d-flex justify-content-center align-items-center">xordimas&#64;gmail.com</div>
+        </a>
+        <!-- YouTube -->
+        <a href="https://www.youtube.com/playlist?list=PLuIrb7i3EMtOB_S2yQPbJ4nhHhdl3TYHM" class="_card no-style d-flex flex-column gap-2 ressaltarHover" appMostrarAmbAnimacio>
+            <div class="header d-flex align-items-center gap-3">
+                <img src="assets/icons/contact/youtube.png" alt="YouTube" class="icona">
+                <div class="titol">JordiMasPGames</div>
+            </div>
+            <div class="text color-clar-70 fw-bold flex-grow-1 d-flex justify-content-center align-items-center">
+                27
+                @if (m.ca) { vídeos }
+                @if (m.es) { vídeos }
+                @if (m.en) { videos }
+            </div>
+        </a>
     </div>
 
 

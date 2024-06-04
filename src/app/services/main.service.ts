@@ -7,6 +7,7 @@ import { SidebarComponent } from "../components/sidebar/sidebar.component";
 import { Utils } from "../shared/utils";
 import { ExperienceCalculatorService } from "./experience-calculator.service";
 import { ThemeService } from "./theme.service";
+import { FooterComponent } from "../components/footer/footer.component";
 
 // https://developerslogblog.wordpress.com/2019/04/23/how-to-use-angular-services-to-share-data-between-components/ //
 
@@ -17,6 +18,7 @@ export class MainService {
     // Components //
     public appbar!: AppbarComponent;
     public sidebar: SidebarComponent;
+    public footer: FooterComponent;
     public index: IndexComponent;
     public exp: ExperienceCalculatorService;
 

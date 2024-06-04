@@ -18,7 +18,7 @@ export class FooterComponent {
         public m: MainService,
         public rootElement: ElementRef,
     ) {
-        // m.footer = this;
+        m.footer = this;
     }
 
     ngOnInit() {
