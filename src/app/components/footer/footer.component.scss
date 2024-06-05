@@ -37,7 +37,7 @@ footer {
         }
     }
 
-    > .titol {
+    .titol-footer {
         font-size: 1.75rem;
     }
     .contact-cards {
@@ -54,12 +54,48 @@ footer {
             
             background-color: var(--color-clar-30);
 
+            --opacitat: 0.6;
+            --zoomOri: 100%;
+            --zoomHover: 130%;
+            &.linkedin {
+                background-image: url("/assets/images/footer/linkedin.jpg");
+            }
+            &.github {
+                background-image: url("/assets/images/footer/github.png");
+                background-repeat: repeat;
+                --zoomOri: 164%;
+                --zoomHover: 190%;
+            }
+            &.playstore {
+                background-image: url("/assets/images/footer/playstore.png");
+                --zoomHover: 120%;
+            }
+            &.email {
+                background-image: url("/assets/images/footer/email.png");
+            }
+            &.youtube {
+                background-image: url("/assets/images/footer/youtube.png");
+                --zoomOri: 105%;
+            }
+
+            box-shadow: inset 0 0 0 1000px rgba(0, 0, 0, 0.6) !important;
+
+            background-size: var(--zoomOri);
+            background-position: center;
+            background-repeat: no-repeat;
+
+            transition: background-size 0.3s, box-shadow 0.3s;
+
+            &:hover {
+                background-size: var(--zoomHover);
+                box-shadow: inset 0 0 0 1000px rgba(0, 0, 0, 0.3) !important;
+            }
+
             .icona {
                 height: 2.4rem;
             }
             .titol {
                 font-size: 1.4rem;
-                line-height: 1.6rem;
                 // padding-right: 0.5rem;
             }
             .text {
