@@ -47,59 +47,101 @@ footer {
         gap: 1rem;
 
         ._card {
-            padding: 1rem;
+            min-width: 18rem;
             min-height: 8.5rem;
+            padding: 1rem;
 
             border-radius: 1.5rem;
             
             background-color: var(--color-clar-30);
 
-            --opacitat: 0.6;
-            --zoomOri: 100%;
-            --zoomHover: 130%;
-            &.linkedin {
-                background-image: url("/assets/images/footer/linkedin.jpg");
+            overflow: hidden;
+
+            // Card background //
+            --brilloFinal: 0.8;
+            &.linkedin {  --url: url("/assets/images/footer/linkedin.jpg"); }
+            &.github {    --url: url("/assets/images/footer/github.png"); --brilloFinal: 2; }
+            &.playstore { --url: url("/assets/images/footer/playstore.png"); --brilloFinal: 1; }
+            &.email {     --url: url("/assets/images/footer/email.png"); }
+            &.youtube {   --url: url("/assets/images/footer/youtube.png"); }
+
+            &::before {
+                content: "";
+                background-image: var(--url);
+                background-size: cover;
+                background-position: center;
+                position: absolute;
+                inset: 0;
+                z-index: 0;
+                filter: brightness(0.4);
+                transition: transform 0.3s, filter 0.3s;
             }
-            &.github {
-                background-image: url("/assets/images/footer/github.png");
-                background-repeat: repeat;
-                --zoomOri: 164%;
-                --zoomHover: 190%;
-            }
-            &.playstore {
-                background-image: url("/assets/images/footer/playstore.png");
-                --zoomHover: 120%;
-            }
-            &.email {
-                background-image: url("/assets/images/footer/email.png");
-            }
-            &.youtube {
-                background-image: url("/assets/images/footer/youtube.png");
-                --zoomOri: 105%;
+            &:hover::before {
+                transform: scale(1.4);
+                filter: brightness(var(--brilloFinal)) blur(20px) saturate(1.5);
             }
 
-            box-shadow: inset 0 0 0 1000px rgba(0, 0, 0, 0.6) !important;
 
-            background-size: var(--zoomOri);
-            background-position: center;
-            background-repeat: no-repeat;
-
-            transition: background-size 0.3s, box-shadow 0.3s;
-
-            &:hover {
-                background-size: var(--zoomHover);
-                box-shadow: inset 0 0 0 1000px rgba(0, 0, 0, 0.3) !important;
+            * {
+                z-index: 10;
+                transition: transform 0.3s, opacity 0.3s;
             }
 
-            .icona {
-                height: 2.4rem;
+            .titol-ocult {
+                position: absolute;
+                inset: 0;
+
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                gap: 1rem;
+
+                opacity: 0;
+                transform: scale(60%);
+
+                transition: opacity 0.3s, transform 0.3s;
+
+                .icona {
+                    height: 3.6rem;
+                }
+                .titol {
+                    font-size: 2rem;
+                }
+
             }
-            .titol {
-                font-size: 1.4rem;
-                // padding-right: 0.5rem;
+            .header {
+                .icona {
+                    height: 2.4rem;
+                }
+                .titol {
+                    font-size: 1.4rem;
+                    padding-right: 0.5rem;
+                }
             }
             .text {
                 font-size: 1.1rem;
+            }
+
+
+            &:hover {
+                .titol-ocult {
+                    transform: none;
+                    opacity: 1;
+                }
+                .header {
+                    .icona {
+                        transform: translateX(-50%);
+                        opacity: 0;
+                    }
+                    .titol {
+                        transform: translateY(-50%);
+                        opacity: 0;
+                    }
+                }
+                .text {
+                    transform: translateY(5rem);
+                    opacity: 0;
+                }
             }
 
         }
@@ -157,10 +199,6 @@ footer {
                 transform: translateY(0.1rem);
             }
         }
-    }
-
-    .ressaltarHover:hover {
-        box-shadow: inset 0 0 0 1000px rgba(255, 255, 255, 0.2) !important;
     }
 }
 // Mòbil //
