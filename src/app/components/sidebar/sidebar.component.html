@@ -4,9 +4,6 @@
         <i class="fa-solid fa-close d-block"></i>
     </button>
 
-
-
-
     <nav class="seccions">
         <button class="botoText" routerLink="/">
             @if (m.ca) { Inici }
@@ -30,9 +27,42 @@
         </button>
     </nav>
 
-    <div class="barraInferior p-3">
-        <app-dark-mode />
-        <app-selector-idioma />
+
+
+
+
+
+    <div class="zonaInferior p-3">
+
+        <div class="contact-icons mb-4">
+            <a href="https://www.linkedin.com/in/jordimas96" class="contact-icon no-style">
+                <img src="assets/icons/contact/linkedin.png" alt="LinkedIn" class="icon boing">
+                <div class="text">LinkedIn</div>
+            </a>
+            <a href="https://github.com/jordimas96" class="contact-icon no-style">
+                <img src="assets/icons/contact/github.png" alt="GitHub" class="icon boing">
+                <div class="text">GitHub</div>
+            </a>
+            <a href="https://jordimas96.github.io/pages/play-store/play-store.html" class="contact-icon no-style">
+                <img src="assets/icons/contact/play-store.png" alt="Google Play Store" class="icon boing">
+                <div class="text">Play Store</div>
+            </a>
+            @if (m.esPantallaMobil()) { <div class="w-100"></div> }
+            <a href="mailto:xordimas@gmail.com" class="contact-icon no-style">
+                <img src="assets/icons/contact/email.png" alt="Email" class="icon boing p-1 rounded-2">
+                <div class="text">Email me!</div>
+            </a>
+            <a href="https://www.youtube.com/playlist?list=PLuIrb7i3EMtOB_S2yQPbJ4nhHhdl3TYHM" class="contact-icon no-style">
+                <img src="assets/icons/contact/youtube.png" alt="YouTube" class="icon boing p-1">
+                <div class="text">YouTube</div>
+            </a>
+        </div>
+
+        <div class="d-flex justify-content-between align-items-end">
+            <app-dark-mode />
+            <app-selector-idioma />
+        </div>
+        
     </div>
 
 
