@@ -70,4 +70,8 @@
     <div class="hiddenButtonBlockGoogleAnalytics" (click)="blockAnalyticsClick()"></div>
 
 </div>
-<div class="backdrop" (mouseenter)="this.tancar()"></div>
+@if (m.esPantallaTactil()) {
+    <div class="backdrop" (click)="this.tancar()"></div>
+} @else {
+    <div class="backdrop" (mouseenter)="this.tancar()"></div>
+}
