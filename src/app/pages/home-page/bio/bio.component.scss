@@ -4,15 +4,27 @@
 
 // opacity: primary (87%), secondary (60%), tertiary (38%) //
 
-.foto-carnet {
+.foto {
     overflow: hidden;
     border-radius: 2rem;
+
+    transition: border-radius 0.3s;
+
+    &:hover {
+        border-radius: 1rem !important;
+
+        img {
+            transform: none !important;
+        }
+    }
 
     img {
         width: 100%;
         height: 100%;
         transform: scale(1.1);
         transform-origin: top;
+        
+        transition: transform 0.3s;
     }
 }
 
@@ -39,17 +51,15 @@
     font-size: 1.2rem;
 }
 
-.bio {
-    .tempsExp {
-        cursor: pointer;
-        color: var(--color-7);
-        font-weight: bold;
-        display: inline-block;
-    }
-    .boto {
-        padding: 0.9rem 1.1rem;
-        padding-left: 1.3rem !important;
-    }
+.tempsExp {
+    cursor: pointer;
+    color: var(--color-7);
+    font-weight: bold;
+    display: inline-block;
+}
+.boto {
+    padding: 0.9rem 1.1rem;
+    padding-left: 1.3rem !important;
 }
 
 
@@ -131,7 +141,7 @@
 // Pantalla Tablet //
 @media only screen and (min-width: 576px) {
 
-    .foto-carnet {
+    .foto {
         -webkit-box-reflect: below 0px linear-gradient(to bottom, rgb(0 0 0 / 0%) 50%, rgb(0 0 0 / 15%));
     }
 
@@ -142,22 +152,6 @@
 @media only screen and (min-width: 992px) { }
 
 // PC //
-@media (pointer: fine) {
-
-    .foto-carnet {
-        transition: border-radius 0.3s;
-
-        &:hover {
-            border-radius: 1rem !important;
-        }
-        img {
-            transition: transform 0.3s;
-            &:hover {
-                transform: none !important;
-            }
-        }
-    }
-
-}
+@media (pointer: fine) { }
 // Mòbil //
 @media (pointer: coarse) { }

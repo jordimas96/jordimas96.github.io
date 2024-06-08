@@ -1,6 +1,6 @@
 <section id="bio" class="row section" appMostrarAmbAnimacio>
     <div class="col-5 col-sm-4 p-3 p-sm-4" appMostrarAmbAnimacio>
-        <div class="foto-carnet">
+        <div class="foto">
             <!-- <app-imatge-scroll src="assets/Foto carnet 2020.jpg"></app-imatge-scroll> -->
             <img src="assets/Foto carnet 2020.jpg" alt="Foto">
         </div>
@@ -24,20 +24,20 @@
         </div>
         <!-- Recipient bio pc -->
         @if (m.esPantallaPc()) {
-            <div class="bio text-center text-80 mt-4">
-                <div *ngTemplateOutlet="bio"></div>
+            <div class="text-center text-80 mt-4">
+                <div *ngTemplateOutlet="contBio"></div>
             </div>
         }
         
     </div>
     <!-- Recipient bio mobil -->
     @if (m.esPantallaMobil()) {
-        <div class="bio text-center text-80 mt-4">
-            <div *ngTemplateOutlet="bio"></div>
+        <div class="text-center text-80 mt-4">
+            <div *ngTemplateOutlet="contBio"></div>
         </div>
     }
     <!-- Template bio -->
-    <ng-template #bio>
+    <ng-template #contBio>
         <div class="text-justify">
             @if (m.ca) {
                 Sóc un apassionat programador especialitzat en frontend i UI/UX, amb
