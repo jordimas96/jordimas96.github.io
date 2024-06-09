@@ -6,22 +6,26 @@
         </div>
     </div>
 
-    <div class="col-7 col-sm-8 px-sm-4 pt-sm-4 text-right align-self-center">
+    <div class="col-7 col-sm-8 px-sm-4 text-right align-self-center">
 
-        <div class="bondia text-60 mb-3" appMostrarAmbAnimacio>{{getSalutacioSegonsHora()}}</div>
-        <div class="emdicjordi text-right">
-            <span class="emdic text-70" appMostrarAmbAnimacio>
-                @if (m.ca) { Em dic }
-                @if (m.es) { Me llamo }
-                @if (m.en) { My name is }
-            </span>
-            <div class="jordi" appMostrarAmbAnimacio>Jordi Mas Parramon</div>
+        <div class="py-sm-4">
+            <div class="bondia text-60 mb-3" appMostrarAmbAnimacio>{{getSalutacioSegonsHora()}}</div>
+            <div class="emdicjordi text-right">
+                <span class="emdic text-70" appMostrarAmbAnimacio>
+                    @if (m.ca) { Em dic }
+                    @if (m.es) { Me llamo }
+                    @if (m.en) { My name is }
+                </span>
+                <div class="jordi" appMostrarAmbAnimacio>Jordi Mas Parramon</div>
+            </div>
+            <div class="programador text-70 font-italic" appMostrarAmbAnimacio>
+                @if (m.ca) { - Programador frontend - }
+                @if (m.es) { - Programador frontend - }
+                @if (m.en) { - Frontend programmer - }
+            </div>
         </div>
-        <div class="programador text-70 font-italic" appMostrarAmbAnimacio>
-            @if (m.ca) { - Programador frontend - }
-            @if (m.es) { - Programador frontend - }
-            @if (m.en) { - Frontend programmer - }
-        </div>
+
+
         <!-- Recipient bio pc -->
         @if (m.esPantallaPc()) {
             <div class="text-center text-80 mt-4">
@@ -38,7 +42,7 @@
     }
     <!-- Template bio -->
     <ng-template #contBio>
-        <div class="text-justify">
+        <div class="text-justify mb-4">
             @if (m.ca) {
                 Sóc un apassionat programador especialitzat en frontend i UI/UX, amb
                 <span class="tempsExp tooltipExp">{{anysExp || "diversos"}} anys d'experiència<div>{{m.exp.getTextExp("_total")}}</div></span>
@@ -67,11 +71,31 @@
                 On this website you will find details about my past experience, skills and featured projects, as well as my contact information so we can discuss different ways on helping you and your business with future projects, whether it is frontend development, UI/UX design or any other related task.
             }
         </div>
-        <a [href]="getRutaCV()" class="boto mt-4 pl-3" appMostrarAmbAnimacio>
-            @if (m.ca) { Obrir CV }
-            @if (m.es) { Abrir CV }
-            @if (m.en) { Open Resume }
-            <img src="assets/icons/contact/cv.png" alt="Curriculum Vitae" class="logo inv-dark-2">
-        </a>
+
+        <div class="d-flex flex-wrap justify-content-around align-items-end gap-2">
+            <section class="idiomes">
+                <h3 class="mb-3">
+                    @if (m.ca) { Idiomes }
+                    @if (m.es) { Idiomas }
+                    @if (m.en) { Languages }
+                </h3>
+                <div class="banderes" [class.es]="m.es">
+                    <img src="assets/icons/flags/cat.svg" alt="Catalan" title="Native" class="ca">
+                    <img src="assets/icons/flags/es.svg" alt="Spanish" title="Native" class="es">
+                    <a href="https://learnenglish.britishcouncil.org/english-levels/understand-your-english-level/b2-upper-intermediate" class="no-style d-flex en">
+                        <img src="assets/icons/flags/uk.svg" alt="English" title="B2+">
+                    </a>
+                </div>
+            </section>
+
+            @if (m.esPantallaMobil()) { <div class="w-100"></div> }
+
+            <a [href]="getRutaCV()" class="boto pl-3" appMostrarAmbAnimacio>
+                @if (m.ca) { Obrir CV }
+                @if (m.es) { Abrir CV }
+                @if (m.en) { Open Resume }
+                <img src="assets/icons/contact/cv.png" alt="Curriculum Vitae" class="logo inv-dark-2">
+            </a>
+        </div>
     </ng-template>
 </section>

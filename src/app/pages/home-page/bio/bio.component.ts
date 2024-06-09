@@ -29,6 +29,9 @@ export class BioComponent extends CardComponent {
         super.ngOnInit();
         
         this.anysExp = this.m.exp.experienciaPerSkills["_total"].anysAprox;
+
+        // Debug //
+        if (this.m.debug) setTimeout(() => { $("img.es").css({ "filter": "grayscale(1) brightness(100)" }); }, 0);
     }
 
 
