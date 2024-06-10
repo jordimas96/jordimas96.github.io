@@ -1,4 +1,3 @@
-// Variables //
 @import "./themes.scss";
 @import "./variables.scss";
 @import "./app/directives/mostrar-amb-animacio.styles.scss";
@@ -181,6 +180,11 @@ video {
 
 
 // Bugs llibreries (?)
+
+// Bootstrap 5.3.3 //
+.text-justify {
+    text-align: justify !important;
+}
 // Bootstrap 5 //
 .row {
     margin-left: 0;

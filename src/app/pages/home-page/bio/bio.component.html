@@ -6,11 +6,11 @@
         </div>
     </div>
 
-    <div class="col-7 col-sm-8 px-sm-4 text-right align-self-center">
+    <div class="col-7 col-sm-8 px-sm-4 text-end align-self-center">
 
         <div class="py-sm-4">
             <div class="bondia text-60 mb-3" appMostrarAmbAnimacio>{{getSalutacioSegonsHora()}}</div>
-            <div class="emdicjordi text-right">
+            <div class="emdicjordi text-end">
                 <span class="emdic text-70" appMostrarAmbAnimacio>
                     @if (m.ca) { Em dic }
                     @if (m.es) { Me llamo }
@@ -18,7 +18,7 @@
                 </span>
                 <div class="jordi" appMostrarAmbAnimacio>Jordi Mas Parramon</div>
             </div>
-            <div class="programador text-70 font-italic" appMostrarAmbAnimacio>
+            <div class="programador text-70 fst-italic" appMostrarAmbAnimacio>
                 @if (m.ca) { - Programador frontend - }
                 @if (m.es) { - Programador frontend - }
                 @if (m.en) { - Frontend programmer - }
@@ -90,7 +90,7 @@
 
             @if (m.esPantallaMobil()) { <div class="w-100"></div> }
 
-            <a [href]="getRutaCV()" class="boto pl-3" appMostrarAmbAnimacio>
+            <a [href]="getRutaCV()" class="boto botoCV" appMostrarAmbAnimacio>
                 @if (m.ca) { Obrir CV }
                 @if (m.es) { Abrir CV }
                 @if (m.en) { Open Resume }
