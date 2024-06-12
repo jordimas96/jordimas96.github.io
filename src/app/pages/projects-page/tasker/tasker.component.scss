@@ -7,6 +7,11 @@
         img.title-icon {
             transition: transform 0.3s;
         }
+        &:hover {
+            img.title-icon {
+                transform: rotate(360deg) scale(1.4);
+            }
+        }
     }
     .botons {
         display: flex;
@@ -15,9 +20,13 @@
         gap: 1rem;
         
         .boto {
-
             .logo {
                 transition: transform 0.3s;
+            }
+            &:hover {
+                .logo.tasker {
+                    transform: rotate(360deg);
+                }
             }
         }
     }
@@ -40,22 +49,3 @@
 @media only screen and (min-width: 768px) { }
 // Pantalla Molt Gran //
 @media only screen and (min-width: 992px) { }
-
-// PC //
-@media (pointer: fine) {
-    a.link-img:hover {
-        img.title-icon {
-            transform: rotate(360deg) scale(1.4);
-        }
-    }
-
-    .botons {
-        .boto:hover {
-            .logo.tasker {
-                transform: rotate(360deg);
-            }
-        }
-    }
-}
-// Mòbil //
-@media (pointer: coarse) { }

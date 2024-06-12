@@ -60,9 +60,15 @@
 
 ::ng-deep .seccio {
     background-color: var(--color-clar-20);
+    &:not([data-open]):hover {
+        background-color: var(--color-clar-30);
+    }
 }
 ::ng-deep .light .seccio {
     background-color: var(--color-clar-50);
+    &:not([data-open]):hover {
+        background-color: var(--color-clar-80);
+    }
     // @extend .shadow-1;
 }
 
@@ -83,15 +89,3 @@
 @media only screen and (min-width: 768px) { }
 // Pantalla Molt Gran //
 @media only screen and (min-width: 992px) { }
-
-// PC //
-@media (pointer: fine) {
-    ::ng-deep .seccio:not([data-open]):hover {
-        background-color: var(--color-clar-30);
-    }
-    ::ng-deep .light .seccio:not([data-open]):hover {
-        background-color: var(--color-clar-80);
-    }
-}
-// Mòbil //
-@media (pointer: coarse) { }

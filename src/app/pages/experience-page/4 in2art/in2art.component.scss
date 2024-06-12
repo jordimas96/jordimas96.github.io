@@ -1,6 +1,21 @@
 @import "src/styles.scss";
 
 
+a.link-boto-titol:hover {
+    img.title-icon {
+        transform-origin: 50% 200%;
+        animation: saludar 0.45s linear;
+    }
+}
+@keyframes saludar {
+    0% { transform: rotate(0deg); }
+    25% { transform: rotate(7.5deg); }
+    50% { transform: rotate(0deg); }
+    75% { transform: rotate(7.5deg); }
+    100% { transform: rotate(0deg); }
+}
+
+
 // Temporal //
 .webDownMsg {
     color: white;
@@ -11,25 +26,3 @@
     border-radius: 1rem;
     font-size: 1rem;
 }
-
-
-
-
-// PC //
-@media (pointer: fine) {
-    a.link-boto-titol:hover {
-        img.title-icon {
-            transform-origin: 50% 200%;
-            animation: saludar 0.45s linear;
-        }
-    }
-    @keyframes saludar {
-        0% { transform: rotate(0deg); }
-        25% { transform: rotate(7.5deg); }
-        50% { transform: rotate(0deg); }
-        75% { transform: rotate(7.5deg); }
-        100% { transform: rotate(0deg); }
-    }
-}
-// Mòbil //
-@media (pointer: coarse) { }

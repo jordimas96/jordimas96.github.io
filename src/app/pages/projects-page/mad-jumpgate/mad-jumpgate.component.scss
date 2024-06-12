@@ -6,6 +6,11 @@ a.link-img {
     img.title-icon {
         transition: transform 0.3s;
     }
+    &:hover {
+        img.title-icon {
+            transform: scale(1.4);
+        }
+    }
 }
 
 .seccioIcones {
@@ -55,14 +60,3 @@ a.link-img {
 // Pantalla Tablet // @media only screen and (min-width: 576px) { }
 // Pantalla PC // @media only screen and (min-width: 768px) { }
 // Pantalla Molt Gran // @media only screen and (min-width: 992px) { }
-
-// PC //
-@media (pointer: fine) {
-    a.link-img:hover {
-        img.title-icon {
-            transform: scale(1.4);
-        }
-    }
-}
-// Mòbil //
-@media (pointer: coarse) { }

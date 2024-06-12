@@ -1,13 +1,13 @@
 import { Injectable } from "@angular/core";
-import { ActivatedRoute, Router } from '@angular/router';
+import { ActivatedRoute, NavigationEnd, Router } from '@angular/router';
 import { GoogleAnalyticsService } from 'ngx-google-analytics';
 import { AppbarComponent } from "../components/appbar/appbar.component";
+import { FooterComponent } from "../components/footer/footer.component";
 import { IndexComponent } from "../components/index/index.component";
 import { SidebarComponent } from "../components/sidebar/sidebar.component";
 import { Utils } from "../shared/utils";
 import { ExperienceCalculatorService } from "./experience-calculator.service";
 import { ThemeService } from "./theme.service";
-import { FooterComponent } from "../components/footer/footer.component";
 
 // https://developerslogblog.wordpress.com/2019/04/23/how-to-use-angular-services-to-share-data-between-components/ //
 
@@ -66,8 +66,17 @@ export class MainService {
         }
         if (localStorage.getItem("googleAnalyticsBlocked"))
             Utils.blockGoogleAnalytics();
+
+        // Event al canviar de pàgina //
+        this.router.events.subscribe(event => {
+            if (event instanceof NavigationEnd) {
+                // Eliminar hover en mobils //
+                if (this.esPantallaTactil()) {
+                    Utils.removeHoverStyles();
+                }
+            }
+        });
     }
-    onInit() { }
 
     public log(t) { console.log(t); }
     public logDebug(t) { if (this.debug) console.log(t); }

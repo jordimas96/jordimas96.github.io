@@ -34,6 +34,10 @@ nav {
         &.selected {
             color: var(--fons);
         }
+
+        &:hover {
+            background-color: var(--text-10) !important;
+        }
     }
     // button:not(.selected) + button:not(.selected) { border-left: 1px solid var(--text-50); } // Separadors //
 }
@@ -85,18 +89,3 @@ nav {
         }
     }
 }
-
-
-
-// PC //
-@media (pointer: fine) {
-    nav {
-        button {
-            &:hover {
-                background-color: var(--text-10) !important;
-            }
-        }
-    }
-}
-// Mòbil //
-@media (pointer: coarse) { }

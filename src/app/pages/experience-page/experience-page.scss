@@ -26,6 +26,15 @@ section {
 
                 transition: transform 0.3s, color 0.3s;
             }
+
+            // Efecte hover botó gran a web en PC //
+            &:hover {
+                background-color: var(--color-2) !important;
+                .fletxa {
+                    transform: translate(0.2rem, -0.35rem);
+                    color: var(--text) !important;
+                }
+            }
         }
     }
 }
@@ -52,19 +61,3 @@ section {
 @media only screen and (min-width: 768px) { }
 // Pantalla Molt Gran //
 @media only screen and (min-width: 992px) { }
-
-// PC //
-@media (pointer: fine) {
-    // Efecte hover botó gran a web en PC //
-    .link-boto-titol {
-        &:hover {
-            background-color: var(--color-2) !important;
-            .fletxa {
-                transform: translate(0.2rem, -0.35rem);
-                color: var(--text) !important;
-            }
-        }
-    }
-}
-// Mòbil //
-@media (pointer: coarse) { }

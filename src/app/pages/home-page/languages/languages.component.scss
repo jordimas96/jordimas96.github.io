@@ -57,6 +57,7 @@
         }
 
         &:hover {
+            color: var(--color-6);
             i {
                 transform: translateY(0.5rem);
             }
@@ -90,14 +91,3 @@
         }
     }
 }
-
-// PC //
-@media (pointer: fine) {
-
-    .botoVeureMes:hover {
-        color: var(--color-6);
-    }
-
-}
-// Mòbil //
-@media (pointer: coarse) { }

@@ -4,7 +4,7 @@
 
 // opacity: primary (87%), secondary (60%), tertiary (38%) //
 
-.foto {
+.foto:not(.treureHover) {
     overflow: hidden;
     border-radius: 2rem;
 
@@ -94,7 +94,7 @@
 
 
 // Tooltip //
-.tooltipExp {
+.tooltipExp:not(.treureHover) {
     position: relative;
 
     > div {
@@ -167,8 +167,3 @@
 @media only screen and (min-width: 768px) { }
 // Pantalla Molt Gran //
 @media only screen and (min-width: 992px) { }
-
-// PC //
-@media (pointer: fine) { }
-// Mòbil //
-@media (pointer: coarse) { }

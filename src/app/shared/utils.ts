@@ -186,4 +186,41 @@ export class Utils {
 
 
 
+
+
+    // Funcions mes grans //
+    public static removeHoverStyles() {
+        // Si vull mantenir el hover ha de tenir el text .treureHover o mes aviat ":not(.treureHover)" al selector //
+        Array.from(document.styleSheets).forEach(styleSheet => {
+            try {
+                const rules = styleSheet.cssRules || styleSheet.rules;
+                if (!rules) return;
+    
+                for (let i = rules.length - 1; i >= 0; i--) {
+                    const rule: any = rules[i];
+                    if (rule.selectorText?.includes(':hover') && !rule.selectorText?.includes('.treureHover')) {
+                        styleSheet.deleteRule(i);
+                    } else if (rule.cssRules) {
+                        // Handle nested @media rules or other grouped rules
+                        for (let j = rule.cssRules.length - 1; j >= 0; j--) {
+                            const nestedRule = rule.cssRules[j];
+                            if (nestedRule.selectorText?.includes(':hover') && !nestedRule.selectorText?.includes('.treureHover')) {
+                                rule.deleteRule(j);
+                            }
+                        }
+                    }
+                }
+            } catch (ex) {
+                // console.log('Error al acceder a las reglas de la hoja de estilo:', ex);
+            }
+        });
+    }
+
+
+
+
+
+
+
+
 }

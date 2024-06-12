@@ -8,6 +8,11 @@
         img.title-icon {
             transition: transform 0.3s;
         }
+        &:hover {
+            img.title-icon {
+                transform: scale(1.4);
+            }
+        }
     }
 
     .repos {
@@ -32,6 +37,13 @@
             .text {
 
             }
+            &:hover {
+                transform: scale(1.06);
+                img {
+                    transform: scale(1.2);
+                    filter: drop-shadow(0 0 6px) !important;
+                }
+            }
         }
     }
 }
@@ -41,22 +53,3 @@
 // Pantalla Tablet // @media only screen and (min-width: 576px) { }
 // Pantalla PC // @media only screen and (min-width: 768px) { }
 // Pantalla Molt Gran // @media only screen and (min-width: 992px) { }
-
-// PC //
-@media (pointer: fine) {
-    a.link-img:hover {
-        img.title-icon {
-            transform: scale(1.4);
-        }
-    }
-
-    .section .repos .repo:hover {
-        transform: scale(1.06);
-        img {
-            transform: scale(1.2);
-            filter: drop-shadow(0 0 6px) !important;
-        }
-    }
-}
-// Mòbil //
-@media (pointer: coarse) { }

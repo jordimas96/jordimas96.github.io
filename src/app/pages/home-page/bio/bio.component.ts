@@ -15,7 +15,7 @@ export class BioComponent extends CardComponent {
         "en": ["Good morning!", "Good afternoon!", "Good evening!"],
     };
 
-    public anysExp;
+    public anysExp: number;
     
 
     constructor(

@@ -6,17 +6,9 @@ a.link-boto-titol {
     img.title-icon {
         transition: transform 0.3s;
     }
-}
-
-
-
-// PC //
-@media (pointer: fine) {
-    a.link-boto-titol:hover {
+    &:hover {
         img.title-icon {
             transform: rotate(360deg) scale(1.2);
         }
     }
 }
-// Mòbil //
-@media (pointer: coarse) { }

@@ -10,6 +10,14 @@
         color: var(--text);
         background-color: var(--fons-50);
         backdrop-filter: blur(20px);
+        
+        transition: transform 0.15s;
+
+        &:hover {
+            // scale: 1.06;
+            filter: brightness(1.5);
+            z-index: 1;
+        }
     }
 }
 
@@ -91,20 +99,3 @@
 @media only screen and (min-width: 768px) { }
 // Pantalla Molt Gran //
 @media only screen and (min-width: 992px) { }
-
-// PC //
-@media (pointer: fine) {
-    .index {
-        button {
-            transition: transform 0.15s;
-
-            &:hover {
-                // scale: 1.06;
-                filter: brightness(1.5);
-                z-index: 1;
-            }
-        }
-    }
-}
-// Mòbil //
-@media (pointer: coarse) { }
