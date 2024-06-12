@@ -74,7 +74,7 @@
                 }
                 .text {
                     font-size: 0.7rem;
-                    color: var(--color-clar);
+                    color: var(--text);
                     margin: 0 -0.2rem;
         
                     opacity: 0;
@@ -155,7 +155,6 @@
                     transition: font-size 0.3s, transform 0.3s, var(--transicio-colors);
 
                     &:hover {
-                        background-color: var(--color-l-3);
                         transform: scale(1.3);
 
                         .text {
@@ -166,6 +165,20 @@
                 }
             }
         }
+    }
+    ::ng-deep .contact-icon:hover {
+        &.linkedin {  background-color: hsl(210, 50%, 20%); }
+        &.github {    background-color: hsl(0, 0%, 20%); }
+        &.playstore { background-color: hsl(207, 50%, 20%); }
+        &.email {     background-color: hsl(0, 0%, 20%); }
+        &.youtube {   background-color: hsl(0, 23%, 20%); }
+    }
+    ::ng-deep .light .contact-icon:hover {
+        &.linkedin {  background-color: hsl(222, 100%, 92%); }
+        &.github {    background-color: hsl(0, 0%, 90%); }
+        &.playstore { background-color: hsl(207, 100%, 92%); }
+        &.email {     background-color: hsl(0, 0%, 90%); }
+        &.youtube {   background-color: hsl(0, 100%, 92%); }
     }
 }
 // Mòbil //

@@ -237,6 +237,7 @@ video {
 
 html.light .inv-dark { filter: invert(1); }
 html.dark .inv-dark-2 { filter: invert(1); }
+html.light .inv-dark-gris { filter: brightness(0.4);  }
 .filter-invert, .invert { filter: invert(1); }
 
 img, .nodrag {
@@ -365,7 +366,7 @@ img, .noselect {
     }
 
     // Efecte hover links en PC //
-    a:not(.link-img, .no-style, .boto) {
+    *:not(.no-style) > a:not(.link-img, .no-style, .boto) {
         display: inline-block;
         position: relative;// fa com el z-index //
         background-image: linear-gradient(0deg, var(--link), var(--link));
