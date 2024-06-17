@@ -6,119 +6,55 @@
     
     // --fons: rgb(0, 31, 31);
     // --text: rgb(224, 255, 255);
-    --fons: rgb(16, 16, 16);
-    --text: rgb(255, 255, 255);
+    // --fons: rgb(16, 16, 16);
+    // --text: rgb(255, 255, 255);
 
     --link: #5fc2ff;
 
     &.light {
-        --fons: rgb(255, 255, 255);
-        --text: rgb(16, 16, 16);
+        // --fons: hsl(210deg 100% 90%);
+        // --text: rgb(16, 16, 16);
     
         --link: #0089ff;
     }
 
 
     // Temes (text i fons) //
-    &.matinada {
-        --color-fosc-hsl-vals-test: hsl(60, 100%, 7%);
-        --color-clar-hsl-vals-test: hsl(60, 100%, 91%);
-        --color-fosc-hsl-vals: 60, 100%, 7%;
-        --color-clar-hsl-vals: 60, 100%, 91%;
-    }
-    &.mati {
-        --color-fosc-hsl-vals-test: hsl(200, 100%, 8%);
-        --color-clar-hsl-vals-test: hsl(200, 100%, 86%);
-        --color-fosc-hsl-vals: 200, 100%, 8%;
-        --color-clar-hsl-vals: 200, 100%, 86%;
-    }
-    &.tarda {
-        --color-fosc-hsl-vals-test: hsl(34, 100%, 7%);
-        --color-clar-hsl-vals-test: hsl(35, 100%, 91%);
-        --color-fosc-hsl-vals: 34, 100%, 7%;
-        --color-clar-hsl-vals: 35, 100%, 91%;
-    }
-    &.vespre {
-        --color-fosc-hsl-vals-test: hsl(269, 100%, 8%);
-        --color-clar-hsl-vals-test: hsl(260, 100%, 93%);
-        --color-fosc-hsl-vals: 269, 100%, 8%;
-        --color-clar-hsl-vals: 260, 100%, 93%;
-    }
-    &.nit {
-        --color-fosc-hsl-vals-test: hsl(0, 0%, 0%);
-        --color-clar-hsl-vals-test: hsl(0, 0%, 100%);
-        --color-fosc-hsl-vals: 0, 0%, 0%;
-        --color-clar-hsl-vals: 0, 0%, 100%;
-    }
-    // Paleta 2 //
-    &.matinada {
-        --color-l-0: #242400;
-        --color-l-1: #454500;
-        --color-l-2: #636300;
-        --color-l-3: #909000;
-        --color-l-4: #b5b500;
-        --color-l-5: #e2e200;
-        --color-l-6: #ffff2a;
-        --color-l-7: #ffff4e;
-        --color-l-8: #ffff72;
-        --color-l-9: #ffffd1;
-    }
-    &.mati {
-        --color-l-0: #001b29;
-        --color-l-1: #003855;
-        --color-l-2: #005681;
-        --color-l-3: #0073ad;
-        --color-l-4: #0091d9;
-        --color-l-5: #07acff;
-        --color-l-6: #32bbff;
-        --color-l-7: #5fcaff;
-        --color-l-8: #8bd8ff;
-        --color-l-9: #b8e7ff;
-    }
-    &.tarda {
-        --color-l-0: #241400;
-        --color-l-1: #532e00;
-        --color-l-2: #834800;
-        --color-l-3: #b36200;
-        --color-l-4: #e27c00;
-        --color-l-5: #ff9512;
-        --color-l-6: #ffaa42;
-        --color-l-7: #ffbf72;
-        --color-l-8: #ffd5a1;
-        --color-l-9: #ffecd1;
-    }
-    &.vespre {
-        --color-l-0: #140029;
-        --color-l-1: #2b0057;
-        --color-l-2: #45008a;
-        --color-l-3: #5c00b8;
-        --color-l-4: #7300e6;
-        --color-l-5: #8c1aff;
-        --color-l-6: #a64dff;
-        --color-l-7: #bd7aff;
-        --color-l-8: #d6adff;
-        --color-l-9: #eddbff;
-    }
-    &.nit {
-        --color-l-0: #000000;
-        --color-l-1: #2a2a2a;
-        --color-l-2: #444444;
-        --color-l-3: #5f5f5f;
-        --color-l-4: #7a7a7a;
-        --color-l-5: #949494;
-        --color-l-6: #afafaf;
-        --color-l-7: #cacaca;
-        --color-l-8: #e4e4e4;
-        --color-l-9: #ffffff;
+    
+    
+    --color-fosc-hsl-vals-test: hsl(0, 0%, 0%);
+    --color-clar-hsl-vals-test: hsl(0, 0%, 100%);
+    --color-fosc-hsl-vals: 0, 0%, 0%;
+    --color-clar-hsl-vals: 0, 0%, 100%;
+
+    --color-l-0: hsl(210, 100%, 0%);
+    --color-l-1: hsl(210, 100%, 16%);
+    --color-l-2: hsl(210, 100%, 27%);
+    --color-l-3: hsl(210, 100%, 37%);
+    --color-l-4: hsl(210, 100%, 48%);
+    --color-l-5: hsl(210, 100%, 58%);
+    --color-l-6: hsl(210, 100%, 69%);
+    --color-l-7: hsl(210, 100%, 79%);
+    --color-l-8: hsl(210, 100%, 89%);
+    --color-l-9: hsl(210, 100%, 100%);
+
+
+    --accent-color: white; //hsl(210, 100%, 79%);
+    // linear-gradient(45deg, #00ff45, hsl(184.15deg 100% 59.91%))
+    
+    &.light {
+        --accent-color: hsl(210, 100%, 40%);
+        // linear-gradient(45deg, hsl(210, 100%, 40%), hsl(184.15deg 100% 59.91%))
+        // linear-gradient(45deg, #ba00ff, hsl(251.16deg 100% 50%));
     }
 
     // Scrollbar //
-    --scrollbar-fons: var(--color-clar-30);
-    --scrollbar-via: var(--color-l-1);
-    --scrollbar-thumb-1: var(--color-l-7);
-    --scrollbar-thumb-2: var(--color-l-4);
-    --scrollbar-thumb-hover: var(--color-l-7);
-    --scrollbar-thumb-active: var(--color-l-8);
+    --scrollbar-fons: hsl(210, 0%, 30%);
+    --scrollbar-via: hsl(210, 0%, 16%);
+    --scrollbar-thumb-1: hsl(210, 0%, 79%);
+    --scrollbar-thumb-2: hsl(210, 0%, 48%);
+    --scrollbar-thumb-hover: hsl(210, 0%, 79%);
+    --scrollbar-thumb-active: white;
 
     &.light {
         --scrollbar-fons: var(--color-l-9);
@@ -128,12 +64,14 @@
         --scrollbar-thumb-hover: var(--color-l-6);
         --scrollbar-thumb-active: var(--color-l-7);
     }
-    
 }
 
 // Establir variables mode fosc i clar //
 // Afegeixo els .section per a que utilitzin els colors respectius segons les variables. //
 // Caldria afegir aquí totes les classes a on es necessitessin remapejar els colors //
+:root [class^="tema-"], [class*="tema-"] {
+    --accent-color: var(--color-7);
+}
 :root, :root .section, :root [class^="tema-"], [class*="tema-"] {
     --color-fosc:    hsla(var(--color-fosc-hsl-vals), 1.0);
     --color-fosc-90: hsla(var(--color-fosc-hsl-vals), 0.9);
@@ -436,8 +374,8 @@
     --color-l-8: hsl(28, 100%, 82%);
     --color-l-9: hsl(28, 100%, 91%);
 }
-.dark  :host .tema-orange { background-color: hsla(28, 100%, 25%, 0.5); }
-.light :host .tema-orange { background-color: hsla(28, 100%, 72%, 0.5); }
+.dark  :host .tema-orange { background-color: hsla(28, 100%, 25%, 0.5); --link: var(--color-l-6); }
+.light :host .tema-orange { background-color: hsla(28, 100%, 72%, 0.5); --link: var(--color-l-3); }
 
 .tema-in2art {
     --color-fosc-hsl-vals-test: hsl(0, 0%, 6%);
@@ -455,8 +393,8 @@
     --color-l-8: hsl(0, 0%, 89%);
     --color-l-9: hsl(0, 0%, 100%);
 }
-.dark  :host .tema-in2art { background-color: hsla(0, 0%, 6%, 0.5); }
-.light :host .tema-in2art { background-color: hsla(0, 0%, 100%, 0.5); }
+.dark  :host .tema-in2art { background-color: hsla(0, 0%, 6%, 0.5); --link: var(--color-l-6); }
+.light :host .tema-in2art { background-color: hsla(0, 0%, 100%, 0.5); --link: var(--color-l-3); }
 
 .tema-matic {
     --color-fosc-hsl-vals-test: hsl(357, 100%, 7%);

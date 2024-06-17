@@ -53,7 +53,7 @@ export class DarkModeComponent {
         // Variables //
         let spread = Utils.mesGran(window.innerWidth, window.innerHeight);
         let blur = 500;
-        var color = this.m.ts.modeFosc ? "var(--color-clar)" : "var(--color-fosc)";
+        var color = this.m.ts.modeFosc ? "var(--color-l-8)" : "var(--color-fosc)";
 
 
         // Transicions //

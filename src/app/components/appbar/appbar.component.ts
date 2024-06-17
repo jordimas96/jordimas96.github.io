@@ -39,6 +39,10 @@ export class AppbarComponent {
     // Funcions //
     @HostListener('window:scroll', ['$event'])
     onScroll() {
-        this.m.scroll = window.pageYOffset;
+        this.m.scroll = window.scrollY;
+        if (this.m.scroll > 0)
+            document.body.classList.add("scrolled");
+        else
+            document.body.classList.remove("scrolled");
     }
 }

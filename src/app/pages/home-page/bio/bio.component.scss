@@ -36,7 +36,7 @@
     flex-wrap: wrap;
     justify-content: flex-end;
     align-items: baseline;
-    column-gap: 0.25rem;
+    column-gap: 0.5rem;
 
     .emdic {
         font-size: 1.4rem;
@@ -44,7 +44,7 @@
     }
     .jordi {
         font-size: 1.7rem;
-        color: var(--color-6);
+        color: var(--accent-color);
     }
 }
 .programador {
@@ -53,7 +53,7 @@
 
 .tempsExp {
     cursor: pointer;
-    color: var(--color-7);
+    color: var(--accent-color);
     font-weight: bold;
     display: inline-block;
 }
@@ -81,16 +81,7 @@
 
 
 
-
-
-
-::ng-deep html.light.matinada .jordi,
-::ng-deep html.nit .jordi { color: var(--text) !important }
-::ng-deep html.nit .tempsExp { color: var(--text); }
-::ng-deep html.nit .tempsExp,
-::ng-deep .light .tempsExp { font-weight: 900 !important; }
-
-
+::ng-deep .light .jordi { font-weight: bold !important; }
 
 
 // Tooltip //

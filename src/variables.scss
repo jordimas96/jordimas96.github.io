@@ -12,25 +12,6 @@ $enable-negative-margins: true !important; // No funciona i no sé per què //
     --breakpoint-xl: 1200px;
 
     --transicio-colors: background-color 0.3s, color 0.3s, border-color 0.3s, filter 0.3s, box-shadow 0.3s;
-
-
-    // Scrollbar //
-    --scrollbar-fons: var(--color-clar-30);
-    --scrollbar-via: var(--color-l-1);
-    --scrollbar-thumb-1: var(--color-l-7);
-    --scrollbar-thumb-2: var(--color-l-4);
-    --scrollbar-thumb-hover: var(--color-l-7);
-    --scrollbar-thumb-active: var(--color-l-8);
-
-    &.light {
-        --scrollbar-fons: var(--color-l-9);
-        --scrollbar-via: white;
-        --scrollbar-thumb-1: var(--color-l-5);
-        --scrollbar-thumb-2: var(--color-l-3);
-        --scrollbar-thumb-hover: var(--color-l-6);
-        --scrollbar-thumb-active: var(--color-l-7);
-    }
-    
 }
 
 // Pantalla Mòbil // @media only screen and (max-width: 575px) { }

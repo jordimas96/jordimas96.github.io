@@ -19,29 +19,33 @@
 // }
 
 html {
-    color-scheme: dark;
 
     // Footer //
     position: relative;
     min-height: 100%;
 
+    &.dark {
+        --body-background-color: var(--color-l-0);
+        color-scheme: dark;
+    }
     &.light {
+        --body-background-color: var(--color-l-8);
         color-scheme: light;
     }
-}
 
-body {
-    font-family: lato, Verdana, Arial, sans-serif; //"Segoe UI",
-    background: var(--fons) url("assets/background/boles.png");
-    background-attachment: fixed;
-    background-size: cover;
-    background-position: top left;
-    // background: var(--color-1);
-    color: var(--text);
-    letter-spacing: 0.2px;
-    line-height: 1.4;
-    overflow-y: scroll;
-    overflow-x: hidden;
+    body {
+        font-family: lato, Verdana, Arial, sans-serif; //"Segoe UI",
+        background: var(--body-background-color) url("assets/background/boles.png");
+        background-attachment: fixed;
+        background-size: cover;
+        background-position: top left;
+        // background: var(--color-1);
+        color: var(--text);
+        letter-spacing: 0.2px;
+        line-height: 1.4;
+        overflow-y: scroll;
+        overflow-x: hidden;
+    }
 }
 
 // Estils estructura pagines //
@@ -100,8 +104,10 @@ body {
     font-size: 1.3rem;
     border-radius: 10000px;
 
-    background-color: var(--color-7);
+    background-color: var(--accent-color);
     color: var(--fons);
+
+    // @extend .hoverWhiter;
 }
 .botoAmbIcona {
     padding: 0.5rem 0.5rem 0.5rem 1rem;
@@ -367,8 +373,11 @@ img, .noselect {
     box-shadow: inset 0 0 0 1000px #fff2 !important;
 }
 
-.hoverWhiter:hover {
-    box-shadow: inset 0 0 0 1000px #fff3 !important;
+.dark .hoverWhiter:hover {
+    box-shadow: inset 0 0 0 1000px #fff8 !important;
+}
+.light .hoverWhiter:hover {
+    box-shadow: inset 0 0 0 1000px #fff2 !important;
 }
 
 

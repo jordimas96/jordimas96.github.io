@@ -46,7 +46,7 @@
 }
 
 
-// Afegim filtre forçat per a que es vegi bé l'icona en mode clar //
+// Icona en mode clar: afegim filtre forçat per a fer-la més fosca i que es vegi bé //
 .light :host .section-title .title-icon {
     filter: brightness(0.7) saturate(2);
 }

@@ -11,7 +11,7 @@
         background-color: var(--fons-50);
         backdrop-filter: blur(20px);
         
-        transition: transform 0.15s;
+        transition: transform 0.15s, font-size 0.3s, padding 0.3s, border-radius 0.3s;
 
         &:hover {
             // scale: 1.06;
@@ -77,7 +77,21 @@
     }
 }
 
+::ng-deep body.scrolled {
 
+    .index.mobil {
+        button {
+            font-size: 1.2rem !important;
+            padding: 0.5rem 1rem !important;
+            border-radius: 1.5rem !important;
+        }
+    }
+    .index.pc {
+        button {
+
+        }
+    }
+}
 
 
 
@@ -85,9 +99,19 @@
 @media only screen and (max-width: 575px) {
     .index.mobil {
         button {
+            font-size: 1.2rem;
             padding: 0.5rem 1rem;
-            font-size: 1rem;
-            border-radius: 1rem;
+            border-radius: 0.8rem;
+        }
+    }
+    ::ng-deep body.scrolled {
+
+        .index.mobil {
+            button {
+                font-size: 1rem !important;
+                padding: 0.5rem 0.8rem !important;
+                border-radius: 1.3rem !important;
+            }
         }
     }
 
