@@ -15,7 +15,8 @@ export class ExperienceCalculatorService {
     //     ["2021-8-31", "2023-6-30"], // In2art // -
     //     ["2023-7-1", "2023-8-22"], // CodiTramuntana // -
     //     ["2023-8-23", "2023-11-3"], // Orange //
-    //     ["2023-11-6", ], // Evora // -
+    //     ["2023-11-6", "2024-1-26"], // Evora //
+    //     ["2024-6-18", ], // Alvea //
     // ];
 
     private experienciaJSON = [
@@ -124,17 +125,29 @@ export class ExperienceCalculatorService {
                 "Windows",
             ]
         },
-        { // Evora // -
+        { // Evora //
             nom: "Evora",
-            dates: ["2023-11-06",],
+            dates: ["2023-11-06", "2024-1-26"],
             skills: [
                 "Frontend",
                 "Angular", "NgRx", "TypeScript", "JavaScript", "CSS", "SASS", "Materialize",
                 "PWA", "Cordova",
                 "Microservices",
-                "Git",
+                "Git", "Bitbucket",
                 "Jira", "Confluence",
                 "MVC", "Agile", "Continuous integration",
+                "Windows",
+            ]
+        },
+        { // Alvea // -
+            nom: "Alvea",
+            dates: ["2024-6-18",],
+            skills: [
+                "Frontend",
+                "Angular", "NgRx", "TypeScript", "JavaScript", "CSS", "SASS", "HTML5", "PrimeNG",
+                "Microservices",
+                "Git", "Sourcetree", "Bitbucket",
+                "MVC", "Agile", "Responsive Design", "Continuous integration",
                 "Windows",
             ]
         },
@@ -145,7 +158,7 @@ export class ExperienceCalculatorService {
 
     constructor(public m: MainService) {
         m.exp = this;
-        
+
         this.calcularExperiencia();
     }
 
@@ -157,7 +170,7 @@ export class ExperienceCalculatorService {
     //         let dataFinal = e.dates[1] ? new Date(e.dates[1]) : new Date();
     //         diesTotals += (dataFinal.valueOf() - dataInicial.valueOf()) / (24 * 60 * 60 * 1000);
     //     });
-        
+
     //     diesTotals = Math.round(diesTotals);
 
     //     const anys = Math.floor(diesTotals / 365.24);
@@ -179,6 +192,9 @@ export class ExperienceCalculatorService {
             let dataFinal = empresa.dates[1] ? new Date(empresa.dates[1]) : new Date();
             let diesTotals = (dataFinal.valueOf() - dataInicial.valueOf()) / (24 * 60 * 60 * 1000);
 
+            if (empresa.nom == "Matic") diesTotals += 61.15 / 8; // 61,15 extra hours //
+            if (empresa.nom == "Alvea") diesTotals *= 43 / 40; // 43h a week //
+
             empresa.skills.forEach(skill => {
                 if (this.experienciaPerSkills[skill] === undefined)
                     this.experienciaPerSkills[skill] = { diesTotals: 0, empreses: [] };
@@ -186,7 +202,7 @@ export class ExperienceCalculatorService {
 
                 this.experienciaPerSkills[skill].empreses.push(empresa.nom);
             });
-            
+
             this.experienciaPerSkills["_total"].diesTotals += diesTotals;
         });
 
@@ -263,7 +279,7 @@ export class ExperienceCalculatorService {
         let cadenes: Array<string> = [];
         if (anys > 0) cadenes.push(anys + " " + (anys == 1 ? textAnys[0] : textAnys[1]));
         if (mesos > 0) cadenes.push(mesos + " " + (mesos == 1 ? textMesos[0] : textMesos[1]));
-        
+
         if (cadenes.length == 2) return `${cadenes[0]} ${conjuncio} ${cadenes[1]}`;
         if (cadenes.length == 1) return `${cadenes[0]}`;
         return "";
@@ -279,7 +295,7 @@ export class ExperienceCalculatorService {
         const textAnys = ["a", "a", "y"][index];
 
         let text: string = "";
-        if (anys > 0) text += anys + textAnys+" ";
+        if (anys > 0) text += anys + textAnys + " ";
         if (mesos > 0) text += mesos + "m";
 
         return text;
