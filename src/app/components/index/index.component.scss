@@ -11,7 +11,7 @@
         background-color: var(--fons-50);
         backdrop-filter: blur(20px);
         
-        transition: transform 0.15s, font-size 0.3s, padding 0.3s, border-radius 0.3s;
+        transition: transform 0.15s, font-size 0.3s, padding 0.3s, border-radius 0.3s, box-shadow 0.3s;
 
         &:hover {
             // scale: 1.06;
@@ -84,6 +84,7 @@
             font-size: 1.2rem !important;
             padding: 0.5rem 1rem !important;
             border-radius: 1.5rem !important;
+            @extend .shadow-2;
         }
     }
     .index.pc {

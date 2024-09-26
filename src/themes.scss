@@ -321,15 +321,42 @@
 
 // Experiencia //
 
+// rgb(17, 77, 166) // #e8effa // white //
+.tema-alvea {
+    --color-fosc-hsl-vals-test: hsl(216, 100%, 8%);
+    --color-clar-hsl-vals-test: hsl(216, 100%, 86%);
+    --color-fosc-hsl-vals: 216, 100%, 8%;
+    --color-clar-hsl-vals: 216, 100%, 86%;
+    --color-l-0: hsl(216, 100%, 8%);
+    --color-l-1: hsl(216, 100%, 17%);
+    --color-l-2: hsl(216, 100%, 25%);
+    --color-l-3: hsl(216, 100%, 34%);
+    --color-l-4: hsl(216, 100%, 43%);
+    --color-l-5: hsl(216, 100%, 51%);
+    --color-l-6: hsl(216, 100%, 60%);
+    --color-l-7: hsl(216, 100%, 69%);
+    --color-l-8: hsl(216, 100%, 77%);
+    --color-l-9: hsl(216, 100%, 86%);
+}
+.dark  :host .tema-alvea {
+    background-color: hsla(216, 81%, 36%, 0.5);
+    --link: rgb(232, 239, 250);
+}
+.light :host .tema-alvea {
+    background-color: hsla(216, 64%, 95%, 0.5);
+    --link: rgb(17, 77, 166);
+}
+
+
 // Colors logo //
 // .a { color: hsla(212, 64%, 37%, 0.5) }
 // .a { color: hsla(9, 83%, 48%, 0.5) }
 // .a { color: hsla(41, 100%, 48%, 0.5) }
 .tema-evora {
     --color-fosc-hsl-vals-test: hsl(212, 100%, 8%);
-    --color-clar-hsl-vals-test: hsl(40, 100%, 91%);
+    --color-clar-hsl-vals-test: hsl(41, 100%, 91%);
     --color-fosc-hsl-vals: 212, 100%, 8%;
-    --color-clar-hsl-vals: 40, 100%, 91%;
+    --color-clar-hsl-vals: 41, 100%, 91%;
     --color-l-0: hsl(212, 100%, 8%);
     --color-l-1: hsl(212, 100%, 17%);
     --color-l-2: hsl(212, 100%, 25%);
@@ -358,6 +385,7 @@
     --link: var(--color-l-4);
 }
 
+
 .tema-orange {
     --color-fosc-hsl-vals-test: hsl(28, 100%, 7%);
     --color-clar-hsl-vals-test: hsl(28, 100%, 91%);
@@ -376,6 +404,7 @@
 }
 .dark  :host .tema-orange { background-color: hsla(28, 100%, 25%, 0.5); --link: var(--color-l-6); }
 .light :host .tema-orange { background-color: hsla(28, 100%, 72%, 0.5); --link: var(--color-l-3); }
+
 
 .tema-in2art {
     --color-fosc-hsl-vals-test: hsl(0, 0%, 6%);
@@ -396,6 +425,7 @@
 .dark  :host .tema-in2art { background-color: hsla(0, 0%, 6%, 0.5); --link: var(--color-l-6); }
 .light :host .tema-in2art { background-color: hsla(0, 0%, 100%, 0.5); --link: var(--color-l-3); }
 
+
 .tema-matic {
     --color-fosc-hsl-vals-test: hsl(357, 100%, 7%);
     --color-clar-hsl-vals-test: hsl(356, 100%, 91%);
@@ -415,6 +445,7 @@
 .dark  :host .tema-matic { background-color: hsla(356, 100%, 15%, 0.5); --link: var(--color-l-7); }
 .light :host .tema-matic { background-color: hsla(356, 100%, 72%, 0.5); --link: var(--color-l-2); }
 
+
 .tema-indra {
     --color-fosc-hsl-vals-test: hsl(193, 100%, 8%);
     --color-clar-hsl-vals-test: hsl(193, 100%, 86%);
@@ -433,6 +464,7 @@
 }
 .dark  :host .tema-indra { background-color: hsla(193, 100%, 16%, 0.5); --link: var(--color-l-6); }
 .light :host .tema-indra { background-color: hsla(193, 100%, 62%, 0.5); --link: var(--color-l-3); }
+
 
 .tema-nexxia {
     --color-fosc-hsl-vals-test: hsl(45, 100%, 7%);

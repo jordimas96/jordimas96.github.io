@@ -1,0 +1,14 @@
+@import "src/styles.scss";
+
+
+
+a.link-boto-titol {
+    img.title-icon {
+        transition: transform 0.3s;
+    }
+    &:hover {
+        img.title-icon {
+            transform: scale(1.2);
+        }
+    }
+}

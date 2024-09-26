@@ -32,6 +32,7 @@ import { MaticComponent } from './pages/experience-page/3 matic/matic.component'
 import { In2artComponent } from './pages/experience-page/4 in2art/in2art.component';
 import { OrangeComponent } from './pages/experience-page/5 orange/orange.component';
 import { EvoraComponent } from './pages/experience-page/6 evora/evora.component';
+import { AlveaComponent } from './pages/experience-page/7 alvea/alvea.component';
 import { ExperiencePageComponent } from './pages/experience-page/experience-page.component';
 import { BioComponent } from './pages/home-page/bio/bio.component';
 import { HomePageComponent } from './pages/home-page/home-page.component';
@@ -85,6 +86,7 @@ import { SectionPageComponent } from './pages/section-page/section-page.componen
         In2artComponent,
         OrangeComponent,
         EvoraComponent,
+        AlveaComponent,
 
         AndroidAppsComponent,
         MadJumpgateComponent,

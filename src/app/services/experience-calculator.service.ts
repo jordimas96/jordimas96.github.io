@@ -88,7 +88,9 @@ export class ExperienceCalculatorService {
             dates: ["2021-08-31", "2023-06-30"],
             skills: [
                 "Frontend",
-                "Angular", "CSS", "SASS", "TypeScript", "JavaScript", "jQuery", "HTML5", "Bootstrap", "Materialize", "i18n",
+                "Angular", "CSS", "SASS", "TypeScript", "JavaScript", "jQuery", "HTML5",
+                "Bootstrap", "Angular Material",
+                "i18n",
                 "NodeJs",
                 "JSON",
                 "MySQL", "PHPMyadmin",
@@ -101,7 +103,7 @@ export class ExperienceCalculatorService {
         },
         { // CodiTramuntana // -
             nom: "CodiTramuntana",
-            dates: ["2023-07-01", "2023-08-22"],
+            dates: ["2023-07-05", "2023-08-22"],
             skills: [
                 "Frontend", "Backend",
                 "Ruby on Rails",
@@ -130,7 +132,8 @@ export class ExperienceCalculatorService {
             dates: ["2023-11-06", "2024-1-26"],
             skills: [
                 "Frontend",
-                "Angular", "NgRx", "TypeScript", "JavaScript", "CSS", "SASS", "Materialize",
+                "Angular", "NgRx", "TypeScript", "JavaScript", "CSS", "SASS",
+                "Angular Material",
                 "PWA", "Cordova",
                 "Microservices",
                 "Git", "Bitbucket",
@@ -144,7 +147,8 @@ export class ExperienceCalculatorService {
             dates: ["2024-6-18",],
             skills: [
                 "Frontend",
-                "Angular", "NgRx", "TypeScript", "JavaScript", "CSS", "SASS", "HTML5", "PrimeNG",
+                "Angular", "NgRx", "TypeScript", "JavaScript", "CSS", "SASS", "HTML5",
+                "PrimeNG", "Angular Material",
                 "Microservices",
                 "Git", "Sourcetree", "Bitbucket",
                 "MVC", "Agile", "Responsive Design", "Continuous integration",

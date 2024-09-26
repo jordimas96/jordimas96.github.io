@@ -15,7 +15,7 @@
 }
 
 section:not(.treureHover) {
-    cursor: pointer;
+    cursor: help;
 
     &:hover {
         filter: brightness(1.25);
@@ -125,7 +125,9 @@ section:not(.treureHover) {
     .sass             { --h: 329; --s:  55%; --l: 70%; .chip { background-color: #d56fa4; color: #ffffff; } } // hsl(329, 55%, 64%);
     .html5            { --h:  15; --s:  81%; --l: 70%; .chip { background-color: #e64c18; color: #ffffff; } } // hsl(15, 81%, 50%);
     .bootstrap        { --h: 264; --s:  34%; --l: 70%; .chip { background-color: #563d7c; color: #ffffff; } } // hsl(264, 34%, 36%);
+    .angularmaterial  { --h:  33; --s:  82%; --l: 70%; .chip { background-color: #fb8c00; color: #ffffff; } } // hsl(33, 100%, 49%);
     .materialize      { --h: 352; --s:  82%; --l: 70%; .chip { background-color: #f6a2ad; color: #000000; } } // hsl(352, 82%, 80%);
+    .primeng          { --h: 347; --s: 100%; --l: 70%; .chip { background-color: #ffffff; color: #dd0031; } } // hsl(347, 100%, 43%);
     .android          { --h: 147; --s:  69%; --l: 70%; .chip { background-color: #3DDC84; color: #153b4c; } } // hsl(147, 69%, 55%);
     .kotlin           { --h: 287; --s:  77%; --l: 70%; .chip { background-color: #b11cda; color: #ffffff; } } // hsl(287, 77%, 48%);
     .xml              { --h:  30; --s:  99%; --l: 70%; .chip { background-color: #f67d01; color: #ffffff; } } // hsl(30, 99%, 48%);
