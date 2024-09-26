@@ -1,13 +1,13 @@
-import { Component, ElementRef } from '@angular/core';
+import { Component } from '@angular/core';
 import { MainService } from 'src/app/services/main.service';
-import { CardComponent } from '../../../components/card/card.component';
+import { ThemeService } from 'src/app/services/theme.service';
 
 @Component({
     selector: 'app-indra',
     templateUrl: './indra.component.html',
-    styleUrls: ['./indra.component.scss', '../experience-page.scss', '../../../components/card/card.scss']
+    styleUrls: ['./indra.component.scss', '../experience-page.scss']
 })
-export class IndraComponent extends CardComponent {
+export class IndraComponent {
     
     public links = {
         ca: "https://www.indracompany.com/es/",
@@ -16,11 +16,9 @@ export class IndraComponent extends CardComponent {
     };
 
     constructor(
-        public override m: MainService,
-        public override rootElement: ElementRef,
-    ) {
-        super(m, rootElement);
-    }
+        public m: MainService,
+        public ts: ThemeService
+    ) { }
 
     getLink() {
         return this.links[this.m.idioma];

@@ -1,4 +1,5 @@
 import { Component, ElementRef, Input, Renderer2 } from '@angular/core';
+import { ExperienceCalculatorService } from 'src/app/services/experience-calculator.service';
 import { MainService } from 'src/app/services/main.service';
 import { Utils } from 'src/app/shared/utils';
 
@@ -13,6 +14,7 @@ export class SkillComponent {
         public m: MainService,
         private el: ElementRef,
         private renderer: Renderer2,
+        private exp: ExperienceCalculatorService
     ) { }
 
     @Input("n") nom: string;
@@ -37,35 +39,35 @@ export class SkillComponent {
     }
 
     getAnysExp() {
-        return this.m.exp.getTextExp(this.nom);
+        return this.exp.getTextExp(this.nom);
     }
     getTextCurt() {
-        if (!this.m.exp.getSkill(this.nom))
+        if (!this.exp.getSkill(this.nom))
             return "";
         else
-            return this.m.exp.construirCadenaTempsExpCurta(this.m.exp.getSkill(this.nom)?.anysMesosDies);
+            return this.exp.construirCadenaTempsExpCurta(this.exp.getSkill(this.nom)?.anysMesosDies);
     }
     getText_anysMesosDies() {
-        if (!this.m.exp.getSkill(this.nom))
+        if (!this.exp.getSkill(this.nom))
             return "";
         else
-            return this.m.exp.construirCadenaTempsExp(this.m.exp.getSkill(this.nom)?.anysMesosDies);
+            return this.exp.construirCadenaTempsExp(this.exp.getSkill(this.nom)?.anysMesosDies);
     }
     getText_anysMesos() {
-        if (!this.m.exp.getSkill(this.nom))
+        if (!this.exp.getSkill(this.nom))
             return "";
         else
-            return this.m.exp.construirCadenaTempsExp_anysMesos(this.m.exp.getSkill(this.nom)?.anysMesosDies);
+            return this.exp.construirCadenaTempsExp_anysMesos(this.exp.getSkill(this.nom)?.anysMesosDies);
     }
     getNivellBarra() {
-        return (this.m.exp.getSkill(this.nom)?.diesTotals || 0) / this.m.exp.getSkill("_total")?.diesTotals * 100;
+        return (this.exp.getSkill(this.nom)?.diesTotals || 0) / this.exp.getSkill("_total")?.diesTotals * 100;
     }
     getTextTooltip() {
-        if (this.m.exp.getSkill(this.nom)?.empreses?.length) {
+        if (this.exp.getSkill(this.nom)?.empreses?.length) {
             return this.getText_anysMesosDies() + // 2 years, 6 months and 9 days //
                 "\n" +
                 ["en", "en", "in"][this.m.idiomaIndex] + " " + // in //
-                Utils.addConjunctionBetweenThe2Last(this.m.exp.getSkill(this.nom)?.empreses, this.m.conjuncio); // Evora, Orange and In2art //
+                Utils.addConjunctionBetweenThe2Last(this.exp.getSkill(this.nom)?.empreses, this.m.conjuncio); // Evora, Orange and In2art //
         } else {
             return [
                 "Experiència només en projectes personals",

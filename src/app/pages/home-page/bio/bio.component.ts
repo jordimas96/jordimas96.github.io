@@ -1,13 +1,13 @@
 import { Component, ElementRef } from '@angular/core';
+import { ExperienceCalculatorService } from 'src/app/services/experience-calculator.service';
 import { MainService } from 'src/app/services/main.service';
-import { CardComponent } from '../../../components/card/card.component';
 
 @Component({
     selector: 'app-bio',
     templateUrl: './bio.component.html',
     styleUrls: ['./bio.component.scss']
 })
-export class BioComponent extends CardComponent {
+export class BioComponent {
 
     public salutacions = {
         "ca": ["Bon dia!", "Bona tarda!", "Bona nit!"],
@@ -19,16 +19,15 @@ export class BioComponent extends CardComponent {
     
 
     constructor(
-        public override m: MainService,
-        public override rootElement: ElementRef,
+        public m: MainService,
+        public rootElement: ElementRef,
+        public exp: ExperienceCalculatorService
     ) {
-        super(m, rootElement);
     }
 
-    override async ngOnInit() {
-        super.ngOnInit();
+    async ngOnInit() {
         
-        this.anysExp = this.m.exp.experienciaPerSkills["_total"].anysAprox;
+        this.anysExp = this.exp.experienciaPerSkills["_total"].anysAprox;
 
         // Debug //
         if (this.m.debug) setTimeout(() => { $("img.es").css({ "filter": "grayscale(1) brightness(100)" }); }, 0);

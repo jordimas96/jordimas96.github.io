@@ -1,19 +1,13 @@
-import { Component, ElementRef } from '@angular/core';
+import { Component } from '@angular/core';
 import { MainService } from 'src/app/services/main.service';
-import { CardComponent } from '../../../components/card/card.component';
 
 @Component({
     selector: 'app-amazfit-watchfaces',
     templateUrl: './amazfit-watchfaces.component.html',
-    styleUrls: ['./amazfit-watchfaces.component.scss', '../art-page.scss', '../../../components/card/card.scss']
+    styleUrls: ['./amazfit-watchfaces.component.scss', '../art-page.scss']
 })
-export class AmazfitWatchfacesComponent extends CardComponent {
+export class AmazfitWatchfacesComponent {
 
-    constructor(
-        public override m: MainService,
-        public override rootElement: ElementRef,
-    ) {
-        super(m, rootElement);
-    }
+    constructor(public m: MainService) { }
     
 }

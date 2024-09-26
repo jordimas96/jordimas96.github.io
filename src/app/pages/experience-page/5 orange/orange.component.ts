@@ -1,13 +1,12 @@
-import { Component, ElementRef } from '@angular/core';
+import { Component } from '@angular/core';
 import { MainService } from 'src/app/services/main.service';
-import { CardComponent } from '../../../components/card/card.component';
 
 @Component({
     selector: 'app-orange',
     templateUrl: './orange.component.html',
-    styleUrls: ['./orange.component.scss', '../experience-page.scss', '../../../components/card/card.scss']
+    styleUrls: ['./orange.component.scss', '../experience-page.scss']
 })
-export class OrangeComponent extends CardComponent {
+export class OrangeComponent {
     
     public links = {
         ca: "https://www.orange.es/empresas/grandes-empresas",
@@ -15,12 +14,7 @@ export class OrangeComponent extends CardComponent {
         en: "https://www.orange.es/empresas/grandes-empresas",
     }
 
-    constructor(
-        public override m: MainService,
-        public override rootElement: ElementRef,
-    ) {
-        super(m, rootElement);
-    }
+    constructor(public m: MainService) { }
 
     getLink() {
         return this.links[this.m.idioma];

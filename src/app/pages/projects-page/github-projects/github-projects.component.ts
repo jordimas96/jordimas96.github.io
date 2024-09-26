@@ -1,31 +1,27 @@
-import { Component, ElementRef } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { ProviderService } from 'src/app/services/provider.service';
-import { CardComponent } from '../../../components/card/card.component';
-import { MainService } from '../../../services/main.service';
 import { Utils } from 'src/app/shared/utils';
+import { MainService } from '../../../services/main.service';
+import { ThemeService } from 'src/app/services/theme.service';
 
 @Component({
     selector: 'app-github-projects',
     templateUrl: './github-projects.component.html',
-    styleUrls: ['./github-projects.component.scss', '../projects-page.scss', '../../../components/card/card.scss']
+    styleUrls: ['./github-projects.component.scss', '../projects-page.scss']
 })
-export class GithubProjectsComponent extends CardComponent {
+export class GithubProjectsComponent implements OnInit {
 
     public readonly USE_CACHE = true;
 
     public repos: Array<any> = [];
 
     constructor(
-        public override m: MainService,
-        public override rootElement: ElementRef,
+        public m: MainService,
+        public ts: ThemeService,
         public ps: ProviderService,
-    ) {
-        super(m, rootElement);
-    }
+    ) { }
 
-    override async ngOnInit() {
-        super.ngOnInit();
-
+    async ngOnInit() {
         this.m.afterRootFadeIn(() => {
             this.carregarInfoProjects();
         });
@@ -125,7 +121,7 @@ export class GithubProjectsComponent extends CardComponent {
 
 
     getColorRepoCards(hue) {
-        let alfa = this.m.ts.modeFosc ? 0.35 : 0.5;
+        let alfa = this.ts.modeFosc ? 0.35 : 0.5;
         return `hsla(${hue}, 100%, 75%, ${alfa})`;
     }
     getColorImgShadow(hue) {

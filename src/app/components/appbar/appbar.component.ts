@@ -1,6 +1,7 @@
 import { Component, ElementRef, HostListener, ViewChild } from '@angular/core';
 import * as $ from "jquery";
 import { MainService } from 'src/app/services/main.service';
+import { ThemeService } from 'src/app/services/theme.service';
 
 
 @Component({
@@ -12,9 +13,13 @@ export class AppbarComponent {
 
     @ViewChild('appbar') appbar: ElementRef;
 
-    constructor(public m: MainService) {
+    constructor(
+        public m: MainService,
+        public ts: ThemeService
+    ) {
         m.appbar = this;
     }
+    
     ngOnInit() {
         this.m.afterRootFadeIn(this.afterRootFadeIn.bind(this));
 

@@ -20,7 +20,6 @@ export class MainService {
     public sidebar: SidebarComponent;
     public footer: FooterComponent;
     public index: IndexComponent;
-    public exp: ExperienceCalculatorService;
 
     // Services //
     public u;
@@ -43,15 +42,10 @@ export class MainService {
         public router: Router,
         public route: ActivatedRoute,
         public gas: GoogleAnalyticsService,
-        public ts: ThemeService,
     ) {
         this.u = Utils;
 
-        // Inicialitzar serveis //
-        new ExperienceCalculatorService(this);
 
-        
-        
         // Ajustos NOMÉS al debugar //
         if (this.debug) {
             window["m"] = this;

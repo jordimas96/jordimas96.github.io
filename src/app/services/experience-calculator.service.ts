@@ -161,9 +161,20 @@ export class ExperienceCalculatorService {
     public experienciaPerSkills: any = { "_total": { diesTotals: 0, empreses: [] } };
 
     constructor(public m: MainService) {
-        m.exp = this;
-
         this.calcularExperiencia();
+
+        this.setIntervalDiari();
+    }
+
+    setIntervalDiari() {
+        const ara = new Date();
+        const diaSeguent = new Date(ara.getFullYear(), ara.getMonth(), ara.getDate() + 1, 0, 0, 0, 0);
+        let tempsFinsMitjanit = diaSeguent.getTime() - ara.getTime();
+
+        setTimeout(() => {
+            this.calcularExperiencia();
+            this.setIntervalDiari();
+        }, tempsFinsMitjanit);
     }
 
 

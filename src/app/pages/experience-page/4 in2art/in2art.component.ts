@@ -1,13 +1,12 @@
-import { Component, ElementRef } from '@angular/core';
+import { Component } from '@angular/core';
 import { MainService } from 'src/app/services/main.service';
-import { CardComponent } from '../../../components/card/card.component';
 
 @Component({
     selector: 'app-in2art',
     templateUrl: './in2art.component.html',
-    styleUrls: ['./in2art.component.scss', '../experience-page.scss', '../../../components/card/card.scss']
+    styleUrls: ['./in2art.component.scss', '../experience-page.scss']
 })
-export class In2artComponent extends CardComponent {
+export class In2artComponent {
     
     public links = {
         ca: "https://in2.art/es",
@@ -17,12 +16,7 @@ export class In2artComponent extends CardComponent {
 
     public isDown = false; // I have no way to actually know it, just manually checking the web //
 
-    constructor(
-        public override m: MainService,
-        public override rootElement: ElementRef,
-    ) {
-        super(m, rootElement);
-    }
+    constructor(public m: MainService) { }
 
     getLink() {
         return this.links[this.m.idioma];

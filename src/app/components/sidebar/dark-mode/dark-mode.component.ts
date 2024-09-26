@@ -44,7 +44,7 @@ export class DarkModeComponent {
 
 
         // Si es click al auto i no cal fer efecte, no el fem //
-        if (nomBoto == "auto" && this.m.ts.modeFosc == Utils.systemDarkMode()) {
+        if (nomBoto == "auto" && this.ts.modeFosc == Utils.systemDarkMode()) {
             this.accioAutoDarkMode();
             $(".botoAutoMode").fadeOut(200);
             return;
@@ -53,7 +53,7 @@ export class DarkModeComponent {
         // Variables //
         let spread = Utils.mesGran(window.innerWidth, window.innerHeight);
         let blur = 500;
-        var color = this.m.ts.modeFosc ? "var(--color-l-8)" : "var(--color-fosc)";
+        var color = this.ts.modeFosc ? "var(--color-l-8)" : "var(--color-fosc)";
 
 
         // Transicions //
@@ -119,24 +119,24 @@ export class DarkModeComponent {
     }
 
     accioDarkMode() {
-        this.m.ts.modeFosc = !this.m.ts.modeFosc;
+        this.ts.modeFosc = !this.ts.modeFosc;
         this.ts.actTema();
-        Utils.setCookieDays("darkmode", this.m.ts.modeFosc ? 1 : 0)
+        Utils.setCookieDays("darkmode", this.ts.modeFosc ? 1 : 0)
     }
 
     accioAutoDarkMode() {
-        this.m.ts.modeFosc = Utils.systemDarkMode();
+        this.ts.modeFosc = Utils.systemDarkMode();
         this.ts.actTema();
         Utils.removeCookie("darkmode");
     }
 
     setDarkMode() {
         // Establir variable dark mode //
-        this.m.ts.modeFosc = !!parseInt(Utils.getCookie("darkmode"));
+        this.ts.modeFosc = !!parseInt(Utils.getCookie("darkmode"));
 
         // Si no te cookie el traiem de system //
         if (!Utils.hasCookie("darkmode"))
-            this.m.ts.modeFosc = Utils.systemDarkMode();
+            this.ts.modeFosc = Utils.systemDarkMode();
     }
 
 }

@@ -1,6 +1,6 @@
-import { Component, ElementRef } from '@angular/core';
+import { Component } from '@angular/core';
+import { ExperienceCalculatorService } from 'src/app/services/experience-calculator.service';
 import { MainService } from 'src/app/services/main.service';
-import { CardComponent } from '../../../components/card/card.component';
 import { Utils } from 'src/app/shared/utils';
 
 @Component({
@@ -8,21 +8,16 @@ import { Utils } from 'src/app/shared/utils';
     templateUrl: './languages.component.html',
     styleUrls: ['./languages.component.scss']
 })
-export class LanguagesComponent extends CardComponent {
+export class LanguagesComponent {
 
     public showTime = false;
     public sorted = false;
 
     constructor(
-        public override m: MainService,
-        public override rootElement: ElementRef,
+        public m: MainService,
+        public exp: ExperienceCalculatorService
     ) {
-        super(m, rootElement);
-
         this.showTime = Utils.getCookie("showTime") == "1";
-    }
-    override ngOnInit() {
-        super.ngOnInit();
     }
 
 
@@ -53,7 +48,7 @@ export class LanguagesComponent extends CardComponent {
         // Afegim o traiem l'estil order per a ordenar elements dins el flex //
         if (this.sorted) {
             $("app-skill").each((i, e) => {
-                let order = this.m.exp.getSkill(e.getAttribute("n"))?.diesTotals || 0;
+                let order = this.exp.getSkill(e.getAttribute("n"))?.diesTotals || 0;
                 e.style.order = -order + "";
             });
         } else {
