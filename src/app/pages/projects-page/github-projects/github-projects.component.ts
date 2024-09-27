@@ -43,50 +43,51 @@ export class GithubProjectsComponent implements OnInit {
         }
 
         
-        // Si no, fem petició //
-        let repos = await this.ps.getRepositorisGitHubProjects();
-
-        // Order repos //
-        repos.forEach((repo: any) => {
-
-            let order: any = repo.topics.find((topic: string) => topic.startsWith("pop-order-"));
-            
-            if (order != null) {
-                order = parseFloat(order.split("pop-order-")[1]);
-                if (Number.isNaN(order))
-                    order = null;
+        // Si no, ho creem //
+        let repos = [
+            {
+                "name": "rounded-corners-directive",
+                "cardHue": 160
+            },
+            {
+                "name": "navigation-tab",
+                "cardHue": 265
+            },
+            {
+                "name": "color-harmonizer",
+                "cardHue": 261
+            },
+            {
+                "name": "icon-editor-2016",
+                "title": "icon editor (2016)",
+                "cardHue": 360
+            },
+            {
+                "name": "electricity-rate-2016",
+                "title": "electricity rate (2016)",
+                "cardHue": 87
+            },
+            {
+                "name": "meme-generator-2016",
+                "title": "meme generator (2016)",
+                "cardHue": 21
+            },
+            {
+                "name": "evorait-task_materials_ngrx",
+                "title": "NgRx materials task",
+                "cardHue": 201
             }
-            if (order == null)
-                order = Infinity;
-
-            repo.order = order;
-        });
-        repos.sort((a, b) => a.order - b.order);
-
+        ];
 
         this.repos = await Promise.all(repos.map(async (repo) => {
 
-            // Color card //
-            let huesPredefinits = {
-                "rounded-corners-directive": 160,
-                "electricity-rate-2016": 87,
-                "evorait-task_materials_ngrx": 201,
-                "color-harmonizer": 261,
-                "navigation-tab": 265,
-                "icon-editor-2016": 360,
-                "meme-generator-2016": 21,
-            };
-
-
             return {
-                name: repo.name,
-                nameFormated: repo.name.replace(/[-_]+/g, " "),
+                ...repo,
+                title: repo.title || repo.name.replace(/[-_]+/g, " "),
                 text: await this.getReadmes(repo.name),
                 url: `https://jordimas96.github.io/${repo.name}`,
-                iconUrl1: `https://raw.githubusercontent.com/jordimas96/${repo.name}/main/docs/favicon.ico`,
-                iconUrl2: `https://raw.githubusercontent.com/jordimas96/${repo.name}/main/favicon.ico`,
-                order: repo.order,
-                cardHue: huesPredefinits[repo.name] || [...repo.name].reduce((suma, v) => suma + v.charCodeAt(), 0) % 360,
+                iconUrl: `https://raw.githubusercontent.com/jordimas96/${repo.name}/main/docs/favicon.ico`,
+                iconUrlBackup: `https://raw.githubusercontent.com/jordimas96/${repo.name}/main/favicon.ico`,
             }
         }));
 
