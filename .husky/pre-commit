@@ -1,8 +1,9 @@
 #!/usr/bin/env sh
 . "$(dirname -- "$0")/_/husky.sh"
 
-# Normal project build #
-ng build;
+# Disable auto build on commit because I will auto build it on the server
+# # Normal project build #
+# ng build;
 
-# Stage compilation folder #
-git add -A docs;
+# # Stage compilation folder #
+# git add -A docs;
