@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Skills } from 'src/app/enums/skills.enum';
 import { MainService } from 'src/app/services/main.service';
 
 @Component({
@@ -7,6 +8,7 @@ import { MainService } from 'src/app/services/main.service';
     styleUrls: ['./orange.component.scss', '../experience-page.scss']
 })
 export class OrangeComponent {
+    Skills = Skills;
     
     public links = {
         ca: "https://www.orange.es/empresas/grandes-empresas",

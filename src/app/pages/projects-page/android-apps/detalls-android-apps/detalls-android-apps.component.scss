@@ -110,6 +110,12 @@
     }
 }
 
+// Evtar que els tooltips flotants de skill quedin a sota //
+.wallpaper-blurrer { position: relative; z-index: 4; }
+.text-mimicker { position: relative; z-index: 3; }
+.breaking-ball { position: relative; z-index: 2; }
+.sus-tracker { position: relative; z-index: 1; }
+
 ::ng-deep .seccio {
     background-color: var(--color-clar-20);
     &:not([data-open]):hover {

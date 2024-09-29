@@ -1,4 +1,5 @@
 import { Component, ElementRef } from '@angular/core';
+import { Skills } from 'src/app/enums/skills.enum';
 import { ExperienceCalculatorService } from 'src/app/services/experience-calculator.service';
 import { MainService } from 'src/app/services/main.service';
 
@@ -8,6 +9,7 @@ import { MainService } from 'src/app/services/main.service';
     styleUrls: ['./bio.component.scss']
 })
 export class BioComponent {
+    Skills = Skills;
 
     public salutacions = {
         "ca": ["Bon dia!", "Bona tarda!", "Bona nit!"],
@@ -15,22 +17,17 @@ export class BioComponent {
         "en": ["Good morning!", "Good afternoon!", "Good evening!"],
     };
 
-    public anysExp: number;
-    
-
     constructor(
         public m: MainService,
         public rootElement: ElementRef,
         public exp: ExperienceCalculatorService
-    ) {
-    }
+    ) { }
 
     async ngOnInit() {
-        
-        this.anysExp = this.exp.experienciaPerSkills["_total"].anysAprox;
 
         // Debug //
-        if (this.m.debug) setTimeout(() => { $("img.es").css({ "filter": "grayscale(1) brightness(100)" }); }, 0);
+        if (this.m.debug) setTimeout(() => { $("img.es").attr("src", "assets/icons/flags/cat.svg") }, 0);
+
     }
 
 
@@ -52,6 +49,8 @@ export class BioComponent {
         
         return this.salutacions[this.m.idioma][index] || "Hey!";
     }
+
+    getAnysExp() { return this.exp.skills[Skills._TOTAL].anysAprox }
 
     getRutaCV() {
         return `assets/documents/CV/CV Jordi Mas Parramon ${this.m.idioma.toUpperCase()}.pdf`;

@@ -1,4 +1,5 @@
 import { Injectable } from "@angular/core";
+import { Skills } from 'src/app/enums/skills.enum';
 import { MainService } from "./main.service";
 
 @Injectable({
@@ -6,164 +7,153 @@ import { MainService } from "./main.service";
 })
 export class ExperienceCalculatorService {
 
-    // private experiencia = [
-    //     ["2016-2-1", "2016-7-14"], // DSET (Pràctiques) //
-    //     ["2016-10-17", "2017-2-28"], // Nexxia (Pràctiques) //
-    //     ["2017-7-3", "2017-7-31"], // Beca Indra //
-    //     ["2017-9-4", "2019-3-8"], // Indra //
-    //     ["2020-9-7", "2021-6-25"], // Matic //
-    //     ["2021-8-31", "2023-6-30"], // In2art // -
-    //     ["2023-7-1", "2023-8-22"], // CodiTramuntana // -
-    //     ["2023-8-23", "2023-11-3"], // Orange //
-    //     ["2023-11-6", "2024-1-26"], // Evora //
-    //     ["2024-6-18", ], // Alvea //
-    // ];
-
-    private experienciaJSON = [
+    private experiencia = [
         { // DSET (Pràctiques) //
             nom: "DSET",
             dates: ["2016-02-01", "2016-07-14"],
             skills: [
-                "Frontend",
-                "JavaScript", "CSS", "HTML5", "Cordova",
-                "VMware", "VirtualBox",
-                "Fedora", "macOS",
+                Skills.FRONTEND,
+                Skills.JAVASCRIPT, Skills.CSS, Skills.HTML5, Skills.CORDOVA,
+                Skills.VMWARE, Skills.VIRTUALBOX,
+                Skills.FEDORA, Skills.MACOS,
             ]
         },
         { // Nexxia (Pràctiques) //
             nom: "Nexxia",
             dates: ["2016-10-17", "2017-02-28"],
             skills: [
-                "Frontend",
-                "JavaScript", "jQuery", "CSS", "HTML5", "Bootstrap",
-                "Delphi", "FastReport",
-                "Responsive Design",
-                "Windows",
+                Skills.FRONTEND,
+                Skills.JAVASCRIPT, Skills.JQUERY, Skills.CSS, Skills.HTML5, Skills.BOOTSTRAP,
+                Skills.DELPHI, Skills.FASTREPORT,
+                Skills.RESPONSIVEDESIGN,
+                Skills.WINDOWS,
             ]
         },
         { // Beca Indra //
             nom: "Beca Indra",
             dates: ["2017-07-03", "2017-07-31"],
             skills: [
-                "Backend",
-                "Java", "JSP", "Maven", "Microservices",
-                "Netbeans", "Eclipse", "SVN",
-                "Windows Server", "Remote Desktop", "TeamViewer",
-                "PL/1", "DB2", "zOS/MVS",
-                "Windows",
+                Skills.BACKEND,
+                Skills.JAVA, Skills.JSP, Skills.MAVEN, Skills.MICROSERVICES,
+                Skills.NETBEANS, Skills.ECLIPSE, Skills.SVN,
+                Skills.WINDOWSSERVER, Skills.REMOTEDESKTOP, Skills.TEAMVIEWER,
+                Skills.PL1, Skills.DB2, Skills.ZOSMVS,
+                Skills.WINDOWS,
             ]
         },
         { // Indra //
             nom: "Indra",
             dates: ["2017-09-04", "2019-03-08"],
             skills: [
-                "Backend",
-                "Java", "JSP", "Maven", "Microservices",
-                "SQL Developer",
-                "Netbeans", "Eclipse", "SVN",
-                "Windows Server", "Remote Desktop", "TeamViewer",
-                "Agile", "Continuous integration",
-                "Windows",
+                Skills.BACKEND,
+                Skills.JAVA, Skills.JSP, Skills.MAVEN, Skills.MICROSERVICES,
+                Skills.SQLDEVELOPER,
+                Skills.NETBEANS, Skills.ECLIPSE, Skills.SVN,
+                Skills.WINDOWSSERVER, Skills.REMOTEDESKTOP, Skills.TEAMVIEWER,
+                Skills.AGILE, Skills.CONTINUOUSINTEGRATION,
+                Skills.WINDOWS,
             ]
         },
         { // Matic //
             nom: "Matic",
             dates: ["2020-09-07", "2021-06-25"],
             skills: [
-                "Frontend", "Backend",
-                "JavaScript", "jQuery", "CSS", "HTML5", "Bootstrap", "Materialize",
-                "Cordova", "UWP",
-                "NodeJs", "Sequelize", "PHP",
-                "MySQL", "PHPMyadmin", "SQL Developer",
-                "Apache", "Filezilla",
-                "PowerShell",
-                "Joomla", "K2", "Akeeba Backup", "JCE FileManager",
-                "Windows Server", "Remote Desktop", "AnyDesk",
-                "Agile", "MVC", "Responsive Design",
-                "Windows",
+                Skills.FRONTEND, Skills.BACKEND,
+                Skills.JAVASCRIPT, Skills.JQUERY, Skills.CSS, Skills.HTML5, Skills.BOOTSTRAP, Skills.MATERIALIZE,
+                Skills.CORDOVA, Skills.UWP,
+                Skills.NODEJS, Skills.SEQUELIZE, Skills.PHP,
+                Skills.MYSQL, Skills.PHPMYADMIN, Skills.SQLDEVELOPER,
+                Skills.APACHE, Skills.FILEZILLA,
+                Skills.POWERSHELL,
+                Skills.JOOMLA, Skills.K2, Skills.AKEEBABACKUP, Skills.JCEFILEMANAGER,
+                Skills.WINDOWSSERVER, Skills.REMOTEDESKTOP, Skills.ANYDESK,
+                Skills.AGILE, Skills.MVC, Skills.RESPONSIVEDESIGN,
+                Skills.WINDOWS,
             ]
         },
         { // In2art // -
             nom: "In2art",
             dates: ["2021-08-31", "2023-06-30"],
             skills: [
-                "Frontend",
-                "Angular", "CSS", "SASS", "TypeScript", "JavaScript", "jQuery", "HTML5",
-                "Bootstrap", "Angular Material",
-                "i18n",
-                "NodeJs",
-                "JSON",
-                "MySQL", "PHPMyadmin",
-                "Filezilla", "Apache", "Git", "Sourcetree",
-                "PowerShell",
-                "Postman", "Asana", "Poedit",
-                "MVC", "Agile", "Responsive Design",
-                "Windows",
+                Skills.FRONTEND,
+                Skills.ANGULAR, Skills.CSS, Skills.SASS, Skills.TYPESCRIPT, Skills.JAVASCRIPT, Skills.JQUERY, Skills.HTML5,
+                Skills.BOOTSTRAP, Skills.ANGULARMATERIAL,
+                Skills.I18N,
+                Skills.NODEJS,
+                Skills.JSON,
+                Skills.MYSQL, Skills.PHPMYADMIN,
+                Skills.FILEZILLA, Skills.APACHE, Skills.GIT, Skills.SOURCETREE,
+                Skills.POWERSHELL,
+                Skills.POSTMAN, Skills.ASANA, Skills.POEDIT,
+                Skills.MVC, Skills.AGILE, Skills.RESPONSIVEDESIGN,
+                Skills.WINDOWS,
             ]
         },
         { // CodiTramuntana // -
             nom: "CodiTramuntana",
             dates: ["2023-07-05", "2023-08-22"],
             skills: [
-                "Frontend", "Backend",
-                "Ruby on Rails",
-                "SQL Developer",
-                "WinSCP", //?
-                "Red Hat",
+                Skills.FRONTEND, Skills.BACKEND,
+                Skills.RUBYONRAILS,
+                Skills.SQLDEVELOPER,
+                Skills.WINSCP, //?
+                Skills.REDHAT,
             ]
         },
         { // Orange //
             nom: "Orange",
             dates: ["2023-08-23", "2023-11-03"],
             skills: [
-                "Frontend", "Backend",
-                "Java", "WebLogic", "Eclipse", "Maven", "Microservices",
-                "Angular",
-                "SQL Developer",
-                "Jira", "Confluence", "GitLab", "JFrog Artifactory",
-                "TortoiseGit",
-                "WinSCP", "Windows Server",
-                "MVC", "Agile", "Continuous integration",
-                "Windows",
+                Skills.FRONTEND, Skills.BACKEND,
+                Skills.JAVA, Skills.WEBLOGIC, Skills.ECLIPSE, Skills.MAVEN, Skills.MICROSERVICES,
+                Skills.ANGULAR,
+                Skills.SQLDEVELOPER,
+                Skills.JIRA, Skills.CONFLUENCE, Skills.GITLAB, Skills.JFROGARTIFACTORY,
+                Skills.TORTOISEGIT,
+                Skills.WINSCP, Skills.WINDOWSSERVER,
+                Skills.MVC, Skills.AGILE, Skills.CONTINUOUSINTEGRATION,
+                Skills.WINDOWS,
             ]
         },
         { // Evora //
             nom: "Evora",
-            dates: ["2023-11-06", "2024-1-26"],
+            dates: ["2023-11-06", "2024-01-26"],
             skills: [
-                "Frontend",
-                "Angular", "NgRx", "TypeScript", "JavaScript", "CSS", "SASS",
-                "Angular Material",
-                "PWA", "Cordova",
-                "Microservices",
-                "Git", "Bitbucket",
-                "Jira", "Confluence",
-                "MVC", "Agile", "Continuous integration",
-                "Windows",
+                Skills.FRONTEND,
+                Skills.ANGULAR, Skills.NGRX, Skills.TYPESCRIPT, Skills.JAVASCRIPT, Skills.CSS, Skills.SASS,
+                Skills.ANGULARMATERIAL,
+                Skills.PWA, Skills.CORDOVA,
+                Skills.MICROSERVICES,
+                Skills.GIT, Skills.BITBUCKET,
+                Skills.JIRA, Skills.CONFLUENCE,
+                Skills.MVC, Skills.AGILE, Skills.CONTINUOUSINTEGRATION,
+                Skills.WINDOWS,
             ]
         },
         { // Alvea // -
             nom: "Alvea",
-            dates: ["2024-6-18",],
+            dates: ["2024-06-18",],
             skills: [
-                "Frontend",
-                "Angular", "NgRx", "TypeScript", "JavaScript", "CSS", "SASS", "HTML5",
-                "PrimeNG", "Angular Material",
-                "Microservices",
-                "Git", "Sourcetree", "Bitbucket",
-                "MVC", "Agile", "Responsive Design", "Continuous integration",
-                "Windows",
+                Skills.FRONTEND,
+                Skills.ANGULAR, Skills.NGRX, Skills.TYPESCRIPT, Skills.JAVASCRIPT, Skills.CSS, Skills.SASS, Skills.HTML5,
+                Skills.PRIMENG, Skills.ANGULARMATERIAL,
+                Skills.MICROSERVICES,
+                Skills.GIT, Skills.SOURCETREE, Skills.BITBUCKET,
+                Skills.MVC, Skills.AGILE, Skills.RESPONSIVEDESIGN, Skills.CONTINUOUSINTEGRATION,
+                Skills.WINDOWS,
             ]
         },
 
     ];
 
-    public experienciaPerSkills: any = { "_total": { diesTotals: 0, empreses: [] } };
+    public skills: any;
 
     constructor(public m: MainService) {
         this.calcularExperiencia();
 
         this.setIntervalDiari();
+        console.log(this);
+        
     }
 
     setIntervalDiari() {
@@ -177,55 +167,35 @@ export class ExperienceCalculatorService {
         }, tempsFinsMitjanit);
     }
 
-
-    // calcularAnysExperiencia() {
-    //     let diesTotals = 0;
-    //     this.experiencia.forEach(e => {
-    //         let dataInicial = new Date(e.dates[0]);
-    //         let dataFinal = e.dates[1] ? new Date(e.dates[1]) : new Date();
-    //         diesTotals += (dataFinal.valueOf() - dataInicial.valueOf()) / (24 * 60 * 60 * 1000);
-    //     });
-
-    //     diesTotals = Math.round(diesTotals);
-
-    //     const anys = Math.floor(diesTotals / 365.24);
-    //     diesTotals %= 365.24;
-    //     const mesos = Math.floor(diesTotals / 30.44);
-    //     diesTotals %= 30.44;
-    //     const dies = Math.floor(diesTotals);
-
-    //     this.anysMesosDiesExp = [anys, mesos, dies];
-    //     this.anysExp = anys;
-    //     if (mesos >= 6)
-    //         this.anysExp++;
-    // }
     calcularExperiencia() {
 
-        // Omplim experienciaPerSkills amb diesTotals //
-        this.experienciaJSON.forEach(empresa => {
+        this.skills = { [Skills._TOTAL]: { diesTotals: 0, empreses: [] } };
+
+        // Omplim skills amb diesTotals //
+        this.experiencia.forEach(empresa => {
             let dataInicial = new Date(empresa.dates[0]);
             let dataFinal = empresa.dates[1] ? new Date(empresa.dates[1]) : new Date();
             let diesTotals = (dataFinal.valueOf() - dataInicial.valueOf()) / (24 * 60 * 60 * 1000);
 
-            if (empresa.nom == "Matic") diesTotals += 61.15 / 8; // 61,15 extra hours //
+            if (empresa.nom == "Matic") diesTotals += 65.15 / 8; // 65.15 extra hours //
             if (empresa.nom == "Alvea") diesTotals *= 43 / 40; // 43h a week //
 
-            empresa.skills.forEach(skill => {
-                if (this.experienciaPerSkills[skill] === undefined)
-                    this.experienciaPerSkills[skill] = { diesTotals: 0, empreses: [] };
-                this.experienciaPerSkills[skill].diesTotals += diesTotals;
+            empresa.skills.forEach((skill: Skills) => {
+                if (this.skills[skill] === undefined)
+                    this.skills[skill] = { diesTotals: 0, empreses: [] };
+                this.skills[skill].diesTotals += diesTotals;
 
-                this.experienciaPerSkills[skill].empreses.push(empresa.nom);
+                this.skills[skill].empreses.push(empresa.nom);
             });
 
-            this.experienciaPerSkills["_total"].diesTotals += diesTotals;
+            this.skills[Skills._TOTAL].diesTotals += diesTotals;
         });
 
         // Calculem els seus anys, mesos, dies, etc. //
-        for (var skill in this.experienciaPerSkills) {
+        for (var skill in this.skills) {
             let diesTotals
-                = this.experienciaPerSkills[skill].diesTotals
-                = Math.round(this.experienciaPerSkills[skill].diesTotals);
+                = this.skills[skill].diesTotals
+                = Math.round(this.skills[skill].diesTotals);
 
             const anys = Math.floor(diesTotals / 365.24);
             diesTotals %= 365.24;
@@ -238,27 +208,18 @@ export class ExperienceCalculatorService {
             if (mesos >= 6)
                 anysAprox++;
 
-            this.experienciaPerSkills[skill].anysMesosDies = anysMesosDies;
-            this.experienciaPerSkills[skill].anysAprox = anysAprox;
-            this.experienciaPerSkills[skill].empreses.reverse();
+            this.skills[skill].anysMesosDies = anysMesosDies;
+            this.skills[skill].anysAprox = anysAprox;
+            this.skills[skill].empreses.reverse();
         }
 
     }
     getSkill(skill) {
-        if (!skill) return null;
-        let res = this.experienciaPerSkills[skill];
-        if (res) return res;
-
-        // Per si la skill esta mal escrita (majuscules, etc) //
-        for (var key in this.experienciaPerSkills) {
-            if (this.normalitzar(key) == this.normalitzar(skill))
-                return this.experienciaPerSkills[key];
-        }
-        return null;
+        return this.skills![skill] || null
     }
     getTextExp(skill: string) {
-        if (!this.experienciaPerSkills[skill]) return "";
-        return this.construirCadenaTempsExp(this.experienciaPerSkills[skill].anysMesosDies);
+        if (!this.skills[skill]) return "";
+        return this.construirCadenaTempsExp(this.skills[skill].anysMesosDies);
     }
     construirCadenaTempsExp([anys, mesos, dies]: Array<number>) {
         // 5 años, 9 meses y 29 días // 5 años y 10 meses // 5 años y 1 día //

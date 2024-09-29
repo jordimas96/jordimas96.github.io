@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Skills } from 'src/app/enums/skills.enum';
 import { MainService } from 'src/app/services/main.service';
 
 @Component({
@@ -7,6 +8,7 @@ import { MainService } from 'src/app/services/main.service';
     styleUrls: ['./custom-roms.component.scss', '../projects-page.scss']
 })
 export class CustomRomsComponent {
+    Skills = Skills;
 
     constructor(public m: MainService) { }
     

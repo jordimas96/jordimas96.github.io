@@ -1,4 +1,5 @@
-import { Component, ElementRef, Input, Renderer2 } from '@angular/core';
+import { Component, ElementRef, Input, OnInit, Renderer2 } from '@angular/core';
+import { Skills } from 'src/app/enums/skills.enum';
 import { ExperienceCalculatorService } from 'src/app/services/experience-calculator.service';
 import { MainService } from 'src/app/services/main.service';
 import { Utils } from 'src/app/shared/utils';
@@ -8,7 +9,7 @@ import { Utils } from 'src/app/shared/utils';
     templateUrl: './skill.component.html',
     styleUrls: ['./skill.component.scss']
 })
-export class SkillComponent {
+export class SkillComponent implements OnInit {
 
     constructor(
         public m: MainService,
@@ -17,23 +18,27 @@ export class SkillComponent {
         private exp: ExperienceCalculatorService
     ) { }
 
-    @Input("n") nom: string;
-    @Input("showTime") showTime: boolean;
-    @Input("ampladaNom") ampladaNom: number;
+    @Input("skill") nom: Skills;
+    @Input("showTime") showTime: boolean = false;
 
-    normalitzar(s) {
-        return s
-            .normalize()
-            .toLowerCase()
-            .replaceAll("#", "sharp")
-            .replaceAll("/", "")
-            .replaceAll(" ", "")
+    public skill;
+    public clau: string;
+    public classe: string;
+
+    ngOnInit(): void {
+
+        this.skill = this.exp.skills[this.nom];
+
+        this.clau = Object.keys(Skills)[Object.values(Skills).indexOf(this.nom)];
+        this.classe = this.clau.toLowerCase();
+
     }
+
     buscarGoogle(s) {
         s = s
             .replaceAll(" ", "+")
             .replaceAll("#", "sharp");
-        
+
         s = `https://www.google.com/search?btnI&q=${s}`;
         window.open(s, "_blank");
     }
@@ -42,32 +47,23 @@ export class SkillComponent {
         return this.exp.getTextExp(this.nom);
     }
     getTextCurt() {
-        if (!this.exp.getSkill(this.nom))
-            return "";
-        else
-            return this.exp.construirCadenaTempsExpCurta(this.exp.getSkill(this.nom)?.anysMesosDies);
+        return this.exp.construirCadenaTempsExpCurta(this.skill?.anysMesosDies);
     }
     getText_anysMesosDies() {
-        if (!this.exp.getSkill(this.nom))
-            return "";
-        else
-            return this.exp.construirCadenaTempsExp(this.exp.getSkill(this.nom)?.anysMesosDies);
+        return this.exp.construirCadenaTempsExp(this.skill?.anysMesosDies);
     }
     getText_anysMesos() {
-        if (!this.exp.getSkill(this.nom))
-            return "";
-        else
-            return this.exp.construirCadenaTempsExp_anysMesos(this.exp.getSkill(this.nom)?.anysMesosDies);
+        return this.exp.construirCadenaTempsExp_anysMesos(this.skill?.anysMesosDies);
     }
     getNivellBarra() {
-        return (this.exp.getSkill(this.nom)?.diesTotals || 0) / this.exp.getSkill("_total")?.diesTotals * 100;
+        return (this.skill?.diesTotals || 0) / this.exp.getSkill(Skills._TOTAL)?.diesTotals * 100;
     }
     getTextTooltip() {
-        if (this.exp.getSkill(this.nom)?.empreses?.length) {
+        if (this.skill?.empreses?.length) {
             return this.getText_anysMesosDies() + // 2 years, 6 months and 9 days //
                 "\n" +
-                ["en", "en", "in"][this.m.idiomaIndex] + " " + // in //
-                Utils.addConjunctionBetweenThe2Last(this.exp.getSkill(this.nom)?.empreses, this.m.conjuncio); // Evora, Orange and In2art //
+                ["a", "en", "in"][this.m.idiomaIndex] + " " + // in //
+                Utils.addConjunctionBetweenThe2Last(this.skill?.empreses, this.m.conjuncio); // Evora, Orange and In2art //
         } else {
             return [
                 "Experiència només en projectes personals",
@@ -82,11 +78,11 @@ export class SkillComponent {
         const content = document.querySelector('.content');
 
         this.renderer.removeStyle(tooltipCard, "translate");
-    
+
         if (tooltipCard && content) {
             const tooltipRect = tooltipCard.getBoundingClientRect();
             const contentRect = content.getBoundingClientRect();
-    
+
             let offset = 0;
             if (tooltipRect.left < contentRect.left)
                 offset = contentRect.left - tooltipRect.left;
@@ -95,10 +91,10 @@ export class SkillComponent {
 
             if (offset)
                 this.renderer.setStyle(tooltipCard, "translate", `${offset}px`);
-            
+
         }
     }
-    
+
 
 
     // Strings //

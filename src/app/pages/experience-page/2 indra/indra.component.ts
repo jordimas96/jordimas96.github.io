@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Skills } from 'src/app/enums/skills.enum';
 import { MainService } from 'src/app/services/main.service';
 import { ThemeService } from 'src/app/services/theme.service';
 
@@ -8,6 +9,7 @@ import { ThemeService } from 'src/app/services/theme.service';
     styleUrls: ['./indra.component.scss', '../experience-page.scss']
 })
 export class IndraComponent {
+    Skills = Skills;
     
     public links = {
         ca: "https://www.indracompany.com/es/",

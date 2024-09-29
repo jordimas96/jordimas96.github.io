@@ -1,18 +1,20 @@
-<span class="tooltipExp {{normalitzar(nom)}}" (mouseenter)="correctTooltipPosition()">
-    @if (!showTime) {
-        <section class="{{normalitzar(nom)}}">
-            <div class="chip" appMostrarAmbAnimacio>{{nom}}</div>
-        </section>
-    } @else {
-        <section class="showTime" appMostrarAmbAnimacio>
-            <div class="chip">{{nom}}</div>
-            <div class="barra">
-                <div class="nivell" [style.width.%]="getNivellBarra()"> {{getTextCurt()}} </div>
-            </div>
-        </section>
-    }
-    <div class="tooltip-card">
-        {{experienciaEn_string()}} <b>{{nom}}:</b><br>
-        {{getTextTooltip()}}
-    </div>
-</span>
+@if(skill) {
+    <span class="tooltipExp {{ classe }}" (mouseenter)="correctTooltipPosition()">
+        @if (!showTime) {
+            <section class="{{ classe }}">
+                <div class="chip" appMostrarAmbAnimacio>{{ nom }}</div>
+            </section>
+        } @else {
+            <section class="showTime" appMostrarAmbAnimacio>
+                <div class="chip">{{ nom }}</div>
+                <div class="barra">
+                    <div class="nivell" [style.width.%]="getNivellBarra()"> {{ getTextCurt() }} </div>
+                </div>
+            </section>
+        }
+        <div class="tooltip-card">
+            {{ experienciaEn_string() }} <b>{{ nom }}:</b><br>
+            {{ getTextTooltip() }}
+        </div>
+    </span>
+}

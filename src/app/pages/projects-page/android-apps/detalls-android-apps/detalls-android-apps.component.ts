@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import * as $ from "jquery";
+import { Skills } from 'src/app/enums/skills.enum';
 import { MainService } from 'src/app/services/main.service';
 
 @Component({
@@ -8,6 +9,7 @@ import { MainService } from 'src/app/services/main.service';
     styleUrls: ['./detalls-android-apps.component.scss']
 })
 export class DetallsAndroidAppsComponent {
+    Skills = Skills;
 
     constructor(public m: MainService) { }
 

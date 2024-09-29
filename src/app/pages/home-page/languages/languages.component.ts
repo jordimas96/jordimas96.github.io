@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Skills } from 'src/app/enums/skills.enum';
 import { ExperienceCalculatorService } from 'src/app/services/experience-calculator.service';
 import { MainService } from 'src/app/services/main.service';
 import { Utils } from 'src/app/shared/utils';
@@ -9,6 +10,7 @@ import { Utils } from 'src/app/shared/utils';
     styleUrls: ['./languages.component.scss']
 })
 export class LanguagesComponent {
+    Skills = Skills;
 
     public showTime = false;
     public sorted = false;
@@ -48,7 +50,7 @@ export class LanguagesComponent {
         // Afegim o traiem l'estil order per a ordenar elements dins el flex //
         if (this.sorted) {
             $("app-skill").each((i, e) => {
-                let order = this.exp.getSkill(e.getAttribute("n"))?.diesTotals || 0;
+                let order = this.exp.getSkill(e.getAttribute("ng-reflect-nom"))?.diesTotals || 0;
                 e.style.order = -order + "";
             });
         } else {

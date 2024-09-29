@@ -1,5 +1,7 @@
 import { Component } from '@angular/core';
+import { Skills } from 'src/app/enums/skills.enum';
 import { MainService } from 'src/app/services/main.service';
+
 
 @Component({
     selector: 'app-alvea',
@@ -7,6 +9,7 @@ import { MainService } from 'src/app/services/main.service';
     styleUrls: ['./alvea.component.scss', '../experience-page.scss']
 })
 export class AlveaComponent {
+    Skills = Skills;
 
     public links = {
         ca: "https://alvea.es/",

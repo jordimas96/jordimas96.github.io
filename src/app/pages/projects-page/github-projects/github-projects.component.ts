@@ -3,6 +3,7 @@ import { ProviderService } from 'src/app/services/provider.service';
 import { Utils } from 'src/app/shared/utils';
 import { MainService } from '../../../services/main.service';
 import { ThemeService } from 'src/app/services/theme.service';
+import { Skills } from 'src/app/enums/skills.enum';
 
 @Component({
     selector: 'app-github-projects',
@@ -10,6 +11,7 @@ import { ThemeService } from 'src/app/services/theme.service';
     styleUrls: ['./github-projects.component.scss', '../projects-page.scss']
 })
 export class GithubProjectsComponent implements OnInit {
+    Skills = Skills;
 
     public readonly USE_CACHE = true;
 
