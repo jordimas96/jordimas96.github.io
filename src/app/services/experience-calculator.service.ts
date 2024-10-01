@@ -59,7 +59,8 @@ export class ExperienceCalculatorService {
             dates: ["2020-09-07", "2021-06-25"],
             skills: [
                 Skills.FRONTEND, Skills.BACKEND,
-                Skills.JAVASCRIPT, Skills.JQUERY, Skills.CSS, Skills.HTML5, Skills.BOOTSTRAP, Skills.MATERIALIZE,
+                Skills.JAVASCRIPT, Skills.JQUERY, Skills.CSS, Skills.HTML5,
+                Skills.BOOTSTRAP, Skills.MATERIALIZE,
                 Skills.CORDOVA, Skills.UWP,
                 Skills.NODEJS, Skills.SEQUELIZE, Skills.PHP,
                 Skills.MYSQL, Skills.PHPMYADMIN, Skills.SQLDEVELOPER,
@@ -108,7 +109,7 @@ export class ExperienceCalculatorService {
                 Skills.JAVA, Skills.WEBLOGIC, Skills.ECLIPSE, Skills.MAVEN, Skills.MICROSERVICES,
                 Skills.ANGULAR,
                 Skills.SQLDEVELOPER,
-                Skills.JIRA, Skills.CONFLUENCE, Skills.GITLAB, Skills.JFROGARTIFACTORY,
+                Skills.JIRA, Skills.CONFLUENCE, Skills.GITLAB, Skills.JFROGARTIFACTORY, Skills.FIGMA,
                 Skills.TORTOISEGIT,
                 Skills.WINSCP, Skills.WINDOWSSERVER,
                 Skills.MVC, Skills.AGILE, Skills.CONTINUOUSINTEGRATION,
@@ -125,7 +126,7 @@ export class ExperienceCalculatorService {
                 Skills.PWA, Skills.CORDOVA,
                 Skills.MICROSERVICES,
                 Skills.GIT, Skills.BITBUCKET,
-                Skills.JIRA, Skills.CONFLUENCE,
+                Skills.JIRA, Skills.CONFLUENCE, Skills.FIGMA,
                 Skills.MVC, Skills.AGILE, Skills.CONTINUOUSINTEGRATION,
                 Skills.WINDOWS,
             ]
@@ -136,9 +137,10 @@ export class ExperienceCalculatorService {
             skills: [
                 Skills.FRONTEND,
                 Skills.ANGULAR, Skills.NGRX, Skills.TYPESCRIPT, Skills.JAVASCRIPT, Skills.CSS, Skills.SASS, Skills.HTML5,
-                Skills.PRIMENG, Skills.ANGULARMATERIAL,
+                Skills.PRIMENG, Skills.BOOTSTRAP, Skills.ANGULARMATERIAL,
                 Skills.MICROSERVICES,
                 Skills.GIT, Skills.SOURCETREE, Skills.BITBUCKET,
+                Skills.JIRA, Skills.FIGMA,
                 Skills.MVC, Skills.AGILE, Skills.RESPONSIVEDESIGN, Skills.CONTINUOUSINTEGRATION,
                 Skills.WINDOWS,
             ]
@@ -169,7 +171,7 @@ export class ExperienceCalculatorService {
 
     calcularExperiencia() {
 
-        this.skills = { [Skills._TOTAL]: { diesTotals: 0, empreses: [] } };
+        this.skills = { [Skills._TOTAL]: { diesTotals: 0, empreses: [], anysMesosDies: [0, 0, 0] } };
 
         // Omplim skills amb diesTotals //
         this.experiencia.forEach(empresa => {
@@ -182,7 +184,7 @@ export class ExperienceCalculatorService {
 
             empresa.skills.forEach((skill: Skills) => {
                 if (this.skills[skill] === undefined)
-                    this.skills[skill] = { diesTotals: 0, empreses: [] };
+                    this.skills[skill] = { diesTotals: 0, empreses: [], anysMesosDies: [0, 0, 0] };
                 this.skills[skill].diesTotals += diesTotals;
 
                 this.skills[skill].empreses.push(empresa.nom);
@@ -204,12 +206,8 @@ export class ExperienceCalculatorService {
             const dies = Math.floor(diesTotals);
 
             let anysMesosDies = [anys, mesos, dies];
-            let anysAprox = anys;
-            if (mesos >= 6)
-                anysAprox++;
 
             this.skills[skill].anysMesosDies = anysMesosDies;
-            this.skills[skill].anysAprox = anysAprox;
             this.skills[skill].empreses.reverse();
         }
 
@@ -246,19 +244,7 @@ export class ExperienceCalculatorService {
         if (mesos >= 12) {
             mesos = 0; anys++;
         }
-
-        const index = this.m.idiomaIndex;
-        const textAnys = [["any", "anys"], ["año", "años"], ["year", "years"]][index];
-        const textMesos = [["mes", "mesos"], ["mes", "meses"], ["month", "months"]][index];
-        const conjuncio = this.m.conjuncio;
-
-        let cadenes: Array<string> = [];
-        if (anys > 0) cadenes.push(anys + " " + (anys == 1 ? textAnys[0] : textAnys[1]));
-        if (mesos > 0) cadenes.push(mesos + " " + (mesos == 1 ? textMesos[0] : textMesos[1]));
-
-        if (cadenes.length == 2) return `${cadenes[0]} ${conjuncio} ${cadenes[1]}`;
-        if (cadenes.length == 1) return `${cadenes[0]}`;
-        return "";
+        return this.construirCadenaTempsExp([anys, mesos, 0]);
     }
     construirCadenaTempsExpCurta([anys, mesos, dies]: Array<number>) {
         // 5a 11m //

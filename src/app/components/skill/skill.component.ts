@@ -27,7 +27,7 @@ export class SkillComponent implements OnInit {
 
     ngOnInit(): void {
 
-        this.skill = this.exp.skills[this.nom];
+        this.skill = this.exp.skills[this.nom] || { diesTotals: 0, empreses: [], anysMesosDies: [0, 0, 0] };
 
         this.clau = Object.keys(Skills)[Object.values(Skills).indexOf(this.nom)];
         this.classe = this.clau.toLowerCase();

@@ -43,6 +43,7 @@ export enum Skills {
     BITBUCKET = "Bitbucket",
     SOURCETREE = "Sourcetree",
     POSTMAN = "Postman",
+    FIGMA = "Figma",
     ASANA = "Asana",
     FILEZILLA = "Filezilla",
     ANDROIDSTUDIO = "Android Studio",

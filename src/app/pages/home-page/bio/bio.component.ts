@@ -50,7 +50,13 @@ export class BioComponent {
         return this.salutacions[this.m.idioma][index] || "Hey!";
     }
 
-    getAnysExp() { return this.exp.skills[Skills._TOTAL].anysAprox }
+    getAnysExp() {
+        let [anys, mesos] = this.exp.skills[Skills._TOTAL].anysMesosDies;
+        if (mesos >= 6)
+            anys++;
+
+        return anys;
+    }
 
     getRutaCV() {
         return `assets/documents/CV/CV Jordi Mas Parramon ${this.m.idioma.toUpperCase()}.pdf`;
