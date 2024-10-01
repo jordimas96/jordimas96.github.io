@@ -37,6 +37,7 @@ import { ExperiencePageComponent } from './pages/experience-page/experience-page
 import { BioComponent } from './pages/home-page/bio/bio.component';
 import { HomePageComponent } from './pages/home-page/home-page.component';
 import { LanguagesComponent } from './pages/home-page/languages/languages.component';
+import { StatsComponent } from './pages/home-page/stats/stats.component';
 import { AndroidAppsComponent } from './pages/projects-page/android-apps/android-apps.component';
 import { DetallsAndroidAppsComponent } from './pages/projects-page/android-apps/detalls-android-apps/detalls-android-apps.component';
 import { CustomRomsComponent } from './pages/projects-page/custom-roms/custom-roms.component';
@@ -78,6 +79,7 @@ import { SectionPageComponent } from './pages/section-page/section-page.componen
 
 
         BioComponent,
+        StatsComponent,
         LanguagesComponent,
 
         NexxiaComponent,

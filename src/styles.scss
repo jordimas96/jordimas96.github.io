@@ -68,13 +68,6 @@ html {
     }
 }
 .section {
-    color: var(--text);
-    background-color: var(--fons-50);
-    backdrop-filter: blur(40px);
-    @extend .shadow-2;
-
-    padding: 1rem;
-    border-radius: 2rem;
 
     .section-title {
         font-size: 1.75rem;
@@ -87,6 +80,15 @@ html {
     .title-icon {
         height: 2rem;
     }
+}
+.card {
+    color: var(--text);
+    background-color: var(--fons-50);
+    backdrop-filter: blur(40px);
+    @extend .shadow-2;
+    
+    padding: 1rem;
+    border-radius: 2rem;
 }
 
 // Estils generals per tots els ns (<button> i <a>) //
@@ -399,7 +401,7 @@ img, .noselect {
 }
 // Pantalla Tablet //
 @media only screen and (min-width: 576px) {
-    .section {
+    .card {
         padding: 1.3rem 2rem 2rem;
         border-radius: 2.5rem;
     }

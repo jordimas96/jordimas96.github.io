@@ -261,6 +261,7 @@ export class ExperienceCalculatorService {
         return "";
     }
     construirCadenaTempsExpCurta([anys, mesos, dies]: Array<number>) {
+        // 5a 11m //
         if (dies && dies >= 15)
             mesos++;
         if (mesos >= 12) {
