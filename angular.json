@@ -29,7 +29,7 @@
             "assets": [
               "src/favicon.ico",
               "src/assets",
-              "src/pages",
+              "src/external-pages",
               "src/404.html",
               "src/github-pages-routing-problem-fix.js"
             ],
@@ -104,7 +104,7 @@
             "assets": [
               "src/favicon.ico",
               "src/assets",
-              "src/pages"
+              "src/external-pages"
             ],
             "styles": [
               "@angular/material/prebuilt-themes/indigo-pink.css",
