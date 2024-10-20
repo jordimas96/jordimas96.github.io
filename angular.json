@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "angular-web": {
+    "jordimas-portfolio": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:component": {
@@ -75,21 +75,22 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "buildTarget": "angular-web:build:production"
+              "buildTarget": "jordimas-portfolio:build:production"
             },
             "development": {
-              "buildTarget": "angular-web:build:development"
+              "buildTarget": "jordimas-portfolio:build:development"
             }
           },
           "defaultConfiguration": "development",
           "options": {
-            "host": "0.0.0.0"
+            "host": "0.0.0.0",
+            "port": 80
           }
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "buildTarget": "angular-web:build"
+            "buildTarget": "jordimas-portfolio:build"
           }
         },
         "test": {

@@ -76,10 +76,6 @@ export class Utils {
             setTimeout(resolve, ms);
         });
     }
-    public static blockGoogleAnalytics() {
-        localStorage.setItem("googleAnalyticsBlocked", "1");
-        window['ga-disable-G-W0GMXKXDST'] = true;
-    }
 
 
     public static scroll(x) { window.scroll({ top: x, left: 0, behavior: "instant" }); }

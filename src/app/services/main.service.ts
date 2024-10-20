@@ -8,6 +8,7 @@ import { SidebarComponent } from "../components/sidebar/sidebar.component";
 import { Utils } from "../shared/utils";
 import { ExperienceCalculatorService } from "./experience-calculator.service";
 import { ThemeService } from "./theme.service";
+import { BlockGoogleAnalyticsService } from "./blockGoogleAnalytics.service";
 
 // https://developerslogblog.wordpress.com/2019/04/23/how-to-use-angular-services-to-share-data-between-components/ //
 
@@ -26,7 +27,7 @@ export class MainService {
 
     // Variables //
     public tempsDelayCarregaPag = 1000;
-    public readonly debug = window.location.origin.includes("localhost") || window.location.origin.includes("192.168.1.");
+    public readonly debug = window.location.hostname == "localhost" || window.location.hostname.includes("192.168.1.");
     public scroll = window.pageYOffset;
     public window = window;
 
@@ -52,14 +53,9 @@ export class MainService {
             document.title = "Local";
             document.querySelector("link[rel*='icon']")!["href"] = "assets/favicon-local.ico";
             document.body.style.overflowX = "visible";
-
-            // Google Analytics //
-            localStorage.setItem("googleAnalyticsBlocked", "1");
         } else {
             this.printarFirmaAConsola();
         }
-        if (localStorage.getItem("googleAnalyticsBlocked"))
-            Utils.blockGoogleAnalytics();
 
         // Event al canviar de pàgina //
         this.router.events.subscribe(event => {

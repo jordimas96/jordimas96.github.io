@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { NavigationEnd } from '@angular/router';
+import { BlockGoogleAnalyticsService } from 'src/app/services/blockGoogleAnalytics.service';
 import { MainService } from 'src/app/services/main.service';
 import { Utils } from 'src/app/shared/utils';
 
@@ -15,7 +16,10 @@ export class SidebarComponent {
 
     public width = window.innerWidth;
 
-    constructor(public m: MainService) {
+    constructor(
+        public m: MainService,
+        public blockGoogleAnalyticsService: BlockGoogleAnalyticsService
+    ) {
         m.sidebar = this;
     }
     ngOnInit() {
@@ -47,26 +51,5 @@ export class SidebarComponent {
     }
 
 
-    // Google Analytics //
-    private numClicks = 1;
-    private lastClickTime: number = 0;
-    blockAnalyticsClick() {
-        if (localStorage.getItem("googleAnalyticsBlocked")) return;
-
-        const currentTime = Date.now();
-        const elapsedTime = currentTime - this.lastClickTime;
-        this.lastClickTime = currentTime;
     
-        if (elapsedTime < 300)
-            this.numClicks++;
-        else
-            this.numClicks = 1;
-
-        if (this.m.debug) console.log("click " + this.numClicks);        
-    
-        if (this.numClicks >= 10) {
-            Utils.blockGoogleAnalytics();
-            alert("Google Analytics blocked on this device");
-        }
-    }
 }

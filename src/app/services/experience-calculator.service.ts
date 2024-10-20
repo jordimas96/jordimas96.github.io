@@ -154,7 +154,6 @@ export class ExperienceCalculatorService {
         this.calcularExperiencia();
 
         this.setIntervalDiari();
-        console.log(this);
         
     }
 
