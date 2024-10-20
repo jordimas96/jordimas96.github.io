@@ -69,10 +69,10 @@
 // Establir variables mode fosc i clar //
 // Afegeixo els .section per a que utilitzin els colors respectius segons les variables. //
 // Caldria afegir aquí totes les classes a on es necessitessin remapejar els colors //
-:root [class^="tema-"], [class*="tema-"] {
+html [class*="tema-"], html [class*="paleta-"] {
     --accent-color: var(--color-7);
 }
-:root, :root .section, :root [class^="tema-"], [class*="tema-"] {
+html, html .section, html [class*="tema-"], html [class*="paleta-"] {
     --color-fosc:    hsla(var(--color-fosc-hsl-vals), 1.0);
     --color-fosc-90: hsla(var(--color-fosc-hsl-vals), 0.9);
     --color-fosc-80: hsla(var(--color-fosc-hsl-vals), 0.8);
@@ -127,7 +127,7 @@
     --color-9: var(--color-l-9);
 }
 
-:root.light, :root.light .section, :root.light [class^="tema-"], :root.light [class*="tema-"] {
+.light, .light .section, .light [class*="tema-"], .light [class*="paleta-"] {
     --fons: var(--color-clar);
     --fons-90: var(--color-clar-90);
     --fons-80: var(--color-clar-80);
@@ -162,88 +162,143 @@
 }
 
 
-// Temes cada card // 
+// Temes cada card //
+
+// Colors generador //
+
+@for $hue from 0 through 360 {
+    .paleta-#{$hue} {
+
+        @if ($hue > 330 and $hue <= 360 or $hue >= 0 and $hue <= 30) {
+            // 0 //
+            --color-fosc-hsl-vals: #{$hue}, 100%, 7%;
+            --color-clar-hsl-vals: #{$hue}, 100%, 91%;
+            --color-l-0: hsl(#{$hue}, 100%, 7%);
+            --color-l-1: hsl(#{$hue}, 100%, 16%);
+            --color-l-2: hsl(#{$hue}, 100%, 26%);
+            --color-l-3: hsl(#{$hue}, 100%, 35%);
+            --color-l-4: hsl(#{$hue}, 100%, 44%);
+            --color-l-5: hsl(#{$hue}, 100%, 54%);
+            --color-l-6: hsl(#{$hue}, 100%, 63%);
+            --color-l-7: hsl(#{$hue}, 100%, 72%);
+            --color-l-8: hsl(#{$hue}, 100%, 82%);
+            --color-l-9: hsl(#{$hue}, 100%, 91%);
+        }
+        @if ($hue > 30 and $hue <= 90) {
+            // 60 //
+            --color-fosc-hsl-vals: #{$hue}, 100%, 7%;
+            --color-clar-hsl-vals: #{$hue}, 100%, 91%;
+            --color-l-0: hsl(#{$hue}, 100%, 7%);
+            --color-l-1: hsl(#{$hue}, 100%, 12%);
+            --color-l-2: hsl(#{$hue}, 100%, 18%);
+            --color-l-3: hsl(#{$hue}, 100%, 26%);
+            --color-l-4: hsl(#{$hue}, 100%, 35%);
+            --color-l-5: hsl(#{$hue}, 100%, 44%);
+            --color-l-6: hsl(#{$hue}, 100%, 58%);
+            --color-l-7: hsl(#{$hue}, 100%, 75%);
+            --color-l-8: hsl(#{$hue}, 100%, 83%);
+            --color-l-9: hsl(#{$hue}, 100%, 91%);
+        }
+        @if ($hue > 90 and $hue <= 150) {
+            // 120 //
+            --color-fosc-hsl-vals: #{$hue}, 100%, 8%;
+            --color-clar-hsl-vals: #{$hue}, 100%, 90%;
+            --color-l-0: hsl(#{$hue}, 100%, 8%);
+            --color-l-1: hsl(#{$hue}, 100%, 15%);
+            --color-l-2: hsl(#{$hue}, 100%, 23%);
+            --color-l-3: hsl(#{$hue}, 100%, 30%);
+            --color-l-4: hsl(#{$hue}, 100%, 37%);
+            --color-l-5: hsl(#{$hue}, 100%, 45%);
+            --color-l-6: hsl(#{$hue}, 100%, 60%);
+            --color-l-7: hsl(#{$hue}, 100%, 74%);
+            --color-l-8: hsl(#{$hue}, 100%, 84%);
+            --color-l-9: hsl(#{$hue}, 100%, 90%);
+        }
+        @if ($hue > 150 and $hue <= 210) {
+            // 180 //
+            --color-fosc-hsl-vals: #{$hue}, 100%, 8%;
+            --color-clar-hsl-vals: #{$hue}, 100%, 90%;
+            --color-l-0: hsl(#{$hue}, 100%, 8%);
+            --color-l-1: hsl(#{$hue}, 100%, 15%);
+            --color-l-2: hsl(#{$hue}, 100%, 20%);
+            --color-l-3: hsl(#{$hue}, 100%, 27%);
+            --color-l-4: hsl(#{$hue}, 100%, 35%);
+            --color-l-5: hsl(#{$hue}, 100%, 45%);
+            --color-l-6: hsl(#{$hue}, 100%, 50%);
+            --color-l-7: hsl(#{$hue}, 100%, 70%);
+            --color-l-8: hsl(#{$hue}, 100%, 80%);
+            --color-l-9: hsl(#{$hue}, 100%, 90%);
+        }
+        @if ($hue > 210 and $hue <= 270) {
+            // 240 //
+            --color-fosc-hsl-vals: #{$hue}, 100%, 8%;
+            --color-clar-hsl-vals: #{$hue}, 100%, 92%;
+            --color-l-0: hsl(#{$hue}, 100%, 8%);
+            --color-l-1: hsl(#{$hue}, 100%, 17%);
+            --color-l-2: hsl(#{$hue}, 100%, 25%);
+            --color-l-3: hsl(#{$hue}, 100%, 34%);
+            --color-l-4: hsl(#{$hue}, 100%, 43%);
+            --color-l-5: hsl(#{$hue}, 100%, 60%);
+            --color-l-6: hsl(#{$hue}, 100%, 68%);
+            --color-l-7: hsl(#{$hue}, 100%, 75%);
+            --color-l-8: hsl(#{$hue}, 100%, 85%);
+            --color-l-9: hsl(#{$hue}, 100%, 92%);
+        }
+        @if ($hue > 270 and $hue <= 330) {
+            // 300 //
+            --color-fosc-hsl-vals: #{$hue}, 100%, 7%;
+            --color-clar-hsl-vals: #{$hue}, 100%, 93%;
+            --color-l-0: hsl(#{$hue}, 100%, 7%);
+            --color-l-1: hsl(#{$hue}, 100%, 16%);
+            --color-l-2: hsl(#{$hue}, 100%, 26%);
+            --color-l-3: hsl(#{$hue}, 100%, 35%);
+            --color-l-4: hsl(#{$hue}, 100%, 44%);
+            --color-l-5: hsl(#{$hue}, 100%, 60%);
+            --color-l-6: hsl(#{$hue}, 100%, 70%);
+            --color-l-7: hsl(#{$hue}, 100%, 79%);
+            --color-l-8: hsl(#{$hue}, 100%, 87%);
+            --color-l-9: hsl(#{$hue}, 100%, 93%);
+        }
+    }
+    .paleta-bn {
+        // Grayscale //
+        --color-fosc-hsl-vals: 0, 0%, 10%;
+        --color-clar-hsl-vals: 0, 0%, 100%;
+        --color-l-0: hsl(0, 0%, 10%);
+        --color-l-1: hsl(0, 0%, 20%);
+        --color-l-2: hsl(0, 0%, 30%);
+        --color-l-3: hsl(0, 0%, 40%);
+        --color-l-4: hsl(0, 0%, 50%);
+        --color-l-5: hsl(0, 0%, 60%);
+        --color-l-6: hsl(0, 0%, 70%);
+        --color-l-7: hsl(0, 0%, 80%);
+        --color-l-8: hsl(0, 0%, 90%);
+        --color-l-9: hsl(0, 0%, 100%);
+    }
+}
+
 // Colors específics cards //
 
 // Projects //
 
-.tema-android {
-    --color-fosc-hsl-vals-test: hsl(147, 100%, 8%);
-    --color-clar-hsl-vals-test: hsl(147, 100%, 86%);
-    --color-fosc-hsl-vals: 147, 100%, 8%;
-    --color-clar-hsl-vals: 147, 100%, 86%;
-    --color-l-0: hsl(147, 100%, 8%);
-    --color-l-1: hsl(147, 100%, 15%);
-    --color-l-2: hsl(147, 100%, 23%);
-    --color-l-3: hsl(147, 100%, 30%);
-    --color-l-4: hsl(147, 100%, 37%);
-    --color-l-5: hsl(147, 100%, 45%);
-    --color-l-6: hsl(147, 100%, 60%);
-    --color-l-7: hsl(147, 100%, 72%);
-    --color-l-8: hsl(147, 100%, 80%);
-    --color-l-9: hsl(147, 100%, 86%);
-}
+.tema-android { @extend .paleta-147; }
 .dark  :host .tema-android { background-color: hsla(147, 100%, 14%, 0.5); --link: var(--color-l-5); }
 .light :host .tema-android { background-color: hsla(147, 100%, 72%, 0.5); --link: var(--color-l-2); }
 
-.tema-mad-jumpgate {
-    --color-fosc-hsl-vals-test: hsl(60, 100%, 7%);
-    --color-clar-hsl-vals-test: hsl(60, 100%, 91%);
-    --color-fosc-hsl-vals: 60, 100%, 7%;
-    --color-clar-hsl-vals: 60, 100%, 91%;
-    --color-l-0: hsl(60, 100%, 7%);
-    --color-l-1: hsl(60, 100%, 12%);
-    --color-l-2: hsl(60, 100%, 18%);
-    --color-l-3: hsl(60, 100%, 26%);
-    --color-l-4: hsl(60, 100%, 35%);
-    --color-l-5: hsl(60, 100%, 44%);
-    --color-l-6: hsl(60, 100%, 58%);
-    --color-l-7: hsl(60, 100%, 75%);
-    --color-l-8: hsl(60, 100%, 83%);
-    --color-l-9: hsl(60, 100%, 91%);
-}
+.tema-mad-jumpgate { @extend .paleta-60; }
 .dark  :host .tema-mad-jumpgate { background-color: hsla(60, 100%, 21%, 0.5); --link: var(--color-l-7); }
 .light :host .tema-mad-jumpgate { background-color: hsla(60, 100%, 72%, 0.5); --link: var(--color-l-3); }
 
-.tema-github {
-    --color-fosc-hsl-vals-test: hsl(0, 0%, 6%);
-    --color-clar-hsl-vals-test: hsl(0, 0%, 100%);
-    --color-fosc-hsl-vals: 0, 0%, 6%;
-    --color-clar-hsl-vals: 0, 0%, 100%;
-    --color-l-0: hsl(0, 0%, 6%);
-    --color-l-1: hsl(0, 0%, 16%);
-    --color-l-2: hsl(0, 0%, 27%);
-    --color-l-3: hsl(0, 0%, 37%);
-    --color-l-4: hsl(0, 0%, 48%);
-    --color-l-5: hsl(0, 0%, 58%);
-    --color-l-6: hsl(0, 0%, 69%);
-    --color-l-7: hsl(0, 0%, 79%);
-    --color-l-8: hsl(0, 0%, 89%);
-    --color-l-9: hsl(0, 0%, 100%);
-}
+.tema-github { @extend .paleta-bn; }
 .dark  :host .tema-github { background-color: hsla(0, 0%, 6%, 0.5); }
 .light :host .tema-github { background-color: hsla(0, 0%, 100%, 0.5); }
 
-.tema-tasker {
-    --color-fosc-hsl-vals-test: hsl(34, 100%, 7%);
-    --color-clar-hsl-vals-test: hsl(34, 100%, 91%);
-    --color-fosc-hsl-vals: 34, 100%, 7%;
-    --color-clar-hsl-vals: 34, 100%, 91%;
-    --color-l-0: hsl(34, 100%, 7%);
-    --color-l-1: hsl(34, 100%, 16%);
-    --color-l-2: hsl(34, 100%, 26%);
-    --color-l-3: hsl(34, 100%, 35%);
-    --color-l-4: hsl(34, 100%, 44%);
-    --color-l-5: hsl(34, 100%, 54%);
-    --color-l-6: hsl(34, 100%, 63%);
-    --color-l-7: hsl(34, 100%, 72%);
-    --color-l-8: hsl(34, 100%, 82%);
-    --color-l-9: hsl(34, 100%, 91%);
-}
+.tema-tasker { @extend .paleta-34; }
 .dark  :host .tema-tasker { background-color: hsla(34, 100%, 25%, 0.5); --link: var(--color-l-7); }
-.light :host .tema-tasker { background-color: hsla(34, 100%, 72%, 0.5); --link: var(--color-l-3); }
+.light :host .tema-tasker { background-color: hsla(34, 100%, 72%, 0.5); --link: var(--color-l-4); --accent-color: var(--color-l-3); }
 
 .tema-amazfit {
+    @extend .paleta-44;
     --color-fosc-hsl-vals-test: hsl(273, 100%, 7%);
     --color-clar-hsl-vals-test: hsl(44, 100%, 91%);
     --color-fosc-hsl-vals: 273, 100%, 7%;
@@ -262,97 +317,34 @@
 .dark  :host .tema-amazfit { background-color: hsla(273, 100%, 15%, 0.5); }
 .light :host .tema-amazfit { background-color: hsla(44, 100%, 72%, 0.5); }
 
-
-.tema-icons {
-    --color-fosc-hsl-vals-test: hsl(0, 0%, 6%);
-    --color-clar-hsl-vals-test: hsl(0, 0%, 100%);
-    --color-fosc-hsl-vals: 0, 0%, 6%;
-    --color-clar-hsl-vals: 0, 0%, 100%;
-    --color-l-0: hsl(0, 0%, 6%);
-    --color-l-1: hsl(0, 0%, 16%);
-    --color-l-2: hsl(0, 0%, 27%);
-    --color-l-3: hsl(0, 0%, 37%);
-    --color-l-4: hsl(0, 0%, 48%);
-    --color-l-5: hsl(0, 0%, 58%);
-    --color-l-6: hsl(0, 0%, 69%);
-    --color-l-7: hsl(0, 0%, 79%);
-    --color-l-8: hsl(0, 0%, 89%);
-    --color-l-9: hsl(0, 0%, 100%);
-}
-.dark :host .tema-icons {//angle 27?
+.tema-icons { @extend .paleta-60; }
+.dark :host .tema-icons {
     background: linear-gradient(45deg, 
         hsla(87, 100%, 25%, 0.5),
         hsla(160, 100%, 25%, 0.5),
         hsla(225, 100%, 25%, 0.5),
         hsla(253, 100%, 25%, 0.5));
-
-
-    // --link: var(--color-l-6);
 }
-.light :host .tema-icons {//angle 27?
+.light :host .tema-icons {
     background: linear-gradient(45deg, 
-    hsla(87, 100%, 72%, 0.5),
-    hsla(160, 100%, 72%, 0.5),
-    hsla(225, 100%, 72%, 0.5),
-    hsla(253, 100%, 72%, 0.5));
-        
-    // --link: var(--color-l-4);
+        hsla(87, 100%, 72%, 0.5),
+        hsla(160, 100%, 72%, 0.5),
+        hsla(225, 100%, 72%, 0.5),
+        hsla(253, 100%, 72%, 0.5));
 }
-
-
-.tema-amazon-apps {
-    --color-fosc-hsl-vals-test: hsl(192, 100%, 8%);
-    --color-clar-hsl-vals-test: hsl(192, 100%, 86%);
-    --color-fosc-hsl-vals: 192, 100%, 8%;
-    --color-clar-hsl-vals: 192, 100%, 86%;
-    --color-l-0: hsl(192, 100%, 8%);
-    --color-l-1: hsl(192, 100%, 17%);
-    --color-l-2: hsl(192, 100%, 25%);
-    --color-l-3: hsl(192, 100%, 34%);
-    --color-l-4: hsl(192, 100%, 43%);
-    --color-l-5: hsl(192, 100%, 51%);
-    --color-l-6: hsl(192, 100%, 60%);
-    --color-l-7: hsl(192, 100%, 69%);
-    --color-l-8: hsl(192, 100%, 77%);
-    --color-l-9: hsl(192, 100%, 86%);
-}
-
 
 
 // Experiencia //
 
-// rgb(17, 77, 166) // #e8effa // white //
-.tema-alvea {
-    --color-fosc-hsl-vals-test: hsl(216, 100%, 8%);
-    --color-clar-hsl-vals-test: hsl(216, 100%, 86%);
-    --color-fosc-hsl-vals: 216, 100%, 8%;
-    --color-clar-hsl-vals: 216, 100%, 86%;
-    --color-l-0: hsl(216, 100%, 8%);
-    --color-l-1: hsl(216, 100%, 17%);
-    --color-l-2: hsl(216, 100%, 25%);
-    --color-l-3: hsl(216, 100%, 34%);
-    --color-l-4: hsl(216, 100%, 43%);
-    --color-l-5: hsl(216, 100%, 51%);
-    --color-l-6: hsl(216, 100%, 60%);
-    --color-l-7: hsl(216, 100%, 69%);
-    --color-l-8: hsl(216, 100%, 77%);
-    --color-l-9: hsl(216, 100%, 86%);
-}
-.dark  :host .tema-alvea {
-    background-color: hsla(216, 81%, 36%, 0.5);
-    --link: rgb(232, 239, 250);
-}
-.light :host .tema-alvea {
-    background-color: hsla(216, 64%, 95%, 0.5);
-    --link: rgb(17, 77, 166);
-}
+// Colors paleta Dintel: rgb(17, 77, 166), #e8effa, white //
+.tema-alvea { @extend .paleta-216; }
+.dark  :host .tema-alvea { background-color: hsla(216, 81%, 36%, 0.5); --link: rgb(232, 239, 250); }
+.light :host .tema-alvea { background-color: hsla(216, 100%, 85%, 0.5); --link: rgb(17, 77, 166); }
 
 
-// Colors logo //
-// .a { color: hsla(212, 64%, 37%, 0.5) }
-// .a { color: hsla(9, 83%, 48%, 0.5) }
-// .a { color: hsla(41, 100%, 48%, 0.5) }
+// Colors logo Evora: hsla(212, 64%, 37%, 0.5), hsla(9, 83%, 48%, 0.5), hsla(41, 100%, 48%, 0.5) //
 .tema-evora {
+    @extend .paleta-41;
     --color-fosc-hsl-vals-test: hsl(212, 100%, 8%);
     --color-clar-hsl-vals-test: hsl(41, 100%, 91%);
     --color-fosc-hsl-vals: 212, 100%, 8%;
@@ -368,7 +360,6 @@
     --color-l-8: hsl(41, 100%, 82%);
     --color-l-9: hsl(41, 100%, 91%);
 }
-// .tema-evora { background-color: hsla(212, 100%, 25%, 0.5); }
 .dark :host .tema-evora {
     background: linear-gradient(45deg,
         hsla(9, 100%, 25%, 0.5) 15%,
@@ -385,107 +376,25 @@
     --link: var(--color-l-4);
 }
 
-
-.tema-orange {
-    --color-fosc-hsl-vals-test: hsl(28, 100%, 7%);
-    --color-clar-hsl-vals-test: hsl(28, 100%, 91%);
-    --color-fosc-hsl-vals: 28, 100%, 7%;
-    --color-clar-hsl-vals: 28, 100%, 91%;
-    --color-l-0: hsl(28, 100%, 7%);
-    --color-l-1: hsl(28, 100%, 16%);
-    --color-l-2: hsl(28, 100%, 26%);
-    --color-l-3: hsl(28, 100%, 35%);
-    --color-l-4: hsl(28, 100%, 44%);
-    --color-l-5: hsl(28, 100%, 50%);
-    --color-l-6: hsl(28, 100%, 63%);
-    --color-l-7: hsl(28, 100%, 72%);
-    --color-l-8: hsl(28, 100%, 82%);
-    --color-l-9: hsl(28, 100%, 91%);
-}
+.tema-orange { @extend .paleta-28; }
 .dark  :host .tema-orange { background-color: hsla(28, 100%, 25%, 0.5); --link: var(--color-l-6); }
 .light :host .tema-orange { background-color: hsla(28, 100%, 72%, 0.5); --link: var(--color-l-3); }
 
-
-.tema-in2art {
-    --color-fosc-hsl-vals-test: hsl(0, 0%, 6%);
-    --color-clar-hsl-vals-test: hsl(0, 0%, 100%);
-    --color-fosc-hsl-vals: 0, 0%, 6%;
-    --color-clar-hsl-vals: 0, 0%, 100%;
-    --color-l-0: hsl(0, 0%, 6%);
-    --color-l-1: hsl(0, 0%, 16%);
-    --color-l-2: hsl(0, 0%, 27%);
-    --color-l-3: hsl(0, 0%, 37%);
-    --color-l-4: hsl(0, 0%, 48%);
-    --color-l-5: hsl(0, 0%, 58%);
-    --color-l-6: hsl(0, 0%, 69%);
-    --color-l-7: hsl(0, 0%, 79%);
-    --color-l-8: hsl(0, 0%, 89%);
-    --color-l-9: hsl(0, 0%, 100%);
-}
+.tema-in2art { @extend .paleta-bn; }
 .dark  :host .tema-in2art { background-color: hsla(0, 0%, 6%, 0.5); --link: var(--color-l-6); }
 .light :host .tema-in2art { background-color: hsla(0, 0%, 100%, 0.5); --link: var(--color-l-3); }
 
-
-.tema-matic {
-    --color-fosc-hsl-vals-test: hsl(357, 100%, 7%);
-    --color-clar-hsl-vals-test: hsl(356, 100%, 91%);
-    --color-fosc-hsl-vals: 357, 100%, 7%;
-    --color-clar-hsl-vals: 356, 100%, 91%;
-    --color-l-0: hsl(356, 100%, 7%);
-    --color-l-1: hsl(356, 100%, 16%);
-    --color-l-2: hsl(356, 100%, 26%);
-    --color-l-3: hsl(356, 100%, 35%);
-    --color-l-4: hsl(356, 100%, 44%);
-    --color-l-5: hsl(356, 100%, 54%);
-    --color-l-6: hsl(356, 100%, 63%);
-    --color-l-7: hsl(356, 100%, 72%);
-    --color-l-8: hsl(356, 100%, 82%);
-    --color-l-9: hsl(356, 100%, 91%);
-}
+.tema-matic { @extend .paleta-356; }
 .dark  :host .tema-matic { background-color: hsla(356, 100%, 15%, 0.5); --link: var(--color-l-7); }
 .light :host .tema-matic { background-color: hsla(356, 100%, 72%, 0.5); --link: var(--color-l-2); }
 
-
-.tema-indra {
-    --color-fosc-hsl-vals-test: hsl(193, 100%, 8%);
-    --color-clar-hsl-vals-test: hsl(193, 100%, 86%);
-    --color-fosc-hsl-vals: 193, 100%, 8%;
-    --color-clar-hsl-vals: 193, 100%, 86%;
-    --color-l-0: hsl(193, 100%, 8%);
-    --color-l-1: hsl(193, 100%, 17%);
-    --color-l-2: hsl(193, 100%, 25%);
-    --color-l-3: hsl(193, 100%, 34%);
-    --color-l-4: hsl(193, 100%, 43%);
-    --color-l-5: hsl(193, 100%, 51%);
-    --color-l-6: hsl(193, 100%, 60%);
-    --color-l-7: hsl(193, 100%, 69%);
-    --color-l-8: hsl(193, 100%, 77%);
-    --color-l-9: hsl(193, 100%, 86%);
-}
+.tema-indra { @extend .paleta-193; }
 .dark  :host .tema-indra { background-color: hsla(193, 100%, 16%, 0.5); --link: var(--color-l-6); }
 .light :host .tema-indra { background-color: hsla(193, 100%, 62%, 0.5); --link: var(--color-l-3); }
 
-
-.tema-nexxia {
-    --color-fosc-hsl-vals-test: hsl(45, 100%, 7%);
-    --color-clar-hsl-vals-test: hsl(46, 100%, 91%);
-    --color-fosc-hsl-vals: 45, 100%, 7%;
-    --color-clar-hsl-vals: 46, 100%, 91%;
-    --color-l-0: hsl(46, 100%, 7%);
-    --color-l-1: hsl(46, 100%, 14%);
-    --color-l-2: hsl(46, 100%, 19%);
-    --color-l-3: hsl(46, 100%, 25%);
-    --color-l-4: hsl(46, 100%, 35%);
-    --color-l-5: hsl(46, 100%, 44%);
-    --color-l-6: hsl(46, 100%, 58%);
-    --color-l-7: hsl(46, 100%, 70%);
-    --color-l-8: hsl(46, 100%, 80%);
-    --color-l-9: hsl(46, 100%, 91%);
-}
+.tema-nexxia { @extend .paleta-46; }
 .dark  :host .tema-nexxia { background-color: hsla(46, 100%, 21%, 0.5); --link: var(--color-l-6); }
 .light :host .tema-nexxia { background-color: hsla(46, 100%, 72%, 0.5); --link: var(--color-l-3); }
-
-
 
 
 // Pantalla Mòbil // @media only screen and (max-width: 575px) { }

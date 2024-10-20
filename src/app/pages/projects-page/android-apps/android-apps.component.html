@@ -49,12 +49,12 @@
             </div>
         }
         <div class="col-6">
-            <a [href]="getAmazonLink_apps()" class="boto botoAmazon tema-amazon-apps" appMostrarAmbAnimacio>
+            <a [href]="getAmazonLink_apps()" class="boto botoAmazon paleta-192" appMostrarAmbAnimacio>
                 <img src="assets/icons/projects/amazon-appstore.png" alt="Amazon Appstore" class="logo">
             </a>
         </div>
         @if (!m.esAndroid()) {
-            <div class="col-6 tema-amazon-apps" appMostrarAmbAnimacio>
+            <div class="col-6 paleta-192" appMostrarAmbAnimacio>
                 <qrcode [qrdata]="getAmazonLink_apps()" [errorCorrectionLevel]="'M'"
                     colorDark="#152939" colorLight="#b8f0ff" title="Amazon Appstore QR"></qrcode>
 
