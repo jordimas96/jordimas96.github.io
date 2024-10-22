@@ -2,7 +2,6 @@ import { Component } from '@angular/core';
 import { NavigationEnd } from '@angular/router';
 import { BlockGoogleAnalyticsService } from 'src/app/services/blockGoogleAnalytics.service';
 import { MainService } from 'src/app/services/main.service';
-import { Utils } from 'src/app/shared/utils';
 
 
 @Component({

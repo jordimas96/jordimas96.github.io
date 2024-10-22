@@ -114,12 +114,26 @@ footer {
 
 
     .developed-by {
+        display: block;
+        
         // font-family: consolas;
         color: var(--color-clar-70);
         animation: colorChange 20s linear infinite;
 
-        font-style: italic;
-        text-align: center;
+        // font-style: italic;
+        letter-spacing: 0.6px;
+
+        width: fit-content;
+        margin: auto;
+        padding: 0.5rem;
+
+        cursor: pointer;
+
+        transition: letter-spacing 0.3s, transform 0.1s, border-radius 0.3s, color 0.3s;
+
+        &:hover {
+            letter-spacing: 1.6px;
+        }
     }
     @keyframes colorChange {
         0%   { color: hsla(0,   100%, 86%, 0.7); }

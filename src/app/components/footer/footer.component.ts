@@ -1,5 +1,6 @@
 import { Component, ElementRef } from '@angular/core';
 import { MainService } from 'src/app/services/main.service';
+import { RickrollService } from 'src/app/services/rickroll.service';
 
 
 @Component({
@@ -12,11 +13,11 @@ export class FooterComponent {
     public colorFirma = Math.floor(Math.random() * 360);
     public bateria = 100;
     public carregant = true;
-    
 
     constructor(
         public m: MainService,
         public rootElement: ElementRef,
+        public rr: RickrollService
     ) {
         m.footer = this;
     }

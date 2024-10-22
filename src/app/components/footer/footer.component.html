@@ -121,18 +121,18 @@
     </div>
 
 
-
-    <div class="developed-by">
+    <button class="developed-by no-style boing" (click)="rr.click()">
         @if (m.ca) { - Desenvolupat per Jordi Mas - }
         @if (m.es) { - Desarrollado por Jordi Mas - }
         @if (m.en) { - Developed by Jordi Mas - }
-    </div>
-    @if (bateria < 20 && !carregant) {
+    </button>
+
+    <!-- @if (bateria < 20 && !carregant) {
         <div class="chargeYourPhone mt-2">
             @if (m.ca) { Carrega el mòbil! }
             @if (m.es) { ¡Carga el móvil! }
             @if (m.en) { Charge your phone! }
         </div>
-    }
+    } -->
     
 </footer>
