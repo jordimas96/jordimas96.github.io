@@ -33,7 +33,7 @@ export class RickrollService {
             console.log(text[this.m.idiomaIndex]);
 
         } else {
-            window.open("assets/videos/rickroll.mp4", "_self");
+            window.open("https://jordimas96.github.io/r/rickroll", "_self");
 
             this.clicksLeft = this.TOTAL_CLICKS;
             this.lastClickTime = 0;
