@@ -16,19 +16,19 @@ import { Utils } from 'src/app/shared/utils';
 })
 export class SkillComponent implements OnInit {
 
-    constructor(
-        public m: MainService,
-        private el: ElementRef,
-        private renderer: Renderer2,
-        private exp: ExperienceCalculatorService
-    ) { }
-
     @Input("skill") nom: Skills;
     @Input("showTime") showTime: boolean = false;
 
     public skill;
     public clau: string;
     public classe: string;
+
+    constructor(
+        public m: MainService,
+        private el: ElementRef,
+        private renderer: Renderer2,
+        private exp: ExperienceCalculatorService
+    ) { }
 
     ngOnInit(): void {
 
