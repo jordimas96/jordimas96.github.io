@@ -1,5 +1,6 @@
 import { Injectable } from "@angular/core";
 import { MainService } from "./main.service";
+import { ToastService } from "./toast.service";
 
 @Injectable({
     providedIn: 'root'
@@ -8,7 +9,10 @@ export class RickrollService {
 
     readonly TOTAL_CLICKS = 7;
 
-    constructor(public m: MainService) { }
+    constructor(
+        public m: MainService,
+        private toast: ToastService,
+    ) { }
 
 
     private clicksLeft = this.TOTAL_CLICKS;
@@ -28,9 +32,9 @@ export class RickrollService {
                 `Estàs a ${this.clicksLeft} passos del paradís`,
                 `Estás a ${this.clicksLeft} pasos del paraíso`,
                 `You are now ${this.clicksLeft} steps away from paradise`
-            ]
+            ];
 
-            console.log(text[this.m.idiomaIndex]);
+            this.toast.open(text[this.m.idiomaIndex]);
 
         } else {
             window.open("https://jordimas96.github.io/r/rickroll", "_self");

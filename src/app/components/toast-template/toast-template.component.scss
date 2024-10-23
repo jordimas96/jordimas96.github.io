@@ -1,0 +1,37 @@
+::ng-deep .cdk-overlay-pane {
+    pointer-events: none;
+}
+
+::ng-deep mat-snack-bar-container.default {
+
+    margin-bottom: 5rem;
+
+    .mdc-snackbar__surface {
+        background: none;
+        box-shadow: none;
+        padding-right: 0;
+        min-width: 0;
+        width: auto;
+
+        .mat-mdc-snack-bar-label {
+            padding: 0;
+
+        }
+    }
+}
+
+.toast {
+    // font-family: revert;
+    font-size: 1.1rem;
+
+    background-color: var(--color-1);
+    color: var(--color-8);
+
+    border-radius: 2rem;
+    padding: 1rem 1.5rem;
+
+    box-shadow: 0px 3px 5px -1px rgba(0, 0, 0, 0.2), 0px 6px 10px 0px rgba(0, 0, 0, 0.14), 0px 1px 18px 0px rgba(0, 0, 0, 0.12);
+
+    cursor: default;
+    
+}
