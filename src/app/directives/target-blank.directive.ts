@@ -1,7 +1,8 @@
 import { Directive, ElementRef, Renderer2 } from '@angular/core';
 
 @Directive({
-    selector: 'a[href]:not([target=_self])'
+    selector: 'a[href]:not([target=_self])',
+    standalone: true
 })
 export class TargetBlankDirective {
 

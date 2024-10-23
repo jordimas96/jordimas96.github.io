@@ -20,7 +20,7 @@
                         <div class="repo p-4 {{repo.name}}" [style.backgroundColor]="getColorRepoCards(repo.cardHue)" appMostrarAmbAnimacio>
                             <img [src]="repo.iconUrl" [alt]="repo.title" [style.color]="getColorImgShadow(repo.cardHue)" class="mb-2 shadow-filter-1" (error)="repo.iconUrl=repo.iconUrlBackup; repo.iconUrlBackup=null">
                             <div class="title">{{repo.title}}</div>
-                            <div class="text mt-1" *ngIf="repo.text[m.idioma]">{{repo.text[m.idioma]}}</div>
+                            @if (repo.text[m.idioma]) { <div class="text mt-1">{{repo.text[m.idioma]}}</div> }
                         </div>
                     </a>
 

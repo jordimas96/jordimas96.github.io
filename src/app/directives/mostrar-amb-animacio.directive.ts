@@ -1,8 +1,9 @@
 import { Directive, ElementRef, OnDestroy, OnInit, Renderer2 } from '@angular/core';
-import { Utils } from '../shared/utils';
+import { Utils } from 'src/app/shared/utils';
 
 @Directive({
-    selector: '[appMostrarAmbAnimacio]'
+    selector: '[appMostrarAmbAnimacio]',
+    standalone: true
 })
 export class MostrarAmbAnimacioDirective implements OnInit, OnDestroy {
 

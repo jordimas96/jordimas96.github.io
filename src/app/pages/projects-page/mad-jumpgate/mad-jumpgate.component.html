@@ -23,21 +23,23 @@
     <app-mad-jumpgate-gameplay />
 
     <div class="d-flex gap-3 mt-3">
-        <div class="seccioIcones play p-3" *ngIf="m.esPc()" appMostrarAmbAnimacio>
-            <div class="titol text-80">
-                @if(m.ca) { Jugar }
-                @if(m.es) { Jugar }
-                @if(m.en) { Play }
+        @if (m.esPc()) {
+            <div class="seccioIcones play p-3" appMostrarAmbAnimacio>
+                <div class="titol text-80">
+                    @if(m.ca) { Jugar }
+                    @if(m.es) { Jugar }
+                    @if(m.en) { Play }
+                </div>
+                <div class="contingut shadow-filter-1">
+                    <a href="https://jordimas96.github.io/external-pages/mad-jumpgate" class="no-style boing bg-white" [class.apple-squircle]="m.esIOS()">
+                        <img src="assets/images/mad-jumpgate/icons/unity.png" alt="Web player" title="Web player" class="logo">
+                    </a>
+                    <a href="https://jmaspgames.itch.io/mad-jumpgate" class="no-style boing" [class.apple-squircle]="m.esIOS()">
+                        <img src="assets/images/mad-jumpgate/icons/itch-io.svg" alt="itch.io" title="itch.io" class="logo">
+                    </a>
+                </div>
             </div>
-            <div class="contingut shadow-filter-1">
-                <a href="https://jordimas96.github.io/external-pages/mad-jumpgate" class="no-style boing bg-white" [class.apple-squircle]="m.esIOS()">
-                    <img src="assets/images/mad-jumpgate/icons/unity.png" alt="Web player" title="Web player" class="logo">
-                </a>
-                <a href="https://jmaspgames.itch.io/mad-jumpgate" class="no-style boing" [class.apple-squircle]="m.esIOS()">
-                    <img src="assets/images/mad-jumpgate/icons/itch-io.svg" alt="itch.io" title="itch.io" class="logo">
-                </a>
-            </div>
-        </div>
+        }
         <div class="seccioIcones gameplay p-3" appMostrarAmbAnimacio>
             <div class="titol text-80">
                 @if(m.ca) { Veure gameplay }

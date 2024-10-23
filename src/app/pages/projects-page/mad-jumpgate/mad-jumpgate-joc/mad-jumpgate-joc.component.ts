@@ -1,11 +1,16 @@
 import { Component, ElementRef, HostListener, ViewChild } from '@angular/core';
+import { MostrarAmbAnimacioDirective } from 'src/app/directives/mostrar-amb-animacio.directive';
 import { MainService } from 'src/app/services/main.service';
 import { Utils } from 'src/app/shared/utils';
 
 @Component({
     selector: 'app-mad-jumpgate-joc',
     templateUrl: './mad-jumpgate-joc.component.html',
-    styleUrls: ['./mad-jumpgate-joc.component.scss']
+    styleUrls: ['./mad-jumpgate-joc.component.scss'],
+    standalone: true,
+    imports: [
+        MostrarAmbAnimacioDirective,
+    ]
 })
 export class MadJumpgateJocComponent {
 

@@ -1,13 +1,24 @@
+import { CommonModule } from '@angular/common';
 import { Component, ElementRef, HostListener, ViewChild } from '@angular/core';
 import * as $ from "jquery";
+import { SelectorIdiomaComponent } from 'src/app/components/sidebar/selector-idioma/selector-idioma.component';
+import { MostrarAmbAnimacioDirective } from 'src/app/directives/mostrar-amb-animacio.directive';
 import { MainService } from 'src/app/services/main.service';
 import { ThemeService } from 'src/app/services/theme.service';
+import { NavegacioTabComponent } from './navegacio-tab/navegacio-tab.component';
 
 
 @Component({
     selector: 'app-appbar',
     templateUrl: './appbar.component.html',
-    styleUrls: ['./appbar.component.scss']
+    styleUrls: ['./appbar.component.scss'],
+    standalone: true,
+    imports: [
+        CommonModule,
+        MostrarAmbAnimacioDirective,
+        NavegacioTabComponent,
+        SelectorIdiomaComponent,
+    ]
 })
 export class AppbarComponent {
 
@@ -19,7 +30,7 @@ export class AppbarComponent {
     ) {
         m.appbar = this;
     }
-    
+
     ngOnInit() {
         this.m.afterRootFadeIn(this.afterRootFadeIn.bind(this));
 

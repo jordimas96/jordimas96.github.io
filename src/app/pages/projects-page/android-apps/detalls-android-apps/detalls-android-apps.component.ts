@@ -1,12 +1,21 @@
 import { Component } from '@angular/core';
 import * as $ from "jquery";
+import { SkillComponent } from 'src/app/components/skill/skill.component';
+import { MostrarAmbAnimacioDirective } from 'src/app/directives/mostrar-amb-animacio.directive';
+import { TargetBlankDirective } from 'src/app/directives/target-blank.directive';
 import { Skills } from 'src/app/enums/skills.enum';
 import { MainService } from 'src/app/services/main.service';
 
 @Component({
     selector: 'app-detalls-android-apps',
     templateUrl: './detalls-android-apps.component.html',
-    styleUrls: ['./detalls-android-apps.component.scss']
+    styleUrls: ['./detalls-android-apps.component.scss'],
+    standalone: true,
+    imports: [
+        MostrarAmbAnimacioDirective,
+        TargetBlankDirective,
+        SkillComponent
+    ]
 })
 export class DetallsAndroidAppsComponent {
     Skills = Skills;

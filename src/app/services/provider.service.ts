@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { PeticioService } from './peticio.service';
+import { PeticioService } from 'src/app/services/peticio.service';
 
 @Injectable({
     providedIn: 'root'

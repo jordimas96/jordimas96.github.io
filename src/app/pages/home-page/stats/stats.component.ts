@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { MostrarAmbAnimacioDirective } from 'src/app/directives/mostrar-amb-animacio.directive';
 import { Skills } from 'src/app/enums/skills.enum';
 import { ExperienceCalculatorService } from 'src/app/services/experience-calculator.service';
 import { MainService } from 'src/app/services/main.service';
@@ -6,7 +7,11 @@ import { MainService } from 'src/app/services/main.service';
 @Component({
     selector: 'app-stats',
     templateUrl: './stats.component.html',
-    styleUrls: ['./stats.component.scss']
+    styleUrls: ['./stats.component.scss'],
+    standalone: true,
+    imports: [
+        MostrarAmbAnimacioDirective,
+    ]
 })
 export class StatsComponent {
     Skills = Skills;

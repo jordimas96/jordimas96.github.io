@@ -1,11 +1,16 @@
 import { Component } from '@angular/core';
+import { FormsModule } from '@angular/forms';
 import { MainService } from 'src/app/services/main.service';
 import { Utils } from 'src/app/shared/utils';
 
 @Component({
     selector: 'app-selector-idioma',
     templateUrl: './selector-idioma.component.html',
-    styleUrls: ['./selector-idioma.component.scss']
+    styleUrls: ['./selector-idioma.component.scss'],
+    standalone: true,
+    imports: [
+        FormsModule,
+    ]
 })
 export class SelectorIdiomaComponent {
 

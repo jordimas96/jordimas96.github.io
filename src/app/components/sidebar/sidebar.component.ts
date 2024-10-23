@@ -1,13 +1,23 @@
 import { Component } from '@angular/core';
-import { NavigationEnd } from '@angular/router';
+import { NavigationEnd, RouterLink } from '@angular/router';
+import { TargetBlankDirective } from 'src/app/directives/target-blank.directive';
 import { BlockGoogleAnalyticsService } from 'src/app/services/blockGoogleAnalytics.service';
 import { MainService } from 'src/app/services/main.service';
+import { DarkModeComponent } from './dark-mode/dark-mode.component';
+import { SelectorIdiomaComponent } from './selector-idioma/selector-idioma.component';
 
 
 @Component({
     selector: 'app-sidebar',
     templateUrl: './sidebar.component.html',
-    styleUrls: ['./sidebar.component.scss']
+    styleUrls: ['./sidebar.component.scss'],
+    standalone: true,
+    imports: [
+        RouterLink,
+        TargetBlankDirective,
+        DarkModeComponent,
+        SelectorIdiomaComponent,
+    ]
 })
 export class SidebarComponent {
 
@@ -50,5 +60,5 @@ export class SidebarComponent {
     }
 
 
-    
+
 }

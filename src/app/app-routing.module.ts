@@ -1,10 +1,10 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { ArtPageComponent } from './pages/art-page/art-page.component';
-import { ExperiencePageComponent } from './pages/experience-page/experience-page.component';
-import { HomePageComponent } from './pages/home-page/home-page.component';
-import { ProjectsPageComponent } from './pages/projects-page/projects-page.component';
-import { SectionPageComponent } from './pages/section-page/section-page.component';
+import { ArtPageComponent } from 'src/app/pages/art-page/art-page.component';
+import { ExperiencePageComponent } from 'src/app/pages/experience-page/experience-page.component';
+import { HomePageComponent } from 'src/app/pages/home-page/home-page.component';
+import { ProjectsPageComponent } from 'src/app/pages/projects-page/projects-page.component';
+import { SectionPageComponent } from 'src/app/pages/section-page/section-page.component';
 
 const routes: Routes = [
     {

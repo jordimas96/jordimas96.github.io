@@ -1,5 +1,5 @@
 import { Component, ElementRef, HostListener, ViewChild } from '@angular/core';
-import { NavigationEnd, Router } from '@angular/router';
+import { NavigationEnd, Router, RouterLinkActive, RouterLink } from '@angular/router';
 import { interval } from 'rxjs';
 import { MainService } from 'src/app/services/main.service';
 import { Utils } from 'src/app/shared/utils';
@@ -7,7 +7,12 @@ import { Utils } from 'src/app/shared/utils';
 @Component({
     selector: 'app-navegacio-tab',
     templateUrl: './navegacio-tab.component.html',
-    styleUrls: ['./navegacio-tab.component.scss']
+    styleUrls: ['./navegacio-tab.component.scss'],
+    standalone: true,
+    imports: [
+        RouterLinkActive,
+        RouterLink,
+    ]
 })
 export class NavegacioTabComponent {
 

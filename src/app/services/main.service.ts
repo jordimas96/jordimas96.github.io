@@ -1,10 +1,10 @@
 import { Injectable } from "@angular/core";
 import { ActivatedRoute, NavigationEnd, Router } from '@angular/router';
 import { GoogleAnalyticsService } from 'ngx-google-analytics';
-import { AppbarComponent } from "../components/appbar/appbar.component";
-import { FooterComponent } from "../components/footer/footer.component";
-import { IndexComponent } from "../components/index/index.component";
-import { SidebarComponent } from "../components/sidebar/sidebar.component";
+import { AppbarComponent } from "src/app/components/appbar/appbar.component";
+import { FooterComponent } from "src/app/components/footer/footer.component";
+import { IndexComponent } from "src/app/components/index/index.component";
+import { SidebarComponent } from "src/app/components/sidebar/sidebar.component";
 import { Utils } from "../shared/utils";
 import { ExperienceCalculatorService } from "./experience-calculator.service";
 import { ThemeService } from "./theme.service";

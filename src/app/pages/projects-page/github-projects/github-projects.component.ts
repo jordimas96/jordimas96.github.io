@@ -1,14 +1,25 @@
 import { Component, OnInit } from '@angular/core';
-import { ProviderService } from 'src/app/services/provider.service';
-import { Utils } from 'src/app/shared/utils';
-import { MainService } from '../../../services/main.service';
-import { ThemeService } from 'src/app/services/theme.service';
+import { NgxMasonryModule } from 'ngx-masonry';
+import { SkillComponent } from 'src/app/components/skill/skill.component';
+import { MostrarAmbAnimacioDirective } from 'src/app/directives/mostrar-amb-animacio.directive';
+import { TargetBlankDirective } from 'src/app/directives/target-blank.directive';
 import { Skills } from 'src/app/enums/skills.enum';
+import { MainService } from 'src/app/services/main.service';
+import { ProviderService } from 'src/app/services/provider.service';
+import { ThemeService } from 'src/app/services/theme.service';
+import { Utils } from 'src/app/shared/utils';
 
 @Component({
     selector: 'app-github-projects',
     templateUrl: './github-projects.component.html',
-    styleUrls: ['./github-projects.component.scss', '../projects-page.scss']
+    styleUrls: ['./github-projects.component.scss', '../projects-page.scss'],
+    standalone: true,
+    imports: [
+        NgxMasonryModule,
+        MostrarAmbAnimacioDirective,
+        TargetBlankDirective,
+        SkillComponent
+    ]
 })
 export class GithubProjectsComponent implements OnInit {
     Skills = Skills;

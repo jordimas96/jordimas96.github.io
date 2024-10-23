@@ -1,10 +1,31 @@
 import { Component } from '@angular/core';
+import { RouterLink } from '@angular/router';
+import { MostrarAmbAnimacioDirective } from 'src/app/directives/mostrar-amb-animacio.directive';
 import { PageComponent } from '../page.component';
+import { NexxiaComponent } from './1 nexxia/nexxia.component';
+import { IndraComponent } from './2 indra/indra.component';
+import { MaticComponent } from './3 matic/matic.component';
+import { In2artComponent } from './4 in2art/in2art.component';
+import { OrangeComponent } from './5 orange/orange.component';
+import { EvoraComponent } from './6 evora/evora.component';
+import { AlveaComponent } from './7 alvea/alvea.component';
 
 @Component({
     selector: 'app-experience-page',
     templateUrl: './experience-page.component.html',
-    styleUrls: ['./experience-page.component.scss', '../page.scss']
+    styleUrls: ['./experience-page.component.scss', '../page.scss'],
+    standalone: true,
+    imports: [
+        RouterLink,
+        MostrarAmbAnimacioDirective,
+        NexxiaComponent,
+        IndraComponent,
+        MaticComponent,
+        In2artComponent,
+        OrangeComponent,
+        EvoraComponent,
+        AlveaComponent,
+    ]
 })
 export class ExperiencePageComponent extends PageComponent {
 

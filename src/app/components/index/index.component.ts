@@ -1,11 +1,16 @@
 import { Component, ElementRef, ViewChild } from '@angular/core';
+import { MostrarAmbAnimacioDirective } from 'src/app/directives/mostrar-amb-animacio.directive';
 import { MainService } from 'src/app/services/main.service';
 
 
 @Component({
     selector: 'app-index',
     templateUrl: './index.component.html',
-    styleUrls: ['./index.component.scss']
+    styleUrls: ['./index.component.scss'],
+    standalone: true,
+    imports: [
+        MostrarAmbAnimacioDirective,
+    ]
 })
 export class IndexComponent {
 

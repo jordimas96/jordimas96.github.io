@@ -6,7 +6,9 @@ import { Utils } from 'src/app/shared/utils';
 @Component({
     selector: 'app-dark-mode',
     templateUrl: './dark-mode.component.html',
-    styleUrls: ['./dark-mode.component.scss']
+    styleUrls: ['./dark-mode.component.scss'],
+    standalone: true,
+    imports: []
 })
 export class DarkModeComponent {
 

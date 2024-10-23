@@ -1,4 +1,7 @@
+import { CommonModule } from '@angular/common';
 import { Component, ElementRef } from '@angular/core';
+import { MostrarAmbAnimacioDirective } from 'src/app/directives/mostrar-amb-animacio.directive';
+import { TargetBlankDirective } from 'src/app/directives/target-blank.directive';
 import { Skills } from 'src/app/enums/skills.enum';
 import { ExperienceCalculatorService } from 'src/app/services/experience-calculator.service';
 import { MainService } from 'src/app/services/main.service';
@@ -6,7 +9,13 @@ import { MainService } from 'src/app/services/main.service';
 @Component({
     selector: 'app-bio',
     templateUrl: './bio.component.html',
-    styleUrls: ['./bio.component.scss']
+    styleUrls: ['./bio.component.scss'],
+    standalone: true,
+    imports: [
+        CommonModule,
+        MostrarAmbAnimacioDirective,
+        TargetBlankDirective,
+    ]
 })
 export class BioComponent {
     Skills = Skills;

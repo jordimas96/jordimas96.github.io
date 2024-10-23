@@ -5,7 +5,8 @@ import { Utils } from 'src/app/shared/utils';
 @Component({
     selector: 'app-imatge-scroll',
     templateUrl: './imatge-scroll.component.html',
-    styleUrls: ['./imatge-scroll.component.scss']
+    styleUrls: ['./imatge-scroll.component.scss'],
+    standalone: true
 })
 export class ImatgeScrollComponent {
 
@@ -19,5 +20,5 @@ export class ImatgeScrollComponent {
         this.transY = -((window.pageYOffset / (this.m.esPantallaMobil() ? 100 : 200)) * 13 - 6.5);
         this.transY = Utils.numberInRange(this.transY, -6.5, 6.5);
     }
-  
+
 }

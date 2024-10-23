@@ -1,10 +1,45 @@
 import { Component } from '@angular/core';
-import { PageComponent } from '../page.component';
+import { RouterLink } from '@angular/router';
+import { MostrarAmbAnimacioDirective } from 'src/app/directives/mostrar-amb-animacio.directive';
+import { AmazfitWatchfacesComponent } from 'src/app/pages/art-page/amazfit-watchfaces/amazfit-watchfaces.component';
+import { IconsComponent } from 'src/app/pages/art-page/icons/icons.component';
+import { NexxiaComponent } from 'src/app/pages/experience-page/1 nexxia/nexxia.component';
+import { IndraComponent } from 'src/app/pages/experience-page/2 indra/indra.component';
+import { MaticComponent } from 'src/app/pages/experience-page/3 matic/matic.component';
+import { In2artComponent } from 'src/app/pages/experience-page/4 in2art/in2art.component';
+import { OrangeComponent } from 'src/app/pages/experience-page/5 orange/orange.component';
+import { EvoraComponent } from 'src/app/pages/experience-page/6 evora/evora.component';
+import { AlveaComponent } from 'src/app/pages/experience-page/7 alvea/alvea.component';
+import { PageComponent } from 'src/app/pages/page.component';
+import { AndroidAppsComponent } from 'src/app/pages/projects-page/android-apps/android-apps.component';
+import { CustomRomsComponent } from 'src/app/pages/projects-page/custom-roms/custom-roms.component';
+import { GithubProjectsComponent } from 'src/app/pages/projects-page/github-projects/github-projects.component';
+import { MadJumpgateComponent } from 'src/app/pages/projects-page/mad-jumpgate/mad-jumpgate.component';
+import { TaskerComponent } from 'src/app/pages/projects-page/tasker/tasker.component';
 
 @Component({
     selector: 'app-section-page',
     templateUrl: './section-page.component.html',
-    styleUrls: ['./section-page.component.scss', '../page.scss']
+    styleUrls: ['./section-page.component.scss', '../page.scss'],
+    standalone: true,
+    imports: [
+        RouterLink,
+        MostrarAmbAnimacioDirective,
+        NexxiaComponent,
+        IndraComponent,
+        MaticComponent,
+        In2artComponent,
+        OrangeComponent,
+        EvoraComponent,
+        AlveaComponent,
+        AndroidAppsComponent,
+        MadJumpgateComponent,
+        GithubProjectsComponent,
+        CustomRomsComponent,
+        TaskerComponent,
+        IconsComponent,
+        AmazfitWatchfacesComponent,
+    ]
 })
 export class SectionPageComponent extends PageComponent {
 
