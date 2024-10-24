@@ -1,5 +1,6 @@
 import { CommonModule } from '@angular/common';
 import { Component, ElementRef } from '@angular/core';
+import { IconesContacteComponent } from 'src/app/components/icones-contacte/icones-contacte.component';
 import { MostrarAmbAnimacioDirective } from 'src/app/directives/mostrar-amb-animacio.directive';
 import { TargetBlankDirective } from 'src/app/directives/target-blank.directive';
 import { Skills } from 'src/app/enums/skills.enum';
@@ -15,6 +16,7 @@ import { MainService } from 'src/app/services/main.service';
         CommonModule,
         MostrarAmbAnimacioDirective,
         TargetBlankDirective,
+        IconesContacteComponent,
     ]
 })
 export class BioComponent {
@@ -32,12 +34,7 @@ export class BioComponent {
         public exp: ExperienceCalculatorService
     ) { }
 
-    async ngOnInit() {
-
-        // Debug //
-        if (this.m.debug) setTimeout(() => { $("img.es").attr("src", "assets/icons/flags/cat.svg") }, 0);
-
-    }
+    async ngOnInit() { }
 
 
     

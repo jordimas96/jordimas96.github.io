@@ -1,14 +1,14 @@
-<section id="bio" class="card section row" appMostrarAmbAnimacio>
-    <div class="col-5 col-sm-4 p-3 p-sm-4" appMostrarAmbAnimacio>
+<section id="bio" class="card section row">
+    <div class="col-5 col-sm-4 p-0 p-sm-4" appMostrarAmbAnimacio>
         <div class="foto">
             <!-- <app-imatge-scroll src="assets/Foto carnet 2020.jpg"></app-imatge-scroll> -->
             <img src="assets/Foto carnet 2020.jpg" alt="Foto">
         </div>
     </div>
 
-    <div class="col-7 col-sm-8 px-sm-4 text-end align-self-center">
+    <div class="col-7 col-sm-8 text-end align-self-center">
 
-        <div class="py-sm-4">
+        <div class="p-sm-4">
             <div class="bondia text-60 mb-3" appMostrarAmbAnimacio>{{getSalutacioSegonsHora()}}</div>
             <div class="emdicjordi text-end">
                 <span class="emdic text-70" appMostrarAmbAnimacio>
@@ -42,7 +42,7 @@
     }
     <!-- Template bio -->
     <ng-template #contBio>
-        <div class="text-justify mb-4">
+        <div class="text-justify mb-4 px-sm-4">
             @if (m.ca) {
                 Sóc un apassionat programador especialitzat en frontend i UI/UX, amb
                 <span class="tempsExp tooltipExp">{{ getAnysExp() || "diversos" }} anys d'experiència<div>{{exp.getTextExp(Skills._TOTAL)}}</div></span>
@@ -72,30 +72,15 @@
             }
         </div>
 
-        <div class="d-flex flex-wrap justify-content-around align-items-end column-gap-3 row-gap-4">
-            <section class="idiomes">
-                <h3 class="mb-3">
-                    @if (m.ca) { Idiomes }
-                    @if (m.es) { Idiomas }
-                    @if (m.en) { Languages }
-                </h3>
-                <div class="banderes" [class.es]="m.es">
-                    <img src="assets/icons/flags/cat.svg" alt="Catalan" title="Native" class="ca">
-                    <img src="assets/icons/flags/es.svg" alt="Spanish" title="Native" class="es">
-                    <a href="https://learnenglish.britishcouncil.org/english-levels/understand-your-english-level/b2-upper-intermediate" class="no-style d-flex en">
-                        <img src="assets/icons/flags/uksa.svg" alt="English" title="B2+">
-                    </a>
-                </div>
-            </section>
-
-            @if (m.esPantallaMobil()) { <div class="w-100"></div> }
-
-            <a [href]="getRutaCV()" class="boto botoCV" appMostrarAmbAnimacio>
+        <div>
+            <a [href]="getRutaCV()" class="boto botoCV mb-4" appMostrarAmbAnimacio>
                 @if (m.ca) { Obrir CV }
                 @if (m.es) { Abrir CV }
                 @if (m.en) { Open Resume }
                 <img src="assets/icons/contact/cv.png" alt="Curriculum Vitae" class="logo inv-dark-2">
             </a>
+
+            <app-icones-contacte />
         </div>
     </ng-template>
 </section>

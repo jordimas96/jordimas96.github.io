@@ -58,23 +58,6 @@
     display: inline-block;
 }
 
-.banderes {
-    display: flex;
-    justify-content: center;
-    gap: 1rem;
-
-    &.es {
-        > .ca { order: 2 }
-        > .es { order: 1 }
-        > .en { order: 3 }
-    }
-
-    img {
-        height: 2.5rem;
-        border-radius: 0.2rem;
-    }
-}
-
 .botoCV {
     padding: 0.9rem 1rem 0.9rem 1.1rem;
 }

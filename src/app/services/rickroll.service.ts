@@ -35,7 +35,7 @@ export class RickrollService {
             let text = [
                 `Estàs a ${this.clicksLeft} passos del paradís`,
                 `Estás a ${this.clicksLeft} pasos del paraíso`,
-                `You are now ${this.clicksLeft} steps away from paradise`
+                `You are now ${this.clicksLeft} steps away from heaven`
             ];
 
             this.toast.open(text[this.m.idiomaIndex]);

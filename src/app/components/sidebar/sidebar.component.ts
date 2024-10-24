@@ -3,6 +3,7 @@ import { NavigationEnd, RouterLink } from '@angular/router';
 import { TargetBlankDirective } from 'src/app/directives/target-blank.directive';
 import { BlockGoogleAnalyticsService } from 'src/app/services/blockGoogleAnalytics.service';
 import { MainService } from 'src/app/services/main.service';
+import { IconesContacteComponent } from '../icones-contacte/icones-contacte.component';
 import { DarkModeComponent } from './dark-mode/dark-mode.component';
 import { SelectorIdiomaComponent } from './selector-idioma/selector-idioma.component';
 
@@ -15,6 +16,7 @@ import { SelectorIdiomaComponent } from './selector-idioma/selector-idioma.compo
     imports: [
         RouterLink,
         TargetBlankDirective,
+        IconesContacteComponent,
         DarkModeComponent,
         SelectorIdiomaComponent,
     ]
