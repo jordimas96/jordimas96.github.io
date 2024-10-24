@@ -9,15 +9,19 @@ export class RickrollService {
 
     readonly TOTAL_CLICKS = 7;
 
+    private clicksLeft = this.TOTAL_CLICKS;
+    private lastClickTime: number = 0;
+    private cooldown = false;
+
     constructor(
         public m: MainService,
         private toast: ToastService,
     ) { }
 
 
-    private clicksLeft = this.TOTAL_CLICKS;
-    private lastClickTime: number = 0;
     public click() {
+        if (this.cooldown) return;
+
         const currentTime = Date.now();
         const elapsedTime = currentTime - this.lastClickTime;
         this.lastClickTime = currentTime;
@@ -40,7 +44,10 @@ export class RickrollService {
             window.open("https://jordimas96.github.io/r/rickroll", "_self");
 
             this.clicksLeft = this.TOTAL_CLICKS;
-            this.lastClickTime = 0;
+            this.cooldown = true;
+            setTimeout(() => {
+                this.cooldown = false;
+            }, 2000);
         }
     }
 }
