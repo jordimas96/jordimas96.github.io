@@ -12,6 +12,7 @@ export enum Skills {
     ANGULARMATERIAL = "Angular Material",
     MATERIALIZE = "Materialize",
     PRIMENG = "PrimeNG",
+    JASMINE = "Jasmine",
     ANDROID = "Android",
     KOTLIN = "Kotlin",
     XML = "XML",
