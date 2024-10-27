@@ -1,10 +1,9 @@
 @import "src/styles.scss";
 
-
-
 .llenguatges {
     .titol-llenguatges {
         font-size: 1.75rem;
+        @include mobil { font-size: 1.4rem; }
     }
 
     .botonsCanviarVista {
@@ -25,6 +24,7 @@
 
     .tipus-llenguatge {
         padding-top: 3rem;
+
         &.showTime:first-child {
             padding-top: 1.5rem;
         }
@@ -34,8 +34,13 @@
             margin-bottom: 0.5rem;
             font-size: 1.4rem;
         }
+
         .skills {
             justify-content: center;
+
+            @include gran {
+                padding: 0 0.25rem;
+            }
             
             &.showTime {
                 display: flex;
@@ -61,33 +66,6 @@
             i {
                 transform: translateY(0.5rem);
             }
-        }
-    }
-}
-
-
-
-
-
-// Pantalla Mòbil //
-@media only screen and (max-width: 575px) {
-
-    .llenguatges {
-        .titol-llenguatges {
-            font-size: 1.4rem;
-        }
-    }
-
-}
-// Pantalla Tablet //
-@media only screen and (min-width: 576px) { }
-// Pantalla PC //
-@media only screen and (min-width: 768px) { }
-// Pantalla Molt Gran //
-@media only screen and (min-width: 992px) {
-    .llenguatges {
-        .skills {
-            padding: 0 0.25rem;
         }
     }
 }

@@ -1,7 +1,5 @@
 @import "src/styles.scss";
 
-
-
 .section {
     a.link-img {
         img.title-icon {
@@ -18,6 +16,10 @@
         justify-content: space-around;
         align-items: center;
         gap: 1rem;
+
+        @include mobil {
+            flex-direction: column;
+        }
         
         .boto {
             .logo {
@@ -31,21 +33,3 @@
         }
     }
 }
-
-
-
-
-// Pantalla Mòbil //
-@media only screen and (max-width: 575px) {
-    .section .botons {
-        flex-direction: column;
-    }
-}
-// Pantalla Tablet //
-@media only screen and (min-width: 576px) {
-    
-}
-// Pantalla PC //
-@media only screen and (min-width: 768px) { }
-// Pantalla Molt Gran //
-@media only screen and (min-width: 992px) { }

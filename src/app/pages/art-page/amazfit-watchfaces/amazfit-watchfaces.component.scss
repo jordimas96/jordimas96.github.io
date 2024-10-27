@@ -1,7 +1,5 @@
 @import "src/styles.scss";
 
-
-
 .section {
     a.link-img {
         img.title-icon {
@@ -20,6 +18,10 @@
         align-items: center;
         gap: 1rem;
 
+        @include tablet {
+            flex-direction: column;
+        }
+
         .div-gif-i-text {
     
             img {
@@ -33,21 +35,3 @@
         }
     }
 }
-
-
-
-
-
-// Pantalla Mòbil //
-@media only screen and (max-width: 575px) {
-    .section .boto-i-gif {
-        flex-direction: column;
-    }
-}
-// Pantalla Tablet //
-@media only screen and (min-width: 576px) {
-}
-// Pantalla PC //
-@media only screen and (min-width: 768px) { }
-// Pantalla Molt Gran //
-@media only screen and (min-width: 992px) { }

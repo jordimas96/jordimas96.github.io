@@ -1,3 +1,5 @@
+@import "src/styles.scss";
+
 .contact-icons {
     display: flex;
     flex-wrap: wrap;
@@ -39,6 +41,10 @@
             transform: translateY(-50%) scale(0.5);
 
             transition: transform 0.3s, opacity 0.3s, margin 0.3s;
+
+            @include mobil {
+                display: none;
+            }
         }
     }
 }
@@ -56,13 +62,4 @@
     &.playstore { background-color: hsl(207, 100%, 92%); }
     &.email {     background-color: hsl(0, 0%, 90%); }
     &.youtube {   background-color: hsl(0, 100%, 92%); }
-}
-
-// Pantalla Mòbil //
-@media only screen and (max-width: 575px) {
-    .contact-icons {
-        .text {
-            display: none;
-        }
-    }
 }

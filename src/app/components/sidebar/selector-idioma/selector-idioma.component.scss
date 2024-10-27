@@ -1,3 +1,5 @@
+@import "src/styles.scss";
+
 .select-idioma {
     background-color: var(--fons-40);
     color: var(--text);
@@ -10,34 +12,17 @@
     outline: none;
     cursor: pointer;
 
-    option {
-        background-color: var(--fons);
-    }
-}
-
-
-// Pantalla Mòbil //
-@media only screen and (max-width: 575px) { }
-// Pantalla Tablet //
-@media only screen and (min-width: 576px) {
-    .select-idioma {
+    @include tablet {
         font-size: 1.2rem;
     }
-}
-// Pantalla PC //
-@media only screen and (min-width: 768px) { }
-// Pantalla Molt Gran //
-@media only screen and (min-width: 992px) {
-    .select-idioma {
+    @include gran {
         padding: 0.25rem 2rem 0.25rem 1.5rem;
     }
-}
-
-// PC //
-@media (pointer: fine) { }
-// Mòbil //
-@media (pointer: coarse) {
-    .select-idioma {
+    @include tactil {
         border-radius: 0.6rem !important;
+    }
+
+    option {
+        background-color: var(--fons);
     }
 }

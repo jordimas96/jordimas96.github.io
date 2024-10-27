@@ -1,5 +1,6 @@
 @import "./themes.scss";
 @import "./variables.scss";
+@import "./mediaqueries.scss";
 @import "./app/directives/mostrar-amb-animacio.styles.scss";
 @import "./extra-styles/shapes.scss";
 @import "./extra-styles/spacing.scss";
@@ -65,12 +66,16 @@ html {
         display: flex;
         flex-wrap: wrap;
         gap: 0.5rem;
+
+        @include mobil { justify-content: center; }
     }
 }
 .section {
 
     .section-title {
         font-size: 1.75rem;
+        
+        @include mobil { font-size: 1.4rem; }
     }
     .text {
         color: var(--text-80);
@@ -89,6 +94,11 @@ html {
     
     padding: 1rem;
     border-radius: 2rem;
+
+    @include tablet {
+        padding: 1.3rem 2rem 2rem;
+        border-radius: 2.5rem;
+    }
 }
 
 // Estils generals per tots els ns (<button> i <a>) //
@@ -382,47 +392,3 @@ img, .noselect {
     box-shadow: inset 0 0 0 1000px #fff2 !important;
 }
 
-
-
-// #region MEDIA QUERIES //
-///////////////////
-// MEDIA QUERIES //
-///////////////////
-// Pantalla Mòbil //
-@media only screen and (max-width: 575px) {
-    .section {
-        .section-title {
-            font-size: 1.4rem;
-        }
-    }
-    .skills {
-        justify-content: center;
-    }
-}
-// Pantalla Tablet //
-@media only screen and (min-width: 576px) {
-    .card {
-        padding: 1.3rem 2rem 2rem;
-        border-radius: 2.5rem;
-    }
-}
-// Pantalla PC //
-@media only screen and (min-width: 768px) { }
-// Pantalla Molt Gran //
-@media only screen and (min-width: 992px) { }
-
-// PC //
-@media (pointer: fine) { }
-// Mòbil //
-@media (pointer: coarse) { }
-
-
-// Media queries adequades //
-// Pantalla Mòbil // @media only screen and (max-width: 575px) { }
-// Pantalla Tablet // @media only screen and (min-width: 576px) { }
-// Pantalla PC // @media only screen and (min-width: 768px) { }
-// Pantalla Molt Gran // @media only screen and (min-width: 992px) { }
-// PC // @media (pointer: fine) { }
-// Mòbil // @media (pointer: coarse) { }
-
-// #endregion MEDIA QUERIES //

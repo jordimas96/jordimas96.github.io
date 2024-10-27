@@ -1,3 +1,5 @@
+@import "src/styles.scss";
+
 .botoDarkMode, .botoAutoMode {
     position: relative;
     background-color: var(--accent-color);
@@ -10,6 +12,14 @@
     cursor: pointer;
     transition: background-color 0.3s linear, width 0.3s, height 0.3s, font-size 0.3s, transform 0.1s;
     
+    @include mobil {
+        height: 2.5rem;
+        font-size: 1.15rem;
+    }
+    @include tablet {
+        height: 3rem;
+        font-size: 1.3rem;
+    }
 
     &.transicio-1 {
         transition: background-color 0.3s linear, width 0.3s, height 0.3s, font-size 0.3s, box-shadow 400ms ease-in;
@@ -18,31 +28,11 @@
         transition: background-color 0.3s linear, width 0.3s, height 0.3s, font-size 0.3s, box-shadow 400ms ease-in;
     }
 }
-.botoDarkMode { }
-.botoAutoMode { }
-
-
-
-
-// Pantalla Mòbil //
-@media only screen and (max-width: 575px) {
-    .botoDarkMode, .botoAutoMode {
-        height: 2.5rem;
-        font-size: 1.15rem;
-    }
-    .botoDarkMode { width: 3.5rem; }
-    .botoAutoMode { width: 2.5rem; }
+.botoDarkMode {
+    @include mobil { width: 3.5rem; }
+    @include tablet { width: 4rem; }
 }
-// Pantalla Tablet //
-@media only screen and (min-width: 576px) {
-    .botoDarkMode, .botoAutoMode {
-        height: 3rem;
-        font-size: 1.3rem;
-    }
-    .botoDarkMode { width: 4rem; }
-    .botoAutoMode { width: 3rem; }
+.botoAutoMode {
+    @include mobil { width: 2.5rem; }
+    @include tablet { width: 3rem; }
 }
-// Pantalla PC //
-@media only screen and (min-width: 768px) { }
-// Pantalla Molt Gran //
-@media only screen and (min-width: 992px) { }

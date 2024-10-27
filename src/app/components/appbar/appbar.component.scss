@@ -23,6 +23,8 @@
     .botoSidebar {
         padding: 0.5rem;
         font-size: 2rem;
+        
+        @include tablet { padding: 0.5rem 1.5rem; }
     }
     app-navegacio-tab {
         margin: 0.5rem;
@@ -32,18 +34,3 @@
     }
 
 }
-
-// Pantalla Mòbil //
-@media only screen and (max-width: 575px) { }
-// Pantalla Tablet //
-@media only screen and (min-width: 576px) {
-    .appbar {
-        .botoSidebar {
-            padding: 0.5rem 1.5rem;
-        }
-    }
-}
-// Pantalla PC //
-@media only screen and (min-width: 768px) { }
-// Pantalla Molt Gran //
-@media only screen and (min-width: 992px) { }

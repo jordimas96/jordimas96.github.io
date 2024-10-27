@@ -1,6 +1,5 @@
 @import "src/styles.scss";
 
-
 // ::ng-deep app-appbar app-navegacio-tab .contenidor button {
 //     background-color: var(--text) !important;
 //     color: var(--fons) !important;
@@ -12,7 +11,6 @@
 ::ng-deep app-navegacio-tab nav button {
     box-shadow: 0px 30px 25px -30px rgba(255, 255, 255, 0.2705882353) inset, 0px -30px 25px -30px rgba(0, 0, 0, 0.2705882353) inset;
 }
-
 
 
 .botoBack {
@@ -45,6 +43,12 @@
         
         transition: transform 0.3s;
 
+        @include mobil {
+            padding: 0.5rem 1rem;
+            font-size: 1.3rem;
+            border-radius: 1rem;
+        }
+
         &:hover {
             // transform: scale(1.1);
             filter: brightness(1.5);
@@ -56,23 +60,3 @@
 
 ::ng-deep .dark .botoBack:hover { color: var(--color-l-5); }
 // ::ng-deep .light .botoBack:hover { color: var(--color-l-3); }
-
-
-
-
-// Pantalla Mòbil //
-@media only screen and (max-width: 575px) {
-    .sectionList {
-        button {
-            padding: 0.5rem 1rem;
-            font-size: 1.3rem;
-            border-radius: 1rem;
-        }
-    }
-}
-// Pantalla Tablet //
-@media only screen and (min-width: 576px) { }
-// Pantalla PC //
-@media only screen and (min-width: 768px) { }
-// Pantalla Molt Gran //
-@media only screen and (min-width: 992px) { }

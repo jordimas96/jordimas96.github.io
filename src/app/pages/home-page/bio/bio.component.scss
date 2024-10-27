@@ -1,7 +1,5 @@
 @import "src/styles.scss";
 
-
-
 // opacity: primary (87%), secondary (60%), tertiary (38%) //
 
 .foto:not(.treureHover) {
@@ -9,6 +7,10 @@
     border-radius: 2rem;
 
     transition: border-radius 0.3s;
+
+    @include tablet {
+        -webkit-box-reflect: below 0px linear-gradient(to bottom, rgb(0 0 0 / 0%) 50%, rgb(0 0 0 / 15%));
+    }
 
     &:hover {
         border-radius: 1rem !important;
@@ -30,6 +32,7 @@
 
 .bondia {
     font-size: 1.8rem;
+    @include mobil { font-size: 1.5rem; }
 }
 .emdicjordi {
     display: flex;
@@ -38,17 +41,25 @@
     align-items: baseline;
     column-gap: 0.5rem;
 
+    @include mobil {
+        flex-direction: column;
+        align-items: flex-end;
+    }
+
     .emdic {
-        font-size: 1.4rem;
         margin-bottom: -0.4rem;
+        font-size: 1.4rem;
+        @include mobil { font-size: 1.1rem; }
     }
     .jordi {
-        font-size: 1.7rem;
         color: var(--accent-color);
+        font-size: 1.7rem;
+        @include mobil { font-size: 1.25rem; }
     }
 }
 .programador {
     font-size: 1.2rem;
+    @include mobil { font-size: 0.9rem; }
 }
 
 .tempsExp {
@@ -100,44 +111,3 @@
     }
     &:hover > div { visibility: visible; }
 }
-
-
-
-
-
-
-
-// Pantalla Mòbil //
-@media only screen and (max-width: 575px) {
-
-    .bondia {
-        font-size: 1.5rem;
-    }
-    .emdicjordi {
-        flex-direction: column;
-        align-items: flex-end;
-
-        .emdic {
-            font-size: 1.1rem;
-        }
-        .jordi {
-            font-size: 1.25rem;
-        }
-    }
-    .programador {
-        font-size: 0.9rem;
-    }
-
-}
-// Pantalla Tablet //
-@media only screen and (min-width: 576px) {
-
-    .foto {
-        -webkit-box-reflect: below 0px linear-gradient(to bottom, rgb(0 0 0 / 0%) 50%, rgb(0 0 0 / 15%));
-    }
-
-}
-// Pantalla PC //
-@media only screen and (min-width: 768px) { }
-// Pantalla Molt Gran //
-@media only screen and (min-width: 992px) { }

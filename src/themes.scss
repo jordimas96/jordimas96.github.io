@@ -395,9 +395,3 @@ html, html .section, html [class*="tema-"], html [class*="paleta-"] {
 .tema-nexxia { @extend .paleta-46; }
 .dark  :host .tema-nexxia { background-color: hsla(46, 100%, 21%, 0.5); --link: var(--color-l-6); }
 .light :host .tema-nexxia { background-color: hsla(46, 100%, 72%, 0.5); --link: var(--color-l-3); }
-
-
-// Pantalla Mòbil // @media only screen and (max-width: 575px) { }
-// Pantalla Tablet // @media only screen and (min-width: 576px) { }
-// Pantalla PC // @media only screen and (min-width: 768px) { }
-// Pantalla Molt Gran // @media only screen and (min-width: 992px) { }

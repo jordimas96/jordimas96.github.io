@@ -11,6 +11,12 @@ nav {
     padding: 0.2rem;
     z-index: 0;
     transition: padding 0.3s;
+
+    @include pc { border-radius: 1.234rem; }
+    @include gran {
+        width: fit-content;
+        border-radius: 1.375rem;
+    }
     
     button {
         // @extend .boing;
@@ -24,12 +30,23 @@ nav {
 
         // padding: 0.25rem 1rem;
         padding: 0.125rem 0.5rem;
-        font-size: 1.2rem;
         border-radius: 10rem; //0.75rem
+        font-size: 1.2rem;
 
         z-index: 2;
 
         transition: font-size 0.3s, padding 0.3s, color 0.3s, background-color 0.1s, transform 0.1s;
+
+        
+        @include tablet { font-size: 1.2rem; }
+        @include pc {
+            font-size: 1.3rem;
+            padding: 0.125rem 1.5rem !important
+        }
+        @include gran {
+            font-size: 1.5rem;
+            padding: 0.125rem 3rem !important;
+        }
 
         &.selected {
             color: var(--fons);
@@ -48,44 +65,4 @@ nav {
     border-radius: 10rem; //0.75rem
     z-index: 1;
     // box-shadow: rgba(255, 255, 255, 0.27) 0px 30px 25px -30px inset, rgba(0, 0, 0, 0.27) 0px -30px 25px -30px inset;
-}
-
-
-
-
-
-
-
-
-// Pantalla Mòbil //
-@media only screen and (max-width: 575px) { }
-// Pantalla Tablet //
-@media only screen and (min-width: 576px) {
-    nav {
-        button {
-            font-size: 1.2rem;
-        }
-    }
-}
-// Pantalla PC //
-@media only screen and (min-width: 768px) {
-    nav {
-        border-radius: 1.234rem;
-        button {
-            font-size: 1.3rem;
-            padding: 0.125rem 1.5rem !important;
-        }
-    }
-}
-
-// Pantalla Molt Gran //
-@media only screen and (min-width: 992px) {
-    nav {
-        width: fit-content;
-        border-radius: 1.375rem;
-        button {
-            font-size: 1.5rem;
-            padding: 0.125rem 3rem !important;
-        }
-    }
 }

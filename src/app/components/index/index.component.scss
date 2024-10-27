@@ -1,8 +1,5 @@
 @import "src/styles.scss";
 
-
-
-
 .index {
     transition: transform 0.3s;
 
@@ -50,6 +47,12 @@
         font-size: 1.5rem;
         padding: 1rem 2rem;
         border-radius: 1.5rem;
+
+        @include mobil {
+            font-size: 1.2rem;
+            padding: 0.5rem 1rem;
+            border-radius: 0.8rem;
+        }
     }
 }
 
@@ -85,42 +88,12 @@
             padding: 0.5rem 1rem !important;
             border-radius: 1.5rem !important;
             @extend .shadow-2;
-        }
-    }
-    .index.pc {
-        button {
 
-        }
-    }
-}
-
-
-
-// Pantalla Mòbil //
-@media only screen and (max-width: 575px) {
-    .index.mobil {
-        button {
-            font-size: 1.2rem;
-            padding: 0.5rem 1rem;
-            border-radius: 0.8rem;
-        }
-    }
-    ::ng-deep body.scrolled {
-
-        .index.mobil {
-            button {
+            @include mobil {
                 font-size: 1rem !important;
                 padding: 0.5rem 0.8rem !important;
                 border-radius: 1.3rem !important;
             }
         }
     }
-
 }
-// Pantalla Tablet //
-@media only screen and (min-width: 576px) {
-}
-// Pantalla PC //
-@media only screen and (min-width: 768px) { }
-// Pantalla Molt Gran //
-@media only screen and (min-width: 992px) { }

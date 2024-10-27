@@ -60,8 +60,6 @@
 .ms-n5 { margin-left: -3rem !important; }
 .ms-n6 { margin-left: -4rem !important; }
 
-
-
 // * Necessari perquè de moment no faig servir l'última versió (a saber per què, hi havia algo que fallava...) //
 .flex-1  { flex: 1; }
 .flex-2  { flex: 2; }
@@ -75,3 +73,46 @@
 .flex-10 { flex: 10; }
 .flex-11 { flex: 11; }
 .flex-12 { flex: 12; }
+
+
+//////////////////////////////
+
+// generació classes max-width / max-height / min-width / min-height (mw-75, mw-sm-100) //
+
+$percentatges100: ();
+
+@for $i from 0 through 100 {
+    $percentatges100: map-merge($percentatges100, ($i: "#{$i}%"));
+}
+
+@each $key, $value in $percentatges100 {
+  .mw-#{$key} { max-width: #{$value} !important; }
+  .mh-#{$key} { max-height: #{$value} !important; }
+  .minw-#{$key} { min-width: #{$value} !important; }
+  .minh-#{$key} { min-height: #{$value} !important; }
+
+  @media (min-width: 576px) {
+    .mw-sm-#{$key} { max-width: #{$value} !important; }
+    .mh-sm-#{$key} { max-height: #{$value} !important; }
+    .minw-sm-#{$key} { min-width: #{$value} !important; }
+    .minh-sm-#{$key} { min-height: #{$value} !important; }
+  }
+  @media (min-width: 768px) {
+    .mw-md-#{$key} { max-width: #{$value} !important; }
+    .mh-md-#{$key} { max-height: #{$value} !important; }
+    .minw-md-#{$key} { min-width: #{$value} !important; }
+    .minh-md-#{$key} { min-height: #{$value} !important; }
+  }
+  @media (min-width: 992px) {
+    .mw-lg-#{$key} { max-width: #{$value} !important; }
+    .mh-lg-#{$key} { max-height: #{$value} !important; }
+    .minw-lg-#{$key} { min-width: #{$value} !important; }
+    .minh-lg-#{$key} { min-height: #{$value} !important; }
+  }
+  @media (min-width: 1200px) {
+    .mw-xl-#{$key} { max-width: #{$value} !important; }
+    .mh-xl-#{$key} { max-height: #{$value} !important; }
+    .minw-xl-#{$key} { min-width: #{$value} !important; }
+    .minh-xl-#{$key} { min-height: #{$value} !important; }
+  }
+}

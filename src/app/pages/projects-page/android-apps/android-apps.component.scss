@@ -1,7 +1,5 @@
 @import "src/styles.scss";
 
-
-
 .section {
     a.link-img {
         img.title-icon {
@@ -18,6 +16,11 @@
         text-align: center;
         align-items: center;
         row-gap: 2rem;
+
+        @include mobil {
+            flex-direction: column;
+            row-gap: 1rem;
+        }
 
         ::ng-deep qrcode {
             .qrcode {
@@ -50,19 +53,3 @@
 .light :host .section-title .title-icon {
     filter: brightness(0.7) saturate(2);
 }
-
-
-
-// Pantalla Mòbil //
-@media only screen and (max-width: 575px) {
-    .section .boto-i-qr {
-        flex-direction: column;
-        row-gap: 1rem;
-    }
-}
-// Pantalla Tablet //
-@media only screen and (min-width: 576px) { }
-// Pantalla PC //
-@media only screen and (min-width: 768px) { }
-// Pantalla Molt Gran //
-@media only screen and (min-width: 992px) { }
