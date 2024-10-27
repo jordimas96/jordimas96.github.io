@@ -6,7 +6,7 @@ import { Utils } from 'src/app/shared/utils';
 @Component({
     selector: 'app-selector-idioma',
     templateUrl: './selector-idioma.component.html',
-    styleUrls: ['./selector-idioma.component.scss'],
+    styleUrl: './selector-idioma.component.scss',
     standalone: true,
     imports: [
         FormsModule,

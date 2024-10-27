@@ -9,7 +9,7 @@ import { MainService } from 'src/app/services/main.service';
 @Component({
     selector: 'app-alvea',
     templateUrl: './alvea.component.html',
-    styleUrls: ['./alvea.component.scss', '../experience-page.scss'],
+    styleUrl: './alvea.component.scss',
     standalone: true,
     imports: [
         MostrarAmbAnimacioDirective,

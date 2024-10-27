@@ -20,7 +20,7 @@ import { TaskerComponent } from 'src/app/pages/projects-page/tasker/tasker.compo
 @Component({
     selector: 'app-section-page',
     templateUrl: './section-page.component.html',
-    styleUrls: ['./section-page.component.scss', '../page.scss'],
+    styleUrl: './section-page.component.scss',
     standalone: true,
     imports: [
         RouterLink,

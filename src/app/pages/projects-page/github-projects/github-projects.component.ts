@@ -12,7 +12,7 @@ import { Utils } from 'src/app/shared/utils';
 @Component({
     selector: 'app-github-projects',
     templateUrl: './github-projects.component.html',
-    styleUrls: ['./github-projects.component.scss', '../projects-page.scss'],
+    styleUrl: './github-projects.component.scss',
     standalone: true,
     imports: [
         NgxMasonryModule,

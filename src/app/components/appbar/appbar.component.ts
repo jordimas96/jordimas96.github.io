@@ -11,7 +11,7 @@ import { NavegacioTabComponent } from './navegacio-tab/navegacio-tab.component';
 @Component({
     selector: 'app-appbar',
     templateUrl: './appbar.component.html',
-    styleUrls: ['./appbar.component.scss'],
+    styleUrl: './appbar.component.scss',
     standalone: true,
     imports: [
         CommonModule,

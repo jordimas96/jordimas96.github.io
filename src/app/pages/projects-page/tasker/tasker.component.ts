@@ -8,7 +8,7 @@ import { MainService } from 'src/app/services/main.service';
 @Component({
     selector: 'app-tasker',
     templateUrl: './tasker.component.html',
-    styleUrls: ['./tasker.component.scss', '../projects-page.scss'],
+    styleUrl: './tasker.component.scss',
     standalone: true,
     imports: [
         MostrarAmbAnimacioDirective,

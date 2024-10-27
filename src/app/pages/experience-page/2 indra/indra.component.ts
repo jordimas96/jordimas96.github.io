@@ -9,7 +9,7 @@ import { ThemeService } from 'src/app/services/theme.service';
 @Component({
     selector: 'app-indra',
     templateUrl: './indra.component.html',
-    styleUrls: ['./indra.component.scss', '../experience-page.scss'],
+    styleUrl: './indra.component.scss',
     standalone: true,
     imports: [
         MostrarAmbAnimacioDirective,

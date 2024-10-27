@@ -7,7 +7,7 @@ import { MainService } from 'src/app/services/main.service';
 @Component({
     selector: 'app-custom-roms',
     templateUrl: './custom-roms.component.html',
-    styleUrls: ['./custom-roms.component.scss', '../projects-page.scss'],
+    styleUrl: './custom-roms.component.scss',
     standalone: true,
     imports: [
         MostrarAmbAnimacioDirective,

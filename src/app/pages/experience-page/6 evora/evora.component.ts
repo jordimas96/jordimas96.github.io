@@ -8,7 +8,7 @@ import { MainService } from 'src/app/services/main.service';
 @Component({
     selector: 'app-evora',
     templateUrl: './evora.component.html',
-    styleUrls: ['./evora.component.scss', '../experience-page.scss'],
+    styleUrl: './evora.component.scss',
     standalone: true,
     imports: [
         MostrarAmbAnimacioDirective,

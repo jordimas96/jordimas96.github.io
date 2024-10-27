@@ -8,7 +8,7 @@ import { IconsComponent } from './icons/icons.component';
 @Component({
     selector: 'app-art-page',
     templateUrl: './art-page.component.html',
-    styleUrls: ['./art-page.component.scss', '../page.scss'],
+    styleUrl: './art-page.component.scss',
     standalone: true,
     imports: [
         RouterLink,

@@ -1,4 +1,5 @@
 @import "src/styles.scss";
+@import "../page.scss";
 
 // ::ng-deep app-appbar app-navegacio-tab .contenidor button {
 //     background-color: var(--text) !important;
@@ -15,7 +16,7 @@
 
 .botoBack {
     font-size: 1.5rem;
-    color: var(--color-7);
+    color: var(--color-8);
 
     &:hover {
         i {

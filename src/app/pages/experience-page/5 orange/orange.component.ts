@@ -8,7 +8,7 @@ import { MainService } from 'src/app/services/main.service';
 @Component({
     selector: 'app-orange',
     templateUrl: './orange.component.html',
-    styleUrls: ['./orange.component.scss', '../experience-page.scss'],
+    styleUrl: './orange.component.scss',
     standalone: true,
     imports: [
         MostrarAmbAnimacioDirective,

@@ -171,10 +171,6 @@ html {
 .title-icon {
     // display: block;
 }
-a.link-img {
-    display: inline-block;
-    vertical-align: bottom;
-}
 a:not(.link-img, .no-style, .boto) {
     text-decoration: none;
     &:link, &:visited {

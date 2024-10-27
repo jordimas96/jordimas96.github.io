@@ -8,7 +8,7 @@ import { Utils } from 'src/app/shared/utils';
 @Component({
     selector: 'app-skill',
     templateUrl: './skill.component.html',
-    styleUrls: ['./skill.component.scss'],
+    styleUrl: './skill.component.scss',
     standalone: true,
     imports: [
         MostrarAmbAnimacioDirective,

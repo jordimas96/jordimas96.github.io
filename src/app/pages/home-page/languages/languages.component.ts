@@ -10,7 +10,7 @@ import { Utils } from 'src/app/shared/utils';
 @Component({
     selector: 'app-languages',
     templateUrl: './languages.component.html',
-    styleUrls: ['./languages.component.scss'],
+    styleUrl: './languages.component.scss',
     standalone: true,
     imports: [
         CommonModule,

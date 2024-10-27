@@ -10,7 +10,7 @@ import { MainService } from 'src/app/services/main.service';
 @Component({
     selector: 'app-bio',
     templateUrl: './bio.component.html',
-    styleUrls: ['./bio.component.scss'],
+    styleUrl: './bio.component.scss',
     standalone: true,
     imports: [
         CommonModule,

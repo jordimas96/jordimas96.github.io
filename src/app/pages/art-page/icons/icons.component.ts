@@ -6,7 +6,7 @@ import { MainService } from 'src/app/services/main.service';
 @Component({
     selector: 'app-icons',
     templateUrl: './icons.component.html',
-    styleUrls: ['./icons.component.scss', '../art-page.scss'],
+    styleUrl: './icons.component.scss',
     standalone: true,
     imports: [
         MostrarAmbAnimacioDirective,

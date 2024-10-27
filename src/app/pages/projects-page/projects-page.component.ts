@@ -11,7 +11,7 @@ import { TaskerComponent } from './tasker/tasker.component';
 @Component({
     selector: 'app-projects-page',
     templateUrl: './projects-page.component.html',
-    styleUrls: ['./projects-page.component.scss', '../page.scss'],
+    styleUrl: './projects-page.component.scss',
     standalone: true,
     imports: [
         RouterLink,

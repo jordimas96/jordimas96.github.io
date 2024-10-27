@@ -4,7 +4,7 @@ import { MAT_SNACK_BAR_DATA, MatSnackBarRef } from '@angular/material/snack-bar'
 @Component({
     selector: 'app-toast-template',
     templateUrl: './toast-template.component.html',
-    styleUrls: ['./toast-template.component.scss'],
+    styleUrl: './toast-template.component.scss',
     standalone: true,
     imports: []
 })

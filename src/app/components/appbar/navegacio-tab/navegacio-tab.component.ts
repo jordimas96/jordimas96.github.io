@@ -7,7 +7,7 @@ import { Utils } from 'src/app/shared/utils';
 @Component({
     selector: 'app-navegacio-tab',
     templateUrl: './navegacio-tab.component.html',
-    styleUrls: ['./navegacio-tab.component.scss'],
+    styleUrl: './navegacio-tab.component.scss',
     standalone: true,
     imports: [
         RouterLinkActive,

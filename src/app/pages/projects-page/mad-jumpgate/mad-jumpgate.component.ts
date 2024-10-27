@@ -10,7 +10,7 @@ import { MadJumpgateJocComponent } from './mad-jumpgate-joc/mad-jumpgate-joc.com
 @Component({
     selector: 'app-mad-jumpgate',
     templateUrl: './mad-jumpgate.component.html',
-    styleUrls: ['./mad-jumpgate.component.scss', '../projects-page.scss'],
+    styleUrl: './mad-jumpgate.component.scss',
     standalone: true,
     imports: [
         MostrarAmbAnimacioDirective,

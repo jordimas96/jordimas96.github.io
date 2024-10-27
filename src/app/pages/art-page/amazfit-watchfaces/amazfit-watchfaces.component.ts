@@ -6,7 +6,7 @@ import { MainService } from 'src/app/services/main.service';
 @Component({
     selector: 'app-amazfit-watchfaces',
     templateUrl: './amazfit-watchfaces.component.html',
-    styleUrls: ['./amazfit-watchfaces.component.scss', '../art-page.scss'],
+    styleUrl: './amazfit-watchfaces.component.scss',
     standalone: true,
     imports: [
         MostrarAmbAnimacioDirective,

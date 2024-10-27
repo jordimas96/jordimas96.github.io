@@ -2,9 +2,6 @@
 
 section {
     .section-title {
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
 
         .link-boto-titol {
             display: flex;
@@ -31,7 +28,7 @@ section {
 
             // Efecte hover botó gran a web en PC //
             &:hover {
-                background-color: var(--color-2) !important;
+                background-color: var(--color-3) !important;
                 .fletxa {
                     transform: translate(0.2rem, -0.35rem);
                     color: var(--text) !important;

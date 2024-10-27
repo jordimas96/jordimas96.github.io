@@ -10,7 +10,7 @@ import { DetallsAndroidAppsComponent } from './detalls-android-apps/detalls-andr
 @Component({
     selector: 'app-android-apps',
     templateUrl: './android-apps.component.html',
-    styleUrls: ['./android-apps.component.scss', '../projects-page.scss'],
+    styleUrl: './android-apps.component.scss',
     standalone: true,
     imports: [
         MostrarAmbAnimacioDirective,

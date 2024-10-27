@@ -11,7 +11,7 @@ import { SelectorIdiomaComponent } from './selector-idioma/selector-idioma.compo
 @Component({
     selector: 'app-sidebar',
     templateUrl: './sidebar.component.html',
-    styleUrls: ['./sidebar.component.scss'],
+    styleUrl: './sidebar.component.scss',
     standalone: true,
     imports: [
         RouterLink,

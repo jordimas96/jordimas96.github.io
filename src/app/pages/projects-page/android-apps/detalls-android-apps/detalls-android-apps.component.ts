@@ -9,7 +9,7 @@ import { MainService } from 'src/app/services/main.service';
 @Component({
     selector: 'app-detalls-android-apps',
     templateUrl: './detalls-android-apps.component.html',
-    styleUrls: ['./detalls-android-apps.component.scss'],
+    styleUrl: './detalls-android-apps.component.scss',
     standalone: true,
     imports: [
         MostrarAmbAnimacioDirective,

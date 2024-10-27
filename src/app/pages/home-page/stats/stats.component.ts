@@ -7,7 +7,7 @@ import { MainService } from 'src/app/services/main.service';
 @Component({
     selector: 'app-stats',
     templateUrl: './stats.component.html',
-    styleUrls: ['./stats.component.scss'],
+    styleUrl: './stats.component.scss',
     standalone: true,
     imports: [
         MostrarAmbAnimacioDirective,

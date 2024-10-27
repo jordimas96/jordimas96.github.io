@@ -8,7 +8,7 @@ import { MainService } from 'src/app/services/main.service';
 @Component({
     selector: 'app-in2art',
     templateUrl: './in2art.component.html',
-    styleUrls: ['./in2art.component.scss', '../experience-page.scss'],
+    styleUrl: './in2art.component.scss',
     standalone: true,
     imports: [
         MostrarAmbAnimacioDirective,

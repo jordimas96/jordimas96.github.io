@@ -14,12 +14,13 @@
 
     .boto-i-gif {
         display: flex;
+        flex-direction: column;
         justify-content: space-around;
         align-items: center;
         gap: 1rem;
 
         @include tablet {
-            flex-direction: column;
+            flex-direction: row;
         }
 
         .div-gif-i-text {

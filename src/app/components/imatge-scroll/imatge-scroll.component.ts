@@ -5,7 +5,7 @@ import { Utils } from 'src/app/shared/utils';
 @Component({
     selector: 'app-imatge-scroll',
     templateUrl: './imatge-scroll.component.html',
-    styleUrls: ['./imatge-scroll.component.scss'],
+    styleUrl: './imatge-scroll.component.scss',
     standalone: true
 })
 export class ImatgeScrollComponent {

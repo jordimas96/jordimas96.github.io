@@ -8,7 +8,7 @@ import { MainService } from 'src/app/services/main.service';
 @Component({
     selector: 'app-nexxia',
     templateUrl: './nexxia.component.html',
-    styleUrls: ['./nexxia.component.scss', '../experience-page.scss'],
+    styleUrl: './nexxia.component.scss',
     standalone: true,
     imports: [
         MostrarAmbAnimacioDirective,

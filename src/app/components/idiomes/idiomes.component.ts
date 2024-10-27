@@ -5,7 +5,7 @@ import { MainService } from 'src/app/services/main.service';
 @Component({
     selector: 'app-idiomes',
     templateUrl: './idiomes.component.html',
-    styleUrls: ['./idiomes.component.scss'],
+    styleUrl: './idiomes.component.scss',
     standalone: true,
     imports: [
         MostrarAmbAnimacioDirective,

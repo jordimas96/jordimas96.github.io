@@ -6,7 +6,7 @@ import { Utils } from 'src/app/shared/utils';
 @Component({
     selector: 'app-mad-jumpgate-joc',
     templateUrl: './mad-jumpgate-joc.component.html',
-    styleUrls: ['./mad-jumpgate-joc.component.scss'],
+    styleUrl: './mad-jumpgate-joc.component.scss',
     standalone: true,
     imports: [
         MostrarAmbAnimacioDirective,
