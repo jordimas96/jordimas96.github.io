@@ -1,3 +1,5 @@
+@import "./mediaqueries.scss";
+
 // Variables //
 
 :root {
@@ -9,14 +11,12 @@
     // --fons: rgb(16, 16, 16);
     // --text: rgb(255, 255, 255);
 
-    --link: #5fc2ff;
+    --link: light-dark(#0089ff, #5fc2ff);
 
-    &.light {
+    // &.light {
         // --fons: hsl(210deg 100% 90%);
         // --text: rgb(16, 16, 16);
-    
-        --link: #0089ff;
-    }
+    // }
 
 
     // Temes (text i fons) //
@@ -39,31 +39,21 @@
     --color-l-9: hsl(210, 100%, 100%);
 
 
-    --accent-color: white; //hsl(210, 100%, 79%);
+    --accent-color: light-dark(hsl(210, 100%, 40%), white); //hsl(210, 100%, 79%);
     // linear-gradient(45deg, #00ff45, hsl(184.15deg 100% 59.91%))
     
-    &.light {
-        --accent-color: hsl(210, 100%, 40%);
+    // &.light {
         // linear-gradient(45deg, hsl(210, 100%, 40%), hsl(184.15deg 100% 59.91%))
         // linear-gradient(45deg, #ba00ff, hsl(251.16deg 100% 50%));
-    }
+    // }
 
     // Scrollbar //
-    --scrollbar-fons: hsl(210, 0%, 30%);
-    --scrollbar-via: hsl(210, 0%, 16%);
-    --scrollbar-thumb-1: hsl(210, 0%, 79%);
-    --scrollbar-thumb-2: hsl(210, 0%, 48%);
-    --scrollbar-thumb-hover: hsl(210, 0%, 79%);
-    --scrollbar-thumb-active: white;
-
-    &.light {
-        --scrollbar-fons: var(--color-l-9);
-        --scrollbar-via: white;
-        --scrollbar-thumb-1: var(--color-l-5);
-        --scrollbar-thumb-2: var(--color-l-3);
-        --scrollbar-thumb-hover: var(--color-l-6);
-        --scrollbar-thumb-active: var(--color-l-7);
-    }
+    --scrollbar-fons: light-dark(var(--color-l-9), hsl(210, 0%, 30%));
+    --scrollbar-via: light-dark(white, hsl(210, 0%, 16%));
+    --scrollbar-thumb-1: light-dark(var(--color-l-5), hsl(210, 0%, 79%));
+    --scrollbar-thumb-2: light-dark(var(--color-l-3), hsl(210, 0%, 48%));
+    --scrollbar-thumb-hover: light-dark(var(--color-l-6), hsl(210, 0%, 79%));
+    --scrollbar-thumb-active: light-dark(var(--color-l-7), white);
 }
 
 // Establir variables mode fosc i clar //
@@ -281,24 +271,37 @@ html, html .section, html [class*="tema-"], html [class*="paleta-"] {
 
 // Projects //
 
-.tema-android { @extend .paleta-147; }
-.dark  :host .tema-android { background-color: hsla(147, 100%, 14%, 0.5); --link: var(--color-l-5); }
-.light :host .tema-android { background-color: hsla(147, 100%, 72%, 0.5); --link: var(--color-l-2); }
+.tema-android {
+    @extend .paleta-147;
+    background-color: light-dark(hsla(147, 100%, 72%, 0.5), hsla(147, 100%, 14%, 0.5)) !important;
+    --link: light-dark(var(--color-l-2), var(--color-l-5));
+}
 
-.tema-mad-jumpgate { @extend .paleta-60; }
-.dark  :host .tema-mad-jumpgate { background-color: hsla(60, 100%, 21%, 0.5); --link: var(--color-l-7); }
-.light :host .tema-mad-jumpgate { background-color: hsla(60, 100%, 72%, 0.5); --link: var(--color-l-3); }
+.tema-mad-jumpgate {
+    @extend .paleta-60;
+    background-color: light-dark(hsla(60, 100%, 72%, 0.5), hsla(60, 100%, 21%, 0.5)) !important;
+    --link: light-dark(var(--color-l-3), var(--color-l-7));
+}
 
-.tema-github { @extend .paleta-bn; }
-.dark  :host .tema-github { background-color: hsla(0, 0%, 6%, 0.5); }
-.light :host .tema-github { background-color: hsla(0, 0%, 100%, 0.5); }
+.tema-github {
+    @extend .paleta-bn;
+    background-color: light-dark(hsla(0, 0%, 100%, 0.5), hsla(0, 0%, 6%, 0.5)) !important;
+}
 
-.tema-tasker { @extend .paleta-34; }
-.dark  :host .tema-tasker { background-color: hsla(34, 100%, 25%, 0.5); --link: var(--color-l-7); }
-.light :host .tema-tasker { background-color: hsla(34, 100%, 72%, 0.5); --link: var(--color-l-4); --accent-color: var(--color-l-3); }
+.tema-tasker {
+    @extend .paleta-34;
+
+    background-color: light-dark(hsla(34, 100%, 72%, 0.5), hsla(34, 100%, 25%, 0.5)) !important;
+    --link: light-dark(var(--color-l-4),var(--color-l-7));
+
+    @include light {
+        --accent-color: var(--color-l-3);
+    }
+}
 
 .tema-amazfit {
     @extend .paleta-44;
+
     --color-fosc-hsl-vals-test: hsl(273, 100%, 7%);
     --color-clar-hsl-vals-test: hsl(44, 100%, 91%);
     --color-fosc-hsl-vals: 273, 100%, 7%;
@@ -313,38 +316,46 @@ html, html .section, html [class*="tema-"], html [class*="paleta-"] {
     --color-l-7: hsl(44, 100%, 65%);
     --color-l-8: hsl(44, 100%, 72%);
     --color-l-9: hsl(44, 100%, 91%);
+    
+    background-color: light-dark(hsla(44, 100%, 72%, 0.5), hsla(273, 100%, 15%, 0.5)) !important;
 }
-.dark  :host .tema-amazfit { background-color: hsla(273, 100%, 15%, 0.5); }
-.light :host .tema-amazfit { background-color: hsla(44, 100%, 72%, 0.5); }
 
-.tema-icons { @extend .paleta-60; }
-.dark :host .tema-icons {
-    background: linear-gradient(45deg, 
+.tema-icons {
+    @extend .paleta-60;
+
+    background: linear-gradient(45deg,
         hsla(87, 100%, 25%, 0.5),
         hsla(160, 100%, 25%, 0.5),
         hsla(225, 100%, 25%, 0.5),
-        hsla(253, 100%, 25%, 0.5));
-}
-.light :host .tema-icons {
-    background: linear-gradient(45deg, 
-        hsla(87, 100%, 72%, 0.5),
-        hsla(160, 100%, 72%, 0.5),
-        hsla(225, 100%, 72%, 0.5),
-        hsla(253, 100%, 72%, 0.5));
+        hsla(253, 100%, 25%, 0.5)
+    ) !important;
+    @include light {
+        background: linear-gradient(45deg,
+            hsla(87, 100%, 72%, 0.5),
+            hsla(160, 100%, 72%, 0.5),
+            hsla(225, 100%, 72%, 0.5),
+            hsla(253, 100%, 72%, 0.5)
+        ) !important;
+    }
+
 }
 
 
 // Experiencia //
 
 // Colors paleta Dintel: rgb(17, 77, 166), #e8effa, white //
-.tema-alvea { @extend .paleta-216; }
-.dark  :host .tema-alvea { background-color: hsla(216, 81%, 36%, 0.5); --link: rgb(232, 239, 250); }
-.light :host .tema-alvea { background-color: hsla(216, 100%, 85%, 0.5); --link: rgb(17, 77, 166); }
+.tema-alvea {
+    @extend .paleta-216;
+
+    background-color: light-dark(hsla(216, 100%, 85%, 0.5), hsla(216, 81%, 36%, 0.5)) !important;
+    --link: light-dark(rgb(17, 77, 166), rgb(232, 239, 250));
+}
 
 
 // Colors logo Evora: hsla(212, 64%, 37%, 0.5), hsla(9, 83%, 48%, 0.5), hsla(41, 100%, 48%, 0.5) //
 .tema-evora {
     @extend .paleta-41;
+
     --color-fosc-hsl-vals-test: hsl(212, 100%, 8%);
     --color-clar-hsl-vals-test: hsl(41, 100%, 91%);
     --color-fosc-hsl-vals: 212, 100%, 8%;
@@ -359,39 +370,50 @@ html, html .section, html [class*="tema-"], html [class*="paleta-"] {
     --color-l-7: hsl(41, 100%, 72%);
     --color-l-8: hsl(41, 100%, 82%);
     --color-l-9: hsl(41, 100%, 91%);
-}
-.dark :host .tema-evora {
+
+    
     background: linear-gradient(45deg,
         hsla(9, 100%, 25%, 0.5) 15%,
-        hsla(212, 100%, 25%, 0.5) 65%);
+        hsla(212, 100%, 25%, 0.5) 65%
+    ) !important;
 
-    --link: var(--color-l-6);
+    --link: light-dark(var(--color-l-4), var(--color-l-6));
+
+    @include light {
+        background: linear-gradient(45deg,
+            hsla(41, 100%, 72%, 0.5),
+            hsla(9, 83%, 72%, 0.5),
+            hsla(212, 64%, 72%, 0.5)
+        ) !important;
+    }
 }
-.light :host .tema-evora {
-    background: linear-gradient(45deg,
-        hsla(41, 100%, 72%, 0.5),
-        hsla(9, 83%, 72%, 0.5),
-        hsla(212, 64%, 72%, 0.5));
-        
-    --link: var(--color-l-4);
+
+.tema-orange {
+    @extend .paleta-28;
+    background-color: light-dark(hsla(28, 100%, 72%, 0.5), hsla(28, 100%, 25%, 0.5)) !important;
+    --link: light-dark(var(--color-l-3), var(--color-l-6));
 }
 
-.tema-orange { @extend .paleta-28; }
-.dark  :host .tema-orange { background-color: hsla(28, 100%, 25%, 0.5); --link: var(--color-l-6); }
-.light :host .tema-orange { background-color: hsla(28, 100%, 72%, 0.5); --link: var(--color-l-3); }
+.tema-in2art {
+    @extend .paleta-bn;
+    background-color: light-dark(hsla(0, 0%, 100%, 0.5), hsla(0, 0%, 6%, 0.5)) !important;
+    --link: light-dark(var(--color-l-3), var(--color-l-6));
+}
 
-.tema-in2art { @extend .paleta-bn; }
-.dark  :host .tema-in2art { background-color: hsla(0, 0%, 6%, 0.5); --link: var(--color-l-6); }
-.light :host .tema-in2art { background-color: hsla(0, 0%, 100%, 0.5); --link: var(--color-l-3); }
+.tema-matic {
+    @extend .paleta-356;
+    background-color: light-dark(hsla(356, 100%, 72%, 0.5), hsla(356, 100%, 15%, 0.5)) !important;
+    --link: light-dark(var(--color-l-2), var(--color-l-7));
+}
 
-.tema-matic { @extend .paleta-356; }
-.dark  :host .tema-matic { background-color: hsla(356, 100%, 15%, 0.5); --link: var(--color-l-7); }
-.light :host .tema-matic { background-color: hsla(356, 100%, 72%, 0.5); --link: var(--color-l-2); }
+.tema-indra {
+    @extend .paleta-193;
+    background-color: light-dark(hsla(193, 100%, 62%, 0.5), hsla(193, 100%, 16%, 0.5)) !important;
+    --link: light-dark(var(--color-l-3), var(--color-l-6));
+}
 
-.tema-indra { @extend .paleta-193; }
-.dark  :host .tema-indra { background-color: hsla(193, 100%, 16%, 0.5); --link: var(--color-l-6); }
-.light :host .tema-indra { background-color: hsla(193, 100%, 62%, 0.5); --link: var(--color-l-3); }
-
-.tema-nexxia { @extend .paleta-46; }
-.dark  :host .tema-nexxia { background-color: hsla(46, 100%, 21%, 0.5); --link: var(--color-l-6); }
-.light :host .tema-nexxia { background-color: hsla(46, 100%, 72%, 0.5); --link: var(--color-l-3); }
+.tema-nexxia {
+    @extend .paleta-46;
+    background-color: light-dark(hsla(46, 100%, 72%, 0.5), hsla(46, 100%, 21%, 0.5)) !important;
+    --link: light-dark(var(--color-l-3), var(--color-l-6));
+}

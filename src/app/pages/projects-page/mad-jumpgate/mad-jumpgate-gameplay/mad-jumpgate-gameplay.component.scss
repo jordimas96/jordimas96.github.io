@@ -5,6 +5,14 @@
 .seccio {
     margin-bottom: 1rem;
     border-radius: 2rem;
+    background-color: light-dark(var(--color-clar-50), var(--color-clar-20));
+
+    &[data-open] .fletxa {
+        transform: rotate(-180deg);
+    }
+    &:not([data-open]):hover {
+        background-color: light-dark(var(--color-clar-80), var(--color-clar-30));
+    }
     
     .boto-desplegable {
         display: flex;
@@ -56,22 +64,4 @@
             }
         }
     }
-}
-
-.seccio[data-open] .fletxa {
-    transform: rotate(-180deg);
-}
-
-::ng-deep .seccio {
-    background-color: var(--color-clar-20);
-    &:not([data-open]):hover {
-        background-color: var(--color-clar-30);
-    }
-}
-::ng-deep .light .seccio {
-    background-color: var(--color-clar-50);
-    &:not([data-open]):hover {
-        background-color: var(--color-clar-80);
-    }
-    // @extend .shadow-1;
 }

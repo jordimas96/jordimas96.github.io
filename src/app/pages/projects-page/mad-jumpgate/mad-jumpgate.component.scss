@@ -17,6 +17,7 @@ a.link-img {
     // .play
     // .gameplay
 
+    background-color: light-dark(var(--color-clar-50),  var(--color-clar-20));
     border-radius: 1.25rem;
 
     .titol {
@@ -44,12 +45,4 @@ a.link-img {
             }
         }
     }
-}
-
-::ng-deep .seccioIcones {
-    background-color: var(--color-clar-20);
-}
-::ng-deep .light .seccioIcones {
-    background-color: var(--color-clar-50);
-    // @extend .shadow-1;
 }

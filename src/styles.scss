@@ -27,11 +27,11 @@ html {
 
     &.dark {
         --body-background-color: var(--color-l-0);
-        color-scheme: dark;
+        color-scheme: only dark;
     }
     &.light {
         --body-background-color: var(--color-l-8);
-        color-scheme: light;
+        color-scheme: only light;
     }
 
     body {
@@ -249,9 +249,21 @@ video {
 .color-fosc-80 { color: var(--color-fosc-80); }
 .color-fosc-90 { color: var(--color-fosc-90); }
 
-html.light .inv-dark { filter: invert(1); }
-html.dark .inv-dark-2 { filter: invert(1); }
-html.light .inv-dark-gris { filter: brightness(0.4);  }
+.inv-dark {
+    @include light {
+        filter: invert(1);
+    }
+}
+.inv-dark-2 {
+    @include dark {
+        filter: invert(1);
+    }
+}
+.inv-dark-gris {
+    @include light {
+        filter: brightness(0.4);
+    }
+}
 .filter-invert, .invert { filter: invert(1); }
 
 img, .nodrag {
@@ -340,14 +352,10 @@ img, .noselect {
 
 
 // Efecte hover botons en PC //
-.boto:not(.botoText):hover {
-    // background-color: var(--color-l-9) !important;
-    // box-shadow: inset 0 0 0 1000px var(--color-clar-40) !important;
-}
-::ng-deep .light .boto:not(.botoText):hover {
-    // background-color: var(--color-l-3) !important;
-    // box-shadow: inset 0 0 0 1000px var(--color-clar-40) !important;
-}
+// .boto:not(.botoText):hover {
+//     background-color: light-dark(var(--color-l-3), var(--color-l-9)) !important;
+//     box-shadow: inset 0 0 0 1000px var(--color-clar-40) !important;
+// }
 
 // Efecte hover links en PC //
 *:not(.no-style) > a:not(.link-img, .no-style, .boto) {
@@ -372,19 +380,12 @@ img, .noselect {
         // box-shadow: 0px 30px 25px -30px #ffffff45 inset, 0px -30px 25px -30px #00000045 inset !important;
     }
 }
-.dark .botoSeguentPagina:hover {
+.botoSeguentPagina:hover {
     // border-radius: 3rem;
-    box-shadow: inset 0 0 0 1000px #fff8 !important;
-}
-.light .botoSeguentPagina:hover {
-    // border-radius: 3rem;
-    box-shadow: inset 0 0 0 1000px #fff2 !important;
+    box-shadow: inset 0 0 0 1000px light-dark(#fff2, #fff8) !important;
 }
 
-.dark .hoverWhiter:hover {
-    box-shadow: inset 0 0 0 1000px #fff8 !important;
-}
-.light .hoverWhiter:hover {
-    box-shadow: inset 0 0 0 1000px #fff2 !important;
+.hoverWhiter:hover {
+    box-shadow: inset 0 0 0 1000px light-dark(#fff2, #fff8) !important;
 }
 

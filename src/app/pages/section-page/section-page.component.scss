@@ -16,9 +16,10 @@
 
 .botoBack {
     font-size: 1.5rem;
-    color: var(--color-8);
+    color: light-dark(var(--color-l-0), var(--color-l-9));
 
     &:hover {
+        color: light-dark(var(--color-l-3), var(--color-l-6));
         i {
             transform: translateX(-0.25rem);
         }
@@ -57,7 +58,3 @@
         }
     }
 }
-
-
-::ng-deep .dark .botoBack:hover { color: var(--color-l-5); }
-// ::ng-deep .light .botoBack:hover { color: var(--color-l-3); }

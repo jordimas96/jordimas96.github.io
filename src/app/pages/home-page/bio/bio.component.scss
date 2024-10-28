@@ -54,6 +54,7 @@
     .jordi {
         color: var(--accent-color);
         font-size: 1.7rem;
+        @include light { font-weight: bold !important; }
         @include mobil { font-size: 1.25rem; }
     }
 }
@@ -72,10 +73,6 @@
 .botoCV {
     padding: 0.9rem 1rem 0.9rem 1.1rem;
 }
-
-
-
-::ng-deep .light .jordi { font-weight: bold !important; }
 
 
 // Tooltip //
