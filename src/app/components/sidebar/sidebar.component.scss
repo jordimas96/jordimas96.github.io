@@ -41,20 +41,32 @@
     .seccions {
         display: flex;
         flex-direction: column;
+        gap: 0.75rem;
         
         overflow: hidden;
         
         button {
+            @include rs-button;
             font-size: 1.5rem;
             width: 100%;
-            padding: 1rem;
+            padding: 1rem 1.75rem;
+            border-radius: 10rem;
+            text-align: start;
+
+            background-color: var(--color-clar-20);
+
 
             @include tablet {
                 font-size: 2rem;
             }
 
             &:hover {
-                box-shadow: inset 0 0 0 1000px var(--color-clar-20);
+                box-shadow: inset 0 0 0 1000px var(--color-clar-30);
+            }
+
+            i {
+                font-size: 1.8rem;
+                margin-right: 0.5rem;
             }
         }
     }

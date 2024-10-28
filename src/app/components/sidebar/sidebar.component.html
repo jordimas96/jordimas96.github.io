@@ -4,23 +4,27 @@
         <i class="fa-solid fa-close d-block"></i>
     </button>
 
-    <nav class="seccions">
-        <button class="botoText" routerLink="/">
+    <nav class="seccions p-2">
+        <button routerLink="/">
+            <i class="fa-solid fa-house"></i>
             @if (m.ca) { Inici }
             @if (m.es) { Inicio }
             @if (m.en) { Home }
         </button>
-        <button class="botoText tema-evora" routerLink="/experience">
+        <button routerLink="/experience">
+            <i class="fa-solid fa-briefcase"></i>
             @if (m.ca) { Experiència }
             @if (m.es) { Experiencia }
             @if (m.en) { Experience }
         </button>
-        <button class="botoText tema-android" routerLink="/projects">
+        <button routerLink="/projects">
+            <i class="fa-solid fa-shapes"></i>
             @if (m.ca) { Projectes }
             @if (m.es) { Proyectos }
             @if (m.en) { Projects }
         </button>
-        <button class="botoText tema-icons" routerLink="/art">
+        <button routerLink="/art">
+            <i class="fa-solid fa-paintbrush"></i>
             @if (m.ca) { Art }
             @if (m.es) { Arte }
             @if (m.en) { Art }

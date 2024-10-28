@@ -1,0 +1,8 @@
+@mixin rs-button {
+    border: none;
+    background: none;
+    padding: 0;
+}
+
+
+button.rs { @include rs-button; }
