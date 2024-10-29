@@ -126,9 +126,6 @@ html {
 .botoAmbIcona {
     padding: 0.5rem 0.5rem 0.5rem 1rem;
 }
-.boto, a:not(.no-style) {
-    @extend .boing;
-}
 
 .boto img.logo {
     height: 2rem;
@@ -139,13 +136,6 @@ html {
     color: var(--text);
     padding: 0;
     border: none;
-}
-
-.botoSeguentPagina {
-    padding: 2rem 4rem;
-    border-radius: 2rem;
-    font-size: 1.5rem;
-    gap: 1rem;
 }
 
 

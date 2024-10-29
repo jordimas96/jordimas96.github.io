@@ -25,6 +25,11 @@
 
             transform-origin: center;
             transition: transform 0.3s;
+
+            &:hover img {
+                transform: scale(1.2);
+                filter: drop-shadow(0 0 6px) !important;
+            }
             
             img {
                 height: 4rem;
@@ -34,16 +39,7 @@
                 font-size: 1.6rem;
                 text-transform: capitalize;
             }
-            .text {
-
-            }
-            &:hover {
-                transform: scale(1.06);
-                img {
-                    transform: scale(1.2);
-                    filter: drop-shadow(0 0 6px) !important;
-                }
-            }
+            .text { }
         }
     }
 }

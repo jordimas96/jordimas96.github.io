@@ -19,8 +19,6 @@ nav {
     }
     
     button {
-        // @extend .boing;
-
         background: none;
         color: var(--text);
 
@@ -38,22 +36,20 @@ nav {
         transition: font-size 0.3s, padding 0.3s, color 0.3s, background-color 0.1s, transform 0.1s;
 
         
-        @include tablet { font-size: 1.2rem; }
+        @include tablet {
+            font-size: 1.2rem;
+        }
         @include pc {
             font-size: 1.3rem;
-            padding: 0.125rem 1.5rem !important
+            padding: 0.125rem 1.5rem;
         }
         @include gran {
             font-size: 1.5rem;
-            padding: 0.125rem 3rem !important;
+            padding: 0.125rem 3rem;
         }
 
         &.selected {
             color: var(--fons);
-        }
-
-        &:hover {
-            background-color: var(--text-10) !important;
         }
     }
     // button:not(.selected) + button:not(.selected) { border-left: 1px solid var(--text-50); } // Separadors //

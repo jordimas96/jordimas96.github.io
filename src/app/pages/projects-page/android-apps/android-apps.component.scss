@@ -4,9 +4,6 @@
     a.link-img {
         img.title-icon {
             transition: transform 0.3s;
-            
-            // Icona en mode clar: afegim filtre forçat per a fer-la més fosca i que es vegi bé //
-            @include light { filter: brightness(0.7) saturate(2); }
         }
         &:hover {
             img.title-icon {
@@ -49,4 +46,12 @@
         height: 1.5rem !important;
     }
 
+}
+
+
+// Icona en mode clar: afegim filtre forçat per a fer-la més fosca i que es vegi bé //
+section#android .link-img .title-icon {
+    @include light {
+        filter: brightness(0.7) saturate(2);
+    }
 }

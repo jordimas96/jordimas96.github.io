@@ -1,29 +1,29 @@
 <div class="sidebar" [class.open]="open">
 
-    <button class="botoSidebar botoText" (click)="this.tancar()">
+    <button class="botoSidebar botoText rounded-pill" (click)="this.tancar()" matRipple>
         <i class="fa-solid fa-close d-block"></i>
     </button>
 
     <nav class="seccions p-2">
-        <button routerLink="/">
+        <button routerLink="/" matRipple>
             <i class="fa-solid fa-house"></i>
             @if (m.ca) { Inici }
             @if (m.es) { Inicio }
             @if (m.en) { Home }
         </button>
-        <button routerLink="/experience">
+        <button routerLink="/experience" matRipple>
             <i class="fa-solid fa-briefcase"></i>
             @if (m.ca) { Experiència }
             @if (m.es) { Experiencia }
             @if (m.en) { Experience }
         </button>
-        <button routerLink="/projects">
+        <button routerLink="/projects" matRipple>
             <i class="fa-solid fa-shapes"></i>
             @if (m.ca) { Projectes }
             @if (m.es) { Proyectos }
             @if (m.en) { Projects }
         </button>
-        <button routerLink="/art">
+        <button routerLink="/art" matRipple>
             <i class="fa-solid fa-paintbrush"></i>
             @if (m.ca) { Art }
             @if (m.es) { Arte }

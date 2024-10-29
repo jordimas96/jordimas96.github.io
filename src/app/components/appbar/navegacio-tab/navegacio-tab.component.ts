@@ -1,7 +1,8 @@
 import { Component, ElementRef, HostListener, ViewChild } from '@angular/core';
-import { NavigationEnd, Router, RouterLinkActive, RouterLink } from '@angular/router';
+import { NavigationEnd, Router, RouterLink, RouterLinkActive } from '@angular/router';
 import { interval } from 'rxjs';
 import { MainService } from 'src/app/services/main.service';
+import { SharedImports } from 'src/app/shared/imports';
 import { Utils } from 'src/app/shared/utils';
 
 @Component({
@@ -12,6 +13,7 @@ import { Utils } from 'src/app/shared/utils';
     imports: [
         RouterLinkActive,
         RouterLink,
+        ...SharedImports,
     ]
 })
 export class NavegacioTabComponent {

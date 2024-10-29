@@ -21,9 +21,7 @@
             I have always put effort into following <a href="https://m2.material.io/">Material Design</a> guidelines in Android, but since Android 12 and the introduction of the third version of Material Design, called <a href="https://m3.material.io/">Material You</a>, I have started to design the UIs following this new style, which offers a modern and pleasant-to-use aesthetic. When it comes to choosing the theme, I use <a href="https://developer.android.com/develop/ui/views/theming/dynamic-colors">Monet's dynamic colors</a>, which offer customization options depending on the wallpaper. In this way, interfaces with unique color combinations can be generated for each user.<br><br>
         }
 
-        <app-detalls-android-apps />
-
-        <br>
+        <app-detalls-android-apps class="mb-5" />
 
         @if (m.ca) { Les meves aplicacions estan disponibles a diferents botigues: }
         @if (m.es) { Mis aplicaciones están disponibles en diferentes tiendas: }
@@ -31,7 +29,7 @@
     </div>
     <div class="boto-i-qr row">
         <div class="col-6">
-            <a href="/external-pages/play-store/play-store.html" class="boto botoAmbIcona" appMostrarAmbAnimacio>
+            <a href="/external-pages/play-store/play-store.html" class="boto botoAmbIcona" appMostrarAmbAnimacio matRipple>
                 Play Store
                 <img src="assets/icons/projects/play-store.png" alt="Google Play Store" class="logo">
             </a>
@@ -49,7 +47,7 @@
             </div>
         }
         <div class="col-6">
-            <a [href]="getAmazonLink_apps()" class="boto botoAmazon paleta-192" appMostrarAmbAnimacio>
+            <a [href]="getAmazonLink_apps()" class="boto botoAmazon paleta-192" appMostrarAmbAnimacio matRipple>
                 <img src="assets/icons/projects/amazon-appstore.png" alt="Amazon Appstore" class="logo">
             </a>
         </div>

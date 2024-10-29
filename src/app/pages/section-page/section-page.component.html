@@ -11,7 +11,7 @@
 
     <div class="content">
 
-        <button [routerLink]="urlGoBack" class="botoBack botoText boing mt-3 mb-4 ms-4" appMostrarAmbAnimacio>
+        <button [routerLink]="urlGoBack" class="botoBack botoText my-3" appMostrarAmbAnimacio matRipple>
             <i class="fa-solid fa-chevron-left me-2"></i>
             {{ getNameGoBack() }}
         </button>
@@ -49,19 +49,19 @@
         
         
         <div class="sectionList mt-6 mb-5">
-            @if(section != "android") {      <button class="boto tema-android"      routerLink="/section/android"      >Apps Android</button>       }
-            @if(section != "mad-jumpgate") { <button class="boto tema-mad-jumpgate" routerLink="/section/mad-jumpgate" >Mad Jumpgate</button>       }
-            @if(section != "github") {       <button class="boto tema-github"       routerLink="/section/github"       >GitHub Projects</button>    }
-            @if(section != "custom-roms") {  <button class="boto "                  routerLink="/section/custom-roms"  >Custom ROMs</button>        }
-            @if(section != "tasker") {       <button class="boto tema-tasker"       routerLink="/section/tasker"       >Tasker</button>             }
-            @if(section != "icons") {        <button class="boto tema-icons"        routerLink="/section/icons"        >Icons</button>              }
-            @if(section != "amazfit") {      <button class="boto tema-amazfit"      routerLink="/section/amazfit"      >Amazfit Watchfaces</button> }
-            @if(section != "evora") {        <button class="boto tema-evora"        routerLink="/section/evora"        >Evora IT</button>           }
-            @if(section != "orange") {       <button class="boto tema-orange"       routerLink="/section/orange"       >Orange</button>             }
-            @if(section != "in2art") {       <button class="boto tema-in2art"       routerLink="/section/in2art"       >In2art</button>             }
-            @if(section != "matic") {        <button class="boto tema-matic"        routerLink="/section/matic"        >Matic</button>              }
-            @if(section != "indra") {        <button class="boto tema-indra"        routerLink="/section/indra"        >Indra</button>              }
-            @if(section != "nexxia") {       <button class="boto tema-nexxia"       routerLink="/section/nexxia"       >Nexxia</button>             }
+            @if(section != "android") {      <button class="boto tema-android"      routerLink="/section/android"      matRipple>Apps Android</button>       }
+            @if(section != "mad-jumpgate") { <button class="boto tema-mad-jumpgate" routerLink="/section/mad-jumpgate" matRipple>Mad Jumpgate</button>       }
+            @if(section != "github") {       <button class="boto tema-github"       routerLink="/section/github"       matRipple>GitHub Projects</button>    }
+            @if(section != "custom-roms") {  <button class="boto "                  routerLink="/section/custom-roms"  matRipple>Custom ROMs</button>        }
+            @if(section != "tasker") {       <button class="boto tema-tasker"       routerLink="/section/tasker"       matRipple>Tasker</button>             }
+            @if(section != "icons") {        <button class="boto tema-icons"        routerLink="/section/icons"        matRipple>Icons</button>              }
+            @if(section != "amazfit") {      <button class="boto tema-amazfit"      routerLink="/section/amazfit"      matRipple>Amazfit Watchfaces</button> }
+            @if(section != "evora") {        <button class="boto tema-evora"        routerLink="/section/evora"        matRipple>Evora IT</button>           }
+            @if(section != "orange") {       <button class="boto tema-orange"       routerLink="/section/orange"       matRipple>Orange</button>             }
+            @if(section != "in2art") {       <button class="boto tema-in2art"       routerLink="/section/in2art"       matRipple>In2art</button>             }
+            @if(section != "matic") {        <button class="boto tema-matic"        routerLink="/section/matic"        matRipple>Matic</button>              }
+            @if(section != "indra") {        <button class="boto tema-indra"        routerLink="/section/indra"        matRipple>Indra</button>              }
+            @if(section != "nexxia") {       <button class="boto tema-nexxia"       routerLink="/section/nexxia"       matRipple>Nexxia</button>             }
         </div>
         
         
@@ -77,7 +77,7 @@
         
         
         <!-- <div class="mb-6 text-center" appMostrarAmbAnimacio>
-            <button class="boto botoSeguentPagina align-self-center" routerLink="/art">
+            <button class="boto botoSeguentPagina m-auto" routerLink="/art" matRipple>
                 @if (m.ca) { Art }
                 @if (m.es) { Arte }
                 @if (m.en) { Art }

@@ -6,7 +6,7 @@
     </div>
 
     <div class="botonsCanviarVista mt-2 mb-0">
-        <button class="boto botoShowTime" (click)="showExpTime_click()">
+        <button class="boto botoShowTime" (click)="showExpTime_click()" matRipple>
             @if(showTime) { <i class="fa-regular fa-calendar-minus"></i> }
             @else { <i class="fa-regular fa-calendar-plus"></i> }
             @if (m.ca) { {{ showTime ? "Ocultar temps" : "Mostrar temps" }} }
@@ -14,7 +14,7 @@
             @if (m.en) { {{ showTime ? "Hide time" : "Show time" }} }
         </button>
         @if (showTime) {
-            <button class="boto botoSort" (click)="sort_click()">
+            <button class="boto botoSort" (click)="sort_click()" matRipple>
                 @if (sorted) { <i class="fa-solid fa-chart-bar"></i> }
                 @else { <i class="fa-solid fa-arrow-down-wide-short"></i> }
             </button>
@@ -80,7 +80,7 @@
         </div>
 
         <div id="divBotoVeureMes" class="col-12 col-sm-12 text-center">
-            <button class="boto botoText botoVeureMes mt-4" (click)="obrirVeureMesSkills()" appMostrarAmbAnimacio>
+            <button class="boto botoText botoVeureMes mt-4" (click)="obrirVeureMesSkills()" appMostrarAmbAnimacio matRipple>
                 @if (m.ca) { Veure més }
                 @if (m.es) { Ver más }
                 @if (m.en) { See more }

@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { MainService } from 'src/app/services/main.service';
 import { ThemeService } from 'src/app/services/theme.service';
+import { SharedImports } from 'src/app/shared/imports';
 import { Utils } from 'src/app/shared/utils';
 
 @Component({
@@ -8,7 +9,9 @@ import { Utils } from 'src/app/shared/utils';
     templateUrl: './dark-mode.component.html',
     styleUrl: './dark-mode.component.scss',
     standalone: true,
-    imports: []
+    imports: [
+        ...SharedImports,
+    ]
 })
 export class DarkModeComponent {
 
