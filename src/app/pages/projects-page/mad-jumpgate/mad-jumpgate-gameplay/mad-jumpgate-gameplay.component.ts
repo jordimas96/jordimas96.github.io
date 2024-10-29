@@ -1,6 +1,6 @@
 import { Component, ElementRef, HostListener, ViewChild } from '@angular/core';
-import { MostrarAmbAnimacioDirective } from 'src/app/directives/mostrar-amb-animacio.directive';
 import { MainService } from 'src/app/services/main.service';
+import { SharedImports } from 'src/app/shared/imports';
 import { Utils } from 'src/app/shared/utils';
 
 @Component({
@@ -9,7 +9,7 @@ import { Utils } from 'src/app/shared/utils';
     styleUrl: './mad-jumpgate-gameplay.component.scss',
     standalone: true,
     imports: [
-        MostrarAmbAnimacioDirective,
+        ...SharedImports,
     ]
 })
 export class MadJumpgateGameplayComponent {

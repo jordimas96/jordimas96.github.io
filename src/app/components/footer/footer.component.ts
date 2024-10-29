@@ -1,8 +1,7 @@
 import { Component, ElementRef } from '@angular/core';
-import { MostrarAmbAnimacioDirective } from 'src/app/directives/mostrar-amb-animacio.directive';
-import { TargetBlankDirective } from 'src/app/directives/target-blank.directive';
 import { MainService } from 'src/app/services/main.service';
 import { RickrollService } from 'src/app/services/rickroll.service';
+import { SharedImports } from 'src/app/shared/imports';
 
 
 @Component({
@@ -11,8 +10,7 @@ import { RickrollService } from 'src/app/services/rickroll.service';
     styleUrl: './footer.component.scss',
     standalone: true,
     imports: [
-        TargetBlankDirective,
-        MostrarAmbAnimacioDirective,
+        ...SharedImports,
     ]
 })
 export class FooterComponent {

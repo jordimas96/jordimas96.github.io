@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { RouterLink } from '@angular/router';
-import { MostrarAmbAnimacioDirective } from 'src/app/directives/mostrar-amb-animacio.directive';
+import { SharedImports } from 'src/app/shared/imports';
 import { PageComponent } from '../page.component';
 import { AmazfitWatchfacesComponent } from './amazfit-watchfaces/amazfit-watchfaces.component';
 import { IconsComponent } from './icons/icons.component';
@@ -11,8 +11,8 @@ import { IconsComponent } from './icons/icons.component';
     styleUrl: './art-page.component.scss',
     standalone: true,
     imports: [
+        ...SharedImports,
         RouterLink,
-        MostrarAmbAnimacioDirective,
         IconsComponent,
         AmazfitWatchfacesComponent,
     ]

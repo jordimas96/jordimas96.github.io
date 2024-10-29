@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { RouterLink } from '@angular/router';
-import { MostrarAmbAnimacioDirective } from 'src/app/directives/mostrar-amb-animacio.directive';
+import { SharedImports } from 'src/app/shared/imports';
 import { PageComponent } from '../page.component';
 import { BioComponent } from './bio/bio.component';
 import { LanguagesComponent } from './languages/languages.component';
@@ -12,8 +12,8 @@ import { StatsComponent } from './stats/stats.component';
     styleUrl: './home-page.component.scss',
     standalone: true,
     imports: [
+        ...SharedImports,
         RouterLink,
-        MostrarAmbAnimacioDirective,
         BioComponent,
         StatsComponent,
         LanguagesComponent,

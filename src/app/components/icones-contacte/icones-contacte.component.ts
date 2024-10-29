@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
-import { MostrarAmbAnimacioDirective } from 'src/app/directives/mostrar-amb-animacio.directive';
 import { MainService } from 'src/app/services/main.service';
+import { SharedImports } from 'src/app/shared/imports';
 
 @Component({
     selector: 'app-icones-contacte',
@@ -8,7 +8,7 @@ import { MainService } from 'src/app/services/main.service';
     styleUrl: './icones-contacte.component.scss',
     standalone: true,
     imports: [
-        MostrarAmbAnimacioDirective
+        ...SharedImports,
     ]
 })
 export class IconesContacteComponent {

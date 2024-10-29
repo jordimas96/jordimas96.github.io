@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { RouterLink } from '@angular/router';
-import { MostrarAmbAnimacioDirective } from 'src/app/directives/mostrar-amb-animacio.directive';
+import { SharedImports } from 'src/app/shared/imports';
 import { PageComponent } from '../page.component';
 import { AndroidAppsComponent } from './android-apps/android-apps.component';
 import { CustomRomsComponent } from './custom-roms/custom-roms.component';
@@ -14,8 +14,8 @@ import { TaskerComponent } from './tasker/tasker.component';
     styleUrl: './projects-page.component.scss',
     standalone: true,
     imports: [
+        ...SharedImports,
         RouterLink,
-        MostrarAmbAnimacioDirective,
         AndroidAppsComponent,
         MadJumpgateComponent,
         GithubProjectsComponent,

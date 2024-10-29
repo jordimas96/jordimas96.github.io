@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { MostrarAmbAnimacioDirective } from 'src/app/directives/mostrar-amb-animacio.directive';
 import { MainService } from 'src/app/services/main.service';
+import { SharedImports } from 'src/app/shared/imports';
 
 @Component({
     selector: 'app-idiomes',
@@ -8,7 +8,7 @@ import { MainService } from 'src/app/services/main.service';
     styleUrl: './idiomes.component.scss',
     standalone: true,
     imports: [
-        MostrarAmbAnimacioDirective,
+        ...SharedImports,
     ]
 })
 export class IdiomesComponent implements OnInit {

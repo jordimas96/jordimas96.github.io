@@ -1,8 +1,8 @@
 import { Component, ElementRef, Input, OnInit, Renderer2 } from '@angular/core';
-import { MostrarAmbAnimacioDirective } from 'src/app/directives/mostrar-amb-animacio.directive';
 import { Skills } from 'src/app/enums/skills.enum';
 import { ExperienceCalculatorService } from 'src/app/services/experience-calculator.service';
 import { MainService } from 'src/app/services/main.service';
+import { SharedImports } from 'src/app/shared/imports';
 import { Utils } from 'src/app/shared/utils';
 
 @Component({
@@ -11,7 +11,7 @@ import { Utils } from 'src/app/shared/utils';
     styleUrl: './skill.component.scss',
     standalone: true,
     imports: [
-        MostrarAmbAnimacioDirective,
+        ...SharedImports,
     ]
 })
 export class SkillComponent implements OnInit {

@@ -1,7 +1,6 @@
 import { Component } from '@angular/core';
-import { MostrarAmbAnimacioDirective } from 'src/app/directives/mostrar-amb-animacio.directive';
-import { TargetBlankDirective } from 'src/app/directives/target-blank.directive';
 import { MainService } from 'src/app/services/main.service';
+import { SharedImports } from 'src/app/shared/imports';
 
 @Component({
     selector: 'app-icons',
@@ -9,8 +8,7 @@ import { MainService } from 'src/app/services/main.service';
     styleUrl: './icons.component.scss',
     standalone: true,
     imports: [
-        MostrarAmbAnimacioDirective,
-        TargetBlankDirective,
+        ...SharedImports,
     ]
 })
 export class IconsComponent {

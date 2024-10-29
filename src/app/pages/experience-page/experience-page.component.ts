@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { RouterLink } from '@angular/router';
-import { MostrarAmbAnimacioDirective } from 'src/app/directives/mostrar-amb-animacio.directive';
+import { SharedImports } from 'src/app/shared/imports';
 import { PageComponent } from '../page.component';
 import { NexxiaComponent } from './1 nexxia/nexxia.component';
 import { IndraComponent } from './2 indra/indra.component';
@@ -16,8 +16,8 @@ import { AlveaComponent } from './7 alvea/alvea.component';
     styleUrl: './experience-page.component.scss',
     standalone: true,
     imports: [
+        ...SharedImports,
         RouterLink,
-        MostrarAmbAnimacioDirective,
         NexxiaComponent,
         IndraComponent,
         MaticComponent,

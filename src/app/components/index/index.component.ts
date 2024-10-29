@@ -1,6 +1,6 @@
 import { Component, ElementRef, ViewChild } from '@angular/core';
-import { MostrarAmbAnimacioDirective } from 'src/app/directives/mostrar-amb-animacio.directive';
 import { MainService } from 'src/app/services/main.service';
+import { SharedImports } from 'src/app/shared/imports';
 
 
 @Component({
@@ -9,7 +9,7 @@ import { MainService } from 'src/app/services/main.service';
     styleUrl: './index.component.scss',
     standalone: true,
     imports: [
-        MostrarAmbAnimacioDirective,
+        ...SharedImports,
     ]
 })
 export class IndexComponent {

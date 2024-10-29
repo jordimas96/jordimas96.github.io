@@ -1,6 +1,5 @@
 import { Component } from '@angular/core';
 import { RouterLink } from '@angular/router';
-import { MostrarAmbAnimacioDirective } from 'src/app/directives/mostrar-amb-animacio.directive';
 import { AmazfitWatchfacesComponent } from 'src/app/pages/art-page/amazfit-watchfaces/amazfit-watchfaces.component';
 import { IconsComponent } from 'src/app/pages/art-page/icons/icons.component';
 import { NexxiaComponent } from 'src/app/pages/experience-page/1 nexxia/nexxia.component';
@@ -16,6 +15,7 @@ import { CustomRomsComponent } from 'src/app/pages/projects-page/custom-roms/cus
 import { GithubProjectsComponent } from 'src/app/pages/projects-page/github-projects/github-projects.component';
 import { MadJumpgateComponent } from 'src/app/pages/projects-page/mad-jumpgate/mad-jumpgate.component';
 import { TaskerComponent } from 'src/app/pages/projects-page/tasker/tasker.component';
+import { SharedImports } from 'src/app/shared/imports';
 
 @Component({
     selector: 'app-section-page',
@@ -23,8 +23,8 @@ import { TaskerComponent } from 'src/app/pages/projects-page/tasker/tasker.compo
     styleUrl: './section-page.component.scss',
     standalone: true,
     imports: [
+        ...SharedImports,
         RouterLink,
-        MostrarAmbAnimacioDirective,
         NexxiaComponent,
         IndraComponent,
         MaticComponent,

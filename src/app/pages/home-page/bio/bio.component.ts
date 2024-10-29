@@ -1,11 +1,9 @@
-import { CommonModule } from '@angular/common';
 import { Component, ElementRef } from '@angular/core';
 import { IconesContacteComponent } from 'src/app/components/icones-contacte/icones-contacte.component';
-import { MostrarAmbAnimacioDirective } from 'src/app/directives/mostrar-amb-animacio.directive';
-import { TargetBlankDirective } from 'src/app/directives/target-blank.directive';
 import { Skills } from 'src/app/enums/skills.enum';
 import { ExperienceCalculatorService } from 'src/app/services/experience-calculator.service';
 import { MainService } from 'src/app/services/main.service';
+import { SharedImports } from 'src/app/shared/imports';
 
 @Component({
     selector: 'app-bio',
@@ -13,9 +11,7 @@ import { MainService } from 'src/app/services/main.service';
     styleUrl: './bio.component.scss',
     standalone: true,
     imports: [
-        CommonModule,
-        MostrarAmbAnimacioDirective,
-        TargetBlankDirective,
+        ...SharedImports,
         IconesContacteComponent,
     ]
 })
