@@ -15,7 +15,6 @@
 
         <ngx-masonry class="repos row m-n2" [ordered]="true">
             @for(repo of repos; track repos["name"]) {
-
                 <div ngxMasonryItem class="col-12 col-md-6 p-2" [attr.aria-order]="repo.order">
                     
                     <a [href]="repo.url" class="rs">
@@ -29,9 +28,13 @@
                     </a>
 
                 </div>
-
-            } @empty { <i class="ms-4">No projects found</i> }
+            }
         </ngx-masonry>
+
+        @if (!repos) {
+            <!-- <div class="fst-italic m-3">No projects found</div> -->
+            <mat-spinner [diameter]="60" />
+        }
     </div>
     
     <!-- Skills -->

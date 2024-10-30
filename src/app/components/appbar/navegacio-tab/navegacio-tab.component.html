@@ -8,9 +8,13 @@
         (click)="m.u.scroll(0)"
         matRipple
     >
-        @if (m.ca) { Inici }
-        @if (m.es) { Inicio }
-        @if (m.en) { Home }
+        @if (m.esPantallaPc()) {
+            @if (m.ca) { Inici }
+            @if (m.es) { Inicio }
+            @if (m.en) { Home }
+        } @else {
+            <i class="fa-solid fa-house"></i>
+        }
     </button>
     <button
         id="navegacio-tab-experience"
@@ -21,9 +25,13 @@
         (click)="m.u.scroll(0)"
         matRipple
     >
-        @if (m.ca) { Experiència }
-        @if (m.es) { Experiencia }
-        @if (m.en) { Experience }
+        @if (m.esPantallaPc()) {
+            @if (m.ca) { Experiència }
+            @if (m.es) { Experiencia }
+            @if (m.en) { Experience }
+        } @else {
+            <i class="fa-solid fa-briefcase"></i>
+        }
     </button>
     <button
         id="navegacio-tab-projects"
@@ -34,9 +42,13 @@
         (click)="m.u.scroll(0)"
         matRipple
     >
-        @if (m.ca) { Projectes }
-        @if (m.es) { Proyectos }
-        @if (m.en) { Projects }
+        @if (m.esPantallaPc()) {
+            @if (m.ca) { Projectes }
+            @if (m.es) { Proyectos }
+            @if (m.en) { Projects }
+        } @else {
+            <i class="fa-solid fa-shapes"></i>
+        }
     </button>
     <button
         id="navegacio-tab-art"
@@ -47,9 +59,13 @@
         (click)="m.u.scroll(0)"
         matRipple
     >
-        @if (m.ca) { Art }
-        @if (m.es) { Arte }
-        @if (m.en) { Art }
+        @if (m.esPantallaPc()) {
+            @if (m.ca) { Art }
+            @if (m.es) { Arte }
+            @if (m.en) { Art }
+        } @else {
+            <i class="fa-solid fa-paintbrush"></i>
+        }
     </button>
     
     <div #pill class="pill"></div>

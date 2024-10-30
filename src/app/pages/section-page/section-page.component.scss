@@ -18,9 +18,10 @@
     font-size: 1.5rem;
 
     padding: 1rem 1.75rem;
-    border-radius: 50rem;
 
     color: light-dark(var(--color-l-0), var(--color-l-9));
+
+    gap: 1rem;
 
     &:hover {
         color: light-dark(var(--color-l-3), var(--color-l-6));
@@ -29,6 +30,7 @@
         }
     }
     i {
+        display: flex;
         transition: transform 0.3s;
     }
 }

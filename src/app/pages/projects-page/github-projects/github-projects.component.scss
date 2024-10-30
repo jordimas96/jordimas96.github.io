@@ -49,4 +49,11 @@
             .text { }
         }
     }
+    mat-spinner {
+        margin: 2rem auto;
+
+        ::ng-deep circle {
+            stroke: light-dark(var(--accent-color), white);
+        }
+    }
 }

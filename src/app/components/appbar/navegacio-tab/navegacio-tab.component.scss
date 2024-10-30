@@ -34,7 +34,9 @@ nav {
 
         transition: font-size 0.3s, padding 0.3s, color 0.3s, background-color 0.1s, transform 0.1s;
 
-        
+        @include mobil {
+            flex: auto !important;
+        }
         @include tablet {
             font-size: 1.2rem;
         }

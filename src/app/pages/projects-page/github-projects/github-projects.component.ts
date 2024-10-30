@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
 import { NgxMasonryModule } from 'ngx-masonry';
 import { SkillComponent } from 'src/app/components/skill/skill.component';
 import { Skills } from 'src/app/enums/skills.enum';
@@ -16,7 +17,8 @@ import { Utils } from 'src/app/shared/utils';
     imports: [
         ...SharedImports,
         NgxMasonryModule,
-        SkillComponent
+        SkillComponent,
+        MatProgressSpinnerModule,
     ]
 })
 export class GithubProjectsComponent implements OnInit {
@@ -24,7 +26,7 @@ export class GithubProjectsComponent implements OnInit {
 
     public readonly USE_CACHE = true;
 
-    public repos: Array<any> = [];
+    public repos: Array<any>;
 
     constructor(
         public m: MainService,
@@ -53,7 +55,7 @@ export class GithubProjectsComponent implements OnInit {
             }
         }
 
-        
+
         // Si no, ho creem //
         let repos = [
             {
@@ -103,7 +105,7 @@ export class GithubProjectsComponent implements OnInit {
         }));
 
         Utils.setCookie("otherProjects_info", JSON.stringify(this.repos), 60);
-        
+
     }
 
 
