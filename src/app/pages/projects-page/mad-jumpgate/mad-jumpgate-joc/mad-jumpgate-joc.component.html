@@ -1,5 +1,5 @@
 <div class="seccio" appMostrarAmbAnimacio>
-    <button class="boto-desplegable no-style" (click)="toggleSeccio($event.currentTarget)" matRipple>
+    <button class="boto-desplegable" (click)="toggleSeccio($event.currentTarget)" matRipple>
         <div class="text-i-icona">
             <img src="assets/images/mad-jumpgate/icons/mad-jumpgate.png" class="icona">
             <span class="titol">
@@ -23,7 +23,7 @@
         
                 <div class="placeholder" [style.width.px]="placeholderWidth" [style.height.px]="placeholderHeight"></div>
         
-                <button class="boto botoFullscreen no-style" (click)="fullScreen()" matRipple><i class="fa-solid fa-expand"></i></button>
+                <button class="botoFullscreen" (click)="fullScreen()" matRipple><i class="fa-solid fa-expand"></i></button>
             </div>
         } @else {
             <div class="missatge-nomes-pc">

@@ -9,11 +9,10 @@
     gap: 1rem;
 
     .stat {
-        display: flex;
+        display: inline-flex;
         flex-direction: column;
         align-items: center;
         gap: 1rem;
-        width: fit-content;
 
         .titol {
             color: var(--text-80);

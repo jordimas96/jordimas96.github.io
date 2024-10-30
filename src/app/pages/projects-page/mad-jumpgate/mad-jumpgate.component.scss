@@ -36,6 +36,8 @@ a.link-img {
         gap: 1rem;
 
         a {
+            @include reset-a;
+            
             display: block;
             border-radius: 50%;
             overflow: hidden;

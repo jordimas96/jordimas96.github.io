@@ -22,6 +22,18 @@
             row-gap: 1rem;
         }
 
+        .botoAmazon {
+            background-color: #152939;
+            color: #03cbfe;
+            padding: 1rem;
+            padding-bottom: 0.5rem;
+        
+            img {
+                height: 1.5rem;
+            }
+        
+        }
+
         ::ng-deep qrcode {
             .qrcode {
                 canvas {
@@ -34,18 +46,6 @@
             font-size: 0.9rem;
         }
     }
-}
-
-.botoAmazon {
-    background-color: #152939 !important;
-    color: #03cbfe !important;
-    padding: 1rem !important;
-    padding-bottom: 0.5rem !important;
-
-    img {
-        height: 1.5rem !important;
-    }
-
 }
 
 

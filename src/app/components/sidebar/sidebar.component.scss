@@ -45,8 +45,9 @@
         
         overflow: hidden;
         
-        button {
-            @include rs-button;
+        button.seccio {
+            @include reset-button;
+            
             font-size: 1.5rem;
             width: 100%;
             padding: 1rem 1.75rem;

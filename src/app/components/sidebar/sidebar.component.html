@@ -5,25 +5,25 @@
     </button>
 
     <nav class="seccions p-2">
-        <button routerLink="/" matRipple>
+        <button class="seccio" routerLink="/" matRipple>
             <i class="fa-solid fa-house"></i>
             @if (m.ca) { Inici }
             @if (m.es) { Inicio }
             @if (m.en) { Home }
         </button>
-        <button routerLink="/experience" matRipple>
+        <button class="seccio" routerLink="/experience" matRipple>
             <i class="fa-solid fa-briefcase"></i>
             @if (m.ca) { Experiència }
             @if (m.es) { Experiencia }
             @if (m.en) { Experience }
         </button>
-        <button routerLink="/projects" matRipple>
+        <button class="seccio" routerLink="/projects" matRipple>
             <i class="fa-solid fa-shapes"></i>
             @if (m.ca) { Projectes }
             @if (m.es) { Proyectos }
             @if (m.en) { Projects }
         </button>
-        <button routerLink="/art" matRipple>
+        <button class="seccio" routerLink="/art" matRipple>
             <i class="fa-solid fa-paintbrush"></i>
             @if (m.ca) { Art }
             @if (m.es) { Arte }
@@ -38,7 +38,7 @@
 
     <div class="zonaInferior p-3">
 
-        <!-- <app-icones-contacte class="d-block mb-4" /> -->
+        <!-- <app-icones-contacte class="mb-4" /> -->
 
         <div class="d-flex justify-content-between align-items-end">
             <app-dark-mode />

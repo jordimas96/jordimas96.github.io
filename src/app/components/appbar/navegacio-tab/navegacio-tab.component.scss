@@ -14,7 +14,6 @@ nav {
 
     @include pc { border-radius: 1.234rem; }
     @include gran {
-        width: fit-content;
         border-radius: 1.375rem;
     }
     
