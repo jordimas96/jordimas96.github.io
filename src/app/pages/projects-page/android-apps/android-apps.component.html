@@ -31,14 +31,14 @@
     </div>
     <div class="boto-i-qr row">
         <div class="col-6">
-            <a href="/external-pages/play-store/play-store.html" class="boto ambIcona" appMostrarAmbAnimacio matRipple>
+            <a [href]="m.env.assets + '/external-pages/play-store/play-store.html'" class="boto ambIcona" appMostrarAmbAnimacio matRipple>
                 Play Store
                 <img src="assets/icons/projects/play-store.png" alt="Google Play Store" class="logo">
             </a>
         </div>
         @if (!m.esAndroid()) {
             <div class="col-6" appMostrarAmbAnimacio>
-                <qrcode qrdata="https://jordimas96.github.io/external-pages/play-store/play-store.html" [errorCorrectionLevel]="'M'"
+                <qrcode [qrdata]="m.env.assets + '/external-pages/play-store/play-store.html'" [errorCorrectionLevel]="'M'"
                     colorDark="#005727" colorLight="#b8ffd8" title="Play Store QR"></qrcode>
 
                 <div class="scan-here-text text-80">

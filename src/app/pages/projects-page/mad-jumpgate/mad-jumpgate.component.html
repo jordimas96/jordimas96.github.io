@@ -33,7 +33,7 @@
                     @if(m.en) { Play }
                 </div>
                 <div class="contingut shadow-filter-1">
-                    <a href="https://jordimas96.github.io/external-pages/mad-jumpgate" class="bg-white" [class.apple-squircle]="m.esIOS()" matRipple>
+                    <a [href]="m.env.assets + '/external-pages/mad-jumpgate'" class="bg-white" [class.apple-squircle]="m.esIOS()" matRipple>
                         <img src="assets/images/mad-jumpgate/icons/unity.png" alt="Web player" title="Web player" class="logo">
                     </a>
                     <a href="https://jmaspgames.itch.io/mad-jumpgate" [class.apple-squircle]="m.esIOS()" matRipple>

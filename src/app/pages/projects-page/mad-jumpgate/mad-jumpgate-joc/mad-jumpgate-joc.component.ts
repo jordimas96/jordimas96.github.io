@@ -1,7 +1,9 @@
 import { Component, ElementRef, HostListener, ViewChild } from '@angular/core';
+import { DomSanitizer, SafeResourceUrl } from '@angular/platform-browser';
 import { MainService } from 'src/app/services/main.service';
 import { SharedImports } from 'src/app/shared/imports';
 import { Utils } from 'src/app/shared/utils';
+import { environment } from 'src/environments/environment';
 
 @Component({
     selector: 'app-mad-jumpgate-joc',
@@ -21,7 +23,11 @@ export class MadJumpgateJocComponent {
     public placeholderWidth = 0;
     public placeholderHeight = 0;
 
-    constructor(public m: MainService) { }
+    public iframeUrl: SafeResourceUrl;
+
+    constructor(public m: MainService) {
+        this.iframeUrl = m.sanitize(environment.assets + '/external-pages/mad-jumpgate');
+    }
 
     ngOnInit() {
         this.m.afterRootFadeIn(this.afterRootFadeIn.bind(this));

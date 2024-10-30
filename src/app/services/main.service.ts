@@ -5,7 +5,9 @@ import { AppbarComponent } from "src/app/components/appbar/appbar.component";
 import { FooterComponent } from "src/app/components/footer/footer.component";
 import { IndexComponent } from "src/app/components/index/index.component";
 import { SidebarComponent } from "src/app/components/sidebar/sidebar.component";
+import { environment } from "src/environments/environment";
 import { Utils } from "../shared/utils";
+import { DomSanitizer } from "@angular/platform-browser";
 
 // https://developerslogblog.wordpress.com/2019/04/23/how-to-use-angular-services-to-share-data-between-components/ //
 
@@ -27,6 +29,7 @@ export class MainService {
     public readonly debug = window.location.hostname == "localhost" || window.location.hostname.includes("192.168.1.");
     public scroll = window.pageYOffset;
     public window = window;
+    public env = environment;
 
     // Idiomes //
     public idioma: string = "en";
@@ -40,6 +43,7 @@ export class MainService {
         public router: Router,
         public route: ActivatedRoute,
         public gas: GoogleAnalyticsService,
+        private sanitizer: DomSanitizer,
     ) {
         this.u = Utils;
 
@@ -95,6 +99,9 @@ export class MainService {
     // Forçar temes - debug //
     public force(tema) { Utils.setCookieDays("forçartema", tema) }
     public noforce() { Utils.removeCookie("forçartema") }
+
+
+    public sanitize(url) { return this.sanitizer.bypassSecurityTrustResourceUrl(url); }
 
 
     // Funcions //

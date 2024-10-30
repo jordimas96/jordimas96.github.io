@@ -24,7 +24,7 @@
                     }
                 </div>
                 <div class="iconesStores shadow-filter-1">
-                    <a href="https://jordimas96.github.io/external-pages/play-store/apps/wallpaper-blurrer.html" [class.samsung-squircle]="m.esSamsung()" [class.xiaomi-rounded]="m.esXiaomi()" [class.apple-squircle]="m.esIOS()" appMostrarAmbAnimacio matRipple>
+                    <a [href]="m.env.assets + '/external-pages/play-store/apps/wallpaper-blurrer.html'" [class.samsung-squircle]="m.esSamsung()" [class.xiaomi-rounded]="m.esXiaomi()" [class.apple-squircle]="m.esIOS()" appMostrarAmbAnimacio matRipple>
                         <img src="assets/images/detalls-android/icons/play-store.png" alt="Play Store" title="Play Store" class="logo">
                     </a>
                     <a [href]="getAmazonLink_wallpaperBlurrer()" [class.samsung-squircle]="m.esSamsung()" [class.xiaomi-rounded]="m.esXiaomi()" [class.apple-squircle]="m.esIOS()" appMostrarAmbAnimacio matRipple>
@@ -41,7 +41,7 @@
         </div>
         <div class="video flex-4" appMostrarAmbAnimacio>
             <video muted loop class="mw-75 mw-sm-100 m-auto m-sm-0">
-                <source src="assets/images/detalls-android/wallpaper-blurrer.mp4" type="video/mp4">
+                <source [src]="m.env.assets_raw + 'images/detalls-android/wallpaper-blurrer.mp4'" type="video/mp4">
             </video>
         </div>
     </div>
@@ -75,7 +75,7 @@
                     }
                 </div>
                 <div class="iconesStores shadow-filter-1">
-                    <a href="https://jordimas96.github.io/external-pages/play-store/apps/text-mimicker.html" [class.samsung-squircle]="m.esSamsung()" [class.xiaomi-rounded]="m.esXiaomi()" [class.apple-squircle]="m.esIOS()" appMostrarAmbAnimacio matRipple>
+                    <a [href]="m.env.assets + '/external-pages/play-store/apps/text-mimicker.html'" [class.samsung-squircle]="m.esSamsung()" [class.xiaomi-rounded]="m.esXiaomi()" [class.apple-squircle]="m.esIOS()" appMostrarAmbAnimacio matRipple>
                         <img src="assets/images/detalls-android/icons/play-store.png" alt="Play Store" title="Play Store" class="logo">
                     </a>
                     <a [href]="getAmazonLink_textMimicker()" [class.samsung-squircle]="m.esSamsung()" [class.xiaomi-rounded]="m.esXiaomi()" [class.apple-squircle]="m.esIOS()" appMostrarAmbAnimacio matRipple>
@@ -91,7 +91,9 @@
             </div>
         </div>
         <div class="video flex-1 d-flex align-items-end rounded-3" style="background-color:#262626" appMostrarAmbAnimacio>
-            <video muted loop><source src="assets/images/detalls-android/text-mimicker.mp4" type="video/mp4"></video>
+            <video muted loop>
+                <source [src]="m.env.assets_raw + 'images/detalls-android/text-mimicker.mp4'" type="video/mp4">
+            </video>
         </div>
     </div>
 </section>
@@ -124,7 +126,7 @@
                     }
                 </div>
                 <div class="iconesStores shadow-filter-1">
-                    <a href="https://jordimas96.github.io/external-pages/play-store/apps/sus-tracker.html" [class.samsung-squircle]="m.esSamsung()" [class.xiaomi-rounded]="m.esXiaomi()" [class.apple-squircle]="m.esIOS()" appMostrarAmbAnimacio matRipple>
+                    <a [href]="m.env.assets + '/external-pages/play-store/apps/sus-tracker.html'" [class.samsung-squircle]="m.esSamsung()" [class.xiaomi-rounded]="m.esXiaomi()" [class.apple-squircle]="m.esIOS()" appMostrarAmbAnimacio matRipple>
                         <img src="assets/images/detalls-android/icons/play-store.png" alt="Play Store" title="Play Store" class="logo">
                     </a>
                 </div>
@@ -136,7 +138,9 @@
             </div>
         </div>
         <div class="video" appMostrarAmbAnimacio>
-            <video muted loop class="mb-1 mb-sm-0"><source src="assets/images/detalls-android/sus-tracker.mp4" type="video/mp4"></video>
+            <video muted loop class="mb-1 mb-sm-0">
+                <source [src]="m.env.assets_raw + 'images/detalls-android/sus-tracker.mp4'" type="video/mp4">
+            </video>
         </div>
     </div>
 </section>
@@ -166,7 +170,7 @@
                     }
                 </div>
                 <div class="iconesStores shadow-filter-1">
-                    <a href="https://jordimas96.github.io/external-pages/play-store/apps/breaking-ball.html" [class.samsung-squircle]="m.esSamsung()" [class.xiaomi-rounded]="m.esXiaomi()" [class.apple-squircle]="m.esIOS()" appMostrarAmbAnimacio matRipple>
+                    <a [href]="m.env.assets + '/external-pages/play-store/apps/breaking-ball.html'" [class.samsung-squircle]="m.esSamsung()" [class.xiaomi-rounded]="m.esXiaomi()" [class.apple-squircle]="m.esIOS()" appMostrarAmbAnimacio matRipple>
                         <img src="assets/images/detalls-android/icons/play-store.png" alt="Play Store" title="Play Store" class="logo">
                     </a>
                     <a [href]="getAmazonLink_breakingBall()" [class.samsung-squircle]="m.esSamsung()" [class.xiaomi-rounded]="m.esXiaomi()" [class.apple-squircle]="m.esIOS()" appMostrarAmbAnimacio matRipple>
@@ -185,7 +189,7 @@
         </div>
         <div class="video flex-4" appMostrarAmbAnimacio>
             <video muted loop class="mw-75 mw-sm-100 m-auto m-sm-0">
-                <source src="assets/images/detalls-android/breaking-ball.mp4" type="video/mp4">
+                <source [src]="m.env.assets_raw + 'images/detalls-android/breaking-ball.mp4'" type="video/mp4">
             </video>
         </div>
     </div>
