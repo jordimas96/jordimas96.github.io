@@ -164,10 +164,7 @@ html {
     // display: block;
 }
 a:not(.link-img, .no-style, .boto) {
-    text-decoration: none;
-    &:link, &:visited {
-        color: var(--link);
-    }
+    
 }
 a.no-style {
     color: inherit;
