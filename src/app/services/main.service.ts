@@ -6,9 +6,6 @@ import { FooterComponent } from "src/app/components/footer/footer.component";
 import { IndexComponent } from "src/app/components/index/index.component";
 import { SidebarComponent } from "src/app/components/sidebar/sidebar.component";
 import { Utils } from "../shared/utils";
-import { ExperienceCalculatorService } from "./experience-calculator.service";
-import { ThemeService } from "./theme.service";
-import { BlockGoogleAnalyticsService } from "./blockGoogleAnalytics.service";
 
 // https://developerslogblog.wordpress.com/2019/04/23/how-to-use-angular-services-to-share-data-between-components/ //
 
@@ -52,7 +49,7 @@ export class MainService {
             window["m"] = this;
             document.title = "Local";
             document.querySelector("link[rel*='icon']")!["href"] = "assets/favicon-local.ico";
-            document.body.style.overflowX = "visible";
+            // document.body.style.overflowX = "visible";
         } else {
             this.printarFirmaAConsola();
         }
@@ -76,14 +73,14 @@ export class MainService {
     // public esPc() { return !this.esMobil() }
     public esMobil() { return this.esPantallaTactil() }
     public esPc() { return !this.esPantallaTactil() }
-    public esPantallaMobil() { return window.innerWidth < 576; }
+    public esPantallaMobil() { return screen.width < 576; }
     public esPantallaPc() { return !this.esPantallaMobil(); }
     public esAndroid() { return /Android/i.test(navigator.userAgent); }
     public esIOS() { return /iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent); }
     public esSamsung() { return /SAMSUNG|SGH-[I|N|T]|GT-[I|P|N]|SM-[N|P|T|Z|G]|SHV-E|SCH-[I|J|R|S]|SPH-L/i.test(navigator.userAgent); }
     public esXiaomi() { return /XiaoMi\/MiuiBrowser/i.test(navigator.userAgent); }
     public esPantallaTactil() { return (('ontouchstart' in window) || (navigator.maxTouchPoints > 0) || (navigator.maxTouchPoints > 0)); }
-    public getAmpladaScrollbar() { return this.window.innerWidth - this.appbar.width(); }
+    public getAmpladaScrollbar() { return screen.width - this.appbar.width(); }
 
     public printarFirmaAConsola() {
         const text = "%c" +
