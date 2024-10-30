@@ -27,9 +27,14 @@
             transform-origin: center;
             transition: transform 0.3s;
 
-            &:hover img {
-                transform: scale(1.2);
-                filter: drop-shadow(0 0 6px) !important;
+            &:hover {
+                .title {
+                    transform: scale(1.1);
+                }
+                img {
+                    transform: scale(1.2);
+                    filter: drop-shadow(0 0 6px) !important;
+                }
             }
             
             img {
@@ -39,6 +44,7 @@
             .title {
                 font-size: 1.6rem;
                 text-transform: capitalize;
+                transition: transform 0.3s;
             }
             .text { }
         }
