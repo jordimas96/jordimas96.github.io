@@ -1,49 +1,53 @@
 @import "src/styles.scss";
 
 
-
-a.link-img {
-    img.title-icon {
-        transition: transform 0.3s;
-    }
-    &:hover {
-        img.title-icon {
-            transform: scale(1.4);
+.section {
+    .section-title {
+        a {
+            img.title-icon {
+                height: 2.4rem;
+                transition: transform 0.3s;
+            }
+            &:hover {
+                img.title-icon {
+                    transform: scale(1.4);
+                }
+            }
         }
     }
-}
 
-.seccioIcones {
-    // .play
-    // .gameplay
+    .seccioIcones {
+        // .play
+        // .gameplay
 
-    background-color: light-dark(var(--color-clar-50),  var(--color-clar-20));
-    border-radius: 1.25rem;
+        background-color: light-dark(var(--color-clar-50),  var(--color-clar-20));
+        border-radius: 1.25rem;
 
-    .titol {
-        font-size: 1rem;
-        line-height: 1rem;
-        text-align: center;
+        .titol {
+            font-size: 1rem;
+            line-height: 1rem;
+            text-align: center;
 
-        padding: 0 0.25rem;
-        margin-bottom: 1rem;
+            padding: 0 0.25rem;
+            margin-bottom: 1rem;
 
-    }
-    .contingut {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-        gap: 1rem;
+        }
+        .contingut {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 1rem;
 
-        a {
-            @include reset-a;
-            
-            display: block;
-            border-radius: 50%;
-            overflow: hidden;
-    
-            .logo {
-                height: 3rem;
+            a {
+                @include reset-a;
+                
+                display: block;
+                border-radius: 50%;
+                overflow: hidden;
+        
+                .logo {
+                    height: 3rem;
+                }
             }
         }
     }

@@ -3,7 +3,10 @@
 .llenguatges {
     .titol-llenguatges {
         font-size: 1.75rem;
-        @include mobil { font-size: 1.4rem; }
+
+        @include mobil {
+            font-size: 1.4rem;
+        }
     }
 
     .botonsCanviarVista {
@@ -52,11 +55,13 @@
     }
 
     .botoVeureMes {
-        display: inline;
-        font-size: 1.6rem;
+        display: inline-flex;
+        flex-direction: column;
+        gap: 0;
 
         padding: 1rem 2rem;
-        border-radius: 50rem;
+
+        font-size: 1.6rem;
 
         i {
             display: block;

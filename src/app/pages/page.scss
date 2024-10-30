@@ -1,6 +1,7 @@
 @import "src/styles.scss";
 
 ::ng-deep .page {
+    font-size: 1.1rem;
     padding: 0.5rem 0.5rem 0rem;
 
     @include tablet {
@@ -27,5 +28,10 @@
         padding: 2rem 4rem;
         border-radius: 2rem;
         font-size: 1.5rem;
+
+        &:hover {
+            // border-radius: 3rem;
+            box-shadow: inset 0 0 0 1000px light-dark(#fff2, #fff8) !important;
+        }
     }
 }

@@ -1,15 +1,7 @@
 @import "src/styles.scss";
 
 .botoDarkMode, .botoAutoMode {
-    position: relative;
-    background-color: var(--accent-color);
-    color: var(--fons);
-    font-weight: 800;
     padding: initial; // iPhone/iPad fix //
-    border: none;
-    border-radius: 1000px;
-    outline: none;
-    cursor: pointer;
     transition: background-color 0.3s linear, width 0.3s, height 0.3s, font-size 0.3s, transform 0.1s;
     
     @include mobil {

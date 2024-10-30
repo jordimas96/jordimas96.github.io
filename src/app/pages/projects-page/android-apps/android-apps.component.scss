@@ -1,13 +1,17 @@
 @import "src/styles.scss";
 
+
 .section {
-    a.link-img {
-        img.title-icon {
-            transition: transform 0.3s;
-        }
-        &:hover {
+    .section-title {
+        a {
             img.title-icon {
-                transform: scale(1.4);
+                height: 1.6rem;
+                transition: transform 0.3s;
+            }
+            &:hover {
+                img.title-icon {
+                    transform: scale(1.4);
+                }
             }
         }
     }
@@ -50,7 +54,7 @@
 
 
 // Icona en mode clar: afegim filtre forçat per a fer-la més fosca i que es vegi bé //
-section#android .link-img .title-icon {
+section#android .section-title .title-icon {
     @include light {
         filter: brightness(0.7) saturate(2);
     }

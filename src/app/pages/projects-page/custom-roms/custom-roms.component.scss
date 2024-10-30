@@ -1,17 +1,18 @@
+@import "src/styles.scss";
 
 
-
-
-
-
-
-a.link-img {
-    img.title-icon {
-        transition: transform 0.3s;
-    }
-    &:hover {
-        img.title-icon {
-            transform: scale(1.4);
+.section {
+    .section-title {
+        a {
+            img.title-icon {
+                height: 2.4rem;
+                transition: transform 0.3s;
+            }
+            &:hover {
+                img.title-icon {
+                    transform: scale(1.4);
+                }
+            }
         }
     }
 }
