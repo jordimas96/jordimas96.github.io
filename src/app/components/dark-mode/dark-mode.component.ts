@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { MainService } from 'src/app/services/main.service';
 import { ThemeService } from 'src/app/services/theme.service';
 import { SharedImports } from 'src/app/shared/imports';
@@ -56,7 +56,7 @@ export class DarkModeComponent {
         }
 
         // Variables //
-        let spread = Utils.mesGran(window.innerWidth, window.innerHeight);
+        let spread = Utils.max(window.innerWidth, window.innerHeight);
         let blur = 500;
         var color = this.ts.modeFosc ? "var(--color-l-8)" : "var(--color-fosc)";
 
@@ -126,7 +126,7 @@ export class DarkModeComponent {
     accioDarkMode() {
         this.ts.modeFosc = !this.ts.modeFosc;
         this.ts.actTema();
-        Utils.setCookieDays("darkmode", this.ts.modeFosc ? 1 : 0)
+        Utils.setCookieDays("darkmode", this.ts.modeFosc)
     }
 
     accioAutoDarkMode() {

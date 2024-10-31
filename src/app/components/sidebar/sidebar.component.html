@@ -1,33 +1,52 @@
-<div class="sidebar" [class.open]="open">
-
-    <button class="boto botoText botoSidebar rounded-pill" (click)="this.tancar()" matRipple>
-        <i class="fa-solid fa-close d-block"></i>
-    </button>
+<div
+    #sidebar
+    class="sidebar"
+    [class.open]="open"
+    [class.rail]="rail" [class.drawer]="!rail"
+    [class.mobil]="vistaMobil()"
+    style="--DRAWER-WIDTH: {{ DRAWER_WIDTH }}px; --RAIL-WIDTH: {{ RAIL_WIDTH }}px; --APPBAR-HEIGHT: {{ ls.getAlturaAppbar() }}px;"
+    >
 
     <nav class="seccions p-2">
-        <button class="seccio" routerLink="/" matRipple>
-            <i class="fa-solid fa-house"></i>
-            @if (m.ca) { Inici }
-            @if (m.es) { Inicio }
-            @if (m.en) { Home }
+        <button
+            [class.rail]="rail" [class.drawer]="!rail"
+            routerLinkActive="selected" [routerLinkActiveOptions]="{exact: true}" routerLink="/"
+            [title]="rail ? getText.inici() : ''"
+            matRipple>
+            <i class="icona fa-solid fa-house"></i>
+            <div class="text">
+                {{ getText.inici() }}
+            </div>
         </button>
-        <button class="seccio" routerLink="/experience" matRipple>
-            <i class="fa-solid fa-briefcase"></i>
-            @if (m.ca) { Experiència }
-            @if (m.es) { Experiencia }
-            @if (m.en) { Experience }
+        <button
+            [class.rail]="rail" [class.drawer]="!rail"
+            routerLinkActive="selected" [routerLinkActiveOptions]="{exact: true}" routerLink="/experience"
+            [title]="rail ? getText.experiencia() : ''"
+            matRipple>
+            <i class="icona fa-solid fa-briefcase"></i>
+            <div class="text">
+                {{ getText.experiencia() }}
+            </div>
         </button>
-        <button class="seccio" routerLink="/projects" matRipple>
-            <i class="fa-solid fa-shapes"></i>
-            @if (m.ca) { Projectes }
-            @if (m.es) { Proyectos }
-            @if (m.en) { Projects }
+        <button
+            [class.rail]="rail" [class.drawer]="!rail"
+            routerLinkActive="selected" [routerLinkActiveOptions]="{exact: true}" routerLink="/projects"
+            [title]="rail ? getText.projectes() : ''"
+            matRipple>
+            <i class="icona fa-solid fa-shapes"></i>
+            <div class="text">
+                {{ getText.projectes() }}
+            </div>
         </button>
-        <button class="seccio" routerLink="/art" matRipple>
-            <i class="fa-solid fa-paintbrush"></i>
-            @if (m.ca) { Art }
-            @if (m.es) { Arte }
-            @if (m.en) { Art }
+        <button
+            [class.rail]="rail" [class.drawer]="!rail"
+            routerLinkActive="selected" [routerLinkActiveOptions]="{exact: true}" routerLink="/art"
+            [title]="rail ? getText.art() : ''"
+            matRipple>
+            <i class="icona fa-solid fa-paintbrush"></i>
+            <div class="text">
+                {{ getText.art() }}
+            </div>
         </button>
     </nav>
 
@@ -36,15 +55,9 @@
 
 
 
-    <div class="zonaInferior p-3">
-
-        <!-- <app-icones-contacte class="mb-4" /> -->
-
-        <div class="d-flex justify-content-between align-items-end">
-            <app-dark-mode />
-            <app-selector-idioma />
-        </div>
-        
+    <div class="zonaInferior p-2">
+        <app-dark-mode />
+        <app-selector-idioma [class.d-none]="!mostrar.idioma" />
     </div>
 
 
@@ -52,8 +65,11 @@
     <div class="hiddenButtonBlockGoogleAnalytics" (click)="blockGoogleAnalyticsService.hiddenButtonClick()"></div>
 
 </div>
-@if (m.esPantallaTactil()) {
+@if (mobil && open) {
+    <div class="backdrop" [style.top.px]="ls.getAlturaAppbar()" (click)="open = false"></div>
+}
+<!-- @if (m.esPantallaTactil()) {
     <div class="backdrop" (click)="this.tancar()"></div>
 } @else {
     <div class="backdrop" (mouseenter)="this.tancar()"></div>
-}
+} -->

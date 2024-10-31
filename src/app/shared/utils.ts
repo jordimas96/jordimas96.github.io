@@ -8,6 +8,7 @@ export class Utils {
 
     // Cookies //
     public static setCookie(cname, cvalue, exseconds = 3600) {
+        if (typeof (cvalue) == "boolean") cvalue = cvalue ? 1 : 0;
         const d = new Date();
         d.setTime(d.getTime() + (exseconds * 1000));
         let expires = "expires=" + d.toUTCString();
@@ -64,7 +65,10 @@ export class Utils {
     public static arrayConte(array, valor) {
         return array.includes(valor);
     }
-    public static mesGran(a, b) {
+    public static min(a, b) {
+        return a < b ? a : b;
+    }
+    public static max(a, b) {
         return a > b ? a : b;
     }
     public static getRouteActual() {

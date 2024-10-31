@@ -1,6 +1,6 @@
 <header #appbar id="appbar" class="appbar v" [ngClass]="{'shadow-3':m.scroll>0 && !ts.modeFosc, 'scrolled':m.scroll>0}" appMostrarAmbAnimacio>
     
-    <button class="boto botoText botoSidebar rounded-pill" (click)="m.sidebar.obrir()" (mouseover)="m.sidebar.obrir()" matRipple>
+    <button class="boto botoText botoSidebar rounded-pill" (click)="m.sidebar.toggle()" matRipple>
         <i class="fa-solid fa-bars d-block"></i>
     </button>
     

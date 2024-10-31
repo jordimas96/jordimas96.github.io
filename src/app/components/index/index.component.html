@@ -1,5 +1,5 @@
 @if(vistaMobil()) {
-    <div #index class="index mobil" [style.top.px]="m.appbar.height()" (mousemove)="scrollOnHover($event)">
+    <div #index class="index mobil" [style.top.px]="ls.getAlturaAppbar()" (mousemove)="scrollOnHover($event)">
 
         @for (o of getOpcions(); track o.id) {
             @if(idExists(o.id)) {
@@ -8,7 +8,7 @@
         }
     </div>
 } @else {
-    <div #index class="index pc" [style.top.px]="m.appbar.height()">
+    <div #index class="index pc" [style.top.px]="ls.getAlturaAppbar()">
 
         @for (o of getOpcions(); track o.id) {
             @if(idExists(o.id)) {

@@ -1,10 +1,12 @@
-import { Component, ElementRef, HostListener, ViewChild } from '@angular/core';
+import { OnInit } from '@angular/core';
+import { AfterViewInit, Component, ElementRef, HostListener, ViewChild } from '@angular/core';
 import * as $ from "jquery";
 import { SelectorIdiomaComponent } from 'src/app/components/selector-idioma/selector-idioma.component';
 import { MainService } from 'src/app/services/main.service';
 import { ThemeService } from 'src/app/services/theme.service';
 import { SharedImports } from 'src/app/shared/imports';
 import { NavegacioTabComponent } from './navegacio-tab/navegacio-tab.component';
+import { LayoutService } from 'src/app/services/layout.service';
 
 
 @Component({
@@ -18,13 +20,14 @@ import { NavegacioTabComponent } from './navegacio-tab/navegacio-tab.component';
         SelectorIdiomaComponent,
     ]
 })
-export class AppbarComponent {
+export class AppbarComponent implements OnInit, AfterViewInit {
 
     @ViewChild('appbar') appbar: ElementRef;
 
     constructor(
         public m: MainService,
-        public ts: ThemeService
+        public ts: ThemeService,
+        public ls: LayoutService,
     ) {
         m.appbar = this;
     }
@@ -36,10 +39,11 @@ export class AppbarComponent {
         setTimeout(() => { $("app-root").fadeIn(300); }, this.m.tempsDelayCarregaPag);
     }
 
+    ngAfterViewInit() {
+        this.ls.appbar = this.appbar.nativeElement;
+    }
+
     afterRootFadeIn() {
-        document.body.addEventListener("mouseleave", () => {
-            this.m.sidebar.tancar()
-        });
     }
 
     width() {

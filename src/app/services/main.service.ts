@@ -77,14 +77,14 @@ export class MainService {
     // public esPc() { return !this.esMobil() }
     public esMobil() { return this.esPantallaTactil() }
     public esPc() { return !this.esPantallaTactil() }
-    public esPantallaMobil() { return screen.width < 576; }
+    public esPantallaMobil() { return Utils.min(window.innerWidth,screen.width) < 576; }
     public esPantallaPc() { return !this.esPantallaMobil(); }
     public esAndroid() { return /Android/i.test(navigator.userAgent); }
     public esIOS() { return /iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent); }
     public esSamsung() { return /SAMSUNG|SGH-[I|N|T]|GT-[I|P|N]|SM-[N|P|T|Z|G]|SHV-E|SCH-[I|J|R|S]|SPH-L/i.test(navigator.userAgent); }
     public esXiaomi() { return /XiaoMi\/MiuiBrowser/i.test(navigator.userAgent); }
     public esPantallaTactil() { return (('ontouchstart' in window) || (navigator.maxTouchPoints > 0) || (navigator.maxTouchPoints > 0)); }
-    public getAmpladaScrollbar() { return screen.width - this.appbar.width(); }
+    public getAmpladaScrollbar() { return window.innerWidth - this.appbar.width(); }
 
     public printarFirmaAConsola() {
         const text = "%c" +

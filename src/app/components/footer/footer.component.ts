@@ -1,4 +1,5 @@
-import { Component, ElementRef } from '@angular/core';
+import { AfterViewInit, Component, ElementRef, OnInit, ViewChild } from '@angular/core';
+import { LayoutService } from 'src/app/services/layout.service';
 import { MainService } from 'src/app/services/main.service';
 import { RickrollService } from 'src/app/services/rickroll.service';
 import { SharedImports } from 'src/app/shared/imports';
@@ -13,7 +14,9 @@ import { SharedImports } from 'src/app/shared/imports';
         ...SharedImports,
     ]
 })
-export class FooterComponent {
+export class FooterComponent implements OnInit, AfterViewInit{
+    
+    @ViewChild("footer") footerRef: ElementRef;
 
     public colorFirma = Math.floor(Math.random() * 360);
     public bateria = 100;
@@ -22,7 +25,8 @@ export class FooterComponent {
     constructor(
         public m: MainService,
         public rootElement: ElementRef,
-        public rr: RickrollService
+        public rr: RickrollService,
+        public ls: LayoutService,
     ) {
         m.footer = this;
     }
@@ -37,6 +41,10 @@ export class FooterComponent {
                 this.carregant = bateria.charging;
             })
         } catch (e) { }
+    }
+
+    ngAfterViewInit() {
+        this.ls.footer = this.footerRef.nativeElement;
     }
 
     afterRootFadeIn() { }

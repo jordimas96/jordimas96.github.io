@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { SkillComponent } from 'src/app/components/skill/skill.component';
 import { Skills } from 'src/app/enums/skills.enum';
 import { ExperienceCalculatorService } from 'src/app/services/experience-calculator.service';
+import { LayoutService } from 'src/app/services/layout.service';
 import { MainService } from 'src/app/services/main.service';
 import { SharedImports } from 'src/app/shared/imports';
 import { Utils } from 'src/app/shared/utils';
@@ -19,12 +20,13 @@ import { Utils } from 'src/app/shared/utils';
 export class LanguagesComponent {
     Skills = Skills;
 
-    public showTime = false;
+    public showTime: boolean = false;
     public sorted = false;
 
     constructor(
         public m: MainService,
-        public exp: ExperienceCalculatorService
+        public exp: ExperienceCalculatorService,
+        public ls: LayoutService,
     ) {
         this.showTime = Utils.getCookie("showTime") == "1";
     }
@@ -42,10 +44,10 @@ export class LanguagesComponent {
         window.scrollTo({
             top:
                 document.getElementById("languages")!.offsetTop
-                - (this.m.appbar.height() + (this.m.index.vistaMobil() ? this.m.index.index.nativeElement.offsetHeight : 10))
+                - (this.ls.getAlturaAppbar() + (this.m.index.vistaMobil() ? this.ls.index.offsetHeight : 10))
         });
 
-        Utils.setCookieDays("showTime", this.showTime ? 1 : 0);
+        Utils.setCookieDays("showTime", this.showTime);
     }
     async sort_click(sorted?) {
         if (sorted != undefined) this.sorted = sorted

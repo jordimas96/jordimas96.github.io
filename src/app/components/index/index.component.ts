@@ -1,4 +1,5 @@
-import { Component, ElementRef, ViewChild } from '@angular/core';
+import { AfterViewInit, Component, ElementRef, OnInit, ViewChild } from '@angular/core';
+import { LayoutService } from 'src/app/services/layout.service';
 import { MainService } from 'src/app/services/main.service';
 import { SharedImports } from 'src/app/shared/imports';
 
@@ -12,16 +13,23 @@ import { SharedImports } from 'src/app/shared/imports';
         ...SharedImports,
     ]
 })
-export class IndexComponent {
+export class IndexComponent implements OnInit, AfterViewInit {
 
-    @ViewChild('index') index: ElementRef;
+    @ViewChild('index') indexRef: ElementRef;
 
-    constructor(public m: MainService) {
+    constructor(
+        public m: MainService,
+        public ls: LayoutService,
+    ) {
         m.index = this;
     }
     async ngOnInit() {
         this.m.afterRootFadeIn(this.afterRootFadeIn.bind(this));
 
+    }
+
+    ngAfterViewInit() {
+        this.ls.index = this.indexRef.nativeElement;
     }
 
     afterRootFadeIn() { }
@@ -35,7 +43,7 @@ export class IndexComponent {
         let offset = this.m.appbar.height();
 
         if (this.vistaMobil())
-            offset += this.index.nativeElement.offsetHeight;
+            offset += this.indexRef.nativeElement.offsetHeight;
         else
             offset += 10;
 
@@ -50,14 +58,14 @@ export class IndexComponent {
         return ((window.innerWidth-17) - 940) / 2;
     }
     public vistaMobil() {
-        // return false;
+        return true;
         return window.innerWidth < 1300;
     }
 
     public scrollOnHover(event: MouseEvent) {
         if (this.m.esPantallaTactil()) return;
         
-        let i = this.index.nativeElement;
+        let i = this.indexRef.nativeElement;
         let pos = event.clientX / i.clientWidth;
 
         pos = pos * 1.5 - 0.25;
