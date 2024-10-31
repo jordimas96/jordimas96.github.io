@@ -1,13 +1,13 @@
 import { Injectable } from "@angular/core";
+import { DomSanitizer } from "@angular/platform-browser";
 import { ActivatedRoute, NavigationEnd, Router } from '@angular/router';
 import { GoogleAnalyticsService } from 'ngx-google-analytics';
 import { AppbarComponent } from "src/app/components/appbar/appbar.component";
 import { FooterComponent } from "src/app/components/footer/footer.component";
 import { IndexComponent } from "src/app/components/index/index.component";
 import { SidebarComponent } from "src/app/components/sidebar/sidebar.component";
+import { Utils } from "src/app/shared/utils";
 import { environment } from "src/environments/environment";
-import { Utils } from "../shared/utils";
-import { DomSanitizer } from "@angular/platform-browser";
 
 // https://developerslogblog.wordpress.com/2019/04/23/how-to-use-angular-services-to-share-data-between-components/ //
 

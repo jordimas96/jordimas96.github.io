@@ -1,11 +1,11 @@
 import { Component } from '@angular/core';
 import { NavigationEnd, RouterLink } from '@angular/router';
+import { DarkModeComponent } from 'src/app/components/dark-mode/dark-mode.component';
+import { IconesContacteComponent } from 'src/app/components/icones-contacte/icones-contacte.component';
+import { SelectorIdiomaComponent } from 'src/app/components/selector-idioma/selector-idioma.component';
 import { BlockGoogleAnalyticsService } from 'src/app/services/blockGoogleAnalytics.service';
 import { MainService } from 'src/app/services/main.service';
 import { SharedImports } from 'src/app/shared/imports';
-import { IconesContacteComponent } from '../icones-contacte/icones-contacte.component';
-import { DarkModeComponent } from './dark-mode/dark-mode.component';
-import { SelectorIdiomaComponent } from './selector-idioma/selector-idioma.component';
 
 
 @Component({

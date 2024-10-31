@@ -1,6 +1,6 @@
 import { Component, ElementRef, HostListener, ViewChild } from '@angular/core';
 import * as $ from "jquery";
-import { SelectorIdiomaComponent } from 'src/app/components/sidebar/selector-idioma/selector-idioma.component';
+import { SelectorIdiomaComponent } from 'src/app/components/selector-idioma/selector-idioma.component';
 import { MainService } from 'src/app/services/main.service';
 import { ThemeService } from 'src/app/services/theme.service';
 import { SharedImports } from 'src/app/shared/imports';
