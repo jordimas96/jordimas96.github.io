@@ -7,7 +7,7 @@
     style="--DRAWER-WIDTH: {{ DRAWER_WIDTH }}px; --RAIL-WIDTH: {{ RAIL_WIDTH }}px; --APPBAR-HEIGHT: {{ ls.getAlturaAppbar() }}px;"
     >
 
-    <nav class="seccions p-2">
+    <nav class="seccions">
         <button
             [class.rail]="rail" [class.drawer]="!rail"
             routerLinkActive="selected" [routerLinkActiveOptions]="{exact: true}" routerLink="/"
@@ -54,10 +54,9 @@
 
 
 
-
-    <div class="zonaInferior p-2">
+    <div class="zonaInferior" [class.hide-buttons]="!mostrarBotonsBottom">
         <app-dark-mode />
-        <app-selector-idioma [class.d-none]="!mostrar.idioma" />
+        <app-selector-idioma />
     </div>
 
 

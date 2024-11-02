@@ -2,7 +2,7 @@
 
 .botoDarkMode, .botoAutoMode {
     padding: initial; // iPhone/iPad fix //
-    transition: background-color 0.3s linear, width 0.3s, height 0.3s, font-size 0.3s, transform 0.1s;
+    transition: background-color 0.3s linear, width 0.3s, height 0.3s, font-size 0.3s, transform 0.1s, opacity 0.3s;
     
     @include mobil {
         height: 2.5rem;
@@ -21,8 +21,10 @@
     }
 }
 .botoDarkMode {
+    // transform-origin: 37.5% 50%;
     @include mobil { width: 3.5rem; }
-    @include tablet { width: 3rem; } //4rem;
+    @include tablet { width: 4rem; }
+    // i { transition: rotate 0.3s; }
 }
 .botoAutoMode {
     @include mobil { width: 2.5rem; }

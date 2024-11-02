@@ -41,9 +41,7 @@ export class SidebarComponent implements OnInit, AfterViewInit {
     public railBackupAlRedimensionar;
 
 
-    public mostrar = {
-        idioma: true,
-    }
+    public mostrarBotonsBottom;
 
     constructor(
         public m: MainService,
@@ -56,6 +54,8 @@ export class SidebarComponent implements OnInit, AfterViewInit {
     ngOnInit() {
         
         this.llegirVistaCookie();
+
+        this.mostrarBotonsBottom = !this.rail;
 
         this.onResize();
 
@@ -98,9 +98,8 @@ export class SidebarComponent implements OnInit, AfterViewInit {
     }
     canviarVista() {
         // Accions abans animació //
-        if (!open) {
-            this.mostrar.idioma = true;
-        }
+        if (this.rail)
+            this.mostrarBotonsBottom = true;
 
         // En PC, mode rail/drawer //
         this.rail = !this.rail;
@@ -128,9 +127,8 @@ export class SidebarComponent implements OnInit, AfterViewInit {
     }
 
     fiAnimacio() {
-        if (!open) {
-            this.mostrar.idioma = false;
-            document.querySelector("app-sidebar app-dark-mode .botoAutoMode")!.setAttribute("style", "display: none;");
+        if (this.rail) {
+            this.mostrarBotonsBottom = false;
         }
     }
 

@@ -1,6 +1,8 @@
 @import "src/styles.scss";
 
 .select-idioma {
+    align-self: center;
+
     background-color: var(--fons-40);
     color: var(--text);
     font-size: 1.1rem;
@@ -9,14 +11,10 @@
     border-radius: 5px;
     padding: 0.25rem 0.5rem 0.25rem 1rem;
 
-    outline: none;
     cursor: pointer;
 
     @include tablet {
         font-size: 1.2rem;
-    }
-    @include gran {
-        padding: 0.25rem 2rem 0.25rem 1.5rem;
     }
     @include tactil {
         border-radius: 0.6rem !important;

@@ -27,8 +27,10 @@
     app-navegacio-tab {
         margin: 0.5rem;
     }
-    app-selector-idioma {
-        align-items: center;
+    ::ng-deep app-selector-idioma {
+        @include gran {
+            padding: 0.25rem 2rem 0.25rem 1.5rem;
+        }
     }
 
 }
