@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component } from '@angular/core';
 import { MainService } from 'src/app/services/main.service';
 import { ThemeService } from 'src/app/services/theme.service';
 import { SharedImports } from 'src/app/shared/imports';
@@ -37,7 +37,7 @@ export class DarkModeComponent {
 
 
     
-    async animacioDarkMode(nomBoto) {
+    async animacioDarkMode(nomBoto: "dark" | "auto") {
         // Sistema antic sense cortina //
         // $("*").css("transition", "background-color 0.3s linear, color 0.3s linear, border-color 0.3s linear, filter 0.3s linear");
         // if (nomBoto == "dark") this.accioDarkMode();

@@ -23,7 +23,7 @@
     }
 
     &.drawer {
-        width: 281px;
+        width: var(--DRAWER-WIDTH);
         // border-radius: 0 2.5rem 2.5rem 0;
     }
     &.rail {

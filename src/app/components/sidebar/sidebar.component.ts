@@ -123,7 +123,7 @@ export class SidebarComponent implements OnInit, AfterViewInit {
         if (this.mobil)
             this.ls.paddingLeftPagina = 0;
         else
-            this.ls.paddingLeftPagina = this.rail ? (4 * 16) : 281;
+            this.ls.paddingLeftPagina = this.rail ? this.RAIL_WIDTH : this.DRAWER_WIDTH;
     }
 
     fiAnimacio() {
