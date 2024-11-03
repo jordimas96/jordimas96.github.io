@@ -41,8 +41,6 @@ export class SidebarComponent implements OnInit, AfterViewInit {
     public railBackupAlRedimensionar;
 
 
-    public mostrarBotonsBottom;
-
     constructor(
         public m: MainService,
         public blockGoogleAnalyticsService: BlockGoogleAnalyticsService,
@@ -56,8 +54,6 @@ export class SidebarComponent implements OnInit, AfterViewInit {
         this.llegirVistaCookie();
 
         this.onResize();
-        
-        this.mostrarBotonsBottom = !this.rail;
 
         this.m.router.events.subscribe(event => {
             if (event instanceof NavigationEnd) {
@@ -96,17 +92,10 @@ export class SidebarComponent implements OnInit, AfterViewInit {
         this.open = !this.open;
     }
     canviarVista() {
-        // Accions abans animació //
-        if (this.rail)
-            this.mostrarBotonsBottom = true;
 
         // En PC, mode rail/drawer //
         this.rail = !this.rail;
 
-        // Accions després animació //
-        setTimeout(() => {
-            this.fiAnimacio();
-        }, 300);
 
         this.escriureVistaCookie(this.rail);
         this.railBackupAlRedimensionar = this.rail;
@@ -124,13 +113,6 @@ export class SidebarComponent implements OnInit, AfterViewInit {
         else
             this.ls.paddingLeftPagina = this.rail ? this.RAIL_WIDTH : this.DRAWER_WIDTH;
     }
-
-    fiAnimacio() {
-        if (this.rail) {
-            this.mostrarBotonsBottom = false;
-        }
-    }
-
 
     obrir() {
         // Get the middle point of scroll, for the transform-origin of the .page element //

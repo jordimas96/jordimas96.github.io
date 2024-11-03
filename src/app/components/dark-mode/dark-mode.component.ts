@@ -57,9 +57,11 @@ export class DarkModeComponent {
         var color = this.ts.modeFosc ? "var(--color-l-8)" : "var(--color-fosc)";
 
 
-        // Transicions //
         $("*:not(.botoDarkMode)").css("transition", "none");
+        $(".sidebar").css("overflow", "visible");
+        $("*").css("pointer-events", "none");
         this.botonsActius = false;
+
 
         // Colocar shadow al primer punt //
         $(".botoDarkMode").css({
@@ -113,7 +115,10 @@ export class DarkModeComponent {
                 "box-shadow": "none"
             });
 
+        
         $("*:not(.botoDarkMode)").css("transition", "");
+        $(".sidebar").css("overflow", "");
+        $("*").css("pointer-events", "");
         this.botonsActius = true;
 
     }

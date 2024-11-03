@@ -10,6 +10,7 @@
     background-color: transparent;
     backdrop-filter: blur(40px) saturate(2);
 
+    overflow: hidden;
     z-index: 1101;
 
     transition: width 0.3s, translate 0.3s, transform 0.3s, box-shadow 0.3s;
