@@ -4,14 +4,8 @@
     padding: initial; // iPhone/iPad fix //
     transition: background-color 0.3s linear, width 0.3s, height 0.3s, font-size 0.3s, transform 0.1s, opacity 0.3s;
     
-    @include mobil {
-        height: 2.5rem;
-        font-size: 1.15rem;
-    }
-    @include tablet {
-        height: 3rem;
-        font-size: 1.3rem;
-    }
+    height: 3rem;
+    font-size: 1.3rem;
 
     &.transicio-1 {
         transition: background-color 0.3s linear, width 0.3s, height 0.3s, font-size 0.3s, box-shadow 400ms ease-in;
@@ -21,12 +15,11 @@
     }
 }
 .botoDarkMode {
+    width: 4rem;
+    
     // transform-origin: 37.5% 50%;
-    @include mobil { width: 3.5rem; }
-    @include tablet { width: 4rem; }
     // i { transition: rotate 0.3s; }
 }
 .botoAutoMode {
-    @include mobil { width: 2.5rem; }
-    @include tablet { width: 3rem; }
+    width: 3rem;
 }

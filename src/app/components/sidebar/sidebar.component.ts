@@ -55,10 +55,9 @@ export class SidebarComponent implements OnInit, AfterViewInit {
         
         this.llegirVistaCookie();
 
-        this.mostrarBotonsBottom = !this.rail;
-
         this.onResize();
-
+        
+        this.mostrarBotonsBottom = !this.rail;
 
         this.m.router.events.subscribe(event => {
             if (event instanceof NavigationEnd) {
@@ -155,6 +154,12 @@ export class SidebarComponent implements OnInit, AfterViewInit {
         experiencia: () => ["Experiència", "Experiencia", "Experience"][this.m.idiomaIndex],
         projectes:   () => ["Projectes", "Proyectos", "Projects"][this.m.idiomaIndex],
         art:         () => ["Art", "Arte", "Art"][this.m.idiomaIndex],
+        cv:          () => ["Currículum", "Currículum", "Resume"][this.m.idiomaIndex],
+    }
+
+
+    getRutaCV() {
+        return `assets/documents/CV/CV Jordi Mas Parramon ${this.m.idioma.toUpperCase()}.pdf`;
     }
 
 

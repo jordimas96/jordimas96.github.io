@@ -15,6 +15,8 @@ import { Utils } from 'src/app/shared/utils';
 })
 export class DarkModeComponent {
 
+    public botonsActius = true;
+
     constructor(
         public m: MainService,
         public ts: ThemeService
@@ -33,21 +35,15 @@ export class DarkModeComponent {
 
     afterRootFadeIn() {
     }
-    
 
 
-    
     async animacioDarkMode(nomBoto: "dark" | "auto") {
-        // Sistema antic sense cortina //
-        // $("*").css("transition", "background-color 0.3s linear, color 0.3s linear, border-color 0.3s linear, filter 0.3s linear");
-        // if (nomBoto == "dark") this.accioDarkMode();
-        // if (nomBoto == "auto") this.accioAutoDarkMode();
-        // await Utils.wait(600);
-        // $("*").css("transition", "");
-        // return;
-
-
-
+        this.animacioDarkModeTipusCortinaShadow(nomBoto);
+        // this.animacioDarkModeTipusFade(nomBoto);
+    }
+    
+    // Mètode 2 //
+    async animacioDarkModeTipusCortinaShadow(nomBoto: "dark" | "auto") {
         // Si es click al auto i no cal fer efecte, no el fem //
         if (nomBoto == "auto" && this.ts.modeFosc == Utils.systemDarkMode()) {
             this.accioAutoDarkMode();
@@ -63,8 +59,7 @@ export class DarkModeComponent {
 
         // Transicions //
         $("*:not(.botoDarkMode)").css("transition", "none");
-
-        $(".botoDarkMode, .botoAutoMode").prop("disabled", true);
+        this.botonsActius = false;
 
         // Colocar shadow al primer punt //
         $(".botoDarkMode").css({
@@ -119,8 +114,18 @@ export class DarkModeComponent {
             });
 
         $("*:not(.botoDarkMode)").css("transition", "");
-        $(".botoDarkMode, .botoAutoMode").prop("disabled", false);
+        this.botonsActius = true;
 
+    }
+
+    // Mètode 1 //
+    async animacioDarkModeTipusFade(nomBoto: "dark" | "auto") {
+        // Sistema antic sense cortina //
+        $("*").css("transition", "background-color 0.3s linear, color 0.3s linear, border-color 0.3s linear, filter 0.3s linear");
+        if (nomBoto == "dark") this.accioDarkMode();
+        if (nomBoto == "auto") this.accioAutoDarkMode();
+        await Utils.wait(600);
+        $("*").css("transition", "");
     }
 
     accioDarkMode() {

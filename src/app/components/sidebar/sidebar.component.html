@@ -9,6 +9,7 @@
 
     <nav class="seccions">
         <button
+            class="rs boto-seccio"
             [class.rail]="rail" [class.drawer]="!rail"
             routerLinkActive="selected" [routerLinkActiveOptions]="{exact: true}" routerLink="/"
             [title]="rail ? getText.inici() : ''"
@@ -19,6 +20,7 @@
             </div>
         </button>
         <button
+            class="rs boto-seccio"
             [class.rail]="rail" [class.drawer]="!rail"
             routerLinkActive="selected" [routerLinkActiveOptions]="{exact: true}" routerLink="/experience"
             [title]="rail ? getText.experiencia() : ''"
@@ -29,6 +31,7 @@
             </div>
         </button>
         <button
+            class="rs boto-seccio"
             [class.rail]="rail" [class.drawer]="!rail"
             routerLinkActive="selected" [routerLinkActiveOptions]="{exact: true}" routerLink="/projects"
             [title]="rail ? getText.projectes() : ''"
@@ -39,6 +42,7 @@
             </div>
         </button>
         <button
+            class="rs boto-seccio"
             [class.rail]="rail" [class.drawer]="!rail"
             routerLinkActive="selected" [routerLinkActiveOptions]="{exact: true}" routerLink="/art"
             [title]="rail ? getText.art() : ''"
@@ -48,6 +52,17 @@
                 {{ getText.art() }}
             </div>
         </button>
+        <a
+            class="rs boto-seccio"
+            [href]="getRutaCV()"
+            [class.rail]="rail" [class.drawer]="!rail"
+            [title]="rail ? getText.cv() : ''"
+            matRipple>
+            <img src="assets/icons/cv.png" alt="Curriculum Vitae" class="icona inv-dark object-fit-contain p-1">
+            <div class="text">
+                {{ getText.cv() }}
+            </div>
+        </a>
     </nav>
 
 

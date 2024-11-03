@@ -1,10 +1,10 @@
-<button (click)="animacioDarkMode('dark');" class="boto botoDarkMode" [title]="ts.modeFosc ? 'Light mode' : 'Dark mode'" matRipple>
+<button (click)="animacioDarkMode('dark');" class="boto botoDarkMode" [title]="ts.modeFosc ? 'Light mode' : 'Dark mode'" [disabled]="!botonsActius" matRipple>
     @if (ts.modeFosc) {
         <i class="fa-solid fa-sun"></i>
     } @else {
         <i class="fa-solid fa-moon"></i>
     }
 </button>
-<button (click)="animacioDarkMode('auto');" class="boto botoAutoMode ms-1" title="Auto dark mode" style="display:none;" matRipple>
+<button (click)="animacioDarkMode('auto');" class="boto botoAutoMode ms-1" title="Auto dark mode" style="display:none;" [disabled]="!botonsActius" matRipple>
     <i class="fa-solid fa-a"></i>
 </button>
