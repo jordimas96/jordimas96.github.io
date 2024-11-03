@@ -5,6 +5,14 @@
     [class.rail]="rail" [class.drawer]="!rail"
     [class.mobil]="vistaMobil()"
     style="--DRAWER-WIDTH: {{ DRAWER_WIDTH }}px; --RAIL-WIDTH: {{ RAIL_WIDTH }}px; --APPBAR-HEIGHT: {{ ls.getAlturaAppbar() }}px;"
+    cdkDrag
+    cdkDragLockAxis="x"
+    [cdkDragDisabled]="m.esPc()"
+    [cdkDragFreeDragPosition]="dragPosition"
+    [cdkDragConstrainPosition]="constrainDragPosition"
+    (cdkDragStarted)="onDragStarted($event)"
+    (cdkDragMoved)="onDragMoved($event)"
+    (cdkDragReleased)="onDragReleased($event)"
     >
 
     <nav class="seccions">
@@ -80,7 +88,7 @@
 
 </div>
 @if (mobil && open) {
-    <div class="backdrop" [style.top.px]="ls.getAlturaAppbar()" (click)="open = false"></div>
+    <div class="backdrop" [style.top.px]="ls.getAlturaAppbar()" (click)="obrirTancar(false)"></div>
 }
 <!-- @if (m.esPantallaTactil()) {
     <div class="backdrop" (click)="this.tancar()"></div>

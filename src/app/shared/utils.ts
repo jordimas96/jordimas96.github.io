@@ -65,11 +65,8 @@ export class Utils {
     public static arrayConte(array, valor) {
         return array.includes(valor);
     }
-    public static min(a, b) {
-        return a < b ? a : b;
-    }
-    public static max(a, b) {
-        return a > b ? a : b;
+    public static limit(n: number, min: number, max: number) {
+        return Math.max(min, Math.min(n, max));
     }
     public static getRouteActual() {
         return location.pathname.split("/")[1];

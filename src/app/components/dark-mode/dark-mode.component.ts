@@ -52,7 +52,7 @@ export class DarkModeComponent {
         }
 
         // Variables //
-        let spread = Utils.max(window.innerWidth, window.innerHeight);
+        let spread = Math.max(window.innerWidth, window.innerHeight);
         let blur = 500;
         var color = this.ts.modeFosc ? "var(--color-l-8)" : "var(--color-fosc)";
 

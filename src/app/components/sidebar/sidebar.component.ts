@@ -1,3 +1,4 @@
+import { CdkDrag, CdkDragMove, CdkDragRelease, CdkDragStart, DragConstrainPosition, DragRef, Point } from '@angular/cdk/drag-drop';
 import { AfterViewInit, ChangeDetectorRef, Component, ElementRef, HostListener, OnInit, ViewChild } from '@angular/core';
 import { NavigationEnd, RouterLink, RouterLinkActive } from '@angular/router';
 import { DarkModeComponent } from 'src/app/components/dark-mode/dark-mode.component';
@@ -22,6 +23,7 @@ import { Utils } from 'src/app/shared/utils';
         IconesContacteComponent,
         DarkModeComponent,
         SelectorIdiomaComponent,
+        CdkDrag,
     ]
 })
 export class SidebarComponent implements OnInit, AfterViewInit {
@@ -39,6 +41,10 @@ export class SidebarComponent implements OnInit, AfterViewInit {
     public rail;
 
     public railBackupAlRedimensionar;
+
+    public dragPosition = { x: 0, y: 0 };
+    private startX: number;
+    private direccio: -1 | 0 | 1;
 
 
     constructor(
@@ -59,7 +65,7 @@ export class SidebarComponent implements OnInit, AfterViewInit {
             if (event instanceof NavigationEnd) {
                 Utils.scroll(0);
                 if (this.mobil)
-                    this.open = false;
+                    this.obrirTancar(false);
             }
         });
     }
@@ -87,9 +93,15 @@ export class SidebarComponent implements OnInit, AfterViewInit {
         // this.vista = this.open ? "open" : this.m.esPantallaMobil() ? "closed" : "rail";
     }
     
-    obrirTancar() {
+    obrirTancar(nouValor: boolean | null = null) {
         // En mobil, obro o tanco //
-        this.open = !this.open;
+        if (nouValor != null)
+            this.open = nouValor;
+        else
+            this.open = !this.open;
+
+        this.setDragPos(this.open ? 0 : -this.DRAWER_WIDTH);
+        
     }
     canviarVista() {
 
@@ -145,6 +157,63 @@ export class SidebarComponent implements OnInit, AfterViewInit {
     }
 
 
+
+    //#region Drag
+    onDragStarted(event: CdkDragStart) {
+        this.sidebarRef.nativeElement.style.transition = "none";
+
+        if ((event.event instanceof TouchEvent)) {
+            // Mòbil //
+            this.startX = (<TouchEvent>event.event).touches[0].clientX;
+            // Restar la posicio horitzontal del panell, perquè en mòbil no hi ha offsetX //
+            this.startX -= this.getPosXTransformSidebar();
+        } else if (event.event instanceof MouseEvent) {
+            // PC //
+            this.startX = (<MouseEvent>event.event).offsetX;
+        }
+    }
+    onDragMoved(event: CdkDragMove) {
+        this.direccio = event.delta.x;
+
+        // Per si algún intenta forçar la posició fent 2 slides seguits //
+        let x = this.getPosXTransformSidebar();
+        x = Utils.limit(x, - this.DRAWER_WIDTH, 0);
+        this.sidebarRef.nativeElement.style.transform = `translate3D(${x}px, 0, 0)`;
+    }
+    onDragReleased(event: CdkDragRelease) {
+        this.sidebarRef.nativeElement.style.transition = "";
+
+        let x = this.getPosXTransformSidebar();
+
+        let limit = this.direccio == 1 ? 0.9 : 0.2;
+
+        if (x > -this.DRAWER_WIDTH * limit)
+            this.obrirTancar(true);
+        else
+            this.obrirTancar(false);
+    }
+
+    constrainDragPosition: DragConstrainPosition = (pos: Point, dragRef: DragRef): any => {
+        const x = pos.x - this.startX;
+        
+        // Limitar x entre -DRAWER_WIDTH i 0 //
+        const constrainedX = Utils.limit(x, -this.DRAWER_WIDTH, 0);
+
+        return { x: constrainedX, y: 0 };
+    };
+
+
+    setDragPos(x) {
+        this.dragPosition = { x, y: 0 };
+    }
+
+    getPosXTransformSidebar(): number {
+        return this.sidebarRef.nativeElement.style.transform.split(/\s*\(\s*|\s*px\s*/)[1];
+    }
+
+    //#endregion Drag
+
+
     @HostListener('window:resize')
     onResize() {
         let valorMobilAbans = this.mobil;
@@ -154,10 +223,10 @@ export class SidebarComponent implements OnInit, AfterViewInit {
         // Si ha canviat //
         if (this.mobil != valorMobilAbans) {
             if (this.mobil) {
-                this.open = false;
+                this.obrirTancar(false);
                 this.rail = false;
             } else {
-                this.open = true;
+                this.obrirTancar(true);
                 this.llegirVistaCookie();
             }
             
