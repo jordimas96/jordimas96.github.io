@@ -7,13 +7,24 @@
     width: var(--RAIL-WIDTH);
     max-width: 80%;
 
+    display: flex;
+    flex-direction: column;
+
     background-color: transparent;
     backdrop-filter: blur(40px) saturate(2);
 
-    // overflow: hidden;
+    overflow: hidden;
+
     z-index: 1101;
 
     transition: width 0.3s, translate 0.3s, transform 0.3s, box-shadow 0.3s;
+
+    &.open {
+        translate: 0 0;
+    }
+    &:not(.open) {
+        translate: -100% 0;
+    }
 
     &.drawer {
         width: var(--DRAWER-WIDTH);
@@ -29,28 +40,23 @@
         &.open {
             --color-ombra: rgba(0, 0, 0, 0.5);
         }
-        &:not(.open) {
-            &::before {
-                // Tirador //
-                width: 50px; // Android default back gesture: 20px; //
-        
-                content: '';
-                position: absolute;
-                top: 0; left: 100%;
-                height: 100%;
-                // background: rgba(255, 0, 0, 0.5);
-            }
-        }
     }
 
     .seccions {
         display: flex;
         flex-direction: column;
         gap: 0.75rem;
+
+        flex: 1;
         
         padding: 0.5rem;
 
-        overflow: hidden;
+        overflow-y: scroll;
+
+        &::-webkit-scrollbar {
+            display: none;
+        }
+        touch-action: auto !important;
         
         .boto-seccio {
             @include reset-button;
@@ -59,6 +65,8 @@
             justify-content: flex-start;
             align-items: center;
             gap: 0.5rem;
+
+            flex-shrink: 0;
 
             font-size: 1.7rem;
             border-radius: 50rem;
@@ -101,18 +109,14 @@
     }
 
     .zonaInferior {
-        position: absolute;
-        bottom: 0;
-        width: 100%;
-
         display: flex;
         justify-content: space-between;
         align-items: center;
         gap: 0.5rem;
 
-        padding: 0.5rem;
+        flex-shrink: 0;
 
-        overflow: hidden;
+        padding: 0.5rem;
 
         app-dark-mode {
             display: flex;
