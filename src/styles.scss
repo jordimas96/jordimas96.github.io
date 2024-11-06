@@ -89,9 +89,9 @@ html {
         height: 2rem;
     }
 }
-.card {
+.card-themed {
     color: var(--text);
-    background-color: var(--fons-50);
+    background: var(--fons-card, var(--fons-50));
     backdrop-filter: blur(40px);
     @extend .shadow-2;
     
@@ -102,6 +102,10 @@ html {
         padding: 1.3rem 2rem 2rem;
         border-radius: 2.5rem;
     }
+
+    // &.bg-colored {
+    //     background-color: var(--fons-card);
+    // }
 }
 
 // Estils generals per tots els ns (<button> i <a>) //

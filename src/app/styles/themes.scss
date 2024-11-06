@@ -165,6 +165,7 @@ html, html .section, html [class*="tema-"], html [class*="paleta-"] {
             --color-l-7: hsl(#{$hue}, 100%, 72%);
             --color-l-8: hsl(#{$hue}, 100%, 82%);
             --color-l-9: hsl(#{$hue}, 100%, 91%);
+            --fons-card: light-dark(hsla(#{$hue}, 100%, 72%, 0.5), hsla(#{$hue}, 100%, 20%, 0.5)) !important;
         }
         @if ($hue > 30 and $hue <= 90) {
             // 60 //
@@ -180,6 +181,7 @@ html, html .section, html [class*="tema-"], html [class*="paleta-"] {
             --color-l-7: hsl(#{$hue}, 100%, 75%);
             --color-l-8: hsl(#{$hue}, 100%, 83%);
             --color-l-9: hsl(#{$hue}, 100%, 91%);
+            --fons-card: light-dark(hsla(#{$hue}, 100%, 72%, 0.5), hsla(#{$hue}, 100%, 21%, 0.5)) !important;
         }
         @if ($hue > 90 and $hue <= 150) {
             // 120 //
@@ -195,6 +197,8 @@ html, html .section, html [class*="tema-"], html [class*="paleta-"] {
             --color-l-7: hsl(#{$hue}, 100%, 74%);
             --color-l-8: hsl(#{$hue}, 100%, 84%);
             --color-l-9: hsl(#{$hue}, 100%, 90%);
+            --fons-card: light-dark(hsla(#{$hue}, 100%, 72%, 0.5), hsla(#{$hue}, 100%, 14%, 0.5)) !important;
+
         }
         @if ($hue > 150 and $hue <= 210) {
             // 180 //
@@ -210,6 +214,7 @@ html, html .section, html [class*="tema-"], html [class*="paleta-"] {
             --color-l-7: hsl(#{$hue}, 100%, 70%);
             --color-l-8: hsl(#{$hue}, 100%, 80%);
             --color-l-9: hsl(#{$hue}, 100%, 90%);
+            --fons-card: light-dark(hsla(#{$hue}, 100%, 62%, 0.5), hsla(#{$hue}, 100%, 16%, 0.5)) !important;
         }
         @if ($hue > 210 and $hue <= 270) {
             // 240 //
@@ -225,6 +230,8 @@ html, html .section, html [class*="tema-"], html [class*="paleta-"] {
             --color-l-7: hsl(#{$hue}, 100%, 75%);
             --color-l-8: hsl(#{$hue}, 100%, 85%);
             --color-l-9: hsl(#{$hue}, 100%, 92%);
+            --fons-card: light-dark(hsla(#{$hue}, 100%, 73%, 0.5), hsla(#{$hue}, 81%, 26%, 0.5)) !important;
+
         }
         @if ($hue > 270 and $hue <= 330) {
             // 300 //
@@ -240,6 +247,7 @@ html, html .section, html [class*="tema-"], html [class*="paleta-"] {
             --color-l-7: hsl(#{$hue}, 100%, 79%);
             --color-l-8: hsl(#{$hue}, 100%, 87%);
             --color-l-9: hsl(#{$hue}, 100%, 93%);
+            --fons-card: light-dark(hsla(#{$hue}, 100%, 72%, 0.5), hsla(#{$hue}, 100%, 15%, 0.5)) !important;
         }
     }
     .paleta-bn {
@@ -256,6 +264,7 @@ html, html .section, html [class*="tema-"], html [class*="paleta-"] {
         --color-l-7: hsl(0, 0%, 80%);
         --color-l-8: hsl(0, 0%, 90%);
         --color-l-9: hsl(0, 0%, 100%);
+        --fons-card: light-dark(hsla(0, 0%, 100%, 0.5), hsla(0, 0%, 6%, 0.5)) !important;
     }
 }
 
@@ -265,25 +274,21 @@ html, html .section, html [class*="tema-"], html [class*="paleta-"] {
 
 .tema-android {
     @extend .paleta-147;
-    background-color: light-dark(hsla(147, 100%, 72%, 0.5), hsla(147, 100%, 14%, 0.5)) !important;
     --link: light-dark(var(--color-l-2), var(--color-l-5));
 }
 
 .tema-mad-jumpgate {
     @extend .paleta-60;
-    background-color: light-dark(hsla(60, 100%, 72%, 0.5), hsla(60, 100%, 21%, 0.5)) !important;
     --link: light-dark(var(--color-l-3), var(--color-l-7));
 }
 
 .tema-github {
     @extend .paleta-bn;
-    background-color: light-dark(hsla(0, 0%, 100%, 0.5), hsla(0, 0%, 6%, 0.5)) !important;
 }
 
 .tema-tasker {
     @extend .paleta-34;
 
-    background-color: light-dark(hsla(34, 100%, 72%, 0.5), hsla(34, 100%, 25%, 0.5)) !important;
     --link: light-dark(var(--color-l-4),var(--color-l-7));
 
     @include light {
@@ -309,20 +314,20 @@ html, html .section, html [class*="tema-"], html [class*="paleta-"] {
     --color-l-8: hsl(44, 100%, 72%);
     --color-l-9: hsl(44, 100%, 91%);
     
-    background-color: light-dark(hsla(44, 100%, 72%, 0.5), hsla(273, 100%, 15%, 0.5)) !important;
+    --fons-card: light-dark(hsla(44, 100%, 72%, 0.5), hsla(273, 100%, 15%, 0.5)) !important;
 }
 
 .tema-icons {
     @extend .paleta-60;
 
-    background: linear-gradient(45deg,
+    --fons-card: linear-gradient(45deg,
         hsla(87, 100%, 25%, 0.5),
         hsla(160, 100%, 25%, 0.5),
         hsla(225, 100%, 25%, 0.5),
         hsla(253, 100%, 25%, 0.5)
     ) !important;
     @include light {
-        background: linear-gradient(45deg,
+        --fons-card: linear-gradient(45deg,
             hsla(87, 100%, 72%, 0.5),
             hsla(160, 100%, 72%, 0.5),
             hsla(225, 100%, 72%, 0.5),
@@ -339,7 +344,7 @@ html, html .section, html [class*="tema-"], html [class*="paleta-"] {
 .tema-alvea {
     @extend .paleta-216;
 
-    background-color: light-dark(hsla(216, 100%, 85%, 0.5), hsla(216, 81%, 36%, 0.5)) !important;
+    --fons-card: light-dark(hsla(216, 100%, 85%, 0.5), hsla(216, 81%, 36%, 0.5)) !important;
     --link: light-dark(rgb(17, 77, 166), rgb(232, 239, 250));
 }
 
@@ -364,7 +369,7 @@ html, html .section, html [class*="tema-"], html [class*="paleta-"] {
     --color-l-9: hsl(41, 100%, 91%);
 
     
-    background: linear-gradient(45deg,
+    --fons-card: linear-gradient(45deg,
         hsla(9, 100%, 25%, 0.5) 15%,
         hsla(212, 100%, 25%, 0.5) 65%
     ) !important;
@@ -372,7 +377,7 @@ html, html .section, html [class*="tema-"], html [class*="paleta-"] {
     --link: light-dark(var(--color-l-4), var(--color-l-6));
 
     @include light {
-        background: linear-gradient(45deg,
+        --fons-card: linear-gradient(45deg,
             hsla(41, 100%, 72%, 0.5),
             hsla(9, 83%, 72%, 0.5),
             hsla(212, 64%, 72%, 0.5)
@@ -382,30 +387,25 @@ html, html .section, html [class*="tema-"], html [class*="paleta-"] {
 
 .tema-orange {
     @extend .paleta-28;
-    background-color: light-dark(hsla(28, 100%, 72%, 0.5), hsla(28, 100%, 25%, 0.5)) !important;
     --link: light-dark(var(--color-l-3), var(--color-l-6));
 }
 
 .tema-in2art {
     @extend .paleta-bn;
-    background-color: light-dark(hsla(0, 0%, 100%, 0.5), hsla(0, 0%, 6%, 0.5)) !important;
     --link: light-dark(var(--color-l-3), var(--color-l-6));
 }
 
 .tema-matic {
     @extend .paleta-356;
-    background-color: light-dark(hsla(356, 100%, 72%, 0.5), hsla(356, 100%, 15%, 0.5)) !important;
     --link: light-dark(var(--color-l-2), var(--color-l-7));
 }
 
 .tema-indra {
     @extend .paleta-193;
-    background-color: light-dark(hsla(193, 100%, 62%, 0.5), hsla(193, 100%, 16%, 0.5)) !important;
     --link: light-dark(var(--color-l-3), var(--color-l-6));
 }
 
 .tema-nexxia {
     @extend .paleta-46;
-    background-color: light-dark(hsla(46, 100%, 72%, 0.5), hsla(46, 100%, 21%, 0.5)) !important;
     --link: light-dark(var(--color-l-3), var(--color-l-6));
 }
