@@ -13,7 +13,10 @@
 
         <button [routerLink]="urlGoBack" class="boto botoText botoBack my-3" appMostrarAmbAnimacio matRipple>
             <i class="fa-solid fa-chevron-left"></i>
-            {{ getNameGoBack() }}
+            <!-- {{ getNameGoBack() }} -->
+            @if (m.ca) { Enrere }
+            @if (m.es) { Atrás }
+            @if (m.en) { Back }
         </button>
 
 

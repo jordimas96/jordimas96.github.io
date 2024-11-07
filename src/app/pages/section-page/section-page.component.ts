@@ -53,14 +53,15 @@ export class SectionPageComponent extends PageComponent {
         this.route.params.subscribe(params => {
             this.section = params['section'];
             
-            if (["evora", "orange", "in2art", "matic", "indra", "nexxia"].includes(this.section))
-                this.optionBack = 1;
-            else if (["android", "mad-jumpgate", "github", "custom-roms", "tasker"].includes(this.section))
-                this.optionBack = 2;
-            else if (["icons", "amazfit"].includes(this.section))
-                this.optionBack = 3;
+            // if (["alvea", "evora", "orange", "in2art", "matic", "indra", "nexxia"].includes(this.section))
+            //     this.optionBack = 1;
+            // else if (["android", "mad-jumpgate", "github", "custom-roms", "tasker"].includes(this.section))
+            //     this.optionBack = 2;
+            // else if (["icons", "amazfit"].includes(this.section))
+            //     this.optionBack = 3;
             
-            this.urlGoBack = "/" + ["", "experience", "projects", "art"][this.optionBack];
+            // this.urlGoBack = "/" + ["", "experience", "projects", "art"][this.optionBack];
+            this.urlGoBack = "/";
         });
     }
 

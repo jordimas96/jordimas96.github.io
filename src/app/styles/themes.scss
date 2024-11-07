@@ -265,6 +265,7 @@ html, html .section, html [class*="tema-"], html [class*="paleta-"] {
         --color-l-8: hsl(0, 0%, 90%);
         --color-l-9: hsl(0, 0%, 100%);
         --fons-card: light-dark(hsla(0, 0%, 100%, 0.5), hsla(0, 0%, 6%, 0.5)) !important;
+        --accent-color: light-dark(var(--color-7), white);
     }
 }
 
