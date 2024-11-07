@@ -4,117 +4,124 @@
     @if (m.en) { Professional experience }
 </div>
 
-<section id="experiencies" class="experiencies section">
+<section id="experiencies" class="experiencies section row g-3">
 
-
-    <div class="experiencia tema-alvea card-themed bg-colored" appMostrarAmbAnimacio matRipple>
-        <div class="titol">Alvea</div>
-        <div class="text">
-            @if (m.ca) { Desenvolupament d'un backoffice i la llibreria per gestionar la seguretat dels espanyols a l'estranger durant crisis. }
-            @if (m.es) { Desarrollo de un backoffice y su librería para gestionar la seguridad de los españoles en el extranjero durante crisis. }
-            @if (m.en) { Development of a backoffice and its library to manage the security of spaniards abroad during crisis. }
-        </div>
-        <div class="text-end">
-            <button class="boto stretched-link" routerLink="/section/alvea">
-                {{ getSeeMoreText() }}
-                <i class="fa-solid fa-arrow-right"></i>
-            </button>
-        </div>
-    </div>
-
-
-    <div class="experiencia tema-in2art card-themed bg-colored" appMostrarAmbAnimacio matRipple>
-        <div class="titol">In2art</div>
-        <div class="text">
-            @if (m.ca) { Desenvolupament d'una xarxa social enfocada al món de l'art. Frontend i part del backend. Líder de projecte. }
-            @if (m.es) { Desarrollo de una red social enfocada al mundo del arte. Frontend y parte del backend. Líder de proyecto. }
-            @if (m.en) { Development of a social network focused on the art world. Frontend and part of the backend. Project Lead. }
-        </div>
-        <div class="text-end">
-            <button class="boto stretched-link" routerLink="/section/in2art">
-                {{ getSeeMoreText() }}
-                <i class="fa-solid fa-arrow-right"></i>
-            </button>
+    <div class="col-12 col-sm-6">
+        <div class="experiencia tema-alvea card-themed bg-colored" appMostrarAmbAnimacio matRipple>
+            <div class="titol">Alvea</div>
+            <div class="text">
+                @if (m.ca) { Desenvolupament d'un backoffice i la llibreria per gestionar la seguretat dels espanyols a l'estranger durant crisis. }
+                @if (m.es) { Desarrollo de un backoffice y su librería para gestionar la seguridad de los españoles en el extranjero durante crisis. }
+                @if (m.en) { Development of a backoffice and its library to manage the security of spaniards abroad during crisis. }
+            </div>
+            <div class="text-end">
+                <button class="boto stretched-link" routerLink="/section/alvea">
+                    {{ getSeeMoreText() }}
+                    <i class="fa-solid fa-arrow-right"></i>
+                </button>
+            </div>
         </div>
     </div>
 
-
-    <div class="experiencia tema-matic card-themed bg-colored" appMostrarAmbAnimacio matRipple>
-        <div class="titol">Matic</div>
-        <div class="text">
-            @if (m.ca) { Desenvolupament d'un CRM per a la gestió de molls de càrrega per a una empresa de transports. Desenvolupament de seccions per al lloc web d'un dels cinemes principals del país. Desenvolupament d'un sistema de cartelleres de cara al públic. }
-            @if (m.es) { Desarrollo de un CRM para la gestión de muelles de carga para una empresa de transportes. Desarrollo de secciones para el sitio web de uno de los principales cines del país. Desarrollo de un sistema de carteleras de cara al público. }
-            @if (m.en) { Development of a CRM for loading dock management for a transport company. Development of sections for the website of one of the main cinemas in the country. Development of a billboard system for the public. }
-        </div>
-        <div class="text-end">
-            <button class="boto stretched-link" routerLink="/section/matic">
-                {{ getSeeMoreText() }}
-                <i class="fa-solid fa-arrow-right"></i>
-            </button>
-        </div>
-    </div>
-
-
-    <div class="experiencia tema-evora card-themed bg-colored" appMostrarAmbAnimacio matRipple>
-        <div class="titol">Evora IT</div>
-        <div class="text">
-            @if (m.ca) { Migració d'una aplicació a PWA i a Angular 17 i anàlisi del seu impacte. Equip multicultural amb comunicació només en anglès. Multinacional del sector mèdic. }
-            @if (m.es) { Migración de una aplicación a PWA y a Angular 17 y análisis del impacto. Equipo multicultural con comunicación sólo en inglés. Multinacional del sector médico.  }
-            @if (m.en) { Migration of an application to PWA and Angular 17 and analysis of its impact. Multicultural team with communication only in English. Multinational company in the medical sector. }
-        </div>
-        <div class="text-end">
-            <button class="boto stretched-link" routerLink="/section/evora">
-                {{ getSeeMoreText() }}
-                <i class="fa-solid fa-arrow-right"></i>
-            </button>
+    <div class="col-12 col-sm-6">
+        <div class="experiencia tema-in2art card-themed bg-colored" appMostrarAmbAnimacio matRipple>
+            <div class="titol">In2art</div>
+            <div class="text">
+                @if (m.ca) { Desenvolupament d'una xarxa social enfocada al món de l'art. Frontend i part del backend. Líder de projecte. }
+                @if (m.es) { Desarrollo de una red social enfocada al mundo del arte. Frontend y parte del backend. Líder de proyecto. }
+                @if (m.en) { Development of a social network focused on the art world. Frontend and part of the backend. Project Lead. }
+            </div>
+            <div class="text-end">
+                <button class="boto stretched-link" routerLink="/section/in2art">
+                    {{ getSeeMoreText() }}
+                    <i class="fa-solid fa-arrow-right"></i>
+                </button>
+            </div>
         </div>
     </div>
 
-
-    <div class="experiencia tema-orange card-themed bg-colored" appMostrarAmbAnimacio matRipple>
-        <div class="titol">Orange</div>
-        <div class="text">
-            @if (m.ca) { Programador fullstack en una aplicació per a evitar fraus en el consum dels clients d'una operadora. }
-            @if (m.es) { Programador fullstack en una aplicación para evitar fraudes en el consumo de los clientes de una operadora. }
-            @if (m.en) { Fullstack programmer in an application to prevent fraud in the consumption of an operator's clients. }
-        </div>
-        <div class="text-end">
-            <button class="boto stretched-link" routerLink="/section/orange">
-                {{ getSeeMoreText() }}
-                <i class="fa-solid fa-arrow-right"></i>
-            </button>
-        </div>
-    </div>
-
-
-    <div class="experiencia tema-indra card-themed bg-colored" appMostrarAmbAnimacio matRipple>
-        <div class="titol">Indra</div>
-        <div class="text">
-            @if (m.ca) { Renovació del sistema Línia Oberta de La Caixa. Desenvolupament d'un sistema de gestió de clients, amb guies de desenvolupament. Middlewares. }
-            @if (m.es) { Renovación del sistema Línia Oberta de La Caixa. Desarrollo de un sistema de gestión de clientes, con guías de desarrollo. Middlewares. }
-            @if (m.en) { Renewal of La Caixa's Línia Oberta system. Development of a customer management system, with development guides. Middlewares. }
-        </div>
-        <div class="text-end">
-            <button class="boto stretched-link" routerLink="/section/indra">
-                {{ getSeeMoreText() }}
-                <i class="fa-solid fa-arrow-right"></i>
-            </button>
+    <div class="col-12 col-sm-6">
+        <div class="experiencia tema-matic card-themed bg-colored" appMostrarAmbAnimacio matRipple>
+            <div class="titol">Matic</div>
+            <div class="text">
+                @if (m.ca) { Desenvolupament d'un CRM per a la gestió de molls de càrrega per a una empresa de transports. Desenvolupament de seccions per al lloc web d'un dels cinemes principals del país. Desenvolupament d'un sistema de cartelleres de cara al públic. }
+                @if (m.es) { Desarrollo de un CRM para la gestión de muelles de carga para una empresa de transportes. Desarrollo de secciones para el sitio web de uno de los principales cines del país. Desarrollo de un sistema de carteleras de cara al público. }
+                @if (m.en) { Development of a CRM for loading dock management for a transport company. Development of sections for the website of one of the main cinemas in the country. Development of a billboard system for the public. }
+            </div>
+            <div class="text-end">
+                <button class="boto stretched-link" routerLink="/section/matic">
+                    {{ getSeeMoreText() }}
+                    <i class="fa-solid fa-arrow-right"></i>
+                </button>
+            </div>
         </div>
     </div>
 
-
-    <div class="experiencia tema-nexxia card-themed bg-colored" appMostrarAmbAnimacio matRipple>
-        <div class="titol">Nexxia</div>
-        <div class="text">
-            @if (m.ca) { Desenvolupament d'un sistema de generació de plantilles personalitzades per a posterior generació de factures. }
-            @if (m.es) { Desarrollo de un sistema de generación de plantillas personalizadas para posterior generación de facturas. }
-            @if (m.en) { Development of a system for generating customized templates for subsequent invoice generation. }
+    <div class="col-12 col-sm-6">
+        <div class="experiencia tema-evora card-themed bg-colored" appMostrarAmbAnimacio matRipple>
+            <div class="titol">Evora IT</div>
+            <div class="text">
+                @if (m.ca) { Migració d'una aplicació a PWA i a Angular 17 i anàlisi del seu impacte. Equip multicultural amb comunicació només en anglès. Multinacional del sector mèdic. }
+                @if (m.es) { Migración de una aplicación a PWA y a Angular 17 y análisis del impacto. Equipo multicultural con comunicación sólo en inglés. Multinacional del sector médico.  }
+                @if (m.en) { Migration of an application to PWA and Angular 17 and analysis of its impact. Multicultural team with communication only in English. Multinational company in the medical sector. }
+            </div>
+            <div class="text-end">
+                <button class="boto stretched-link" routerLink="/section/evora">
+                    {{ getSeeMoreText() }}
+                    <i class="fa-solid fa-arrow-right"></i>
+                </button>
+            </div>
         </div>
-        <div class="text-end">
-            <button class="boto stretched-link" routerLink="/section/nexxia">
-                {{ getSeeMoreText() }}
-                <i class="fa-solid fa-arrow-right"></i>
-            </button>
+    </div>
+
+    <div class="col-12 col-sm-6">
+        <div class="experiencia tema-orange card-themed bg-colored" appMostrarAmbAnimacio matRipple>
+            <div class="titol">Orange</div>
+            <div class="text">
+                @if (m.ca) { Programador fullstack en una aplicació per a evitar fraus en el consum dels clients d'una operadora. }
+                @if (m.es) { Programador fullstack en una aplicación para evitar fraudes en el consumo de los clientes de una operadora. }
+                @if (m.en) { Fullstack programmer in an application to prevent fraud in the consumption of an operator's clients. }
+            </div>
+            <div class="text-end">
+                <button class="boto stretched-link" routerLink="/section/orange">
+                    {{ getSeeMoreText() }}
+                    <i class="fa-solid fa-arrow-right"></i>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-12 col-sm-6">
+        <div class="experiencia tema-indra card-themed bg-colored" appMostrarAmbAnimacio matRipple>
+            <div class="titol">Indra</div>
+            <div class="text">
+                @if (m.ca) { Renovació del sistema Línia Oberta de La Caixa. Desenvolupament d'un sistema de gestió de clients, amb guies de desenvolupament. Middlewares. }
+                @if (m.es) { Renovación del sistema Línia Oberta de La Caixa. Desarrollo de un sistema de gestión de clientes, con guías de desarrollo. Middlewares. }
+                @if (m.en) { Renewal of La Caixa's Línia Oberta system. Development of a customer management system, with development guides. Middlewares. }
+            </div>
+            <div class="text-end">
+                <button class="boto stretched-link" routerLink="/section/indra">
+                    {{ getSeeMoreText() }}
+                    <i class="fa-solid fa-arrow-right"></i>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-12 col-sm-6">
+        <div class="experiencia tema-nexxia card-themed bg-colored" appMostrarAmbAnimacio matRipple>
+            <div class="titol">Nexxia</div>
+            <div class="text">
+                @if (m.ca) { Desenvolupament d'un sistema de generació de plantilles personalitzades per a posterior generació de factures. }
+                @if (m.es) { Desarrollo de un sistema de generación de plantillas personalizadas para posterior generación de facturas. }
+                @if (m.en) { Development of a system for generating customized templates for subsequent invoice generation. }
+            </div>
+            <div class="text-end">
+                <button class="boto stretched-link" routerLink="/section/nexxia">
+                    {{ getSeeMoreText() }}
+                    <i class="fa-solid fa-arrow-right"></i>
+                </button>
+            </div>
         </div>
     </div>
 
