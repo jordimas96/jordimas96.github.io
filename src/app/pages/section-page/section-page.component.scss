@@ -43,7 +43,7 @@
 
     button {
         color: var(--text);
-        background-color: var(--fons-50);
+        background: var(--fons-card, var(--fons-50));
         backdrop-filter: blur(40px);
         padding: 1rem 2rem;
         font-size: 1.7rem;

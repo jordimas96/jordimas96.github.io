@@ -46,22 +46,35 @@
 
 
         
-        
-        
-        <div class="sectionList mt-6 mb-5">
-            @if(section != "android") {      <button class="boto tema-android"      routerLink="/section/android"      matRipple>Apps Android</button>       }
-            @if(section != "mad-jumpgate") { <button class="boto tema-mad-jumpgate" routerLink="/section/mad-jumpgate" matRipple>Mad Jumpgate</button>       }
-            @if(section != "github") {       <button class="boto tema-github"       routerLink="/section/github"       matRipple>GitHub Projects</button>    }
-            @if(section != "custom-roms") {  <button class="boto "                  routerLink="/section/custom-roms"  matRipple>Custom ROMs</button>        }
-            @if(section != "tasker") {       <button class="boto tema-tasker"       routerLink="/section/tasker"       matRipple>Tasker</button>             }
-            @if(section != "icons") {        <button class="boto tema-icons"        routerLink="/section/icons"        matRipple>Icons</button>              }
-            @if(section != "amazfit") {      <button class="boto tema-amazfit"      routerLink="/section/amazfit"      matRipple>Amazfit Watchfaces</button> }
-            @if(section != "evora") {        <button class="boto tema-evora"        routerLink="/section/evora"        matRipple>Evora IT</button>           }
-            @if(section != "orange") {       <button class="boto tema-orange"       routerLink="/section/orange"       matRipple>Orange</button>             }
-            @if(section != "in2art") {       <button class="boto tema-in2art"       routerLink="/section/in2art"       matRipple>In2art</button>             }
-            @if(section != "matic") {        <button class="boto tema-matic"        routerLink="/section/matic"        matRipple>Matic</button>              }
-            @if(section != "indra") {        <button class="boto tema-indra"        routerLink="/section/indra"        matRipple>Indra</button>              }
-            @if(section != "nexxia") {       <button class="boto tema-nexxia"       routerLink="/section/nexxia"       matRipple>Nexxia</button>             }
+        <div class="row mt-6">
+            <div class="titol h2 mb-4 text-center" appMostrarAmbAnimacio>
+                @if (m.ca) { Experiència professional }
+                @if (m.es) { Experiencia profesional }
+                @if (m.en) { Professional experience }
+            </div>
+            <div class="sectionList mb-5">
+                @if(section != "alvea") {        <button class="boto tema-alvea"        routerLink="/section/alvea"        matRipple>Alvea</button>              }
+                @if(section != "evora") {        <button class="boto tema-evora"        routerLink="/section/evora"        matRipple>Evora IT</button>           }
+                @if(section != "orange") {       <button class="boto tema-orange"       routerLink="/section/orange"       matRipple>Orange</button>             }
+                @if(section != "in2art") {       <button class="boto tema-in2art"       routerLink="/section/in2art"       matRipple>In2art</button>             }
+                @if(section != "matic") {        <button class="boto tema-matic"        routerLink="/section/matic"        matRipple>Matic</button>              }
+                @if(section != "indra") {        <button class="boto tema-indra"        routerLink="/section/indra"        matRipple>Indra</button>              }
+                @if(section != "nexxia") {       <button class="boto tema-nexxia"       routerLink="/section/nexxia"       matRipple>Nexxia</button>             }
+            </div>
+            <div class="titol h2 mb-4 text-center" appMostrarAmbAnimacio>
+                @if (m.ca) { Projectes personals }
+                @if (m.es) { Proyectos personales }
+                @if (m.en) { Personal projects }
+            </div>
+            <div class="sectionList mb-5">
+                @if(section != "android") {      <button class="boto tema-android"      routerLink="/section/android"      matRipple>Apps Android</button>       }
+                @if(section != "mad-jumpgate") { <button class="boto tema-mad-jumpgate" routerLink="/section/mad-jumpgate" matRipple>Mad Jumpgate</button>       }
+                @if(section != "github") {       <button class="boto tema-github"       routerLink="/section/github"       matRipple>GitHub Projects</button>    }
+                @if(section != "custom-roms") {  <button class="boto "                  routerLink="/section/custom-roms"  matRipple>Custom ROMs</button>        }
+                @if(section != "tasker") {       <button class="boto tema-tasker"       routerLink="/section/tasker"       matRipple>Tasker</button>             }
+                @if(section != "icons") {        <button class="boto tema-icons"        routerLink="/section/icons"        matRipple>Icons</button>              }
+                @if(section != "amazfit") {      <button class="boto tema-amazfit"      routerLink="/section/amazfit"      matRipple>Amazfit Watchfaces</button> }
+            </div>
         </div>
         
         
@@ -70,20 +83,6 @@
         
         
         
-        
-        
-
-
-        
-        
-        <!-- <div class="mb-6 text-center" appMostrarAmbAnimacio>
-            <button class="boto botoSeguentPagina m-auto" routerLink="/art" matRipple>
-                @if (m.ca) { Art }
-                @if (m.es) { Arte }
-                @if (m.en) { Art }
-                <i class="fa-solid fa-chevron-right mx-2"></i>
-            </button>
-        </div> -->
 
     </div>
 </div>
