@@ -132,14 +132,5 @@ export class GithubProjectsComponent implements OnInit {
             .replaceAll("\n", "")
             .split("[//]: # (Description)")[1] || "";
     }
-
-
-    getColorRepoCards(hue) {
-        let alfa = this.ts.modeFosc ? 0.35 : 0.5;
-        return `hsla(${hue}, 100%, 75%, ${alfa})`;
-    }
-    getColorImgShadow(hue) {
-        return `hsl(${hue}, 100%, 50%)`;
-    }
     
 }

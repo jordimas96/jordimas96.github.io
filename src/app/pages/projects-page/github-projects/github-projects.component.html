@@ -11,22 +11,27 @@
         @if (m.ca) { Tinc alguns projectes de GitHub sobre diversos temes: }
         @if (m.es) { Tengo algunos proyectos de GitHub sobre varios temas: }
         @if (m.en) { I have some GitHub projects on many topics: }
-        <br><br>
 
 
-        <ngx-masonry class="repos row g-3" [ordered]="true" [class.d-none]="!repos">
+        <ngx-masonry class="repos row g-3 mt-3" [ordered]="true" [class.d-none]="!repos">
             @for(repo of repos; track repos["name"]) {
-                <div ngxMasonryItem class="col-12 col-md-6" [attr.aria-order]="repo.order">
-                    
-                    <a [href]="repo.url" class="rs">
-                        <div class="repo p-4 d-flex flex-column gap-2 {{repo.name}}" [style.backgroundColor]="getColorRepoCards(repo.cardHue)" appMostrarAmbAnimacio matRipple>
-                            <div class="d-flex align-items-center gap-3">
-                                <img [src]="repo.iconUrl" [alt]="repo.title" [style.color]="getColorImgShadow(repo.cardHue)" class="mb-2 shadow-filter-1" (error)="repo.iconUrl=repo.iconUrlBackup; repo.iconUrlBackup=null">
-                                <div class="title flex-fill">{{repo.title}}</div>
-                            </div>
-                            @if (repo.text[m.idioma]) { <div class="text">{{repo.text[m.idioma]}}</div> }
+                <div ngxMasonryItem class="col-12 col-md-6" [attr.aria-order]="repo.order" style="--hue: {{repo.cardHue}}deg">
+
+                    <div class="repo card-themed paleta-{{repo.cardHue}} {{repo.name}}" appMostrarAmbAnimacio matRipple>
+                        <div class="header">
+                            <img class="logo" [src]="repo.iconUrl" [alt]="repo.title" (error)="repo.iconUrl=repo.iconUrlBackup; repo.iconUrlBackup=null">
+                            <div class="titol flex-fill">{{repo.title}}</div>
                         </div>
-                    </a>
+                        @if (repo.text[m.idioma]) { <div class="text">{{repo.text[m.idioma]}}</div> }
+                        <div class="text-end">
+                            <a class="boto stretched-link" [href]="repo.url">
+                                @if(m.ca) { Visitar web }
+                                @if(m.es) { Visitar web }
+                                @if(m.en) { Visit web }
+                                <i class="fa-solid fa-arrow-right"></i>
+                            </a>
+                        </div>
+                    </div>
 
                 </div>
             }
