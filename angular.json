@@ -36,6 +36,7 @@
               "@angular/material/prebuilt-themes/indigo-pink.css",
               "src/bootstrap-custom.scss",
               "node_modules/bootstrap-icons/font/bootstrap-icons.css",
+              "src/app/styles/themes.scss",
               "src/styles.scss"
             ],
             "scripts": [
@@ -109,6 +110,7 @@
               "@angular/material/prebuilt-themes/indigo-pink.css",
               "src/bootstrap-custom.scss",
               "node_modules/bootstrap-icons/font/bootstrap-icons.css",
+              "src/app/styles/themes.scss",
               "src/styles.scss"
             ],
             "scripts": [

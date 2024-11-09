@@ -82,7 +82,9 @@
 $percentatges100: ();
 
 @for $i from 0 through 100 {
+  @if ($i % 10 == 0 or $i % 25 == 0) {
     $percentatges100: map-merge($percentatges100, ($i: "#{$i}%"));
+  }
 }
 
 @each $key, $value in $percentatges100 {

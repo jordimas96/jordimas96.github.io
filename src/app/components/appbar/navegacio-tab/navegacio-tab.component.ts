@@ -20,7 +20,7 @@ export class NavegacioTabComponent {
 
     @ViewChild("pill") pill: ElementRef;
 
-    public botoSeleccionat;
+    public botoSeleccionat: Element | null;
 
     public rect: any;
 

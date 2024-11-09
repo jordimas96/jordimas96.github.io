@@ -1,4 +1,16 @@
-@import "./mediaqueries.scss";
+// Dark Mode //
+@mixin dark {
+    html.dark & {
+        @content;
+    }
+}
+@mixin light {
+    html.light & {
+        @content;
+    }
+}
+
+
 
 // Variables //
 
