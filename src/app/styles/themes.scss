@@ -31,6 +31,7 @@
             --color-l-8: hsl(#{$hue}, 100%, 83%);
             --color-l-9: hsl(#{$hue}, 100%, 91%);
             --fons-card: light-dark(hsla(#{$hue}, 100%, 72%, 0.5), hsla(#{$hue}, 100%, 21%, 0.5)) !important;
+            --accent-color: light-dark(var(--color-l-3), var(--color-l-7));
         }
         @if ($hue > 90 and $hue <= 150) {
             // 120 //
@@ -98,6 +99,7 @@
             --color-l-9: hsl(#{$hue}, 100%, 93%);
             --fons-card: light-dark(hsla(#{$hue}, 100%, 72%, 0.5), hsla(#{$hue}, 100%, 15%, 0.5)) !important;
         }
+        --accent-color: light-dark(var(--color-l-2), var(--color-l-7));
     } @else {
         // Grayscale //
         --color-fosc-hsl: 0, 0%, 10%;
@@ -115,11 +117,14 @@
         --fons-card: light-dark(hsla(0, 0%, 100%, 0.5), hsla(0, 0%, 6%, 0.5)) !important;
         --accent-color: light-dark(var(--color-7), white);
     }
+    --link: var(--accent-color);
+
     @include set-light-dark-inversos();
 }
+// Set variables que depenen de light / dark // També establir les seves opacitats //
 @mixin set-light-dark-inversos() {
-    @for $i from 1 through 10 { --color-fosc-#{$i * 10}: hsla(var(--color-fosc-hsl), #{$i / 10}); }
-    @for $i from 1 through 10 { --color-clar-#{$i * 10}: hsla(var(--color-clar-hsl), #{$i / 10}); }
+    @for $i from 1 through 10 { --color-fosc-#{$i * 10}: hsla(var(--color-fosc-hsl), #{calc($i / 10)}); }
+    @for $i from 1 through 10 { --color-clar-#{$i * 10}: hsla(var(--color-clar-hsl), #{calc($i / 10)}); }
     @for $i from 1 through 10 { --fons-#{$i * 10}: light-dark(var(--color-clar-#{$i * 10}), var(--color-fosc-#{$i * 10})); }
     @for $i from 1 through 10 { --text-#{$i * 10}: light-dark(var(--color-fosc-#{$i * 10}), var(--color-clar-#{$i * 10})); }
     @for $i from 0 through 9 { --color-#{$i}: light-dark(var(--color-l-#{9 - $i}), var(--color-l-#{$i})); }
@@ -186,6 +191,7 @@
 
 
     --accent-color: light-dark(hsl(224, 100%, 58%), white); //hsl(210, 100%, 79%);
+
     // linear-gradient(45deg, #00ff45, hsl(184.15deg 100% 59.91%))
     
     // &.light {
@@ -196,17 +202,6 @@
     @include set-light-dark-inversos();
 }
 
-// Establir variables mode fosc i clar //
-// Afegeixo els .section per a que utilitzin els colors respectius segons les variables. //
-// Caldria afegir aquí totes les classes a on es necessitessin remapejar els colors //
-html [class*="tema-"], html [class*="paleta-"] {
-    --accent-color: var(--color-7);
-}
-
-
-// Temes cada card //
-
-// Colors generador //
 
 @for $hue from 0 through 360 {
     .paleta-#{$hue} {
@@ -238,7 +233,7 @@ html [class*="tema-"], html [class*="paleta-"] {
 .tema-tasker {
     @extend .paleta-34;
 
-    --link: light-dark(var(--color-l-4),var(--color-l-7));
+    --link: light-dark(var(--color-l-4), var(--color-l-7));
 
     @include light {
         --accent-color: var(--color-l-3);
