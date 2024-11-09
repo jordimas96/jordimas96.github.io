@@ -115,6 +115,19 @@
         --fons-card: light-dark(hsla(0, 0%, 100%, 0.5), hsla(0, 0%, 6%, 0.5)) !important;
         --accent-color: light-dark(var(--color-7), white);
     }
+    @include set-light-dark-inversos();
+}
+@mixin set-light-dark-inversos() {
+    @for $i from 1 through 10 { --color-fosc-#{$i * 10}: hsla(var(--color-fosc-hsl), #{$i / 10}); }
+    @for $i from 1 through 10 { --color-clar-#{$i * 10}: hsla(var(--color-clar-hsl), #{$i / 10}); }
+    @for $i from 1 through 10 { --fons-#{$i * 10}: light-dark(var(--color-clar-#{$i * 10}), var(--color-fosc-#{$i * 10})); }
+    @for $i from 1 through 10 { --text-#{$i * 10}: light-dark(var(--color-fosc-#{$i * 10}), var(--color-clar-#{$i * 10})); }
+    @for $i from 0 through 9 { --color-#{$i}: light-dark(var(--color-l-#{9 - $i}), var(--color-l-#{$i})); }
+
+    --color-fosc: var(--color-fosc-100);
+    --color-clar: var(--color-clar-100);
+    --fons: var(--fons-100);
+    --text: var(--text-100);
 }
 
 
@@ -179,6 +192,8 @@
         // linear-gradient(45deg, hsl(210, 100%, 40%), hsl(184.15deg 100% 59.91%))
         // linear-gradient(45deg, #ba00ff, hsl(251.16deg 100% 50%));
     // }
+
+    @include set-light-dark-inversos();
 }
 
 // Establir variables mode fosc i clar //
@@ -186,94 +201,6 @@
 // Caldria afegir aquí totes les classes a on es necessitessin remapejar els colors //
 html [class*="tema-"], html [class*="paleta-"] {
     --accent-color: var(--color-7);
-}
-html, html .section, html [class*="tema-"], html [class*="paleta-"] {
-    --color-fosc:    hsla(var(--color-fosc-hsl), 1.0);
-    --color-fosc-90: hsla(var(--color-fosc-hsl), 0.9);
-    --color-fosc-80: hsla(var(--color-fosc-hsl), 0.8);
-    --color-fosc-70: hsla(var(--color-fosc-hsl), 0.7);
-    --color-fosc-60: hsla(var(--color-fosc-hsl), 0.6);
-    --color-fosc-50: hsla(var(--color-fosc-hsl), 0.5);
-    --color-fosc-40: hsla(var(--color-fosc-hsl), 0.4);
-    --color-fosc-30: hsla(var(--color-fosc-hsl), 0.3);
-    --color-fosc-20: hsla(var(--color-fosc-hsl), 0.2);
-    --color-fosc-10: hsla(var(--color-fosc-hsl), 0.1);
-    --color-clar:    hsla(var(--color-clar-hsl), 1.0);
-    --color-clar-90: hsla(var(--color-clar-hsl), 0.9);
-    --color-clar-80: hsla(var(--color-clar-hsl), 0.8);
-    --color-clar-70: hsla(var(--color-clar-hsl), 0.7);
-    --color-clar-60: hsla(var(--color-clar-hsl), 0.6);
-    --color-clar-50: hsla(var(--color-clar-hsl), 0.5);
-    --color-clar-40: hsla(var(--color-clar-hsl), 0.4);
-    --color-clar-30: hsla(var(--color-clar-hsl), 0.3);
-    --color-clar-20: hsla(var(--color-clar-hsl), 0.2);
-    --color-clar-10: hsla(var(--color-clar-hsl), 0.1);
-
-    --fons: var(--color-fosc);
-    --fons-90: var(--color-fosc-90);
-    --fons-80: var(--color-fosc-80);
-    --fons-70: var(--color-fosc-70);
-    --fons-60: var(--color-fosc-60);
-    --fons-50: var(--color-fosc-50);
-    --fons-40: var(--color-fosc-40);
-    --fons-30: var(--color-fosc-30);
-    --fons-20: var(--color-fosc-20);
-    --fons-10: var(--color-fosc-10);
-    --text: var(--color-clar);
-    --text-90: var(--color-clar-90);
-    --text-80: var(--color-clar-80);
-    --text-70: var(--color-clar-70);
-    --text-60: var(--color-clar-60);
-    --text-50: var(--color-clar-50);
-    --text-40: var(--color-clar-40);
-    --text-30: var(--color-clar-30);
-    --text-20: var(--color-clar-20);
-    --text-10: var(--color-clar-10);
-
-    --color-0: var(--color-l-0);
-    --color-1: var(--color-l-1);
-    --color-2: var(--color-l-2);
-    --color-3: var(--color-l-3);
-    --color-4: var(--color-l-4);
-    --color-5: var(--color-l-5);
-    --color-6: var(--color-l-6);
-    --color-7: var(--color-l-7);
-    --color-8: var(--color-l-8);
-    --color-9: var(--color-l-9);
-}
-
-.light, .light .section, .light [class*="tema-"], .light [class*="paleta-"] {
-    --fons: var(--color-clar);
-    --fons-90: var(--color-clar-90);
-    --fons-80: var(--color-clar-80);
-    --fons-70: var(--color-clar-70);
-    --fons-60: var(--color-clar-60);
-    --fons-50: var(--color-clar-50);
-    --fons-40: var(--color-clar-40);
-    --fons-30: var(--color-clar-30);
-    --fons-20: var(--color-clar-20);
-    --fons-10: var(--color-clar-10);
-    --text: var(--color-fosc);
-    --text-90: var(--color-fosc-90);
-    --text-80: var(--color-fosc-80);
-    --text-70: var(--color-fosc-70);
-    --text-60: var(--color-fosc-60);
-    --text-50: var(--color-fosc-50);
-    --text-40: var(--color-fosc-40);
-    --text-30: var(--color-fosc-30);
-    --text-20: var(--color-fosc-20);
-    --text-10: var(--color-fosc-10);
-    
-    --color-0: var(--color-l-9);
-    --color-1: var(--color-l-8);
-    --color-2: var(--color-l-7);
-    --color-3: var(--color-l-6);
-    --color-4: var(--color-l-5);
-    --color-5: var(--color-l-4);
-    --color-6: var(--color-l-3);
-    --color-7: var(--color-l-2);
-    --color-8: var(--color-l-1);
-    --color-9: var(--color-l-0);
 }
 
 
