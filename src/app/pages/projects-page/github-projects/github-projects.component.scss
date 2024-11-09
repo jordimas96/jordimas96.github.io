@@ -71,7 +71,10 @@
                 }
 
                 .boto {
-                    box-shadow: 0 0 30px 28rem var(--accent-color);
+                    box-shadow: 0 0 30px 33rem var(--accent-color);
+                    @include gran {
+                        box-shadow: 0 0 30px 28rem var(--accent-color);
+                    }
                 }
             }
         }
