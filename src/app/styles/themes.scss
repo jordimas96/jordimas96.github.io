@@ -1,3 +1,124 @@
+@mixin generar-paleta($hue, $sat: 100) {
+    @if ($sat > 0) {
+        @if ($hue > 330 and $hue <= 360 or $hue >= 0 and $hue <= 30) {
+            // 0 //
+            --color-fosc-hsl: #{$hue}, 100%, 7%;
+            --color-clar-hsl: #{$hue}, 100%, 91%;
+            --color-l-0: hsl(#{$hue}, 100%, 7%);
+            --color-l-1: hsl(#{$hue}, 100%, 16%);
+            --color-l-2: hsl(#{$hue}, 100%, 26%);
+            --color-l-3: hsl(#{$hue}, 100%, 35%);
+            --color-l-4: hsl(#{$hue}, 100%, 44%);
+            --color-l-5: hsl(#{$hue}, 100%, 54%);
+            --color-l-6: hsl(#{$hue}, 100%, 63%);
+            --color-l-7: hsl(#{$hue}, 100%, 72%);
+            --color-l-8: hsl(#{$hue}, 100%, 82%);
+            --color-l-9: hsl(#{$hue}, 100%, 91%);
+            --fons-card: light-dark(hsla(#{$hue}, 100%, 72%, 0.5), hsla(#{$hue}, 100%, 20%, 0.5)) !important;
+        }
+        @if ($hue > 30 and $hue <= 90) {
+            // 60 //
+            --color-fosc-hsl: #{$hue}, 100%, 7%;
+            --color-clar-hsl: #{$hue}, 100%, 91%;
+            --color-l-0: hsl(#{$hue}, 100%, 7%);
+            --color-l-1: hsl(#{$hue}, 100%, 12%);
+            --color-l-2: hsl(#{$hue}, 100%, 18%);
+            --color-l-3: hsl(#{$hue}, 100%, 26%);
+            --color-l-4: hsl(#{$hue}, 100%, 35%);
+            --color-l-5: hsl(#{$hue}, 100%, 44%);
+            --color-l-6: hsl(#{$hue}, 100%, 58%);
+            --color-l-7: hsl(#{$hue}, 100%, 75%);
+            --color-l-8: hsl(#{$hue}, 100%, 83%);
+            --color-l-9: hsl(#{$hue}, 100%, 91%);
+            --fons-card: light-dark(hsla(#{$hue}, 100%, 72%, 0.5), hsla(#{$hue}, 100%, 21%, 0.5)) !important;
+        }
+        @if ($hue > 90 and $hue <= 150) {
+            // 120 //
+            --color-fosc-hsl: #{$hue}, 100%, 8%;
+            --color-clar-hsl: #{$hue}, 100%, 90%;
+            --color-l-0: hsl(#{$hue}, 100%, 8%);
+            --color-l-1: hsl(#{$hue}, 100%, 15%);
+            --color-l-2: hsl(#{$hue}, 100%, 23%);
+            --color-l-3: hsl(#{$hue}, 100%, 30%);
+            --color-l-4: hsl(#{$hue}, 100%, 37%);
+            --color-l-5: hsl(#{$hue}, 100%, 45%);
+            --color-l-6: hsl(#{$hue}, 100%, 60%);
+            --color-l-7: hsl(#{$hue}, 100%, 74%);
+            --color-l-8: hsl(#{$hue}, 100%, 84%);
+            --color-l-9: hsl(#{$hue}, 100%, 90%);
+            --fons-card: light-dark(hsla(#{$hue}, 100%, 72%, 0.5), hsla(#{$hue}, 100%, 14%, 0.5)) !important;
+
+        }
+        @if ($hue > 150 and $hue <= 210) {
+            // 180 //
+            --color-fosc-hsl: #{$hue}, 100%, 8%;
+            --color-clar-hsl: #{$hue}, 100%, 90%;
+            --color-l-0: hsl(#{$hue}, 100%, 8%);
+            --color-l-1: hsl(#{$hue}, 100%, 15%);
+            --color-l-2: hsl(#{$hue}, 100%, 20%);
+            --color-l-3: hsl(#{$hue}, 100%, 27%);
+            --color-l-4: hsl(#{$hue}, 100%, 35%);
+            --color-l-5: hsl(#{$hue}, 100%, 45%);
+            --color-l-6: hsl(#{$hue}, 100%, 50%);
+            --color-l-7: hsl(#{$hue}, 100%, 70%);
+            --color-l-8: hsl(#{$hue}, 100%, 80%);
+            --color-l-9: hsl(#{$hue}, 100%, 90%);
+            --fons-card: light-dark(hsla(#{$hue}, 100%, 62%, 0.5), hsla(#{$hue}, 100%, 16%, 0.5)) !important;
+        }
+        @if ($hue > 210 and $hue <= 270) {
+            // 240 //
+            --color-fosc-hsl: #{$hue}, 100%, 8%;
+            --color-clar-hsl: #{$hue}, 100%, 92%;
+            --color-l-0: hsl(#{$hue}, 100%, 8%);
+            --color-l-1: hsl(#{$hue}, 100%, 17%);
+            --color-l-2: hsl(#{$hue}, 100%, 25%);
+            --color-l-3: hsl(#{$hue}, 100%, 34%);
+            --color-l-4: hsl(#{$hue}, 100%, 43%);
+            --color-l-5: hsl(#{$hue}, 100%, 60%);
+            --color-l-6: hsl(#{$hue}, 100%, 68%);
+            --color-l-7: hsl(#{$hue}, 100%, 75%);
+            --color-l-8: hsl(#{$hue}, 100%, 85%);
+            --color-l-9: hsl(#{$hue}, 100%, 92%);
+            --fons-card: light-dark(hsla(#{$hue}, 100%, 73%, 0.5), hsla(#{$hue}, 81%, 26%, 0.5)) !important;
+
+        }
+        @if ($hue > 270 and $hue <= 330) {
+            // 300 //
+            --color-fosc-hsl: #{$hue}, 100%, 7%;
+            --color-clar-hsl: #{$hue}, 100%, 93%;
+            --color-l-0: hsl(#{$hue}, 100%, 7%);
+            --color-l-1: hsl(#{$hue}, 100%, 16%);
+            --color-l-2: hsl(#{$hue}, 100%, 26%);
+            --color-l-3: hsl(#{$hue}, 100%, 35%);
+            --color-l-4: hsl(#{$hue}, 100%, 44%);
+            --color-l-5: hsl(#{$hue}, 100%, 60%);
+            --color-l-6: hsl(#{$hue}, 100%, 70%);
+            --color-l-7: hsl(#{$hue}, 100%, 79%);
+            --color-l-8: hsl(#{$hue}, 100%, 87%);
+            --color-l-9: hsl(#{$hue}, 100%, 93%);
+            --fons-card: light-dark(hsla(#{$hue}, 100%, 72%, 0.5), hsla(#{$hue}, 100%, 15%, 0.5)) !important;
+        }
+    } @else {
+        // Grayscale //
+        --color-fosc-hsl: 0, 0%, 10%;
+        --color-clar-hsl: 0, 0%, 100%;
+        --color-l-0: hsl(0, 0%, 10%);
+        --color-l-1: hsl(0, 0%, 20%);
+        --color-l-2: hsl(0, 0%, 30%);
+        --color-l-3: hsl(0, 0%, 40%);
+        --color-l-4: hsl(0, 0%, 50%);
+        --color-l-5: hsl(0, 0%, 60%);
+        --color-l-6: hsl(0, 0%, 70%);
+        --color-l-7: hsl(0, 0%, 80%);
+        --color-l-8: hsl(0, 0%, 90%);
+        --color-l-9: hsl(0, 0%, 100%);
+        --fons-card: light-dark(hsla(0, 0%, 100%, 0.5), hsla(0, 0%, 6%, 0.5)) !important;
+        --accent-color: light-dark(var(--color-7), white);
+    }
+}
+
+
+
 // Dark Mode //
 @mixin dark {
     html.dark & {
@@ -34,10 +155,10 @@
     // Temes (text i fons) //
     
     
-    --color-fosc-hsl-vals-test: hsl(0, 0%, 0%);
-    --color-clar-hsl-vals-test: hsl(0, 0%, 100%);
-    --color-fosc-hsl-vals: 0, 0%, 0%;
-    --color-clar-hsl-vals: 0, 0%, 100%;
+    --color-fosc-hsl-test: hsl(0, 0%, 0%);
+    --color-clar-hsl-test: hsl(0, 0%, 100%);
+    --color-fosc-hsl: 0, 0%, 0%;
+    --color-clar-hsl: 0, 0%, 100%;
 
     --color-l-0: hsl(224, 100%, 0%);
     --color-l-1: hsl(224, 100%, 16%);
@@ -67,26 +188,26 @@ html [class*="tema-"], html [class*="paleta-"] {
     --accent-color: var(--color-7);
 }
 html, html .section, html [class*="tema-"], html [class*="paleta-"] {
-    --color-fosc:    hsla(var(--color-fosc-hsl-vals), 1.0);
-    --color-fosc-90: hsla(var(--color-fosc-hsl-vals), 0.9);
-    --color-fosc-80: hsla(var(--color-fosc-hsl-vals), 0.8);
-    --color-fosc-70: hsla(var(--color-fosc-hsl-vals), 0.7);
-    --color-fosc-60: hsla(var(--color-fosc-hsl-vals), 0.6);
-    --color-fosc-50: hsla(var(--color-fosc-hsl-vals), 0.5);
-    --color-fosc-40: hsla(var(--color-fosc-hsl-vals), 0.4);
-    --color-fosc-30: hsla(var(--color-fosc-hsl-vals), 0.3);
-    --color-fosc-20: hsla(var(--color-fosc-hsl-vals), 0.2);
-    --color-fosc-10: hsla(var(--color-fosc-hsl-vals), 0.1);
-    --color-clar:    hsla(var(--color-clar-hsl-vals), 1.0);
-    --color-clar-90: hsla(var(--color-clar-hsl-vals), 0.9);
-    --color-clar-80: hsla(var(--color-clar-hsl-vals), 0.8);
-    --color-clar-70: hsla(var(--color-clar-hsl-vals), 0.7);
-    --color-clar-60: hsla(var(--color-clar-hsl-vals), 0.6);
-    --color-clar-50: hsla(var(--color-clar-hsl-vals), 0.5);
-    --color-clar-40: hsla(var(--color-clar-hsl-vals), 0.4);
-    --color-clar-30: hsla(var(--color-clar-hsl-vals), 0.3);
-    --color-clar-20: hsla(var(--color-clar-hsl-vals), 0.2);
-    --color-clar-10: hsla(var(--color-clar-hsl-vals), 0.1);
+    --color-fosc:    hsla(var(--color-fosc-hsl), 1.0);
+    --color-fosc-90: hsla(var(--color-fosc-hsl), 0.9);
+    --color-fosc-80: hsla(var(--color-fosc-hsl), 0.8);
+    --color-fosc-70: hsla(var(--color-fosc-hsl), 0.7);
+    --color-fosc-60: hsla(var(--color-fosc-hsl), 0.6);
+    --color-fosc-50: hsla(var(--color-fosc-hsl), 0.5);
+    --color-fosc-40: hsla(var(--color-fosc-hsl), 0.4);
+    --color-fosc-30: hsla(var(--color-fosc-hsl), 0.3);
+    --color-fosc-20: hsla(var(--color-fosc-hsl), 0.2);
+    --color-fosc-10: hsla(var(--color-fosc-hsl), 0.1);
+    --color-clar:    hsla(var(--color-clar-hsl), 1.0);
+    --color-clar-90: hsla(var(--color-clar-hsl), 0.9);
+    --color-clar-80: hsla(var(--color-clar-hsl), 0.8);
+    --color-clar-70: hsla(var(--color-clar-hsl), 0.7);
+    --color-clar-60: hsla(var(--color-clar-hsl), 0.6);
+    --color-clar-50: hsla(var(--color-clar-hsl), 0.5);
+    --color-clar-40: hsla(var(--color-clar-hsl), 0.4);
+    --color-clar-30: hsla(var(--color-clar-hsl), 0.3);
+    --color-clar-20: hsla(var(--color-clar-hsl), 0.2);
+    --color-clar-10: hsla(var(--color-clar-hsl), 0.1);
 
     --fons: var(--color-fosc);
     --fons-90: var(--color-fosc-90);
@@ -162,123 +283,11 @@ html, html .section, html [class*="tema-"], html [class*="paleta-"] {
 
 @for $hue from 0 through 360 {
     .paleta-#{$hue} {
-
-        @if ($hue > 330 and $hue <= 360 or $hue >= 0 and $hue <= 30) {
-            // 0 //
-            --color-fosc-hsl-vals: #{$hue}, 100%, 7%;
-            --color-clar-hsl-vals: #{$hue}, 100%, 91%;
-            --color-l-0: hsl(#{$hue}, 100%, 7%);
-            --color-l-1: hsl(#{$hue}, 100%, 16%);
-            --color-l-2: hsl(#{$hue}, 100%, 26%);
-            --color-l-3: hsl(#{$hue}, 100%, 35%);
-            --color-l-4: hsl(#{$hue}, 100%, 44%);
-            --color-l-5: hsl(#{$hue}, 100%, 54%);
-            --color-l-6: hsl(#{$hue}, 100%, 63%);
-            --color-l-7: hsl(#{$hue}, 100%, 72%);
-            --color-l-8: hsl(#{$hue}, 100%, 82%);
-            --color-l-9: hsl(#{$hue}, 100%, 91%);
-            --fons-card: light-dark(hsla(#{$hue}, 100%, 72%, 0.5), hsla(#{$hue}, 100%, 20%, 0.5)) !important;
-        }
-        @if ($hue > 30 and $hue <= 90) {
-            // 60 //
-            --color-fosc-hsl-vals: #{$hue}, 100%, 7%;
-            --color-clar-hsl-vals: #{$hue}, 100%, 91%;
-            --color-l-0: hsl(#{$hue}, 100%, 7%);
-            --color-l-1: hsl(#{$hue}, 100%, 12%);
-            --color-l-2: hsl(#{$hue}, 100%, 18%);
-            --color-l-3: hsl(#{$hue}, 100%, 26%);
-            --color-l-4: hsl(#{$hue}, 100%, 35%);
-            --color-l-5: hsl(#{$hue}, 100%, 44%);
-            --color-l-6: hsl(#{$hue}, 100%, 58%);
-            --color-l-7: hsl(#{$hue}, 100%, 75%);
-            --color-l-8: hsl(#{$hue}, 100%, 83%);
-            --color-l-9: hsl(#{$hue}, 100%, 91%);
-            --fons-card: light-dark(hsla(#{$hue}, 100%, 72%, 0.5), hsla(#{$hue}, 100%, 21%, 0.5)) !important;
-        }
-        @if ($hue > 90 and $hue <= 150) {
-            // 120 //
-            --color-fosc-hsl-vals: #{$hue}, 100%, 8%;
-            --color-clar-hsl-vals: #{$hue}, 100%, 90%;
-            --color-l-0: hsl(#{$hue}, 100%, 8%);
-            --color-l-1: hsl(#{$hue}, 100%, 15%);
-            --color-l-2: hsl(#{$hue}, 100%, 23%);
-            --color-l-3: hsl(#{$hue}, 100%, 30%);
-            --color-l-4: hsl(#{$hue}, 100%, 37%);
-            --color-l-5: hsl(#{$hue}, 100%, 45%);
-            --color-l-6: hsl(#{$hue}, 100%, 60%);
-            --color-l-7: hsl(#{$hue}, 100%, 74%);
-            --color-l-8: hsl(#{$hue}, 100%, 84%);
-            --color-l-9: hsl(#{$hue}, 100%, 90%);
-            --fons-card: light-dark(hsla(#{$hue}, 100%, 72%, 0.5), hsla(#{$hue}, 100%, 14%, 0.5)) !important;
-
-        }
-        @if ($hue > 150 and $hue <= 210) {
-            // 180 //
-            --color-fosc-hsl-vals: #{$hue}, 100%, 8%;
-            --color-clar-hsl-vals: #{$hue}, 100%, 90%;
-            --color-l-0: hsl(#{$hue}, 100%, 8%);
-            --color-l-1: hsl(#{$hue}, 100%, 15%);
-            --color-l-2: hsl(#{$hue}, 100%, 20%);
-            --color-l-3: hsl(#{$hue}, 100%, 27%);
-            --color-l-4: hsl(#{$hue}, 100%, 35%);
-            --color-l-5: hsl(#{$hue}, 100%, 45%);
-            --color-l-6: hsl(#{$hue}, 100%, 50%);
-            --color-l-7: hsl(#{$hue}, 100%, 70%);
-            --color-l-8: hsl(#{$hue}, 100%, 80%);
-            --color-l-9: hsl(#{$hue}, 100%, 90%);
-            --fons-card: light-dark(hsla(#{$hue}, 100%, 62%, 0.5), hsla(#{$hue}, 100%, 16%, 0.5)) !important;
-        }
-        @if ($hue > 210 and $hue <= 270) {
-            // 240 //
-            --color-fosc-hsl-vals: #{$hue}, 100%, 8%;
-            --color-clar-hsl-vals: #{$hue}, 100%, 92%;
-            --color-l-0: hsl(#{$hue}, 100%, 8%);
-            --color-l-1: hsl(#{$hue}, 100%, 17%);
-            --color-l-2: hsl(#{$hue}, 100%, 25%);
-            --color-l-3: hsl(#{$hue}, 100%, 34%);
-            --color-l-4: hsl(#{$hue}, 100%, 43%);
-            --color-l-5: hsl(#{$hue}, 100%, 60%);
-            --color-l-6: hsl(#{$hue}, 100%, 68%);
-            --color-l-7: hsl(#{$hue}, 100%, 75%);
-            --color-l-8: hsl(#{$hue}, 100%, 85%);
-            --color-l-9: hsl(#{$hue}, 100%, 92%);
-            --fons-card: light-dark(hsla(#{$hue}, 100%, 73%, 0.5), hsla(#{$hue}, 81%, 26%, 0.5)) !important;
-
-        }
-        @if ($hue > 270 and $hue <= 330) {
-            // 300 //
-            --color-fosc-hsl-vals: #{$hue}, 100%, 7%;
-            --color-clar-hsl-vals: #{$hue}, 100%, 93%;
-            --color-l-0: hsl(#{$hue}, 100%, 7%);
-            --color-l-1: hsl(#{$hue}, 100%, 16%);
-            --color-l-2: hsl(#{$hue}, 100%, 26%);
-            --color-l-3: hsl(#{$hue}, 100%, 35%);
-            --color-l-4: hsl(#{$hue}, 100%, 44%);
-            --color-l-5: hsl(#{$hue}, 100%, 60%);
-            --color-l-6: hsl(#{$hue}, 100%, 70%);
-            --color-l-7: hsl(#{$hue}, 100%, 79%);
-            --color-l-8: hsl(#{$hue}, 100%, 87%);
-            --color-l-9: hsl(#{$hue}, 100%, 93%);
-            --fons-card: light-dark(hsla(#{$hue}, 100%, 72%, 0.5), hsla(#{$hue}, 100%, 15%, 0.5)) !important;
-        }
+        @include generar-paleta($hue);
     }
-    .paleta-bn {
-        // Grayscale //
-        --color-fosc-hsl-vals: 0, 0%, 10%;
-        --color-clar-hsl-vals: 0, 0%, 100%;
-        --color-l-0: hsl(0, 0%, 10%);
-        --color-l-1: hsl(0, 0%, 20%);
-        --color-l-2: hsl(0, 0%, 30%);
-        --color-l-3: hsl(0, 0%, 40%);
-        --color-l-4: hsl(0, 0%, 50%);
-        --color-l-5: hsl(0, 0%, 60%);
-        --color-l-6: hsl(0, 0%, 70%);
-        --color-l-7: hsl(0, 0%, 80%);
-        --color-l-8: hsl(0, 0%, 90%);
-        --color-l-9: hsl(0, 0%, 100%);
-        --fons-card: light-dark(hsla(0, 0%, 100%, 0.5), hsla(0, 0%, 6%, 0.5)) !important;
-        --accent-color: light-dark(var(--color-7), white);
-    }
+}
+.paleta-bn {
+    @include generar-paleta(0, 0);
 }
 
 // Colors específics cards //
@@ -312,10 +321,10 @@ html, html .section, html [class*="tema-"], html [class*="paleta-"] {
 .tema-amazfit {
     @extend .paleta-44;
 
-    --color-fosc-hsl-vals-test: hsl(273, 100%, 7%);
-    --color-clar-hsl-vals-test: hsl(44, 100%, 91%);
-    --color-fosc-hsl-vals: 273, 100%, 7%;
-    --color-clar-hsl-vals: 44, 100%, 91%;
+    --color-fosc-hsl-test: hsl(273, 100%, 7%);
+    --color-clar-hsl-test: hsl(44, 100%, 91%);
+    --color-fosc-hsl: 273, 100%, 7%;
+    --color-clar-hsl: 44, 100%, 91%;
     --color-l-0: hsl(273, 100%, 7%);
     --color-l-1: hsl(273, 100%, 16%);
     --color-l-2: hsl(273, 100%, 26%);
@@ -366,10 +375,10 @@ html, html .section, html [class*="tema-"], html [class*="paleta-"] {
 .tema-evora {
     @extend .paleta-41;
 
-    --color-fosc-hsl-vals-test: hsl(212, 100%, 8%);
-    --color-clar-hsl-vals-test: hsl(41, 100%, 91%);
-    --color-fosc-hsl-vals: 212, 100%, 8%;
-    --color-clar-hsl-vals: 41, 100%, 91%;
+    --color-fosc-hsl-test: hsl(212, 100%, 8%);
+    --color-clar-hsl-test: hsl(41, 100%, 91%);
+    --color-fosc-hsl: 212, 100%, 8%;
+    --color-clar-hsl: 41, 100%, 91%;
     --color-l-0: hsl(212, 100%, 8%);
     --color-l-1: hsl(212, 100%, 17%);
     --color-l-2: hsl(212, 100%, 25%);
