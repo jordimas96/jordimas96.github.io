@@ -14,6 +14,7 @@ a.link-boto-titol:hover {
     50% { transform: rotate(0deg); }
     75% { transform: rotate(7.5deg); }
     100% { transform: rotate(0deg); }
+    0%, 100% { clip-path: inset(7%); }
 }
 
 
