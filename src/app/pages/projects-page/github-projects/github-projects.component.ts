@@ -1,6 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
 import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
-import { NgxMasonryModule } from 'ngx-masonry';
+import { NgxMasonryComponent, NgxMasonryModule } from 'ngx-masonry';
 import { SkillComponent } from 'src/app/components/skill/skill.component';
 import { Skills } from 'src/app/enums/skills.enum';
 import { MainService } from 'src/app/services/main.service';
@@ -23,6 +23,8 @@ import { Utils } from 'src/app/shared/utils';
 })
 export class GithubProjectsComponent implements OnInit {
     Skills = Skills;
+
+    @ViewChild("masonry") masonry: NgxMasonryComponent;
 
     public readonly USE_CACHE = true;
 
@@ -64,11 +66,15 @@ export class GithubProjectsComponent implements OnInit {
             },
             {
                 "name": "navigation-tab",
-                "cardHue": 265
+                "cardHue": 275
             },
             {
                 "name": "color-harmonizer",
-                "cardHue": 261
+                "cardHue": 251
+            },
+            {
+                "name": "uniform-luminosity-palette",
+                "cardHue": 204
             },
             {
                 "name": "icon-editor-2016",
@@ -128,9 +134,20 @@ export class GithubProjectsComponent implements OnInit {
     }
 
     processarReadme(text: string) {
-        return text
-            .replaceAll("\n", "")
-            .split("[//]: # (Description)")[1] || "";
+        // Eliminar possible tag description //
+        let splitedText = text.split("[//]: # (Description)");
+        text = splitedText[splitedText.length - 1];
+
+        // Eliminar possible titol //
+        text = text.replace(/^# .*\n?/, '');
+
+        return text.trim();
+    }
+
+    onImgLogoError(repo) {
+        repo.iconUrl = repo.iconUrlBackup;
+        repo.iconUrlBackup = null;
+        this.masonry.layout();
     }
     
 }

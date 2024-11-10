@@ -1,11 +1,19 @@
 <section id="github" class="tema-github card-themed bg-colored section" appMostrarAmbAnimacio>
-    <div class="section-title d-flex align-items-center mb-2 gap-2_5">
-        @if (m.ca) { Projectes GitHub }
-        @if (m.es) { Proyectos GitHub }
-        @if (m.en) { GitHub projects }
-        <a href="https://github.com/jordimas96?tab=repositories" class="rs">
-            <img src="assets/icons/projects/github.png" alt="GitHub" class="title-icon inv-dark">
-        </a>
+    <div class="section-title mb-2 d-flex align-items-center justify-content-between gap-2">
+        <div class="d-flex align-items-center gap-2_5">
+            @if (m.ca) { Projectes GitHub }
+            @if (m.es) { Proyectos GitHub }
+            @if (m.en) { GitHub projects }
+            <a href="https://github.com/jordimas96?tab=repositories" class="rs">
+                <img src="assets/icons/projects/github.png" alt="GitHub" class="title-icon inv-dark">
+            </a>
+        </div>
+        
+        <div class="missatge-temps-real-github text-90">
+            @if (m.ca) { * Repositoris carregats des de GitHub }
+            @if (m.es) { * Repositorios cargados desde GitHub }
+            @if (m.en) { * Repositories loaded from GitHub }
+        </div>
     </div>
     <div class="text mb-4">
         @if (m.ca) { Tinc alguns projectes de GitHub sobre diversos temes: }
@@ -13,13 +21,15 @@
         @if (m.en) { I have some GitHub projects on many topics: }
 
 
-        <ngx-masonry class="repos row g-3 mt-3" [ordered]="true" [class.d-none]="!repos">
+        <ngx-masonry #masonry class="repos row g-3 mt-3" [ordered]="true" [class.d-none]="!repos">
             @for(repo of repos; track repos["name"]) {
                 <div ngxMasonryItem class="col-12 col-md-6" [attr.aria-order]="repo.order" style="--hue: {{repo.cardHue}}deg">
 
                     <div class="repo card-themed paleta-{{repo.cardHue}} {{repo.name}}" appMostrarAmbAnimacio matRipple>
                         <div class="header">
-                            <img class="logo" [src]="repo.iconUrl" [alt]="repo.title" (error)="repo.iconUrl=repo.iconUrlBackup; repo.iconUrlBackup=null">
+                            @if (repo.iconUrl) {
+                                <img class="logo" [src]="repo.iconUrl" [alt]="repo.title" (error)="onImgLogoError(repo)">
+                            }
                             <div class="titol flex-fill">{{repo.title}}</div>
                         </div>
                         @if (repo.text[m.idioma]) { <div class="text">{{repo.text[m.idioma]}}</div> }
