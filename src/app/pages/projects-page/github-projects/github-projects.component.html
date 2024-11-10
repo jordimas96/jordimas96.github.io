@@ -9,16 +9,16 @@
             </a>
         </div>
         
-        <div class="missatge-temps-real-github text-90">
-            @if (m.ca) { * Repositoris carregats des de GitHub }
-            @if (m.es) { * Repositorios cargados desde GitHub }
-            @if (m.en) { * Repositories loaded from GitHub }
-        </div>
+        <!-- <div class="missatge-temps-real-github text-90">
+            @if (m.ca) { * Repositoris carregats a temps real des de GitHub }
+            @if (m.es) { * Repositorios cargados a tiempo real desde GitHub }
+            @if (m.en) { * Repositories loaded in real time from GitHub }
+        </div> -->
     </div>
     <div class="text mb-4">
-        @if (m.ca) { Tinc alguns projectes de GitHub sobre diversos temes: }
-        @if (m.es) { Tengo algunos proyectos de GitHub sobre varios temas: }
-        @if (m.en) { I have some GitHub projects on many topics: }
+        @if (m.ca) { Llistat dels meus repositoris més rellevants a GitHub, on tinc els meus experiments i eines, i projectes vells dels meus estudis. Les imatges, títols, text dels readmes en 3 idiomes, url i altra informació es carrega dinàmicament mitjançant una petició a l'API de GitHub. }
+        @if (m.es) { Listado de mis repositorios más relevantes en GitHub, donde tengo mis experimentos y herramientas, y proyectos viejos de mis estudios. Las imágenes, títulos, texto de los readmes en 3 idiomas, url y demás información se carga dinámicamente mediante una petición a la API de GitHub. }
+        @if (m.en) { List of my most relevant repositories on GitHub, where I have my experiments and tools, and old projects from my studies. Images, titles, readmes text in 3 languages, url and other information are loaded dynamically through a request to the GitHub API. }
 
 
         <ngx-masonry #masonry class="repos row g-3 mt-3" [ordered]="true" [class.d-none]="!repos">

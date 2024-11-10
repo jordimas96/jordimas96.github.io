@@ -6,6 +6,7 @@ import { BioComponent } from './bio/bio.component';
 import { LanguagesComponent } from './languages/languages.component';
 import { StatsComponent } from './stats/stats.component';
 import { ExperienciesHomeComponent } from './experiencies-home/experiencies-home.component';
+import { ProjectesHomeComponent } from './projectes-home/projectes-home.component';
 
 @Component({
     selector: 'app-home-page',
@@ -17,6 +18,7 @@ import { ExperienciesHomeComponent } from './experiencies-home/experiencies-home
         RouterLink,
         BioComponent,
         StatsComponent,
+        ProjectesHomeComponent,
         ExperienciesHomeComponent,
         LanguagesComponent,
     ]

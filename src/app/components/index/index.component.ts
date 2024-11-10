@@ -85,7 +85,7 @@ export class IndexComponent implements OnInit, AfterViewInit {
             { id: "indra",        nom: "Indra"              },
             { id: "nexxia",       nom: "Nexxia"             },
             { id: "android",      nom: "Apps Android"       },
-            { id: "mad-jumpgate", nom: "Mad Jumpgate"       },
+            { id: "mad-jumpgate", nom: ["Joc de disparar per a PC", "Juego de disparos PC", "PC shooting game"][this.m.idiomaIndex] },
             { id: "github",       nom: ["Projectes GitHub", "Proyectos GitHub", "GitHub Projects"][this.m.idiomaIndex] },
             { id: "custom-roms",  nom: "Custom ROMs"        },
             { id: "tasker",       nom: "Tasker"             },
