@@ -78,15 +78,19 @@ html {
     .section-title {
         font-size: 1.75rem;
         
-        @include mobil { font-size: 1.4rem; }
+        @include mobil {
+            font-size: 1.4rem;
+        }
+
+        .title-icon {
+            height: 2rem;
+        }
     }
-    .text {
+
+    .descripcio {
         color: var(--text-80);
         font-size: 1.1rem;
         text-align: justify;
-    }
-    .title-icon {
-        height: 2rem;
     }
 }
 .card-themed {

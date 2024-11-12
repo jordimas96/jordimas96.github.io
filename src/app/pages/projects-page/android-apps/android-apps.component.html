@@ -7,7 +7,7 @@
             <img src="assets/icons/projects/android.png" alt="Android" class="title-icon">
         </a>
     </div>
-    <div class="text mb-4">
+    <article class="descripcio mb-4">
         @if (m.ca) {
             Quan tinc temps lliure, m'agrada desenvolupar aplicacions per a Android i jocs per a la Play Store, ja sigui en Android Studio com en Unity. Per fer-ho, utilitzo majoritàriament Java, Kotlin i C#.<br>
             Sempre m'he esforçat a seguir les directrius de <app-link href="https://m2.material.io/">Material Design</app-link> en Android, però des d'Android 12 i la introducció de la tercera versió de Material Design, anomenada <app-link href="https://m3.material.io/">Material You</app-link>, he començat a dissenyar les interfícies seguint aquest nou estil, que ofereix una estètica moderna i agradable d'utilitzar. Seguint aquesta línia, a l'hora de triar el tema, utilitzo els <app-link href="https://developer.android.com/develop/ui/views/theming/dynamic-colors">colors dinàmics de Monet</app-link>, que ofereixen opcions de personalització segons el fons de pantalla. D'aquesta manera es poden generar interfícies amb combinacions de colors úniques per a cada usuari.<br><br>
@@ -28,7 +28,7 @@
         @if (m.ca) { Les meves aplicacions estan disponibles a diferents botigues: }
         @if (m.es) { Mis aplicaciones están disponibles en diferentes tiendas: }
         @if (m.en) { My apps are available on different markets: }
-    </div>
+    </article>
     <div class="boto-i-qr row">
         <div class="col-6">
             <a [href]="m.env.assets + '/external-pages/play-store/play-store.html'" class="boto ambIcona" appMostrarAmbAnimacio matRipple>

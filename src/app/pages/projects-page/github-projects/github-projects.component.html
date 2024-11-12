@@ -15,7 +15,7 @@
             @if (m.en) { * Repositories loaded in real time from GitHub }
         </div> -->
     </div>
-    <div class="text mb-4">
+    <article class="descripcio mb-4">
         @if (m.ca) { Llistat dels meus repositoris més rellevants a GitHub, on tinc els meus experiments i eines, i projectes vells dels meus estudis. Les imatges, títols, text dels readmes en 3 idiomes, url i altra informació es carrega dinàmicament mitjançant una petició a l'API de GitHub. }
         @if (m.es) { Listado de mis repositorios más relevantes en GitHub, donde tengo mis experimentos y herramientas, y proyectos viejos de mis estudios. Las imágenes, títulos, texto de los readmes en 3 idiomas, url y demás información se carga dinámicamente mediante una petición a la API de GitHub. }
         @if (m.en) { List of my most relevant repositories on GitHub, where I have my experiments and tools, and old projects from my studies. Images, titles, readmes text in 3 languages, url and other information are loaded dynamically through a request to the GitHub API. }
@@ -51,7 +51,7 @@
             <!-- <div class="fst-italic m-3">No projects found</div> -->
             <mat-spinner [diameter]="60" />
         }
-    </div>
+    </article>
     
     <!-- Skills -->
     <div class="skills-title mt-4 mb-2">
