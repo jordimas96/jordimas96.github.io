@@ -41,7 +41,7 @@ export class RickrollService {
             this.toast.open(text[this.m.idiomaIndex]);
 
         } else {
-            window.open("https://jordimas96.github.io/r/rickroll", "_self");
+            window.open("https://jordimas96.github.io/r/surprise", "_self");
 
             this.clicksLeft = this.TOTAL_CLICKS;
             this.cooldown = true;
