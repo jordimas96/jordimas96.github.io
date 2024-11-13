@@ -29,6 +29,6 @@ export class ProjectesHomeComponent {
 
 
     getSeeMoreText() {
-        return ["Veure més", "Ver más", "see more"][this.m.idiomaIndex];
+        return ["Veure més", "Ver más", "See more"][this.m.idiomaIndex];
     }
 }
