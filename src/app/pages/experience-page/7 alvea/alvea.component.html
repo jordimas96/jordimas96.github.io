@@ -6,7 +6,7 @@
             <span class="fletxa">↗</span>
         </a>
     </div>
-    <article class="descripcio mb-4">
+    <!-- <article class="descripcio mb-4">
         @if (m.ca) {
             En aquesta empresa vaig treballar per a Indra, una consultora que gestiona diversos projectes per al Gobierno de España.<br>
             Principal desenvolupador frontend d'un backoffice per al <app-link href="https://www.exteriores.gob.es/ca">Ministerio de Asuntos Exteriores y Cooperación</app-link>, que permetrà proporcionar suport als ciutadans espanyols que es troben a l'estranger durant situacions de crisi, com ara atemptats o catàstrofes naturals. L'aplicació permetrà gestionar grups de ciutadans per a organitzar trasllats, salconduits, repatriacions, renovació de documents, comunicacions i atenció a necessitats especials, entre d'altres serveis.<br><br>
@@ -50,6 +50,76 @@
             The application is an Angular Single Page Application. It has a request caching system to ensure its operation in areas with poor coverage, or with connection problems, something common in emergency situations. It also meets all <app-link href="https://ialabs.ie/what-is-the-difference-between-wcag-a-aa-and-aaa/">level AAA</app-link> accessibility standards.<br><br>
 
             During the development of the application, I developed some components, improvised based on the needs of the project, so well-built and responsive that the library team contacted me to add them to the official library, so that they would be available for use in all applications of the Ministry.
+        }
+    </article> -->
+    <article class="descripcio mb-4">
+        @if (m.ca) {
+            <p>
+                En aquesta empresa vaig treballar per a Indra, una consultora que gestiona diversos projectes per al Gobierno de España.<br>
+                Principal desenvolupador frontend d'un backoffice per al <app-link href="https://www.exteriores.gob.es/ca">Ministerio de Asuntos Exteriores y Cooperación</app-link>, que permetrà proporcionar suport als ciutadans espanyols que es troben a l'estranger durant situacions de crisi, com ara atemptats o catàstrofes naturals. L'aplicació permetrà gestionar grups de ciutadans per a organitzar trasllats, salconduits, repatriacions, renovació de documents, comunicacions i atenció a necessitats especials, entre d'altres serveis.<br><br>
+
+                Vam iniciar el projecte creant una llibreria de components en Angular, utilitzant PrimeNG, Angular Material i altres plugins com a base. Aquesta llibreria inclou tant elements comuns en formularis (selectors, radiobuttons, checkboxes, calendaris, mapes interactius) com components habituals en interfícies d'usuari (botons, cards, toasts, menús desplegables, breadcrumbs, etc.).<br><br>
+
+                Tant els components com la web estan desenvolupats seguint uns estils estrictament definits, amb cada aspecte del disseny (colors, formes, espais, fonts, mides, animacions) fortament marcat. L'estructura de la pàgina és semblant a la de les altres webs oficials de l'estat. Els estils estan completament desacoblats i organitzats.<br><br>
+
+                L'aplicació compta amb suport per a diversos idiomes: de moment castellà i anglès, però planegem ampliar-la a català, euskera, gallec, asturià, entre d'altres.<br><br>
+
+                L'aplicació és una Single Page Application d'Angular. Té sistema d'emmagatzematge en caché de les peticions per a garantir-ne el funcionament en zones amb poca cobertura, o amb problemes de connexió, cosa freqüent en situacions d'emergència. A més, compleix tots els estàndards d'accessibilitat de .<app-link href="https://ialabs.ie/what-is-the-difference-between-wcag-a-aa-and-aaa/">nivell AAA</app-link>.
+            </p>
+            <h4>Assoliments</h4>
+            <ul>
+                <!-- <li>🌟 Líder de la part forntend del projecte</li> -->
+                <li>Participació en el desenvolupament de la nostra pròpia llibreria completa de components per al projecte i per al Ministeri</li>
+                <li>Desenvolupament de components per al projecte que, sense ser dissenyats com a llibreria, van resultar tan versàtils que van ser adoptats en totes les aplicacions del Ministeri</li>
+                <li>Desenvolupament de l'aplicació seguint uns estils estrictes</li>
+                <li>En poc temps m'he erigit com el desenvolupador CSS de referència</li>
+            </ul>
+        }
+
+        @if (m.es) {
+            <p>
+                En esta empresa trabajé para Indra, una consultora que gestiona varios proyectos para el Gobierno de España.<br>            
+                Principal desarrollador frontend de un backoffice para el <app-link href="https://www.exteriores.gob.es/">Ministerio de Asuntos Exteriores y Cooperación</app-link>, que permitirá proporcionar soporte a los ciudadanos españoles que se encuentran en el extranjero durante situaciones de crisis, como atentados o catástrofes naturales. La aplicación permitirá gestionar grupos de ciudadanos para organizar traslados, salvoconductos, repatriaciones, renovación de documentos, comunicaciones y atención a necesidades especiales, entre otros servicios.<br><br>
+
+                Iniciamos el proyecto creando una librería de componentes en Angular, utilizando PrimeNG, Angular Material y otros plugins como base. Esta librería incluye tanto elementos comunes en formularios (selectores, radiobuttons, checkboxes, calendarios, mapas interactivos) como componentes habituales en interfaces de usuario (botones, cards, toasts, menús desplegables, breadcrumbs, etc.).<br><br>
+                
+                Tanto los componentes como la web están desarrollados siguiendo unos estilos estrictamente definidos, con cada aspecto del diseño (colores, formas, espacios, fuentes, tamaños, animaciones) fuertemente marcado. La estructura de la página es similar a la de las otras webs oficiales del estado. Los estilos están completamente desacoplados y organizados.<br><br>
+
+                La aplicación cuenta con soporte para varios idiomas: de momento español e inglés, pero planeamos ampliarla a catalán, euskera, gallego, asturiano, entre otros.<br><br>
+
+                La aplicación es una Single Page Application de Angular. Tiene sistema de almacenamiento en caché de las peticiones para garantizar su funcionamiento en zonas con poca cobertura, o con problemas de conexión, algo frecuente en situaciones de emergencia. Además, cumple con todos los estándares de accesibilidad de <app-link href="https://ialabs.ie/what-is-the-difference-between-wcag-a-aa-and-aaa/">nivel AAA</app-link>.
+            </p>
+            <h4>Logros</h4>
+            <ul>
+                <!-- <li>🌟 Líder de la parte frontend del proyecto</li> -->
+                <li>Participación en el desarrollo de nuestra propia librería completa de componentes para el proyecto y para el Ministerio</li>
+                <li>Desarrollo de componentes para el proyecto que, sin ser diseñados como librería, resultaron tan versátiles que fueron adoptados en todas las aplicaciones del Ministerio</li>
+                <li>Desarrollo de la aplicación siguiendo unos estilos estrictos</li>
+                <li>Al poco tiempo me he erigido como el desarrollador CSS de referencia</li>
+            </ul>
+        }
+
+        @if (m.en) {
+            <p>
+                In this company I worked for Indra, a consultancy that manages several projects for the Government of Spain.<br>
+                Lead frontend developer of a back-office system for the <app-link href="https://www.exteriores.gob.es/en">Ministry of Foreign Affairs and Cooperation</app-link>, which will provide support to Spanish citizens who are abroad during crisis situations, such as terrorist attacks or natural disasters. The application will allow managing groups of citizens to organize transfers, safe conduct passes, repatriations, document renewals, communications and attention to special needs, among other services.<br><br>
+
+                We started the project by creating a component library in Angular, using PrimeNG, Angular Material and other plugins as a base. This library includes both common form elements (selectors, radio buttons, checkboxes, calendars, interactive maps) and common user interface components (buttons, cards, toasts, drop-down menus, breadcrumbs, etc.). <br><br>
+
+                Both the components and the website are developed following strictly defined styles, with each aspect of the design (colors, shapes, spaces, fonts, sizes, animations) strongly established. The structure of the page is similar to that of the other official government websites. The styles are completely decoupled and organized. <br><br>
+
+                The application has support for several languages: currently Spanish and English, but we plan to expand to Catalan, Basque, Galician, Asturian, among others. <br><br>
+
+                The application is an Angular Single Page Application. It has a request caching system to ensure its operation in areas with poor coverage, or with connection problems, something common in emergency situations. It also meets all <app-link href="https://ialabs.ie/what-is-the-difference-between-wcag-a-aa-and-aaa/">level AAA</app-link> accessibility standards.
+            </p>
+            <h4>Achievements</h4>
+            <ul>
+                <!-- <li>🌟 Frontend project leader</li> -->
+                <li>Participation in the development of our own complete library of components for the project and for the Ministry</li>
+                <li>Development of components for the project that, without being designed as a library, were so versatile that they were adopted in all the Ministry's applications</li>
+                <li>Application development following strict styles</li>
+                <li>In a short time I have established myself as the reference CSS developer</li>
+            </ul>
         }
     </article>
 
