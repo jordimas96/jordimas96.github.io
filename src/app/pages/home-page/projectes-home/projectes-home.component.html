@@ -1,150 +1,152 @@
-<div class="titol h2 mb-4 text-center" appMostrarAmbAnimacio>
-    @if (m.ca) { Projectes personals }
-    @if (m.es) { Proyectos personales }
-    @if (m.en) { Personal projects }
-</div>
+<section id="projects-home">
 
-<section id="projectes" class="projectes section row g-3">
-
-    <div class="col-12 col-sm-6">
-        <div class="projecte tema-android card-themed bg-colored" appMostrarAmbAnimacio matRipple>
-            <div class="titol">
-                @if (m.ca) { Apps Android }
-                @if (m.es) { Apps Android }
-                @if (m.en) { Android Apps }
-            </div>
-            <div class="text">
-                @if (m.ca) { Les meves apps en Android, pujades a la Play Store i a Amazon AppStore. Android Studio, Kotlin i Unity. Estils amb Material You. Interfícies amb colors dinàmics de Monet. }
-                @if (m.es) { Mis apps en Android, subidas en la Play Store y a Amazon AppStore. Android Studio, Kotlin y Unity. Estilos con Material You. Interfaces con colores dinámicos de Monet. }
-                @if (m.en) { My Android apps, uploaded to the Play Store and Amazon AppStore. Android Studio, Kotlin and Unity. Styled with Material You. Interfaces with dynamic colors by Monet. }
-            </div>
-            <div class="text-end">
-                <button class="boto stretched-link" routerLink="/section/android">
-                    {{ getSeeMoreText() }}
-                    <i class="fa-solid fa-arrow-right"></i>
-                </button>
-            </div>
-        </div>
+    <div class="titol h2 mb-4 text-center" appMostrarAmbAnimacio>
+        @if (m.ca) { Projectes personals }
+        @if (m.es) { Proyectos personales }
+        @if (m.en) { Personal projects }
     </div>
 
-    <div class="col-12 col-sm-6">
-        <div class="projecte tema-mad-jumpgate card-themed bg-colored" appMostrarAmbAnimacio matRipple>
-            <div class="titol">
-                @if (m.ca) { Joc de disparar per a PC }
-                @if (m.es) { Juego de disparos para PC }
-                @if (m.en) { PC shooting game }
-            </div>
-            <div class="text">
-                @if (m.ca) { Joc de disparar creat des de zero en 2 setmanes amb Unity. 5 nivells amb diverses armes i objectes curatius, granades, spawn d'enemics, 5 tipus d'enemics de 2 categories, música i efectes especials. }
-                @if (m.es) { Juego de disparos creado desde cero en 2 semanas con Unity. 5 niveles con varias armas y objetos curativos, granadas, spawn de enemigos, 5 tipos de enemigos de 2 categorías, música y efectos especiales. }
-                @if (m.en) { Shooting game created from scratch in 2 weeks with Unity. 5 levels with various weapons and healing items, grenades, enemy spawn, 5 types of enemies from 2 categories, music and special effects. }
-            </div>
-            <div class="text-end">
-                <button class="boto stretched-link" routerLink="/section/mad-jumpgate">
-                    {{ getSeeMoreText() }}
-                    <i class="fa-solid fa-arrow-right"></i>
-                </button>
+    <div class="projectes section row g-3">
+
+        <div class="col-12 col-sm-6">
+            <div class="projecte tema-android card-themed bg-colored" appMostrarAmbAnimacio matRipple>
+                <div class="titol">
+                    @if (m.ca) { Apps Android }
+                    @if (m.es) { Apps Android }
+                    @if (m.en) { Android Apps }
+                </div>
+                <div class="text">
+                    @if (m.ca) { Les meves apps en Android, pujades a la Play Store i a Amazon AppStore. Android Studio, Kotlin i Unity. Estils amb Material You. Interfícies amb colors dinàmics de Monet. }
+                    @if (m.es) { Mis apps en Android, subidas en la Play Store y a Amazon AppStore. Android Studio, Kotlin y Unity. Estilos con Material You. Interfaces con colores dinámicos de Monet. }
+                    @if (m.en) { My Android apps, uploaded to the Play Store and Amazon AppStore. Android Studio, Kotlin and Unity. Styled with Material You. Interfaces with dynamic colors by Monet. }
+                </div>
+                <div class="text-end">
+                    <button class="boto stretched-link" routerLink="/section/android">
+                        {{ getSeeMoreText() }}
+                        <i class="fa-solid fa-arrow-right"></i>
+                    </button>
+                </div>
             </div>
         </div>
-    </div>
 
-    <div class="col-12 col-sm-6">
-        <div class="projecte tema-github card-themed bg-colored" appMostrarAmbAnimacio matRipple>
-            <div class="titol">
-                @if (m.ca) { Projectes GitHub }
-                @if (m.es) { Proyectos GitHub }
-                @if (m.en) { GitHub projects }
-            </div>
-            <div class="text">
-                @if (m.ca) { Llistat a temps real dels meus repositoris més rellevants a GitHub, on tinc els meus experiments i eines, i projectes vells dels meus estudis. }
-                @if (m.es) { Listado a tiempo real de mis repositorios más relevantes en GitHub, donde tengo mis experimentos y herramientas, y proyectos viejos de mis estudios. }
-                @if (m.en) { Real-time list of my most relevant repositories on GitHub, where I have my experiments and tools, and old projects from my studies. }
-            </div>
-            <div class="text-end">
-                <button class="boto stretched-link" routerLink="/section/github">
-                    {{ getSeeMoreText() }}
-                    <i class="fa-solid fa-arrow-right"></i>
-                </button>
+        <div class="col-12 col-sm-6">
+            <div class="projecte tema-mad-jumpgate card-themed bg-colored" appMostrarAmbAnimacio matRipple>
+                <div class="titol">
+                    @if (m.ca) { Joc de disparar per a PC }
+                    @if (m.es) { Juego de disparos para PC }
+                    @if (m.en) { PC shooting game }
+                </div>
+                <div class="text">
+                    @if (m.ca) { Joc de disparar creat des de zero en 2 setmanes amb Unity. 5 nivells amb diverses armes i objectes curatius, granades, spawn d'enemics, 5 tipus d'enemics de 2 categories, música i efectes especials. }
+                    @if (m.es) { Juego de disparos creado desde cero en 2 semanas con Unity. 5 niveles con varias armas y objetos curativos, granadas, spawn de enemigos, 5 tipos de enemigos de 2 categorías, música y efectos especiales. }
+                    @if (m.en) { Shooting game created from scratch in 2 weeks with Unity. 5 levels with various weapons and healing items, grenades, enemy spawn, 5 types of enemies from 2 categories, music and special effects. }
+                </div>
+                <div class="text-end">
+                    <button class="boto stretched-link" routerLink="/section/mad-jumpgate">
+                        {{ getSeeMoreText() }}
+                        <i class="fa-solid fa-arrow-right"></i>
+                    </button>
+                </div>
             </div>
         </div>
-    </div>
 
-    <div class="col-12 col-sm-6">
-        <div class="projecte card-themed bg-colored" appMostrarAmbAnimacio matRipple>
-            <div class="titol">Custom ROMs</div>
-            <div class="text">
-                @if (m.ca) { Instal·lació de ROMS personalitzades als meus dispositius Android i smartwatches. Desbloqueig del bootloader. }
-                @if (m.es) { Instalación de ROMS personalizadas en mis dispositivos Android y smartwatches. Desbloqueo del bootloader. }
-                @if (m.en) { Installing custom ROMs on my Android devices and smartwatches. Bootloader unlock. }
-            </div>
-            <div class="text-end">
-                <button class="boto stretched-link" routerLink="/section/custom-roms">
-                    {{ getSeeMoreText() }}
-                    <i class="fa-solid fa-arrow-right"></i>
-                </button>
+        <div class="col-12 col-sm-6">
+            <div class="projecte tema-github card-themed bg-colored" appMostrarAmbAnimacio matRipple>
+                <div class="titol">
+                    @if (m.ca) { Projectes GitHub }
+                    @if (m.es) { Proyectos GitHub }
+                    @if (m.en) { GitHub projects }
+                </div>
+                <div class="text">
+                    @if (m.ca) { Llistat a temps real dels meus repositoris més rellevants a GitHub, on tinc els meus experiments i eines, i projectes vells dels meus estudis. }
+                    @if (m.es) { Listado a tiempo real de mis repositorios más relevantes en GitHub, donde tengo mis experimentos y herramientas, y proyectos viejos de mis estudios. }
+                    @if (m.en) { Real-time list of my most relevant repositories on GitHub, where I have my experiments and tools, and old projects from my studies. }
+                </div>
+                <div class="text-end">
+                    <button class="boto stretched-link" routerLink="/section/github">
+                        {{ getSeeMoreText() }}
+                        <i class="fa-solid fa-arrow-right"></i>
+                    </button>
+                </div>
             </div>
         </div>
-    </div>
 
-    <div class="col-12 col-sm-6">
-        <div class="projecte tema-tasker card-themed bg-colored" appMostrarAmbAnimacio matRipple>
-            <div class="titol">
-                @if (m.ca) { Projectes TaskerNet }
-                @if (m.es) { Proyectos TaskerNet }
-                @if (m.en) { TaskerNet projects }
-            </div>
-            <div class="text">
-                @if (m.ca) { Programació de tasques complexes en Android amb Tasker, una aplicació d'automatització per a Android. Publicació de projectes per a la comunitat amb centenars de descàrregues. }
-                @if (m.es) { Programación de tareas complejas en Android usando Tasker, una aplicación de automatización para Android. Publicación de proyectos para la comunidad con cientos de descargas. }
-                @if (m.en) { Programming complex tasks on Android using Tasker, an Android automation app. Uploading projects for the community with hundreds of downloads. }
-            </div>
-            <div class="text-end">
-                <button class="boto stretched-link" routerLink="/section/tasker">
-                    {{ getSeeMoreText() }}
-                    <i class="fa-solid fa-arrow-right"></i>
-                </button>
+        <div class="col-12 col-sm-6">
+            <div class="projecte card-themed bg-colored" appMostrarAmbAnimacio matRipple>
+                <div class="titol">Custom ROMs</div>
+                <div class="text">
+                    @if (m.ca) { Instal·lació de ROMS personalitzades als meus dispositius Android i smartwatches. Desbloqueig del bootloader. }
+                    @if (m.es) { Instalación de ROMS personalizadas en mis dispositivos Android y smartwatches. Desbloqueo del bootloader. }
+                    @if (m.en) { Installing custom ROMs on my Android devices and smartwatches. Bootloader unlock. }
+                </div>
+                <div class="text-end">
+                    <button class="boto stretched-link" routerLink="/section/custom-roms">
+                        {{ getSeeMoreText() }}
+                        <i class="fa-solid fa-arrow-right"></i>
+                    </button>
+                </div>
             </div>
         </div>
-    </div>
 
-    <div class="col-12 col-sm-6">
-        <div class="projecte tema-icons card-themed bg-colored" appMostrarAmbAnimacio matRipple>
-            <div class="titol">
-                @if (m.ca) { Icones }
-                @if (m.es) { Iconos }
-                @if (m.en) { Icons }
-            </div>
-            <div class="text">
-                @if (m.ca) { Creació d'icones i il·lustracions improvisades per a diferents projectes propis. }
-                @if (m.es) { Creación de iconos e ilustraciones improvisadas para distintos proyectos propios. }
-                @if (m.en) { Creation of improvised icons and illustrations for various personal projects. }
-            </div>
-            <div class="text-end">
-                <button class="boto stretched-link" routerLink="/section/icons">
-                    {{ getSeeMoreText() }}
-                    <i class="fa-solid fa-arrow-right"></i>
-                </button>
+        <div class="col-12 col-sm-6">
+            <div class="projecte tema-tasker card-themed bg-colored" appMostrarAmbAnimacio matRipple>
+                <div class="titol">
+                    @if (m.ca) { Projectes TaskerNet }
+                    @if (m.es) { Proyectos TaskerNet }
+                    @if (m.en) { TaskerNet projects }
+                </div>
+                <div class="text">
+                    @if (m.ca) { Programació de tasques complexes en Android amb Tasker, una aplicació d'automatització per a Android. Publicació de projectes per a la comunitat amb centenars de descàrregues. }
+                    @if (m.es) { Programación de tareas complejas en Android usando Tasker, una aplicación de automatización para Android. Publicación de proyectos para la comunidad con cientos de descargas. }
+                    @if (m.en) { Programming complex tasks on Android using Tasker, an Android automation app. Uploading projects for the community with hundreds of downloads. }
+                </div>
+                <div class="text-end">
+                    <button class="boto stretched-link" routerLink="/section/tasker">
+                        {{ getSeeMoreText() }}
+                        <i class="fa-solid fa-arrow-right"></i>
+                    </button>
+                </div>
             </div>
         </div>
-    </div>
 
-    <div class="col-12 col-sm-6">
-        <div class="projecte tema-amazfit card-themed bg-colored" appMostrarAmbAnimacio matRipple>
-            <div class="titol">Amazfit Watchfaces</div>
-            <div class="text">
-                @if (m.ca) { Projectes per a la personalització de smartwatches. Publicació del projectes per a la comunitat. }
-                @if (m.es) { Proyectos para la personalización de smartwatches. Publicación de los proyectos para la comunidad. }
-                @if (m.en) { Projects for smartwatch customization. Uploading projects for the community. }
-            </div>
-            <div class="text-end">
-                <button class="boto stretched-link" routerLink="/section/amazfit">
-                    {{ getSeeMoreText() }}
-                    <i class="fa-solid fa-arrow-right"></i>
-                </button>
+        <div class="col-12 col-sm-6">
+            <div class="projecte tema-icons card-themed bg-colored" appMostrarAmbAnimacio matRipple>
+                <div class="titol">
+                    @if (m.ca) { Icones }
+                    @if (m.es) { Iconos }
+                    @if (m.en) { Icons }
+                </div>
+                <div class="text">
+                    @if (m.ca) { Creació d'icones i il·lustracions improvisades per a diferents projectes propis. }
+                    @if (m.es) { Creación de iconos e ilustraciones improvisadas para distintos proyectos propios. }
+                    @if (m.en) { Creation of improvised icons and illustrations for various personal projects. }
+                </div>
+                <div class="text-end">
+                    <button class="boto stretched-link" routerLink="/section/icons">
+                        {{ getSeeMoreText() }}
+                        <i class="fa-solid fa-arrow-right"></i>
+                    </button>
+                </div>
             </div>
         </div>
+
+        <div class="col-12 col-sm-6">
+            <div class="projecte tema-amazfit card-themed bg-colored" appMostrarAmbAnimacio matRipple>
+                <div class="titol">Amazfit Watchfaces</div>
+                <div class="text">
+                    @if (m.ca) { Projectes per a la personalització de smartwatches. Publicació del projectes per a la comunitat. }
+                    @if (m.es) { Proyectos para la personalización de smartwatches. Publicación de los proyectos para la comunidad. }
+                    @if (m.en) { Projects for smartwatch customization. Uploading projects for the community. }
+                </div>
+                <div class="text-end">
+                    <button class="boto stretched-link" routerLink="/section/amazfit">
+                        {{ getSeeMoreText() }}
+                        <i class="fa-solid fa-arrow-right"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
     </div>
-
-
 
 </section>
