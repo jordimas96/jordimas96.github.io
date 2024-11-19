@@ -50,7 +50,7 @@ export class SidebarComponent implements OnInit, AfterViewInit {
         m.sidebar = this;
     }
     ngOnInit() {
-        
+
         this.llegirVistaCookie();
 
         this.onResize();
@@ -96,7 +96,7 @@ export class SidebarComponent implements OnInit, AfterViewInit {
         // this.ls.paddingLeftPagina = this.sidebarRef.nativeElement.offsetWidth;
         this.actPaddingLeftPagina();
 
-        
+
         this.cdr.detectChanges();
     }
 
@@ -152,7 +152,7 @@ export class SidebarComponent implements OnInit, AfterViewInit {
                 this.open = true;
                 this.llegirVistaCookie();
             }
-            
+
             this.actPaddingLeftPagina();
         }
         this.cdr.detectChanges();

@@ -1,9 +1,9 @@
 <header #appbar id="appbar" class="appbar v" [ngClass]="{'shadow-3':m.scroll>0 && !ts.modeFosc, 'scrolled':m.scroll>0}" appMostrarAmbAnimacio>
-    
+
     <button class="boto botoText botoSidebar rounded-pill" (click)="m.sidebar.toggle()" aria-label="Open sidebar" matRipple>
         <i class="fa-solid fa-bars d-block"></i>
     </button>
-    
+
     <app-navegacio-tab class="w-100 w-lg-auto" />
 
     <app-selector-idioma class="d-none d-sm-flex pe-2" />

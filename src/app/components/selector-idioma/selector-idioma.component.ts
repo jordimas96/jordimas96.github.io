@@ -15,7 +15,7 @@ import { Utils } from 'src/app/shared/utils';
 export class SelectorIdiomaComponent {
 
     constructor(public m: MainService) { }
-    
+
     ngOnInit() {
         this.m.afterRootFadeIn(this.afterRootFadeIn.bind(this));
     }
@@ -27,11 +27,11 @@ export class SelectorIdiomaComponent {
     establirIdiomaDefecte() {
         // Detectar idioma i guardar-lo //
         this.m.idioma = Utils.getCookie("lang") || navigator.language.split("-")[0];
-        
+
         // Si l'idioma detectat no es al select, el posem a anglès per defecte //
         if (!$("#idioma > option").toArray().map(e => $(e).val()).includes(this.m.idioma))
             this.m.idioma = "en";
-        
+
         this.idiomaCanviat();
     }
 

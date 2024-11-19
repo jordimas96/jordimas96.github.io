@@ -14,5 +14,5 @@ import { SharedImports } from 'src/app/shared/imports';
 export class IconsComponent {
 
     constructor(public m: MainService) { }
-    
+
 }

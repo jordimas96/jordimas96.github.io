@@ -21,14 +21,14 @@ export class DarkModeComponent {
         public m: MainService,
         public ts: ThemeService
     ) { }
-    
+
     ngOnInit() {
         this.m.afterRootFadeIn(this.afterRootFadeIn.bind(this));
 
-        
+
         this.setDarkMode();
 
-        
+
         // Mostrar boto Dark Mode Auto si cal //
         if (Utils.hasCookie("darkmode")) $(".botoAutoMode").fadeIn(150);
     }
@@ -41,7 +41,7 @@ export class DarkModeComponent {
         this.animacioDarkModeTipusCortinaShadow(nomBoto);
         // this.animacioDarkModeTipusFade(nomBoto);
     }
-    
+
     // Mètode 2 //
     async animacioDarkModeTipusCortinaShadow(nomBoto: "dark" | "auto") {
         // Si es click al auto i no cal fer efecte, no el fem //
@@ -115,7 +115,7 @@ export class DarkModeComponent {
                 "box-shadow": "none"
             });
 
-        
+
         $("*:not(.botoDarkMode)").css("transition", "");
         $(".sidebar").css("overflow", "");
         $("*").css("pointer-events", "");

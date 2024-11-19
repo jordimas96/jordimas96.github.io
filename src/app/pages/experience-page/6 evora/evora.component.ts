@@ -16,7 +16,7 @@ import { SharedImports } from 'src/app/shared/imports';
 })
 export class EvoraComponent {
     Skills = Skills;
-    
+
     public links = {
         ca: "https://www.evorait.com/",
         es: "https://www.evorait.com/",

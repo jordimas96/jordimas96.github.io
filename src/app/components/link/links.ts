@@ -1,6 +1,6 @@
 
 export class Links {
-    
+
     public static readonly links = {
 
         "angular-12": "https://blog.angular.io/angular-v12-is-now-available-32ed51fbfd49",

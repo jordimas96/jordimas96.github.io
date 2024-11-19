@@ -17,7 +17,7 @@ import { SharedImports } from 'src/app/shared/imports';
 })
 export class IndraComponent {
     Skills = Skills;
-    
+
     public links = {
         ca: "https://www.indracompany.com/es/",
         es: "https://www.indracompany.com/es/",

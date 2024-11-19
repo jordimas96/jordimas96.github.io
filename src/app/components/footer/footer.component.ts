@@ -15,7 +15,7 @@ import { SharedImports } from 'src/app/shared/imports';
     ]
 })
 export class FooterComponent implements OnInit, AfterViewInit{
-    
+
     @ViewChild("footer") footerRef: ElementRef;
 
     public colorFirma = Math.floor(Math.random() * 360);

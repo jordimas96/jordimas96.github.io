@@ -49,10 +49,10 @@ export class MostrarAmbAnimacioDirective implements OnInit, OnDestroy {
 
             await Utils.wait(delay);
 
-            
+
             this.renderer.addClass(entry.target, 'transicions');
             this.renderer.addClass(entry.target, 'mostrat');
-            
+
             this.timeoutTreureAnimacio = setTimeout(() => {
                 this.renderer.removeClass(entry.target, 'transicions');
             }, 300);
@@ -75,7 +75,7 @@ export class MostrarAmbAnimacioDirective implements OnInit, OnDestroy {
                 // Comptar pares fins al segon nivell, o sigui germans i cosins //
                 return $(e).parents()[2] == currentElement.parents()[2];
             });
-        
+
         return sameLevelElements.index(currentElement);
     }
 }

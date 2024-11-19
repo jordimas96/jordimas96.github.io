@@ -16,7 +16,7 @@ import { SharedImports } from 'src/app/shared/imports';
 })
 export class NexxiaComponent {
     Skills = Skills;
-    
+
     public links = {
         ca: "https://www.nexxiasoft.com/?lang=ca",
         es: "https://www.nexxiasoft.com/?lang=es",

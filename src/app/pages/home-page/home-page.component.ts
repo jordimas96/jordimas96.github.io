@@ -24,7 +24,7 @@ import { ProjectesHomeComponent } from './projectes-home/projectes-home.componen
     ]
 })
 export class HomePageComponent extends PageComponent {
-    
+
     override async ngOnInit() {
         super.ngOnInit();
 

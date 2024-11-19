@@ -16,7 +16,7 @@ import { SharedImports } from 'src/app/shared/imports';
 })
 export class MaticComponent {
     Skills = Skills;
-    
+
     public links = {
         ca: "https://www.matic.cat/",
         es: "https://www.matic.cat/es/inicio/",

@@ -6,7 +6,7 @@ import { Injectable } from '@angular/core';
     providedIn: 'root'
 })
 export class PeticioService {
-  
+
     constructor(private http: HttpClient) { }
 
     public get(url: string, onSuccess, onFail = (e) => console.error(e)) {

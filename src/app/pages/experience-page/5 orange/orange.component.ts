@@ -16,7 +16,7 @@ import { SharedImports } from 'src/app/shared/imports';
 })
 export class OrangeComponent {
     Skills = Skills;
-    
+
     public links = {
         ca: "https://www.orange.es/empresas/grandes-empresas",
         es: "https://www.orange.es/empresas/grandes-empresas",

@@ -13,10 +13,10 @@
     &:not([data-open]):hover {
         background-color: light-dark(var(--color-clar-80), var(--color-clar-30));
     }
-    
+
     .boto-desplegable {
         @include reset-button;
-        
+
         display: flex;
         justify-content: space-between;
         align-items: center;
@@ -76,7 +76,7 @@
 
                 a {
                     @include reset-a;
-        
+
                     display: block;
                     border-radius: 50%;
                     overflow: hidden;

@@ -1,7 +1,7 @@
 
 
 export class Utils {
-    
+
     // Utils web //
 
     public static getDocument() { return document; }
@@ -105,21 +105,21 @@ export class Utils {
 
     public static rgbToHex(rgb: string): string {
         const match = rgb.match(/\d+/g);
-      
+
         if (!match || match.length !== 3) {
             throw new Error('Invalid RGB color format');
         }
-      
+
         const r = parseInt(match[0], 10);
         const g = parseInt(match[1], 10);
         const b = parseInt(match[2], 10);
-      
+
         if (isNaN(r) || isNaN(g) || isNaN(b)) {
             throw new Error('Invalid RGB color values');
         }
-      
+
         const hex = ((r << 16) | (g << 8) | b).toString(16).padStart(6, '0');
-      
+
         return `#${hex}`;
     }
 
@@ -127,19 +127,19 @@ export class Utils {
         // Verificar si el formato RGBA es válido
         const rgbaRegex = /^rgba\((\d{1,3}),\s*(\d{1,3}),\s*(\d{1,3}),\s*([\d.]+)\)$/;
         const match = rgba.match(rgbaRegex);
-        
+
         if (!match) {
             throw new Error('Formato RGBA inválido. Utiliza el formato "rgba(r, g, b, a)".');
         }
-        
+
         // Extraer los valores de color RGBA
         const red = parseInt(match[1], 10);
         const green = parseInt(match[2], 10);
         const blue = parseInt(match[3], 10);
-        
+
         // Convertir el valor de opacidad (alpha) a un número entre 0 y 1
         const alpha = parseFloat(match[4]);
-        
+
         // Verificar si los valores están dentro del rango válido
         if (
             red < 0 || red > 255 ||
@@ -149,18 +149,18 @@ export class Utils {
         ) {
             throw new Error('Valores de color inválidos. Asegúrate de que los valores estén entre 0 y 255, y la opacidad entre 0 y 1.');
         }
-        
+
         // Convertir los valores RGB a su representación hexadecimal
         const hexRed = red.toString(16).padStart(2, '0');
         const hexGreen = green.toString(16).padStart(2, '0');
         const hexBlue = blue.toString(16).padStart(2, '0');
-        
+
         // Crear el valor hexadecimal completo
         const hex = `#${hexRed}${hexGreen}${hexBlue}`;
-        
+
         return hex;
     }
-      
+
 
 
 
@@ -192,7 +192,7 @@ export class Utils {
             try {
                 const rules = styleSheet.cssRules || styleSheet.rules;
                 if (!rules) return;
-    
+
                 for (let i = rules.length - 1; i >= 0; i--) {
                     const rule: any = rules[i];
                     if (rule.selectorText?.includes(':hover') && !rule.selectorText?.includes('.treureHover')) {

@@ -28,11 +28,11 @@ export class DetallsAndroidAppsComponent {
         navigator.mediaSession.setActionHandler('pause', function() { });
     }
 
-    
+
     afterRootFadeIn() { }
 
 
-    
+
     getAmazonLink_breakingBall() {
         const com = this.m.en ? "com" : "es";
         return `https://www.amazon.${com}/JMasDev-Breaking-Ball/dp/B0D1KXQR85`;
@@ -45,8 +45,8 @@ export class DetallsAndroidAppsComponent {
         const com = this.m.en ? "com" : "es";
         return `https://www.amazon.${com}/JMasDev-Text-Mimicker/dp/B0CXQFNMS5`;
     }
-  
-  
+
+
     toggleSeccio(boto) {
         let $seccio = $(boto).parent();
         let $contingut = $seccio.find(".contingut");

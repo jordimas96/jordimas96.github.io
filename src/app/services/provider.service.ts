@@ -26,7 +26,7 @@ export class ProviderService {
             );
         });
     }
-    
+
     public getReadme(repoName, idioma) {
         return new Promise<any>(resolve => {
             let nomArxiu = "";
@@ -43,7 +43,7 @@ export class ProviderService {
                 (error) => {
                     if (idioma == "ca") console.log(`${repoName}: Readme file in catalan not found, using spanish.`);
                     if (idioma == "es") console.log(`${repoName}: Readme file in spanish not found, using english by default.`);
-                    
+
                     resolve(null);
                 }
             );

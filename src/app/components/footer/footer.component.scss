@@ -21,13 +21,13 @@ footer {
 
         a.card {
             @include reset-a;
-            
+
             min-width: 18rem;
             min-height: 8.5rem;
             padding: 1rem;
 
             border-radius: 1.5rem;
-            
+
             background-color: var(--color-clar-30);
 
             overflow: hidden;
@@ -39,7 +39,7 @@ footer {
             * {
                 transition: transform 0.3s, opacity 0.3s;
             }
-            
+
             img.fons {
                 position: absolute;
                 inset: 0;
@@ -119,9 +119,9 @@ footer {
 
     .developed-by {
         @include reset-button;
-        
+
         display: inline-block;
-        
+
         // font-family: consolas;
         color: var(--color-clar-70);
         animation: colorChange 20s linear infinite;

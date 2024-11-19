@@ -22,8 +22,6 @@ import { LayoutService } from 'src/app/services/layout.service';
 export class AppComponent {
     title = 'Jordi Mas Parramon';
 
-    
-
     constructor(public ls: LayoutService) {
         window["ls"] = ls;
     }
