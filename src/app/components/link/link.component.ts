@@ -1,3 +1,4 @@
+import { Links } from './links';
 import { Component, ElementRef, Input, ViewChild } from '@angular/core';
 import { MainService } from 'src/app/services/main.service';
 
@@ -14,8 +15,12 @@ export class LinkComponent {
 
     @Input() href: string;
     @Input() target: string = "_blank";
+    @Input() id: string;
 
     @Input() class: string;
+
+    public links = Links.links;
+
 
     constructor(private m: MainService) { }
 
