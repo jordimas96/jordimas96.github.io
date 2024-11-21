@@ -1,7 +1,7 @@
 @import "src/styles.scss";
 
 footer {
-    background-color: light-dark(var(--color-fosc-80), var(--color-fosc-50));
+    background-color: light-dark(var(--color-fosc-70), var(--color-fosc-50));
     color: var(--color-clar);
 
     padding: 1.5rem;
@@ -18,6 +18,10 @@ footer {
         flex-wrap: wrap;
         justify-content: center;
         gap: 1rem;
+
+        @include mobil {
+            flex-direction: column;
+        }
 
         a.card {
             @include reset-a;
