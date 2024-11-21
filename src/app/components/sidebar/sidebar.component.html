@@ -80,5 +80,5 @@
 
 </div>
 @if (mobil && open) {
-    <div class="backdrop" [style.top.px]="ls.getAlturaAppbar()" (click)="open = false"></div>
+    <div class="backdrop" [style.top.px]="ls.getAlturaAppbar()" (pointerdown)="open = false"></div>
 }

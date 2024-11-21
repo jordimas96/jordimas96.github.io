@@ -1,8 +1,6 @@
-import { CdkDrag, CdkDragMove, CdkDragRelease, CdkDragStart, DragConstrainPosition, DragRef, Point } from '@angular/cdk/drag-drop';
 import { AfterViewInit, ChangeDetectorRef, Component, ElementRef, HostListener, OnInit, ViewChild } from '@angular/core';
 import { NavigationEnd, RouterLink, RouterLinkActive } from '@angular/router';
 import { DarkModeComponent } from 'src/app/components/dark-mode/dark-mode.component';
-import { IconesContacteComponent } from 'src/app/components/icones-contacte/icones-contacte.component';
 import { SelectorIdiomaComponent } from 'src/app/components/selector-idioma/selector-idioma.component';
 import { BlockGoogleAnalyticsService } from 'src/app/services/blockGoogleAnalytics.service';
 import { LayoutService } from 'src/app/services/layout.service';
@@ -20,10 +18,8 @@ import { Utils } from 'src/app/shared/utils';
         RouterLinkActive,
         RouterLink,
         ...SharedImports,
-        IconesContacteComponent,
         DarkModeComponent,
         SelectorIdiomaComponent,
-        CdkDrag,
     ]
 })
 export class SidebarComponent implements OnInit, AfterViewInit {
