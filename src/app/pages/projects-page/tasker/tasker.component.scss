@@ -24,7 +24,7 @@
         @include mobil {
             flex-direction: column;
         }
-        
+
         .boto {
             .logo {
                 transition: transform 0.3s;
@@ -35,5 +35,31 @@
                 }
             }
         }
+    }
+    .imatges {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 1rem;
+
+
+        > img {
+            height: 20rem;
+            max-width: 100%;
+            object-fit: cover;
+            border-radius: 2rem;
+
+            &.bateria-gran-lockscreen { }
+            &.bateries-ajustes-rapidos { }
+            &.bateries-lockscreen {
+                border-radius: 2.5rem;
+                object-position: right;
+            }
+            &.notification-amazfit-low-battery {
+                border-radius: 1.2rem;
+            }
+
+        }
+
     }
 }
