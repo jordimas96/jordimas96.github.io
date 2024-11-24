@@ -43,21 +43,22 @@
         gap: 1rem;
 
 
-        > img {
-            height: 20rem;
+        > img, video {
             max-width: 100%;
-            object-fit: cover;
-            border-radius: 2rem;
+            max-height: 20rem;
+            // border-radius: 2rem;
 
-            &.bateria-gran-lockscreen { }
-            &.bateries-ajustes-rapidos { }
             &.bateries-lockscreen {
                 border-radius: 2.5rem;
-                object-position: right;
+                @include mobil { border-radius: 1.5rem; }
             }
-            &.notification-amazfit-low-battery {
-                border-radius: 1.2rem;
-            }
+            &.bateria-gran-lockscreen { border-radius: 2rem; }
+            &.bateries-ajustes-rapidos { border-radius: 2rem; }
+            &.notificacio-espai-utilitzat { border-radius: 1.3rem; }
+            &.notificacio-amazfit-bateria-baixa { border-radius: 1.2rem; }
+            &.temps-posposar { border-radius: 1.2rem; }
+            &.segons-a-quick-settings { border-radius: 1.3rem; }
+            &.bateries-al-galaxy-flip-5 { border-radius: 2.2rem; }
 
         }
 
