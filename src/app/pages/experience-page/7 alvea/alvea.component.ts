@@ -30,4 +30,12 @@ export class AlveaComponent {
         return this.links[this.m.idioma];
     }
 
+    getLinkDintel() {
+        return [
+            "https://dintel.redsara.es/DINTEL/elementos-de-interfaz/componentes.html",
+            "https://dintel.redsara.es/DINTEL/elementos-de-interfaz/componentes.html",
+            "https://dintel.redsara.es/DINTEL/en/elementos-de-interfaz/componentes.html",
+        ][this.m.idiomaIndex];
+    }
+
 }

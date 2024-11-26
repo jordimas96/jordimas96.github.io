@@ -13,3 +13,54 @@ a.link-boto-titol {
         }
     }
 }
+
+// https://dintel.redsara.es/DINTEL/index.html //
+.seccio-boto-dintel {
+    font-family: "Nunito Sans", lato, Verdana, Arial, sans-serif;
+
+    // background-color: light-dark(white, #114da6);
+    background-color: white;
+    padding: 2rem 3.5rem;
+    border-radius: 1rem;
+
+    // border-left: 4px solid #114da6;
+
+    @include mobil {
+        padding: 2rem 1rem;
+        text-align: center;
+    }
+
+    .dnt-button {
+        display: inline-block;
+
+        background-color: #114da6;
+        color: white;
+
+        padding: 0.5rem 1rem;
+        border: 2px solid transparent;
+        border-radius: 1px;
+
+
+        transition-duration: 150ms;
+        transition-timing-function: cubic-bezier(0.3, 1, 0.7, 1);
+        transition-property: background-color, border-color, color;
+
+        &:hover {
+            background-color: #e8effa;
+            color: #114da6;
+            border-color: #114da6;
+            transition-timing-function: cubic-bezier(0.3, 0, 0.7, 0);
+        }
+
+        &:focus {
+            outline: 2px solid #c33400;
+            outline-offset: 2px;
+            border-radius: 2px;
+        }
+        &:active {
+            background-color: #04214d;
+            color: white;
+            border-color: transparent;
+        }
+    }
+}
