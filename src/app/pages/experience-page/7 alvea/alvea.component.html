@@ -62,7 +62,7 @@
                 En aquesta empresa vaig treballar per a Indra, una consultora que gestiona diversos projectes per al Gobierno de España.<br>
                 Principal desenvolupador frontend d'un backoffice per al <app-link id="ministerio-exteriores_ca">Ministerio de Asuntos Exteriores y Cooperación</app-link>, que permetrà als consolats i ambaixades proporcionar suport als ciutadans espanyols que es troben a l'estranger durant situacions de crisi, com ara atemptats o catàstrofes naturals. L'aplicació permetrà gestionar grups de ciutadans per a organitzar trasllats, salconduits, repatriacions, renovació de documents, comunicacions i atenció a necessitats especials, entre d'altres serveis.<br><br>
 
-                Vam iniciar el projecte creant una <app-link [href]="getLinkDintel()">llibreria de components</app-link> en Angular, utilitzant PrimeNG, Angular Material i altres plugins com a base. Aquesta llibreria inclou tant elements comuns en formularis (selectors, radiobuttons, checkboxes, calendaris, mapes interactius) com components habituals en interfícies d'usuari (botons, cards, toasts, menús desplegables, breadcrumbs, etc.).<br><br>
+                Vam iniciar el projecte creant una <app-link [href]="getLinkDintelComponents()">llibreria de components</app-link> en Angular, utilitzant PrimeNG, Angular Material i altres plugins com a base. Aquesta llibreria inclou tant elements comuns en formularis (selectors, radiobuttons, checkboxes, calendaris, mapes interactius) com components habituals en interfícies d'usuari (botons, cards, toasts, menús desplegables, breadcrumbs, etc.).<br><br>
 
                 Tant els components com la web estan desenvolupats seguint uns estils estrictament definits, amb cada aspecte del disseny (colors, formes, espais, fonts, mides, animacions) fortament marcat. L'estructura de la pàgina és semblant a la de les altres webs oficials de l'estat. Els estils estan completament desacoblats i organitzats.<br><br>
 
@@ -85,7 +85,7 @@
                 En esta empresa trabajé para Indra, una consultora que gestiona varios proyectos para el Gobierno de España.<br>
                 Principal desarrollador frontend de un backoffice para el <app-link id="ministerio-exteriores_es">Ministerio de Asuntos Exteriores y Cooperación</app-link>, que permitirá a los consulados y embajadas proporcionar soporte a los ciudadanos españoles que se encuentran en el extranjero durante situaciones de crisis, como atentados o catástrofes naturales. La aplicación permitirá gestionar grupos de ciudadanos para organizar traslados, salvoconductos, repatriaciones, renovación de documentos, comunicaciones y atención a necesidades especiales, entre otros servicios.<br><br>
 
-                Iniciamos el proyecto creando una <app-link [href]="getLinkDintel()">librería de componentes</app-link> en Angular, utilizando PrimeNG, Angular Material y otros plugins como base. Esta librería incluye tanto elementos comunes en formularios (selectores, radiobuttons, checkboxes, calendarios, mapas interactivos) como componentes habituales en interfaces de usuario (botones, cards, toasts, menús desplegables, breadcrumbs, etc.).<br><br>
+                Iniciamos el proyecto creando una <app-link [href]="getLinkDintelComponents()">librería de componentes</app-link> en Angular, utilizando PrimeNG, Angular Material y otros plugins como base. Esta librería incluye tanto elementos comunes en formularios (selectores, radiobuttons, checkboxes, calendarios, mapas interactivos) como componentes habituales en interfaces de usuario (botones, cards, toasts, menús desplegables, breadcrumbs, etc.).<br><br>
 
                 Tanto los componentes como la web están desarrollados siguiendo unos estilos estrictamente definidos, con cada aspecto del diseño (colores, formas, espacios, fuentes, tamaños, animaciones) fuertemente marcado. La estructura de la página es similar a la de las otras webs oficiales del estado. Los estilos están completamente desacoplados y organizados.<br><br>
 
@@ -108,7 +108,7 @@
                 In this company I worked for Indra, a consultancy that manages several projects for the Government of Spain.<br>
                 Lead frontend developer of a back-office system for the <app-link id="ministerio-exteriores_en">Ministry of Foreign Affairs and Cooperation</app-link>, which will allow consulates and embassies to provide support to Spanish citizens who are abroad during crisis situations, such as terrorist attacks or natural disasters. The application will allow managing groups of citizens to organize transfers, safe conduct passes, repatriations, document renewals, communications and attention to special needs, among other services.<br><br>
 
-                We started the project by creating a <app-link [href]="getLinkDintel()">component library</app-link> in Angular, using PrimeNG, Angular Material and other plugins as a base. This library includes both common form elements (selectors, radio buttons, checkboxes, calendars, interactive maps) and common user interface components (buttons, cards, toasts, drop-down menus, breadcrumbs, etc.). <br><br>
+                We started the project by creating a <app-link [href]="getLinkDintelComponents()">component library</app-link> in Angular, using PrimeNG, Angular Material and other plugins as a base. This library includes both common form elements (selectors, radio buttons, checkboxes, calendars, interactive maps) and common user interface components (buttons, cards, toasts, drop-down menus, breadcrumbs, etc.). <br><br>
 
                 Both the components and the website are developed following strictly defined styles, with each aspect of the design (colors, shapes, spaces, fonts, sizes, animations) strongly established. The structure of the page is similar to that of the other official government websites. The styles are completely decoupled and organized. <br><br>
 
@@ -128,10 +128,15 @@
     </article>
 
     <section class="seccio-boto-dintel">
-        <a [href]="getLinkDintel()" class="rs dnt-button">
-            @if (m.ca) { Accedir a la llibreria Dintel }
-            @if (m.es) { Acceder a la librería Dintel }
-            @if (m.en) { Access to Dintel library }
+        <a [href]="getLinkDintelHome()" class="rs dnt-button primary">
+            @if (m.ca) { Llibreria Dintel }
+            @if (m.es) { Librería Dintel }
+            @if (m.en) { Dintel library }
+        </a>
+        <a [href]="getLinkDintelComponents()" class="rs dnt-button secondary">
+            @if (m.ca) { Veure components }
+            @if (m.es) { Ver componentes }
+            @if (m.en) { See components }
         </a>
     </section>
 
