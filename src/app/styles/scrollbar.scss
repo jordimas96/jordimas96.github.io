@@ -1,6 +1,6 @@
 
 
-:root {
+body {
     // Scrollbar //
     --scrollbar-fons: light-dark(var(--color-l-9), hsl(210, 0%, 30%));
     --scrollbar-via: light-dark(white, hsl(210, 0%, 16%));
@@ -8,27 +8,28 @@
     --scrollbar-thumb-2: light-dark(var(--color-l-3), hsl(210, 0%, 48%));
     --scrollbar-thumb-hover: light-dark(var(--color-l-6), hsl(210, 0%, 79%));
     --scrollbar-thumb-active: light-dark(var(--color-l-7), white);
+
+    // Fons //
+    &::-webkit-scrollbar { background-color: var(--scrollbar-via); }
+    // Via //
+    &::-webkit-scrollbar-track { background-color: var(--scrollbar-via); }
+    // Thumb //
+    &::-webkit-scrollbar-thumb {
+        background-color: var(--scrollbar-thumb-1);
+        box-shadow: inset -17px 0px 10px -10px var(--scrollbar-thumb-2);
+        border: 2px solid var(--scrollbar-via);
+        border-radius: 6px;
+        &:hover  { background-color: var(--scrollbar-thumb-hover);  box-shadow: none; }
+        &:active { background-color: var(--scrollbar-thumb-active); box-shadow: none; }
+    }
+    // Botons //
+    // &::-webkit-scrollbar-button {
+    //     background-color: var(--scrollbar-thumb);
+    //     box-shadow: inset -17px 0px 15px -10px var(--scrollbar-thumb-hover);
+    //     border: 2px solid var(--scrollbar-via);
+    //     // border-radius: 30px;
+    //     border-radius: 10px 10px 6px 6px;
+    //     height: 20px;
+    //     &:active { background-color: var(--scrollbar-thumb-hover); }
+    // }
 }
-// Fons //
-::-webkit-scrollbar { background-color: var(--scrollbar-via); }
-// Via //
-::-webkit-scrollbar-track { background-color: var(--scrollbar-via); }
-// Thumb //
-::-webkit-scrollbar-thumb {
-    background-color: var(--scrollbar-thumb-1);
-    box-shadow: inset -17px 0px 10px -10px var(--scrollbar-thumb-2);
-    border: 2px solid var(--scrollbar-via);
-    border-radius: 6px;
-    &:hover  { background-color: var(--scrollbar-thumb-hover);  box-shadow: none; }
-    &:active { background-color: var(--scrollbar-thumb-active); box-shadow: none; }
-}
-// Botons //
-// ::-webkit-scrollbar-button {
-//     background-color: var(--scrollbar-thumb);
-//     box-shadow: inset -17px 0px 15px -10px var(--scrollbar-thumb-hover);
-//     border: 2px solid var(--scrollbar-via);
-//     // border-radius: 30px;
-//     border-radius: 10px 10px 6px 6px;
-//     height: 20px;
-//     &:active { background-color: var(--scrollbar-thumb-hover); }
-// }
