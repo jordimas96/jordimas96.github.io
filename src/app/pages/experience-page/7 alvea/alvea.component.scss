@@ -1,6 +1,8 @@
 @import "src/styles.scss";
 @import "../experience-styles.scss";
 
+@import "dintel-styles.scss";
+
 
 
 a.link-boto-titol {
@@ -10,82 +12,6 @@ a.link-boto-titol {
     &:hover {
         img.title-icon {
             transform: scale(1.2);
-        }
-    }
-}
-
-// https://dintel.redsara.es/DINTEL/index.html //
-.seccio-boto-dintel {
-    font-family: "Nunito Sans", lato, Verdana, Arial, sans-serif;
-
-    display: flex;
-    flex-wrap: wrap;
-    gap: 1rem;
-
-    // background-color: light-dark(white, #114da6);
-    background-color: white;
-    padding: 2rem 3.5rem;
-    border-radius: 1rem;
-
-    // border-left: 4px solid #114da6;
-
-    @include mobil {
-        padding: 2rem 1rem;
-        justify-content: center;
-    }
-
-    .dnt-button {
-        display: inline-block;
-
-        padding: 0.5rem 1rem;
-        border: 2px solid transparent;
-        border-radius: 1px;
-
-
-        transition-duration: 150ms;
-        transition-timing-function: cubic-bezier(0.3, 1, 0.7, 1);
-        transition-property: background-color, border-color, color;
-
-        &:hover {
-            transition-timing-function: cubic-bezier(0.3, 0, 0.7, 0);
-        }
-        &:focus {
-            outline: 2px solid #c33400;
-            outline-offset: 2px;
-            border-radius: 2px;
-        }
-
-
-        // Colors //
-        &.primary {
-            color: white;
-            background-color: #114da6;
-
-            &:hover {
-                color: #114da6;
-                background-color: #e8effa;
-                border-color: #114da6;
-            }
-            &:active {
-                color: white;
-                background-color: #04214d;
-                border-color: transparent;
-            }
-        }
-        &.secondary {
-            color: #114da6;
-            background-color: #e8effa;
-
-            &:hover {
-                color: #093473;
-                background-color: white;
-                border-color: #093473;
-            }
-            &:active {
-                color: #04214d;
-                background-color: #e8effa;
-                border-color: transparent;
-            }
         }
     }
 }

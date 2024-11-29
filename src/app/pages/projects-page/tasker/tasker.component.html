@@ -43,14 +43,164 @@
         @if (m.en) { Gallery }
     </h4>
     <div class="imatges">
-        <img src="assets/images/tasker/bateries-lockscreen.png" class="bateries-lockscreen">
-        <img src="assets/images/tasker/bateries-ajustes-rapidos.png" class="bateries-ajustes-rapidos">
-        <img src="assets/images/tasker/bateria-gran-lockscreen.jpg" class="bateria-gran-lockscreen">
-        <video muted loop autoplay class="segons-a-quick-settings"><source src="assets/images/tasker/segons-a-quick-settings.mp4" type="video/mp4"></video>
-        <img src="assets/images/tasker/notificacio-amazfit-bateria-baixa.png" class="notificacio-amazfit-bateria-baixa">
-        <img src="assets/images/tasker/notificacio-espai-utilitzat.png" class="notificacio-espai-utilitzat">
-        <img src="assets/images/tasker/temps-posposar.png" class="temps-posposar">
-        <!-- <img src="assets/images/tasker/bateries-al-galaxy-flip-5.png" class="bateries-al-galaxy-flip-5"> -->
+        <figure class="task bateries-lockscreen">
+            <figcaption class="text">
+                @if (m.ca) {
+                    <p>Aquest projecte segueix i registra els nivells de bateria de diversos telèfons. Consisteix en dos projectes:</p>
+                    <ul class="mb-0 ps-3">
+                        <li><b>Enviador:</b> Envia actualitzacions del nivell de bateria a través d'AutoRemote cada vegada que canvia la bateria o en passos personalitzables del 5%.</li>
+                        <li><b>Receptor:</b> Mostra els seus valors en un format d'estil HTML + CSS, que es pot mostrar a la pantalla de bloqueig / pantalla sempre activa (AOD), ajustaments ràpids o al menú d'apagar. Els colors canvien de cian a verd, groc i vermell, segons el nivell de bateria. També es mostra el símbol ⚡ durant la càrrega. Si no es rep connexió durant 3 hores, el color es torna grisenc, cosa que indica que les dades estan desactualitzades i que el dispositiu podria ja estar apagat.</li>
+                    </ul>
+                }
+                @if (m.es) {
+                    <p>Este proyecto sigue y registra los niveles de batería de varios teléfonos. Consiste en dos proyectos:</p>
+                    <ul class="mb-0 ps-3">
+                        <li><b>Enviador:</b> Envía actualizaciones del nivel de batería a través de AutoRemote cada vez que cambia la batería o en pasos personalizables del 5%.</li>
+                        <li><b>Receptor:</b> Muestra sus valores en un formato de estilo HTML + CSS, que se puede mostrar en la pantalla de bloqueo / pantalla siempre activa (AOD), ajustes rápidos o en el menú de encendido. Los colores cambian de cian a verde, amarillo y rojo, según el nivel de batería. Tambiñen se muestra el símbolo ⚡ durante la carga. Si no se recibe conexión durante 3 horas, el color se vuelve grisáceo, lo que indica que los datos están desactualizados y que el dispositivo podría ya estar apagado.</li>
+                    </ul>
+                }
+                @if (m.en) {
+                    <p>This project tracks and logs battery levels across multiple phones. It consists of two projects:</p>
+                    <ul class="mb-0 ps-3">
+                        <li><b>Sender:</b> Sends battery level updates via AutoRemote whenever the battery changes or in customizable steps of 5%.</li>
+                        <li><b>Receiver:</b> Displays its values in an HTML + CSS-style format, which can be displayed on the lockscreen / AOD, quick settings, or power menu. Colors shift from cyan to green to yellow to red, based on the battery level. It also shows a ⚡ symbol when charging. If no connection is received for 3 hours, the color gets grayish, indicating outdated data and the device may already be off.</li>
+                    </ul>
+                }
+            </figcaption>
+            <img class="media" src="assets/images/tasker/bateries-lockscreen.png">
+        </figure>
+
+        <figure class="task bateries-ajustes-rapidos">
+            <figcaption class="text">
+                @if (m.ca) {
+                    <p>Aquest projecte segueix i registra els nivells de bateria de diversos telèfons. Consisteix en dos projectes:</p>
+                    <ul class="mb-0 ps-3">
+                        <li><b>Enviador:</b> Envia actualitzacions del nivell de bateria a través d'AutoRemote cada vegada que canvia la bateria o en passos personalitzables del 5%.</li>
+                        <li><b>Receptor:</b> Mostra els seus valors en un format d'estil HTML + CSS, que es pot mostrar a la pantalla de bloqueig / pantalla sempre activa (AOD), ajustaments ràpids o al menú d'apagar. Els colors canvien de cian a verd, groc i vermell, segons el nivell de bateria. També es mostra el símbol ⚡ durant la càrrega. Si no es rep connexió durant 3 hores, el color es torna grisenc, cosa que indica que les dades estan desactualitzades i que el dispositiu podria ja estar apagat.</li>
+                    </ul>
+                }
+                @if (m.es) {
+                    <p>Este proyecto sigue y registra los niveles de batería de varios teléfonos. Consiste en dos proyectos:</p>
+                    <ul class="mb-0 ps-3">
+                        <li><b>Enviador:</b> Envía actualizaciones del nivel de batería a través de AutoRemote cada vez que cambia la batería o en pasos personalizables del 5%.</li>
+                        <li><b>Receptor:</b> Muestra sus valores en un formato de estilo HTML + CSS, que se puede mostrar en la pantalla de bloqueo / pantalla siempre activa (AOD), ajustes rápidos o en el menú de encendido. Los colores cambian de cian a verde, amarillo y rojo, según el nivel de batería. Tambiñen se muestra el símbolo ⚡ durante la carga. Si no se recibe conexión durante 3 horas, el color se vuelve grisáceo, lo que indica que los datos están desactualizados y que el dispositivo podría ya estar apagado.</li>
+                    </ul>
+                }
+                @if (m.en) {
+                    <p>This project tracks and logs battery levels across multiple phones. It consists of two projects:</p>
+                    <ul class="mb-0 ps-3">
+                        <li><b>Sender:</b> Sends battery level updates via AutoRemote whenever the battery changes or in customizable steps of 5%.</li>
+                        <li><b>Receiver:</b> Displays its values in an HTML + CSS-style format, which can be displayed on the lockscreen / AOD, quick settings, or power menu. Colors shift from cyan to green to yellow to red, based on the battery level. It also shows a ⚡ symbol when charging. If no connection is received for 3 hours, the color gets grayish, indicating outdated data and the device may already be off.</li>
+                    </ul>
+                }
+            </figcaption>
+            <img class="media" src="assets/images/tasker/bateries-ajustes-rapidos.png">
+        </figure>
+
+        <figure class="task bateria-gran-lockscreen">
+            <figcaption class="text">
+                @if (m.ca) {
+                    Una tasca que mostra un indicador gran de nivell de bateria a la pantalla de bloqueig durant el mode Always On Display. El color passa de verd a groc i a vermell en el rang de 100 - 50 - 0.
+                }
+                @if (m.es) {
+                    Una tarea que muestra un indicador grande de nivel de batería en la pantalla de bloqueo durante el modo Always On Display. El color pasa de verde a amarillo y a rojo en el rango de 100 - 50 - 0.
+                }
+                @if (m.en) {
+                    A task that shows a large battery level indicator on the lockscreen during Always On Display mode. The color transitions from green to yellow to red in the 100 - 50 - 0 range.
+                }
+            </figcaption>
+            <img class="media" src="assets/images/tasker/bateria-gran-lockscreen.jpg">
+        </figure>
+
+        <figure class="task segons-a-quick-settings">
+            <figcaption class="text">
+                @if (m.ca) {
+                    Aquesta tasca mostra els segons a la barra d'estat només quan obres el panell d'ajustaments ràpids. Quan la tanques, torna a mostrar només hora i minuts.<br>
+                    És útil si necessites controlar l'hora exacta o configurar un altre rellotge al segon exacte, sense necessitat d'obrir l'aplicació del rellotge.
+                }
+                @if (m.es) {
+                    Esta tarea muestra los segundos en la barra de estado solo cuando abres el panel de ajustes rápidos. Cuando la cierras, vuelve a mostrar sólo hora y minutos.<br>
+                    Es útil si necesitas controlar la hora exacta o configurar otro reloj en el segundo exacto, sin necesidad de abrir la aplicación del reloj.
+                }
+                @if (m.en) {
+                    This task shows seconds on your status bar only when you open the quick settings panel. When you close it, it shows only hour and minute again.<br>
+                    It's useful if you need to control the exact time or set another clock on the exact second, without need to open the clock app.
+                }
+            </figcaption>
+            <video class="media" muted loop autoplay><source src="assets/images/tasker/segons-a-quick-settings.mp4" type="video/mp4"></video>
+        </figure>
+
+        <figure class="task notificacio-amazfit-bateria-baixa">
+            <figcaption class="text">
+                @if (m.ca) {
+                    La tasca de logs de bateria també pot llegir el nivell de càrrega dels dispositius Bluetooth. Aquesta tasca mostra una notificació vermella quan la bateria del meu rellotge baixa a menys del 20% i una notificació verda quan el dispositiu torna a estar completament carregat.
+                }
+                @if (m.es) {
+                    La tarea de logs de batería también puede leer el nivel de carga de los dispositivos Bluetooth. Esta tarea muestra una notificación roja cuando la batería de mi reloj baja a menos del 20% y una notificación verde cuando el dispositivo vuelve a estar completamente cargado.
+                }
+                @if (m.en) {
+                    The battery log task can also read the level of bluetooth devices. This task displays a red notification when my watch battery drops below 20%, and a green notification when the device is fully charged again.
+                }
+            </figcaption>
+            <img class="media" src="assets/images/tasker/notificacio-amazfit-bateria-baixa.png">
+        </figure>
+
+        <figure class="task notificacio-espai-utilitzat">
+            <figcaption class="text">
+                @if (m.ca) {
+                    Tasca que mostra el percentatge d'espai d'emmagatzematge utilitzat al sistema Android, en intervals d'actualització personalitzables. També personalitzable entre MB i GB.
+                }
+                @if (m.es) {
+                    Tarea que muestra el porcentaje de espacio de almacenamiento utilizado en el sistema Android, con intervalos de actualización personalizables. También personalizable entre MB y GB.
+                }
+                @if (m.en) {
+                    Task that displays the percentage of used storage space on the Android system, with customizable update intervals. Also customizable between MB and GB.
+                }
+            </figcaption>
+            <img class="media" src="assets/images/tasker/notificacio-espai-utilitzat.png">
+        </figure>
+
+        <figure class="task temps-posposar">
+            <figcaption class="text">
+                @if (m.ca) {
+                    Canvia els temps de posposició de les notificacions pels que vulguis. Els temps de posposició de les notificacions són valors interns que Android no permet canviar a l'usuari. Aquesta tasca permet canviar aquests valors. La tasca s'executa cada cop que el sistema restableix automàticament els valors amb els per defecte.
+                }
+                @if (m.es) {
+                    Cambia los tiempos de posposición de las notificaciones por los que desees. Los tiempos de posposición de las notificaciones son valores internos que Android no permite al usuario cambiar. Esta tarea permite cambiar esos valores. La tarea se ejecuta cada vez que el sistema restablece automáticamente los valores con los por defecto.
+                }
+                @if (m.en) {
+                    Change notification snooze times into the ones you want. Notification snooze times are internal values that android stock doesn't let the user change. This task lets you change those values. The task runs every time the system automatically resets the values to the default ones.
+                }
+            </figcaption>
+            <img class="media" src="assets/images/tasker/temps-posposar.png">
+        </figure>
+
+        <figure class="task bateries-al-galaxy-flip-5">
+            <figcaption class="text">
+                @if (m.ca) {
+                    <p>Aquest projecte segueix i registra els nivells de bateria de diversos telèfons. Consisteix en dos projectes:</p>
+                    <ul class="mb-0 ps-3">
+                        <li><b>Enviador:</b> Envia actualitzacions del nivell de bateria a través d'AutoRemote cada vegada que canvia la bateria o en passos personalitzables del 5%.</li>
+                        <li><b>Receptor:</b> Mostra els seus valors en un format d'estil HTML + CSS, que es pot mostrar a la pantalla de bloqueig / pantalla sempre activa (AOD), ajustaments ràpids o al menú d'apagar. Els colors canvien de cian a verd, groc i vermell, segons el nivell de bateria. També es mostra el símbol ⚡ durant la càrrega. Si no es rep connexió durant 3 hores, el color es torna grisenc, cosa que indica que les dades estan desactualitzades i que el dispositiu podria ja estar apagat.</li>
+                    </ul>
+                }
+                @if (m.es) {
+                    <p>Este proyecto sigue y registra los niveles de batería de varios teléfonos. Consiste en dos proyectos:</p>
+                    <ul class="mb-0 ps-3">
+                        <li><b>Enviador:</b> Envía actualizaciones del nivel de batería a través de AutoRemote cada vez que cambia la batería o en pasos personalizables del 5%.</li>
+                        <li><b>Receptor:</b> Muestra sus valores en un formato de estilo HTML + CSS, que se puede mostrar en la pantalla de bloqueo / pantalla siempre activa (AOD), ajustes rápidos o en el menú de encendido. Los colores cambian de cian a verde, amarillo y rojo, según el nivel de batería. Tambiñen se muestra el símbolo ⚡ durante la carga. Si no se recibe conexión durante 3 horas, el color se vuelve grisáceo, lo que indica que los datos están desactualizados y que el dispositivo podría ya estar apagado.</li>
+                    </ul>
+                }
+                @if (m.en) {
+                    <p>This project tracks and logs battery levels across multiple phones. It consists of two projects:</p>
+                    <ul class="mb-0 ps-3">
+                        <li><b>Sender:</b> Sends battery level updates via AutoRemote whenever the battery changes or in customizable steps of 5%.</li>
+                        <li><b>Receiver:</b> Displays its values in an HTML + CSS-style format, which can be displayed on the lockscreen / AOD, quick settings, or power menu. Colors shift from cyan to green to yellow to red, based on the battery level. It also shows a ⚡ symbol when charging. If no connection is received for 3 hours, the color gets grayish, indicating outdated data and the device may already be off.</li>
+                    </ul>
+                }
+            </figcaption>
+            <img class="media" src="assets/images/tasker/bateries-al-galaxy-flip-5.png">
+        </figure>
     </div>
 
     <!-- Skills -->
@@ -63,5 +213,6 @@
         <app-skill [skill]="Skills.HTML5"/>
         <app-skill [skill]="Skills.CSS"/>
         <app-skill [skill]="Skills.JAVA"/>
+        <app-skill [skill]="Skills.PHP"/>
     </div>
 </section>

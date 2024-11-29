@@ -36,30 +36,67 @@
             }
         }
     }
-    .imatges {
+    .imatges:not(.treureHover) {
         display: flex;
         flex-wrap: wrap;
         justify-content: center;
         gap: 1rem;
 
 
-        > img, video {
-            max-width: 100%;
-            max-height: 20rem;
-            // border-radius: 2rem;
+        .task {
+            position: relative;
+            overflow: hidden;
 
-            &.bateries-lockscreen {
-                border-radius: 2.5rem;
-                @include mobil { border-radius: 1.5rem; }
+            &.bateries-lockscreen { --br: 2.5rem; @include mobil { --br: 1.5rem; } }
+            &.bateria-gran-lockscreen { --br: 2rem; }
+            &.bateries-ajustes-rapidos { --br: 2rem; }
+            &.notificacio-espai-utilitzat { --br: 1.3rem; }
+            &.notificacio-amazfit-bateria-baixa { --br: 1.2rem; }
+            &.temps-posposar { --br: 1.2rem; }
+            &.segons-a-quick-settings { --br: 1.3rem; }
+            &.bateries-al-galaxy-flip-5 { --br: 2.2rem; }
+
+            .text {
+                position: absolute;
+                bottom: 0; left: 0; right: 0;
+                translate: 0 calc(100% + 2px);
+
+                max-height: calc(100% - 1rem);
+                overflow-y: auto;
+
+                padding: calc(var(--br) / 2);
+                margin: 0 0.5rem;
+
+                color: black;
+                background-color: rgba(255,255,255, 0.5);
+                backdrop-filter: blur(30px) saturate(2);
+                // filter: blur(30px);
+                border-radius: 0.5rem;
+
+                font-size: 0.85rem;
+                text-align: justify;
+
+                transition: translate 0.3s, margin 0.3s, border-radius 0.3s;
             }
-            &.bateria-gran-lockscreen { border-radius: 2rem; }
-            &.bateries-ajustes-rapidos { border-radius: 2rem; }
-            &.notificacio-espai-utilitzat { border-radius: 1.3rem; }
-            &.notificacio-amazfit-bateria-baixa { border-radius: 1.2rem; }
-            &.temps-posposar { border-radius: 1.2rem; }
-            &.segons-a-quick-settings { border-radius: 1.3rem; }
-            &.bateries-al-galaxy-flip-5 { border-radius: 2.2rem; }
 
+            .media {
+                max-width: 100%;
+                max-height: 20rem;
+
+                border-radius: var(--br);
+            }
+
+            &:hover {
+                .text {
+                    translate: 0;
+                    margin: 0.5rem;
+
+                    border-radius: calc(var(--br) - 0.5rem);
+
+                    // filter: none;
+
+                }
+            }
         }
 
     }
