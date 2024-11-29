@@ -35,8 +35,8 @@
     // border-radius: 1.5rem;
 
     overflow: hidden;
-    overflow-x: scroll;
-    &::-webkit-scrollbar { display: none; }
+    overflow-x: auto;
+    scrollbar-width: none;
 
     z-index: 1005;
 
