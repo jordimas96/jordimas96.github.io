@@ -44,6 +44,8 @@
 
 
         .task {
+            @include reset-figure;
+
             position: relative;
             overflow: hidden;
 
