@@ -32,13 +32,13 @@
 
             background-color: hsla(var(--hue), 100%, 75%, 0.35);
             @include light {
-                background-color: hsla(var(--hue), 100%, 75%, 0.5);
+                background-color: hsla(var(--hue), 100%, 75%, 0.35) !important;
             }
 
             text-align: center;
 
             box-shadow: none;
-            
+
             .header {
                 display: flex;
                 align-items: center;
@@ -54,7 +54,7 @@
                 }
             }
             .text { }
-            
+
             .logo, .titol, .text {
                 position: relative;
                 transition: color 0.6s;
@@ -68,7 +68,7 @@
             }
 
             &:hover {
-                
+
                 .titol, .text {
                     color: var(--fons);
                 }
