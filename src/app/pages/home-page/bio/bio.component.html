@@ -76,15 +76,24 @@
             <br><br>
             On this website you will find details about my past experience, skills and featured projects, as well as my contact information so we can discuss different ways on helping you and your business with future projects, whether it is frontend development, UI/UX design or any other related task.
         }
+
     </div>
 
     <div>
-        <a [href]="getRutaCV()" class="boto botoCV mb-4" appMostrarAmbAnimacio matRipple>
-            @if (m.ca) { Obrir CV }
-            @if (m.es) { Abrir CV }
-            @if (m.en) { Open Resume }
-            <img src="assets/icons/cv.png" alt="Curriculum Vitae" class="logo inv-dark-2">
-        </a>
+        <div class="d-flex justify-content-center align-items-center gap-3 mb-4">
+            <button routerLink="/about-me" class="boto" appMostrarAmbAnimacio matRipple>
+                @if (m.ca) { Sobre mi }
+                @if (m.es) { Acerca de mí }
+                @if (m.en) { About me }
+            </button>
+
+            <a [href]="getRutaCV()" class="boto botoCV" appMostrarAmbAnimacio matRipple>
+                @if (m.ca) { Obrir CV }
+                @if (m.es) { Abrir CV }
+                @if (m.en) { Open Resume }
+                <img src="assets/icons/cv.png" alt="Curriculum Vitae" class="logo inv-dark-2">
+            </a>
+        </div>
 
         <app-icones-contacte />
     </div>

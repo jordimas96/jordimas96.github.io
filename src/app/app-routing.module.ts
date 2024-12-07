@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { AboutMePageComponent } from 'src/app/pages/about-me-page/about-me-page.component';
 import { ArtPageComponent } from 'src/app/pages/art-page/art-page.component';
 import { ExperiencePageComponent } from 'src/app/pages/experience-page/experience-page.component';
 import { HomePageComponent } from 'src/app/pages/home-page/home-page.component';
@@ -10,6 +11,10 @@ const routes: Routes = [
     {
         path: "",
         component: HomePageComponent
+    },
+    {
+        path: "about-me",
+        component: AboutMePageComponent
     },
     {
         path: "experience",

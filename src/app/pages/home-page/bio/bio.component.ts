@@ -1,4 +1,5 @@
 import { Component, ElementRef } from '@angular/core';
+import { RouterLink } from '@angular/router';
 import { IconesContacteComponent } from 'src/app/components/icones-contacte/icones-contacte.component';
 import { Skills } from 'src/app/enums/skills.enum';
 import { ExperienceCalculatorService } from 'src/app/services/experience-calculator.service';
@@ -12,6 +13,7 @@ import { SharedImports } from 'src/app/shared/imports';
     standalone: true,
     imports: [
         ...SharedImports,
+        RouterLink,
         IconesContacteComponent,
     ]
 })
@@ -33,7 +35,7 @@ export class BioComponent {
     async ngOnInit() { }
 
 
-    
+
     getSalutacioSegonsHora() {
         let horaActual = new Date().getHours();
         let index: number;
@@ -48,7 +50,7 @@ export class BioComponent {
             index = 1;
         else
             index = 2;
-        
+
         return this.salutacions[this.m.idioma][index] || "Hey!";
     }
 
@@ -64,5 +66,5 @@ export class BioComponent {
         return `assets/documents/CV/CV Jordi Mas Parramon ${this.m.idioma.toUpperCase()}.pdf`;
     }
 
-    
+
 }
