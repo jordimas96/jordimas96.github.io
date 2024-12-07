@@ -12,6 +12,7 @@ export class Links {
         "fps_en": "https://en.wikipedia.org/wiki/First-person_shooter",
 
         "gimp_ca": "https://www.softcatala.org/programes/gimp/",
+        "gimp_es": "https://www.gimp.org/",
         "gimp_en": "https://www.gimp.org/",
 
 
@@ -28,6 +29,7 @@ export class Links {
 
         "ocine_ca": "https://cinesocine.es/ca",
         "ocine_es": "https://www.ocine.es/",
+        "ocine_en": "https://www.ocine.es/",
         "ocine-madrid": "https://www.ocineurbanxmadrid.es/",
         "uwp_ca": "https://learn.microsoft.com/ca-es/windows/uwp/get-started/universal-application-platform-guide",
         "uwp_es": "https://learn.microsoft.com/es-es/windows/uwp/get-started/universal-application-platform-guide",
@@ -65,13 +67,16 @@ export class Links {
         "pli_ca": "https://ca.wikipedia.org/wiki/PL/I",
         "pli_es": "https://es.wikipedia.org/wiki/PL/1",
         "pli_en": "https://en.wikipedia.org/wiki/PL/I",
+        "db2_ca": "https://www.ibm.com/es-es/products/db2",
         "db2_es": "https://www.ibm.com/es-es/products/db2",
         "db2_en": "https://www.ibm.com/products/db2",
+        "middleware_ca": "https://www.ibm.com/es-es/topics/middleware",
         "middleware_es": "https://www.ibm.com/es-es/topics/middleware",
         "middleware_en": "https://www.ibm.com/topics/middleware",
         "tso": "https://www.ibm.com/docs/en/zos-basic-skills?topic=interfaces-what-is-tso",
         "ispf": "https://www.ibm.com/docs/en/zos-basic-skills?topic=interfaces-what-is-ispf",
         "jcl": "https://www.ibm.com/docs/en/zos-basic-skills?topic=collection-basic-jcl-concepts",
+        "zos_ca": "https://www.ibm.com/es-es/products/zos",
         "zos_es": "https://www.ibm.com/es-es/products/zos",
         "zos_en": "https://www.ibm.com/products/zos",
         "mvs_ca": "https://ca.wikipedia.org/wiki/MVS",
@@ -79,6 +84,7 @@ export class Links {
         "mvs_en": "https://en.wikipedia.org/wiki/MVS",
 
         // About me //
+        "bionicle_ca": "https://es.wikipedia.org/wiki/Bionicle",
         "bionicle_es": "https://es.wikipedia.org/wiki/Bionicle",
         "bionicle_en": "https://en.wikipedia.org/wiki/Bionicle",
     };
