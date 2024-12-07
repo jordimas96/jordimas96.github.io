@@ -77,6 +77,10 @@ export class Links {
         "mvs_ca": "https://ca.wikipedia.org/wiki/MVS",
         "mvs_es": "https://es.wikipedia.org/wiki/MVS",
         "mvs_en": "https://en.wikipedia.org/wiki/MVS",
+
+        // About me //
+        "bionicle_es": "https://es.wikipedia.org/wiki/Bionicle",
+        "bionicle_en": "https://en.wikipedia.org/wiki/Bionicle",
     };
 
 };
