@@ -52,6 +52,17 @@
                 {{ getText.art() }}
             </div>
         </button>
+        <button
+            class="rs boto-seccio"
+            [class.rail]="rail" [class.drawer]="!rail"
+            routerLinkActive="selected" [routerLinkActiveOptions]="{exact: true}" routerLink="/about-me"
+            [title]="rail ? getText.aboutme() : ''"
+            matRipple>
+            <i class="icona fa-solid fa-user"></i>
+            <div class="text text-nowrap">
+                {{ getText.aboutme() }}
+            </div>
+        </button>
         <a
             class="rs boto-seccio"
             [href]="getRutaCV()"

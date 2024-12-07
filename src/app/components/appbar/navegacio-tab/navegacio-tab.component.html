@@ -67,6 +67,23 @@
             <i class="fa-solid fa-paintbrush" alt="Art"></i>
         }
     </button>
+    <button
+        id="navegacio-tab-about-me"
+        class="flex-10"
+        routerLinkActive="selected"
+        [routerLinkActiveOptions]="{exact: true}"
+        routerLink="/about-me"
+        (click)="m.u.scroll(0)"
+        matRipple
+    >
+        @if (m.esPantallaPc()) {
+            @if (m.ca) { Sobre mi }
+            @if (m.es) { Acerca de mí }
+            @if (m.en) { About me }
+        } @else {
+            <i class="fa-solid fa-user" alt="About me"></i>
+        }
+    </button>
 
     <div #pill class="pill"></div>
 

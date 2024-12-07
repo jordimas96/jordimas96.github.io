@@ -125,6 +125,7 @@ export class SidebarComponent implements OnInit, AfterViewInit {
         experiencia: () => ["Experiència", "Experiencia", "Experience"][this.m.idiomaIndex],
         projectes:   () => ["Projectes", "Proyectos", "Projects"][this.m.idiomaIndex],
         art:         () => ["Art", "Arte", "Art"][this.m.idiomaIndex],
+        aboutme:     () => ["Sobre mi", "Acerca de mí", "About me"][this.m.idiomaIndex],
         cv:          () => ["Currículum", "Currículum", "Resume"][this.m.idiomaIndex],
     }
 
