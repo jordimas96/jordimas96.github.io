@@ -71,7 +71,7 @@
 
             transition: padding 0.3s, background-color 0.3s;
 
-            &:hover { box-shadow: inset 0 0 0 1000px var(--color-clar-30); }
+            // &:hover { box-shadow: inset 0 0 0 1000px var(--color-clar-30); }
 
             .icona {
                 display: flex;
@@ -101,7 +101,62 @@
 
             &.selected {
                 background-color: var(--color-clar-90);
-                color: var(--color-fosc)
+                color: var(--color-clar);
+            }
+
+            // Colors //
+            &.home {
+                &:not(.selected):hover {
+                    color: light-dark(hsl(160deg 100% 75%), hsl(160deg 100% 50%));
+                }
+                &.selected {
+                    background-color: hsl(170deg 100% 30%);
+                }
+            }
+            &.experience {
+                &:not(.selected):hover {
+                    color: light-dark(hsl(22deg 73.33% 71.05%), hsl(22deg 36% 50%));
+                }
+                &.selected {
+                    // a0794c
+                    background-color: hsl(22deg 50% 40%);
+                }
+            }
+            &.projects {
+                &:not(.selected):hover {
+                    color: hsl(46deg 100% 50%);
+                }
+                &.selected {
+                    background-color: hsl(46deg 100% 35%);
+                }
+            }
+            &.art {
+                &:not(.selected):hover {
+                    color: light-dark(hsl(282deg 100% 43%), hsl(298deg 100% 66%));
+                }
+                &.selected {
+                    background-color: hsl(275deg 100% 35%);
+                }
+            }
+            &.about-me {
+                &:not(.selected):hover {
+                    color: light-dark(hsl(224deg 100% 50%), #4193ff);
+                }
+                &.selected {
+                    background-color: hsl(224deg 100% 58%);
+                }
+            }
+            &.cv {
+                user-select: none;
+                &:hover {
+                    color: var(--color-clar);
+                    .icona, .text {
+                        filter: brightness(0.8) sepia(1) saturate(2);
+                        @include light {
+                            filter: brightness(0.2) sepia(1) !important;
+                        }
+                    }
+                }
             }
         }
     }

@@ -9,7 +9,7 @@
 
     <nav class="seccions">
         <button
-            class="rs boto-seccio"
+            class="rs boto-seccio home"
             [class.rail]="rail" [class.drawer]="!rail"
             routerLinkActive="selected" [routerLinkActiveOptions]="{exact: true}" routerLink="/"
             [title]="rail ? getText.inici() : ''"
@@ -20,7 +20,7 @@
             </div>
         </button>
         <button
-            class="rs boto-seccio"
+            class="rs boto-seccio experience"
             [class.rail]="rail" [class.drawer]="!rail"
             routerLinkActive="selected" [routerLinkActiveOptions]="{exact: true}" routerLink="/experience"
             [title]="rail ? getText.experiencia() : ''"
@@ -31,7 +31,7 @@
             </div>
         </button>
         <button
-            class="rs boto-seccio"
+            class="rs boto-seccio projects"
             [class.rail]="rail" [class.drawer]="!rail"
             routerLinkActive="selected" [routerLinkActiveOptions]="{exact: true}" routerLink="/projects"
             [title]="rail ? getText.projectes() : ''"
@@ -42,7 +42,7 @@
             </div>
         </button>
         <button
-            class="rs boto-seccio"
+            class="rs boto-seccio art"
             [class.rail]="rail" [class.drawer]="!rail"
             routerLinkActive="selected" [routerLinkActiveOptions]="{exact: true}" routerLink="/art"
             [title]="rail ? getText.art() : ''"
@@ -53,7 +53,7 @@
             </div>
         </button>
         <button
-            class="rs boto-seccio"
+            class="rs boto-seccio about-me"
             [class.rail]="rail" [class.drawer]="!rail"
             routerLinkActive="selected" [routerLinkActiveOptions]="{exact: true}" routerLink="/about-me"
             [title]="rail ? getText.aboutme() : ''"
@@ -64,7 +64,7 @@
             </div>
         </button>
         <a
-            class="rs boto-seccio"
+            class="rs boto-seccio cv"
             [href]="getRutaCV()"
             [class.rail]="rail" [class.drawer]="!rail"
             [title]="rail ? getText.cv() : ''"
