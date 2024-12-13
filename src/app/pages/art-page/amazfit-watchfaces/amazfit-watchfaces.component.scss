@@ -18,25 +18,23 @@
 
     .boto-i-gif {
         display: flex;
-        flex-direction: column;
+        flex-wrap: wrap;
         justify-content: space-around;
         align-items: center;
-        gap: 1rem;
+        column-gap: 2rem;
+        row-gap: 1rem;
 
-        @include tablet {
-            flex-direction: row;
+        .gif-mi-band {
+            // box-shadow: 0px 0px 10px 0px white;
+            // box-shadow: 0 0 6px 5px white;
+            border-radius: 11px;
         }
 
-        .div-gif-i-text {
-
-            img {
-                // box-shadow: 0px 0px 10px 0px white;
-                // box-shadow: 0 0 6px 5px white;
-                border-radius: 11px;
-            }
-            .text-gif {
-                font-size: 0.9rem;
-            }
+        .img-gts-2-mini {
+            height: 240px;
+            border-radius: 2rem;
+            filter: brightness(1.3);
         }
+
     }
 }
