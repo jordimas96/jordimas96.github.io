@@ -128,10 +128,10 @@ export class ExperienceCalculatorService {
                 Skills.GIT, Skills.BITBUCKET,
                 Skills.JIRA, Skills.CONFLUENCE, Skills.FIGMA,
                 Skills.MVC, Skills.AGILE, Skills.CONTINUOUSINTEGRATION,
-                Skills.WINDOWS,
+                Skills.MACOS,
             ]
         },
-        { // Alvea // -
+        { // Alvea //
             nom: "Alvea",
             dates: ["2024-06-18",],
             skills: [
@@ -155,7 +155,7 @@ export class ExperienceCalculatorService {
         this.calcularExperiencia();
 
         this.setIntervalDiari();
-        
+
     }
 
     setIntervalDiari() {
