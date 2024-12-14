@@ -261,6 +261,20 @@ img, .noselect {
 									supported by Chrome, Edge, Opera and Firefox */
 }
 
+
+// Icones (img -> i) //
+.icona-cv {
+    background-color: currentColor;
+    mask-image: url('/assets/icons/cv.png');
+    mask-size: calc(100% - 0.5rem);
+    -webkit-mask-size: calc(100% - 0.5rem);
+    mask-repeat: no-repeat;
+    -webkit-mask-repeat: no-repeat;
+    mask-position: center;
+    -webkit-mask-position: center;
+}
+
+
 // Ombres //
 .shadow-1 { box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24) !important; }
 .shadow-2 { box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23) !important; }
