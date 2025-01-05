@@ -87,6 +87,9 @@ export class Links {
         "bionicle_ca": "https://es.wikipedia.org/wiki/Bionicle",
         "bionicle_es": "https://es.wikipedia.org/wiki/Bionicle",
         "bionicle_en": "https://en.wikipedia.org/wiki/Bionicle",
+
+        "daw": "https://jordimas96.github.io/r/pdf-daw-montilivi",
+        "dam": "https://jordimas96.github.io/r/pdf-dam-montilivi",
     };
 
 };
