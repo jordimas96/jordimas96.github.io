@@ -9,17 +9,54 @@
 
         <section class="card-themed bg-colored section">
             <article class="descripcio">
-                @if(m.ca) {
-                    <h3>Infància</h3>
-                    <p>
-                        Des de ben petit sempre m'ha fascinat qualsevol tipus de tecnologia. Des dels 4 anys em passava les tardes jugant i construint <app-link id="bionicle_ca">Bionicles</app-link>, una línia de figures articulades de LEGO, sovint sense mirar les instruccions; els sabia muntar a partir de veure el resultat final. Quan els desmuntava, utilitzava les peces per a inventar-me'n de nous. Veia una imatge a internet d'un Bionicle nou i intentava construir-lo, improvisant amb les peces de les que disposava, sovint amb bastant èxit. Gràcies a això vaig desenvolupar una visió espacial molt potent i un gran poder d'observació des de ben jove.<br><br>
+                <h3>
+                    @if(m.ca) { Infància }
+                    @if(m.es) { Infancia }
+                    @if(m.en) { Childhood }
+                </h3>
+                <p class="mb-4">
+                    @if(m.ca) {
+                        Des de ben petit sempre m'ha fascinat qualsevol tipus de tecnologia. Des dels 4 anys em passava les tardes jugant i construint <app-link id="bionicle_ca">Bionicles</app-link>, una línia de figures articulades de LEGO, sovint sense mirar les instruccions; els sabia muntar a partir de veure el resultat final. Quan els desmuntava, utilitzava les peces per a inventar-me'n de nous. Veia una imatge a internet d'un Bionicle nou i intentava construir-lo, improvisant amb les peces de les que disposava, sovint amb bastant èxit. Gràcies a això vaig desenvolupar una visió espacial molt potent i un gran poder d'observació des de ben jove.
+                    }
+                    @if(m.es) {
+                        Desde pequeño siempre me ha fascinado cualquier tipo de tecnología. Desde los 4 años me pasaba las tardes jugando y construyendo <app-link id="bionicle_es">Bionicles</app-link>, una línea de figuras articuladas de LEGO, a menudo sin mirar las instrucciones; los sabía montar con sólo ver el resultado final. Cuando los desmontaba, utilizaba las piezas para inventarme nuevos. Veía una imagen en internet de un Bionicle nuevo e intentaba construirlo, improvisando con las piezas de las que disponía, a menudo con bastante éxito. Gracias a esto desarrollé una visión espacial muy potente y un gran poder de observación desde muy joven.
+                    }
+                    @if(m.en) {
+                        Since I was a child, I have always been fascinated by any kind of technology. From the age of 4, I used to spend whole afternoons playing and building <app-link id="bionicle_en">Bionicles</app-link>, a line of articulated LEGO figures, often without looking at the instructions; I knew how to put them together just by looking at the final result. When I took them apart, I used the pieces to invent new ones. I would see an image on the internet of a new Bionicle and try to build it, improvising with the pieces I had available, often quite successfully. Due to this, I developed a very strong spatial vision and great observation capacity from a very young age.
+                    }
+                </p>
+                <div class="text-imatge mb-4">
+                    <span>
+                        @if(m.ca) {
+                            Quan vaig créixer i tenir accés a un tornavís, obria tots els aparells que s'espatllaven per a intentar arreglar-los. Una cosa no estava espatllada fins que no la obria i me la mirava, amb tutorials de Youtube o sense.
+                        }
+                        @if(m.es) {
+                            Cuando crecí y tuve acceso a un destornillador, abría todos los aparatos que se estropeaban para intentar arreglarlos. Algo no estaba estropeado hasta que no lo abría y me lo miraba, con o sin tutoriales de Youtube.
+                        }
+                        @if(m.en) {
+                            When I grew up and had access to a screwdriver, I would open up every device that broke to try to fix it. Something wasn't broken until I opened it up and looked at it, with or without YouTube tutorials.
+                        }
+                    </span>
 
-                        Quan vaig créixer i tenir accés a un tornavís, obria tots els aparells que s'epatllaven per a intentar arreglar-los. Una cosa no estava espatllada fins que no la obria i me la mirava, amb tutorials de Youtube o sense.<br><br>
+                    <img src="assets/images/about-me/disassembling laptop 2015.jpg" class="rounded-5">
+                </div>
 
+                <p class="mb-4">
+                    @if(m.ca) {
                         Sempre havia volgut ser desenvolupador de videojocs, i a secundària vaig estudiar introducció a HTML i altres eines i em va agradar tant que vaig decidir estudiar programació. Vaig estudiar 2 cicles superiors (<app-link id="daw">DAW</app-link> i <app-link id="dam">DAM</app-link>) i amb el temps m'he anat especialitzant en la part frontend, tot i que sovint he hagut d'intervenir en tots els punts de la programació.<br>
                         A batxillerat era un crack a dibuix tècnic, tecnologia, electrotècnia, física i filosofia.
-                    </p>
+                    }
+                    @if(m.es) {
+                        Siempre había querido ser desarrollador de videojuegos, y en secundaria estudié introducción a HTML y otras herramientas y me gustó tanto que decidí estudiar programación. Estudié 2 ciclos superiores (<app-link id="daw">DAW</app-link> y <app-link id="dam">DAM</app-link>) y con el tiempo me he ido especializando en la parte frontend, aunque a menudo he tenido que intervenir en todos los puntos de la programación.<br>
+                        En bachillerato se me daba muy bien dibujo técnico, tecnología, electrotecnia, física y filosofía.
+                    }
+                    @if(m.en) {
+                        I always wanted to be a video game developer, and in high school I studied an introduction to HTML and other tools and I liked it so much that I decided to study programming. I studied 2 higher cycles (<app-link id="daw">Web</app-link> and <app-link id="dam">Multiplatform</app-link> Application Development) and over time I have specialized in the frontend part, although I have often had to intervene in all aspects of programming.<br>
+                        In high school I was very good at technical drawing, technology, electrical engineering, physics and philosophy.
+                    }
+                </p>
 
+                @if(m.ca) {
                     <h3>Habilitats</h3>
                     <ul>
                         <li>Pensament lògic i racional</li>
@@ -48,17 +85,8 @@
                         <li>Creativitat i sempre provar coses noves</li>
                     </ul>
                 }
+
                 @if(m.es) {
-                    <h3>Infancia</h3>
-                    <p>
-                        Desde pequeño siempre me ha fascinado cualquier tipo de tecnología. Desde los 4 años me pasaba las tardes jugando y construyendo <app-link id="bionicle_es">Bionicles</app-link>, una línea de figuras articuladas de LEGO, a menudo sin mirar las instrucciones; los sabía montar con sólo ver el resultado final. Cuando los desmontaba, utilizaba las piezas para inventarme nuevos. Veía una imagen en internet de un Bionicle nuevo e intentaba construirlo, improvisando con las piezas de las que disponía, a menudo con bastante éxito. Gracias a esto desarrollé una visión espacial muy potente y un gran poder de observación desde muy joven.<br><br>
-
-                        Cuando crecí y tuve acceso a un destornillador, abría todos los aparatos que se estropeaban para intentar arreglarlos. Algo no estaba estropeado hasta que no lo abría y me lo miraba, con o sin tutoriales de Youtube.<br><br>
-
-                        Siempre había querido ser desarrollador de videojuegos, y en secundaria estudié introducción a HTML y otras herramientas y me gustó tanto que decidí estudiar programación. Estudié 2 ciclos superiores (<app-link id="daw">DAW</app-link> y <app-link id="dam">DAM</app-link>) y con el tiempo me he ido especializando en la parte frontend, aunque a menudo he tenido que intervenir en todos los puntos de la programación.<br>
-                        En bachillerato se me daba muy bien dibujo técnico, tecnología, electrotecnia, física y filosofía.
-                    </p>
-
                     <h3>Habilidades</h3>
                     <ul>
                         <li>Pensamiento lógico y racional</li>
@@ -88,16 +116,6 @@
                     </ul>
                 }
                 @if(m.en) {
-                    <h3>Childhood</h3>
-                    <p>
-                        Since I was a child, I have always been fascinated by any kind of technology. From the age of 4, I used to spend whole afternoons playing and building <app-link id="bionicle_en">Bionicles</app-link>, a line of articulated LEGO figures, often without looking at the instructions; I knew how to put them together just by looking at the final result. When I took them apart, I used the pieces to invent new ones. I would see an image on the internet of a new Bionicle and try to build it, improvising with the pieces I had available, often quite successfully. Due to this, I developed a very strong spatial vision and great observation capacity from a very young age.<br><br>
-
-                        When I grew up and had access to a screwdriver, I would open up every device that broke to try to fix it. Something wasn't broken until I opened it up and looked at it, with or without YouTube tutorials.<br><br>
-
-                        I always wanted to be a video game developer, and in high school I studied an introduction to HTML and other tools and I liked it so much that I decided to study programming. I studied 2 higher cycles (<app-link id="daw">Web</app-link> and <app-link id="dam">Multiplatform</app-link> Application Development) and over time I have specialized in the frontend part, although I have often had to intervene in all aspects of programming.<br>
-                        In high school I was very good at technical drawing, technology, electrical engineering, physics and philosophy.
-                    </p>
-
                     <h3>Skills</h3>
                     <ul>
                         <li>Logical and rational thinking</li>
