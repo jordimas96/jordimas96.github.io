@@ -37,6 +37,8 @@
     overflow: hidden;
     overflow-x: auto;
     scrollbar-width: none;
+    
+    pointer-events: none;
 
     z-index: 1005;
 
@@ -47,6 +49,8 @@
         font-size: 1.5rem;
         padding: 1rem 2rem;
         border-radius: 1.5rem;
+
+        pointer-events: all;
 
         @include mobil {
             font-size: 1.2rem;
