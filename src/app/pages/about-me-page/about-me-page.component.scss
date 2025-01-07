@@ -10,26 +10,55 @@
 
         .descripcio {
 
-            .text-imatge {
-                display: flex;
-                flex-direction: column;
-                @include pc { flex-direction: row; }
-                align-items: center;
-                gap: 1.5rem;
-
-
-                span {
-                    @include pc {
-                        text-align: right;
-                    }
-                }
-                img {
+            .bionicle {
+                width: 200px;
+                @include mobil {
                     width: 100%;
-                    @include pc {
-                        width: 350px;
-                    }
+                    max-width: 300px;
+                    margin-left: auto;
+                    margin-right: auto;
+                }
+
+                filter: brightness(1.6);
+            }
+            .laptop {
+                width: 350px;
+                @include mobil {
+                    width: 100%;
+                    margin-left: auto;
+                    margin-right: auto;
                 }
             }
+
+            img.float-left {
+                margin-right: 1.5rem;
+                margin-bottom: 1rem;
+            }
+            img.float-right {
+                margin-left: 1.5rem;
+                margin-bottom: 1rem;
+            }
+
+            // .text-imatge {
+            //     display: flex;
+            //     flex-direction: column;
+            //     @include pc { flex-direction: row; }
+            //     align-items: center;
+            //     gap: 1.5rem;
+
+
+            //     span {
+            //         @include pc {
+            //             text-align: right;
+            //         }
+            //     }
+            //     img {
+            //         width: 100%;
+            //         @include pc {
+            //             width: 350px;
+            //         }
+            //     }
+            // }
 
             :last-child {
                 margin-bottom: 0;

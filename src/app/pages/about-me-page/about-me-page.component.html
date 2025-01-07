@@ -14,6 +14,9 @@
                     @if(m.es) { Infancia }
                     @if(m.en) { Childhood }
                 </h3>
+                @if(m.esPantallaPc()) {
+                    <img src="assets/images/about-me/bionicle-makuta-nui-2003.jpg" alt="bionicle makuta nui 2003" class="bionicle float-right rounded-5">
+                }
                 <p class="mb-4">
                     @if(m.ca) {
                         Des de ben petit sempre m'ha fascinat qualsevol tipus de tecnologia. Des dels 4 anys em passava les tardes jugant i construint <app-link id="bionicle_ca">Bionicles</app-link>, una línia de figures articulades de LEGO, sovint sense mirar les instruccions; els sabia muntar a partir de veure el resultat final. Quan els desmuntava, utilitzava les peces per a inventar-me'n de nous. Veia una imatge a internet d'un Bionicle nou i intentava construir-lo, improvisant amb les peces de les que disposava, sovint amb bastant èxit. Gràcies a això vaig desenvolupar una visió espacial molt potent i un gran poder d'observació des de ben jove.
@@ -25,21 +28,27 @@
                         Since I was a child, I have always been fascinated by any kind of technology. From the age of 4, I used to spend whole afternoons playing and building <app-link id="bionicle_en">Bionicles</app-link>, a line of articulated LEGO figures, often without looking at the instructions; I knew how to put them together just by looking at the final result. When I took them apart, I used the pieces to invent new ones. I would see an image on the internet of a new Bionicle and try to build it, improvising with the pieces I had available, often quite successfully. Due to this, I developed a very strong spatial vision and great observation capacity from a very young age.
                     }
                 </p>
-                <div class="text-imatge mb-4">
-                    <span>
-                        @if(m.ca) {
-                            Quan vaig créixer i tenir accés a un tornavís, obria tots els aparells que s'espatllaven per a intentar arreglar-los. Una cosa no estava espatllada fins que no la obria i me la mirava, amb tutorials de Youtube o sense.
-                        }
-                        @if(m.es) {
-                            Cuando crecí y tuve acceso a un destornillador, abría todos los aparatos que se estropeaban para intentar arreglarlos. Algo no estaba estropeado hasta que no lo abría y me lo miraba, con o sin tutoriales de Youtube.
-                        }
-                        @if(m.en) {
-                            When I grew up and had access to a screwdriver, I would open up every device that broke to try to fix it. Something wasn't broken until I opened it up and looked at it, with or without YouTube tutorials.
-                        }
-                    </span>
+                @if(m.esPantallaMobil()) {
+                    <img src="assets/images/about-me/bionicle-makuta-nui-2003.jpg" alt="bionicle makuta nui 2003" class="bionicle mb-4 rounded-5">
+                }
 
-                    <img src="assets/images/about-me/disassembling laptop 2015.jpg" class="rounded-5">
-                </div>
+                @if(m.esPantallaPc()) {
+                    <img src="assets/images/about-me/disassembling-laptop-2015.jpg" alt="disassembling laptop 2015.jpg" class="laptop float-left rounded-5">
+                }
+                <p class="mb-4">
+                    @if(m.ca) {
+                        Quan vaig créixer i tenir accés a un tornavís, obria tots els aparells que s'espatllaven per a intentar arreglar-los. Una cosa no estava espatllada fins que no la obria i me la mirava, amb tutorials de Youtube o sense.
+                    }
+                    @if(m.es) {
+                        Cuando crecí y tuve acceso a un destornillador, abría todos los aparatos que se estropeaban para intentar arreglarlos. Algo no estaba estropeado hasta que no lo abría y me lo miraba, con o sin tutoriales de Youtube.
+                    }
+                    @if(m.en) {
+                        When I grew up and had access to a screwdriver, I would open up every device that broke to try to fix it. Something wasn't broken until I opened it up and looked at it, with or without YouTube tutorials.
+                    }
+                </p>
+                @if(m.esPantallaMobil()) {
+                    <img src="assets/images/about-me/disassembling-laptop-2015.jpg" alt="disassembling laptop 2015.jpg" class="laptop w-100 mb-4 rounded-5">
+                }
 
                 <p class="mb-4">
                     @if(m.ca) {
@@ -64,7 +73,7 @@
                         <li>Intuïció aguda i anàlisi ràpid de problemes per a deduir la millor solució</li>
                         <li>Creativitat i pensament innovador, tendència a pensar fora de la caixa</li>
                         <li>Gust pel disseny gràfic, estils, formes i colors. Consistència del disseny</li>
-                        <li>Inquietud constant que em motiva a buscar sempre maneres de millorar/automatitzar/optimitzar/simplificar els processos. Tant en la informàtica com en la meva vida cotidiana</li>
+                        <li>Inquietud constant que em motiva a buscar sempre maneres de millorar, automatitzar, optimitzar i simplificar els processos. Tant en la informàtica com en la meva vida cotidiana</li>
                         <li>Alta capacitat de concentració quan un tema m'apassiona</li>
                     </ul>
 
@@ -94,7 +103,7 @@
                         <li>Intuición aguda y análisis rápido de problemas para deducir la mejor solución</li>
                         <li>Creatividad y pensamiento innovador, tendencia a pensar fuera de la caja</li>
                         <li>Gusto por el diseño gráfico, estilos, formas y colores. Consistencia del diseño</li>
-                        <li>Inquietud constante que me motiva a buscar siempre formas de mejorar/automatizar/optimizar/simplificar los procesos. Tanto en la informática como en mi vida cotidiana</li>
+                        <li>Inquietud constante que me motiva a buscar siempre formas de mejorar, automatizar, optimizar y simplificar los procesos. Tanto en la informática como en mi vida cotidiana</li>
                         <li>Alta capacidad de concentración cuando un tema me apasiona</li>
                     </ul>
 
@@ -123,7 +132,7 @@
                         <li>Sharp intuition and quick analysis of problems to deduce the best solution</li>
                         <li>Creativity and innovative thinking, tendency to think outside the box</li>
                         <li>Taste for graphic design, styles, shapes and colors. Consistency of design</li>
-                        <li>Constant concern that motivates me to always look for ways to improve/automate/optimize/simplify processes. Both in computing and in my daily life</li>
+                        <li>Constant concern that motivates me to always look for ways to improve, automate, optimize and simplify processes. Both in computing and in my daily life</li>
                         <li>High ability to concentrate when a topic fascinates me</li>
                     </ul>
 
