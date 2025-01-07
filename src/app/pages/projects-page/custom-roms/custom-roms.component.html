@@ -5,7 +5,10 @@
             <img src="assets/icons/projects/fastboot.png" alt="Fastboot" class="title-icon">
         </a>
     </div>
-    <article class="descripcio mb-4">
+    <article class="descripcio">
+        @if(m.esPantallaPc()) {
+            <img src="assets/images/custom-roms/crdroid-installation-xiaomi-pad-6.jpg" alt="crDroid installation" class="crdroid float-right ms-4 mb-3 rounded-3">
+        }
         @if (m.ca) {
             També estic ficat al món de les custom ROMs per Android: des dels primers anys d'Android he estat instal·lant tota mena de ROMs
             (<app-link id="cyanogenmod">CyanogenMod</app-link>,
@@ -89,10 +92,9 @@
 
             Additionally, I've also modified smartband and smartwatch firmwares to make small changes, such as changing icon packs and adding some extra functionality. Since there were no manuals for editing the firmware on the internet, the knowledge to unzip the firmware and edit it was self-taught, through experimentation, observation, reasoning and the trial and error system.
         }
+        @if(m.esPantallaMobil()) {
+            <img src="assets/images/custom-roms/crdroid-installation-xiaomi-pad-6.jpg" alt="crDroid installation" class="crdroid mt-4 rounded-4">
+        }
     </article>
-
-    <div class="imatges">
-        <img src="assets/images/custom-roms/instalacio-crdroid-xiaomi-pad-6.jpg" appMostrarAmbAnimacio>
-    </div>
 
 </section>
