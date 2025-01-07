@@ -82,7 +82,8 @@
     > div {
         visibility: hidden;
         position: absolute;
-        width: max-content;
+        @include pc { width: max-content; }
+        text-align: center;
         padding: 0.3rem 0.8rem;
         margin-left: -0.8rem;
         margin-top: 5px;
