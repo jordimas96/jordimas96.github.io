@@ -47,6 +47,9 @@
         </app-link>
     </article> -->
     <article class="descripcio mb-4">
+        @if(m.esPantallaPc()) {
+            <img src="assets/images/evora/maquina-evora.png" alt="siemens machine" class="maquina float-right ms-4" appMostrarAmbAnimacio>
+        }
         @if (m.ca) {
             <p>
                 Programador frontend a Evora IT Solutions, una empresa multinacional amb seu a Múnic, Alemanya, especialitzada en la creació de solucions per a clients al sector mèdic. Vaig formar part d'un equip multicultural, on la comunicació i la feina es duien a terme exclusivament en anglès.<br><br>
@@ -108,6 +111,9 @@
             @if(m.es) { Powerpoint de presentación en EvoraIT }
             @if(m.en) { Presentation Powerpoint at EvoraIT }
         </app-link>
+        @if(m.esPantallaMobil()) {
+            <img src="assets/images/evora/maquina-evora.png" alt="siemens machine" class="maquina mt-4" appMostrarAmbAnimacio>
+        }
     </article>
 
     <!-- Skills -->

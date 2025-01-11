@@ -13,3 +13,19 @@ a.link-boto-titol {
         }
     }
 }
+
+.descripcio {
+    .maquina {
+        width: 300px;
+        @include mobil {
+            width: 100%;
+            max-width: 300px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        // Arrodoniment text //
+        shape-outside: url("/assets/images/evora/maquina-evora.png");
+        shape-margin: 1.5rem;
+    }
+}
