@@ -23,8 +23,16 @@ a.link-boto-titol:hover {
     color: white;
     background-color: rgb(126, 0, 0);
     font-weight: bold;
-    padding: 0.25rem 0.75rem;
+    padding: 0.35rem 0.75rem;
     margin-right: -0.5rem;
-    border-radius: 1rem;
+    border-radius: 1.5rem;
     font-size: 1rem;
+
+    display: flex;
+    gap: 0.5rem;
+
+    i {
+        font-size: 1.4rem;
+        color: #ffa72f;
+    }
 }
