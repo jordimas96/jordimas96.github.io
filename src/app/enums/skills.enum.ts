@@ -13,6 +13,8 @@ export enum Skills {
     MATERIALIZE = "Materialize",
     PRIMENG = "PrimeNG",
     JASMINE = "Jasmine",
+    SONARQUBE = "SonarQube",
+    OPENSHIFT = "OpenShift",
     ANDROID = "Android",
     KOTLIN = "Kotlin",
     XML = "XML",
