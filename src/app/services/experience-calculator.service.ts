@@ -138,10 +138,10 @@ export class ExperienceCalculatorService {
                 Skills.FRONTEND,
                 Skills.ANGULAR, Skills.NGRX, Skills.TYPESCRIPT, Skills.JAVASCRIPT, Skills.CSS, Skills.SASS, Skills.HTML5,
                 Skills.PRIMENG, Skills.BOOTSTRAP, Skills.ANGULARMATERIAL,
-                Skills.JASMINE, Skills.SONARQUBE, Skills.OPENSHIFT,
+                Skills.JASMINE, Skills.JIRA, Skills.SONARQUBE, Skills.OPENSHIFT,
                 Skills.MICROSERVICES,
                 Skills.GIT, Skills.SOURCETREE, Skills.BITBUCKET,
-                Skills.JIRA, Skills.FIGMA,
+                Skills.FIGMA,
                 Skills.MVC, Skills.AGILE, Skills.RESPONSIVEDESIGN, Skills.CONTINUOUSINTEGRATION,
                 Skills.WINDOWS,
             ]

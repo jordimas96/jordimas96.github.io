@@ -123,6 +123,7 @@ section:not(.treureHover) {
     .materialize      { --h: 352; --s:  82%; --l: 70%; .chip { background-color: #f6a2ad; color: #000000; } } // hsl(352, 82%, 80%);
     .primeng          { --h: 347; --s: 100%; --l: 70%; .chip { background-color: #ffffff; color: #dd0031; } } // hsl(347, 100%, 43%);
     .jasmine          { --h: 307; --s:  33%; --l: 70%; .chip { background-color: #8e4786; color: #ffffff; } } // hsl(307, 33%, 42%);
+    .jira             { --h: 217; --s: 100%; --l: 70%; .chip { background-color: #005df3; color: #ffffff; } } // hsl(217, 100%, 48%);
     .sonarqube        { --h: 204; --s:  60%; --l: 70%; .chip { background-color: #cae2f2; color: #221e22; } } // hsl(204, 60%, 55%);
     .openshift        { --h: 356; --s:  74%; --l: 70%; .chip { background-color: #f8d3d5; color: #241f21; } } // hsl(356, 74%, 49%);
     .android          { --h: 147; --s:  69%; --l: 70%; .chip { background-color: #3DDC84; color: #153b4c; } } // hsl(147, 69%, 55%);
@@ -167,7 +168,6 @@ section:not(.treureHover) {
     .netbeans         { --h: 218; --s:  49%; --l: 70%; .chip { background-color: #7c9bd2; color: #ffffff; } } // hsl(218, 49%, 65%);
     .svn              { --h: 217; --s:  40%; --l: 70%; .chip { background-color: #809cc9; color: #ffffff; } } // hsl(217, 40%, 65%);
     .weblogic         { --h: 359; --s:  79%; --l: 70%; .chip { background-color: #e41b1f; color: #ffffff; } } // hsl(359, 79%, 50%);
-    .jira             { --h: 214; --s: 100%; --l: 70%; .chip { background-color: #2684ff; color: #ffffff; } } // hsl(214, 100%, 57%);
     .confluence       { --h: 214; --s:  98%; --l: 70%; .chip { background-color: #2582fd; color: #ffffff; } } // hsl(214, 98%, 57%);
     .gitlab           { --h:   8; --s:  77%; --l: 70%; .chip { background-color: #e34329; color: #ffffff; } } // hsl(8, 77%, 53%);
     .maven            { --h: 341; --s:  96%; --l: 70%; .chip { background-color: #700225; color: #ffffff; } } // hsl(341, 96%, 22%);
@@ -192,6 +192,7 @@ section:not(.treureHover) {
     .macos            { --h:   0; --s:   0%; --l: 70%; .chip { background-color: #eeeeee; color: #444444; } } // hsl(0, 0%, 93%);
     .tails            { --h: 268; --s:  41%; --l: 70%; .chip { background-color: #55347b; color: #ffffff; } } // hsl(268, 41%, 34%);
     .zosmvs           { --h: 120; --s: 100%; --l: 70%; .chip { background-color: #000000; color: #00ff00; } } // hsl(120, 100%, 50%);
+    .gsheets          { --h: 151; --s:  71%; --l: 70%; .chip { background-color: #1ca362; color: #ffffff; } } // hsl(151, 71%, 37%);
     .joomla           { --h: 209; --s:  56%; --l: 70%; .chip { background-color: #5091cd; color: #ffffff; } } // hsl(209, 56%, 56%);
     .k2               { --h:   0; --s:   0%; --l: 70%; .chip { background-color: #000000; color: #ffffff; } } // hsl(0, 0%, 0%);
     .akeebabackup     { --h: 182; --s:  54%; --l: 70%; .chip { background-color: #514f50; color: #38b5b9; } } // hsl(182, 54%, 47%);
