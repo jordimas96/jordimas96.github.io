@@ -1,0 +1,40 @@
+<div class="demos">
+
+    <h3 class="mb-4 text-center">
+        @if (m.ca) { Galeria de demos }
+        @if (m.es) { Galería de demos }
+        @if (m.en) { Gallery of demos }
+    </h3>
+
+    <div class="galeria">
+
+        <div class="desktop">
+            <iframe width="300" height="180" src="https://www.youtube.com/embed/8K6HP2YXtyk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            <div class="text">
+                Desktop
+            </div>
+        </div>
+
+        <div class="mobile">
+            <iframe width="300" height="180" src="https://www.youtube.com/embed/_VEn4PUaOVk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            <div class="text">
+                Mobile
+            </div>
+        </div>
+
+        <div class="responsive">
+            <iframe width="300" height="180" src="https://www.youtube.com/embed/L6nUWqkXtik" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            <div class="text">
+                responsive
+            </div>
+        </div>
+
+    </div>
+
+    <app-link [href]="m.env.assets + 'demos/in2art/'" class="mt-4">
+        @if (m.ca) { Ús legítim i propietat }
+        @if (m.es) { Uso legítimo y propiedad }
+        @if (m.en) { Fair Use & Ownership }
+    </app-link>
+
+</div>

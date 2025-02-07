@@ -3,6 +3,7 @@ import { SkillComponent } from 'src/app/components/skill/skill.component';
 import { Skills } from 'src/app/enums/skills.enum';
 import { MainService } from 'src/app/services/main.service';
 import { SharedImports } from 'src/app/shared/imports';
+import { DemosIn2artComponent } from './demos-in2art/demos-in2art.component';
 
 @Component({
     selector: 'app-in2art',
@@ -12,11 +13,12 @@ import { SharedImports } from 'src/app/shared/imports';
     imports: [
         ...SharedImports,
         SkillComponent,
+        DemosIn2artComponent
     ]
 })
 export class In2artComponent {
     Skills = Skills;
-    
+
     public links = {
         ca: "https://in2.art/es",
         es: "https://in2.art/es",

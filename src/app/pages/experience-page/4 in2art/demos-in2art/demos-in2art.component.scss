@@ -1,0 +1,22 @@
+@import "src/styles.scss";
+
+:host { display: block; }
+
+.galeria {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem 2rem;
+    
+    iframe {
+        border-radius: 1rem;
+    }
+
+    .text {
+        text-align: center;
+    }
+}
+app-link {
+    display: inline-block;
+    font-size: 1.25rem;
+}
