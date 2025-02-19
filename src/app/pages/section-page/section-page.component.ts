@@ -21,7 +21,6 @@ import { SharedImports } from 'src/app/shared/imports';
     selector: 'app-section-page',
     templateUrl: './section-page.component.html',
     styleUrl: './section-page.component.scss',
-    standalone: true,
     imports: [
         ...SharedImports,
         RouterLink,

@@ -10,7 +10,6 @@ import { MadJumpgateJocComponent } from './mad-jumpgate-joc/mad-jumpgate-joc.com
     selector: 'app-mad-jumpgate',
     templateUrl: './mad-jumpgate.component.html',
     styleUrl: './mad-jumpgate.component.scss',
-    standalone: true,
     imports: [
         ...SharedImports,
         MadJumpgateJocComponent,

@@ -12,7 +12,6 @@ import { TaskerComponent } from './tasker/tasker.component';
     selector: 'app-projects-page',
     templateUrl: './projects-page.component.html',
     styleUrl: './projects-page.component.scss',
-    standalone: true,
     imports: [
         ...SharedImports,
         RouterLink,

@@ -6,7 +6,6 @@ import { SharedImports } from 'src/app/shared/imports';
     selector: 'app-demos-in2art',
     templateUrl: './demos-in2art.component.html',
     styleUrl: './demos-in2art.component.scss',
-    standalone: true,
     imports: [
         ...SharedImports,
     ]

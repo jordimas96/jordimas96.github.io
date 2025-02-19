@@ -6,7 +6,6 @@ import { SharedImports } from 'src/app/shared/imports';
     selector: 'app-amazfit-watchfaces',
     templateUrl: './amazfit-watchfaces.component.html',
     styleUrl: './amazfit-watchfaces.component.scss',
-    standalone: true,
     imports: [
         ...SharedImports,
     ]

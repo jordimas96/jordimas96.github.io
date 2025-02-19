@@ -8,7 +8,6 @@ import { SharedImports } from 'src/app/shared/imports';
     selector: 'app-nexxia',
     templateUrl: './nexxia.component.html',
     styleUrl: './nexxia.component.scss',
-    standalone: true,
     imports: [
         ...SharedImports,
         SkillComponent,

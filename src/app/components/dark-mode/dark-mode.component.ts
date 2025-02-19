@@ -8,7 +8,6 @@ import { Utils } from 'src/app/shared/utils';
     selector: 'app-dark-mode',
     templateUrl: './dark-mode.component.html',
     styleUrl: './dark-mode.component.scss',
-    standalone: true,
     imports: [
         ...SharedImports,
     ]

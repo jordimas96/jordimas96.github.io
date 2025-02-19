@@ -1,19 +1,17 @@
-import { OnInit } from '@angular/core';
-import { AfterViewInit, Component, ElementRef, HostListener, ViewChild } from '@angular/core';
-import * as $ from "jquery";
+import { AfterViewInit, Component, ElementRef, HostListener, OnInit, ViewChild } from '@angular/core';
+import $ from 'jquery';
 import { SelectorIdiomaComponent } from 'src/app/components/selector-idioma/selector-idioma.component';
+import { LayoutService } from 'src/app/services/layout.service';
 import { MainService } from 'src/app/services/main.service';
 import { ThemeService } from 'src/app/services/theme.service';
 import { SharedImports } from 'src/app/shared/imports';
 import { NavegacioTabComponent } from './navegacio-tab/navegacio-tab.component';
-import { LayoutService } from 'src/app/services/layout.service';
 
 
 @Component({
     selector: 'app-appbar',
     templateUrl: './appbar.component.html',
     styleUrl: './appbar.component.scss',
-    standalone: true,
     imports: [
         ...SharedImports,
         NavegacioTabComponent,

@@ -8,7 +8,6 @@ import { SharedImports } from 'src/app/shared/imports';
     selector: 'app-matic',
     templateUrl: './matic.component.html',
     styleUrl: './matic.component.scss',
-    standalone: true,
     imports: [
         ...SharedImports,
         SkillComponent,

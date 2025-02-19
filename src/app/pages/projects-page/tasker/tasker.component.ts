@@ -8,7 +8,6 @@ import { SharedImports } from 'src/app/shared/imports';
     selector: 'app-tasker',
     templateUrl: './tasker.component.html',
     styleUrl: './tasker.component.scss',
-    standalone: true,
     imports: [
         ...SharedImports,
         SkillComponent,

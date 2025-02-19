@@ -14,7 +14,6 @@ import { AlveaComponent } from './7 alvea/alvea.component';
     selector: 'app-experience-page',
     templateUrl: './experience-page.component.html',
     styleUrl: './experience-page.component.scss',
-    standalone: true,
     imports: [
         ...SharedImports,
         RouterLink,

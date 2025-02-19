@@ -4,7 +4,8 @@ import { MainService } from 'src/app/services/main.service';
 
 @Component({
     template: '',
-    styleUrl: './page.scss'
+    styleUrl: './page.scss',
+    standalone: false
 })
 export class PageComponent {
 

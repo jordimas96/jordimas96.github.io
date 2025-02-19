@@ -8,7 +8,6 @@ import { SharedImports } from 'src/app/shared/imports';
     selector: 'app-index',
     templateUrl: './index.component.html',
     styleUrl: './index.component.scss',
-    standalone: true,
     imports: [
         ...SharedImports,
     ]

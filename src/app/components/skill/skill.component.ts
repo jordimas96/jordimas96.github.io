@@ -9,7 +9,6 @@ import { Utils } from 'src/app/shared/utils';
     selector: 'app-skill',
     templateUrl: './skill.component.html',
     styleUrl: './skill.component.scss',
-    standalone: true,
     imports: [
         ...SharedImports,
     ]

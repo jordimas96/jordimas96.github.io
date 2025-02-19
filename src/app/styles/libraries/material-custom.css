@@ -939,7 +939,7 @@ html {
 }
 
 html .mat-mdc-slide-toggle {
-    /* --mdc-form-field-label-text-color: rgba(0, 0, 0, 0.87) */
+    /* --mat-checkbox-label-text-color: rgba(0, 0, 0, 0.87) */
 }
 
 html .mat-mdc-slide-toggle.mat-accent {
@@ -975,11 +975,11 @@ html {
 }
 
 html .mat-mdc-slide-toggle {
-    /* --mdc-form-field-label-text-font: Roboto, sans-serif; */
-    /* --mdc-form-field-label-text-line-height: 20px; */
-    /* --mdc-form-field-label-text-size: 14px; */
-    /* --mdc-form-field-label-text-tracking: 0.0178571429em; */
-    /* --mdc-form-field-label-text-weight: 400 */
+    /* --mat-checkbox-label-text-font: Roboto, sans-serif; */
+    /* --mat-checkbox-label-text-line-height: 20px; */
+    /* --mat-checkbox-label-text-size: 14px; */
+    /* --mat-checkbox-label-text-tracking: 0.0178571429em; */
+    /* --mat-checkbox-label-text-weight: 400 */
 }
 
 html {
@@ -989,7 +989,7 @@ html {
 }
 
 .mat-mdc-radio-button {
-    /* --mdc-form-field-label-text-color: rgba(0, 0, 0, 0.87) */
+    /* --mat-checkbox-label-text-color: rgba(0, 0, 0, 0.87) */
 }
 
 .mat-mdc-radio-button.mat-primary {
@@ -1043,11 +1043,11 @@ html {
 }
 
 .mat-mdc-radio-button {
-    /* --mdc-form-field-label-text-font: Roboto, sans-serif; */
-    /* --mdc-form-field-label-text-line-height: 20px; */
-    /* --mdc-form-field-label-text-size: 14px; */
-    /* --mdc-form-field-label-text-tracking: 0.0178571429em; */
-    /* --mdc-form-field-label-text-weight: 400 */
+    /* --mat-checkbox-label-text-font: Roboto, sans-serif; */
+    /* --mat-checkbox-label-text-line-height: 20px; */
+    /* --mat-checkbox-label-text-size: 14px; */
+    /* --mat-checkbox-label-text-tracking: 0.0178571429em; */
+    /* --mat-checkbox-label-text-weight: 400 */
 }
 
 html {
@@ -1501,7 +1501,7 @@ html {
 }
 
 .mat-mdc-checkbox {
-    /* --mdc-form-field-label-text-color: rgba(0, 0, 0, 0.87) */
+    /* --mat-checkbox-label-text-color: rgba(0, 0, 0, 0.87) */
 }
 
 .mat-mdc-checkbox.mat-primary {
@@ -1550,11 +1550,11 @@ html {
 }
 
 .mat-mdc-checkbox {
-    /* --mdc-form-field-label-text-font: Roboto, sans-serif; */
-    /* --mdc-form-field-label-text-line-height: 20px; */
-    /* --mdc-form-field-label-text-size: 14px; */
-    /* --mdc-form-field-label-text-tracking: 0.0178571429em; */
-    /* --mdc-form-field-label-text-weight: 400 */
+    /* --mat-checkbox-label-text-font: Roboto, sans-serif; */
+    /* --mat-checkbox-label-text-line-height: 20px; */
+    /* --mat-checkbox-label-text-size: 14px; */
+    /* --mat-checkbox-label-text-tracking: 0.0178571429em; */
+    /* --mat-checkbox-label-text-weight: 400 */
 }
 
 html {

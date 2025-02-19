@@ -6,7 +6,6 @@ import { BrowserModule, bootstrapApplication } from '@angular/platform-browser';
 import { provideAnimations } from '@angular/platform-browser/animations';
 import { provideAnimationsAsync } from '@angular/platform-browser/animations/async';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
-import { QRCodeModule } from 'angularx-qrcode';
 import { NgxMasonryModule } from 'ngx-masonry';
 import { AppRoutingModule } from './app/app-routing.module';
 import { AppComponent } from './app/app.component';
@@ -20,7 +19,6 @@ bootstrapApplication(AppComponent, {
             AppRoutingModule,
             FormsModule,
             GoogleAnalyticsModule,
-            QRCodeModule,
             DragDropModule,
             NgxMasonryModule
         ),
@@ -29,4 +27,4 @@ bootstrapApplication(AppComponent, {
         provideAnimations()
     ]
 })
-  .catch(err => console.error(err));
+    .catch(err => console.error(err));

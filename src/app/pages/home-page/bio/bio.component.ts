@@ -10,7 +10,6 @@ import { SharedImports } from 'src/app/shared/imports';
     selector: 'app-bio',
     templateUrl: './bio.component.html',
     styleUrl: './bio.component.scss',
-    standalone: true,
     imports: [
         ...SharedImports,
         RouterLink,

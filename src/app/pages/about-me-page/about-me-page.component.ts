@@ -7,7 +7,6 @@ import { PageComponent } from '../page.component';
     selector: 'app-about-me-page',
     templateUrl: './about-me-page.component.html',
     styleUrl: './about-me-page.component.scss',
-    standalone: true,
     imports: [
         ...SharedImports,
         RouterLink,

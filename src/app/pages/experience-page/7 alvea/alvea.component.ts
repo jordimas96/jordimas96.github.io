@@ -9,7 +9,6 @@ import { SharedImports } from 'src/app/shared/imports';
     selector: 'app-alvea',
     templateUrl: './alvea.component.html',
     styleUrl: './alvea.component.scss',
-    standalone: true,
     imports: [
         ...SharedImports,
         SkillComponent,

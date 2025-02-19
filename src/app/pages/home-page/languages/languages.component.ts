@@ -11,7 +11,6 @@ import { Utils } from 'src/app/shared/utils';
     selector: 'app-languages',
     templateUrl: './languages.component.html',
     styleUrl: './languages.component.scss',
-    standalone: true,
     imports: [
         ...SharedImports,
         SkillComponent,

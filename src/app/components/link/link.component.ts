@@ -6,7 +6,6 @@ import { MainService } from 'src/app/services/main.service';
     selector: 'app-link',
     templateUrl: './link.component.html',
     styleUrl: './link.component.scss',
-    standalone: true,
     imports: []
 })
 export class LinkComponent {

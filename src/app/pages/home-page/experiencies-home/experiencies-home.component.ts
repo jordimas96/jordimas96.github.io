@@ -10,7 +10,6 @@ import { SharedImports } from 'src/app/shared/imports';
     selector: 'app-experiencies-home',
     templateUrl: './experiencies-home.component.html',
     styleUrl: './experiencies-home.component.scss',
-    standalone: true,
     imports: [
         RouterLink,
         ...SharedImports,

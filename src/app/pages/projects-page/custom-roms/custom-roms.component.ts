@@ -7,7 +7,6 @@ import { SharedImports } from 'src/app/shared/imports';
     selector: 'app-custom-roms',
     templateUrl: './custom-roms.component.html',
     styleUrl: './custom-roms.component.scss',
-    standalone: true,
     imports: [
         ...SharedImports,
     ]

@@ -9,7 +9,6 @@ import { IconsComponent } from './icons/icons.component';
     selector: 'app-art-page',
     templateUrl: './art-page.component.html',
     styleUrl: './art-page.component.scss',
-    standalone: true,
     imports: [
         ...SharedImports,
         RouterLink,

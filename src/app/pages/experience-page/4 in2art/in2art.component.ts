@@ -9,7 +9,6 @@ import { DemosIn2artComponent } from './demos-in2art/demos-in2art.component';
     selector: 'app-in2art',
     templateUrl: './in2art.component.html',
     styleUrl: './in2art.component.scss',
-    standalone: true,
     imports: [
         ...SharedImports,
         SkillComponent,

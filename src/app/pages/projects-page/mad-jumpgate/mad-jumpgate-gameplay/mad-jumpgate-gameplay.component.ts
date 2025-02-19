@@ -7,7 +7,6 @@ import { Utils } from 'src/app/shared/utils';
     selector: 'app-mad-jumpgate-gameplay',
     templateUrl: './mad-jumpgate-gameplay.component.html',
     styleUrl: './mad-jumpgate-gameplay.component.scss',
-    standalone: true,
     imports: [
         ...SharedImports,
     ]

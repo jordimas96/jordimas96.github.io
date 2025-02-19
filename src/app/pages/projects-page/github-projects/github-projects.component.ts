@@ -13,7 +13,6 @@ import { Utils } from 'src/app/shared/utils';
     selector: 'app-github-projects',
     templateUrl: './github-projects.component.html',
     styleUrl: './github-projects.component.scss',
-    standalone: true,
     imports: [
         ...SharedImports,
         NgxMasonryModule,

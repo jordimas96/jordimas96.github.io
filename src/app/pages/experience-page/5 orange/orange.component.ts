@@ -8,7 +8,6 @@ import { SharedImports } from 'src/app/shared/imports';
     selector: 'app-orange',
     templateUrl: './orange.component.html',
     styleUrl: './orange.component.scss',
-    standalone: true,
     imports: [
         ...SharedImports,
         SkillComponent,

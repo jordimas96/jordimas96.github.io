@@ -9,7 +9,6 @@ import { SharedImports } from 'src/app/shared/imports';
     selector: 'app-footer',
     templateUrl: './footer.component.html',
     styleUrl: './footer.component.scss',
-    standalone: true,
     imports: [
         ...SharedImports,
     ]

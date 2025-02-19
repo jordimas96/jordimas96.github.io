@@ -12,7 +12,6 @@ import { ProjectesHomeComponent } from './projectes-home/projectes-home.componen
     selector: 'app-home-page',
     templateUrl: './home-page.component.html',
     styleUrl: './home-page.component.scss',
-    standalone: true,
     imports: [
         ...SharedImports,
         RouterLink,

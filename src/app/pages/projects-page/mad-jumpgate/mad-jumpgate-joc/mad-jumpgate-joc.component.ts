@@ -9,7 +9,6 @@ import { environment } from 'src/environments/environment';
     selector: 'app-mad-jumpgate-joc',
     templateUrl: './mad-jumpgate-joc.component.html',
     styleUrl: './mad-jumpgate-joc.component.scss',
-    standalone: true,
     imports: [
         ...SharedImports,
     ]

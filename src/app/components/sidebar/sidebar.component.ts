@@ -13,7 +13,6 @@ import { Utils } from 'src/app/shared/utils';
     selector: 'app-sidebar',
     templateUrl: './sidebar.component.html',
     styleUrl: './sidebar.component.scss',
-    standalone: true,
     imports: [
         RouterLinkActive,
         RouterLink,

@@ -8,7 +8,6 @@ import { SharedImports } from 'src/app/shared/imports';
     selector: 'app-stats',
     templateUrl: './stats.component.html',
     styleUrl: './stats.component.scss',
-    standalone: true,
     imports: [
         ...SharedImports,
     ]

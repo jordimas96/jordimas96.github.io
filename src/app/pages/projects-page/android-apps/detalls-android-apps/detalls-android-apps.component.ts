@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import * as $ from "jquery";
+import $ from 'jquery';
 import { SkillComponent } from 'src/app/components/skill/skill.component';
 import { Skills } from 'src/app/enums/skills.enum';
 import { MainService } from 'src/app/services/main.service';
@@ -9,7 +9,6 @@ import { SharedImports } from 'src/app/shared/imports';
     selector: 'app-detalls-android-apps',
     templateUrl: './detalls-android-apps.component.html',
     styleUrl: './detalls-android-apps.component.scss',
-    standalone: true,
     imports: [
         ...SharedImports,
         SkillComponent

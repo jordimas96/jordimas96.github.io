@@ -9,7 +9,6 @@ import { SharedImports } from 'src/app/shared/imports';
     selector: 'app-indra',
     templateUrl: './indra.component.html',
     styleUrl: './indra.component.scss',
-    standalone: true,
     imports: [
         ...SharedImports,
         SkillComponent,

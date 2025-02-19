@@ -6,7 +6,6 @@ import { SharedImports } from 'src/app/shared/imports';
     selector: 'app-icons',
     templateUrl: './icons.component.html',
     styleUrl: './icons.component.scss',
-    standalone: true,
     imports: [
         ...SharedImports,
     ]

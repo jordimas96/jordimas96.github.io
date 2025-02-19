@@ -9,7 +9,6 @@ import { Utils } from 'src/app/shared/utils';
     selector: 'app-navegacio-tab',
     templateUrl: './navegacio-tab.component.html',
     styleUrl: './navegacio-tab.component.scss',
-    standalone: true,
     imports: [
         RouterLinkActive,
         RouterLink,

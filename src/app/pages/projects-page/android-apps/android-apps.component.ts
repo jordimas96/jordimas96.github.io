@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { QRCodeModule } from 'angularx-qrcode';
+import { QRCodeComponent } from 'angularx-qrcode';
 import { SkillComponent } from 'src/app/components/skill/skill.component';
 import { Skills } from 'src/app/enums/skills.enum';
 import { MainService } from 'src/app/services/main.service';
@@ -10,11 +10,10 @@ import { DetallsAndroidAppsComponent } from './detalls-android-apps/detalls-andr
     selector: 'app-android-apps',
     templateUrl: './android-apps.component.html',
     styleUrl: './android-apps.component.scss',
-    standalone: true,
     imports: [
         ...SharedImports,
         DetallsAndroidAppsComponent,
-        QRCodeModule,
+        QRCodeComponent,
         SkillComponent,
     ]
 })

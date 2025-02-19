@@ -8,7 +8,6 @@ import { SharedImports } from 'src/app/shared/imports';
     selector: 'app-evora',
     templateUrl: './evora.component.html',
     styleUrl: './evora.component.scss',
-    standalone: true,
     imports: [
         ...SharedImports,
         SkillComponent,

@@ -6,7 +6,6 @@ import { SharedImports } from 'src/app/shared/imports';
     selector: 'app-icones-contacte',
     templateUrl: './icones-contacte.component.html',
     styleUrl: './icones-contacte.component.scss',
-    standalone: true,
     imports: [
         ...SharedImports,
     ]
