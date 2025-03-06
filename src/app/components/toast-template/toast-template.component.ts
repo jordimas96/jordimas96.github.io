@@ -16,4 +16,4 @@ export class ToastTemplateComponent implements OnInit {
 
     ngOnInit(): void { }
 
-};
+}

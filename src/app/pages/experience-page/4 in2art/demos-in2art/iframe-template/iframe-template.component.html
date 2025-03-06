@@ -1,0 +1,31 @@
+<mat-dialog-content #contenidor (click)="dialogRef.close()">
+    @switch (data.id) {
+        @case (1) {
+            <iframe
+                #iframe
+                class="desktop" [class]="direccioLimit"
+                src="https://www.youtube.com/embed/8K6HP2YXtyk?autoplay=1" title="YouTube video player"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                referrerpolicy="strict-origin-when-cross-origin" allowfullscreen
+                ></iframe>
+        }
+        @case (2) {
+            <iframe
+                #iframe
+                class="mobile" [class]="direccioLimit"
+                src="https://www.youtube.com/embed/_VEn4PUaOVk?autoplay=1" title="YouTube video player"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                referrerpolicy="strict-origin-when-cross-origin" allowfullscreen
+                ></iframe>
+        }
+        @case (3) {
+            <iframe
+                #iframe
+                class="responsive" [class]="direccioLimit"
+                src="https://www.youtube.com/embed/L6nUWqkXtik?autoplay=1" title="YouTube video player"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                referrerpolicy="strict-origin-when-cross-origin" allowfullscreen
+                ></iframe>
+        }
+    }
+</mat-dialog-content>

@@ -1,0 +1,61 @@
+@import "src/styles.scss";
+
+mat-dialog-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    padding: 0 !important;
+    max-height: 100%;
+    overflow: hidden;
+
+    iframe {
+        border-radius: 32px;
+        border-radius: 24px;
+        border-radius: 32px 32px 24px 24px;
+        background-color: black;
+
+        max-width: 100%;
+        max-height: 100%;
+
+        &.horitzontal {
+            width: auto;
+            height: 100%;
+        }
+        &.vertical {
+            width: 100%;
+            height: auto;
+        }
+    }
+    .desktop {
+        aspect-ratio: 2560 / 1440;
+    }
+    .mobile {
+        aspect-ratio: 1080 / 2050;
+    }
+    .responsive {
+        aspect-ratio: 1920 / 1080;
+    }
+    
+}
+::ng-deep .iframe-modal { }
+::ng-deep .iframe-modal-backdrop {
+    // background: #6e7da5;
+    background-color: light-dark(hsl(214, 26%, 81%), hsl(214, 24%, 35%));
+    // backdrop-filter: blur(40px) saturate(2);
+}
+
+
+// Eliminar estils per defecte //
+::ng-deep .iframe-modal {
+    .mdc-dialog__surface {
+        background: none;
+    }
+}
+
+::ng-deep .cdk-global-overlay-wrapper {
+    padding: 50px;
+    @include mobil {
+        padding: 20px;
+    }
+}

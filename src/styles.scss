@@ -181,6 +181,10 @@ video, img {
     display: block;
 }
 
+.cdk-overlay-container {
+    z-index: 1110;
+}
+
 
 // Bugs llibreries (?)
 
