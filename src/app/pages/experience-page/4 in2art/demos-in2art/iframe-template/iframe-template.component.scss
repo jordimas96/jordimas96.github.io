@@ -55,7 +55,4 @@ mat-dialog-content {
 
 ::ng-deep .cdk-global-overlay-wrapper {
     padding: 50px;
-    @include mobil {
-        padding: 20px;
-    }
 }

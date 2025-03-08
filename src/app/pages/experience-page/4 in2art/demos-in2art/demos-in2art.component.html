@@ -8,22 +8,37 @@
 
     <div class="galeria">
         <div class="desktop">
-            <img src="assets/images/in2art/demo/pc-thumb.png" alt="PC thumbnail" (click)="obrirModal(1)">
-            <div class="text">
+            <div class="card" (click)="obrirModal(1)">
+                <img src="assets/images/in2art/demo/pc-thumb.png" class="fons" alt="PC thumbnail">
+                <div class="icona">
+                    <i class="fa-solid fa-play"></i>
+                </div>
+            </div>
+            <div class="text mt-2">
                 Desktop
             </div>
         </div>
 
         <div class="mobile">
-            <img src="assets/images/in2art/demo/mobile-thumb.png" alt="Mobile thumbnail" (click)="obrirModal(2)">
-            <div class="text">
+            <div class="card" (click)="obrirModal(2)">
+                <img src="assets/images/in2art/demo/mobile-thumb.png" alt="Mobile thumbnail">
+                <div class="icona">
+                    <i class="fa-solid fa-play"></i>
+                </div>
+            </div>
+            <div class="text mt-2">
                 Mobile
             </div>
         </div>
 
         <div class="responsive">
-            <img src="assets/images/in2art/demo/responsive-thumb.png" alt="responsive thumbnail" (click)="obrirModal(3)">
-            <div class="text">
+            <div class="card" (click)="obrirModal(3)">
+                <img src="assets/images/in2art/demo/responsive-thumb.png" alt="responsive thumbnail">
+                <div class="icona">
+                    <i class="fa-solid fa-play"></i>
+                </div>
+            </div>
+            <div class="text mt-2">
                 Responsive
             </div>
         </div>
