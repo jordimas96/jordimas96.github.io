@@ -42,7 +42,7 @@ export class DemosIn2artComponent {
                 maxWidth: '100%',
                 height: '100%',
                 maxHeight: '100%',
-                
+
             }
         );
 

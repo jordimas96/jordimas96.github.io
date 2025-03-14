@@ -2,8 +2,10 @@
 
 mat-dialog-content {
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
+    gap: 2rem;
 
     padding: 0 !important;
     max-height: 100%;
@@ -36,12 +38,24 @@ mat-dialog-content {
     .responsive {
         aspect-ratio: 1920 / 1080;
     }
+
+    .botons {
+        .back {
+            width: 5rem;
+            height: 5rem;
+            padding: 0.25rem;
+            font-size: 1.8rem;
+        }
+    }
     
 }
+
+
+
 ::ng-deep .iframe-modal { }
 ::ng-deep .iframe-modal-backdrop {
     // background: #6e7da5;
-    background-color: light-dark(hsl(214, 26%, 81%), hsl(214, 24%, 35%));
+    background-color: light-dark(hsl(214, 100%, 87%), hsl(214, 24%, 35%));
     // backdrop-filter: blur(40px) saturate(2);
 }
 

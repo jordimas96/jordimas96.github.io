@@ -9,7 +9,6 @@ import { PageComponent } from '../page.component';
     styleUrl: './about-me-page.component.scss',
     imports: [
         ...SharedImports,
-        RouterLink,
     ]
 })
 export class AboutMePageComponent extends PageComponent {

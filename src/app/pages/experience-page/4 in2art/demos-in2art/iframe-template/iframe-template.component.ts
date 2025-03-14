@@ -16,7 +16,8 @@ export class IframeTemplateComponent implements OnInit, AfterViewInit {
     readonly dialogRef = inject(MatDialogRef<IframeTemplateComponent>);
 
     @ViewChild('contenidor') contenidor: ElementRef;
-    public direccioLimit = "vertical";
+    @ViewChild('iframe') iframe: ElementRef;
+    public direccioALimitar = "vertical";
 
     constructor() { }
 
@@ -34,12 +35,17 @@ export class IframeTemplateComponent implements OnInit, AfterViewInit {
         if (this.data.id == 2) ratio = 1080 / 2050;
         if (this.data.id == 3) ratio = 1920 / 1080;
 
-        if (this.contenidor.nativeElement.clientWidth / this.contenidor.nativeElement.clientHeight > ratio)
-            this.direccioLimit = "horitzontal";
+        let alturaEspaiIBoto = 16 * 2 + 80;
+
+        if (this.contenidor.nativeElement.clientWidth / (this.contenidor.nativeElement.clientHeight - alturaEspaiIBoto) > ratio)
+            this.direccioALimitar = "horitzontal";
         else
-            this.direccioLimit = "vertical";
+            this.direccioALimitar = "vertical";
 
-        console.log(this.direccioLimit);
+    }
 
+    fullscreen(event: Event) {
+        event.stopPropagation();
+        this.iframe.nativeElement.requestFullscreen();
     }
 }
