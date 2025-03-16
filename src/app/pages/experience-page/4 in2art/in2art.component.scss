@@ -18,7 +18,7 @@ a.link-boto-titol:hover {
 }
 
 
-// Temporal //
+// Temporal (?) //
 .webDownMsg {
     color: white;
     background-color: rgb(126, 0, 0);
@@ -35,4 +35,15 @@ a.link-boto-titol:hover {
         font-size: 1.4rem;
         color: #ffa72f;
     }
+}
+
+
+.descripcio {
+    p, ul {
+        margin-bottom: 1.5rem;
+    }
+}
+
+h4 {
+    color: var(--text-90);
 }

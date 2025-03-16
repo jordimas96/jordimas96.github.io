@@ -70,6 +70,7 @@
 
                 L'aplicació és una Single Page Application d'Angular. Té sistema d'emmagatzematge en caché de les peticions per a garantir-ne el funcionament en zones amb poca cobertura, o amb problemes de connexió, cosa freqüent en situacions d'emergència. A més, compleix tots els estàndards d'accessibilitat de <app-link id="accessibilitat-aa">nivell AA</app-link>.
             </p>
+
             <h4>Assoliments</h4>
             <ul>
                 <!-- <li>🌟 Líder de la part forntend del projecte</li> -->
@@ -93,6 +94,7 @@
 
                 La aplicación es una Single Page Application de Angular. Tiene sistema de almacenamiento en caché de las peticiones para garantizar su funcionamiento en zonas con poca cobertura, o con problemas de conexión, algo frecuente en situaciones de emergencia. Además, cumple con todos los estándares de accesibilidad de <app-link id="accessibilitat-aa">nivel AA</app-link>.
             </p>
+
             <h4>Logros</h4>
             <ul>
                 <!-- <li>🌟 Líder de la parte frontend del proyecto</li> -->
@@ -116,6 +118,7 @@
 
                 The application is an Angular Single Page Application. It has a request caching system to ensure its operation in areas with poor coverage, or with connection problems, something common in emergency situations. It also meets all <app-link id="accessibilitat-aa">level AA</app-link> accessibility standards.
             </p>
+
             <h4>Achievements</h4>
             <ul>
                 <!-- <li>🌟 Frontend project leader</li> -->
@@ -126,6 +129,10 @@
             </ul>
         }
     </article>
+
+    @if (m.ca) { <h4>Demo interactiva</h4> }
+    @if (m.es) { <h4>Demo interactiva</h4> }
+    @if (m.en) { <h4>Interactive demo</h4> }
 
     <section class="seccio-boto-dintel">
         <a [href]="getLinkDintelHome()" class="rs dnt-button primary">

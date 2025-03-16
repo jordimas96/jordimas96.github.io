@@ -15,6 +15,10 @@ a.link-boto-titol {
 }
 
 .descripcio {
+    p, ul {
+        margin-bottom: 1.5rem;
+    }
+    
     .maquina {
         width: 300px;
         @include mobil {
@@ -28,4 +32,8 @@ a.link-boto-titol {
         shape-outside: url("/assets/images/evora/maquina-evora.png");
         shape-margin: 1.5rem;
     }
+}
+
+h4 {
+    color: var(--text-90);
 }
