@@ -285,7 +285,7 @@
 // Experiencia //
 
 // Colors paleta Dintel: rgb(17, 77, 166), #e8effa, white //
-.tema-alvea {
+.tema-dintel {
     @extend .paleta-216;
 
     --fons-card: light-dark(hsla(216, 100%, 85%, 0.5), hsla(216, 81%, 36%, 0.5)) !important;
@@ -341,6 +341,11 @@
 .tema-matic {
     @extend .paleta-356;
     --link: light-dark(var(--color-l-2), var(--color-l-7));
+}
+
+.tema-tecnocom {
+    @extend .paleta-208;
+    --link: light-dark(var(--color-l-3), var(--color-l-7));
 }
 
 .tema-indra {

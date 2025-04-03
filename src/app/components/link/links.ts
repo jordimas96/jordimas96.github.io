@@ -20,6 +20,8 @@ export class Links {
         "material-you": "https://m3.material.io/",
         "dynamic-colors": "https://developer.android.com/develop/ui/views/theming/dynamic-colors",
 
+        "alvea": "https://alvea.es/",
+
         "ministerio-exteriores_ca": "https://www.exteriores.gob.es/ca",
         "ministerio-exteriores_es": "https://www.exteriores.gob.es/",
         "ministerio-exteriores_en": "https://www.exteriores.gob.es/en",
@@ -60,6 +62,9 @@ export class Links {
         "asus-flash-tool": "https://www.ytechb.com/asus-flash-tool/",
 
 
+        "indra_ca": "https://www.indracompany.com/es/",
+        "indra_es": "https://www.indracompany.com/es/",
+        "indra_en": "https://www.indracompany.com/en/",
 
         "lacaixa_ca": "https://www.caixabank.cat/index_ca.html",
         "lacaixa_es": "https://www.caixabank.cat/index_es.html",

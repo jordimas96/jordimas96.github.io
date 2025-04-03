@@ -23,10 +23,7 @@ export class IndraComponent {
         en: "https://www.indracompany.com/en/",
     };
 
-    constructor(
-        public m: MainService,
-        public ts: ThemeService
-    ) { }
+    constructor(public m: MainService) { }
 
     getLink() {
         return this.links[this.m.idioma];

@@ -29,8 +29,8 @@ export class ExperienceCalculatorService {
                 Skills.WINDOWS,
             ]
         },
-        { // Beca Indra //
-            nom: "Beca Indra",
+        { // Beca Tecnocom //
+            nom: "Beca Tecnocom",
             dates: ["2017-07-03", "2017-07-31"],
             skills: [
                 Skills.BACKEND,
@@ -41,8 +41,8 @@ export class ExperienceCalculatorService {
                 Skills.WINDOWS,
             ]
         },
-        { // Indra //
-            nom: "Indra",
+        { // Tecnocom //
+            nom: "Tecnocom",
             dates: ["2017-09-04", "2019-03-08"],
             skills: [
                 Skills.BACKEND,
@@ -131,8 +131,8 @@ export class ExperienceCalculatorService {
                 Skills.MACOS,
             ]
         },
-        { // Alvea //
-            nom: "Alvea",
+        { // Indra //
+            nom: "Indra",
             dates: ["2024-06-18",],
             skills: [
                 Skills.FRONTEND,
