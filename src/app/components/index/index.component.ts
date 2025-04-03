@@ -36,6 +36,11 @@ export class IndexComponent implements OnInit, AfterViewInit {
     idExists(id) {
         return document.getElementById(id);
     }
+    getTema(opcio) {
+        if (!opcio.tema)
+            opcio.tema = Array.from(document.getElementById(opcio.id)?.classList || []).find(c => c.startsWith("tema-"));
+        return opcio.tema;
+    }
 
     scrollTo(id: string) {
         const element = document.getElementById(id);
@@ -78,12 +83,12 @@ export class IndexComponent implements OnInit, AfterViewInit {
             { id: "projects-home",      nom: ["Projectes", "Proyectos", "Projects"][this.m.idiomaIndex] },
             { id: "experiencies-home",  nom: ["Experiència", "Experiencia", "Experience"][this.m.idiomaIndex] },
             { id: "languages",          nom: ["Habilitats", "Habilidades", "Skills"][this.m.idiomaIndex] },
-            { id: "alvea",              nom: "Alvea"              },
+            { id: "indra",              nom: "Indra"              },
             { id: "in2art",             nom: "IN2ART"             },
             { id: "matic",              nom: "Matic"              },
             { id: "evora",              nom: "Evora IT"           },
             { id: "orange",             nom: "Orange"             },
-            { id: "indra",              nom: "Indra"              },
+            { id: "tecnocom",           nom: "Tecnocom"           },
             { id: "nexxia",             nom: "Nexxia"             },
             { id: "android",            nom: "Apps Android"       },
             { id: "mad-jumpgate",       nom: ["Joc de disparar de PC", "Juego de disparos PC", "PC shooting game"][this.m.idiomaIndex] },

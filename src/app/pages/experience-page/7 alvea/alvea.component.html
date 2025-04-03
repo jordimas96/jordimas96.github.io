@@ -2,11 +2,11 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wdth,wght@0,6..12,100.7,200..1000;1,6..12,100.7,200..1000&display=swap" rel="stylesheet">
 
-<section id="alvea" class="tema-alvea card-themed bg-colored section">
+<section id="indra" class="tema-dintel card-themed bg-colored section">
     <div class="titol-top-card section-title d-flex mb-2">
         <a [href]="getLink()" class="rs link-boto-titol gap-3" matRipple>
-            Alvea
-            <img src="assets/icons/experience/alvea.png" alt="Alvea" class="title-icon">
+            Indra
+            <img [src]="'assets/icons/experience/'+(ts.modeFosc?'indra-d.png':'indra-l.png')" alt="Indra" class="title-icon rounded">
             <span class="fletxa">↗</span>
         </a>
     </div>
@@ -58,8 +58,9 @@
     </article> -->
     <article class="descripcio mb-4">
         @if (m.ca) {
+            <h5>Principal desenvolupador d'una web per al Ministeri d'Exteriors</h5>
             <p>
-                En aquesta empresa vaig treballar per a Indra, una consultora que gestiona diversos projectes per al Gobierno de España.<br>
+                En aquesta empresa vaig treballar per a <app-link id="indra_ca">Indra</app-link>, una consultora que gestiona diversos projectes per al Gobierno de España, contractat per <app-link id="alvea">Alvea</app-link>.<br>
                 Principal desenvolupador frontend d'un backoffice per al <app-link id="ministerio-exteriores_ca">Ministerio de Asuntos Exteriores y Cooperación</app-link>, que permetrà als consolats i ambaixades proporcionar suport als ciutadans espanyols que es troben a l'estranger durant situacions de crisi, com ara atemptats terroristes o catàstrofes naturals. L'aplicació permetrà gestionar grups de ciutadans per a organitzar trasllats, salconduits, repatriacions, renovació de documents, comunicacions i atenció a necessitats especials, entre d'altres serveis.<br><br>
 
                 Vam iniciar el projecte creant una <app-link [href]="getLinkDintelComponents()">llibreria de components</app-link> en Angular, utilitzant PrimeNG, Angular Material i altres plugins com a base. Aquesta llibreria inclou tant elements comuns en formularis (selectors, radiobuttons, checkboxes, calendaris, mapes interactius) com components habituals en interfícies d'usuari (botons, cards, toasts, menús desplegables, breadcrumbs, etc.).<br><br>
@@ -82,8 +83,9 @@
         }
 
         @if (m.es) {
+            <h5>Principal desarrollador de una web para el Ministerio de Exteriores</h5>
             <p>
-                En esta empresa trabajé para Indra, una consultora que gestiona varios proyectos para el Gobierno de España.<br>
+                En esta empresa trabajé para <app-link id="indra_es">Indra</app-link>, una consultora que gestiona varios proyectos para el Gobierno de España, contratado por <app-link id="alvea">Alvea</app-link>.<br>
                 Principal desarrollador frontend de un backoffice para el <app-link id="ministerio-exteriores_es">Ministerio de Asuntos Exteriores y Cooperación</app-link>, que permitirá a los consulados y embajadas proporcionar soporte a los ciudadanos españoles que se encuentran en el extranjero durante situaciones de crisis, como atentados terroristas o catástrofes naturales. La aplicación permitirá gestionar grupos de ciudadanos para organizar traslados, salvoconductos, repatriaciones, renovación de documentos, comunicaciones y atención a necesidades especiales, entre otros servicios.<br><br>
 
                 Iniciamos el proyecto creando una <app-link [href]="getLinkDintelComponents()">librería de componentes</app-link> en Angular, utilizando PrimeNG, Angular Material y otros plugins como base. Esta librería incluye tanto elementos comunes en formularios (selectores, radiobuttons, checkboxes, calendarios, mapas interactivos) como componentes habituales en interfaces de usuario (botones, cards, toasts, menús desplegables, breadcrumbs, etc.).<br><br>
@@ -106,8 +108,9 @@
         }
 
         @if (m.en) {
+            <h5>Lead developer of a website for the Ministry of Foreign Affairs</h5>
             <p>
-                In this company I worked for Indra, a consultancy that manages several projects for the Government of Spain.<br>
+                In this company I worked for <app-link id="indra_en">Indra</app-link>, a consultancy that manages several projects for the Government of Spain, hired by <app-link id="alvea">Alvea</app-link>.<br>
                 Lead frontend developer of a back-office system for the <app-link id="ministerio-exteriores_en">Ministry of Foreign Affairs and Cooperation</app-link>, which will allow consulates and embassies to provide support to Spanish citizens who are abroad during crisis situations, such as terrorist attacks or natural disasters. The application will allow managing groups of citizens to organize transfers, safe conduct passes, repatriations, document renewals, communications and attention to special needs, among other services.<br><br>
 
                 We started the project by creating a <app-link [href]="getLinkDintelComponents()">component library</app-link> in Angular, using PrimeNG, Angular Material and other plugins as a base. This library includes both common form elements (selectors, radio buttons, checkboxes, calendars, interactive maps) and common user interface components (buttons, cards, toasts, drop-down menus, breadcrumbs, etc.). <br><br>

@@ -3,7 +3,7 @@
 
         @for (o of getOpcions(); track o.id) {
             @if(idExists(o.id)) {
-                <button class="boto tema-{{o.id}}" (click)="scrollTo(o.id)" appMostrarAmbAnimacio matRipple>{{o.nom}}</button>
+                <button class="boto" [class]="getTema(o)" (click)="scrollTo(o.id)" appMostrarAmbAnimacio matRipple>{{o.nom}}</button>
             }
         }
     </div>
@@ -12,7 +12,7 @@
 
         @for (o of getOpcions(); track o.id) {
             @if(idExists(o.id)) {
-                <button class="boto tema-{{o.id}}" (click)="scrollTo(o.id)" appMostrarAmbAnimacio matRipple>{{o.nom}}</button>
+                <button class="boto" [class]="getTema(o)" (click)="scrollTo(o.id)" appMostrarAmbAnimacio matRipple>{{o.nom}}</button>
             }
         }
     </div>
