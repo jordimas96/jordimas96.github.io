@@ -3,12 +3,12 @@ import { RouterLink } from '@angular/router';
 import { AmazfitWatchfacesComponent } from 'src/app/pages/art-page/amazfit-watchfaces/amazfit-watchfaces.component';
 import { IconsComponent } from 'src/app/pages/art-page/icons/icons.component';
 import { NexxiaComponent } from 'src/app/pages/experience-page/1 nexxia/nexxia.component';
-import { IndraComponent } from 'src/app/pages/experience-page/2 indra/indra.component';
+import { TecnocomComponent } from 'src/app/pages/experience-page/2 tecnocom/tecnocom.component';
 import { MaticComponent } from 'src/app/pages/experience-page/3 matic/matic.component';
 import { In2artComponent } from 'src/app/pages/experience-page/4 in2art/in2art.component';
 import { OrangeComponent } from 'src/app/pages/experience-page/5 orange/orange.component';
 import { EvoraComponent } from 'src/app/pages/experience-page/6 evora/evora.component';
-import { AlveaComponent } from 'src/app/pages/experience-page/7 alvea/alvea.component';
+import { IndraComponent } from 'src/app/pages/experience-page/7 indra/indra.component';
 import { PageComponent } from 'src/app/pages/page.component';
 import { AndroidAppsComponent } from 'src/app/pages/projects-page/android-apps/android-apps.component';
 import { CustomRomsComponent } from 'src/app/pages/projects-page/custom-roms/custom-roms.component';
@@ -25,12 +25,12 @@ import { SharedImports } from 'src/app/shared/imports';
         ...SharedImports,
         RouterLink,
         NexxiaComponent,
-        IndraComponent,
+        TecnocomComponent,
         MaticComponent,
         In2artComponent,
         OrangeComponent,
         EvoraComponent,
-        AlveaComponent,
+        IndraComponent,
         AndroidAppsComponent,
         MadJumpgateComponent,
         GithubProjectsComponent,
@@ -51,14 +51,14 @@ export class SectionPageComponent extends PageComponent {
 
         this.route.params.subscribe(params => {
             this.section = params['section'];
-            
+
             // if (["indra", "evora", "orange", "in2art", "matic", "tecnocom", "nexxia"].includes(this.section))
             //     this.optionBack = 1;
             // else if (["android", "mad-jumpgate", "github", "custom-roms", "tasker"].includes(this.section))
             //     this.optionBack = 2;
             // else if (["icons", "amazfit"].includes(this.section))
             //     this.optionBack = 3;
-            
+
             // this.urlGoBack = "/" + ["", "experience", "projects", "art"][this.optionBack];
             this.urlGoBack = "/";
         });

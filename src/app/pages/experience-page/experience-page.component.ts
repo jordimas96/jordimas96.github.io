@@ -3,12 +3,12 @@ import { RouterLink } from '@angular/router';
 import { SharedImports } from 'src/app/shared/imports';
 import { PageComponent } from '../page.component';
 import { NexxiaComponent } from './1 nexxia/nexxia.component';
-import { IndraComponent } from './2 indra/indra.component';
+import { TecnocomComponent } from './2 tecnocom/tecnocom.component';
 import { MaticComponent } from './3 matic/matic.component';
 import { In2artComponent } from './4 in2art/in2art.component';
 import { OrangeComponent } from './5 orange/orange.component';
 import { EvoraComponent } from './6 evora/evora.component';
-import { AlveaComponent } from './7 alvea/alvea.component';
+import { IndraComponent } from './7 indra/indra.component';
 
 @Component({
     selector: 'app-experience-page',
@@ -18,12 +18,12 @@ import { AlveaComponent } from './7 alvea/alvea.component';
         ...SharedImports,
         RouterLink,
         NexxiaComponent,
-        IndraComponent,
+        TecnocomComponent,
         MaticComponent,
         In2artComponent,
         OrangeComponent,
         EvoraComponent,
-        AlveaComponent,
+        IndraComponent,
     ]
 })
 export class ExperiencePageComponent extends PageComponent {

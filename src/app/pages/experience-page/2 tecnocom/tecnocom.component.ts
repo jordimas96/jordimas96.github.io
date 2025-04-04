@@ -2,19 +2,18 @@ import { Component } from '@angular/core';
 import { SkillComponent } from 'src/app/components/skill/skill.component';
 import { Skills } from 'src/app/enums/skills.enum';
 import { MainService } from 'src/app/services/main.service';
-import { ThemeService } from 'src/app/services/theme.service';
 import { SharedImports } from 'src/app/shared/imports';
 
 @Component({
-    selector: 'app-indra',
-    templateUrl: './indra.component.html',
-    styleUrl: './indra.component.scss',
+    selector: 'app-tecnocom',
+    templateUrl: './tecnocom.component.html',
+    styleUrl: './tecnocom.component.scss',
     imports: [
         ...SharedImports,
         SkillComponent,
     ]
 })
-export class IndraComponent {
+export class TecnocomComponent {
     Skills = Skills;
 
     public links = {

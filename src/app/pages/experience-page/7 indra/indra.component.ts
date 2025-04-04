@@ -7,15 +7,15 @@ import { SharedImports } from 'src/app/shared/imports';
 
 
 @Component({
-    selector: 'app-alvea',
-    templateUrl: './alvea.component.html',
-    styleUrl: './alvea.component.scss',
+    selector: 'app-indra',
+    templateUrl: './indra.component.html',
+    styleUrl: './indra.component.scss',
     imports: [
         ...SharedImports,
         SkillComponent,
     ]
 })
-export class AlveaComponent {
+export class IndraComponent {
     Skills = Skills;
 
     public links = {
