@@ -50,5 +50,16 @@
                 }
             }
         }
+
+        &.disabled {
+            filter: grayscale(1) brightness(0.8);
+            backdrop-filter: grayscale(1);
+            opacity: 0.5;
+            pointer-events: none;
+
+            .contingut {
+                filter: none !important;
+            }
+        }
     }
 }
