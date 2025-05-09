@@ -180,7 +180,7 @@ export class ExperienceCalculatorService {
             let diesTotals = (dataFinal.valueOf() - dataInicial.valueOf()) / (24 * 60 * 60 * 1000);
 
             if (empresa.nom == "Matic") diesTotals += 65.15 / 8; // 65.15 extra hours //
-            if (empresa.nom == "Alvea") diesTotals *= 43 / 40; // 43h a week //
+            if (empresa.nom == "Indra") diesTotals *= 43 / 40; // 43h a week //
 
             empresa.skills.forEach((skill: Skills) => {
                 if (this.skills[skill] === undefined)
