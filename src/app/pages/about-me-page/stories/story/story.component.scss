@@ -1,0 +1,20 @@
+@import "src/styles.scss";
+
+button.story {
+
+    img {
+
+        border-radius: 50rem;
+        border: 3px solid #df01ae;
+        padding: 0.15rem;
+
+        width: 75px;
+        height: 75px;
+    }
+
+    .titol {
+        font-size: 0.9rem;
+        text-align: center;
+
+    }
+}

@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { RouterLink } from '@angular/router';
 import { SharedImports } from 'src/app/shared/imports';
 import { PageComponent } from '../page.component';
+import { StoriesComponent } from './stories/stories.component';
 
 @Component({
     selector: 'app-about-me-page',
@@ -9,6 +10,7 @@ import { PageComponent } from '../page.component';
     styleUrl: './about-me-page.component.scss',
     imports: [
         ...SharedImports,
+        StoriesComponent
     ]
 })
 export class AboutMePageComponent extends PageComponent {
