@@ -1,15 +1,27 @@
 @import "src/styles.scss";
 
-button.story {
+.story {
 
-    img {
+    .imatges {
+        position: relative;
+        
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        
+        width: 100px;
+        height: 100px;
 
-        border-radius: 50rem;
-        border: 3px solid #df01ae;
-        padding: 0.15rem;
+        img.cercle {
+            position: absolute;
+            width: 100%;
+        }
 
-        width: 94px;
-        height: 94px;
+        img.foto {
+            width: 85%;
+
+            border-radius: 50rem;
+        }
     }
 
     .titol {

@@ -8,7 +8,8 @@
     width: max-content;
     max-width: 100%;
     margin: auto;
-    padding: 0.5rem;
+    padding: 0 0.5rem;
+    @include tablet { padding: 0 1rem; }
 
     overflow: hidden;
     overflow-x: auto;

@@ -3,6 +3,16 @@
 
 
 .page {
+    
+    app-stories {
+        margin-left: -0.5rem;
+        margin-right: -0.5rem;
+        
+        @include tablet {
+            margin-left: -1rem;
+            margin-right: -1rem;
+        }
+    }
 
     .content {
 
