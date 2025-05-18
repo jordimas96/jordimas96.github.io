@@ -27,9 +27,9 @@
     <app-mad-jumpgate-joc />
     <app-mad-jumpgate-gameplay />
 
-    <div class="d-flex gap-3 mt-3">
+    <div class="seccionsIcones d-flex gap-3 mt-3">
         <div appMostrarAmbAnimacio>
-            <div class="seccioIcones play p-3" [class.disabled]="m.esMobil()">
+            <div class="seccioIcones card play p-3" [class.disabled]="m.esMobil()">
                 <div class="titol text-80">
                     @if(m.ca) { Jugar }
                     @if(m.es) { Jugar }
@@ -45,19 +45,36 @@
                 </div>
             </div>
         </div>
-        <div class="seccioIcones gameplay p-3" appMostrarAmbAnimacio>
-            <div class="titol text-80">
-                @if(m.ca) { Veure gameplay }
-                @if(m.es) { Ver gameplay }
-                @if(m.en) { Watch gameplay }
-            </div>
-            <div class="contingut shadow-filter-1">
-                <a href="https://youtu.be/TwJ3bpvQ4qA" class="bg-white" [class.samsung-squircle]="m.esSamsung()" [class.xiaomi-rounded]="m.esXiaomi()" [class.apple-squircle]="m.esIOS()" matRipple>
-                    <img src="assets/images/mad-jumpgate/icons/youtube.png" alt="Gameplay on YouTube" title="Gameplay on YouTube" class="logo">
-                </a>
+        <div appMostrarAmbAnimacio>
+            <div class="seccioIcones card gameplay p-3">
+                <div class="titol text-80">
+                    @if(m.ca) { Veure gameplay }
+                    @if(m.es) { Ver gameplay }
+                    @if(m.en) { Watch gameplay }
+                </div>
+                <div class="contingut shadow-filter-1">
+                    <a href="https://youtu.be/TwJ3bpvQ4qA" class="bg-white" [class.samsung-squircle]="m.esSamsung()" [class.xiaomi-rounded]="m.esXiaomi()" [class.apple-squircle]="m.esIOS()" matRipple>
+                        <img src="assets/images/mad-jumpgate/icons/youtube.png" alt="Gameplay on YouTube" title="Gameplay on YouTube" class="logo">
+                    </a>
+                </div>
             </div>
         </div>
+        @if (m.esPantallaPc()) {
+            <div class="seccioStory flex-fill d-flex justify-content-center">
+                <div class="card p-3" appMostrarAmbAnimacio>
+                    <app-story [urlId]="'18078142072743585'" [titol]="'FPS'" img="assets/images/about-me/stories/mad-jumpgate.png" />
+                </div>
+            </div>
+        }
+        
     </div>
+
+    @if (m.esPantallaMobil()) {
+        <div class="text-center mt-4">
+            <app-story [urlId]="'18078142072743585'" [titol]="'FPS'" img="assets/images/about-me/stories/mad-jumpgate.png" appMostrarAmbAnimacio />
+        </div>
+    }
+    
 
     <!-- Skills -->
     <div class="skills-title mt-4 mb-2">

@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { QRCodeComponent } from 'angularx-qrcode';
 import { SkillComponent } from 'src/app/components/skill/skill.component';
 import { Skills } from 'src/app/enums/skills.enum';
+import { StoryComponent } from 'src/app/pages/about-me-page/stories/story/story.component';
 import { MainService } from 'src/app/services/main.service';
 import { SharedImports } from 'src/app/shared/imports';
 import { DetallsAndroidAppsComponent } from './detalls-android-apps/detalls-android-apps.component';
@@ -15,6 +16,7 @@ import { DetallsAndroidAppsComponent } from './detalls-android-apps/detalls-andr
         DetallsAndroidAppsComponent,
         QRCodeComponent,
         SkillComponent,
+        StoryComponent,
     ]
 })
 export class AndroidAppsComponent {

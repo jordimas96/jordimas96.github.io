@@ -16,49 +16,56 @@
         }
     }
 
-    .seccioIcones {
-        // .play
-        // .gameplay
-
-        background-color: light-dark(var(--color-clar-50),  var(--color-clar-20));
-        border-radius: 1.25rem;
-
-        .titol {
-            font-size: 1rem;
-            line-height: 1rem;
-            text-align: center;
-
-            padding: 0 0.25rem;
-            margin-bottom: 1rem;
-
-        }
-        .contingut {
-            display: flex;
-            flex-wrap: wrap;
+    .seccionsIcones {
+        @include mobil {
             justify-content: center;
-            gap: 1rem;
+        }
 
-            a {
-                @include reset-a;
-                
-                display: block;
-                border-radius: 50%;
-                overflow: hidden;
-        
-                .logo {
-                    height: 3rem;
+        .card {
+            background-color: light-dark(var(--color-clar-50),  var(--color-clar-20));
+            border-radius: 1.25rem;
+        }
+        .seccioIcones {
+            // .play
+            // .gameplay
+
+            .titol {
+                font-size: 1rem;
+                line-height: 1rem;
+                text-align: center;
+
+                padding: 0 0.25rem;
+                margin-bottom: 1rem;
+
+            }
+            .contingut {
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: center;
+                gap: 1rem;
+
+                a {
+                    @include reset-a;
+                    
+                    display: block;
+                    border-radius: 50%;
+                    overflow: hidden;
+            
+                    .logo {
+                        height: 3rem;
+                    }
                 }
             }
-        }
 
-        &.disabled {
-            filter: grayscale(1) brightness(0.8);
-            backdrop-filter: grayscale(1);
-            opacity: 0.5;
-            pointer-events: none;
+            &.disabled {
+                filter: grayscale(1) brightness(0.8);
+                backdrop-filter: grayscale(1);
+                opacity: 0.5;
+                pointer-events: none;
 
-            .contingut {
-                filter: none !important;
+                .contingut {
+                    filter: none !important;
+                }
             }
         }
     }

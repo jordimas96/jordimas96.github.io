@@ -5,13 +5,8 @@
 .page {
     
     app-stories {
-        margin-left: -0.5rem;
-        margin-right: -0.5rem;
-        
-        @include tablet {
-            margin-left: -1rem;
-            margin-right: -1rem;
-        }
+        margin-left: calc(-1 * var(--padding-page));
+        margin-right: calc(-1 * var(--padding-page));
     }
 
     .content {

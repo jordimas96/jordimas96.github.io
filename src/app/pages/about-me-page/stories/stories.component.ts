@@ -11,7 +11,7 @@ import { StoryComponent } from './story/story.component';
     styleUrl: './stories.component.scss',
     imports: [
         ...SharedImports,
-        StoryComponent
+        StoryComponent,
     ]
 })
 export class StoriesComponent implements OnInit {

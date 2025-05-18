@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { SkillComponent } from 'src/app/components/skill/skill.component';
 import { Skills } from 'src/app/enums/skills.enum';
+import { StoryComponent } from 'src/app/pages/about-me-page/stories/story/story.component';
 import { MainService } from 'src/app/services/main.service';
 import { SharedImports } from 'src/app/shared/imports';
 
@@ -11,6 +12,7 @@ import { SharedImports } from 'src/app/shared/imports';
     imports: [
         ...SharedImports,
         SkillComponent,
+        StoryComponent,
     ]
 })
 export class TaskerComponent implements OnInit {

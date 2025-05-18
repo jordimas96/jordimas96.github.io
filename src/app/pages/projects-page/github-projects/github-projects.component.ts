@@ -3,6 +3,7 @@ import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
 import { NgxMasonryComponent, NgxMasonryModule } from 'ngx-masonry';
 import { SkillComponent } from 'src/app/components/skill/skill.component';
 import { Skills } from 'src/app/enums/skills.enum';
+import { StoryComponent } from 'src/app/pages/about-me-page/stories/story/story.component';
 import { MainService } from 'src/app/services/main.service';
 import { ProviderService } from 'src/app/services/provider.service';
 import { ThemeService } from 'src/app/services/theme.service';
@@ -18,6 +19,7 @@ import { Utils } from 'src/app/shared/utils';
         NgxMasonryModule,
         SkillComponent,
         MatProgressSpinnerModule,
+        StoryComponent,
     ]
 })
 export class GithubProjectsComponent implements OnInit {
@@ -148,5 +150,5 @@ export class GithubProjectsComponent implements OnInit {
         repo.iconUrlBackup = null;
         this.masonry.layout();
     }
-    
+
 }
