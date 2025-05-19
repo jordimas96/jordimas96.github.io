@@ -36,14 +36,14 @@
         @if (m.en) { My apps are available on different markets: }
     </article>
     <div class="boto-i-qr row">
-        <div class="col-6">
+        <div class="col-12 col-sm-6">
             <a [href]="m.env.assets + '/external-pages/play-store/play-store.html'" class="boto ambIcona" appMostrarAmbAnimacio matRipple>
                 Play Store
                 <img src="assets/icons/projects/play-store.png" alt="Google Play Store" class="logo">
             </a>
         </div>
         @if (!m.esAndroid()) {
-            <div class="col-6" appMostrarAmbAnimacio>
+            <div class="col-12 col-sm-6" appMostrarAmbAnimacio>
                 <qrcode [qrdata]="m.env.assets + '/external-pages/play-store/play-store.html'" [errorCorrectionLevel]="'M'"
                     colorDark="#005727" colorLight="#b8ffd8" title="Play Store QR"></qrcode>
 
@@ -54,13 +54,13 @@
                 </div>
             </div>
         }
-        <div class="col-6">
+        <div class="col-12 col-sm-6">
             <a [href]="getAmazonLink_apps()" class="boto botoAmazon paleta-192" appMostrarAmbAnimacio matRipple>
                 <img src="assets/icons/projects/amazon-appstore.png" alt="Amazon Appstore" class="logo">
             </a>
         </div>
         @if (!m.esAndroid()) {
-            <div class="col-6 paleta-192" appMostrarAmbAnimacio>
+            <div class="col-12 col-sm-6 paleta-192" appMostrarAmbAnimacio>
                 <qrcode [qrdata]="getAmazonLink_apps()" [errorCorrectionLevel]="'M'"
                     colorDark="#152939" colorLight="#b8f0ff" title="Amazon Appstore QR"></qrcode>
 
