@@ -1,0 +1,17 @@
+:host { display: block; }
+
+figure {
+    max-width: 600px;
+    margin: auto;
+
+    app-about-card {
+        display: block;
+        margin: auto;
+    }
+
+    figcaption {
+        font-size: 0.9rem;
+        font-style: italic;
+        color: var(--text-70);
+    }
+}
