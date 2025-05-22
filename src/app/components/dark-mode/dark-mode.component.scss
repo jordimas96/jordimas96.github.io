@@ -8,14 +8,21 @@
     font-size: 1.3rem;
 
     &.transicio-1 {
-        transition: background-color 0.3s linear, width 0.3s, height 0.3s, font-size 0.3s, box-shadow 400ms ease-in;
+        transition: background-color 0.3s linear, width 0.3s, height 0.3s, font-size 0.3s, box-shadow 700ms cubic-bezier(1, 0, 1, 1);
     }
     &.transicio-2 {
-        transition: background-color 0.3s linear, width 0.3s, height 0.3s, font-size 0.3s, box-shadow 400ms ease-in;
+        transition: background-color 0.3s linear, width 0.3s, height 0.3s, font-size 0.3s, box-shadow 500ms ease-in;
     }
 }
 .botoDarkMode {
     width: 4rem;
+
+    background-color: light-dark(#008, #28d4ff);
+    color: light-dark(gold, gold);
+
+    i {
+        transition: transform 700ms;
+    }
 
     // transform-origin: 37.5% 50%;
     // i { transition: rotate 0.3s; }

@@ -53,10 +53,11 @@ export class DarkModeComponent {
         // Variables //
         let spread = Math.max(window.innerWidth, window.innerHeight);
         let blur = 500;
-        var color = this.ts.modeFosc ? "var(--color-l-8)" : "var(--color-fosc)";
+        var color1 = this.ts.modeFosc ? "#28d4ff" : "#008";
+        var color2 = this.ts.modeFosc ? "#6c7ca4" : "#111";
 
 
-        $("*:not(.botoDarkMode)").css("transition", "none");
+        $("*:not(.botoDarkMode, .botoDarkMode > i)").css("transition", "none");
         $(".sidebar").css("overflow", "visible");
         $("*").css("pointer-events", "none");
         this.botonsActius = false;
@@ -65,7 +66,7 @@ export class DarkModeComponent {
         // Colocar shadow al primer punt //
         $(".botoDarkMode").css({
             "z-index": "1000000",
-            "box-shadow": `0 0 0 0 ${color}`
+            "box-shadow": `0 0 0 0 ${color1}`
         });
 
         await Utils.wait(0);
@@ -74,13 +75,16 @@ export class DarkModeComponent {
         $(".botoDarkMode")
             .addClass("transicio-1")
             .css({
-                "box-shadow": `0 0 ${blur}px ${spread}px ${color}`
+                "box-shadow": `0 0 ${blur}px ${spread}px ${color1}`
             });
+        
+        $(".botoDarkMode > i")
+            .css("transform", `rotate(${this.ts.modeFosc ? 67.5 : 360}deg)`);
+            
 
 
 
-
-        await Utils.wait(400);
+        await Utils.wait(700);
 
         // Acció canviar mode (instantani) //
         if (nomBoto == "dark") {
@@ -93,7 +97,7 @@ export class DarkModeComponent {
         }
 
         $(".botoDarkMode").removeClass("transicio-1");
-        $(".botoDarkMode").css({ "box-shadow": `100vw -100vh ${blur}px ${spread * 1.15}px ${color}` });
+        $(".botoDarkMode").css({ "box-shadow": `100vw -100vh ${blur}px ${spread * 1.15}px ${color1}` });
 
         await Utils.wait(0);
 
@@ -101,9 +105,9 @@ export class DarkModeComponent {
 
         // 2. Transicio marxar cortina //
         // $(".botoDarkMode").css({ "box-shadow": `100vw 100vh ${blur}px ${spread}px transparent` });
-        $(".botoDarkMode").css({ "box-shadow": `100vw -100vh 0 0 ${color}` });
+        $(".botoDarkMode").css({ "box-shadow": `100vw -100vh 0 0 ${color2}` });
 
-        await Utils.wait(400);
+        await Utils.wait(500);
 
         $(".botoDarkMode").removeClass("transicio-2");
 
@@ -115,7 +119,7 @@ export class DarkModeComponent {
             });
 
 
-        $("*:not(.botoDarkMode)").css("transition", "");
+        $("*:not(.botoDarkMode, .botoDarkMode > i)").css("transition", "");
         $(".sidebar").css("overflow", "");
         $("*").css("pointer-events", "");
         this.botonsActius = true;
