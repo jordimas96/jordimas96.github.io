@@ -112,7 +112,7 @@
             // Colors //
             &.home {
                 &:not(.selected):hover {
-                    background-color:   light-dark(hsl(160, 100%, 85%), hsl(160, 100%, 15%));
+                    background-color:   light-dark(hsla(160, 100%, 85%, 75%), hsl(160, 100%, 15%));
                     color:              light-dark(hsl(160, 100%, 10%), hsl(160, 100%, 90%));
                 }
                 &.selected {
@@ -121,7 +121,7 @@
             }
             &.experience {
                 &:not(.selected):hover {
-                    background-color:   light-dark(hsl(22, 100%, 90%), hsl(22, 36%, 25%));
+                    background-color:   light-dark(hsla(22, 100%, 90%, 75%), hsl(22, 36%, 25%));
                     color:              light-dark(hsl(22, 100%, 20%), hsl(22, 36%, 85%));
                 }
                 &.selected {
@@ -131,7 +131,7 @@
             }
             &.projects {
                 &:not(.selected):hover {
-                    background-color:   light-dark(hsl(46, 100%, 85%), hsl(46, 100%, 20%));
+                    background-color:   light-dark(hsla(46, 100%, 85%, 75%), hsl(46, 100%, 20%));
                     color:              light-dark(hsl(46, 100%, 10%), hsl(46, 100%, 85%));
                 }
                 &.selected {
@@ -140,7 +140,7 @@
             }
             &.art {
                 &:not(.selected):hover {
-                    background-color:   light-dark(hsl(282, 100%, 76%), hsl(298, 100%, 20%));
+                    background-color:   light-dark(hsla(282, 100%, 76%, 75%), hsl(298, 100%, 20%));
                     color:              light-dark(hsl(266, 100%, 32%), hsl(298, 100%, 85%));
                 }
                 &.selected {
@@ -159,7 +159,7 @@
             &.cv {
                 &:not(.selected):hover {
                     color:              black; // 47.5 - color paper groguenc //
-                    background-color:   white;
+                    background-color:   hsl(0, 0%, 100%);
                 }
             }
         }
