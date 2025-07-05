@@ -162,6 +162,18 @@
 
             </article>
         </section>
+
+        <div class="navegacio-pagina">
+            <button class="boto art" routerLink="/art" title="Art" appMostrarAmbAnimacio matRipple>
+                <i class="fa-solid fa-paintbrush" alt="Art"></i>
+            </button>
+            <button class="boto home" routerLink="/home" appMostrarAmbAnimacio matRipple>
+                <i class="fa-solid fa-house" alt="Home"></i>
+                @if (m.ca) { Inici }
+                @if (m.es) { Inicio }
+                @if (m.en) { Home }
+            </button>
+        </div>
     </div>
 
 </div>

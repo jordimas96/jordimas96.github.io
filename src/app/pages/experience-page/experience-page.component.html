@@ -15,12 +15,18 @@
         <app-tecnocom />
         <app-nexxia />
 
-        <button class="boto botoSeguentPagina m-auto" routerLink="/projects" appMostrarAmbAnimacio matRipple>
-            @if (m.ca) { Projectes }
-            @if (m.es) { Proyectos }
-            @if (m.en) { Projects }
-            <i class="fa-solid fa-chevron-right"></i>
-        </button>
+        
+        <div class="navegacio-pagina">
+            <button class="boto home" routerLink="/home" title="Home" appMostrarAmbAnimacio matRipple>
+                <i class="fa-solid fa-house" alt="Home"></i>
+            </button>
+            <button class="boto projects" routerLink="/projects" appMostrarAmbAnimacio matRipple>
+                <i class="fa-solid fa-shapes" alt="Projects"></i>
+                @if (m.ca) { Projectes }
+                @if (m.es) { Proyectos }
+                @if (m.en) { Projects }
+            </button>
+        </div>
 
     </div>
 </div>

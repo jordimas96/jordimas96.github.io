@@ -12,9 +12,11 @@ const routes: Routes = [
         path: "",
         component: HomePageComponent
     },
+
+    // Seccions //
     {
-        path: "about-me",
-        component: AboutMePageComponent
+        path: "home",
+        redirectTo: ""
     },
     {
         path: "experience",
@@ -29,9 +31,16 @@ const routes: Routes = [
         component: ArtPageComponent
     },
     {
+        path: "about-me",
+        component: AboutMePageComponent
+    },
+
+    // Altres //
+    {
         path: "section/:section",
         component: SectionPageComponent
     },
+    
     {
         path: "**",
         redirectTo: ""

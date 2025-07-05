@@ -9,12 +9,17 @@
         <app-stats />
         <app-languages />
 
-        <button class="boto botoSeguentPagina m-auto" routerLink="/experience" appMostrarAmbAnimacio matRipple>
-            @if (m.ca) { Experiència }
-            @if (m.es) { Experiencia }
-            @if (m.en) { Experience }
-            <i class="fa-solid fa-chevron-right"></i>
-        </button>
+        <div class="navegacio-pagina">
+            <button class="boto about-me" routerLink="/about-me" title="About me" appMostrarAmbAnimacio matRipple>
+                <i class="fa-solid fa-user" alt="About me"></i>
+            </button>
+            <button class="boto experience" routerLink="/experience" appMostrarAmbAnimacio matRipple>
+                <i class="fa-solid fa-briefcase" alt="Experience"></i>
+                @if (m.ca) { Experiència }
+                @if (m.es) { Experiencia }
+                @if (m.en) { Experience }
+            </button>
+        </div>
 
     </div>
 </div>

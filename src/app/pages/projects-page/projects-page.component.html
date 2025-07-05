@@ -13,12 +13,17 @@
         <app-custom-roms />
         <app-tasker />
 
-        <button class="boto botoSeguentPagina m-auto" routerLink="/art" appMostrarAmbAnimacio matRipple>
-            @if (m.ca) { Art }
-            @if (m.es) { Arte }
-            @if (m.en) { Art }
-            <i class="fa-solid fa-chevron-right"></i>
-        </button>
+        <div class="navegacio-pagina">
+            <button class="boto experience" routerLink="/experience" title="Experience" appMostrarAmbAnimacio matRipple>
+                <i class="fa-solid fa-briefcase" alt="Experience"></i>
+            </button>
+            <button class="boto art" routerLink="/art" appMostrarAmbAnimacio matRipple>
+                <i class="fa-solid fa-paintbrush" alt="Art"></i>
+                @if (m.ca) { Art }
+                @if (m.es) { Arte }
+                @if (m.en) { Art }
+            </button>
+        </div>
 
     </div>
 </div>

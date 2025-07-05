@@ -10,12 +10,17 @@
         <app-icons />
         <app-amazfit-watchfaces />
 
-        <button class="boto botoSeguentPagina m-auto" routerLink="/" appMostrarAmbAnimacio matRipple>
-            <i class="fa-solid fa-chevron-left"></i>
-            @if (m.ca) { Inici }
-            @if (m.es) { Inicio }
-            @if (m.en) { Home }
-        </button>
+        <div class="navegacio-pagina">
+            <button class="boto projects" routerLink="/projects" title="Projects" appMostrarAmbAnimacio matRipple>
+                <i class="fa-solid fa-shapes" alt="Projects"></i>
+            </button>
+            <button class="boto about-me" routerLink="/about-me" appMostrarAmbAnimacio matRipple>
+                <i class="fa-solid fa-user" alt="About me"></i>
+                @if (m.ca) { Sobre mi }
+                @if (m.es) { Acerca de mí }
+                @if (m.en) { About me }
+            </button>
+        </div>
 
     </div>
 </div>

@@ -10,6 +10,7 @@ import { StoriesComponent } from './stories/stories.component';
     styleUrl: './about-me-page.component.scss',
     imports: [
         ...SharedImports,
+        RouterLink,
         StoriesComponent
     ]
 })
