@@ -48,19 +48,25 @@ export class DetallsAndroidAppsComponent {
 
     toggleSeccio(boto) {
         let $seccio = $(boto).parent();
-        let $contingut = $seccio.find(".contingut");
         let obert = $seccio.is("[data-open]");
-        let $video = $seccio.find("video");
 
+        // Obrir o tancar aquesta secció //
         obert = !obert;
         if (obert) {
             $seccio.attr("data-open", "");
-            $contingut.stop().slideDown(200);
-            $video[0].play();
+            $seccio.find(".contingut").stop().slideDown(200);
+            $seccio.find("video")[0].play();
         } else {
             $seccio.removeAttr("data-open");
-            $contingut.stop().slideUp(200);
-            $video[0].pause();
+            $seccio.find(".contingut").stop().slideUp(200);
+            $seccio.find("video")[0].pause();
         }
+        
+        // Tancar altres seccions //
+        $seccio.siblings().each(function () {
+            $(this).removeAttr("data-open");
+            $(this).find(".contingut").stop().slideUp(200);
+            $(this).find("video")[0].pause();
+        });
     }
 }

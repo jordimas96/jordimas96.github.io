@@ -3,8 +3,7 @@
 :host { display: block; }
 
 .seccio {
-    margin-bottom: 1rem;
-    border-radius: 2rem;
+    border-radius: 0.5rem;
     background-color: light-dark(var(--color-clar-50), var(--color-clar-20));
 
     &[data-open] .fletxa {

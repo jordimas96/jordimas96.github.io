@@ -16,7 +16,16 @@
         }
     }
 
-    .seccionsIcones {
+    .accordion {
+        display: flex;
+        flex-direction: column;
+        gap: 0.2rem;
+
+        border-radius: 2rem;
+        overflow: hidden;
+    }
+
+    .seccions-icones {
         @include mobil {
             justify-content: center;
         }
@@ -25,7 +34,7 @@
             background-color: light-dark(var(--color-clar-50),  var(--color-clar-20));
             border-radius: 1.25rem;
         }
-        .seccioIcones {
+        .seccio-icones {
             // .play
             // .gameplay
 

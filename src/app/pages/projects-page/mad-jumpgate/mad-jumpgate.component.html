@@ -24,12 +24,14 @@
         }
     </article>
 
-    <app-mad-jumpgate-joc />
-    <app-mad-jumpgate-gameplay />
+    <div class="accordion mb-3" appMostrarAmbAnimacio>
+        <app-mad-jumpgate-joc />
+        <app-mad-jumpgate-gameplay />
+    </div>
 
-    <div class="seccionsIcones d-flex gap-3 mt-3">
+    <div class="seccions-icones d-flex gap-3">
         <div appMostrarAmbAnimacio>
-            <div class="seccioIcones card play p-3" [class.disabled]="m.esMobil()">
+            <div class="seccio-icones card play p-3" [class.disabled]="m.esMobil()">
                 <div class="titol text-80">
                     @if(m.ca) { Jugar }
                     @if(m.es) { Jugar }
@@ -46,7 +48,7 @@
             </div>
         </div>
         <div appMostrarAmbAnimacio>
-            <div class="seccioIcones card gameplay p-3">
+            <div class="seccio-icones card gameplay p-3">
                 <div class="titol text-80">
                     @if(m.ca) { Veure gameplay }
                     @if(m.es) { Ver gameplay }
@@ -60,7 +62,7 @@
             </div>
         </div>
         @if (m.esPantallaPc()) {
-            <div class="seccioStory flex-fill d-flex justify-content-center">
+            <div class="flex-fill d-flex justify-content-center">
                 <div class="card p-3" appMostrarAmbAnimacio>
                     <app-story [urlId]="'18078142072743585'" [titol]="'FPS'" img="assets/images/about-me/stories/mad-jumpgate.png" />
                 </div>

@@ -1,5 +1,5 @@
 import { Component, ElementRef, HostListener, ViewChild } from '@angular/core';
-import { DomSanitizer, SafeResourceUrl } from '@angular/platform-browser';
+import { SafeResourceUrl } from '@angular/platform-browser';
 import { MainService } from 'src/app/services/main.service';
 import { SharedImports } from 'src/app/shared/imports';
 import { Utils } from 'src/app/shared/utils';
@@ -83,23 +83,29 @@ export class MadJumpgateJocComponent {
         }
     }
 
-    async toggleSeccio(boto) {
+    toggleSeccio(boto) {
         let $seccio = $(boto).parent();
-        let $fletxa = $seccio.find(".fletxa");
-        let $contingut = $seccio.find(".contingut");
         let obert = $seccio.is("[data-open]");
 
+        // Obrir o tancar aquesta secció //
         obert = !obert;
         if (obert) {
             $seccio.attr("data-open", "");
-            $contingut.stop().slideDown(200, () => {
+            $seccio.find(".contingut").stop().slideDown(200, () => {
                 this.iniciarJoc();
             });
         } else {
             $seccio.removeAttr("data-open");
-            $contingut.stop().slideUp(200, () => {
+            $seccio.find(".contingut").stop().slideUp(200, () => {
                 // this.carregarJoc = false;
             });
         }
+
+        // Tancar altres seccions //
+        $seccio.parent().siblings().each(function () {
+            let $seccio = $(this).find(".seccio");
+            $seccio.removeAttr("data-open");
+            $seccio.find(".contingut").stop().slideUp(200);
+        });
     }
 }

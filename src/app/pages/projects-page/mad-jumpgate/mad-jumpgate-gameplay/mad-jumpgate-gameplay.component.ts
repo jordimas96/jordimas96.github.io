@@ -75,22 +75,29 @@ export class MadJumpgateGameplayComponent {
         }
     }
 
-    async toggleSeccio(boto) {
+    toggleSeccio(boto) {
         let $seccio = $(boto).parent();
-        let $contingut = $seccio.find(".contingut");
         let obert = $seccio.is("[data-open]");
 
+        // Obrir o tancar aquesta secció //
         obert = !obert;
         if (obert) {
             $seccio.attr("data-open", "");
-            $contingut.stop().slideDown(200, () => {
+            $seccio.find(".contingut").stop().slideDown(200, () => {
                 this.iniciarVideo();
             });
         } else {
             $seccio.removeAttr("data-open");
-            $contingut.stop().slideUp(200, () => {
+            $seccio.find(".contingut").stop().slideUp(200, () => {
                 // this.carregarVideo = false;
             });
         }
+
+        // Tancar altres seccions //
+        $seccio.parent().siblings().each(function () {
+            let $seccio = $(this).find(".seccio");
+            $seccio.removeAttr("data-open");
+            $seccio.find(".contingut").stop().slideUp(200);
+        });
     }
 }
