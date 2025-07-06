@@ -6,6 +6,7 @@ import { ExperiencePageComponent } from 'src/app/pages/experience-page/experienc
 import { HomePageComponent } from 'src/app/pages/home-page/home-page.component';
 import { ProjectsPageComponent } from 'src/app/pages/projects-page/projects-page.component';
 import { SectionPageComponent } from 'src/app/pages/section-page/section-page.component';
+import { RedirectComponent } from './shared/redirect.component';
 
 const routes: Routes = [
     {
@@ -43,7 +44,7 @@ const routes: Routes = [
     
     {
         path: "**",
-        redirectTo: ""
+        component: RedirectComponent
     },
 
 ];
