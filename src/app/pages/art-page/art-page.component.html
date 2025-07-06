@@ -7,8 +7,23 @@
 
     <div class="content mb-6 d-flex flex-column gap-6">
 
-        <app-icons />
-        <app-amazfit-watchfaces />
+        <div class="seccions">
+            @for (seccio of seccionsPrioritat; track seccio.nom) {
+                <ng-container *ngComponentOutlet="seccio.component"></ng-container>
+            }
+
+            @if (seccionsPrioritat.length && seccions.length) {
+                <div class="altres-seccions-titol" appMostrarAmbAnimacio>
+                    @if (m.ca) { Altres projectes artístics }
+                    @if (m.es) { Otros proyectos artísticos }
+                    @if (m.en) { Other artistic projects }
+                </div>
+            }
+
+            @for (seccio of seccions; track seccio.nom) {
+                <ng-container *ngComponentOutlet="seccio.component"></ng-container>
+            }
+        </div>
 
         <div class="navegacio-pagina">
             <button class="boto projects" routerLink="/projects" title="Projects" appMostrarAmbAnimacio matRipple>

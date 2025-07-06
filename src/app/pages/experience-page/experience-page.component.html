@@ -7,14 +7,23 @@
 
     <div class="content mb-6 d-flex flex-column gap-6">
 
-        <app-indra />
-        <app-in2art />
-        <app-matic />
-        <app-evora />
-        <app-orange />
-        <app-tecnocom />
-        <app-nexxia />
+        <div class="seccions">
+            @for (seccio of seccionsPrioritat; track seccio.nom) {
+                <ng-container *ngComponentOutlet="seccio.component"></ng-container>
+            }
 
+            @if (seccionsPrioritat.length && seccions.length) {
+                <div class="altres-seccions-titol" appMostrarAmbAnimacio>
+                    @if (m.ca) { Altres experiències }
+                    @if (m.es) { Otras experiencias }
+                    @if (m.en) { Other experiences }
+                </div>
+            }
+
+            @for (seccio of seccions; track seccio.nom) {
+                <ng-container *ngComponentOutlet="seccio.component"></ng-container>
+            }
+        </div>
         
         <div class="navegacio-pagina">
             <button class="boto home" routerLink="/home" title="Home" appMostrarAmbAnimacio matRipple>

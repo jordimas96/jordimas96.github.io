@@ -5,15 +5,27 @@
         @if (m.en) { Personal projects }
     </div>
 
-    <div class="content mb-6 d-flex flex-column gap-6">
+    <div class="content pb-6">
 
-        <app-android-apps />
-        <app-mad-jumpgate />
-        <app-github-projects />
-        <app-custom-roms />
-        <app-tasker />
+        <div class="seccions">
+            @for (seccio of seccionsPrioritat; track seccio.nom) {
+                <ng-container *ngComponentOutlet="seccio.component"></ng-container>
+            }
 
-        <div class="navegacio-pagina">
+            @if (seccionsPrioritat.length && seccions.length) {
+                <div class="altres-seccions-titol" appMostrarAmbAnimacio>
+                    @if (m.ca) { Altres projectes }
+                    @if (m.es) { Otros proyectos }
+                    @if (m.en) { Other projects }
+                </div>
+            }
+
+            @for (seccio of seccions; track seccio.nom) {
+                <ng-container *ngComponentOutlet="seccio.component"></ng-container>
+            }
+        </div>
+
+        <div class="navegacio-pagina mt-6 mb-6">
             <button class="boto experience" routerLink="/experience" title="Experience" appMostrarAmbAnimacio matRipple>
                 <i class="fa-solid fa-briefcase" alt="Experience"></i>
             </button>
