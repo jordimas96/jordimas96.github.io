@@ -35,12 +35,12 @@ export const SECCIONS: Seccio[] = [
     { nom: "tecnocom", pagina: "/experience", component: TecnocomComponent },
     { nom: "nexxia", pagina: "/experience", component: NexxiaComponent },
 
-    { nom: "android-apps", pagina: "/projects", component: AndroidAppsComponent },
+    { nom: "android", pagina: "/projects", component: AndroidAppsComponent },
     { nom: "mad-jumpgate", pagina: "/projects", component: MadJumpgateComponent },
-    { nom: "github-projects", pagina: "/projects", component: GithubProjectsComponent },
+    { nom: "github", pagina: "/projects", component: GithubProjectsComponent },
     { nom: "custom-roms", pagina: "/projects", component: CustomRomsComponent },
     { nom: "tasker", pagina: "/projects", component: TaskerComponent },
 
     { nom: "icons", pagina: "/art", component: IconsComponent },
-    { nom: "amazfit-watchfaces", pagina: "/art", component: AmazfitWatchfacesComponent },
+    { nom: "amazfit", pagina: "/art", component: AmazfitWatchfacesComponent },
 ];

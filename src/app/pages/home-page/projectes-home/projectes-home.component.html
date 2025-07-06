@@ -21,7 +21,7 @@
                     @if (m.en) { My Android apps, uploaded to the Play Store and Amazon AppStore. Android Studio, Kotlin and Unity. Styled with Material You. Interfaces with dynamic colors by Monet. }
                 </div>
                 <div class="text-end">
-                    <button class="boto stretched-link" routerLink="/section/android">
+                    <button class="boto stretched-link" routerLink="/projects" [queryParams]="{ priority: 'android' }">
                         {{ getSeeMoreText() }}
                         <i class="fa-solid fa-arrow-right"></i>
                     </button>
@@ -42,7 +42,7 @@
                     @if (m.en) { Shooting game created from scratch in 2 weeks with Unity. 5 levels with various weapons and healing items, grenades, enemy spawn, 5 types of enemies from 2 categories, music and special effects. }
                 </div>
                 <div class="text-end">
-                    <button class="boto stretched-link" routerLink="/section/mad-jumpgate">
+                    <button class="boto stretched-link" routerLink="/projects" [queryParams]="{ priority: 'mad-jumpgate' }">
                         {{ getSeeMoreText() }}
                         <i class="fa-solid fa-arrow-right"></i>
                     </button>
@@ -63,7 +63,7 @@
                     @if (m.en) { Real-time list of my most relevant repositories on GitHub, where I have my experiments and tools, and old projects from my studies. }
                 </div>
                 <div class="text-end">
-                    <button class="boto stretched-link" routerLink="/section/github">
+                    <button class="boto stretched-link" routerLink="/projects" [queryParams]="{ priority: 'github' }">
                         {{ getSeeMoreText() }}
                         <i class="fa-solid fa-arrow-right"></i>
                     </button>
@@ -80,7 +80,7 @@
                     @if (m.en) { Installing custom ROMs on my Android devices and smartwatches. Bootloader unlock. }
                 </div>
                 <div class="text-end">
-                    <button class="boto stretched-link" routerLink="/section/custom-roms">
+                    <button class="boto stretched-link" routerLink="/projects" [queryParams]="{ priority: 'custom-roms' }">
                         {{ getSeeMoreText() }}
                         <i class="fa-solid fa-arrow-right"></i>
                     </button>
@@ -101,7 +101,7 @@
                     @if (m.en) { Programming complex tasks on Android using Tasker, an Android automation app. Uploading projects for the community with hundreds of downloads. }
                 </div>
                 <div class="text-end">
-                    <button class="boto stretched-link" routerLink="/section/tasker">
+                    <button class="boto stretched-link" routerLink="/projects" [queryParams]="{ priority: 'tasker' }">
                         {{ getSeeMoreText() }}
                         <i class="fa-solid fa-arrow-right"></i>
                     </button>
@@ -122,7 +122,7 @@
                     @if (m.en) { Creation of improvised icons and illustrations for various personal projects. }
                 </div>
                 <div class="text-end">
-                    <button class="boto stretched-link" routerLink="/section/icons">
+                    <button class="boto stretched-link" routerLink="/art" [queryParams]="{ priority: 'icons' }">
                         {{ getSeeMoreText() }}
                         <i class="fa-solid fa-arrow-right"></i>
                     </button>
@@ -139,7 +139,7 @@
                     @if (m.en) { Projects for smartwatch customization. Uploading projects for the community. }
                 </div>
                 <div class="text-end">
-                    <button class="boto stretched-link" routerLink="/section/amazfit">
+                    <button class="boto stretched-link" routerLink="/art" [queryParams]="{ priority: 'amazfit' }">
                         {{ getSeeMoreText() }}
                         <i class="fa-solid fa-arrow-right"></i>
                     </button>

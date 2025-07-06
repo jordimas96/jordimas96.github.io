@@ -23,7 +23,8 @@ export class PageComponent {
         });
 
         // Esborrar paràmetres si no es poden llegir //
-        if (!this.seccionsPrioritat.length) {
+        if (!this.seccionsPrioritat.length && location.search.includes('priority')) {
+            if (m.debug) console.log("Url corregida:", location.pathname + location.search);
             const url = new URL(window.location.href);
             url.searchParams.delete('priority');
             window.history.replaceState({}, '', url.toString());
