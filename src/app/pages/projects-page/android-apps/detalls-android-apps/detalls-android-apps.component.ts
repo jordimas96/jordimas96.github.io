@@ -68,5 +68,19 @@ export class DetallsAndroidAppsComponent {
             $(this).find(".contingut").stop().slideUp(200);
             $(this).find("video")[0].pause();
         });
+
+        // Scroll a la secció clicada //
+        let offset = this.m.appbar.height() + this.m.index.height();
+        
+        let nouScroll = $seccio.parent().offset()!.top - offset;
+
+        // Altura botó //
+        nouScroll += $seccio.index() * ($seccio.find(".boto-desplegable").outerHeight()! + 0.2 * 16);
+        let behavior: ScrollBehavior = "smooth";
+        if (!obert && nouScroll < window.scrollY)
+            behavior = "instant";
+
+        window.scrollTo({ top: nouScroll, behavior });
+        
     }
 }

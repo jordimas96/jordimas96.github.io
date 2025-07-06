@@ -33,6 +33,10 @@ export class IndexComponent implements OnInit, AfterViewInit {
 
     afterRootFadeIn() { }
 
+    height() {
+        return this.indexRef.nativeElement.offsetHeight || 0;
+    }
+
     idExists(id) {
         return document.getElementById(id);
     }

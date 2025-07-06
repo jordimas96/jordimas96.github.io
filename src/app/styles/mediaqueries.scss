@@ -38,6 +38,14 @@
     }
 }
 
+// Firefox //
+@mixin firefox {
+    @-moz-document url-prefix() {
+        @content;
+    }
+    
+}
+
 // Dark Mode //
 @mixin dark {
     ::ng-deep html.dark & {
