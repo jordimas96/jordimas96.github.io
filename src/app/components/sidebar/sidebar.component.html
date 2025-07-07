@@ -22,7 +22,7 @@
         <button
             class="rs boto-seccio experience"
             [class.rail]="rail" [class.drawer]="!rail"
-            routerLinkActive="selected" [routerLinkActiveOptions]="{exact: true}" routerLink="/experience"
+            routerLinkActive="selected" routerLink="/experience"
             [title]="rail ? getText.experiencia() : ''"
             matRipple>
             <i class="icona fa-solid fa-briefcase"></i>
@@ -33,7 +33,7 @@
         <button
             class="rs boto-seccio projects"
             [class.rail]="rail" [class.drawer]="!rail"
-            routerLinkActive="selected" [routerLinkActiveOptions]="{exact: true}" routerLink="/projects"
+            routerLinkActive="selected" routerLink="/projects"
             [title]="rail ? getText.projectes() : ''"
             matRipple>
             <i class="icona fa-solid fa-shapes"></i>
@@ -44,7 +44,7 @@
         <button
             class="rs boto-seccio art"
             [class.rail]="rail" [class.drawer]="!rail"
-            routerLinkActive="selected" [routerLinkActiveOptions]="{exact: true}" routerLink="/art"
+            routerLinkActive="selected" routerLink="/art"
             [title]="rail ? getText.art() : ''"
             matRipple>
             <i class="icona fa-solid fa-paintbrush"></i>
@@ -55,7 +55,7 @@
         <button
             class="rs boto-seccio about-me"
             [class.rail]="rail" [class.drawer]="!rail"
-            routerLinkActive="selected" [routerLinkActiveOptions]="{exact: true}" routerLink="/about-me"
+            routerLinkActive="selected" routerLink="/about-me"
             [title]="rail ? getText.aboutme() : ''"
             matRipple>
             <i class="icona fa-solid fa-user"></i>
