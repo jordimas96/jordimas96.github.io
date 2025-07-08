@@ -87,13 +87,15 @@ export class MainService {
     public getAmpladaScrollbar() { return window.innerWidth - this.appbar.width(); }
 
     public printarFirmaAConsola() {
+        let colors = ["#0cf", "magenta", "gold", "lime"];
+        let color = colors[Math.floor(Math.random() * colors.length)];
         const text = "%c" +
             "         __              ___ __  ___              \n" +
             "        / /___  ________/ (_)  |/  /___ ______    \n" +
             "   __  / / __ \\/ __/ __  / / /|_/ / __ \`/ ___/  \n" +
             "  / /_/ / /_/ / / / /_/ / / /  / / /_/ (__  )     \n" +
             "  \\____/\\____/_/  \\__,_/_/_/  /_/\\__,_/____/  \n";
-        console.log(text, "color: #0cf; font-weight: bold");
+        console.log(text, `color: ${color}; font-weight: bold`);
     }
 
     // Forçar temes - debug //

@@ -61,9 +61,5 @@ export class BioComponent {
         return anys;
     }
 
-    getRutaCV() {
-        return `assets/documents/CV/CV Jordi Mas Parramon ${this.m.idioma.toUpperCase()}.pdf`;
-    }
-
 
 }

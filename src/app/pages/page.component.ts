@@ -30,9 +30,6 @@ export class PageComponent {
             window.history.replaceState({}, '', url.toString());
         }
 
-        
-
-        console.log(this.seccionsPrioritat, this.seccions);
     }
 
     async ngOnInit() {

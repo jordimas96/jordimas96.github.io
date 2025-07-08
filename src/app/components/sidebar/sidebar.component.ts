@@ -129,9 +129,6 @@ export class SidebarComponent implements OnInit, AfterViewInit {
     }
 
 
-    getRutaCV() {
-        return `assets/documents/CV/CV Jordi Mas Parramon ${this.m.idioma.toUpperCase()}.pdf`;
-    }
 
     @HostListener('window:resize')
     onResize() {

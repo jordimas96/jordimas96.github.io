@@ -102,7 +102,7 @@ export class Utils {
     }
 
 
-
+    // Colors //
     public static rgbToHex(rgb: string): string {
         const match = rgb.match(/\d+/g);
 
