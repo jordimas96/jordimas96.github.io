@@ -35,9 +35,9 @@ export class RedirectComponent {
         if (url == "cv") {
             let idioma = Utils.getCookie("lang");
             if (idioma)
-                return `/assets/documents/CV/CV Jordi Mas Parramon ${idioma.toUpperCase()}.pdf`;
+                return `/assets/documents/cv/CV Jordi Mas Parramon ${idioma.toUpperCase()}.pdf`;
             else
-                return `/assets/documents/CV/`;
+                return `/assets/documents/cv/`;
             
         }
 

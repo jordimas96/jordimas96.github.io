@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>Jordi Mas's CV language selector</title>
+    <title>Jordi Mas - Choose CV language</title>
     <meta name="author" content="Jordi Mas Parramon">
     
     <meta charset="UTF-8">
@@ -40,14 +40,27 @@
         }
         section {
             align-self: center;
+            text-align: center;
 
+            width: 100%;
+            margin-bottom: 4rem;
+        }
+        .titol {
+            font-size: 2.3rem;
+            color: hsl(51, 100%, 85%);
+
+            margin-bottom: 4rem;
+            padding: 0 1rem;
+
+        }
+        .botons {
             display: flex;
             flex-direction: column;
             gap: 2rem;
-            
-            margin-bottom: 4rem;
+            width: fit-content;
+            margin: auto;
         }
-        section > .boto {
+        .botons .boto {
             font-size: 3rem;
             display: block;
             text-align: center;
@@ -55,7 +68,7 @@
             padding: 1rem 2rem;
             border-radius: 1.5rem;
         }
-        section > .boto.ca {
+        .botons .boto.ca {
             background: linear-gradient(
                 110deg,
                 #fcde11 10%, #db1921 15%,
@@ -66,7 +79,7 @@
             );
             color: #950000;
         }
-        section > .boto.es {
+        .botons .boto.es {
             background: linear-gradient(
                 205deg,
                 #ad1519 15%,
@@ -75,7 +88,7 @@
             );
             color: white;
         }
-        section > .boto.en {
+        .botons .boto.en {
             background: linear-gradient(
                 161deg,
                 #09286e 15%,
@@ -113,10 +126,15 @@
     </header>
 
     <section>
+        <div class="titol">
+            Choose CV language
+        </div>
 
-        <a class="boto boing ca" href="CV Jordi Mas Parramon CA.pdf">Català</a>
-        <a class="boto boing es" href="CV Jordi Mas Parramon ES.pdf">Español</a>
-        <a class="boto boing en" href="CV Jordi Mas Parramon EN.pdf">English</a>
+        <div class="botons">
+            <a class="boto boing ca" href="CV Jordi Mas Parramon CA.pdf">Català</a>
+            <a class="boto boing es" href="CV Jordi Mas Parramon ES.pdf">Español</a>
+            <a class="boto boing en" href="CV Jordi Mas Parramon EN.pdf">English</a>
+        </div>
 
     </section>
 
