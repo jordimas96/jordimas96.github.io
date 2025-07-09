@@ -7,25 +7,47 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" type="image/x-icon" href="favicon.png">
+    <link rel="icon" type="image/x-icon" href="/assets/icons/jmas/groc-r.png">
     <style>
+        html {
+            height: 100%;
+        }
         body {
             color-scheme: dark;
-            background-color: hsl(258 100% 10%);
+            background-color: hsl(40, 100%, 10%);
             color: white;
             font-family: Arial, Helvetica, sans-serif;
 
+            height: 100%;
             margin: 0;
+
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
         }
-        .botons {
+        header {
+            padding: 0.7rem;
+        }
+        header > a {
+            display: inline-block;
+            border-radius: 50%;
+        }
+        header > a > .logo {
+            display: block;
+            height: 3.5rem;
+            width: 3.5rem;
+            border-radius: 50%;
+        }
+        section {
+            align-self: center;
+
             display: flex;
             flex-direction: column;
             gap: 2rem;
-            width: fit-content;
-            margin: auto;
-            margin-top: 10rem;
+            
+            margin-bottom: 4rem;
         }
-        .boto {
+        section > .boto {
             font-size: 3rem;
             display: block;
             text-align: center;
@@ -33,7 +55,7 @@
             padding: 1rem 2rem;
             border-radius: 1.5rem;
         }
-        .ca {
+        section > .boto.ca {
             background: linear-gradient(
                 110deg,
                 #fcde11 10%, #db1921 15%,
@@ -44,7 +66,7 @@
             );
             color: #950000;
         }
-        .es {
+        section > .boto.es {
             background: linear-gradient(
                 205deg,
                 #ad1519 15%,
@@ -53,20 +75,22 @@
             );
             color: white;
         }
-        .en {
+        section > .boto.en {
             background: linear-gradient(
-                160deg,
-                #032d61 10%,
-                #ca1735
+                161deg,
+                #09286e 15%,
+                hsl(350, 80%, 50%)
             );
             color: white;
         }
-        .nom {
+        footer .firma {
             text-align: center;
-            margin-top: 11rem;
+            color: gold;
             font-style: italic;
-            color: #ccc;
+            margin-bottom: 2rem;
         }
+
+
         .boing {
             cursor: pointer;
 
@@ -82,16 +106,23 @@
 </head>
 <body>
 
+    <header>
+        <a href="/" class="boing">
+            <img class="logo" src="/assets/icons/jmas/groc.png" alt="logo">
+        </a>
+    </header>
 
-    <div class="botons">
+    <section>
 
         <a class="boto boing ca" href="CV Jordi Mas Parramon CA.pdf">Català</a>
         <a class="boto boing es" href="CV Jordi Mas Parramon ES.pdf">Español</a>
         <a class="boto boing en" href="CV Jordi Mas Parramon EN.pdf">English</a>
 
-    </div>
+    </section>
 
-    <p class="nom">Jordi Mas</p>
+    <footer>
+        <div class="firma">Jordi Mas</div>
+    </footer>
 
 
     <!-- Jordi Mas Parramon - xordimas@gmail.com - https://github.com/jordimas96 -->
