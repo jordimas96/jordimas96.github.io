@@ -17,9 +17,11 @@ export class RedirectComponent {
         this.redirigir(url, urlNova);
 
         // Redirigir, si pel que fos seguís a la pàgina (no visor de PDF per exemple) //
-        setTimeout(() => {
-            this.redirigir("", "/");
-        }, 100);
+        if (url == "cv") {
+            setTimeout(() => {
+                this.redirigir("", "/");
+            }, 100);
+        }
     }
 
     canviarUrl(url: string): string {
