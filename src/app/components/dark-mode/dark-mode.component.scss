@@ -23,20 +23,25 @@
     position: relative;
 
     @include light {
+        // Estrelles //
         &::after {
             content: "";
             position: absolute;
             top: 50%;
             left: 50%;
             transform: translate(-50%, -50%);
-            width: 1.5px;
-            height: 1.5px;
+            width: 1.6px;
+            height: 1.6px;
+
             box-shadow:
-                -17px -4px white,
-                0px -17px white,
-                -10px 13px white,
-                16px 2px white;
+                -12px -15px 0 0.2px white,
+                10px -14px 0 0px white,
+                16px 2px 0 0.3px white,
+                -11px 13px 0 0.5px white,
+                9px 13px 0 0px white;
+
             pointer-events: none;
+            border-radius: 10px;
         }
     }
 

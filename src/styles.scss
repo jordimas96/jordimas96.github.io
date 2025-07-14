@@ -312,7 +312,13 @@ img, .noselect {
     .shadow-filter-5-l { @extend .shadow-filter-5; }
 }
 
-
+// Ombres text //
+.white-title-shadow {
+    color: white;
+    @include light {
+        text-shadow: 0px 2px 9px rgba(0, 0, 0, 70%);
+    }
+}
 
 
 

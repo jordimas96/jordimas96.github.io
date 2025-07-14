@@ -11,9 +11,11 @@
         margin-top: 1.5rem;
         margin-bottom: 1rem;
         text-align: center;
-        color: var(--text);
+        color: white;
         font-size: 2rem;
         transition: font-size 0.3s;
+        
+        @extend .white-title-shadow;
 
         @include tablet {
             font-size: 2.5rem;
@@ -29,9 +31,11 @@
 
             .altres-seccions-titol {
                 text-align: center;
-                color: var(--text);
+                color: white;
                 font-size: 2rem;
                 transition: font-size 0.3s;
+                
+                @extend .white-title-shadow;
 
                 @include tablet {
                     font-size: 2.5rem;

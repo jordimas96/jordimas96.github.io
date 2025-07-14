@@ -228,6 +228,7 @@
 
 .tema-github {
     @extend .paleta-bn;
+    --accent-color: light-dark(#2b3137, white);
 }
 
 .tema-tasker {
