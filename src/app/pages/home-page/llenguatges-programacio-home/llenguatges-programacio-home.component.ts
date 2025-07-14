@@ -8,15 +8,15 @@ import { SharedImports } from 'src/app/shared/imports';
 import { Utils } from 'src/app/shared/utils';
 
 @Component({
-    selector: 'app-languages',
-    templateUrl: './languages.component.html',
-    styleUrl: './languages.component.scss',
+    selector: 'app-llenguatges-programacio-home',
+    templateUrl: './llenguatges-programacio-home.component.html',
+    styleUrl: './llenguatges-programacio-home.component.scss',
     imports: [
         ...SharedImports,
         SkillComponent,
     ]
 })
-export class LanguagesComponent {
+export class LlenguatgesProgramacioComponent {
     Skills = Skills;
 
     public showTime: boolean = false;

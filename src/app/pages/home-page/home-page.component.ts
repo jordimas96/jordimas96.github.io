@@ -3,10 +3,10 @@ import { RouterLink } from '@angular/router';
 import { SharedImports } from 'src/app/shared/imports';
 import { PageComponent } from '../page.component';
 import { BioComponent } from './bio/bio.component';
-import { LanguagesComponent } from './languages/languages.component';
-import { StatsComponent } from './stats/stats.component';
 import { ExperienciesHomeComponent } from './experiencies-home/experiencies-home.component';
+import { LlenguatgesProgramacioComponent } from './llenguatges-programacio-home/llenguatges-programacio-home.component';
 import { ProjectesHomeComponent } from './projectes-home/projectes-home.component';
+import { StatsComponent } from './stats/stats.component';
 
 @Component({
     selector: 'app-home-page',
@@ -19,7 +19,7 @@ import { ProjectesHomeComponent } from './projectes-home/projectes-home.componen
         StatsComponent,
         ProjectesHomeComponent,
         ExperienciesHomeComponent,
-        LanguagesComponent,
+        LlenguatgesProgramacioComponent,
     ]
 })
 export class HomePageComponent extends PageComponent {
