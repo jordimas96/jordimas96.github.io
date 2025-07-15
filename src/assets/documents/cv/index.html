@@ -91,8 +91,11 @@
         .botons .boto.en {
             background: linear-gradient(
                 161deg,
-                #09286e 15%,
-                hsl(350, 80%, 50%)
+                #09286e 30%,
+                hsl(0, 0%, 70%) 40%,
+                #e61a3c 50%,
+                hsl(0, 0%, 70%) 60%,
+                #09286e 70%
             );
             color: white;
         }
@@ -147,7 +150,7 @@
 
 
     <script>
-        if (!location.pathname.endsWith('/'))
+        if (!location.pathname.endsWith("index.html") && !location.pathname.endsWith("/"))
             location.pathname += '/';
     </script>
 </body>
