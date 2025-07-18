@@ -11,7 +11,7 @@
     flex-direction: column;
 
     background-color: transparent;
-    backdrop-filter: blur(40px) saturate(2);
+    backdrop-filter: blur(40px);
 
     overflow: hidden;
 
@@ -112,17 +112,17 @@
             // Colors //
             &.home {
                 &:not(.selected):hover {
-                    background-color:   light-dark(hsla(160, 100%, 85%, 75%), hsl(160, 100%, 15%));
-                    color:              light-dark(hsl(160, 100%, 10%), hsl(160, 100%, 90%));
+                    background-color:   light-dark(hsl(180, 100%, 85%), hsl(180, 100%, 15%));
+                    color:              light-dark(hsl(180, 100%, 13%), hsl(180, 100%, 90%));
                 }
                 &.selected {
-                    background-color: hsl(170, 100%, 30%);
+                    background-color: hsl(180, 100%, 35%);
                 }
             }
             &.experience {
                 &:not(.selected):hover {
-                    background-color:   light-dark(hsla(22, 100%, 90%, 75%), hsl(22, 36%, 25%));
-                    color:              light-dark(hsl(22, 100%, 20%), hsl(22, 36%, 85%));
+                    background-color:   light-dark(hsl(22, 100%, 92%), hsl(22, 36%, 25%));
+                    color:              light-dark(hsl(22, 100%, 22%), hsl(22, 36%, 85%));
                 }
                 &.selected {
                     // a0794c
@@ -131,8 +131,8 @@
             }
             &.projects {
                 &:not(.selected):hover {
-                    background-color:   light-dark(hsla(46, 100%, 85%, 75%), hsl(46, 100%, 20%));
-                    color:              light-dark(hsl(46, 100%, 10%), hsl(46, 100%, 85%));
+                    background-color:   light-dark(hsl(46, 100%, 90%), hsl(46, 100%, 20%));
+                    color:              light-dark(hsl(46, 100%, 12%), hsl(46, 100%, 85%));
                 }
                 &.selected {
                     background-color: hsl(46, 100%, 35%);
@@ -140,7 +140,7 @@
             }
             &.art {
                 &:not(.selected):hover {
-                    background-color:   light-dark(hsla(282, 100%, 76%, 75%), hsl(298, 100%, 20%));
+                    background-color:   light-dark(hsl(282, 100%, 87%), hsl(282, 100%, 27%));
                     color:              light-dark(hsl(266, 100%, 32%), hsl(298, 100%, 85%));
                 }
                 &.selected {
@@ -149,7 +149,7 @@
             }
             &.about-me {
                 &:not(.selected):hover {
-                    background-color:   light-dark(hsl(224, 100%, 85%), hsl(214, 100%, 30%));
+                    background-color:   light-dark(hsl(224, 100%, 89%), hsl(214, 100%, 30%));
                     color:              light-dark(hsl(224, 100%, 30%), hsl(214, 100%, 85%));
                 }
                 &.selected {
