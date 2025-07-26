@@ -77,7 +77,7 @@ export class MainService {
     // public esPc() { return !this.esMobil() }
     public esMobil() { return this.esPantallaTactil() }
     public esPc() { return !this.esPantallaTactil() }
-    public esPantallaMobil() { return Math.min(window.innerWidth,screen.width) < 576; }
+    public esPantallaMobil() { return window.innerWidth < 576; }
     public esPantallaPc() { return !this.esPantallaMobil(); }
     public esAndroid() { return /Android/i.test(navigator.userAgent); }
     public esIOS() { return /iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent); }
