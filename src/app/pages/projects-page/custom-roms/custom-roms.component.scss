@@ -38,7 +38,7 @@
             text-align: center;
 
             padding: 1rem;
-            background-color: light-dark(var(--color-clar-50),  var(--color-clar-20));
+            background-color: light-dark(var(--color-clar-60),  var(--color-clar-20));
             border-radius: 2rem;
             height: 100%;
 
@@ -58,6 +58,26 @@
                 font-size: 0.8rem;
                 color: var(--text-70);
             }
+
+            
+            position: relative;
+            overflow: hidden;
+
+            &::before {
+                content: "";
+                position: absolute;
+                inset: -50px;
+                background-image: var(--fons);
+                background-size: 100% 100%;
+                background-repeat: no-repeat;
+                background-position: center;
+                @include light { filter: blur(50px) saturate(1.5); }
+                @include dark { filter: blur(50px) saturate(1.5) brightness(.3); }
+                z-index: -1;
+
+            }
+
+            
 
         }
     }

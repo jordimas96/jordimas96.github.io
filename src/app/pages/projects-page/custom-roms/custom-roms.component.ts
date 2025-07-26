@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { Skills } from 'src/app/enums/skills.enum';
 import { StoryComponent } from 'src/app/pages/about-me-page/stories/story/story.component';
 import { MainService } from 'src/app/services/main.service';
@@ -13,9 +13,18 @@ import { SharedImports } from 'src/app/shared/imports';
         StoryComponent,
     ]
 })
-export class CustomRomsComponent {
+export class CustomRomsComponent implements OnInit {
     Skills = Skills;
 
     constructor(public m: MainService) { }
+
+    ngOnInit() {
+        document.querySelectorAll(".mobil > img").forEach((img) => {
+            let src: any = img.getAttribute("src");
+            let mobil: any = img.closest(".mobil");
+            src = src?.replace(/mobils\/(.*)\.png$/, "mobils/fons/$1-fons.png");
+            mobil.style.setProperty('--fons', `url(${src})`);
+        });
+    }
     
 }
