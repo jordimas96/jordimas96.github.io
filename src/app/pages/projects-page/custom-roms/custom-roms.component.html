@@ -99,7 +99,11 @@
 
     <div class="mobils-rootejats">
         
-        <h3 class="text-center mt-5 mb-4">Custom ROM devices</h3>
+        <h3 class="text-center mt-5 mb-4">
+            @if (m.ca) { Dispositius amb custom ROMs }
+            @if (m.es) { Dispositivos con custom ROMs }
+            @if (m.en) { Custom ROM devices }
+        </h3>
 
         <div class="row justify-content-center g-3">
 
@@ -108,8 +112,18 @@
                     <img src="assets/images/custom-roms/mobils/samsung-ace-2.png" alt="Samsung Galaxy Ace 2">
                     <div class="titol">Samsung Galaxy Ace 2</div><!-- 26-12-2016 -->
                     <div class="text">
-                        Official support: Android 2.3<br>
-                        Installed Android 9. It had no official updates available, but I extended it to 6 years of support.
+                        @if (m.ca) {
+                            Suport oficial: Android 2.3<br>
+                            Vaig instal·lar Android 9. No hi havia actualitzacions oficials, però vaig ampliar el suport a 6 anys.
+                        }
+                        @if (m.es) {
+                            Soporte oficial: Android 2.3<br>
+                            Instalé Android 9. No había actualizaciones oficiales, pero amplié el soporte a 6 años.
+                        }
+                        @if (m.en) {
+                            Official support: Android 2.3<br>
+                            I installed Android 9. It had no official updates available, but I extended it to 6 years of support.
+                        }
 
                         <!-- TODO: Ampliar, confirmar 9 -->
                     </div>
@@ -121,8 +135,18 @@
                     <img src="assets/images/custom-roms/mobils/samsung-s4.png" alt="Samsung Galaxy S4">
                     <div class="titol">Samsung Galaxy S4</div><!-- 17-06-2018 -->
                     <div class="text">
-                        Official support: Android 4.2.2-5.0<br>
-                        Very compatible device, I installed up to Android 12, some TouchWiz versions, and One UI 7. It had 2 years of official support but I extended it to 9 years. Used also as an IR blaster.
+                        @if (m.ca) {
+                            Suport oficial: Android 4.2.2-5.0<br>
+                            Dispositiu molt compatible, vaig instal·lar fins a Android 12, algunes versions de TouchWiz i One UI 7. Tenia 2 anys de suport oficial però el vaig ampliar a 9 anys. També el vaig utilitzar com a emissor d'infrarrojos.
+                        }
+                        @if (m.es) {
+                            Soporte oficial: Android 4.2.2-5.0<br>
+                            Dispositivo muy compatible, instalé hasta Android 12, algunas versiones de TouchWiz y One UI 7. Tenía 2 años de soporte oficial pero lo amplié a 9 años. También lo usé como emisor de infrarrojos.
+                        }
+                        @if (m.en) {
+                            Official support: Android 4.2.2-5.0<br>
+                            Very compatible device, I installed up to Android 12, some TouchWiz versions, and One UI 7. It had 2 years of official support but I extended it to 9 years. Used also as an IR blaster.
+                        }
                     </div>
                 </div>
             </div>
@@ -132,8 +156,18 @@
                     <img src="assets/images/custom-roms/mobils/nexus-5x.png" alt="Nexus 5X">
                     <div class="titol">Nexus 5X</div><!-- 19-02-2017 -->
                     <div class="text">
-                        Official support: Android 6-8<br>
-                        I installed up to Android 12.1, and MIUI. It had 2 years of official support, I extended it to 6 years.
+                        @if (m.ca) {
+                            Suport oficial: Android 6-8<br>
+                            Vaig instal·lar fins a Android 12.1, i MIUI. Tenia 2 anys de suport oficial però el vaig ampliar a 6 anys.
+                        }
+                        @if (m.es) {
+                            Soporte oficial: Android 6-8<br>
+                            Instalé hasta Android 12.1, y MIUI. Tenía 2 años de soporte oficial, pero lo amplié a 6 años.
+                        }
+                        @if (m.en) {
+                            Official support: Android 6-8<br>
+                            I installed up to Android 12.1, and MIUI. It had 2 years of official support, I extended it to 6 years.
+                        }
 
                         <!-- MIUI ? -->
                     </div>
@@ -145,8 +179,18 @@
                     <img src="assets/images/custom-roms/mobils/oneplus-6.png" alt="OnePlus 6">
                     <div class="titol">OnePlus 6</div><!-- 02-11-2021 -->
                     <div class="text">
-                        Official support: Android 8-11<br>
-                        Installed Android 13, AOSP, PixelExperience. It had 3 years of official support, I extended it to 5 years. I could and wanted to continue (withi MIUI, One UI and further Android versions) but the UFS chip failed.
+                        @if (m.ca) {
+                            Suport oficial: Android 8-11<br>
+                            Vaig instal·lar Android 13, AOSP i PixelExperience. Tenia 3 anys de suport oficial, però el vaig ampliar a 5 anys. Podia i volia continuar (amb MIUI, One UI i futures versions d'Android), però el xip UFS va fallar.
+                        }
+                        @if (m.es) {
+                            Soporte oficial: Android 8-11<br>
+                            Instalé Android 13, AOSP y PixelExperience. Tenía 3 años de soporte oficial, pero lo amplié a 5 años. Podía y quería continuar (con MIUI, One UI y futuras versiones de Android), pero el chip UFS falló.
+                        }
+                        @if (m.en) {
+                            Official support: Android 8-11<br>
+                            I installed Android 13, AOSP, PixelExperience. It had 3 years of official support, I extended it to 5 years. I could and wanted to continue (withi MIUI, One UI and future Android versions) but the UFS chip failed.
+                        }
                     </div>
                 </div>
             </div>
@@ -156,9 +200,18 @@
                     <img src="assets/images/custom-roms/mobils/xiaomi-redmi-6.png" alt="Xiaomi Redmi 6">
                     <div class="titol">Xiaomi Redmi 6</div><!-- 13-09-2021 -->
                     <div class="text">
-                        Official support: Android 8-9<br>
-                        Installed Android 10 AOSP, extending the official support an extra year and getting a pure Android experience. It has a Mediatek processor, which is closed source, making custom ROM developement difficult.
-                        
+                        @if (m.ca) {
+                            Suport oficial: Android 8-9<br>
+                            Vaig instal·lar Android 10 AOSP, ampliant el suport oficial un any més i aconseguint una experiència d'Android pur. Té un processador Mediatek, que és codi tancat, fent difícil el desenvolupament de custom ROMs.
+                        }
+                        @if (m.es) {
+                            Soporte oficial: Android 8-9<br>
+                            Instalé Android 10 AOSP, ampliando el soporte oficial un año más y consiguiendo una experiencia de Android puro. Tiene un procesador Mediatek, que es de código cerrado, dificultando el desarrollo de custom ROMs.
+                        }
+                        @if (m.en) {
+                            Official support: Android 8-9<br>
+                            I installed Android 10 AOSP, extending the official support an extra year and getting a pure Android experience. It has a Mediatek processor, which is closed source, making custom ROM developement difficult.
+                        }
                     </div>
                 </div>
             </div>
@@ -168,8 +221,20 @@
                     <img src="assets/images/custom-roms/mobils/samsung-ace.png" alt="Samsung Galaxy Ace">
                     <div class="titol">Samsung Galaxy Ace</div><!-- 04-01-2023 -->
                     <div class="text">
-                        Official support: Android 2.2<br>
-                        Installed some TouchWiz ROMs, CyanogenMod, Android 5.
+                        @if (m.ca) {
+                            Suport oficial: Android 2.2<br>
+                            Vaig instal·lar algunes ROMs de TouchWiz, CyanogenMod i Android 5.
+                        }
+                        @if (m.es) {
+                            Soporte oficial: Android 2.2<br>
+                            Instalé algunas ROMs de TouchWiz, CyanogenMod y Android 5.
+                        }
+                        @if (m.en) {
+                            Official support: Android 2.2<br>
+                            I installed some TouchWiz ROMs, CyanogenMod, Android 5.
+                        }
+
+                        <!-- TODO: Ampliar, confirmar versions -->
                     </div>
                 </div>
             </div>
@@ -179,8 +244,18 @@
                     <img src="assets/images/custom-roms/mobils/xiaomi-pad-6.png" alt="Xiaomi Pad 6">
                     <div class="titol">Xiaomi Pad 6</div><!-- 01-12-2023 -->
                     <div class="text">
-                        Official support: Android 13<br>
-                        Installed Android 14 AOSP to turn it into a lower-priced Pixel Tablet with a better display, performance and battery.
+                        @if (m.ca) {
+                            Suport oficial: Android 13<br>
+                            Vaig instal·lar Android 14 AOSP per convertir-lo en una tablet Pixel de preu més baix amb una millor pantalla, rendiment i bateria.
+                        }
+                        @if (m.es) {
+                            Soporte oficial: Android 13<br>
+                            Instalé Android 14 AOSP para convertirlo en una tablet Pixel de precio más bajo con una mejor pantalla, rendimiento y batería.
+                        }
+                        @if (m.en) {
+                            Official support: Android 13<br>
+                            I installed Android 14 AOSP to turn it into a lower-priced Pixel Tablet with a better display, performance and battery.
+                        }
                     </div>
                 </div>
             </div>
@@ -190,9 +265,18 @@
                     <img src="assets/images/custom-roms/mobils/xiaomi-redmi-12c.png" alt="Xiaomi Redmi 12C">
                     <div class="titol">Xiaomi Redmi 12C</div><!-- 11-12-2023 -->
                     <div class="text">
-                        Official support: Android 12<br>
-                        Low-end device, no community support. I installed Android 13 via GSI to make it much more usable. It has a Mediatek processor, which is closed source, making custom ROM developement difficult.
-
+                        @if (m.ca) {
+                            Suport oficial: Android 12<br>
+                            Dispositiu de gamma baixa, sense suport de la comunitat. Vaig instal·lar Android 13 via GSI per fer-lo molt més usable. Té un processador Mediatek, que és de codi tancat, fent difícil el desenvolupament de custom ROMs.
+                        }
+                        @if (m.es) {
+                            Soporte oficial: Android 12<br>
+                            Dispositivo de gama baja, sin soporte de la comunidad. Instalé Android 13 vía GSI para hacerlo mucho más usable. Tiene un procesador Mediatek, que es de código cerrado, dificultando el desarrollo de custom ROMs.
+                        }
+                        @if (m.en) {
+                            Official support: Android 12<br>
+                            Low-end device, no community support. I installed Android 13 via GSI to make it much more usable. It has a Mediatek processor, which is closed source, making custom ROM developement difficult.
+                        }
 
                         <!-- instalación de imágenes en otras particiones para poder arrancar -->
                     </div>
@@ -204,15 +288,29 @@
                     <img src="assets/images/custom-roms/mobils/samsung-tab-a.png" alt="Galaxy Tab A (2019)">
                     <div class="titol">Galaxy Tab A (2019)</div><!-- 17-07-2025 -->
                     <div class="text">
-                        Official support: Android 9-11<br>
-                        Installed Android 13 via LineageOS. It was a low-powered device with a heavy One UI layer, but with AOSP the performance improves, making it feel like new. With 1 year of official support, using custom roms I got up to 4 years of support.
+                        @if (m.ca) {
+                            Suport oficial: Android 9-11<br>
+                            Vaig instal·lar Android 13 via LineageOS. Era una tablet de gamma baixa amb una capa de One UI pesada, però amb AOSP el rendiment millora, fent que se senti com a nova. Amb 1 any de suport oficial, utilitzant custom ROMs vaig aconseguir fins a 4 anys de suport.
+                        }
+                        @if (m.es) {
+                            Soporte oficial: Android 9-11<br>
+                            Instalé Android 13 vía LineageOS. Era una tablet de gama baja con una capa pesada de One UI, pero con AOSP el rendimiento mejora, haciéndola sentir como nueva. Con 1 año de soporte oficial, usando custom ROMs conseguí hasta 4 años de soporte.
+                        }
+                        @if (m.en) {
+                            Official support: Android 9-11<br>
+                            I installed Android 13 via LineageOS. It was a low-powered tablet with a heavy One UI layer, but with AOSP the performance improves, making it feel like new. With 1 year of official support, using custom ROMs I got up to 4 years of support.
+                        }
                     </div>
                 </div>
             </div>
 
         </div>
 
-        <h3 class="text-center mt-5 mb-4">Other devices with custom firmware</h3>
+        <h3 class="text-center mt-5 mb-4">
+            @if (m.ca) { Altres firmwares modificats }
+            @if (m.es) { Otros firmwares modificados }
+            @if (m.en) { Other devices with custom firmware }
+        </h3>
 
         <div class="row justify-content-center g-3">
             
@@ -221,8 +319,15 @@
                     <img src="assets/images/custom-roms/mobils/xiaomi-scooter.png" alt="Xiaomi Mi Scooter M365" style="filter: brightness(1.3) saturate(1.5)">
                     <div class="titol">Xiaomi Mi Scooter M365</div><!-- 10-07-2019 -->
                     <div class="text">
-                        I changed the display for the one from the Pro version, with a digital speedometer and some other details. I also replaced the firmware with a custom one to get it working.
-                        
+                        @if (m.ca) {
+                            Vaig canviar la pantalla per la de la versió Pro, amb un velocímetre digital i alguns altres detalls. També vaig substituir el firmware per un de modificat per fer-la funcionar.
+                        }
+                        @if (m.es) {
+                            Cambié la pantalla por la de la versión Pro, con un velocímetro digital y algunos otros detalles. También reemplacé el firmware por uno modificado para hacerla funcionar.
+                        }
+                        @if (m.en) {
+                            I changed the display for the one from the Pro version, with a digital speedometer and some other details. I also replaced the firmware with a custom one to get it working.
+                        }
                     </div>
                 </div>
             </div>
@@ -232,8 +337,15 @@
                     <img src="assets/images/custom-roms/mobils/xiaomi-mi-band-4.png" alt="Xiaomi Mi Smart Band 4">
                     <div class="titol">Xiaomi Mi Smart Band 4</div><!-- 19-02-2020 -->
                     <div class="text">
-                        I modified the firmware to set custom icons from icon packs and also from custom bitmap images. I managed to add a flashlight feature by replacing an unused icon with a full white one.
-                        
+                        @if (m.ca) {
+                            Vaig modificar el firmware per a tenir icones personalitzades des de paquets d'icones i també des d'imatges bitmap pròpies. Vaig aconseguir afegir una funcionalitat de llanterna substituint la icona d'una opció no utilitzada per una de completament blanca.
+                        }
+                        @if (m.es) {
+                            Modifiqué el firmware para tener iconos personalizados desde paquetes de iconos y también desde imágenes bitmap propias. Conseguí añadir una funcionalidad de linterna sustituyendo el icono de una opción no utilizada por uno completamente blanco.
+                        }
+                        @if (m.en) {
+                            I modified the firmware to set custom icons from icon packs and also from custom bitmap images. I managed to add a flashlight feature by replacing the icon of an unused option with a full white one.
+                        }
                     </div>
                 </div>
             </div>
