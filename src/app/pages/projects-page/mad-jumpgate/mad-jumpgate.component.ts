@@ -23,5 +23,9 @@ export class MadJumpgateComponent {
     Skills = Skills;
 
     constructor(public m: MainService) { }
-    
+
+    textPlayInBrowser() { return ["Jugar al navegador", "Jugar en el navegador", "Play in browser"][this.m.idiomaIndex]; }
+    textPlayInItchIo() { return ["Jugar a itch.io", "Jugar en itch.io", "Play on itch.io"][this.m.idiomaIndex]; }
+    textDownloadForWindows() { return ["Descarregar per a Windows", "Descargar para Windows", "Download for Windows"][this.m.idiomaIndex]; }
+    textGameplayOnYoutube() { return ["Gameplay a YouTube", "Gameplay en YouTube", "Gameplay on YouTube"][this.m.idiomaIndex]; }
 }
