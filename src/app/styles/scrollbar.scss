@@ -2,25 +2,19 @@
 
 body {
     // Scrollbar //
-    --scrollbar-fons: light-dark(var(--color-l-9), hsl(210, 0%, 30%));
-    --scrollbar-via: light-dark(white, hsl(210, 0%, 16%));
-    --scrollbar-thumb-1: light-dark(var(--color-l-5), hsl(210, 0%, 79%));
-    --scrollbar-thumb-2: light-dark(var(--color-l-3), hsl(210, 0%, 48%));
-    --scrollbar-thumb-hover: light-dark(var(--color-l-6), hsl(210, 0%, 79%));
-    --scrollbar-thumb-active: light-dark(var(--color-l-7), white);
+    --scrollbar-fons: light-dark(hsl(223, 14%, 61%), hsl(0, 0%, 18%));
 
     // Fons //
-    &::-webkit-scrollbar { background-color: var(--scrollbar-via); }
+    &::-webkit-scrollbar { background-color: var(--scrollbar-fons); }
     // Via //
-    &::-webkit-scrollbar-track { background-color: var(--scrollbar-via); }
+    &::-webkit-scrollbar-track { background-color: var(--scrollbar-fons); }
     // Thumb //
     &::-webkit-scrollbar-thumb {
-        background-color: var(--scrollbar-thumb-1);
-        box-shadow: inset -17px 0px 10px -10px var(--scrollbar-thumb-2);
-        border: 2px solid var(--scrollbar-via);
-        border-radius: 6px;
-        &:hover  { background-color: var(--scrollbar-thumb-hover);  box-shadow: none; }
-        &:active { background-color: var(--scrollbar-thumb-active); box-shadow: none; }
+        border: 2px solid var(--scrollbar-fons);
+        border-radius: 24px; // 6px;
+        background-color: light-dark(hsl(223, 100%, 92%), hsl(0, 0%, 60%));
+        &:hover { background-color: light-dark(hsl(223, 100%, 97%), hsl(0, 0%, 80%)); }
+        &:active { background-color: white; }
     }
     // Botons //
     // &::-webkit-scrollbar-button {
