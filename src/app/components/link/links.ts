@@ -27,7 +27,7 @@ export class Links {
         "ministerio-exteriores_en": "https://www.exteriores.gob.es/en",
         "accessibilitat-aaa": "https://ialabs.ie/what-is-the-difference-between-wcag-a-aa-and-aaa/",
 
-        "onboarding-evora": "assets/documents/Jordi Mas Parramon EvoraIT onboarding 2023.pptx",
+        "onboarding-evora": "assets/documents/evora/Jordi Mas Parramon EvoraIT onboarding 2023.pdf",
 
         "ocine_ca": "https://cinesocine.es/ca",
         "ocine_es": "https://www.ocine.es/",
