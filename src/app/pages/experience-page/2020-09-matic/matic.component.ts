@@ -28,4 +28,15 @@ export class MaticComponent {
         return this.links[this.m.idioma];
     }
 
+    getLink1() {
+        return [
+            "assets/documents/matic/smart-counting-cat.pdf",
+            "assets/documents/matic/smart-counting-esp.pdf",
+            "assets/documents/matic/smart-counting-esp.pdf",
+        ][this.m.idiomaIndex];
+    }
+    getLink2() {
+        return "assets/documents/matic/captura-mobil.jpg";
+    }
+
 }

@@ -78,7 +78,7 @@
                 <li>Participació en el desenvolupament i maquetació de la nostra pròpia llibreria completa de components per al projecte i també per a altres webs oficials del Ministeri</li>
                 <li>Vaig desenvolupar diversos components per a un projecte específic que van agradar tant que, sense haver sigut dissenyats per a la llibreria, van acabar integrant-s'hi i van ser adoptats en diverses aplicacions oficials del Ministeri</li>
                 <li>Desenvolupament de l'aplicació seguint una guia d'estils molt estricta</li>
-                <li>En poc temps em vaig erigir com el desenvolupador de referència en CSS i maquetació dins l'equip</li>
+                <li>En poc temps em vaig erigir com el desenvolupador de referència en CSS i maquetació dins l'equip i el projecte</li>
             </ul>
         }
 
@@ -103,7 +103,7 @@
                 <li>Participación en el desarrollo y maquetación de nuestra propia librería completa de componentes para el proyecto y también para otras webs oficiales del Ministerio</li>
                 <li>Desarrollé varios componentes para un proyecto específico que gustaron tanto que, sin haber sido diseñados para la librería, acabaron integrándose allí y fueron adoptados en varias de las aplicaciones oficiales del Ministerio</li>
                 <li>Desarrollo de la aplicación siguiendo una guía de estilos muy estricta</li>
-                <li>Al poco tiempo me erigí como el desarrollador de referencia en CSS y maquetación dentro del equipo</li>
+                <li>Al poco tiempo me erigí como el desarrollador de referencia en CSS y maquetación dentro del equipo y el proyecto</li>
             </ul>
         }
 
@@ -128,27 +128,34 @@
                 <li>Participation in the development and layout of our own complete library of components for the project and also for other official websites of the Ministry</li>
                 <li>I developed several components for a specific project which were so liked that, without having been designed for the library, they ended up being integrated there and were adopted in many of the Ministry's official applications</li>
                 <li>Application development following a very strict style guide</li>
-                <li>In a short time I established myself as the reference developer for CSS and layout within the team</li>
+                <li>In a short time I established myself as the reference developer for CSS and layout within the team and the project</li>
             </ul>
         }
+
+        @if (m.ca) { <h4>Demo interactiva</h4> }
+        @if (m.es) { <h4>Demo interactiva</h4> }
+        @if (m.en) { <h4>Interactive demo</h4> }
+
+        <div class="text-80 font-italic mt-3 mb-2">
+            @if (m.ca) { Interactua amb els botons! }
+            @if (m.es) { ¡Interactúa con los botones! }
+            @if (m.en) { Interact with the buttons! }
+        </div>
+
+        <section class="seccio-boto-dintel shadow-2-l">
+            <a [href]="getLinkDintelHome()" class="rs dnt-button primary">
+                @if (m.ca) { Llibreria Dintel }
+                @if (m.es) { Librería Dintel }
+                @if (m.en) { Dintel library }
+            </a>
+            <a [href]="getLinkDintelComponents()" class="rs dnt-button secondary">
+                @if (m.ca) { Veure components }
+                @if (m.es) { Ver componentes }
+                @if (m.en) { See components }
+            </a>
+        </section>
+        
     </article>
-
-    @if (m.ca) { <h4>Demo interactiva</h4> }
-    @if (m.es) { <h4>Demo interactiva</h4> }
-    @if (m.en) { <h4>Interactive demo</h4> }
-
-    <section class="seccio-boto-dintel">
-        <a [href]="getLinkDintelHome()" class="rs dnt-button primary">
-            @if (m.ca) { Llibreria Dintel }
-            @if (m.es) { Librería Dintel }
-            @if (m.en) { Dintel library }
-        </a>
-        <a [href]="getLinkDintelComponents()" class="rs dnt-button secondary">
-            @if (m.ca) { Veure components }
-            @if (m.es) { Ver componentes }
-            @if (m.en) { See components }
-        </a>
-    </section>
 
     <!-- Skills -->
     <div class="skills-title mt-4 mb-2">

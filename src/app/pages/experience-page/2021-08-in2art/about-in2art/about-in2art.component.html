@@ -1,12 +1,12 @@
-<h3 class="mb-4 text-center">
+<h3 class="mb-4 text-center" appMostrarAmbAnimacio>
     @if (m.ca) { Secció "Sobre IN2ART" de la web (2022) }
     @if (m.es) { Sección "Acerca de IN2ART" de la web (2022) }
     @if (m.en) { Section "About IN2ART" from the web (2022) }
 </h3>
 
 <figure class="text-center">
-    <app-about-card />
-    <figcaption class="mt-2">
+    <app-about-card appMostrarAmbAnimacio />
+    <figcaption class="mt-2" appMostrarAmbAnimacio>
         @if (m.ca) {
             Fragment reconstruït de la secció "sobre IN2ART" de la web original el 2022.<br> 
             Hi apareixen les firmes dels 2 desenvolupadors principals, inclosa la meva.<br>

@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { LinkComponent } from 'src/app/components/link/link.component';
+import { MostrarAmbAnimacioDirective } from "src/app/directives/mostrar-amb-animacio.directive";
 import { MainService } from 'src/app/services/main.service';
 import { AboutCardComponent } from './about-card/about-card.component';
 
@@ -7,7 +8,7 @@ import { AboutCardComponent } from './about-card/about-card.component';
     selector: 'app-about-in2art',
     templateUrl: './about-in2art.component.html',
     styleUrl: './about-in2art.component.scss',
-    imports: [AboutCardComponent, LinkComponent]
+    imports: [AboutCardComponent, LinkComponent, MostrarAmbAnimacioDirective]
 })
 export class AboutIn2artComponent {
 

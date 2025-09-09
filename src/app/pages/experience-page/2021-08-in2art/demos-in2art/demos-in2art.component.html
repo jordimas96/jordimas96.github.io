@@ -8,13 +8,13 @@
 
     <div class="galeria">
         <div class="desktop">
-            <div class="card" (click)="obrirModal(1)" matRipple>
+            <div class="card" (click)="obrirModal(1)" matRipple appMostrarAmbAnimacio>
                 <img src="assets/images/in2art/demo/pc-thumb.png" class="fons" alt="PC thumbnail">
                 <div class="icona">
                     <i class="fa-solid fa-play"></i>
                 </div>
             </div>
-            <div class="text mt-2">
+            <div class="text mt-2" appMostrarAmbAnimacio>
                 @if (m.ca) { Escriptori }
                 @if (m.es) { Escritorio }
                 @if (m.en) { Desktop }
@@ -22,13 +22,13 @@
         </div>
 
         <div class="mobile">
-            <div class="card" (click)="obrirModal(2)" matRipple>
+            <div class="card" (click)="obrirModal(2)" matRipple appMostrarAmbAnimacio>
                 <img src="assets/images/in2art/demo/mobile-thumb.png" alt="Mobile thumbnail">
                 <div class="icona">
                     <i class="fa-solid fa-play"></i>
                 </div>
             </div>
-            <div class="text mt-2">
+            <div class="text mt-2" appMostrarAmbAnimacio>
                 @if (m.ca) { Mòbil }
                 @if (m.es) { Móvil }
                 @if (m.en) { Mobile }
@@ -36,13 +36,13 @@
         </div>
 
         <div class="responsive">
-            <div class="card" (click)="obrirModal(3)" matRipple>
+            <div class="card" (click)="obrirModal(3)" matRipple appMostrarAmbAnimacio>
                 <img src="assets/images/in2art/demo/responsive-thumb.png" alt="responsive thumbnail">
                 <div class="icona">
                     <i class="fa-solid fa-play"></i>
                 </div>
             </div>
-            <div class="text mt-2">
+            <div class="text mt-2" appMostrarAmbAnimacio>
                 @if (m.ca) { Responsiu }
                 @if (m.es) { Responsivo }
                 @if (m.en) { Responsive }
@@ -51,7 +51,7 @@
 
     </div>
 
-    <app-link [href]="m.env.assets + 'demos/in2art/'" class="mt-4">
+    <app-link [href]="m.env.assets + 'demos/in2art/'" class="mt-4" appMostrarAmbAnimacio>
         @if (m.ca) { Ús legítim i propietat }
         @if (m.es) { Uso legítimo y propiedad }
         @if (m.en) { Fair Use & Ownership }

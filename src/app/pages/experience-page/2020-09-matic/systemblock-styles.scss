@@ -1,0 +1,52 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap');
+
+.seccio-boto-systemblock {
+    font-family: Quicksand;
+    
+
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+
+    // background-color: light-dark(white, #114da6);
+    background-color: white;
+    padding: 2rem 3.5rem;
+    border-radius: 1rem;
+
+    // border-left: 4px solid #114da6;
+
+    @include mobil {
+        padding: 2rem 1rem;
+        justify-content: center;
+    }
+
+    .btn {
+        font-weight: 700;
+        letter-spacing: 0.2px;
+    }
+
+    .btn-negre {
+        background-color: #2e373e;
+        color: white;
+        border-radius: 50rem;
+        font-size: 1rem;
+        padding: 0.5rem 1rem;
+
+        transition: background-color 0.2s ease;
+
+        &:hover {
+            background-color: black;
+        }
+    }
+    .btn-blanc {
+        background: transparent;
+        color: #2e373e;
+        border-radius: 50rem;
+        font-size: 1rem;
+        padding: 0.5rem 0.5rem;
+
+        &:hover {
+            text-decoration-line: underline;
+        }
+    }
+}

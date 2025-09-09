@@ -35,16 +35,16 @@ export class IndraComponent {
 
     getLinkDintelHome() {
         return [
-            "https://dintel.redsara.es/DINTEL/index.html",
-            "https://dintel.redsara.es/DINTEL/index.html",
-            "https://dintel.redsara.es/DINTEL/en/index.html",
+            "https://dintel.redsara.es/",
+            "https://dintel.redsara.es/",
+            "https://dintel.redsara.es/content/dintel/en/inicio.html",
         ][this.m.idiomaIndex];
     }
     getLinkDintelComponents() {
         return [
-            "https://dintel.redsara.es/DINTEL/elementos-de-interfaz/componentes.html",
-            "https://dintel.redsara.es/DINTEL/elementos-de-interfaz/componentes.html",
-            "https://dintel.redsara.es/DINTEL/en/elementos-de-interfaz/componentes.html",
+            "https://dintel.redsara.es/componentes",
+            "https://dintel.redsara.es/componentes",
+            "https://dintel.redsara.es/content/dintel/en/componentes.html",
         ][this.m.idiomaIndex];
     }
 
