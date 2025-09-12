@@ -215,6 +215,7 @@ video, img {
 .text-70 { color: var(--text-70); }
 .text-80 { color: var(--text-80); }
 .text-90 { color: var(--text-90); }
+.text-100 { color: var(--text); }
 
 .color-clar-10 { color: var(--color-clar-10); }
 .color-clar-20 { color: var(--color-clar-20); }
@@ -225,6 +226,7 @@ video, img {
 .color-clar-70 { color: var(--color-clar-70); }
 .color-clar-80 { color: var(--color-clar-80); }
 .color-clar-90 { color: var(--color-clar-90); }
+.color-clar-100 { color: var(--color-clar); }
 
 .color-fosc-10 { color: var(--color-fosc-10); }
 .color-fosc-20 { color: var(--color-fosc-20); }
@@ -235,6 +237,7 @@ video, img {
 .color-fosc-70 { color: var(--color-fosc-70); }
 .color-fosc-80 { color: var(--color-fosc-80); }
 .color-fosc-90 { color: var(--color-fosc-90); }
+.color-fosc-100 { color: var(--color-fosc); }
 
 .inv-dark {
     @include light {

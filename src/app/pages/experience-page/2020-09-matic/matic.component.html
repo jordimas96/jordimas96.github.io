@@ -32,11 +32,142 @@
         }
     </article> -->
     <article class="descripcio mb-4">
-        @if (m.ca) {
-            <p>
-                Durant la meva experiència laboral a Matic Enginyeria Informàtica, vaig ser responsable de programar el frontend i part del backend d'un sistema CRM anomenat Smart Counting dissenyat per a la gestió de clients, vendes, manteniments i molls de càrrega de l'empresa SystemBlock. Vaig desenvolupar una web, una aplicació Android i un programa <app-link id="uwp_ca">UWP</app-link> per a Windows 10.
-            </p>
+        <p>
+            @if (m.ca) {
+                Durant la meva experiència laboral a Matic Enginyeria Informàtica, vaig ser responsable de programar el frontend i part del backend d'un sistema CRM anomenat Smart Counting dissenyat per a la gestió de clients, vendes, manteniments i registre de molls de càrrega de l'empresa SystemBlock. Aquest projecte consta de diferents aplicacions interconnectades:
+            }
+            @if (m.es) {
+                Durante mi experiencia laboral en Matic Enginyeria Informàtica, fui responsable de programar el frontend y parte del backend de un sistema CRM llamado Smart Counting diseñado para la gestión de clientes, ventas, mantenimientos y logística de muelles de carga de la empresa SystemBlock. Este proyecto consta de diferentes aplicaciones interconectadas:
+            }
+            @if (m.en) {
+                During my work experience at Matic Enginyeria Informàtica, I was responsible for programming the frontend and part of the backend of a CRM system called Smart Counting designed for customer, sales, maintenance, and loading dock logistics management for the company SystemBlock. This project consists of different interconnected applications:
+            }
+        </p>
 
+        <!-- SYSTEM BLOCK -->
+        <section class="systemblock card paleta-21 text-80">
+
+            <h3 class="text-center my-3 text-100">System Block</h3>
+
+            <div class="card web">
+                <div class="text">
+                    <h5 class="text-100">
+                        @if (m.ca) { CRM web per a la gestió general de l'empresa }
+                        @if (m.es) { CRM web para la gestión general de la empresa }
+                        @if (m.en) { CRM web for general company management }
+                    </h5>
+                    @if (m.ca) {
+                        Desenvolupament d'una plataforma completa per a la gestió de clients, comercials, visites, seguiments, vendes i albarans. L'aplicació té un sistema d'autenticació amb diferents nivells de permisos, un dashboard amb estadístiques i gràfics, i funcionalitats específiques per a la gestió de l'empresa.
+                        Entre les seves característiques principals hi ha:
+                        <ul>
+                            <li>Gestió de clients i comercials, vendes i albarans</li>
+                            <li>Sistema per identificar nous clients potencials i aconseguir noves vendes</li>
+                            <li>Assignació de comercials als clients per a un servei personalitzat</li>
+                            <li>Registre i gestió de molls de càrrega: creació, edició i assignació per zona i client, amb opcions d'afegir fotos i detalls concrets</li>
+                            <li>Organització de visites tècniques, reparacions i manteniments, agenda d'ordres de treball pels operaris</li>
+                            <li>Dashboard amb estadístiques i gràfics de tot el sistema, personalitzats segons cada usuari, i amb vistes generals pels administradors</li>
+                            <li>Sistemes automàtics d'enviament de correus a l'administració i als clients</li>
+                            <li>Maaquetació de factures imprimibles i enviables per email, amb firmes incloses</li>
+                            <li>Exportació a Excel i PDF de les dades completes o parcials, segons filtres i rols</li>
+                        </ul>
+                    }
+                    @if (m.es) {
+                        Desarrollo de una plataforma completa para la gestión de clientes, comerciales, visitas, seguimientos, ventas y albaranes. La aplicación tiene un sistema de autenticación con diferentes niveles de permisos, un dashboard con estadísticas y gráficos, y funcionalidades específicas para la gestión de la empresa.
+                        Entre sus características principales se encuentran:
+                        <ul>
+                            <li>Gestión de clientes y comerciales, ventas y albaranes</li>
+                            <li>Sistema para identificar nuevos clientes potenciales y conseguir nuevas ventas</li>
+                            <li>Asignación de comerciales a los clientes para un servicio personalizado</li>
+                            <li>Registro y gestión de muelles de carga: creación, edición y asignación por zona y cliente, con opciones de añadir fotos y detalles concretos</li>
+                            <li>Organización de visitas técnicas, reparaciones y mantenimientos, agenda de órdenes de trabajo para los operarios</li>
+                            <li>Dashboard con estadísticas y gráficos de todo el sistema, personalizados según cada usuario, y con vistas generales para los administradores</li>
+                            <li>Sistemas automáticos de envío de correos a la administración y a los clientes</li>
+                            <li>Maquetación de facturas imprimibles y enviables por email, con firmas incluidas</li>
+                            <li>Exportación a Excel y PDF de los datos completos o parciales, según filtros y roles</li>
+                        </ul>
+                    }
+                    @if (m.en) {
+                        Development of a complete platform for the management of clients, salespeople, visits, follow-ups, sales and delivery notes. The application has an authentication system with different permission levels, a dashboard with statistics and graphs, and specific functionalities for company management.
+                        Its main features include:
+                        <ul>
+                            <li>Management of clients and salespeople, sales and delivery notes</li>
+                            <li>System to identify new potential clients and achieve new sales</li>
+                            <li>Assignment of salespeople to clients for personalized service</li>
+                            <li>Registration and management of loading docks: creation, editing and assignment by area and client, with options to add photos and specific details</li>
+                            <li>Organization of technical visits, repairs and maintenance, work order agenda for operators</li>
+                            <li>Dashboard with statistics and graphs of the entire system, customized according to each user, and with general views for administrators</li>
+                            <li>Automatic email sending systems to administration and clients</li>
+                            <li>Layout of printable invoices that can be sent by email, with signatures included</li>
+                            <li>Export to Excel and PDF of complete or partial data, according to filters and roles</li>
+                        </ul>
+                    }
+                </div>
+                <div class="imatge">
+                    <img src="assets/documents/matic/caputra-crm-pc-estadistiques.jpg" alt="SystemBlock Web" class="w-100 rounded-3">
+                </div>
+
+            </div>
+
+            <div class="card app flex-column flex-sm-row">
+                <div class="text flex-8">
+                    <h5 class="text-100">
+                        @if (m.ca) { App mòbil per a les visites tècniques }
+                        @if (m.es) { App móvil para las visitas técnicas }
+                        @if (m.en) { Mobile app for technical visits }
+                    </h5>
+                    @if (m.ca) {
+                        Aplicació mòbil per a la gestió de visites tècniques, que permet als tècnics registrar totes les dades del manteniment o reparació dels molls de càrrega. Durant la visita, poden introduir-hi tota la informació de la intervenció, incloent-hi les peces utilitzades i les que necessitaran per a fer la feina a cada moll de càrrega, per fer posteriorment la factura.<br><br>
+                        Permet crear albarans, firmar-los i enviar-los per email al client i a l'administrador. També es poden fer fotos durant la visita i adjuntar-les a l'informe. Té agenda per a les visites tècniques i llista de les ordres de treball assignades al tècnic.<br><br>
+                        L'app se sincronitza amb la base de dades central i amb la web.<br>
+                        Interfície adaptativa per a mòbils i tablets.
+                    }
+                    @if (m.es) {
+                        Aplicación móvil para la gestión de visitas técnicas, que permite a los técnicos registrar todos los datos del mantenimiento o reparación de los muelles de carga. Durante la visita, pueden introducir toda la información de la intervención, incluyendo las piezas utilizadas y las que necesitarán para hacer el trabajo en cada muelle de carga, para hacer posteriormente la factura.<br><br>
+                        Permite crear albaranes, firmarlos y enviarlos por email al cliente y a la administración. También se pueden hacer fotos durante la visita y adjuntarlas al informe. Tiene agenda para las visitas técnicas y lista de las órdenes de trabajo asignadas al técnico.<br><br>
+                        La app se sincroniza con la base de datos central y con la web.<br>
+                        Interfaz adaptativa para móviles y tablets.
+                    }
+                    @if (m.en) { 
+                        Mobile application for the management of technical visits, which allows technicians to register all the data of the maintenance or repair of loading docks. During the visit, they can enter all the information of the intervention, including the parts used and those they will need to do the job at each loading dock, to later make the invoice.<br><br>
+                        It allows creating delivery notes, signing them and sending them by email to the client and administration. Photos can also be taken during the visit and attached to the report. It has an agenda for technical visits and a list of work orders assigned to the technician.<br><br>
+                        The app synchronizes with the central database and with the web.<br>
+                        Adaptive interface for mobiles and tablets.
+                    }
+                </div>
+                <div class="imatge flex-4">
+                    <div class="img-cropper mw-75 mw-sm-100 m-auto">
+                        <img src="assets/documents/matic/captura-mobil.jpg" alt="SystemBlock App" class="w-100">
+                    </div>
+                </div>
+
+
+            </div>
+            <div class="card app-windows">
+                <h5 class="text-100">
+                    @if (m.ca) { App Windows 10 per a enviar comunicacions }
+                    @if (m.es) { App Windows 10 para enviar comunicaciones }
+                    @if (m.en) { Windows 10 app to send communications }
+                </h5>
+                @if (m.ca) {
+                    Aplicació nativa per a Windows 10 (<app-link id="uwp_ca">UWP</app-link>) per a l'enviament de notificacions als clients des d'administració. Té diferents versions de missatges predefinits per a diferents situacions, i permet enviar comunicacions múltiples a diversos clients alhora. Els missatges s'envien per email i per WhatsApp. També té registre de missatges enviats, i permet fer seguiment de les comunicacions amb els clients.<br>
+                    Es connecta amb la base de dades central i amb la web i l'app.
+                }
+                @if (m.es) {
+                    Aplicación nativa para Windows 10 (<app-link id="uwp_es">UWP</app-link>) para el envío de notificaciones a los clientes desde administración. Tiene diferentes versiones de mensajes predefinidos para diferentes situaciones, y permite enviar comunicaciones múltiples a varios clientes a la vez. Los mensajes se envían por email y por WhatsApp. También tiene registro de mensajes enviados, y permite hacer seguimiento de las comunicaciones con los clientes.<br>
+                    Se conecta con la base de datos central y con la web y la app.
+                }
+                @if (m.en) { 
+                    Native application for Windows 10 (<app-link id="uwp_en">UWP</app-link>) for sending notifications to clients from administration. It has different versions of predefined messages for different situations, and allows sending multiple communications to several clients at once. Messages are sent by email and WhatsApp. It also has a record of sent messages, and allows tracking communications with clients.<br>
+                    It connects to the central database and with the web and the app.
+                }
+            </div>
+            
+        </section>
+
+        <br><br>
+
+
+        @if (m.ca) {
             <h4>Assoliments</h4>
             <ul>
                 <li>🌟Líder del projecte de frontend. Creació del frontend d'un CRM complet per gestionar clients, vendes, manteniments i logística de molls de càrrega</li>
@@ -54,10 +185,6 @@
         }
 
         @if (m.es) {
-            <p>
-                Durante mi experiencia laboral en Matic Enginyeria Informàtica, fui responsable de programar el frontend y parte del backend de un sistema CRM llamado Smart Counting diseñado para la gestión de clientes, ventas, mantenimientos y logística de muelles de carga de la empresa SystemBlock. Desarrollé una web, una aplicación Android y un programa <app-link id="uwp_es">UWP</app-link> para Windows 10.
-            </p>
-
             <h4>Logros</h4>
             <ul>
                 <li>🌟Líder del proyecto de frontend. Creación del frontend de un CRM completo para gestionar clientes, ventas, mantenimientos y muelles de carga</li>
@@ -75,10 +202,6 @@
         }
 
         @if (m.en) {
-            <p>
-                During my work experience at Matic Enginyeria Informàtica, I was responsible for programming the frontend and part of the backend of a CRM system called Smart Counting designed for customer, sales, maintenance, and loading dock logistics management for the company SystemBlock. I developed a web, an Android app and a <app-link id="uwp_en">UWP</app-link> Windows 10 program.
-            </p>
-
             <h4>Achievements</h4>
             <ul>
                 <li>🌟Project lead of the frontend. Creation of the frontend of a complete CRM to manage clients, sales, maintenance, and loading docks</li>
