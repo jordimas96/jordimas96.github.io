@@ -34,20 +34,32 @@
     <article class="descripcio mb-4">
         <p>
             @if (m.ca) {
-                Durant la meva experiència laboral a Matic Enginyeria Informàtica, vaig ser responsable de programar el frontend i part del backend d'un sistema CRM anomenat Smart Counting dissenyat per a la gestió de clients, vendes, manteniments i registre de molls de càrrega de l'empresa SystemBlock. Aquest projecte consta de diferents aplicacions interconnectades:
+                Durant la meva experiència laboral a Matic Enginyeria Informàtica, vaig ser responsable de programar un CRM complet de 3 aplicacions interconnectades, una app per a gestionar tests de COVID, el manteniment i desenvolupament de pantalles i funcions per a Ocine, i altres desenvolupaments puntuals, com ara uns canvis en una app de Selva Aventura i suport tècnic per a una botiga online:
             }
             @if (m.es) {
-                Durante mi experiencia laboral en Matic Enginyeria Informàtica, fui responsable de programar el frontend y parte del backend de un sistema CRM llamado Smart Counting diseñado para la gestión de clientes, ventas, mantenimientos y logística de muelles de carga de la empresa SystemBlock. Este proyecto consta de diferentes aplicaciones interconectadas:
+                Durante mi experiencia laboral en Matic Enginyeria Informàtica, fui responsable de programar un CRM completo de 3 aplicaciones interconectadas, una app para gestionar tests de COVID, el mantenimiento y desarrollo de pantallas y funciones para Ocine, y otros desarrollos puntuales, como algunos cambios en una app de Selva Aventura y soporte técnico para una tienda online:
             }
             @if (m.en) {
-                During my work experience at Matic Enginyeria Informàtica, I was responsible for programming the frontend and part of the backend of a CRM system called Smart Counting designed for customer, sales, maintenance, and loading dock logistics management for the company SystemBlock. This project consists of different interconnected applications:
+                During my work experience at Matic Enginyeria Informàtica, I was responsible for programming a complete CRM of 3 interconnected applications, an app to manage COVID tests, the maintenance and development of screens and functions for Ocine, and other specific developments, such as some changes in a Selva Aventura app and technical support for an online store:
             }
         </p>
 
         <!-- SYSTEM BLOCK -->
         <section class="systemblock card paleta-21 text-80">
 
-            <h3 class="text-center my-3 text-100">System Block</h3>
+            <h3 class="text-center mt-3 mb-2 text-100">System Block</h3>
+
+            <p class="mx-3 mb-3">
+                @if (m.ca) {
+                    En aquest projecte vaig ser responsable de programar el frontend i aproximadament la meitat del backend d'un sistema CRM anomenat Smart Counting dissenyat per a la gestió de clients, vendes, manteniments i logística de molls de càrrega per a l'empresa SystemBlock. Aquest CRM consta de 3 aplicacions interconnectades:
+                }
+                @if (m.es) {
+                    En este proyecto fui responsable de programar el frontend y aproximadamente la mitad del backend de un sistema CRM llamado Smart Counting diseñado para la gestión de clientes, ventas, mantenimientos y logística de muelles de carga para la empresa SystemBlock. Este CRM consta de 3 aplicaciones interconectadas:
+                }
+                @if (m.en) {
+                    In this project I was responsible for programming the frontend and approximately half of the backend of a CRM system called Smart Counting designed for managing customers, sales, maintenance, and loading dock logistics for the company SystemBlock. This CRM consists of 3 interconnected applications:
+                }
+            </p>
 
             <div class="card web">
                 <div class="text">
@@ -103,7 +115,7 @@
                     }
                 </div>
                 <div class="imatge">
-                    <img src="assets/documents/matic/caputra-crm-pc-estadistiques.jpg" alt="SystemBlock Web" class="w-100 rounded-3">
+                    <img src="assets/images/matic/captura-crm-pc-estadistiques.jpg" alt="SystemBlock Web" class="w-100 rounded-3">
                 </div>
 
             </div>
@@ -136,7 +148,7 @@
                 </div>
                 <div class="imatge flex-4">
                     <div class="img-cropper mw-75 mw-sm-100 m-auto">
-                        <img src="assets/documents/matic/captura-mobil.jpg" alt="SystemBlock App" class="w-100">
+                        <img src="assets/images/matic/captura-mobil.jpg" alt="SystemBlock App" class="w-100">
                     </div>
                 </div>
 
@@ -166,6 +178,72 @@
 
         <br><br>
 
+
+        <!-- APPCESSS TEST -->
+        <section class="appcess card paleta-193 text-80">
+            <h3 class="text-center mb-3 text-100">Appcess Test</h3>
+            @if (m.ca) {
+                Desenvolupament d'una aplicació per a Android i iPhone per al control d'accés a esdeveniments durant la pandèmia. L'aplicació permet als usuaris fer-se un test de COVID en centres autoritzats, i obtenir un QR per a accedir a l'esdeveniment.<br><br>
+                
+                Flux de funcionament:
+                <ol>
+                    <li>L'usuari es registra a l'app.</li>
+                    <li>Es fa un test de COVID en un centre autoritzat pel promotor de l'esdeveniment.</li>
+                    <li>L'usuari pot consultar el seu QR i l'estat del test en qualsevol moment (pendent, negatiu o positiu). Quan surt el resultat, l'usuari rep una notificació push al mòbil i el resultat del test es mostra a l'app.</li>
+                    <li>Si el resultat és negatiu (no té COVID), l'aplicació mostra una targeta verda i l'usuari pot ensenyar el QR a l'entrada per accedir a l'esdeveniment.</li>
+                </ol>
+                
+                L'aplicació permet gestionar tant l'accés propi com el dels possibles menors a càrrec.<br>
+                La UI és simple i intuïtiva: es pot navegar fàcilment entre els diferents esdeveniments (swipe vertical) i, dins de cada esdeveniment, entre els QRs de les persones a càrrec (swipe horitzontal).<br>
+                Inclou autenticació biomètrica (empremta digital o reconeixement facial) per a més seguretat.<br>
+                L'aplicació està dissenyada per a funcionar sense connexió, ja que s'utilitzaria en llocs on hi hauria una gran quantitat de gent.<br><br>
+
+                Vaig desenvolupar tot el frontend de l'aplicació en solitari en 3 setmanes de treball intensiu, incloent totes les proves en condicions reals.<br>
+                Posteriorment, aquesta aplicació es va reutilitzar per crear 3 aplicacions adaptades a diferents esdeveniments i empreses.<br>
+            }
+            @if (m.es) {
+                Desarrollo de una aplicación para Android y iPhone para el control de acceso a eventos durante la pandemia. La aplicación permite a los usuarios hacerse un test de COVID en centros autorizados, y obtener un QR para acceder al evento.<br><br>
+                
+                Flujo de funcionamiento:
+                <ol>
+                    <li>El usuario se registra en la app.</li>
+                    <li>Se hace un test de COVID en un centro autorizado por el promotor del evento.</li>
+                    <li>El usuario puede consultar su QR y el estado del test en cualquier momento (pendiente, negativo o positivo). Cuando sale el resultado, el usuario recibe una notificación push en el móvil y el resultado del test se muestra en la app.</li>
+                    <li>Si el resultado es negativo (no tiene COVID), la aplicación muestra una tarjeta verde y el usuario puede enseñar el QR en la entrada para acceder al evento.</li>
+                </ol>
+                
+                La aplicación permite gestionar tanto el acceso propio como el de posibles menores a cargo.<br>
+                La UI es simple e intuitiva: se puede navegar fácilmente entre los diferentes eventos (swipe vertical) y, dentro de cada evento, entre los QRs de las personas a cargo (swipe horizontal).<br>
+                Incluye autenticación biométrica (huella digital o reconocimiento facial) para mayor seguridad.<br>
+                La aplicación está diseñada para funcionar sin conexión, ya que se utilizaría en lugares donde habría una gran cantidad de gente.<br><br>
+
+                Desarrollé todo el frontend de la aplicación en solitario en 3 semanas de trabajo intensivo, incluyendo todas las pruebas en condiciones reales.<br>
+                Posteriormente, esta aplicación se reutilizó para crear 3 aplicaciones adaptadas a diferentes eventos y empresas.<br>
+            }
+            @if (m.en) {
+                Development of an application for Android and iPhone for access control to events during the pandemic. The application allows users to take a COVID test in authorized centers, and obtain a QR to access the event.<br><br>
+                
+                Operating flow:
+                <ol>
+                    <li>The user registers in the app.</li>
+                    <li>A COVID test is taken in a center authorized by the event promoter.</li>
+                    <li>The user can check their QR and the status of the test at any time (pending, negative or positive). When the result comes out, the user receives a push notification on their mobile and the test result is displayed in the app.</li>
+                    <li>If the result is negative (does not have COVID), the application shows a green card and the user can show the QR at the entrance to access the event.</li>
+                </ol>
+                
+                The application allows managing both one's own access and that of possible minors in charge.<br>
+                The UI is simple and intuitive: you can easily navigate between different events (vertical swipe) and, within each event, between the QRs of the people in charge (horizontal swipe).<br>
+                It includes biometric authentication (fingerprint or facial recognition) for added security.<br>
+                The application is designed to work offline, as it would be used in places where there would be a large amount of people.<br><br>
+
+                I developed the entire frontend of the application alone in 3 weeks of intensive work, including all tests in real conditions.<br>
+                Subsequently, this application was reused to create 3 applications adapted to different events and companies.<br>
+            }
+
+        </section>
+        <!-- (17 de maig al 4 de juny del 2021) -->
+
+        <br><br>
 
         @if (m.ca) {
             <h4>Assoliments</h4>
