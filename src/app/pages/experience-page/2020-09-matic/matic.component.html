@@ -45,10 +45,8 @@
         </p>
 
         <!-- SYSTEM BLOCK -->
-        <section class="systemblock card paleta-21 text-80">
-
+        <section class="systemblock card paleta-21 text-80 mb-6">
             <h3 class="text-center mt-3 mb-2 text-100">System Block</h3>
-
             <p class="mx-3 mb-3">
                 @if (m.ca) {
                     En aquest projecte vaig ser responsable de programar el frontend i aproximadament la meitat del backend d'un sistema CRM anomenat Smart Counting dissenyat per a la gestió de clients, vendes, manteniments i logística de molls de càrrega per a l'empresa SystemBlock. Aquest CRM consta de 3 aplicacions interconnectades:
@@ -176,11 +174,8 @@
             
         </section>
 
-        <br><br>
-
-
-        <!-- APPCESSS TEST -->
-        <section class="appcess card paleta-193 text-80">
+        <!-- APPCESSS TEST --> <!-- (17 de maig al 4 de juny del 2021) -->
+        <section class="appcess card paleta-193 text-80 mb-6">
             <h3 class="text-center mb-3 text-100">Appcess Test</h3>
             @if (m.ca) {
                 Desenvolupament d'una aplicació per a Android i iPhone per al control d'accés a esdeveniments durant la pandèmia. L'aplicació permet als usuaris fer-se un test de COVID en centres autoritzats, i obtenir un QR per a accedir a l'esdeveniment.<br><br>
@@ -239,11 +234,42 @@
                 I developed the entire frontend of the application alone in 3 weeks of intensive work, including all tests in real conditions.<br>
                 Subsequently, this application was reused to create 3 applications adapted to different events and companies.<br>
             }
-
         </section>
-        <!-- (17 de maig al 4 de juny del 2021) -->
 
-        <br><br>
+        <h4 class="mb-3">
+            @if (m.ca) { Altres projectes }
+            @if (m.es) { Otros proyectos }
+            @if (m.en) { Other projects }
+        </h4>
+
+        @if (m.ca) {
+            <h5>Ocine</h5>
+            Vaig dur a terme el manteniment i millora de <app-link id="ocine-madrid">diverses pàgines web</app-link> per a <app-link id="ocine_ca">Ocine</app-link>, on vaig crear noves seccions, pantalles i funcions, utilitzant CSS, Javascript, PHP i Joomla.<br><br>
+
+            <h5>Selva Aventura</h5>
+            Vaig treballar en una app per al parc de tirolines Selva de l'Aventura. Vaig fer algunes millores en accessibilitat i facilitat d'ús, facilitació d'ompliment de formularis i correcció d'errors de codi i visuals en diferents mides de pantalles.<br><br>
+            <h5>Inquiets</h5>
+            Suport tècnic per a la web comercial d'Inquiets, una botiga de roba i productes infantils a Figueres. Gestió i desenvolupament de canvis i millores a la web. Suport tècnic remot per a clients, amb solució d'errors de la base de dades i de la web.<br><br>
+        }
+        @if (m.es) {
+            <h5>Ocine</h5>
+            Llevé a cabo el mantenimiento y mejora de <app-link id="ocine-madrid">varias páginas web</app-link> para <app-link id="ocine_es">Ocine</app-link>, en donde creé nuevas secciones, pantallas y funciones, utilizando CSS, Javascript, PHP y Joomla.<br><br>
+
+            <h5>Selva Aventura</h5>
+            Trabajé en una app para el parque de tirolinas Selva de l'Aventura. Hice algunas mejoras en accesibilidad y facilidad de uso, facilitación de rellenado de formularios y corrección de errores de código y visuales en diferentes tamaños de pantallas.<br><br>
+            <h5>Inquiets</h5>
+            Soporte técnico para la web comercial de Inquiets, una tienda de ropa y productos infantiles en Figueres. Gestión y desarrollo de cambios y mejoras en la web. Soporte técnico remoto para clientes, con solución de errores de la base de datos y de la web.<br><br>
+        }
+        @if (m.en) {
+            <h5>Ocine</h5>
+            I carried out maintenance and improvement of <app-link id="ocine-madrid">several webpages</app-link> for <app-link id="ocine_en">Ocine</app-link>, in which I created new sections, screens and functions, using CSS, Javascript, PHP and Joomla.<br><br>
+
+            <h5>Selva Aventura</h5>
+            I worked on an app for the Selva de l'Aventura zip line park. I made some improvements in accessibility and ease of use, facilitation of filling out forms and correction of code and visual errors in different screen sizes.<br><br>
+            <h5>Inquiets</h5>
+            Technical support for the commercial website of Inquiets, a clothing and children's products store in Figueres. Management and development of changes and improvements to the web. Remote technical support for clients, with solution of database and web errors.<br><br>
+        }
+
 
         @if (m.ca) {
             <h4>Assoliments</h4>
@@ -256,9 +282,7 @@
             </ul>
 
             <p>
-                Vaig dur a terme el manteniment i millora de <app-link id="ocine-madrid">diverses pàgines web</app-link> per a <app-link id="ocine_ca">Ocine</app-link>, on vaig crear noves seccions, pantalles i funcions, utilitzant CSS, Javascript, PHP i Joomla.<br><br>
-
-                Elaboració de documentació sobre com generar claus de signatura per a les aplicacions Android i UWP, i instruccions per a pujar canvis a les webs d'Ocine i sincronitzar els monitors de les cartelleres. Elaboració de scripts PowerShell per a automatitzar tasques.
+                <!-- Elaboració de documentació sobre com generar claus de signatura per a les aplicacions Android i UWP, i instruccions per a pujar canvis a les webs d'Ocine i sincronitzar els monitors de les cartelleres. Elaboració de scripts PowerShell per a automatitzar tasques. -->
             </p>
         }
 
