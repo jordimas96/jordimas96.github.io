@@ -185,7 +185,12 @@ export class ExperienceCalculatorService {
             empresa.skills.forEach((skill: Skills) => {
                 if (this.skills[skill] === undefined)
                     this.skills[skill] = { diesTotals: 0, empreses: [], anysMesosDies: [0, 0, 0] };
-                this.skills[skill].diesTotals += diesTotals;
+
+                let diesASumar = diesTotals;
+                
+                if (empresa.nom == "Matic" && skill == Skills.SEQUELIZE) diesASumar *= 188 / 492; // I did 38% of the work in SystemBlock's backend //
+                
+                this.skills[skill].diesTotals += diesASumar;
 
                 this.skills[skill].empreses.push(empresa.nom);
             });

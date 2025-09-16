@@ -29,6 +29,9 @@ export class Links {
 
         "onboarding-evora": "assets/_experience/evora/documents/Jordi Mas Parramon EvoraIT onboarding 2023.pdf",
 
+        "smartcounting-pdf_ca": "assets/_experience/matic/documents/smart-counting-cat.pdf",
+        "smartcounting-pdf_es": "assets/_experience/matic/documents/smart-counting-esp.pdf",
+        "smartcounting-pdf_en": "assets/_experience/matic/documents/smart-counting-esp.pdf",
         "ocine_ca": "https://cinesocine.es/ca",
         "ocine_es": "https://www.ocine.es/",
         "ocine_en": "https://www.ocine.es/",

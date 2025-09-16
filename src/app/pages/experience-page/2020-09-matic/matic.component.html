@@ -49,13 +49,19 @@
             <h3 class="text-center mt-3 mb-2 text-100">System Block</h3>
             <p class="mx-3 mb-3">
                 @if (m.ca) {
-                    En aquest projecte vaig ser responsable de programar el frontend i aproximadament la meitat del backend d'un sistema CRM anomenat Smart Counting dissenyat per a la gestió de clients, vendes, manteniments i logística de molls de càrrega per a l'empresa SystemBlock. Aquest CRM consta de 3 aplicacions interconnectades:
+                    En aquest projecte vaig ser responsable de programar el frontend i aproximadament el 40% del backend d'un sistema CRM anomenat <app-link id="smartcounting-pdf_ca">Smart Counting</app-link> dissenyat per a la gestió de clients, vendes, manteniments i logística de molls de càrrega per a l'empresa SystemBlock. Vaig programar el frontend complet de les 3 aplicacions i una part significativa del backend, fent endpoints importants, arreglant errors i simplificant codi.<br><br>
+
+                    Aquest CRM consta de 3 aplicacions interconnectades:
                 }
                 @if (m.es) {
-                    En este proyecto fui responsable de programar el frontend y aproximadamente la mitad del backend de un sistema CRM llamado Smart Counting diseñado para la gestión de clientes, ventas, mantenimientos y logística de muelles de carga para la empresa SystemBlock. Este CRM consta de 3 aplicaciones interconectadas:
+                    En este proyecto fui responsable de programar el frontend y aproximadamente el 40% del backend de un sistema CRM llamado <app-link id="smartcounting-pdf_es">Smart Counting</app-link> diseñado para la gestión de clientes, ventas, mantenimientos y muelles de carga para la empresa SystemBlock. Programé el frontend completo de las 3 aplicaciones y una parte significativa del backend, haciendo endpoints importantes, arreglando errores y simplificando código.<br><br>
+
+                    Este CRM consta de 3 aplicaciones interconectadas:
                 }
                 @if (m.en) {
-                    In this project I was responsible for programming the frontend and approximately half of the backend of a CRM system called Smart Counting designed for managing customers, sales, maintenance, and loading dock logistics for the company SystemBlock. This CRM consists of 3 interconnected applications:
+                    In this project I was responsible for programming the frontend and approximately 40% of the backend of a CRM system called <app-link id="smartcounting-pdf_en">Smart Counting</app-link> designed for the management of clients, sales, maintenance and loading docks for the company SystemBlock. I programmed the complete frontend of the 3 applications and a significant part of the backend, making important endpoints, fixing errors and simplifying code.<br><br>
+
+                    This CRM consists of 3 interconnected applications:
                 }
             </p>
 
@@ -349,7 +355,7 @@
         </div>
 
         <section class="seccio-boto-systemblock shadow-2-l">
-            <a [href]="getLink1()" class="rs btn btn-negre">
+            <a [href]="getLinkSmartCountingPDF()" class="rs btn btn-negre">
                 PDF SmartCounting
             </a>
             <a [href]="getLink2()" class="rs btn btn-blanc">

@@ -28,7 +28,7 @@ export class MaticComponent {
         return this.links[this.m.idioma];
     }
 
-    getLink1() {
+    getLinkSmartCountingPDF() {
         return [
             "assets/_experience/matic/documents/smart-counting-cat.pdf",
             "assets/_experience/matic/documents/smart-counting-esp.pdf",
