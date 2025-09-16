@@ -39,4 +39,45 @@ export class MaticComponent {
         return "assets/documents/matic/captura-mobil.jpg";
     }
 
+
+    // Acordeó //
+    toggleSeccio(boto) {
+        let $seccio = $(boto).parent();
+        let obert = $seccio.is("[data-open]");
+
+        // Obrir o tancar aquesta secció //
+        obert = !obert;
+        if (obert) {
+            $seccio.attr("data-open", "");
+            $seccio.find(".contingut").stop().slideDown(200);
+            $seccio.find("video")[0]?.play();
+        } else {
+            $seccio.removeAttr("data-open");
+            $seccio.find(".contingut").stop().slideUp(200);
+            $seccio.find("video")[0]?.pause();
+        }
+        
+        // Tancar altres seccions //
+        $seccio.siblings().each(function () {
+            $(this).removeAttr("data-open");
+            $(this).find(".contingut").stop().slideUp(200);
+            $(this).find("video")[0]?.pause();
+        });
+
+        if (obert) {
+            // Scroll a la secció clicada //
+            let offset = this.m.appbar.height() + this.m.index.height();
+            let nouScroll = $seccio.parent().offset()!.top - offset;
+
+            // Altura botó //
+            nouScroll += $seccio.index() * ($seccio.find(".boto-desplegable").outerHeight()! + 0.2 * 16);
+            let behavior: ScrollBehavior = "smooth";
+            if (!obert && nouScroll < window.scrollY)
+                behavior = "instant";
+
+            window.scrollTo({ top: nouScroll, behavior });
+        }
+        
+    }
+
 }
