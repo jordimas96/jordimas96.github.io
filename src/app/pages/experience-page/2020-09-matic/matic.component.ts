@@ -30,13 +30,13 @@ export class MaticComponent {
 
     getLink1() {
         return [
-            "assets/documents/matic/smart-counting-cat.pdf",
-            "assets/documents/matic/smart-counting-esp.pdf",
-            "assets/documents/matic/smart-counting-esp.pdf",
+            "assets/_experience/matic/documents/smart-counting-cat.pdf",
+            "assets/_experience/matic/documents/smart-counting-esp.pdf",
+            "assets/_experience/matic/documents/smart-counting-esp.pdf",
         ][this.m.idiomaIndex];
     }
     getLink2() {
-        return "assets/documents/matic/captura-mobil.jpg";
+        return "assets/_experience/matic/captura-mobil.jpg";
     }
 
 

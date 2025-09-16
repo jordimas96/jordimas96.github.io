@@ -19,6 +19,7 @@ export class CustomRomsComponent implements OnInit {
     constructor(public m: MainService) { }
 
     ngOnInit() {
+        // Posa fons segons la imatge //
         document.querySelectorAll(".mobil > img").forEach((img) => {
             let src: any = img.getAttribute("src");
             let mobil: any = img.closest(".mobil");

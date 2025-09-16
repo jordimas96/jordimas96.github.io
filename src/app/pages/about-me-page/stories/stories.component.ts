@@ -18,7 +18,7 @@ export class StoriesComponent implements OnInit {
 
     @ViewChild('stories') storiesRef: ElementRef;
 
-    prefixUrl = "assets/images/about-me/stories/";
+    prefixUrl = "assets/about-me/stories/";
 
     constructor(
         public m: MainService,

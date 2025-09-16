@@ -27,7 +27,7 @@ export class Links {
         "ministerio-exteriores_en": "https://www.exteriores.gob.es/en",
         "accessibilitat-aaa": "https://ialabs.ie/what-is-the-difference-between-wcag-a-aa-and-aaa/",
 
-        "onboarding-evora": "assets/documents/evora/Jordi Mas Parramon EvoraIT onboarding 2023.pdf",
+        "onboarding-evora": "assets/_experience/evora/documents/Jordi Mas Parramon EvoraIT onboarding 2023.pdf",
 
         "ocine_ca": "https://cinesocine.es/ca",
         "ocine_es": "https://www.ocine.es/",
@@ -38,7 +38,7 @@ export class Links {
         "uwp_en": "https://learn.microsoft.com/en-us/windows/uwp/get-started/universal-application-platform-guide",
 
 
-        "carta-recomanacio-nexxia": "assets/documents/Carta Recomanacio Nexxia 2017.pdf",
+        "carta-recomanacio-nexxia": "assets/_experience/nexxia/Carta Recomanacio Nexxia 2017.pdf",
         "fast-report": "https://www.fast-report.com/en/",
 
 

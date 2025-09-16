@@ -4,7 +4,7 @@
         @if (m.es) { Apps Android }
         @if (m.en) { Android Apps }
         <a href="https://www.android.com/" class="rs">
-            <img src="assets/icons/projects/android.png" alt="Android" class="title-icon">
+            <img src="assets/_projects/android/icons/android.png" alt="Android" class="title-icon">
         </a>
     </div>
     <article class="descripcio mb-4">
@@ -39,7 +39,7 @@
         <div class="col-12 col-sm-6">
             <a [href]="'https://jordimas96.github.io/r/play-store'" class="boto ambIcona" appMostrarAmbAnimacio matRipple>
                 Play Store
-                <img src="assets/icons/projects/play-store.png" alt="Google Play Store" class="logo">
+                <img src="assets/_projects/android/icons/buttons/play-store.png" alt="Google Play Store" class="logo">
             </a>
         </div>
         @if (!m.esAndroid()) {
@@ -56,7 +56,7 @@
         }
         <div class="col-12 col-sm-6">
             <a [href]="getAmazonLink_apps()" class="boto botoAmazon paleta-192" appMostrarAmbAnimacio matRipple>
-                <img src="assets/icons/projects/amazon-appstore.png" alt="Amazon Appstore" class="logo">
+                <img src="assets/_projects/android/icons/buttons/amazon-appstore.png" alt="Amazon Appstore" class="logo">
             </a>
         </div>
         @if (!m.esAndroid()) {
@@ -74,10 +74,10 @@
     </div>
 
     <div class="text-center d-flex flex-wrap justify-content-center gap-4 mt-5">
-        <app-story [urlId]="'18044150213577474'" [titol]="'Wallpaper Blurrer'" img="assets/images/about-me/stories/wallpaper-blurrer.png" appMostrarAmbAnimacio />
-        <app-story [urlId]="'17877632784216731'" [titol]="'Text Mimicker'" img="assets/images/about-me/stories/text-mimicker.png" appMostrarAmbAnimacio />
-        <app-story [urlId]="'18503334469057954'" [titol]="'SUS Tracker'" img="assets/images/about-me/stories/sus-tracker.png" appMostrarAmbAnimacio />
-        <app-story [urlId]="'18067998383314514'" [titol]="'Breaking Ball'" img="assets/images/about-me/stories/breaking-ball.png" appMostrarAmbAnimacio />
+        <app-story [urlId]="'18044150213577474'" [titol]="'Wallpaper Blurrer'" img="assets/about-me/stories/wallpaper-blurrer.png" appMostrarAmbAnimacio />
+        <app-story [urlId]="'17877632784216731'" [titol]="'Text Mimicker'" img="assets/about-me/stories/text-mimicker.png" appMostrarAmbAnimacio />
+        <app-story [urlId]="'18503334469057954'" [titol]="'SUS Tracker'" img="assets/about-me/stories/sus-tracker.png" appMostrarAmbAnimacio />
+        <app-story [urlId]="'18067998383314514'" [titol]="'Breaking Ball'" img="assets/about-me/stories/breaking-ball.png" appMostrarAmbAnimacio />
     </div>
 
     <!-- Skills -->
