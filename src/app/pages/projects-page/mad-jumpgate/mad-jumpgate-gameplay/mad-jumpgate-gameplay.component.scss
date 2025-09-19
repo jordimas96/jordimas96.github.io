@@ -4,6 +4,9 @@
 
 .seccio {
     border-radius: 0.5rem;
+    border-bottom-left-radius: 2rem;
+    border-bottom-right-radius: 2rem;
+
     background-color: light-dark(var(--color-clar-50), var(--color-clar-20));
 
     &[data-open] .fletxa {

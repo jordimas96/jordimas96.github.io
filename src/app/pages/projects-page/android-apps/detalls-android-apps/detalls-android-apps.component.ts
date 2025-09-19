@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { RouterLink } from '@angular/router';
 import $ from 'jquery';
 import { SkillComponent } from 'src/app/components/skill/skill.component';
 import { Skills } from 'src/app/enums/skills.enum';
@@ -11,7 +12,8 @@ import { SharedImports } from 'src/app/shared/imports';
     styleUrl: './detalls-android-apps.component.scss',
     imports: [
         ...SharedImports,
-        SkillComponent
+        SkillComponent,
+        RouterLink,
     ]
 })
 export class DetallsAndroidAppsComponent {
@@ -55,18 +57,18 @@ export class DetallsAndroidAppsComponent {
         if (obert) {
             $seccio.attr("data-open", "");
             $seccio.find(".contingut").stop().slideDown(200);
-            $seccio.find("video")[0].play();
+            $seccio.find("video")[0]?.play();
         } else {
             $seccio.removeAttr("data-open");
             $seccio.find(".contingut").stop().slideUp(200);
-            $seccio.find("video")[0].pause();
+            $seccio.find("video")[0]?.pause();
         }
         
         // Tancar altres seccions //
-        $seccio.siblings().each(function () {
+        $seccio.parent().parent().find(".seccio").not($seccio).each(function () {
             $(this).removeAttr("data-open");
             $(this).find(".contingut").stop().slideUp(200);
-            $(this).find("video")[0].pause();
+            $(this).find("video")[0]?.pause();
         });
 
         

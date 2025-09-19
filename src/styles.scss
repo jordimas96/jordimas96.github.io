@@ -132,7 +132,7 @@ html {
     border-radius: 50rem;
 
     background-color: var(--accent-color);
-    color: var(--fons);
+    color: light-dark(var(--color-1), var(--color-2));
 
     font-size: 1.3rem;
     outline: 0;

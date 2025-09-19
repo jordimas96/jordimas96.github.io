@@ -188,7 +188,7 @@ export class ExperienceCalculatorService {
 
                 let diesASumar = diesTotals;
                 
-                if (empresa.nom == "Matic" && skill == Skills.SEQUELIZE) diesASumar *= 188 / 492; // I did 38% of the work in SystemBlock's backend //
+                if (empresa.nom == "Matic" && skill == Skills.SEQUELIZE) diesASumar *= 188 / 443; // I did 42.5% of the work in System Block's backend //
                 
                 this.skills[skill].diesTotals += diesASumar;
 

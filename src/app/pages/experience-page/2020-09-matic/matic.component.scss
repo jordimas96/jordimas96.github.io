@@ -23,7 +23,7 @@ a.link-boto-titol {
 }
 
 h4, h5 {
-    color: var(--text-90);
+    color: var(--text);
 }
 
 .systemblock {
@@ -51,16 +51,8 @@ h4, h5 {
             .text {}
 
             .imatge {
-                border-radius: 1rem;
-
-                .img-cropper {
-                    overflow: hidden;
+                img {
                     border-radius: 1rem;
-
-                    img {
-                        margin-top: -9%;
-                        margin-bottom: -26.5%;
-                    }
                 }
             }
         }

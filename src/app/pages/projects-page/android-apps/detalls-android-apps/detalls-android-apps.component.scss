@@ -1,6 +1,8 @@
 @import "src/styles.scss";
 
-:host {
+:host { display: block; }
+
+.apps-personals, .apps-matic {
     display: flex;
     flex-direction: column;
     gap: 0.2rem;
@@ -122,6 +124,18 @@
         }
     }
 }
+
+// Matic //
+.systemblock, .appcess {
+    .contingut {
+        .imatge {
+            img {
+                border-radius: 1rem;
+            }
+        }
+    }
+}
+
 
 // Estils extres //
 .sus-tracker {
