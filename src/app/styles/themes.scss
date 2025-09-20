@@ -358,3 +358,7 @@
     @extend .paleta-46;
     --link: light-dark(var(--color-l-3), var(--color-l-6));
 }
+
+
+.color-fons { color: var(--fons) !important; }
+.color-text { color: var(--text) !important; }
