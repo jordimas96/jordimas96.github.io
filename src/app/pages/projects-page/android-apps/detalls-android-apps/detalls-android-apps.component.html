@@ -1,7 +1,13 @@
 
 <!-- Apps Personals -->
 
-<div class="apps-personals mb-3">
+<h4 class="mb-3">
+    @if (m.ca) { Apps personals }
+    @if (m.es) { Apps personales }
+    @if (m.en) { Personal apps }
+</h4>
+
+<div class="apps-personals mb-5">
     <section class="seccio wallpaper-blurrer" appMostrarAmbAnimacio>
         <button class="boto-desplegable" (click)="toggleSeccio($event.currentTarget)" matRipple>
             <div class="text-i-icona">
@@ -203,6 +209,12 @@
 
 
 <!-- Apps Matic -->
+ 
+<h4 class="mb-3">
+    @if (m.ca) { Apps desenvolupades a Matic }
+    @if (m.es) { Apps desarrolladas en Matic }
+    @if (m.en) { Apps developed at Matic }
+</h4>
 
 <div class="apps-matic">
     <section class="seccio systemblock" appMostrarAmbAnimacio>
