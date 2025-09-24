@@ -52,25 +52,25 @@
         padding: 0.5rem;
 
         border-radius: inherit;
-
-        .text-i-icona {
-            display: flex;
-            align-items: center;
-            gap: 1rem;
-
-            .icona {
-                height: 4rem;
-                border-radius: 1.5rem;
-            }
-            .titol {
-                font-size: 1.4rem;
-                color: var(--text);
-            }
+        
+        .icona {
+            height: 4rem;
+            border-radius: 1.5rem;
+        }
+        .titol {
+            font-size: 1.4rem;
+            @include mobil { font-size: 1.3rem; }
+            color: var(--text);
+        }
+        .subtitol {
+            font-size: 1rem;
+            @include mobil { font-size: 0.8rem; }
+            color: var(--text-80);
         }
         .fletxa {
             font-size: 1.5rem;
             margin-right: 1.5rem;
-            margin-left: 1.5rem;
+            margin-left: 1rem;
             transition: transform 200ms;
         }
     }

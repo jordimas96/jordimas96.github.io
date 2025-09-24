@@ -25,3 +25,8 @@ a.link-boto-titol {
 h4, h5 {
     color: var(--text-90);
 }
+
+.text-daurat {
+    color: light-dark(var(--link), gold);
+    font-weight: bold;
+}

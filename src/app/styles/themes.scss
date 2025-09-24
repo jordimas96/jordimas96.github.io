@@ -2,7 +2,7 @@
     @if ($sat > 0) {
         @if ($hue > 330 and $hue <= 360 or $hue >= 0 and $hue <= 30) {
             // 0 //
-            --color-fosc-hsl: #{$hue}, #{$sat+'%'}, 7%;
+            --color-fosc-hsl: #{$hue}, #{$sat+'%'}, 12%;
             --color-clar-hsl: #{$hue}, #{$sat+'%'}, 91%;
             --color-l-0: hsl(#{$hue}, #{$sat+'%'}, 7%);
             --color-l-1: hsl(#{$hue}, #{$sat+'%'}, 16%);

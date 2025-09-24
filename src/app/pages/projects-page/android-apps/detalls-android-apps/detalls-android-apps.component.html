@@ -10,9 +10,17 @@
 <div class="apps-personals mb-5">
     <section class="seccio wallpaper-blurrer" appMostrarAmbAnimacio>
         <button class="boto-desplegable" (click)="toggleSeccio($event.currentTarget)" matRipple>
-            <div class="text-i-icona">
+            <div class="d-flex align-items-center gap-3">
                 <img src="assets/_projects/android/icons/apps/wallpaper-blurrer.png" class="icona">
-                <span class="titol">Wallpaper Blurrer</span>
+                <div class="d-flex flex-column text-start">
+                    <span class="titol">Wallpaper Blurrer</span>
+                    <span class="subtitol">
+                        @if (m.ca) { Aplica blur i altres efectes visuals al fons de pantalla }
+                        @if (m.es) { Aplica efectos visuales al fondo de pantalla de inicio y bloqueo }
+                        @if (m.en) { Apply visual effects to the home and lock screen wallpaper }
+                    </span>
+
+                </div>
             </div>
             <i class="fa-solid fa-chevron-down fletxa"></i>
         </button>
@@ -61,9 +69,17 @@
 
     <section class="seccio text-mimicker" appMostrarAmbAnimacio>
         <button class="boto-desplegable" (click)="toggleSeccio($event.currentTarget)" matRipple>
-            <div class="text-i-icona">
+            <div class="d-flex align-items-center gap-3">
                 <img src="assets/_projects/android/icons/apps/text-mimicker.png" class="icona">
-                <span class="titol">Text Mimicker</span>
+                <div class="d-flex flex-column text-start">
+                    <span class="titol">Text Mimicker</span>
+                    <span class="subtitol">
+                        @if (m.ca) { Converteix text a homoglifs idèntics per evitar banejos. Integrat al menú contextual d'Android }
+                        @if (m.es) { Convierte texto a homoglifos idénticos para evitar baneos. Integrado en el menú contextual de Android }
+                        @if (m.en) { Convert text to identical homoglyphs to avoid bans. Integrated into Android's context menu }
+                    </span>
+
+                </div>
             </div>
             <i class="fa-solid fa-chevron-down fletxa"></i>
         </button>
@@ -112,9 +128,17 @@
 
     <section class="seccio sus-tracker" appMostrarAmbAnimacio>
         <button class="boto-desplegable" (click)="toggleSeccio($event.currentTarget)" matRipple>
-            <div class="text-i-icona">
+            <div class="d-flex align-items-center gap-3">
                 <img src="assets/_projects/android/icons/apps/sus-tracker.png" class="icona">
-                <span class="titol">SUS Tracker</span>
+                <div class="d-flex flex-column text-start">
+                    <span class="titol">SUS Tracker</span>
+                    <span class="subtitol">
+                        @if (m.ca) { Eina flotant per a Among US, per a marcar sospitosos i impostors }
+                        @if (m.es) { Herramienta flotante para Among US, para marcar sospechosos e impostores }
+                        @if (m.en) { Floating tool for Among US, to mark suspects and impostors }
+                    </span>
+
+                </div>
             </div>
             <i class="fa-solid fa-chevron-down fletxa"></i>
         </button>
@@ -159,9 +183,17 @@
 
     <section class="seccio breaking-ball" appMostrarAmbAnimacio>
         <button class="boto-desplegable" (click)="toggleSeccio($event.currentTarget)" matRipple>
-            <div class="text-i-icona">
+            <div class="d-flex align-items-center gap-3">
                 <img src="assets/_projects/android/icons/apps/breaking-ball.png" class="icona">
-                <span class="titol">Breaking Ball</span>
+                <div class="d-flex flex-column text-start">
+                    <span class="titol">Breaking Ball</span>
+                    <span class="subtitol">
+                        @if (m.ca) { Joc amb Unity, té bonus i tauler mundial de puntuacions }
+                        @if (m.es) { Juego con Unity, tiene bonus y tabla mundial de puntuaciones }
+                        @if (m.en) { Game with Unity, has boosters and world score board }
+                    </span>
+
+                </div>
             </div>
             <i class="fa-solid fa-chevron-down fletxa"></i>
         </button>
@@ -219,9 +251,17 @@
 <div class="apps-matic">
     <section class="seccio systemblock" appMostrarAmbAnimacio>
         <button class="boto-desplegable" (click)="toggleSeccio($event.currentTarget)" matRipple>
-            <div class="text-i-icona">
+            <div class="d-flex align-items-center gap-3">
                 <img src="assets/_projects/android/icons/apps/systemblock.png" class="icona">
-                <span class="titol">System Block</span>
+                <div class="d-flex flex-column text-start">
+                    <span class="titol">System Block</span>
+                    <span class="subtitol">
+                        @if (m.ca) { Permet als tècnics crear albarans i sincronitzar dades amb el CRM }
+                        @if (m.es) { Permite a los técnicos crear albaranes y sincronizar datos con el CRM }
+                        @if (m.en) { Allows technicians to create delivery notes and synchronize data with the CRM }
+                    </span>
+
+                </div>
             </div>
             <i class="fa-solid fa-chevron-down fletxa"></i>
         </button>
@@ -293,9 +333,17 @@
 
     <section class="seccio appcess" appMostrarAmbAnimacio>
         <button class="boto-desplegable" (click)="toggleSeccio($event.currentTarget)" matRipple>
-            <div class="text-i-icona">
+            <div class="d-flex align-items-center gap-3">
                 <img src="assets/_projects/android/icons/apps/appcess.png" class="icona">
-                <span class="titol">Appcess Test</span>
+                <div class="d-flex flex-column text-start">
+                    <span class="titol">Appcess Test</span>
+                    <span class="subtitol">
+                        @if (m.ca) { Genera QRs d'accés després de tests de COVID, UI intuitiva i funcionament offline }
+                        @if (m.es) { Genera QRs de acceso después de tests de COVID, UI intuitiva y funcionamiento offline }
+                        @if (m.en) { Generates access QRs after COVID tests, intuitive UI and offline functionality }
+                    </span>
+
+                </div>
             </div>
             <i class="fa-solid fa-chevron-down fletxa"></i>
         </button>

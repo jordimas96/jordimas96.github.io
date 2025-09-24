@@ -1,14 +1,14 @@
 <div class="seccio">
     <button class="boto-desplegable" (click)="toggleSeccio($event.currentTarget)" matRipple>
-        <div class="text-i-icona">
+        <div class="d-flex align-items-center gap-3">
             <img src="assets/_projects/mad-jumpgate/icons/accordion/mad-jumpgate.png" class="icona">
             <span class="titol">
                 Mad Jumpgate
                 @if(m.esPc()){
                     -
-                    @if(m.ca) { Jugar aquí }
-                    @if(m.es) { Jugar aquí }
-                    @if(m.en) { Play here }
+                    @if(m.ca) { Jugar }
+                    @if(m.es) { Jugar }
+                    @if(m.en) { Play }
                 }
             </span>
         </div>

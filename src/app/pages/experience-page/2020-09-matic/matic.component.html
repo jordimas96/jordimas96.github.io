@@ -68,10 +68,17 @@
             <div class="accordion">
                 <div class="card web">
                     <button class="boto-desplegable" (click)="toggleSeccio($event.currentTarget)" matRipple>
-                        <div class="titol">
-                            @if (m.ca) { CRM web per a la gestió general de l'empresa }
-                            @if (m.es) { CRM web para la gestión general de la empresa }
-                            @if (m.en) { CRM web for general company management }
+                        <div class="d-flex flex-column text-start ps-3">
+                            <div class="titol">
+                                @if (m.ca) { CRM web }
+                                @if (m.es) { CRM web }
+                                @if (m.en) { Web CRM }
+                            </div>
+                            <div class="subtitol">
+                                @if (m.ca) { Gestió general de l'empresa }
+                                @if (m.es) { Gestión general de la empresa }
+                                @if (m.en) { General company management }
+                            </div>
                         </div>
                         <i class="fa-solid fa-chevron-down fletxa"></i>
                     </button>
@@ -131,10 +138,17 @@
 
                 <div class="card app">
                     <button class="boto-desplegable" (click)="toggleSeccio($event.currentTarget)" matRipple>
-                        <div class="titol">
-                            @if (m.ca) { App mòbil per a les visites tècniques }
-                            @if (m.es) { App móvil para las visitas técnicas }
-                            @if (m.en) { Mobile app for technical visits }
+                        <div class="d-flex flex-column text-start ps-3">
+                            <div class="titol">
+                                @if (m.ca) { App mòbil }
+                                @if (m.es) { App móvil }
+                                @if (m.en) { Mobile app }
+                            </div>
+                            <div class="subtitol">
+                                @if (m.ca) { Per a les visites tècniques }
+                                @if (m.es) { Para las visitas técnicas }
+                                @if (m.en) { For technical visits }
+                            </div>
                         </div>
                         <i class="fa-solid fa-chevron-down fletxa"></i>
                     </button>
@@ -185,10 +199,17 @@
 
                 <div class="card app-windows">
                     <button class="boto-desplegable" (click)="toggleSeccio($event.currentTarget)" matRipple>
-                        <div class="titol">
-                            @if (m.ca) { App Windows 10 per a enviar comunicacions }
-                            @if (m.es) { App Windows 10 para enviar comunicaciones }
-                            @if (m.en) { Windows 10 app to send communications }
+                        <div class="d-flex flex-column text-start ps-3">
+                            <div class="titol">
+                                @if (m.ca) { App Windows 10 }
+                                @if (m.es) { App Windows 10 }
+                                @if (m.en) { Windows 10 app }
+                            </div>
+                            <div class="subtitol">
+                                @if (m.ca) { Per a enviar comunicacions }
+                                @if (m.es) { Para enviar comunicaciones }
+                                @if (m.en) { To send communications }
+                            </div>
                         </div>
                         <i class="fa-solid fa-chevron-down fletxa"></i>
                     </button>
@@ -317,10 +338,13 @@
         @if (m.ca) {
             <h4>Assoliments</h4>
             <ul>
-                <li>🌟Líder del projecte de frontend. Creació del frontend d'un CRM complet per gestionar clients, vendes, manteniments i logística de molls de càrrega</li>
-                <li>Desenvolupament multiplataforma d'un lloc web, una app Android i un programa <app-link id="uwp_ca">UWP</app-link></li>
+                <li><span class="text-daurat">Líder de projecte</span> en el desenvolupament de 4 projectes grans</li>
+                <li>Programació d'un CRM complet de 3 aplicacions interconnectades: web, app Android i programa <app-link id="uwp_ca">UWP</app-link></li>
+                <li>Programació d'una app adaptable i reutilitzable per a gestionar concerts amb control de tests de COVID</li>
                 <li>Projectes construïts des de zero amb Javascript, JQuery, CSS, Cordova i llibreries</li>
+                <li>Desenvolupament d'UIs simples, intuïtives i pulides utilitzant CSS i llibreries</li>
                 <li>Desenvolupament de noves funcions per a <app-link id="ocine_ca">Ocine</app-link></li>
+                <li>Modificacions menors d'apps i webs</li>
                 <li>Desenvolupament d'un sistema de cartelleres per al públic per a ser utilitzades en múltiples locals de cinemes a Madrid</li>
             </ul>
 
@@ -332,10 +356,13 @@
         @if (m.es) {
             <h4>Logros</h4>
             <ul>
-                <li>🌟Líder del proyecto de frontend. Creación del frontend de un CRM completo para gestionar clientes, ventas, mantenimientos y muelles de carga</li>
-                <li>Desarrollo multiplataforma de un sitio web, una app Android y un programa <app-link id="uwp_es">UWP</app-link></li>
+                <li><span class="text-daurat">Líder de proyecto</span> en el desarrollo de 4 proyectos grandes</li>
+                <li>Programación de un CRM completo de 3 aplicaciones interconectadas: web, app Android y programa <app-link id="uwp_es">UWP</app-link></li>
+                <li>Programación de una app adaptable y reutilizable para gestionar conciertos con control de tests de COVID</li>
                 <li>Proyectos construidos desde cero con Javascript, JQuery, CSS, Cordova y librerías</li>
+                <li>Desarrollo de UIs simples, intuitivas y pulidas utilizando CSS y librerías</li>
                 <li>Desarrollo de nuevas funciones para <app-link id="ocine_es">Ocine</app-link></li>
+                <li>Modificaciones menores de apps i webs</li>
                 <li>Desarrollo de un sistema de carteleras para el público para ser usadas en múltiples locales de cines en Madrid</li>
             </ul>
 
@@ -349,10 +376,13 @@
         @if (m.en) {
             <h4>Achievements</h4>
             <ul>
-                <li>🌟Project lead of the frontend. Creation of the frontend of a complete CRM to manage clients, sales, maintenance, and loading docks</li>
-                <li>Multiplatform development of a website, an Android app, and a <app-link id="uwp_en">UWP</app-link></li>
+                <li><span class="text-daurat">Project leader</span> in the development of 4 large projects</li>
+                <li>Programming of a complete CRM of 3 interconnected applications: web, Android app and <app-link id="uwp_en">UWP</app-link> program</li>
+                <li>Programming of an adaptable and reusable app to manage concerts with COVID test control</li>
                 <li>Projects built from scratch with Javascript, JQuery, CSS, Cordova, and some libraries</li>
+                <li>Development of simple, intuitive and polished UIs using CSS and libraries</li>
                 <li>Development of new functions for <app-link id="ocine_en">Ocine</app-link></li>
+                <li>Minor modifications of apps and webs</li>
                 <li>Development of a billboard system for the public to be used in multiple locations of cinemas in Madrid</li>
             </ul>
 

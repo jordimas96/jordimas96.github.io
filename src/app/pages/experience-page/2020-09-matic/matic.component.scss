@@ -124,14 +124,17 @@ h4, h5 {
 
             .titol {
                 font-size: 1.4rem;
-                margin-left: 1rem;
                 color: var(--text);
+            }
+            .subtitol {
+                font-size: 1rem;
+                @include mobil { font-size: 0.8rem; }
             }
 
             .fletxa {
                 font-size: 1.5rem;
                 margin-right: 1.5rem;
-                margin-left: 1.5rem;
+                margin-left: 1rem;
                 transition: transform 200ms;
             }
         }
@@ -147,4 +150,11 @@ h4, h5 {
 
         }
     }
+}
+
+
+
+.text-daurat {
+    color: light-dark(gold, gold);
+    font-weight: bold;
 }
