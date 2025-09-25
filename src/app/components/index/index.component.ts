@@ -52,20 +52,13 @@ export class IndexComponent implements OnInit, AfterViewInit {
         // Event al canviar de pàgina //
         this.router.events
             .pipe(filter(event => event instanceof NavigationEnd))
-            .subscribe(() => {
-                setTimeout(() => {
-                    this.elementsALaPagina = this.index.filter(e => document.getElementById(e.id));
+            .subscribe(() => setTimeout(() => this.onPageChange(), 0));
+        
+        this.route.queryParams.subscribe(() => setTimeout(() => this.onPageChange(), 0));
 
-                    // setTimeout(() => {
-                    //     console.log(this.elementsALaPagina);
-
-                    // }, 1000);
-                }, 0);
-            });
 
     }
     async ngOnInit() {
-        this.m.afterRootFadeIn(this.afterRootFadeIn.bind(this));
 
     }
 
@@ -73,7 +66,14 @@ export class IndexComponent implements OnInit, AfterViewInit {
         this.ls.index = this.indexRef.nativeElement;
     }
 
-    afterRootFadeIn() { }
+    onPageChange() {
+        this.indexRef.nativeElement.scrollLeft = 0;
+        this.elementsALaPagina = this.index.filter(e => document.getElementById(e.id));
+        this.reordenarElements(); // Segons DOM //
+        
+        
+
+    }
 
     height() {
         return this.indexRef.nativeElement.offsetHeight || 0;
@@ -103,6 +103,17 @@ export class IndexComponent implements OnInit, AfterViewInit {
         pos = pos * 1.5 - 0.25;
 
         i.scrollLeft = pos * (i.scrollWidth - i.clientWidth);
+    }
+
+    private reordenarElements() {
+        this.elementsALaPagina.sort((a, b) => {
+            const elA = document.getElementById(a.id);
+            const elB = document.getElementById(b.id);
+            if (elA && elB) {
+                return elA.compareDocumentPosition(elB) & Node.DOCUMENT_POSITION_FOLLOWING ? -1 : 1;
+            }
+            return 0;
+        });
     }
 
 }

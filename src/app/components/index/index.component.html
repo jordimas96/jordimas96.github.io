@@ -2,6 +2,6 @@
 <div #index class="index mobil" [style.top.px]="ls.getAlturaAppbar()" (mousemove)="scrollOnHover($event)">
 
     @for (e of elementsALaPagina; track e.id) {
-        <button class="boto" [class]="getTema(e)" (click)="scrollTo(e.id)" appMostrarAmbAnimacio matRipple>{{e.nom}}</button>
+        <button class="boto" [class]="getTema(e)" (click)="scrollTo(e.id)" matRipple>{{e.nom}}</button>
     }
 </div>
