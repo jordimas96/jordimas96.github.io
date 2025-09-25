@@ -157,6 +157,7 @@
                 }
             }
             &.cv {
+                // border-radius: 0.6rem;
                 &:not(.selected):hover {
                     color:              black; // 47.5 - color paper groguenc //
                     background-color:   hsl(0, 0%, 100%);

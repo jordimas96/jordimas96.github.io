@@ -1,4 +1,6 @@
 import { AfterViewInit, Component, ElementRef, OnInit, ViewChild } from '@angular/core';
+import { ActivatedRoute, NavigationEnd, Router } from '@angular/router';
+import { filter } from 'rxjs';
 import { LayoutService } from 'src/app/services/layout.service';
 import { MainService } from 'src/app/services/main.service';
 import { SharedImports } from 'src/app/shared/imports';
@@ -16,11 +18,51 @@ export class IndexComponent implements OnInit, AfterViewInit {
 
     @ViewChild('index') indexRef: ElementRef;
 
+    public readonly index = [
+        { id: "bio",                nom: ["Sobre mi", "Sobre mí", "About me"][this.m.idiomaIndex] },
+        { id: "projects-home",      nom: ["Projectes", "Proyectos", "Projects"][this.m.idiomaIndex] },
+        { id: "experiencies-home",  nom: ["Experiència", "Experiencia", "Experience"][this.m.idiomaIndex] },
+        { id: "stats",              nom: ["Estadístiques", "Estadísticas", "Stats"][this.m.idiomaIndex] },
+        { id: "languages",          nom: ["Habilitats", "Habilidades", "Skills"][this.m.idiomaIndex] },
+        { id: "indra",              nom: "Indra"              },
+        { id: "in2art",             nom: "IN2ART"             },
+        { id: "matic",              nom: "Matic"              },
+        { id: "evora",              nom: "Evora IT"           },
+        { id: "orange",             nom: "Orange"             },
+        { id: "tecnocom",           nom: "Tecnocom"           },
+        { id: "nexxia",             nom: "Nexxia"             },
+        { id: "android",            nom: ["Apps Android", "Apps Android", "Android Apps"][this.m.idiomaIndex] },
+        { id: "mad-jumpgate",       nom: ["Joc de disparar de PC", "Juego de disparos PC", "PC shooting game"][this.m.idiomaIndex] },
+        { id: "github",             nom: ["Projectes GitHub", "Proyectos GitHub", "GitHub Projects"][this.m.idiomaIndex] },
+        { id: "custom-roms",        nom: "Custom ROMs"        },
+        { id: "tasker",             nom: "Tasker"             },
+        { id: "icons",              nom: ["Icones", "Iconos", "Icons"][this.m.idiomaIndex] },
+        { id: "amazfit",            nom: "Amazfit Watchfaces" },
+    ];
+    public elementsALaPagina: any = [];
+
     constructor(
         public m: MainService,
         public ls: LayoutService,
+        public router: Router,
+        public route: ActivatedRoute,
     ) {
         m.index = this;
+
+        // Event al canviar de pàgina //
+        this.router.events
+            .pipe(filter(event => event instanceof NavigationEnd))
+            .subscribe(() => {
+                setTimeout(() => {
+                    this.elementsALaPagina = this.index.filter(e => document.getElementById(e.id));
+
+                    // setTimeout(() => {
+                    //     console.log(this.elementsALaPagina);
+
+                    // }, 1000);
+                }, 0);
+            });
+
     }
     async ngOnInit() {
         this.m.afterRootFadeIn(this.afterRootFadeIn.bind(this));
@@ -36,10 +78,6 @@ export class IndexComponent implements OnInit, AfterViewInit {
     height() {
         return this.indexRef.nativeElement.offsetHeight || 0;
     }
-
-    idExists(id) {
-        return document.getElementById(id);
-    }
     getTema(opcio) {
         if (!opcio.tema)
             opcio.tema = Array.from(document.getElementById(opcio.id)?.classList || []).find(c => c.startsWith("tema-"));
@@ -48,26 +86,12 @@ export class IndexComponent implements OnInit, AfterViewInit {
 
     scrollTo(id: string) {
         const element = document.getElementById(id);
-        let offset = this.m.appbar.height();
-
-        if (this.vistaMobil())
-            offset += this.indexRef.nativeElement.offsetHeight;
-        else
-            offset += 10;
+        let offset = this.m.appbar.height() + this.indexRef.nativeElement.offsetHeight;
 
 
         if (element) {
             window.scrollTo({ top: element.offsetTop - offset });
         }
-    }
-
-    public getAmpladaMargeEsquerre() {
-        // .content max-width: 940 //
-        return ((window.innerWidth-17) - 940) / 2;
-    }
-    public vistaMobil() {
-        return true;
-        return window.innerWidth < 1300;
     }
 
     public scrollOnHover(event: MouseEvent) {
@@ -79,29 +103,6 @@ export class IndexComponent implements OnInit, AfterViewInit {
         pos = pos * 1.5 - 0.25;
 
         i.scrollLeft = pos * (i.scrollWidth - i.clientWidth);
-    }
-
-    public getOpcions() {
-        return [
-            { id: "bio",                nom: ["Sobre mi", "Sobre mí", "About me"][this.m.idiomaIndex] },
-            { id: "projects-home",      nom: ["Projectes", "Proyectos", "Projects"][this.m.idiomaIndex] },
-            { id: "experiencies-home",  nom: ["Experiència", "Experiencia", "Experience"][this.m.idiomaIndex] },
-            { id: "languages",          nom: ["Habilitats", "Habilidades", "Skills"][this.m.idiomaIndex] },
-            { id: "indra",              nom: "Indra"              },
-            { id: "in2art",             nom: "IN2ART"             },
-            { id: "matic",              nom: "Matic"              },
-            { id: "evora",              nom: "Evora IT"           },
-            { id: "orange",             nom: "Orange"             },
-            { id: "tecnocom",           nom: "Tecnocom"           },
-            { id: "nexxia",             nom: "Nexxia"             },
-            { id: "android",            nom: "Apps Android"       },
-            { id: "mad-jumpgate",       nom: ["Joc de disparar de PC", "Juego de disparos PC", "PC shooting game"][this.m.idiomaIndex] },
-            { id: "github",             nom: ["Projectes GitHub", "Proyectos GitHub", "GitHub Projects"][this.m.idiomaIndex] },
-            { id: "custom-roms",        nom: "Custom ROMs"        },
-            { id: "tasker",             nom: "Tasker"             },
-            { id: "icons",              nom: ["Icones", "Iconos", "Icons"][this.m.idiomaIndex] },
-            { id: "amazfit",            nom: "Amazfit Watchfaces" },
-        ];
     }
 
 }

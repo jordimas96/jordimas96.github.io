@@ -90,6 +90,14 @@
         }
     }
 }
+ngx-masonry {
+    transition: opacity 0.3s;
+    
+    &.ocult {
+        scale: 0;
+        opacity: 0;
+    }
+}
 [ngxmasonryitem] {
     transition: top 0.3s, left 0.3s;
 }

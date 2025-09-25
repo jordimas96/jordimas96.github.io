@@ -31,6 +31,8 @@ export class GithubProjectsComponent implements OnInit {
 
     public repos: Array<any>;
 
+    public masonryReady = false;
+
     constructor(
         public m: MainService,
         public ts: ThemeService,
@@ -44,6 +46,11 @@ export class GithubProjectsComponent implements OnInit {
     }
 
 
+    onLayoutComplete() {
+        setTimeout(() => {
+            this.masonryReady = true;
+        }, 300);
+    }
 
 
     async carregarInfoProjects() {

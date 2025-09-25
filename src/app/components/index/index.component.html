@@ -1,19 +1,7 @@
-@if(vistaMobil()) {
-    <div #index class="index mobil" [style.top.px]="ls.getAlturaAppbar()" (mousemove)="scrollOnHover($event)">
 
-        @for (o of getOpcions(); track o.id) {
-            @if(idExists(o.id)) {
-                <button class="boto" [class]="getTema(o)" (click)="scrollTo(o.id)" appMostrarAmbAnimacio matRipple>{{o.nom}}</button>
-            }
-        }
-    </div>
-} @else {
-    <div #index class="index pc" [style.top.px]="ls.getAlturaAppbar()">
+<div #index class="index mobil" [style.top.px]="ls.getAlturaAppbar()" (mousemove)="scrollOnHover($event)">
 
-        @for (o of getOpcions(); track o.id) {
-            @if(idExists(o.id)) {
-                <button class="boto" [class]="getTema(o)" (click)="scrollTo(o.id)" appMostrarAmbAnimacio matRipple>{{o.nom}}</button>
-            }
-        }
-    </div>
-}
+    @for (e of elementsALaPagina; track e.id) {
+        <button class="boto" [class]="getTema(e)" (click)="scrollTo(e.id)" appMostrarAmbAnimacio matRipple>{{e.nom}}</button>
+    }
+</div>
