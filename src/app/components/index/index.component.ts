@@ -19,9 +19,9 @@ export class IndexComponent implements OnInit, AfterViewInit {
     @ViewChild('index') indexRef: ElementRef;
 
     public readonly index = [
-        { id: "bio",                nom: ["Sobre mi", "Sobre mí", "About me"][this.m.idiomaIndex] },
+        { id: "bio",                nom: ["Introducció", "Introducción", "Introduction"][this.m.idiomaIndex] },
         { id: "projects-home",      nom: ["Projectes", "Proyectos", "Projects"][this.m.idiomaIndex] },
-        { id: "experiencies-home",  nom: ["Experiència", "Experiencia", "Experience"][this.m.idiomaIndex] },
+        { id: "experience-home",    nom: ["Experiència", "Experiencia", "Experience"][this.m.idiomaIndex] },
         { id: "stats",              nom: ["Estadístiques", "Estadísticas", "Stats"][this.m.idiomaIndex] },
         { id: "languages",          nom: ["Habilitats", "Habilidades", "Skills"][this.m.idiomaIndex] },
         { id: "indra",              nom: "Indra"              },

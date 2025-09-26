@@ -18,7 +18,7 @@
     }
 }
 
-.index.mobil {
+.index {
     position: sticky;
     display: flex;
     flex-direction: row;
@@ -43,8 +43,10 @@
     z-index: 1005;
 
     button {
-        display: block;
         flex-shrink: 0;
+
+        display: flex;
+        gap: 0.75rem;
 
         font-size: 1.5rem;
         padding: 1rem 2rem;
@@ -57,47 +59,41 @@
             padding: 0.5rem 1rem;
             border-radius: 0.8rem;
         }
-    }
-}
 
-.index.pc {
-    position: fixed;
-
-    display: flex;
-    flex-direction: column;
-    gap: 0.5rem;
-
-    padding: 0.5rem;
-    width: calc((100% - 940px) / 2);
-    min-width: 10rem;
-    max-width: 16rem;
-
-    z-index: 1005;
-
-    button {
-        display: flex;
-        justify-content: center;
-
-        font-size: 1.7rem;
-        padding: 1rem 2rem;
-        border-radius: 1.5rem;
+        img {
+            height: 2rem;
+        }
     }
 }
 
 ::ng-deep body.scrolled {
 
-    .index.mobil {
+    .index {
         button {
             font-size: 1.2rem !important;
             padding: 0.5rem 1rem !important;
             border-radius: 1.5rem !important;
             @extend .shadow-2;
 
+            &.mad-jumpgate, &.github, &.custom-roms, &.tasker, &.amazfit {
+                padding-right: 0.5rem !important;
+            } 
+
             @include mobil {
                 font-size: 1rem !important;
                 padding: 0.5rem 0.8rem !important;
-                border-radius: 1.3rem !important;
+                border-radius: 1.5rem !important;
             }
+        }
+    }
+}
+
+
+
+.boto {
+    &.android img.icon {
+        @include light {
+            filter: brightness(0.7) saturate(2);
         }
     }
 }

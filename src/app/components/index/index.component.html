@@ -1,7 +1,84 @@
 
-<div #index class="index mobil" [style.top.px]="ls.getAlturaAppbar()" (mousemove)="scrollOnHover($event)">
+<div #index class="index" [style.top.px]="ls.getAlturaAppbar()" (mousemove)="scrollOnHover($event)">
 
     @for (e of elementsALaPagina; track e.id) {
-        <button class="boto" [class]="getTema(e)" (click)="scrollTo(e.id)" matRipple>{{e.nom}}</button>
+        @switch (e.id) {
+            @case ("bio") {
+                <button class="boto paleta-180" [class]="e.id" (click)="scrollTo(e.id)" matRipple>
+                    {{e.nom}}
+                    <i class="fa-solid fa-circle-info"></i>
+                </button>
+            }
+            @case ("projects-home") {
+                <button class="boto paleta-46" [class]="e.id" (click)="scrollTo(e.id)" matRipple>
+                    {{e.nom}}
+                    <i class="fa-solid fa-shapes" alt="Projects"></i>
+                </button>
+            }
+            @case ("experience-home") {
+                <button class="boto paleta-22" [class]="e.id" (click)="scrollTo(e.id)" matRipple>
+                    {{e.nom}}
+                    <i class="fa-solid fa-briefcase" alt="Experience"></i>
+                </button>
+            }
+            @case ("stats") {
+                <button class="boto" [class]="e.id" (click)="scrollTo(e.id)" matRipple>
+                    {{e.nom}}
+                    <i class="fa-solid fa-business-time" alt="Stats"></i>
+                </button>
+            }
+            @case ("languages") {
+                <button class="boto paleta-120" [class]="e.id" (click)="scrollTo(e.id)" matRipple>
+                    {{e.nom}}
+                    <i class="fa-solid fa-code" alt="Languages"></i>
+                </button>
+            }
+            
+            @case ("android") {
+                <button class="boto" [class]="e.id + ' ' + getTema(e)" (click)="scrollTo(e.id)" matRipple>
+                    {{e.nom}}
+                    <img src="assets/_projects/android/icons/android.png" alt="Android" class="icon py-1">
+                </button>
+            }
+            @case ("mad-jumpgate") {
+                <button class="boto" [class]="e.id + ' ' + getTema(e)" (click)="scrollTo(e.id)" matRipple>
+                    {{e.nom}}
+                    <img src="assets/_projects/mad-jumpgate/mad-jumpgate.png" alt="Mad Jumpgate - PC shooting game" class="icon rounded-4">
+                </button>
+            }
+            @case ("github") {
+                <button class="boto" [class]="e.id + ' ' + getTema(e)" (click)="scrollTo(e.id)" matRipple>
+                    {{e.nom}}
+                    <img src="assets/_projects/github/github.png" alt="GitHub" class="icon inv-dark">
+                </button>
+            }
+            @case ("custom-roms") {
+                <button class="boto" [class]="e.id + ' ' + getTema(e)" (click)="scrollTo(e.id)" matRipple>
+                    {{e.nom}}
+                    <img src="assets/_projects/aosp/fastboot.png" alt="Fastboot" class="icon">
+                </button>
+            }
+            @case ("tasker") {
+                <button class="boto" [class]="e.id + ' ' + getTema(e)" (click)="scrollTo(e.id)" matRipple>
+                    {{e.nom}}
+                    <img src="assets/_projects/tasker/tasker.png" alt="Tasker" class="icon">
+                </button>
+            }
+            @case ("icons") {
+                <button class="boto" [class]="e.id + ' ' + getTema(e)" (click)="scrollTo(e.id)" matRipple>
+                    {{e.nom}}
+                    <i class="fa-solid fa-icons"></i>
+                </button>
+            }
+            @case ("amazfit") {
+                <button class="boto" [class]="e.id + ' ' + getTema(e)" (click)="scrollTo(e.id)" matRipple>
+                    {{e.nom}}
+                    <img src="assets/_projects/amazfit/amazfit-watchfaces.png" alt="Amazfit Watchfaces" class="icon rounded-4">
+                </button>
+            }
+            @default {
+                <button class="boto" [class]="e.id + ' ' + getTema(e)" (click)="scrollTo(e.id)" matRipple>{{e.nom}}</button>
+            }
+        }
     }
 </div>
