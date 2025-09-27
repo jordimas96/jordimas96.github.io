@@ -18,7 +18,7 @@ mat-dialog-content {
         background-color: black;
 
         max-width: 100%;
-        max-height: 100%;
+        max-height: calc(100% - 7rem); // 100% - altura botó, gap, i padding del "body" //
 
         &.horitzontal {
             width: auto;
@@ -40,11 +40,14 @@ mat-dialog-content {
     }
 
     .botons {
-        .back {
-            width: 5rem;
+        .close {
+            width: 8rem;
             height: 5rem;
             padding: 0.25rem;
             font-size: 1.8rem;
+            background-color: white;
+            color: black;
+            border-radius: 2rem 2rem 3rem 3rem;
         }
     }
     
@@ -55,8 +58,8 @@ mat-dialog-content {
 ::ng-deep .iframe-modal { }
 ::ng-deep .iframe-modal-backdrop {
     // background: #6e7da5;
-    background-color: light-dark(hsl(214, 100%, 87%), hsl(214, 24%, 35%));
-    // backdrop-filter: blur(40px) saturate(2);
+    // background-color: light-dark(hsl(214, 100%, 87%), hsl(214, 24%, 35%));
+    backdrop-filter: blur(40px) saturate(2);
 }
 
 
@@ -68,5 +71,5 @@ mat-dialog-content {
 }
 
 ::ng-deep .cdk-global-overlay-wrapper {
-    padding: 50px;
+    padding: 2rem;
 }
