@@ -1,4 +1,4 @@
-import { AfterViewInit, Component, ElementRef, OnInit, ViewChild } from '@angular/core';
+import { AfterViewInit, Component, ElementRef, HostListener, OnInit, ViewChild } from '@angular/core';
 import { ActivatedRoute, NavigationEnd, Router } from '@angular/router';
 import { filter } from 'rxjs';
 import { LayoutService } from 'src/app/services/layout.service';
@@ -114,6 +114,18 @@ export class IndexComponent implements OnInit, AfterViewInit {
             }
             return 0;
         });
+    }
+
+
+
+    // Funcions //
+    @HostListener('window:scroll', ['$event'])
+    onScroll() {
+        this.m.scroll = window.scrollY;
+        if (this.m.scroll > 0)
+            this.indexRef.nativeElement.classList.add("scrolled");
+        else
+            this.indexRef.nativeElement.classList.remove("scrolled");
     }
 
 }

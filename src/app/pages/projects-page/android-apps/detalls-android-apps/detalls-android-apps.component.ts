@@ -65,7 +65,7 @@ export class DetallsAndroidAppsComponent {
         }
         
         // Tancar altres seccions //
-        $seccio.parent().parent().find(".seccio").not($seccio).each(function () {
+        $seccio.siblings().each(function () {
             $(this).removeAttr("data-open");
             $(this).find(".contingut").stop().slideUp(200);
             $(this).find("video")[0]?.pause();

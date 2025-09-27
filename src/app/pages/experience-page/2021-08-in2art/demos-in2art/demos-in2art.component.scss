@@ -36,6 +36,8 @@
             height: 100%;
 
             filter: brightness(0.4);
+            // @include light { filter: brightness(0.6); }
+            
             transition: scale 0.3s, filter 0.3s;
         }
 

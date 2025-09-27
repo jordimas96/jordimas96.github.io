@@ -1,29 +1,8 @@
 @import "src/styles.scss";
 
 .index {
-    transition: transform 0.3s;
-
-    button {
-        color: var(--text);
-        background: var(--fons-card, var(--fons-50));
-        backdrop-filter: blur(20px);
-
-        transition: transform 0.15s, font-size 0.3s, padding 0.3s, border-radius 0.3s, box-shadow 0.3s;
-
-        &:hover {
-            // scale: 1.06;
-            filter: brightness(1.5);
-            z-index: 1;
-        }
-    }
-}
-
-.index {
     position: sticky;
     display: flex;
-    flex-direction: row;
-    flex-wrap: nowrap;
-    justify-content: flex-start;
     gap: 0.5rem;
 
     width: max-content;
@@ -32,17 +11,23 @@
     padding: 0.5rem;
 
     // backdrop-filter: blur(20px) saturate(1.5);
-    // border-radius: 1.5rem;
+    // border-radius: 1.9rem;
 
     overflow: hidden;
     overflow-x: auto;
     scrollbar-width: none;
     
     pointer-events: none;
+    
+    transition: transform 0.3s;
 
     z-index: 1005;
 
     button {
+        color: var(--text);
+        background: var(--fons-card, var(--fons-50));
+        backdrop-filter: blur(20px);
+
         flex-shrink: 0;
 
         display: flex;
@@ -54,36 +39,51 @@
 
         pointer-events: all;
 
+        transition: transform 0.15s, font-size 0.3s, padding 0.3s, border-radius 0.3s, box-shadow 0.3s;
+
         @include mobil {
             font-size: 1.2rem;
             padding: 0.5rem 1rem;
             border-radius: 0.8rem;
         }
 
-        img {
+        &:hover {
+            // scale: 1.06;
+            filter: brightness(1.5);
+            z-index: 1;
+        }
+
+        img.icon {
             height: 2rem;
+        }
+
+        &.mad-jumpgate, &.amazfit {
+            .icon {
+                border-radius: 0.25rem;
+                transition: border-radius 0.3s;
+            }
         }
     }
 }
 
-::ng-deep body.scrolled {
+.index.scrolled {
+    button {
+        font-size: 1.2rem !important;
+        padding: 0.5rem 1rem !important;
+        border-radius: 1.5rem !important;
+        @extend .shadow-2;
 
-    .index {
-        button {
-            font-size: 1.2rem !important;
-            padding: 0.5rem 1rem !important;
+        &.mad-jumpgate, &.github, &.custom-roms, &.tasker, &.amazfit {
+            padding-right: 0.5rem !important;
+        }
+        &.mad-jumpgate, &.amazfit {
+            .icon { border-radius: 1rem; }
+        }
+
+        @include mobil {
+            font-size: 1rem !important;
+            padding: 0.5rem 0.8rem !important;
             border-radius: 1.5rem !important;
-            @extend .shadow-2;
-
-            &.mad-jumpgate, &.github, &.custom-roms, &.tasker, &.amazfit {
-                padding-right: 0.5rem !important;
-            } 
-
-            @include mobil {
-                font-size: 1rem !important;
-                padding: 0.5rem 0.8rem !important;
-                border-radius: 1.5rem !important;
-            }
         }
     }
 }
