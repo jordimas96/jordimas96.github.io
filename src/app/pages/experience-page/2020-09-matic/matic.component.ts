@@ -36,7 +36,7 @@ export class MaticComponent {
         ][this.m.idiomaIndex];
     }
     getLink2() {
-        return "assets/_experience/matic/systemblock-captura-mobil.jpg";
+        return "assets/_experience/matic/systemblock/systemblock-captura-mobil.jpg";
     }
 
 

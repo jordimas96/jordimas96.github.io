@@ -33,17 +33,18 @@
 
         @if (m.ca) { Les meves aplicacions estan disponibles a diferents botigues: }
         @if (m.es) { Mis aplicaciones están disponibles en diferentes tiendas: }
-        @if (m.en) { My apps are available on different markets: }
+        @if (m.en) { My apps are available on different stores: }
     </article>
     <div class="boto-i-qr row">
-        <div class="col-12 col-sm-6">
+        <!-- Play Store -->
+        <div class="col">
             <a [href]="'https://jordimas96.github.io/r/play-store'" class="boto ambIcona" appMostrarAmbAnimacio matRipple>
                 Play Store
                 <img src="assets/_projects/android/icons/buttons/play-store.png" alt="Google Play Store" class="logo">
             </a>
         </div>
         @if (!m.esAndroid()) {
-            <div class="col-12 col-sm-6" appMostrarAmbAnimacio>
+            <div class="col" appMostrarAmbAnimacio>
                 <qrcode [qrdata]="'https://jordimas96.github.io/r/play-store'" [errorCorrectionLevel]="'M'"
                     colorDark="#005727" colorLight="#b8ffd8" title="Play Store QR"></qrcode>
 
@@ -53,14 +54,17 @@
                     @if (m.en) { Scan here from an Android device<br>to visit my Play Store profile }
                 </div>
             </div>
+            <div class="w-100"></div>
         }
-        <div class="col-12 col-sm-6">
-            <a [href]="getAmazonLink_apps()" class="boto botoAmazon paleta-192" appMostrarAmbAnimacio matRipple>
+
+        <!-- Amazon Appstore -->
+        <div class="col">
+            <a [href]="getAmazonLink_apps()" class="boto boto-amazon paleta-192" appMostrarAmbAnimacio matRipple>
                 <img src="assets/_projects/android/icons/buttons/amazon-appstore.png" alt="Amazon Appstore" class="logo">
             </a>
         </div>
         @if (!m.esAndroid()) {
-            <div class="col-12 col-sm-6 paleta-192" appMostrarAmbAnimacio>
+            <div class="col paleta-192" appMostrarAmbAnimacio>
                 <qrcode [qrdata]="getAmazonLink_apps()" [errorCorrectionLevel]="'M'"
                     colorDark="#152939" colorLight="#b8f0ff" title="Amazon Appstore QR"></qrcode>
 
@@ -70,6 +74,27 @@
                     @if (m.en) { Scan here from an Android device<br>to visit my Amazon Appstore profile }
                 </div>
             </div>
+            <div class="w-100"></div>
+        }
+
+        <!-- APKPure -->
+        <div class="col">
+            <a href="https://apkpure.net/developer/Jordi%20Mas%20Parramon" class="boto boto-apkpure paleta-149" appMostrarAmbAnimacio matRipple>
+                <img src="assets/_projects/android/icons/buttons/apkpure.svg" alt="APKPure" class="logo">
+            </a>
+        </div>
+        @if (!m.esAndroid()) {
+            <div class="col paleta-149" appMostrarAmbAnimacio>
+                <qrcode qrdata="https://apkpure.net/developer/Jordi%20Mas%20Parramon" [errorCorrectionLevel]="'M'"
+                    colorDark="#12683c" colorLight="#fff" title="APKPure QR"></qrcode>
+
+                <div class="scan-here-text text-80">
+                    @if (m.ca) { Escaneja el QR des d'un dispositiu Android<br>per a visitar el meu perfil de APKPure }
+                    @if (m.es) { Escanea el QR desde un dispositivo Android<br>para visitar mi perfil de APKPure }
+                    @if (m.en) { Scan here from an Android device<br>to visit my APKPure profile }
+                </div>
+            </div>
+            <div class="w-100"></div>
         }
     </div>
 
