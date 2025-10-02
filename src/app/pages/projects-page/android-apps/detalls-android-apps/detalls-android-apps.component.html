@@ -27,7 +27,7 @@
         <div class="contingut flex-column flex-sm-row" style="display:none;">
             <div class="info flex-8">
                 <div>
-                    <div class="text mb-3">
+                    <div class="text mb-5">
                         @if (m.ca) {
                             És una aplicació que et permet afegir alguns filtres al fons de pantalla, com ara desenfocament, saturació i canvi de to (canvi de colors) i aplicar-lo a la pantalla d'inici i la de bloqueig. També et permet descarregar la imatge editada.<br>
                             Aquesta app la vaig fer principalment en Kotlin, però amb algunes funcions en Java.
@@ -89,7 +89,7 @@
         <div class="contingut flex-column flex-sm-row" style="display:none;">
             <div class="info flex-1">
                 <div>
-                    <div class="text mb-3">
+                    <div class="text mb-5">
                         @if (m.ca) {
                             Text Mimicker et permet canviar un text en homoglifs, que són caràcters físicament idèntics però internament diferents, amb l'objectiu d'evitar banejos automàtics per paraules clau al escriure comentaris en algunes xarxes socials. També afegeix aquesta funció al menú contextual d'Android en seleccionar text, per a millor accessibilitat.<br>
                             Aquesta app la vaig fer principalment en Kotlin, però amb algunes funcions en Java.
@@ -112,6 +112,9 @@
                         </a>
                         <a href="https://apkpure.net/text-mimicker/com.jmasp.textmimicker" [class.samsung-squircle]="m.esSamsung()" [class.xiaomi-rounded]="m.esXiaomi()" [class.apple-squircle]="m.esIOS()" appMostrarAmbAnimacio matRipple>
                             <img src="assets/_projects/android/icons/stores/apkpure.png" alt="APKPure" title="APKPure" class="logo">
+                        </a>
+                        <a href="https://apkcombo.com/text-mimicker/com.jmasp.textmimicker" [class.samsung-squircle]="m.esSamsung()" [class.xiaomi-rounded]="m.esXiaomi()" [class.apple-squircle]="m.esIOS()" appMostrarAmbAnimacio matRipple>
+                            <img src="assets/_projects/android/icons/stores/apkcombo.png" alt="APKCombo" title="APKCombo" class="logo">
                         </a>
                     </div>
                 </div>
@@ -151,18 +154,33 @@
         <div class="contingut flex-column" style="display:none;">
             <div class="info">
                 <div>
-                    <div class="text mb-3">
+                    <div class="text mb-5">
                         @if (m.ca) {
-                            És una aplicació pensada per utilitzar-se d'eina mentre es juga al popular joc Among Us. Aquesta aplicació ofereix un menú flotant molt convenient per marcar qui és sospitós, innocent o impostor, per descartar els altres tripulants i trobar els impostors.<br>
-                            Aquesta app va ser la primera que vaig fer en Android Studio, i la vaig fer principalment en Java.
+                            És una aplicació pensada per utilitzar-se d'eina mentre es juga al popular joc <i>Among Us</i>. Ofereix un menú flotant molt pràctic per a marcar els jugadors com a sospitosos, innocents o impostors, i així descartar tripulants i trobar els impostors.<br>
+                            Va ser la primera aplicació que vaig fer en Android Studio, i la vaig fer principalment en Java.<br><br>
+
+                            Vaig començar a desenvolupar l'aplicació el 2020 amb el nom <i>Among Useful</i>, però a causa de la censura per copyright, i malgrat tots els canvis que hi vaig fer, em va ser impossible publicar-la a la Play Store, tot i que <app-link id="among-useful">va arribar a estar publicada durant uns dies</app-link>. El 2023 vaig reprendre el projecte i vaig adaptar-lo a les novetats dels últims 3 anys del joc (nous colors de jugadors, diferents nivells, etc.). També vaig renovar el disseny amb els meus nous coneixements i els meus gustos d'aquell moment per a fer-lo més modern: vaig aplicar colors més harmoniosos i vores més arrodonides. També vaig aplicar característiques de Material You, creat al 2021, com ara colors dinàmics segons el fons de pantalla.<br><br>
+
+                            L'aplicació la vaig rebatejar com a SUS Tracker i li vaig dissenar una nova icona, aquesta vegada allunyada de qualsevol semblança a la original, i aquest cop sí que va ser publicada.<br>
+                            A més, per normativa contra la incitació al tabac, la nova versió també va rebre canvis: vaig haver d'eliminar el cigarret del personatge de la icona.
                         }
                         @if (m.es) {
-                            Es una aplicación pensada para usarse de herramienta mientras se juega al popular juego Among Us. Esta aplicación ofrece un menú flotante muy conveniente para marcar quién es sospechoso, inocente o impostor, para descartar a los demás tripulantes y encontrar a los impostores.<br>
-                            Esta app fue la primera que hice en Android Studio, y la hice principalmente en Java.
+                            Es una aplicación pensada para utilizarse como herramienta mientras se juega al popular juego <i>Among Us</i>. Ofrece un menú flotante muy práctico para marcar a los jugadores como sospechosos, inocentes o impostores, y así descartar tripulantes y encontrar a los impostores.<br>
+                            Fue la primera aplicación que hice en Android Studio, y la desarrollé principalmente en Java.<br><br>
+
+                            Comencé a desarrollar la aplicación en 2020 con el nombre <i>Among Useful</i>, pero debido a la censura por copyright, y pese a todos los cambios que hice, me fue imposible publicarla en la Play Store, aunque <app-link id="among-useful">llegó a estar publicada durante unos días</app-link>. En 2023 retomé el proyecto y lo adapté a las novedades de los últimos 3 años del juego (nuevos colores de jugadores, diferentes niveles, etc.). También renové el diseño con mis nuevos conocimientos y mis gustos de ese momento para hacerlo más moderno: apliqué colores más armoniosos y bordes más redondeados. Además, incorporé características de Material You, creado en 2021, como colores dinámicos según el fondo de pantalla.<br><br>
+
+                            Renombré la aplicación como SUS Tracker y diseñé un nuevo icono, esta vez alejado de cualquier semejanza con el original, y esta vez sí fue publicada.<br>
+                            Además, por normativa contra la incitación al tabaco, la nueva versión también recibió cambios: tuve que eliminar el cigarrillo del personaje del icono.
                         }
                         @if (m.en) {
-                            It is an application designed to be used as a tool while playing the popular game Among Us. This application offers a very convenient floating menu to mark who is suspicious, safe or impostor, to rule out the other crew members and find the impostors.<br>
-                            This app was the first one I made in Android Studio, and I made it mainly in Java.
+                            This is an application designed to be used as a tool while playing the popular game <i>Among Us</i>. It offers a very practical floating menu to mark players as suspicious, innocent, or impostors, helping to eliminate crewmates and identify the impostors.<br>
+                            It was the first application I made in Android Studio, and I developed it mainly in Java.<br><br>
+
+                            I started developing the app in 2020 under the name <i>Among Useful</i>, but due to copyright censorship, and despite all the changes I made, it was impossible for me to publish it on the Play Store, although <app-link id="among-useful">it was available for a few days</app-link>. In 2023, I resumed the project and adapted it to the new features of the last 3 years of the game (new player colors, different levels, etc.). I also redesigned it with my new skills and my tastes at that time to make it more modern: I applied more harmonious colors and more rounded edges. I also incorporated Material You features, created in 2021, such as dynamic colors based on the wallpaper.<br><br>
+
+                            I renamed the app to SUS Tracker and designed a new icon, this time avoiding any resemblance to the original, and this time it was successfully published.<br>
+                            Additionally, due to anti-tobacco incitement regulations, the new version also received changes: I had to remove the character's cigarette from the icon.
                         }
                     </div>
                     <div class="iconesStores shadow-filter-1">
@@ -172,8 +190,15 @@
                         <a href="https://apkpure.net/sus-tracker/com.jmasp.amongushelper" [class.samsung-squircle]="m.esSamsung()" [class.xiaomi-rounded]="m.esXiaomi()" [class.apple-squircle]="m.esIOS()" appMostrarAmbAnimacio matRipple>
                             <img src="assets/_projects/android/icons/stores/apkpure.png" alt="APKPure" title="APKPure" class="logo">
                         </a>
+                        <a href="https://apkcombo.com/sus-tracker/com.jmasp.amongushelper" [class.samsung-squircle]="m.esSamsung()" [class.xiaomi-rounded]="m.esXiaomi()" [class.apple-squircle]="m.esIOS()" appMostrarAmbAnimacio matRipple>
+                            <img src="assets/_projects/android/icons/stores/apkcombo.png" alt="APKCombo" title="APKCombo" class="logo">
+                        </a>
                     </div>
                 </div>
+
+                <!-- A lo largo de varias iteraciones, el icono pasó de imitar el original a un diseño completamente propio -->
+                 
+                <!--        < evolució de la icona >        < evolució del disseny >        -->
 
                 <div class="skills">
                     <app-skill [skill]="Skills.JAVA" />
@@ -209,7 +234,7 @@
         <div class="contingut flex-column flex-sm-row" style="display:none;">
             <div class="info flex-8">
                 <div>
-                    <div class="text mb-3">
+                    <div class="text mb-5">
                         @if (m.ca) {
                             Aquesta és la primera aplicació que vaig fer a Android, és un joc fet amb Unity. L'objectiu del joc és mantenir la bola dins del tauler. Pots clicar la pantalla per posar cubs, controlar la bola i impedir que s'escapi. Les boles petites són bonus, les pots agafar per aconseguir millores. Hi ha 7 tipus de bonus, 6 de bons i 1 de dolent. Per a fer aquesta aplicació vaig fer servir majoritàriament C# i una mica de PHP per a la funcionalitat de guardar puntuacions a una base de dades online i tenir un tauler amb els rècords mundials.
                         }
@@ -229,6 +254,12 @@
                         </a>
                         <a href="https://apkpure.net/breaking-ball/com.JMasp.BreakingBall" [class.samsung-squircle]="m.esSamsung()" [class.xiaomi-rounded]="m.esXiaomi()" [class.apple-squircle]="m.esIOS()" appMostrarAmbAnimacio matRipple>
                             <img src="assets/_projects/android/icons/stores/apkpure.png" alt="APKPure" title="APKPure" class="logo">
+                        </a>
+                        <a href="https://apkcombo.com/breaking-ball/com.JMasp.BreakingBall" [class.samsung-squircle]="m.esSamsung()" [class.xiaomi-rounded]="m.esXiaomi()" [class.apple-squircle]="m.esIOS()" appMostrarAmbAnimacio matRipple>
+                            <img src="assets/_projects/android/icons/stores/apkcombo.png" alt="APKCombo" title="APKCombo" class="logo">
+                        </a>
+                        <a href="https://www.appbrain.com/app/breaking-ball/com.JMasp.BreakingBall" [class.samsung-squircle]="m.esSamsung()" [class.xiaomi-rounded]="m.esXiaomi()" [class.apple-squircle]="m.esIOS()" appMostrarAmbAnimacio matRipple>
+                            <img src="assets/_projects/android/icons/stores/appbrain.png" alt="AppBrain" title="AppBrain" class="logo">
                         </a>
                     </div>
                 </div>
@@ -279,7 +310,7 @@
         </button>
         <div class="contingut flex-column flex-sm-row" style="display:none;">
             <div class="info flex-8">
-                <div class="text">
+                <div class="text mb-2">
                     @if (m.ca) {
                         Aplicació mòbil que vaig fer quan traballava a Matic, per a l'empresa System Block, una empresa de molls de càrrega. Permet als tècnics gesionar les visites tècniques al client. Durant la visita, poden introduir-hi la informació de la intervenció, peces utilitzades i necessàries per fer la feina.<br><br>
 
@@ -362,7 +393,7 @@
         <div class="contingut flex-column flex-sm-row" style="display:none;">
             <div class="info flex-8">
                 <div>
-                    <div class="text">
+                    <div class="text mb-5">
                         @if (m.ca) {
                             Aplicació mòbil que vaig fer quan traballava a Matic. Permet gestionar l'accés a esdeveniments durant la pandèmia. L'aplicació permet als usuaris fer-se un test de COVID en centres autoritzats i, si són negatius, obtenir un QR per a accedir a l'esdeveniment.<br><br>
 
@@ -415,6 +446,13 @@
                         <a href="https://apkpure.net/canet-rock-test/es.appcess.canetrocktest/download/1.0.6" [class.samsung-squircle]="m.esSamsung()" [class.xiaomi-rounded]="m.esXiaomi()" [class.apple-squircle]="m.esIOS()" appMostrarAmbAnimacio matRipple>
                             <img src="assets/_projects/android/icons/stores/apkpure.png" alt="APKPure" title="APKPure" class="logo">
                         </a>
+                        <a href="https://apkcombo.com/canet-rock-test/es.appcess.canetrocktest" [class.samsung-squircle]="m.esSamsung()" [class.xiaomi-rounded]="m.esXiaomi()" [class.apple-squircle]="m.esIOS()" appMostrarAmbAnimacio matRipple>
+                            <img src="assets/_projects/android/icons/stores/apkcombo.png" alt="APKCombo" title="APKCombo" class="logo">
+                        </a>
+                        <a href="https://www.appbrain.com/app/canet-rock-test/es.appcess.canetrocktest" [class.samsung-squircle]="m.esSamsung()" [class.xiaomi-rounded]="m.esXiaomi()" [class.apple-squircle]="m.esIOS()" appMostrarAmbAnimacio matRipple>
+                            <img src="assets/_projects/android/icons/stores/appbrain.png" alt="AppBrain" title="AppBrain" class="logo">
+                        </a>
+                        <!-- https://appparapc.com/apk/10789372/ -->
                     </div>
                 </div>
 

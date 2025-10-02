@@ -20,6 +20,8 @@ export class Links {
         "material-you": "https://m3.material.io/",
         "dynamic-colors": "https://developer.android.com/develop/ui/views/theming/dynamic-colors",
 
+        "among-useful": "https://apkcombo.com/among-useful/com.jmasp.amongustool",
+
         "alvea": "https://alvea.es/",
 
         "ministerio-exteriores_ca": "https://www.exteriores.gob.es/ca",
