@@ -2,7 +2,9 @@
 
 
 // Efecte hover links en PC //
-a {
+a, a:not([href]):not([class]) {
+    @include reset-a;
+
     display: inline;
     position: relative;// fa com el z-index //
     color: var(--link);
@@ -14,8 +16,9 @@ a {
 
     padding: 2px 6px;
     margin: 0 -6px;
-    border-radius: 10rem; //0.5rem;
+    border-radius: 1rem; //0.5rem;
 
+    cursor: pointer;
     text-decoration: none;
     text-wrap: nowrap;
 
