@@ -113,4 +113,17 @@ export class MainService {
         }, $("app-root").is(":visible") ? 0 : this.tempsDelayCarregaPag); // Retard fadein pagina //
     }
 
+    scrollTo(element: string | Element) {
+        if (typeof (element) == "string")
+            element = document.querySelector(element)!;
+
+        if (!element) return;
+
+        const offset = this.appbar.height() + this.index.indexRef.nativeElement.offsetHeight;
+
+        const rect = element.getBoundingClientRect();
+        const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+        window.scrollTo({ top: rect.top + scrollTop - offset });
+    }
+
 }

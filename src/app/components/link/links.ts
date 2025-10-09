@@ -22,12 +22,17 @@ export class Links {
 
         "among-useful": "https://apkcombo.com/among-useful/com.jmasp.amongustool",
 
+
         "alvea": "https://alvea.es/",
 
         "ministerio-exteriores_ca": "https://www.exteriores.gob.es/ca",
         "ministerio-exteriores_es": "https://www.exteriores.gob.es/",
         "ministerio-exteriores_en": "https://www.exteriores.gob.es/en",
         "accessibilitat-aa": "https://www.audioeye.com/post/wcag-conformance-levels/",
+
+        "felicitacio-demo-crisis": "assets/_experience/indra/felicitacio-demo-crisis.png",
+
+
 
         "onboarding-evora": "assets/_experience/evora/documents/Jordi Mas Parramon EvoraIT onboarding 2023.pdf",
 

@@ -57,103 +57,244 @@
         }
     </article> -->
     <article class="descripcio mb-4">
-        @if (m.ca) {
-            <h5>Principal desenvolupador d'una web per al Ministeri d'Exteriors</h5>
-            <p>
-                En aquesta empresa vaig treballar per a <app-link id="indra">Indra</app-link>, una consultora que gestiona diversos projectes per al Gobierno de España, contractat per <app-link id="alvea">Alvea</app-link>.<br>
-                Principal desenvolupador frontend d'un backoffice per al <app-link id="ministerio-exteriores">Ministerio de Asuntos Exteriores y Cooperación</app-link>, que permetrà als consolats i ambaixades proporcionar suport als ciutadans espanyols que es troben a l'estranger durant situacions de crisi, com ara atemptats terroristes o catàstrofes naturals. L'aplicació permetrà gestionar grups de ciutadans per a organitzar trasllats, salconduits, repatriacions, renovació de documents, comunicacions i atenció a necessitats especials, entre d'altres serveis.<br><br>
+        <h5>
+            @if (m.ca) { Desenvolupador Angular per al Ministeri d'Exteriors }
+            @if (m.es) { Desenvolupador Angular para el Ministerio de Exteriores }
+            @if (m.en) { Angular Developer for the Ministry of Foreign Affairs }
+        </h5>
 
-                Vam iniciar el projecte creant una <app-link [href]="getLinkDintelComponents()">llibreria de components</app-link> en Angular, utilitzant PrimeNG, Angular Material i altres plugins com a base. Aquesta llibreria inclou tant elements comuns en formularis (selectors, radiobuttons, checkboxes, calendaris, mapes interactius) com components habituals en interfícies d'usuari (botons, cards, toasts, menús desplegables, breadcrumbs, etc.).<br><br>
+        <div class="mb-4">
+            @if (m.ca) {
+                Aquesta feina la vaig dur a terme a través d'<app-link id="indra">Indra</app-link>, una consultora que gestiona diversos projectes per al <i>Gobierno de España</i>, contractat per <app-link id="alvea">Alvea</app-link>.<br><br>
+            }
+            @if (m.es) {
+                Este trabajo lo llevé a cabo a través de <app-link id="indra">Indra</app-link>, una consultora que gestiona varios proyectos para el Gobierno de España, contratado por <app-link id="alvea">Alvea</app-link>.<br><br>
+            }
+            @if (m.en) {
+                I carried out this work through <app-link id="indra">Indra</app-link>, a company that manages several projects for the Government of Spain, contracted by <app-link id="alvea">Alvea</app-link>.<br><br>
+            }
 
-                Tant els components com la web estan desenvolupats seguint uns estils estrictament definits, amb cada aspecte del disseny (colors, formes, espais, fonts, mides, animacions) fortament marcat. L'estructura de la pàgina és semblant a la de les altres webs oficials de l'estat. Els estils estan completament desacoblats i organitzats.<br><br>
 
-                L'aplicació compta amb suport per a diversos idiomes: castellà, anglès, català, euskera, gallec, asturià i francès.<br><br>
+            <div class="accordion">
+                <div class="card crisis">
+                    <button class="boto-desplegable" (click)="toggleSeccio($event.currentTarget)" matRipple>
+                        <div class="d-flex flex-column text-start ps-3">
+                            <div class="titol">
+                                @if (m.ca) { Projecte <i>Crisis y Emergencias</i> }
+                                @if (m.es) { Proyecto Crisis y Emergencias }
+                                @if (m.en) { Crises and Emergencies project }
+                            </div>
+                            <!-- <div class="subtitol"></div> -->
+                        </div>
+                        <i class="fa-solid fa-chevron-down fletxa"></i>
+                    </button>
+                    <div class="contingut flex-column" style="display:none;">
+                        @if (m.ca) {
+                            <h5>Descripció del projecte</h5>
+                            Principal desenvolupador frontend d'un backoffice per al <i><app-link id="ministerio-exteriores">Ministerio de Asuntos Exteriores y Cooperación</app-link></i>, destinat a ajudar consolats i ambaixades a oferir suport als ciutadans espanyols que es troben a l'estranger durant situacions de crisi, com ara atemptats terroristes o catàstrofes naturals.<br>
+                            L'aplicació permet gestionar grups de ciutadans per a organitzar trasllats, salconduits, repatriacions, renovació de documents, comunicacions i atenció a necessitats especials, entre d'altres serveis.<br><br>
 
-                L'aplicació és una Single Page Application d'Angular. Té sistema d'emmagatzematge en caché de les peticions per a garantir-ne el funcionament en zones amb poca cobertura, o amb problemes de connexió, cosa freqüent en situacions d'emergència. A més, compleix tots els estàndards d'accessibilitat de <app-link id="accessibilitat-aa">nivell AA</app-link>.
-            </p>
+                            <h5>Funcionalitats principals</h5>
+                            L'aplicació és una Single Page Application desenvolupada amb Angular. Inclou diverses seccions per crear i gestionar crisis, afegir afectats i evacuats, així com els seus acompanyants i persones de contacte. Permet gestionar els documents dels afectats i portar un registre de comunicacions, tant individuals com en grup, i crear i seguir protocols d'actuació específics per a cada crisi.<br>
+                            Té mapes amb la zona afectada que s'està gestionant, amb ubicacions i enllaços interactius. Els mapes, taules i formularis d'edició tenen enllaços per navegar ràpidament per tota la web i accedir directament a les seccions. També disposa de sistema de gestió d'alertes i permet enviar comunicacions massives per correu electrònic, SMS i notificacions push.<br><br>
 
-            <h4>Assoliments</h4>
-            <ul>
-                <!-- <li><span class="text-daurat">Líder de la part forntend del projecte</span></li> -->
-                <li>Participació en el desenvolupament i maquetació de la nostra pròpia llibreria completa de components per al projecte i també per a altres webs oficials del Ministeri</li>
-                <li>Vaig desenvolupar diversos components per a un projecte específic que van agradar tant que, sense haver sigut dissenyats per a la llibreria, van acabar integrant-s'hi i van ser adoptats en diverses aplicacions oficials del Ministeri</li>
-                <li>Desenvolupament de l'aplicació seguint una guia d'estils molt estricta</li>
-                <li>En poc temps em vaig erigir com el <span class="text-daurat">desenvolupador de referència en CSS</span> i maquetació dins l'equip i el projecte</li>
-            </ul>
-        }
+                            
+                            <h5>Tecnologia i accessibilitat</h5>
+                            Utilitza un sistema de stores i subscriptions per gestionar l'estat i emmagatzemar dades en caché, especialment útil en zones amb poca cobertura, habituals en situacions d'emergència. També sincronitza les dades i permet accedir als registres d'afectats provinents de tres fonts diferents del ministeri. Mostra mapes amb ubicacions i enllaços, i també té diversos enllaços per a accedir a seccions més ràpidament i directament.<br>
+                            A més, compleix tots els estàndards d'accessibilitat de <app-link id="accessibilitat-aa">nivell AA</app-link> i compta amb suport per a diversos idiomes: castellà, anglès, català, euskera, gallec, asturià i francès.<br><br>
 
-        @if (m.es) {
-            <h5>Principal desarrollador de una web para el Ministerio de Exteriores</h5>
-            <p>
-                En esta empresa trabajé para <app-link id="indra">Indra</app-link>, una consultora que gestiona varios proyectos para el Gobierno de España, contratado por <app-link id="alvea">Alvea</app-link>.<br>
-                Principal desarrollador frontend de un backoffice para el <app-link id="ministerio-exteriores">Ministerio de Asuntos Exteriores y Cooperación</app-link>, que permitirá a los consulados y embajadas proporcionar soporte a los ciudadanos españoles que se encuentran en el extranjero durante situaciones de crisis, como atentados terroristas o catástrofes naturales. La aplicación permitirá gestionar grupos de ciudadanos para organizar traslados, salvoconductos, repatriaciones, renovación de documentos, comunicaciones y atención a necesidades especiales, entre otros servicios.<br><br>
+                            <h5>Estructura i estils</h5>
+                            L'estructura de la pàgina és semblant a la de les altres webs oficials de l'estat. Els estils estan completament desacoblats i organitzats. L'aplicació utilitza la llibreria Dintel, <app-link (click)="goToDintel($event)">part de la qual la vaig desenvolupar jo mateix</app-link>, per als seus components i estructures.<br><br>
 
-                Iniciamos el proyecto creando una <app-link [href]="getLinkDintelComponents()">librería de componentes</app-link> en Angular, utilizando PrimeNG, Angular Material y otros plugins como base. Esta librería incluye tanto elementos comunes en formularios (selectores, radiobuttons, checkboxes, calendarios, mapas interactivos) como componentes habituales en interfaces de usuario (botones, cards, toasts, menús desplegables, breadcrumbs, etc.).<br><br>
+                            <h5>Equip i rol</h5>
+                            Vaig començar el projecte com a líder de l'equip frontend, format per tres persones. Al cap de quatre mesos vaig cedir el rol de cap de projecte a un perfil sènior amb àmplia trajectòria a l'empresa, i vaig continuar com a desenvolupador frontend principal. Posteriorment, l'equip es va ampliar amb dos programadors més, que van anar canviant segons la càrrega de treball, mantenint l'equip entre tres i quatre membres en total.<br><br>
 
-                Tanto los componentes como la web están desarrollados siguiendo unos estilos estrictamente definidos, con cada aspecto del diseño (colores, formas, espacios, fuentes, tamaños, animaciones) fuertemente marcado. La estructura de la página es similar a la de las otras webs oficiales del estado. Los estilos están completamente desacoplados y organizados.<br><br>
+                            <h5>Feedback del client</h5>
+                            Quan es va fer la demo final abans de l'entrega, el client va <app-link id="felicitacio-demo-crisis">destacar especialment 🏆</app-link> com de polida i ben feta que estava l'aplicació.<br><br>
 
-                La aplicación cuenta con soporte para varios idiomas: español, inglés, catalán, euskera, gallego, asturiano y francés.<br><br>
 
-                La aplicación es una Single Page Application de Angular. Tiene sistema de almacenamiento en caché de las peticiones para garantizar su funcionamiento en zonas con poca cobertura, o con problemas de conexión, algo frecuente en situaciones de emergencia. Además, cumple con todos los estándares de accesibilidad de <app-link id="accessibilitat-aa">nivel AA</app-link>.
-            </p>
+                            <h4>Assoliments</h4>
+                            <ul>
+                                <li><span class="text-daurat">Líder del frontend i principal desenvolupador</span> del projecte, des de zero fins a l'entrega</li>
+                                <li>Desenvolupament de l'aplicació seguint una guia d'estils molt estricta</li>
+                                <li>En poc temps em vaig erigir com el <span class="text-daurat">desenvolupador de referència en CSS</span> i maquetació dins l'equip i el projecte</li>
+                            </ul>
+                        }
 
-            <h4>Logros</h4>
-            <ul>
-                <!-- <li><span class="text-daurat">Líder de la parte frontend del proyecto</span></li> -->
-                <li>Participación en el desarrollo y maquetación de nuestra propia librería completa de componentes para el proyecto y también para otras webs oficiales del Ministerio</li>
-                <li>Desarrollé varios componentes para un proyecto específico que gustaron tanto que, sin haber sido diseñados para la librería, acabaron integrándose allí y fueron adoptados en varias de las aplicaciones oficiales del Ministerio</li>
-                <li>Desarrollo de la aplicación siguiendo una guía de estilos muy estricta</li>
-                <li>Al poco tiempo me erigí como el <span class="text-daurat">desarrollador de referencia en CSS</span> y maquetación dentro del equipo y el proyecto</li>
-            </ul>
-        }
+                        @if (m.es) {
+                            <h5>Descripción del proyecto</h5>
+                            Principal desarrollador frontend de un backoffice para el <i><app-link id="ministerio-exteriores">Ministerio de Asuntos Exteriores y Cooperación</app-link></i>, destinado a ayudar consulados y embajadas a ofrecer soporte a los ciudadanos españoles que se encuentran en el extranjero durante situaciones de crisis, como atentados terroristas o catástrofes naturales.<br>
+                            La aplicación permite gestionar grupos de ciudadanos para organizar traslados, salvoconductos, repatriaciones, renovación de documentos, comunicaciones y atención a necesidades especiales, entre otros servicios.<br><br>
 
-        @if (m.en) {
-            <h5>Lead developer of a website for the Ministry of Foreign Affairs</h5>
-            <p>
-                In this company I worked for <app-link id="indra">Indra</app-link>, a consultancy that manages several projects for the Government of Spain, hired by <app-link id="alvea">Alvea</app-link>.<br>
-                Lead frontend developer of a back-office system for the <app-link id="ministerio-exteriores">Ministry of Foreign Affairs and Cooperation</app-link>, which will allow consulates and embassies to provide support to Spanish citizens who are abroad during crises situations, such as terrorist attacks or natural disasters. The application will allow managing groups of citizens to organize transfers, safe conduct passes, repatriations, document renewals, communications and attention to special needs, among other services.<br><br>
+                            <h5>Funcionalidades principales</h5>
+                            La aplicación es una Single Page Application desarrollada con Angular. Incluye varias secciones para crear y gestionar crisis, añadir afectados y evacuados, así como sus acompañantes y personas de contacto. Permite gestionar los documentos de los afectados y llevar un registro de comunicaciones, tanto individuales como en grupo, y crear y seguir protocolos de actuación específicos para cada crisis.<br>
+                            Tiene mapas con la zona afectada que se está gestionando, con ubicaciones y enlaces interactivos. Los mapas, tablas y formularios de edición tienen enlaces para navegar rápidamente por toda la web y acceder directamente a las secciones. También dispone de sistema de gestión de alertas y permite enviar comunicaciones masivas por correo electrónico, SMS y notificaciones push.<br><br>
 
-                We started the project by creating a <app-link [href]="getLinkDintelComponents()">component library</app-link> in Angular, using PrimeNG, Angular Material and other plugins as a base. This library includes both common form elements (selectors, radio buttons, checkboxes, calendars, interactive maps) and common user interface components (buttons, cards, toasts, drop-down menus, breadcrumbs, etc.). <br><br>
+                            <h5>Tecnología y accesibilidad</h5>
+                            Utiliza un sistema de stores y subscriptions para gestionar el estado y almacenar datos en caché, especialmente útil en zonas con poca cobertura, habituales en situaciones de emergencia. También sincroniza los datos y permite acceder a los registros de afectados provenientes de tres fuentes diferentes del ministerio. Muestra mapas con ubicaciones y enlaces, y también tiene varios enlaces para acceder a secciones más rápidamente y directamente.<br>
+                            Además, cumple todos los estándares de accesibilidad de <app-link id="accessibilitat-aa">nivel AA</app-link> y cuenta con soporte para varios idiomas: castellano, inglés, catalán, euskera, gallego, asturiano y francés.<br><br>
 
-                Both the components and the website are developed following strictly defined styles, with each aspect of the design (colors, shapes, spaces, fonts, sizes, animations) strongly established. The structure of the page is similar to that of the other official government websites. The styles are completely decoupled and organized. <br><br>
+                            <h5>Estructura y estilos</h5>
+                            La estructura de la página es similar a la de otras webs oficiales del estado. Los estilos están completamente desacoplados y organizados. La aplicación utiliza la librería Dintel, <app-link (click)="goToDintel($event)">parte de la cual desarrollé yo mismo</app-link>, para sus componentes y estructuras.<br><br>
 
-                The application has support for several languages: Spanish, English, Catalan, Basque, Galician, Asturian and French.<br><br>
+                            <h5>Equipo y rol</h5>
+                            Comencé el proyecto como líder del equipo frontend, formado por tres personas. Tras cuatro meses cedí el rol de jefe de proyecto a un perfil senior con amplia trayectoria en la empresa, y continué como desarrollador frontend principal. Posteriormente, el equipo se amplió con dos programadores más, que fueron cambiando según la carga de trabajo, manteniendo el equipo entre tres y cuatro miembros en total.<br><br>
 
-                The application is an Angular Single Page Application. It has a request caching system to ensure its operation in areas with poor coverage, or with connection problems, something common in emergency situations. It also meets all <app-link id="accessibilitat-aa">level AA</app-link> accessibility standards.
-            </p>
+                            <h5>Feedback del cliente</h5>
+                            Cuando se realizó la demo final antes de la entrega, el cliente <app-link id="felicitacio-demo-crisis">destacó especialmente 🏆</app-link> lo pulida y bien hecha que estaba la aplicación.<br><br>
 
-            <h4>Achievements</h4>
-            <ul>
-                <!-- <li><span class="text-daurat">Frontend project leader</span></li> -->
-                <li>Participation in the development and layout of our own complete library of components for the project and also for other official websites of the Ministry</li>
-                <li>I developed several components for a specific project which were so liked that, without having been designed for the library, they ended up being integrated there and were adopted in many of the Ministry's official applications</li>
-                <li>Application development following a very strict style guide</li>
-                <li>In a short time I established myself as the <span class="text-daurat">reference developer for CSS</span> and layout within the team and the project</li>
-            </ul>
-        }
+                            <h4>Logros</h4>
+                            <ul>
+                                <li><span class="text-daurat">Líder del frontend y principal desarrollador</span> del proyecto, desde cero hasta la entrega</li>
+                                <li>Desarrollo de la aplicación siguiendo una guía de estilos muy estricta</li>
+                                <li>En poco tiempo me convertí en el <span class="text-daurat">desarrollador de referencia en CSS</span> y maquetación dentro del equipo y el proyecto</li>
+                            </ul>
+                        }
 
-        @if (m.ca) { <h4>Demo interactiva</h4> }
-        @if (m.es) { <h4>Demo interactiva</h4> }
-        @if (m.en) { <h4>Interactive demo</h4> }
+                        @if (m.en) {
+                            <h5>Project Description</h5>
+                            Lead frontend developer of a backoffice for the <i><app-link id="ministerio-exteriores">Ministry of Foreign Affairs and Cooperation</app-link></i>, aimed at helping consulates and embassies provide support to Spanish citizens abroad during crisis situations, such as terrorist attacks or natural disasters.<br>
+                            The application allows managing groups of citizens to organize transfers, travel permits, repatriations, document renewals, communications, and attention to special needs, among other services.<br><br>
 
-        <div class="text-80 font-italic mt-3 mb-2">
-            @if (m.ca) { Interactua amb els botons! }
-            @if (m.es) { ¡Interactúa con los botones! }
-            @if (m.en) { Interact with the buttons! }
+                            <h5>Main Features</h5>
+                            The application is a Single Page Application developed with Angular. It includes several sections to create and manage crises, add affected and evacuated people, as well as their companions and contacts. It allows managing affected people's documents and keeping a record of communications, both individual and group, and creating and following specific action protocols for each crisis.<br>
+                            It has maps with the affected area being managed, with locations and interactive links. Maps, tables, and editing forms have links to quickly navigate the web and access sections directly. It also has an alert management system and allows sending mass communications via email, SMS, and push notifications.<br><br>
+
+                            <h5>Technology and Accessibility</h5>
+                            It uses a stores and subscriptions system to manage state and cache data, especially useful in low-coverage areas, common in emergencies. It also synchronizes data and allows access to affected people records from three different ministry sources. It shows maps with locations and links and also has several links to access sections more quickly and directly.<br>
+                            Additionally, it meets all <app-link id="accessibilitat-aa">level AA</app-link> accessibility standards and supports multiple languages: Spanish, English, Catalan, Basque, Galician, Asturian, and French.<br><br>
+
+                            <h5>Structure and Styles</h5>
+                            The page structure is similar to other official state websites. Styles are fully decoupled and organized. The application uses the Dintel library, <app-link (click)="goToDintel($event)">part of which I developed myself</app-link>, for its components and structures.<br><br>
+
+                            <h5>Team and Role</h5>
+                            I started the project as the frontend team lead, consisting of three people. After four months, I passed the project lead role to a senior profile with extensive experience in the company and continued as lead frontend developer. Later, the team expanded with two more programmers, who rotated according to workload, keeping the team between three and four members in total.<br><br>
+
+                            <h5>Client Feedback</h5>
+                            When the final demo was shown before delivery, the client <app-link id="felicitacio-demo-crisis">especially highlighted 🏆</app-link> how polished and well-made the application was.<br><br>
+
+                            <h4>Achievements</h4>
+                            <ul>
+                                <li><span class="text-daurat">Frontend lead and main developer</span> of the project, from scratch to delivery</li>
+                                <li>Development of the application following a very strict style guide</li>
+                                <li>In a short time, I became the <span class="text-daurat">reference developer for CSS</span> and layout within the team and the project</li>
+                            </ul>
+                        }
+
+                        <!-- imatge blanca amb una icona groc pàlid d'un trofeu i al fer hover que es torni groc intens (i fons groguenc?) -> obrir png del correu en popup -->
+                        
+                        <!-- <video navegacio aplicacio> -->
+                    </div>
+                </div>
+
+                <div class="card dintel">
+                    <button class="boto-desplegable" (click)="toggleSeccio($event.currentTarget)" matRipple>
+                        <div class="d-flex flex-column text-start ps-3">
+                            <div class="titol">
+                                @if (m.ca) { Llibreria de components Dintel }
+                                @if (m.es) { Librería de componentes Dintel }
+                                @if (m.en) { Dintel components library }
+                            </div>
+                            <!-- <div class="subtitol"></div> -->
+                        </div>
+                        <i class="fa-solid fa-chevron-down fletxa"></i>
+                    </button>
+                    <div class="contingut flex-column flex-sm-row" style="display:none;">
+                        @if (m.ca) {
+                            <h5>Equip i col·laboració</h5>
+                            Poc després d'entrar a l'empresa, vaig formar part d'un equip de 5 desenvolupadors amb els quals vam crear una <app-link [href]="getLinkDintelComponents()">llibreria de components</app-link> en Angular, utilitzant PrimeNG, Angular Material i altres plugins com a base.<br><br>
+
+                            <h5>Contingut i funcionalitat de la llibreria</h5>
+                            La llibreria consta de 44 components reutilitzables, des de formularis i elements d'interfície bàsics (inputs, selectors, breadcrumbs) fins a components avançats com menús, mapes interactius, selectors autocompletables connectats amb Google, toasts, i utilitats comunes per a les aplicacions del ministeri.<br><br>
+                            
+                            <h5>Estils i disseny</h5>
+                            Els components estan desenvolupats seguint uns estils estrictament definits, amb cada aspecte del disseny (colors, formes, espais, fonts, mides, animacions) fortament marcat. <br><br>
+
+                            <h5>Manteniment i desenvolupament posterior</h5>
+                            Durant els següents projectes a l'empresa, ocasionalment vaig anar tornant a aquesta llibreria per a fer canvis i també desenvolupar nous components, com ara un mapa interactiu on es podien marcar àrees on hi havia una crisi, punts amb informació, i rutes al llarg de diferents etapes d'evacuacions. També vaig desenvolupar un selector autocompletable de llocs, que utilitzava dades que provenien d'una API de Google.<br><br>
+                            
+
+                            <h4>Assoliments</h4>
+                            <ul>
+                                <li>Participació en la creació i maquetació de la llibreria de components utilitzada en totes les webs oficials del ministeri</li>
+                                <li>Desenvolupament de diversos components improvisats per a un projecte específic que van agradar tant que, sense haver sigut dissenyats per a la llibreria, van acabar formant-ne part i van ser adoptats directament en diverses aplicacions oficials del ministeri</li>
+                                <li>Creació d'un mapa interactiu amb diversos modes de visualització, marcadors de colors, clusters opcionals i rutes. El codi anticipa què vols i ho fa per defecte</li>
+                            </ul>
+                        }
+
+                        @if (m.es) {
+                            <h5>Equipo y colaboración</h5>
+                            Poco después de entrar en la empresa, formé parte de un equipo de 5 desarrolladores con los que creamos una <app-link [href]="getLinkDintelComponents()">librería de componentes</app-link> en Angular, utilizando PrimeNG, Angular Material y otros plugins como base.<br><br>
+
+                            <h5>Contenido y funcionalidad de la librería</h5>
+                            La librería consta de 44 componentes reutilizables, desde formularios y elementos de interfaz básicos (inputs, selectores, breadcrumbs) hasta componentes avanzados como menús, mapas interactivos, selectores autocompletables conectados con Google, toasts y utilidades comunes para las aplicaciones del ministerio.<br><br>
+
+                            <h5>Estilos y diseño</h5>
+                            Los componentes están desarrollados siguiendo unos estilos estrictamente definidos, con cada aspecto del diseño (colores, formas, espacios, fuentes, tamaños, animaciones) fuertemente marcado.<br><br>
+
+                            <h5>Mantenimiento y desarrollo posterior</h5>
+                            Durante los siguientes proyectos en la empresa, ocasionalmente regresé a esta librería para hacer cambios y también desarrollar nuevos componentes, como un mapa interactivo donde se podían marcar áreas en crisis, puntos con información y rutas a lo largo de diferentes etapas de evacuación. También desarrollé un selector autocompletable de lugares, que utilizaba datos provenientes de una API de Google.<br><br>
+
+                            <h4>Logros</h4>
+                            <ul>
+                                <li>Participación en la creación y maquetación de la librería de componentes utilizada en todas las webs oficiales del ministerio</li>
+                                <li>Desarrollo de varios componentes improvisados para un proyecto específico que gustaron tanto que, sin haber sido diseñados para la librería, terminaron formando parte de ella y fueron adoptados directamente en varias aplicaciones oficiales del ministerio</li>
+                                <li>Creación de un mapa interactivo con varios modos de visualización, marcadores de colores, clusters opcionales y rutas. El código anticipa lo que quieres y lo hace por defecto</li>
+                            </ul>
+                        }
+
+                        @if (m.en) {
+                            <h5>Team and Collaboration</h5>
+                            Shortly after joining the company, I became part of a team of 5 developers with whom we created an Angular <app-link [href]="getLinkDintelComponents()">component library</app-link>, using PrimeNG, Angular Material, and other plugins as a base.<br><br>
+
+                            <h5>Library Content and Functionality</h5>
+                            The library consists of 44 reusable components, from basic forms and UI elements (inputs, selectors, breadcrumbs) to advanced components such as menus, interactive maps, autocompletable selectors connected to Google, toasts, and common utilities for the ministry's applications.<br><br>
+
+                            <h5>Styles and Design</h5>
+                            Components are developed following strictly defined styles, with every aspect of the design (colors, shapes, spacing, fonts, sizes, animations) strongly enforced.<br><br>
+
+                            <h5>Maintenance and Further Development</h5>
+                            During subsequent projects at the company, I occasionally returned to this library to make changes and also develop new components, such as an interactive map where crisis areas, information points, and evacuation routes could be marked. I also developed an autocompletable location selector using data from a Google API.<br><br>
+
+                            <h4>Achievements</h4>
+                            <ul>
+                                <li>Participation in the creation and layout of the component library used in all official ministry websites</li>
+                                <li>Development of several improvised components for a specific project that were so well received that, although not originally designed for the library, they became part of it and were adopted directly in several official ministry applications</li>
+                                <li>Creation of an interactive map with multiple viewing modes, color markers, optional clusters, and routes. The code anticipates what you want and does it by default</li>
+                            </ul>
+                        }
+
+
+                        <!-- <vídeo mapa> -->
+
+                        @if (m.ca) { <h4>Demo interactiva</h4> }
+                        @if (m.es) { <h4>Demo interactiva</h4> }
+                        @if (m.en) { <h4>Interactive demo</h4> }
+
+                        <div class="text-80 font-italic mt-3 mb-2">
+                            @if (m.ca) { Interactua amb els botons per veure el seu comportament i l'estètica de la guia d'estils de la llibreria }
+                            @if (m.es) { Interactúa con los botones para ver su comportamiento y estética de la guía de estilos de la librería }
+                            @if (m.en) { Interact with the buttons to see their behavior and the aesthetics of the library style guide }
+                        </div>
+
+                        <section class="seccio-boto-dintel shadow-2-l">
+                            <a [href]="getLinkDintelHome()" class="rs dnt-button primary">
+                                @if (m.ca) { Llibreria Dintel }
+                                @if (m.es) { Librería Dintel }
+                                @if (m.en) { Dintel library }
+                            </a>
+                            <a [href]="getLinkDintelComponents()" class="rs dnt-button secondary">
+                                @if (m.ca) { Veure components }
+                                @if (m.es) { Ver componentes }
+                                @if (m.en) { See components }
+                            </a>
+                        </section>
+                    </div>
+                </div>
+
+            </div>
         </div>
 
-        <section class="seccio-boto-dintel shadow-2-l">
-            <a [href]="getLinkDintelHome()" class="rs dnt-button primary">
-                @if (m.ca) { Llibreria Dintel }
-                @if (m.es) { Librería Dintel }
-                @if (m.en) { Dintel library }
-            </a>
-            <a [href]="getLinkDintelComponents()" class="rs dnt-button secondary">
-                @if (m.ca) { Veure components }
-                @if (m.es) { Ver componentes }
-                @if (m.en) { See components }
-            </a>
-        </section>
         
     </article>
 

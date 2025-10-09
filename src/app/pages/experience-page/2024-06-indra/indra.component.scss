@@ -20,13 +20,103 @@ a.link-boto-titol {
     p, ul {
         margin-bottom: 1.5rem;
     }
+
+    // .card {
+    //     background-color: light-dark(hsla(216, 100%, 86%, 0.57), hsla(216, 92%, 70%, 0.25));
+    //     border-radius: 1.8rem;
+    //     padding: 1rem;
+    // }
 }
 
 h4, h5 {
-    color: var(--text-90);
+    color: var(--text);
 }
 
 .text-daurat {
     color: light-dark(var(--link), gold);
     font-weight: bold;
+}
+
+
+// Acordeó //
+.accordion {
+    display: flex;
+    flex-direction: column;
+    gap: 0.2rem;
+
+    border-radius: 2rem;
+    
+    > div {
+        border-radius: 0.5rem;
+
+        &:first-of-type {
+            border-top-left-radius: 2rem;
+            border-top-right-radius: 2rem;
+        }
+        &:last-of-type {
+            border-bottom-left-radius: 2rem;
+            border-bottom-right-radius: 2rem;
+        }
+
+        background-color: light-dark(hsla(216, 100%, 86%, 0.542), hsla(216, 92%, 70%, 0.25));
+            // background-color: light-dark(hsl(216, 100%, 86%), hsl(216deg 61.44% 47.65% / 59%));
+
+        &[data-open] .boto-desplegable {
+            @include firefox {
+                position: sticky;
+                top: 118.86px;
+                @include mobil { top: 107.67px; }
+                // background-color: inherit; // light-dark(#b9f2d6, #477059);
+                backdrop-filter: blur(20px);
+                z-index: 10;
+            }
+            
+            .fletxa {
+                transform: rotate(-180deg);
+            }
+        }
+        &:not([data-open]):hover {
+            background-color: light-dark(hsla(216, 100%, 86%, 0.947), hsla(216, 100%, 73%, 0.445));
+        }
+
+        .boto-desplegable {
+            @include reset-button;
+
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 5rem;
+            width: 100%;
+            padding: 0.5rem;
+
+            border-radius: inherit;
+
+            .titol {
+                font-size: 1.4rem;
+                color: var(--text);
+            }
+            .subtitol {
+                font-size: 1rem;
+                @include mobil { font-size: 0.8rem; }
+            }
+
+            .fletxa {
+                font-size: 1.5rem;
+                margin-right: 1.5rem;
+                margin-left: 1rem;
+                transition: transform 200ms;
+            }
+        }
+        .contingut {
+
+            padding: 0 1rem 1rem;
+            transition: padding-left 0.3s, padding-right 0.3s;
+
+            @include tablet {
+                padding: 0 1.5rem 1.5rem;
+            }
+
+
+        }
+    }
 }
