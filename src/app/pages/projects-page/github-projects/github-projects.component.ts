@@ -82,7 +82,12 @@ export class GithubProjectsComponent implements OnInit {
             },
             {
                 "name": "uniform-luminosity-palette",
-                "cardHue": 204
+                "cardHue": 300,
+                "text": {
+                    ca: "Algunes proves per obtenir una funció SCSS que, donat un (to, saturació, lumínia) pugui generar un color, no basat en la llum de l'HSL, sinó en la llum percebuda.",
+                    es: "Algunas pruebas para obtener una función SCSS que, dado un (tono, sat, lum) pueda generar un color, no basado en la luz del hsl, sino basado en la luz percibida",
+                    en: "Some tests to get a SCSS function that, given a (hue, sat, lum) can generate a color, not based on the light of the hsl, but based on the perceived light",
+                }
             },
             {
                 "name": "icon-editor-2016",
@@ -109,12 +114,12 @@ export class GithubProjectsComponent implements OnInit {
         this.repos = await Promise.all(repos.map(async (repo) => {
 
             return {
-                ...repo,
                 title: repo.title || repo.name.replace(/[-_]+/g, " "),
                 text: await this.getReadmes(repo.name),
                 url: `https://jordimas96.github.io/${repo.name}`,
                 iconUrl: `https://raw.githubusercontent.com/jordimas96/${repo.name}/main/docs/favicon.ico`,
                 iconUrlBackup: `https://raw.githubusercontent.com/jordimas96/${repo.name}/main/favicon.ico`,
+                ...repo,
             }
         }));
 

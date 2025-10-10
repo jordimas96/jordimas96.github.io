@@ -19,9 +19,9 @@ export class IndraComponent {
     Skills = Skills;
 
     public links = {
-        ca: "https://alvea.es/",
-        es: "https://alvea.es/",
-        en: "https://alvea.es/",
+        ca: "https://www.indracompany.com/es/",
+        es: "https://www.indracompany.com/es/",
+        en: "https://www.indracompany.com/en/",
     }
 
     constructor(
