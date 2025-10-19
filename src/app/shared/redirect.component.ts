@@ -40,8 +40,9 @@ export class RedirectComponent {
                 return `/assets/documents/cv/CV Jordi Mas Parramon ${idioma.toUpperCase()}.pdf`;
             else
                 return `/assets/documents/cv/`;
-            
         }
+
+        if (url == "foto" || url == "photo") return "/assets/foto-carnet-2020.jpg";
 
 
 

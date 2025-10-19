@@ -1,2 +1,8 @@
 @import "src/styles.scss";
 @import "../page.scss";
+
+.proximament-mes {
+    color: light-dark(hsl(0, 0%, 10%), hsl(0, 0%, 90%));
+    text-align: center;
+    font-style: italic;
+}
