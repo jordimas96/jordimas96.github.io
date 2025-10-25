@@ -30,6 +30,8 @@ export class Links {
         "ministerio-exteriores_en": "https://www.exteriores.gob.es/en",
         "accessibilitat-aa": "https://www.audioeye.com/post/wcag-conformance-levels/",
 
+        "formly": "https://formly.dev/",
+
         "felicitacio-demo-crisis": "assets/_experience/indra/felicitacio-demo-crisis.png",
 
 

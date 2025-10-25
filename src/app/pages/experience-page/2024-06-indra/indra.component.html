@@ -181,6 +181,10 @@
                             </ul>
                         }
 
+                        <a href="assets/_experience/indra/felicitacio-demo-crisis.png" class="rs trofeu card m-auto" [title]="textTrofeu">
+                            <i class="fa-solid fa-trophy"></i>
+                        </a>
+
                         <!-- imatge blanca amb una icona groc pàlid d'un trofeu i al fer hover que es torni groc intens (i fons groguenc?) -> obrir png del correu en popup -->
                         
                         <!-- <video navegacio aplicacio> -->
@@ -289,6 +293,52 @@
                                 @if (m.en) { See components }
                             </a>
                         </section>
+                    </div>
+                </div>
+
+                <div class="card sede">
+                    <button class="boto-desplegable" (click)="toggleSeccio($event.currentTarget)" matRipple>
+                        <div class="d-flex flex-column text-start ps-3">
+                            <div class="titol">
+                                @if (m.ca) { Projecte <i>Sede</i> }
+                                @if (m.es) { Proyecto Sede }
+                                @if (m.en) { <i>Sede</i> project }
+                            </div>
+                            <!-- <div class="subtitol"></div> -->
+                        </div>
+                        <i class="fa-solid fa-chevron-down fletxa"></i>
+                    </button>
+                    <div class="contingut flex-column" style="display:none;">
+                        @if (m.ca) {
+                            En aquest projecte vaig resoldre indicències i vaig fer petites millores en una aplicació:
+
+                            <ul class="mt-2 mb-0">
+                                <li>Crear i modificar formularis amb <app-link id="formly">Formly</app-link></li>
+                                <li>Arreglar problemes de la llibreria de components utilitzada</li>
+                                <li>Adaptar algunes pantalles a vista <b>responsive</b> per a mòbil i tablets mitjanes</li>
+                            </ul>
+                        }
+
+                        @if (m.es) {
+                            En este proyecto resolví incidencias e hice pequeñas mejoras en una aplicación:
+
+                            <ul class="mt-2 mb-0">
+                                <li>Crear y modificar formularios con <app-link id="formly">Formly</app-link></li>
+                                <li>Arreglar problemas de la librería de componentes utilizada</li>
+                                <li>Adaptar algunas pantallas a vista <b>responsive</b> para móvil y tablets medianas</li>
+                            </ul>
+                        }
+
+                        @if (m.en) {
+                            In this project, I resolved issues and made small improvements to an application:
+
+                            <ul class="mt-2 mb-0">
+                                <li>Create and modify forms with <app-link id="formly">Formly</app-link></li>
+                                <li>Fix issues with the component library used</li>
+                                <li>Adapt some screens to <b>responsive</b> view for mobile and medium tablets</li>
+                            </ul>
+                        }
+
                     </div>
                 </div>
 

@@ -38,6 +38,38 @@ h4, h5 {
 }
 
 
+.trofeu.card {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 12.54rem;
+    height: 9rem;
+
+    background-color: light-dark(rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.6));
+    color: #ffe75f;
+
+    border-radius: 1.75rem;
+
+    transition: background-color 0.3s, color 0.3s, border-radius 0.3s;
+
+    i {
+        font-size: 4rem;
+        filter: drop-shadow(0 1px 4px rgba(99, 84, 0, 0.12)) drop-shadow(0 1px 4px rgba(99, 84, 0, 0.24)) !important;
+
+        transition: scale 0.3s;
+    }
+
+    &:hover {
+        background-color: gold;
+        color: white;
+        border-radius: 1rem;
+
+        i { scale: 1.35; }
+    }
+}
+
+
 // Acordeó //
 .accordion {
     display: flex;

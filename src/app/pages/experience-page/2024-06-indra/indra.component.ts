@@ -47,6 +47,14 @@ export class IndraComponent {
             "https://dintel.redsara.es/content/dintel/en/componentes.html",
         ][this.m.idiomaIndex];
     }
+    
+    get textTrofeu() {
+        return [
+            "Correu de felicitació pel projecte",
+            "Correo de felicitación por el proyecto",
+            "Congratulatory email for the project"
+        ][this.m.idiomaIndex];
+    }
 
     goToDintel(event) {
         event.preventDefault();
