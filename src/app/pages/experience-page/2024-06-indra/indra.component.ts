@@ -1,9 +1,11 @@
 import { Component } from '@angular/core';
+import { MatDialog, MatDialogConfig } from '@angular/material/dialog';
 import { SkillComponent } from 'src/app/components/skill/skill.component';
 import { Skills } from 'src/app/enums/skills.enum';
 import { MainService } from 'src/app/services/main.service';
 import { ThemeService } from 'src/app/services/theme.service';
 import { SharedImports } from 'src/app/shared/imports';
+import { IframeTemplateComponent } from './iframe-template/iframe-template.component';
 
 
 @Component({
@@ -26,7 +28,8 @@ export class IndraComponent {
 
     constructor(
         public m: MainService,
-        public ts: ThemeService
+        public ts: ThemeService,
+        private dialog: MatDialog
     ) { }
 
     getLink() {
@@ -69,6 +72,23 @@ export class IndraComponent {
         $dintel.find(".contingut").stop().show();
 
         this.m.scrollTo($dintel[0]);
+    }
+
+    obrirModalFotoCorreu() {
+
+        this.dialog.open(
+            IframeTemplateComponent,
+            <MatDialogConfig>{
+                panelClass: 'iframe-modal',
+                backdropClass: 'iframe-modal-backdrop',
+                width: '100%',
+                maxWidth: '100%',
+                height: '100%',
+                maxHeight: '100%',
+
+            }
+        );
+
     }
 
 
