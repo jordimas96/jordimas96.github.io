@@ -64,13 +64,13 @@ export class SidebarComponent implements OnInit, AfterViewInit {
     }
 
     llegirVistaCookie() {
-        let vista = Utils.getCookie("vista");
+        let vista = localStorage.getItem("vista");
         // Si no hi ha cookie //
         if (!vista) this.rail = true;
         else this.rail = vista == "rail";
     }
     escriureVistaCookie(rail) {
-        Utils.setCookieDays("vista", rail ? "rail" : "drawer");
+        localStorage.setItem("vista", rail ? "rail" : "drawer");
     }
 
     toggle() {

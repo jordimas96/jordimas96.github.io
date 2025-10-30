@@ -1,4 +1,5 @@
 import { Injectable } from "@angular/core";
+import { Utils } from 'src/app/shared/utils';
 import { MainService } from "./main.service";
 
 @Injectable({
@@ -10,14 +11,14 @@ export class BlockGoogleAnalyticsService {
     private isBlocked = false;
 
     constructor(private m: MainService) {
-        if (m.debug || localStorage.getItem(this.KEY)) {
+        if (m.debug || Utils.getFlag(this.KEY)) {
             this.block();
         }
-        
+
     }
 
     public block() {
-        localStorage.setItem(this.KEY, "1");
+        Utils.setFlag(this.KEY, true);
         window['ga-disable-G-W0GMXKXDST'] = true;
         this.isBlocked = true;
     }
@@ -28,14 +29,14 @@ export class BlockGoogleAnalyticsService {
         const currentTime = Date.now();
         const elapsedTime = currentTime - this.lastClickTime;
         this.lastClickTime = currentTime;
-    
+
         if (elapsedTime < 300)
             this.numClicks++;
         else
             this.numClicks = 1;
 
         if (this.m.debug) console.log("%cclick " + this.numClicks, `color: hsl(${this.numClicks * 12}, 100%, 50%)`);
-    
+
         if (this.numClicks >= 10) {
             if (this.isBlocked)
                 console.log("%cGoogle Analytics already were blocked on this device", "color: lime");

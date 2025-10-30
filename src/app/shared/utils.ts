@@ -39,6 +39,21 @@ export class Utils {
         return this.getCookie(cname) != "";
     }
 
+    public static setFlag(key: string, value: boolean) {
+        localStorage.setItem(key, value ? "1" : "0");
+    }
+    public static getFlag(key: string): boolean | null {
+        let value = localStorage.getItem(key);
+        if (value === null) return null;
+        return !!parseInt(value);
+    }
+    public static removeFlag(key: string) {
+        localStorage.removeItem(key);
+    }
+    public static hasFlag(key: string): boolean {
+        return this.getFlag(key) === null;
+    }
+
 
 
 

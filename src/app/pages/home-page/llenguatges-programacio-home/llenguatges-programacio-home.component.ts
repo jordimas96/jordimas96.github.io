@@ -46,7 +46,7 @@ export class LlenguatgesProgramacioComponent {
                 - (this.ls.getAlturaAppbar() + this.ls.index.offsetHeight)
         });
 
-        Utils.setCookieDays("showTime", this.showTime);
+        Utils.setFlag("showTime", this.showTime);
     }
     async sort_click(sorted?) {
         if (sorted != undefined) this.sorted = sorted

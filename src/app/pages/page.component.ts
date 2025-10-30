@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { MainService } from 'src/app/services/main.service';
 import { Seccio, SECCIONS } from 'src/app/shared/seccions';
+import { Utils } from 'src/app/shared/utils';
 
 @Component({
     template: '',
@@ -13,14 +14,14 @@ export class PageComponent {
     public seccions: Seccio[];
 
     constructor(public m: MainService, public route: ActivatedRoute) {
-        this.route.queryParams.subscribe((params) =>  this.processarParams(params));
+        this.route.queryParams.subscribe((params) => this.processarParams(params));
     }
 
     async ngOnInit() {
         this.m.afterRootFadeIn(this.afterRootFadeIn.bind(this));
 
         // Google Analytics //
-        if (!localStorage.getItem("googleAnalyticsBlocked"))
+        if (!Utils.getFlag("googleAnalyticsBlocked"))
             this.m.gas.pageView(window.location.pathname);
     }
     afterRootFadeIn() { }

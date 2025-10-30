@@ -98,10 +98,6 @@ export class MainService {
         console.log(text, `color: ${color}; font-weight: bold`);
     }
 
-    // Forçar temes - debug //
-    public force(tema) { Utils.setCookieDays("forçartema", tema) }
-    public noforce() { Utils.removeCookie("forçartema") }
-
 
     public sanitize(url) { return this.sanitizer.bypassSecurityTrustResourceUrl(url); }
 

@@ -46,7 +46,7 @@ export class SelectorIdiomaComponent {
 
 
         document.documentElement.lang = this.m.idioma;
-        Utils.setCookieDays("lang", this.m.idioma);
+        localStorage.setItem("lang", this.m.idioma);
     }
 
 }

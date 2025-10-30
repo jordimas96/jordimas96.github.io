@@ -23,7 +23,7 @@ export class ThemeService {
     }
 
     setTemaSegonsHora(horaActual = new Date().getHours()) {
-        if (Utils.hasCookie("forçartema")) { this.tema = Utils.getCookie("forçartema"); return; }
+        if (localStorage.getItem("forçartema")) { this.tema = localStorage.getItem("forçartema")!; return; }
 
         this.tema = "nit"; return;
 
