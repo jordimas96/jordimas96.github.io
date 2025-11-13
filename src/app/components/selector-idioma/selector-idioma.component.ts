@@ -25,7 +25,7 @@ export class SelectorIdiomaComponent {
 
     establirIdiomaDefecte() {
         // Detectar idioma i guardar-lo //
-        this.m.idioma = Utils.getCookie("lang") || navigator.language.split("-")[0];
+        this.m.idioma = localStorage.getItem("lang") || navigator.language.split("-")[0];
 
         // Si l'idioma detectat no es al select, el posem a anglès per defecte //
         if (!$("#idioma > option").toArray().map(e => $(e).val()).includes(this.m.idioma))

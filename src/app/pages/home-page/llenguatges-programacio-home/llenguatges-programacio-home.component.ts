@@ -27,7 +27,7 @@ export class LlenguatgesProgramacioComponent {
         public exp: ExperienceCalculatorService,
         public ls: LayoutService,
     ) {
-        this.showTime = Utils.getCookie("showTime") == "1";
+        this.showTime = !!Utils.getFlag("showTime");
     }
 
 

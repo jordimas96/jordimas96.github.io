@@ -149,12 +149,8 @@ export class DarkModeComponent {
     }
 
     setDarkMode() {
-        // Establir variable dark mode //
-        this.ts.modeFosc = !!parseInt(Utils.getCookie("darkmode"));
-
-        // Si no te cookie el traiem de system //
-        if (!Utils.hasFlag("darkmode"))
-            this.ts.modeFosc = Utils.systemDarkMode();
+        // Establir variable dark mode. Si no te cookie el traiem de system //
+        this.ts.modeFosc = Utils.getFlag("darkmode") ?? Utils.systemDarkMode();
     }
 
 }
