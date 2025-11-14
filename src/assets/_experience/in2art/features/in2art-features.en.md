@@ -48,7 +48,7 @@ IN2ART is a social network for artists, collectors, and art enthusiasts. The pla
 
 ---
 
-**Author:** Jordi Mas Parramon — Lead frontend developer of the IN2ART social network. Responsible for frontend, design, and part of the backend.
+_**Author:** Jordi Mas Parramon — Lead frontend developer of the IN2ART social network. Responsible for frontend, design, and part of the backend._
 
-Portfolio: [Jordi Mas Parramon Portfolio](https://jordimas96.github.io/)
-IN2ART Project: [IN2ART](https://in2.art/)
+_Portfolio: [Jordi Mas Parramon Portfolio](https://jordimas96.github.io/)
+IN2ART Project: [IN2ART](https://in2.art/)_
