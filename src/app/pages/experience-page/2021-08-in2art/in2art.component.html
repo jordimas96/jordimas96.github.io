@@ -1,18 +1,10 @@
 <section id="in2art" class="tema-in2art card-themed bg-colored section">
     <div class="titol-top-card section-title d-flex align-items-center justify-content-between mb-2">
-        <a [href]="getLink()" class="rs link-boto-titol gap-3" (mouseenter)="isDown=true" matRipple>
+        <a [href]="getLink()" class="rs link-boto-titol gap-3" matRipple>
             IN2ART
             <img src="assets/_experience/in2art/in2art.png" alt="In2art" class="title-icon inv-dark">
             <span class="fletxa">↗</span>
         </a>
-        @if(isDown) { <span class="webDownMsg" appMostrarAmbAnimacio>
-            <!-- <i class="fa-solid fa-person-digging"></i> -->
-            <!-- <i class="fa-solid fa-file-circle-xmark"></i> -->
-            <i class="fa-solid fa-dumpster-fire"></i>
-            @if(m.ca) { Web actualment no disponible }
-            @if(m.es) { Web actualmente no disponible }
-            @if(m.en) { Web currently unavailable }
-        </span> }
     </div>
     <!-- <article class="descripcio mb-4">
         @if (m.ca) {

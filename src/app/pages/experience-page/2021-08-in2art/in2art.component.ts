@@ -21,12 +21,10 @@ export class In2artComponent {
     Skills = Skills;
 
     public links = {
-        ca: "https://in2.art/es",
-        es: "https://in2.art/es",
-        en: "https://in2.art/en",
+        ca: "https://in2.art/",
+        es: "https://in2.art/Social/es-es/",
+        en: "https://in2.art/Social/en-uk/",
     };
-
-    public isDown = false; // I have no way to actually know it, just manually checking the web //
 
     constructor(public m: MainService) { }
 
