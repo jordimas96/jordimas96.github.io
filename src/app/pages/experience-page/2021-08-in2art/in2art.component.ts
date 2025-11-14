@@ -26,6 +26,8 @@ export class In2artComponent {
         en: "https://in2.art/en",
     };
 
+    public readmeUrl = "";
+
     public isDown = false; // I have no way to actually know it, just manually checking the web //
 
     constructor(public m: MainService) { }
