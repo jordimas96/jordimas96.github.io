@@ -21,6 +21,12 @@ a.link-boto-titol:hover {
     p, ul {
         margin-bottom: 1.5rem;
     }
+
+    .funcionalitats.card {
+        background-color: light-dark(rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0.15));
+        padding: 1rem;
+        border-radius: 1.5rem;
+    }
 }
 
 h4 {
