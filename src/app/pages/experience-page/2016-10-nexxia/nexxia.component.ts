@@ -16,16 +16,14 @@ import { SharedImports } from 'src/app/shared/imports';
 export class NexxiaComponent {
     Skills = Skills;
 
-    public links = {
-        ca: "https://www.nexxiasoft.com/?lang=ca",
-        es: "https://www.nexxiasoft.com/?lang=es",
-        en: "https://www.nexxiasoft.com/?lang=es",
-    };
-
     constructor(public m: MainService) { }
 
-    getLink() {
-        return this.links[this.m.idioma];
+    get linkTitol() {
+        return [
+            "https://www.nexxiasoft.com/?lang=ca",
+            "https://www.nexxiasoft.com/?lang=es",
+            "https://www.nexxiasoft.com/?lang=es",
+        ][this.m.idiomaIndex];
     }
 
 }

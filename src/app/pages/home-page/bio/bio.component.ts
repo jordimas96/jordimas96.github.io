@@ -20,9 +20,9 @@ export class BioComponent {
     Skills = Skills;
 
     public salutacions = {
-        "ca": ["Bon dia!", "Bona tarda!", "Bona nit!"],
-        "es": ["¡Buenos días!", "¡Buenas tardes!", "¡Buenas noches!"],
-        "en": ["Good morning!", "Good afternoon!", "Good evening!"],
+        ca: ["Bon dia!", "Bona tarda!", "Bona nit!"],
+        es: ["¡Buenos días!", "¡Buenas tardes!", "¡Buenas noches!"],
+        en: ["Good morning!", "Good afternoon!", "Good evening!"],
     };
 
     constructor(

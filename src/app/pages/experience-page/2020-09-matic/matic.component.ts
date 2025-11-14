@@ -16,26 +16,24 @@ import { SharedImports } from 'src/app/shared/imports';
 export class MaticComponent {
     Skills = Skills;
 
-    public links = {
-        ca: "https://www.matic.cat/",
-        es: "https://www.matic.cat/es/inicio/",
-        en: "https://www.matic.cat/es/inicio/",
-    };
-
     constructor(public m: MainService) { }
 
-    getLink() {
-        return this.links[this.m.idioma];
+    get linkTitol() {
+        return [
+            "https://www.matic.cat/",
+            "https://www.matic.cat/es/inicio/",
+            "https://www.matic.cat/es/inicio/",
+        ][this.m.idiomaIndex];
     }
 
-    getLinkSmartCountingPDF() {
+    get linkSmartCountingPDF() {
         return [
             "assets/_experience/matic/documents/smart-counting-cat.pdf",
             "assets/_experience/matic/documents/smart-counting-esp.pdf",
             "assets/_experience/matic/documents/smart-counting-esp.pdf",
         ][this.m.idiomaIndex];
     }
-    getLink2() {
+    get link2() {
         return "assets/_experience/matic/systemblock/systemblock-captura-mobil.jpg";
     }
 
@@ -56,7 +54,7 @@ export class MaticComponent {
             $seccio.find(".contingut").stop().slideUp(200);
             $seccio.find("video")[0]?.pause();
         }
-        
+
         // Tancar altres seccions //
         $seccio.siblings().each(function () {
             $(this).removeAttr("data-open");
@@ -77,7 +75,7 @@ export class MaticComponent {
 
             window.scrollTo({ top: nouScroll, behavior });
         }
-        
+
     }
 
 }

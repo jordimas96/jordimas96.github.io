@@ -16,16 +16,6 @@ import { SharedImports } from 'src/app/shared/imports';
 export class EvoraComponent {
     Skills = Skills;
 
-    public links = {
-        ca: "https://www.evorait.com/",
-        es: "https://www.evorait.com/",
-        en: "https://www.evorait.com/",
-    }
-
     constructor(public m: MainService) { }
-
-    getLink() {
-        return this.links[this.m.idioma];
-    }
 
 }

@@ -1,6 +1,6 @@
 <section id="matic" class="tema-matic card-themed bg-colored section">
     <div class="titol-top-card section-title d-flex mb-2">
-        <a [href]="getLink()" class="rs link-boto-titol gap-3" matRipple>
+        <a [href]="linkTitol" class="rs link-boto-titol gap-3" matRipple>
             Matic
             <img src="assets/_experience/matic/matic.png" alt="Matic" class="title-icon rounded">
             <span class="fletxa">↗</span>
@@ -404,10 +404,10 @@
         </div>
 
         <section class="seccio-boto-systemblock shadow-2-l">
-            <a [href]="getLinkSmartCountingPDF()" class="rs btn btn-negre">
+            <a [href]="linkSmartCountingPDF" class="rs btn btn-negre">
                 PDF SmartCounting
             </a>
-            <a [href]="getLink2()" class="rs btn btn-blanc">
+            <a [href]="link2" class="rs btn btn-blanc">
                 @if (m.ca) { App mòbil }
                 @if (m.es) { App móvil }
                 @if (m.en) { Mobile app }

@@ -4,7 +4,7 @@
 
 <section id="indra" class="tema-dintel card-themed bg-colored section">
     <div class="titol-top-card section-title d-flex mb-2">
-        <a [href]="getLink()" class="rs link-boto-titol gap-3" matRipple>
+        <a [href]="linkTitol" class="rs link-boto-titol gap-3" matRipple>
             Indra
             <img [src]="'assets/_experience/indra/'+(ts.modeFosc?'indra-d.png':'indra-l.png')" alt="Indra" class="title-icon rounded">
             <span class="fletxa">↗</span>
@@ -206,7 +206,7 @@
                     <div class="contingut flex-column flex-sm-row" style="display:none;">
                         @if (m.ca) {
                             <h5>Equip i col·laboració</h5>
-                            Poc després d'entrar a l'empresa, vaig formar part d'un equip de 5 desenvolupadors amb els quals vam crear una <app-link [href]="getLinkDintelComponents()">llibreria de components</app-link> en Angular, utilitzant PrimeNG, Angular Material i altres plugins com a base.<br><br>
+                            Poc després d'entrar a l'empresa, vaig formar part d'un equip de 5 desenvolupadors amb els quals vam crear una <app-link [href]="linkDintelComponents">llibreria de components</app-link> en Angular, utilitzant PrimeNG, Angular Material i altres plugins com a base.<br><br>
 
                             <h5>Contingut i funcionalitat de la llibreria</h5>
                             La llibreria consta de 44 components reutilitzables, des de formularis i elements d'interfície bàsics (inputs, selectors, breadcrumbs) fins a components avançats com menús, mapes interactius, selectors autocompletables connectats amb Google, toasts, i utilitats comunes per a les aplicacions del ministeri.<br><br>
@@ -228,7 +228,7 @@
 
                         @if (m.es) {
                             <h5>Equipo y colaboración</h5>
-                            Poco después de entrar en la empresa, formé parte de un equipo de 5 desarrolladores con los que creamos una <app-link [href]="getLinkDintelComponents()">librería de componentes</app-link> en Angular, utilizando PrimeNG, Angular Material y otros plugins como base.<br><br>
+                            Poco después de entrar en la empresa, formé parte de un equipo de 5 desarrolladores con los que creamos una <app-link [href]="linkDintelComponents">librería de componentes</app-link> en Angular, utilizando PrimeNG, Angular Material y otros plugins como base.<br><br>
 
                             <h5>Contenido y funcionalidad de la librería</h5>
                             La librería consta de 44 componentes reutilizables, desde formularios y elementos de interfaz básicos (inputs, selectores, breadcrumbs) hasta componentes avanzados como menús, mapas interactivos, selectores autocompletables conectados con Google, toasts y utilidades comunes para las aplicaciones del ministerio.<br><br>
@@ -249,7 +249,7 @@
 
                         @if (m.en) {
                             <h5>Team and Collaboration</h5>
-                            Shortly after joining the company, I became part of a team of 5 developers with whom we created an Angular <app-link [href]="getLinkDintelComponents()">component library</app-link>, using PrimeNG, Angular Material, and other plugins as a base.<br><br>
+                            Shortly after joining the company, I became part of a team of 5 developers with whom we created an Angular <app-link [href]="linkDintelComponents">component library</app-link>, using PrimeNG, Angular Material, and other plugins as a base.<br><br>
 
                             <h5>Library Content and Functionality</h5>
                             The library consists of 44 reusable components, from basic forms and UI elements (inputs, selectors, breadcrumbs) to advanced components such as menus, interactive maps, autocompletable selectors connected to Google, toasts, and common utilities for the ministry's applications.<br><br>
@@ -282,12 +282,12 @@
                         </div>
 
                         <section class="seccio-boto-dintel shadow-2-l">
-                            <a [href]="getLinkDintelHome()" class="rs dnt-button primary">
+                            <a [href]="linkDintelHome" class="rs dnt-button primary">
                                 @if (m.ca) { Llibreria Dintel }
                                 @if (m.es) { Librería Dintel }
                                 @if (m.en) { Dintel library }
                             </a>
-                            <a [href]="getLinkDintelComponents()" class="rs dnt-button secondary">
+                            <a [href]="linkDintelComponents" class="rs dnt-button secondary">
                                 @if (m.ca) { Veure components }
                                 @if (m.es) { Ver componentes }
                                 @if (m.en) { See components }

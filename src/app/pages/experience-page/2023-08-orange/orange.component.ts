@@ -16,16 +16,14 @@ import { SharedImports } from 'src/app/shared/imports';
 export class OrangeComponent {
     Skills = Skills;
 
-    public links = {
-        ca: "https://www.orange.es/empresas/grandes-empresas",
-        es: "https://www.orange.es/empresas/grandes-empresas",
-        en: "https://www.orange.es/empresas/grandes-empresas",
-    }
-
     constructor(public m: MainService) { }
 
-    getLink() {
-        return this.links[this.m.idioma];
+    get linkTitol() {
+        return [
+            "https://www.orange.es/empresas/grandes-empresas",
+            "https://www.orange.es/empresas/grandes-empresas",
+            "https://www.orange.es/empresas/grandes-empresas",
+        ][this.m.idiomaIndex];
     }
 
 }

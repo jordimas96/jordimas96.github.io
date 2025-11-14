@@ -20,19 +20,17 @@ import { AboutIn2artComponent } from './about-in2art/about-in2art.component';
 export class In2artComponent {
     Skills = Skills;
 
-    public links = {
-        ca: "https://in2.art/",
-        es: "https://in2.art/Social/es-es/",
-        en: "https://in2.art/Social/en-uk/",
-    };
-
     constructor(public m: MainService) { }
 
-    getLink() {
-        return this.links[this.m.idioma];
+    get linkTitol() {
+        return [
+            "https://in2.art/Social/es-ca/",
+            "https://in2.art/Social/es-es/",
+            "https://in2.art/Social/en-uk/",
+        ][this.m.idiomaIndex];
     }
 
-    public get readmeUrl() {
+    public get linkReadme() {
         return `https://github.com/jordimas96/jordimas96.github.io/blob/main/src/assets/_experience/in2art/features/in2art-features.${this.m.idioma}.md`;
     }
 

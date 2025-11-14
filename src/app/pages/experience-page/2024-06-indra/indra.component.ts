@@ -20,37 +20,35 @@ import { IframeTemplateComponent } from './iframe-template/iframe-template.compo
 export class IndraComponent {
     Skills = Skills;
 
-    public links = {
-        ca: "https://www.indracompany.com/es/",
-        es: "https://www.indracompany.com/es/",
-        en: "https://www.indracompany.com/en/",
-    }
-
     constructor(
         public m: MainService,
         public ts: ThemeService,
         private dialog: MatDialog
     ) { }
 
-    getLink() {
-        return this.links[this.m.idioma];
+    get linkTitol() {
+        return [
+            "https://www.indracompany.com/es/",
+            "https://www.indracompany.com/es/",
+            "https://www.indracompany.com/en/",
+        ][this.m.idiomaIndex];
     }
 
-    getLinkDintelHome() {
+    get linkDintelHome() {
         return [
             "https://dintel.redsara.es/",
             "https://dintel.redsara.es/",
             "https://dintel.redsara.es/content/dintel/en/inicio.html",
         ][this.m.idiomaIndex];
     }
-    getLinkDintelComponents() {
+    get linkDintelComponents() {
         return [
             "https://dintel.redsara.es/componentes",
             "https://dintel.redsara.es/componentes",
             "https://dintel.redsara.es/content/dintel/en/componentes.html",
         ][this.m.idiomaIndex];
     }
-    
+
     get textTrofeu() {
         return [
             "Correu de felicitació pel projecte",

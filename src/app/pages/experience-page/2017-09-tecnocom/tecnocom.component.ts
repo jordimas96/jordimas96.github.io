@@ -16,16 +16,14 @@ import { SharedImports } from 'src/app/shared/imports';
 export class TecnocomComponent {
     Skills = Skills;
 
-    public links = {
-        ca: "https://www.indracompany.com/es/",
-        es: "https://www.indracompany.com/es/",
-        en: "https://www.indracompany.com/en/",
-    };
-
     constructor(public m: MainService) { }
 
-    getLink() {
-        return this.links[this.m.idioma];
+    get linkTitol() {
+        return [
+            "https://www.indracompany.com/es/",
+            "https://www.indracompany.com/es/",
+            "https://www.indracompany.com/en/",
+        ][this.m.idiomaIndex];
     }
 
 }
