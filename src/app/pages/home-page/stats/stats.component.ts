@@ -24,7 +24,9 @@ export class StatsComponent {
 
 
     getText(skill: Skills) {
-        return this.exp.construirCadenaTempsExp_anysMesos(this.exp.skills[skill].anysMesosDies);
+        let text = this.exp.construirCadenaTempsExp_anysMesos(this.exp.skills[skill].anysMesosDies);
+        text = text.replace(/\d+/g, (num) => `<span class="num">${num}</span>`);
+        return text;
     }
 
 }
