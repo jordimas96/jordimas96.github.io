@@ -4,16 +4,9 @@ IN2ART is a social network for artists, collectors, and art enthusiasts. The pla
 
 ## Main features
 
-### Authentication and user profile
-
-* Secure login with multilingual support.
-* Customizable profile with biography, email, links, and user type: professional artist, collector, or viewer.
-* Viewing followers, subscribers, and list of own posts (separated by type of artwork).
-* Most popular posts highlighted on the profile.
-
 ### Post feed
 
-* Infinite scroll with dynamic content loading.
+* Infinite scroll with dynamic content loading. Autoplay of the first video mostly visible on screen.
 * Suggested posts in the infinite scroll come from 3 different sources:
   * Followed users
   * Recommended content based on interests
@@ -31,11 +24,22 @@ IN2ART is a social network for artists, collectors, and art enthusiasts. The pla
   * Post preview before uploading
 * Forms designed for maximum usability and ergonomics: drag to reorder audiovisual files, flexible date selectors, automatic tag management.
 
+### User profile
+
+* Customizable profile with biography, email, links, and user type: professional artist, collector, or viewer.
+* Viewing followers, subscribers, and list of own posts (separated by type of artwork).
+* Most popular posts highlighted on the profile.
+
 ### Search and exploration
 
 * Global search for artworks, users, categories, tags, movements, and media.
-* Personalized exploration function based on interests and user type when no active search.
+* Personalized browsing feature based on both interests and user type when there is no active search.
 * Quick access from posts to searches by tags or categories.
+
+### Autenticació
+
+* Login, registration, initial selection of interests.
+* Password recovery, user deletion.
 
 ### Notifications and settings
 
