@@ -31,7 +31,7 @@ export class In2artComponent {
     }
 
     public get linkReadme() {
-        return `https://github.com/jordimas96/jordimas96.github.io/blob/main/src/assets/_experience/in2art/features/in2art-features.${this.m.idioma}.md`;
+        return `https://github.com/jordimas96/jordimas96.github.io/blob/main/src/assets/_experience/in2art/feature-sheets/in2art-feature-sheet.${this.m.idioma}.md`;
     }
 
 }

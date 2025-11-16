@@ -4,16 +4,9 @@ IN2ART és una xarxa social per a artistes, col·leccionistes i aficionats a l'a
 
 ## Funcionalitats principals
 
-### Autenticació i perfil d'usuari
-
-* Login segur amb suport multillengua.
-* Perfil personalitzable amb biografia, correu, enllaços i tipus d'usuari: artista professional, col·leccionista o espectador.
-* Visualització de seguidors, subscriptors i llista de publicacions pròpies (separades per tipus d'obra).
-* Publicacions més populars destacades al perfil.
-
 ### Feed de publicacions
 
-* Scroll infinit amb càrrega dinàmica de contingut.
+* Scroll infinit amb càrrega dinàmica de contingut. Reproducció automàtica del primer vídeo que domina la pantalla.
 * Les publicacions suggerides a l'scroll infinit provenen de 3 orígens diferents:
   * Usuaris seguits
   * Contingut recomanat segons interessos
@@ -31,11 +24,22 @@ IN2ART és una xarxa social per a artistes, col·leccionistes i aficionats a l'a
   * Previsualització de publicació abans de pujar-la
 * Formularis dissenyats per a màxima usabilitat i ergonomia: arrossegar per reordenar fitxers audiovisuals, selectors de data flexibles, gestió de tags automàtica.
 
+### Perfil d'usuari
+
+* Perfil personalitzable amb biografia, correu, enllaços i tipus d'usuari: artista professional, col·leccionista o espectador.
+* Visualització de seguidors, subscriptors i llista de publicacions pròpies (separades per tipus d'obra).
+* Publicacions més populars destacades al perfil.
+
 ### Cercador i exploració
 
 * Cercador global d'obres, usuaris, categories, tags, moviments i mitjans.
-* Funció d'exploració personalitzada basada en interessos i tipus d'usuari quan no hi ha cerca activa.
+* Funció d'exploració personalitzada basada tant en interessos com en tipus d'usuari quan no hi ha cerca activa.
 * Accés ràpid des de publicacions a cerques per tags o categories.
+
+### Autenticació
+
+* Login, registre, selecció inicial d'interessos.
+* Recuperació de contrasenya, eliminació d'usuari.
 
 ### Notificacions i ajustos
 
