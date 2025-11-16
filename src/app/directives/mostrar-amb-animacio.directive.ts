@@ -40,15 +40,23 @@ export class MostrarAmbAnimacioDirective implements OnInit, OnDestroy {
     async mostrar(entry) {
         if (!entry.isVisible) {
 
-            // Recuperem delay de les dades de l'element prèviament guardades. Si no hi és, el calculem //
-            let delay = this.el["animationDelay"];
-            if (!delay) {
-                delay = 100 + this.getPositionAmongSiblings() * 30
-                this.el["animationDelay"] = delay;
+            const ratio = entry.intersectionRatio;
+
+            let delay = 0;
+
+            // Si l'element està molt dins la pantalla, ens saltem el delay //
+            if (ratio < 0.2) {
+                // Recuperem delay de les dades de l'element prèviament guardades. Si no hi és, el calculem (només si entra a poc a poc) //
+                delay = this.el["animationDelay"];
+                if (!delay) {
+                    delay = 100 + this.getPositionAmongSiblings() * 30
+                    this.el["animationDelay"] = delay;
+                }
             }
 
-            await Utils.wait(delay);
-
+            if (delay > 0) {
+                await Utils.wait(delay);
+            }
 
             this.renderer.addClass(entry.target, 'transicions');
             this.renderer.addClass(entry.target, 'mostrat');
