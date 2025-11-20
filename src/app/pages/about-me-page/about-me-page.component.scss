@@ -14,26 +14,50 @@
         max-width: 1280px;
 
         .descripcio {
-            pre { display: inline; }
 
-            .bionicle {
-                width: 200px;
+            section {
+                display: flex;
+                align-items: center;
+                gap: 1.5rem;
+
                 @include mobil {
-                    width: 100%;
-                    max-width: 300px;
-                    margin-left: auto;
-                    margin-right: auto;
+                    flex-direction: column;
+                }
+                img {
+                    border-radius: 1rem;
+                    @include mobil {
+                        border-radius: 2rem;
+                        max-width: 100%;
+                    }
                 }
 
-                filter: brightness(1.6);
-            }
-            .laptop {
-                width: 350px;
-                @include mobil {
-                    width: 100%;
-                    margin-left: auto;
-                    margin-right: auto;
+
+                &.bionicles {
+                    img.bionicle {
+                        width: 300px;
+                        @include mobil { width: 300px; }
+
+                        filter: brightness(1.6);
+                    }
                 }
+                &.pokemon {
+                    pre { display: inline; }
+
+                    @include tablet { flex-direction: row-reverse; }
+                    img.pokemon {
+                        image-rendering: pixelated;
+                        width: calc(240px * 2);
+                        @include mobil { width: 100%; }
+                    }
+                }
+                &.desmuntant-portatil {
+                    img.portatil {
+                        width: 500px;
+                        @include mobil { width: 100%; }
+                    }
+                }
+
+
             }
             
             :last-child {
