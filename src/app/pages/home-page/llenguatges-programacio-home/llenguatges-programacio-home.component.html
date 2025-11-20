@@ -7,7 +7,7 @@
 
     <div class="botonsCanviarVista mt-2 mb-0">
         <button class="boto botoShowTime color-fons" (click)="showExpTime_click()" matRipple>
-            @if(showTime) { <i class="fa-regular fa-calendar-minus"></i> }
+            @if (showTime) { <i class="fa-regular fa-calendar-minus"></i> }
             @else { <i class="fa-regular fa-calendar-plus"></i> }
             @if (m.ca) { {{ showTime ? "Ocultar temps" : "Mostrar temps" }} }
             @if (m.es) { {{ showTime ? "Ocultar tiempo" : "Mostrar tiempo" }} }
@@ -25,7 +25,7 @@
         <div class="tipus-llenguatge col-12 col-lg-6" [ngClass]="!showTime ? 'col-sm-6' : ''">
             <div class="titol-tipus-llenguatge">Frontend</div>
             <div class="skills" [class.showTime]="showTime">
-                @if(showTime) {
+                @if (showTime) {
                     <app-skill [skill]="Skills.FRONTEND" [showTime]="showTime" />
                 }
                 <app-skill [skill]="Skills.ANGULAR" [showTime]="showTime" />
@@ -57,7 +57,7 @@
         <div class="tipus-llenguatge col-12 col-lg-6" [ngClass]="!showTime ? 'col-sm-6' : ''">
             <div class="titol-tipus-llenguatge">Backend</div>
             <div class="skills" [class.showTime]="showTime">
-                @if(showTime) {
+                @if (showTime) {
                     <app-skill [skill]="Skills.BACKEND" [showTime]="showTime" />
                 }
                 <app-skill [skill]="Skills.NODEJS" [showTime]="showTime" />

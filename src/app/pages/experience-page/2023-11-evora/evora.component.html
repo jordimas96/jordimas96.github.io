@@ -41,13 +41,13 @@
         }
         <br><br>
         <app-link href="assets/_experience/evora/documents/Jordi Mas Parramon EvoraIT onboarding 2023.pdf">
-            @if(m.ca) { Powerpoint de presentació a Evora IT }
-            @if(m.es) { Powerpoint de presentación en EvoraIT }
-            @if(m.en) { Presentation Powerpoint at EvoraIT }
+            @if (m.ca) { Powerpoint de presentació a Evora IT }
+            @if (m.es) { Powerpoint de presentación en EvoraIT }
+            @if (m.en) { Presentation Powerpoint at EvoraIT }
         </app-link>
     </article> -->
     <article class="descripcio mb-4">
-        @if(m.esPantallaPc()) {
+        @if (m.esPantallaPc()) {
             <img src="assets/_experience/evora/maquina-evora.png" alt="siemens machine" class="maquina float-right ms-4" appMostrarAmbAnimacio>
         }
         @if (m.ca) {
@@ -113,11 +113,11 @@
             </p>
         }
         <app-link id="onboarding-evora">
-            @if(m.ca) { Powerpoint de presentació a Evora IT }
-            @if(m.es) { Powerpoint de presentación en EvoraIT }
-            @if(m.en) { Presentation Powerpoint at EvoraIT }
+            @if (m.ca) { Powerpoint de presentació a Evora IT }
+            @if (m.es) { Powerpoint de presentación en EvoraIT }
+            @if (m.en) { Presentation Powerpoint at EvoraIT }
         </app-link>
-        @if(m.esPantallaMobil()) {
+        @if (m.esPantallaMobil()) {
             <img src="assets/_experience/evora/maquina-evora.png" alt="siemens machine" class="maquina mt-4" appMostrarAmbAnimacio>
         }
     </article>
