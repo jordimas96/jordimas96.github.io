@@ -16,43 +16,78 @@
                     @if(m.es) { Infancia }
                     @if(m.en) { Childhood }
                 </h3>
-                @if(m.esPantallaPc()) {
-                    <img src="assets/about-me/bionicle-makuta-nui-2003.jpg" alt="bionicle makuta nui 2003" class="bionicle float-right ms-4 mb-3 rounded-3" appMostrarAmbAnimacio>
-                }
-                <p class="mb-4">
-                    @if(m.ca) {
-                        Des de ben petit sempre m'ha fascinat qualsevol tipus de tecnologia. Des dels 4 anys em passava les tardes jugant i construint <app-link id="bionicle">Bionicles</app-link>, una línia de figures articulades de LEGO, sovint sense mirar les instruccions; els sabia muntar a partir de veure el resultat final, i amb els ingeniosos mecanismes interns funcionant. Quan decidia desmuntar-los, utilitzava les peces per a inventar-me'n de nous. Veia una imatge a internet d'un Bionicle nou i intentava construir-lo, improvisant amb les peces de les que disposava, sovint amb bastant èxit. Gràcies a això vaig desenvolupar una visió espacial molt potent i un gran poder d'observació des de ben jove.
+
+                <section>
+                    <!-- Bionicles -->
+                    @if(m.esPantallaPc()) {
+                        <img src="assets/about-me/bionicle-makuta-nui-2003.jpg" alt="bionicle makuta nui 2003" class="bionicle float-right ms-4 mb-3 rounded-3" appMostrarAmbAnimacio>
                     }
-                    @if(m.es) {
-                        Desde pequeño siempre me ha fascinado cualquier tipo de tecnología. Desde los 4 años me pasaba las tardes jugando y construyendo <app-link id="bionicle">Bionicles</app-link>, una línea de figuras articuladas de LEGO, a menudo sin mirar las instrucciones; los sabía montar con sólo ver el resultado final, y con los ingeniosos mecanismos internos funcionando. Cuando decidía desmontarlos, utilizaba las piezas para inventarme nuevos. Veía una imagen en internet de un Bionicle nuevo e intentaba construirlo, improvisando con las piezas de las que disponía, a menudo con bastante éxito. Gracias a esto desarrollé una visión espacial muy potente y un gran poder de observación desde muy joven.
+                    <p class="mb-4">
+                        @if(m.ca) {
+                            Des de ben petit sempre m'ha fascinat qualsevol tipus de tecnologia. Des dels 4 anys em passava les tardes jugant i construint <app-link id="bionicle">Bionicles</app-link>, una línia de figures articulades de LEGO, sovint sense mirar les instruccions; els sabia muntar a partir de veure el resultat final, i amb els ingeniosos mecanismes interns funcionant. Quan me'n cansava, sovint ràpid, els desmuntava i utilitzava les peces per a inventar-me'n de nous. Veia una imatge a internet d'un Bionicle nou i intentava construir-lo, improvisant amb les peces de les que disposava, sovint amb bastant èxit. Considero que això va contribuir al desenvolupament de la meva visió espacial i al meu poder d'observació des de molt jove.
+                        }
+                        @if(m.es) {
+                            Desde pequeño siempre me ha fascinado cualquier tipo de tecnología. Desde los 4 años me pasaba las tardes jugando y construyendo <app-link id="bionicle">Bionicles</app-link>, una línea de figuras articuladas de LEGO, a menudo sin mirar las instrucciones; los sabía montar con sólo ver el resultado final, y con los ingeniosos mecanismos internos funcionando. Cuando me cansaba, a menudo rápido, los desmontaba y utilizaba las piezas para inventarme nuevos. Veía una imagen en internet de un Bionicle nuevo e intentaba construirlo, improvisando con las piezas de las que disponía, a menudo con bastante éxito. Considero que esto contribuyó al desarrollo de mi visión espacial y a mi poder de observación desde muy joven.
+                        }
+                        @if(m.en) {
+                            Since I was a child, I have always been fascinated by any kind of technology. From the age of 4, I used to spend whole afternoons playing and building <app-link id="bionicle">Bionicles</app-link>, a line of articulated LEGO figures, often without looking at the instructions; I knew how to put them together just by looking at the final result, and with the ingenious internal mechanisms working. When I got bored of them, often quickly, I would take them apart and use the the pieces to invent new ones. I would see a picture of a new Bionicle on the internet and try to build it, improvising with whatever parts I had available, often quite successfully. I believe this contributed to the development of my spatial vision and powers of observation from a very young age.
+                        }
+                    </p>
+                    @if(m.esPantallaMobil()) {
+                        <img src="assets/about-me/bionicle-makuta-nui-2003.jpg" alt="bionicle makuta nui 2003" class="bionicle mb-4 rounded-4" appMostrarAmbAnimacio>
                     }
-                    @if(m.en) {
-                        Since I was a child, I have always been fascinated by any kind of technology. From the age of 4, I used to spend whole afternoons playing and building <app-link id="bionicle">Bionicles</app-link>, a line of articulated LEGO figures, often without looking at the instructions; I knew how to put them together just by looking at the final result, and with the ingenious internal mechanisms working. When I decided to take them apart, I used the pieces to invent new ones. I would see an image on the internet of a new Bionicle and try to build it, improvising with the pieces I had available, often quite successfully. Due to this, I developed a very strong spatial vision and great observation capacity from a very young age.
+                </section>
+
+                <section>
+                    <!-- Pokemon -->
+                    @if(m.esPantallaPc()) {
+                        <img src="assets/about-me/pokemon/exemple.png" alt="Pokemon ROM Hack" class="laptop float-left me-4 mb-3 rounded-3" appMostrarAmbAnimacio>
                     }
-                </p>
-                @if(m.esPantallaMobil()) {
-                    <img src="assets/about-me/bionicle-makuta-nui-2003.jpg" alt="bionicle makuta nui 2003" class="bionicle mb-4 rounded-4" appMostrarAmbAnimacio>
-                }
+                    <p class="mb-4">
+                        @if(m.ca) {
+                            El meu primer contacte real amb la programació va ser als 16 anys, amb el ROM Hacking de Pokémon. Utilitzava programes creats per la comunitat per a modificar de manera no oficial els jocs de Pokémon de la GBA i canviar scripts, mapes i lògica del joc.<br>
+                            Vaig dissenyar mapes amb Advance Map i scripts amb eXtreme Script Editor (XSE) per a crear contingut jugable com l'entrega d'objectes, diàlegs, trencaclosques i combats. Els scripts s'escrivien en un llenguatge de scripting propietari, específic del motor del joc, amb instruccions com <pre>giveitem</pre>, <pre>msgbox</pre> o <pre>setflag</pre>, cada una definint una acció concreta dins del joc.<br>
+                            Anys després, quan vaig començar a estudiar C#, em va sorprendre descobrir com de diferent era la programació moderna, més lineal i enfocada a la lògica que no pas a donar instruccions concretes al motor del joc.
+                        }
+                        @if(m.es) {
+                            Mi primer contacto real con la programación fue a los 16 años, con el ROM Hacking de Pokémon. Utilizaba programas creados por la comunidad para modificar de manera no oficial los juegos de Pokémon de la GBA y cambiar scripts, mapas y lógica del juego.<br>
+                            Diseñaba mapas con Advance Map y scripts con eXtreme Script Editor (XSE) para crear contenido jugable como la entrega de objetos, diálogos, rompecabezas y combates. Los scripts se escribían en un lenguaje de scripting propietario, específico del motor del juego, con instrucciones como <pre>giveitem</pre>, <pre>msgbox</pre> o <pre>setflag</pre>, cada una definiendo una acción concreta dentro del juego.<br>
+                            Años después, cuando empecé a estudiar C#, me sorprendió descubrir lo diferente que era la programación moderna, más lineal y enfocada a la lógica que a dar instrucciones concretas al motor del juego.
+                        }
+                        @if(m.en) {
+                            My first real contact with programming was at age 16, with Pokémon ROM Hacking. I used community-created programs to unofficially modify the Pokémon games for the GBA, changing scripts, maps and game logic.<br>
+                            I designed maps with Advance Map and scripts with eXtreme Script Editor (XSE) to create playable content such as item delivery, dialogues, puzzles and battles. The scripts were written in a proprietary scripting language specific to the game engine, with instructions like <pre>giveitem</pre>, <pre>msgbox</pre> or <pre>setflag</pre>, each defining a specific action within the game.<br>
+                            Years later, when I started studying C#, I was surprised to discover how different modern programming was, more linear and focused on logic rather than being focused on giving specific instructions to the game engine.
+                        }
+                        <!-- (tot i que també hi ha ROM Hacking per la GB i NDS) -->
+                    </p>
+                    @if(m.esPantallaMobil()) {
+                        <img src="assets/about-me/pokemon/exemple.png" alt="Pokemon ROM Hack" class="laptop w-100 mb-4 rounded-4" appMostrarAmbAnimacio>
+                    }
+                </section>
+
+                <section>
+                    <!-- Desmuntant portàtil -->
+                    @if(m.esPantallaPc()) {
+                        <img src="assets/about-me/disassembling-laptop-2015.jpg" alt="disassembling laptop 2015.jpg" class="laptop float-right ms-4 mb-3 rounded-3" appMostrarAmbAnimacio>
+                    }
+                    <p class="mb-4">
+                        @if(m.ca) {
+                            Quan vaig créixer i tenir accés a un tornavís, obria tots els aparells que s'espatllaven per a intentar arreglar-los. Una cosa no estava espatllada fins que no la obria i me la mirava, amb tutorials de Youtube o sense.
+                        }
+                        @if(m.es) {
+                            Cuando crecí y tuve acceso a un destornillador, abría todos los aparatos que se estropeaban para intentar arreglarlos. Algo no estaba estropeado hasta que no lo abría y me lo miraba, con o sin tutoriales de Youtube.
+                        }
+                        @if(m.en) {
+                            When I grew up and had access to a screwdriver, I would open up every device that broke to try to fix it. Something wasn't broken until I opened it up and looked at it, with or without YouTube tutorials.
+                        }
+                    </p>
+                    @if(m.esPantallaMobil()) {
+                        <img src="assets/about-me/disassembling-laptop-2015.jpg" alt="disassembling laptop 2015.jpg" class="laptop w-100 mb-4 rounded-4" appMostrarAmbAnimacio>
+                    }
+                </section>
 
 
-
-                @if(m.esPantallaPc()) {
-                    <img src="assets/about-me/disassembling-laptop-2015.jpg" alt="disassembling laptop 2015.jpg" class="laptop float-left me-4 mb-3 rounded-3" appMostrarAmbAnimacio>
-                }
-                <p class="mb-4">
-                    @if(m.ca) {
-                        Quan vaig créixer i tenir accés a un tornavís, obria tots els aparells que s'espatllaven per a intentar arreglar-los. Una cosa no estava espatllada fins que no la obria i me la mirava, amb tutorials de Youtube o sense.
-                    }
-                    @if(m.es) {
-                        Cuando crecí y tuve acceso a un destornillador, abría todos los aparatos que se estropeaban para intentar arreglarlos. Algo no estaba estropeado hasta que no lo abría y me lo miraba, con o sin tutoriales de Youtube.
-                    }
-                    @if(m.en) {
-                        When I grew up and had access to a screwdriver, I would open up every device that broke to try to fix it. Something wasn't broken until I opened it up and looked at it, with or without YouTube tutorials.
-                    }
-                </p>
-                @if(m.esPantallaMobil()) {
-                    <img src="assets/about-me/disassembling-laptop-2015.jpg" alt="disassembling laptop 2015.jpg" class="laptop w-100 mb-4 rounded-4" appMostrarAmbAnimacio>
-                }
 
                 <p class="mb-4">
                     @if(m.ca) {
