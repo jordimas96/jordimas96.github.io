@@ -3,12 +3,12 @@
         <div class="d-flex align-items-center gap-3">
             <img src="assets/_projects/mad-jumpgate/icons/accordion/mad-jumpgate.png" class="icona">
             <span class="titol">
-                Mad Jumpgate
-                @if (m.esPc()){
-                    -
-                    @if (m.ca) { Jugar }
-                    @if (m.es) { Jugar }
-                    @if (m.en) { Play }
+                @if (m.esPc()) {
+                    @if (m.ca) { Jugar aquí }
+                    @if (m.es) { Jugar aquí }
+                    @if (m.en) { Play here }
+                } @else {
+                    Mad Jumpgate
                 }
             </span>
         </div>

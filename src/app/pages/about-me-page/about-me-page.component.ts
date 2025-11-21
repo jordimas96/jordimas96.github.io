@@ -16,6 +16,8 @@ import { StoriesComponent } from './stories/stories.component';
 })
 export class AboutMePageComponent extends PageComponent {
 
+    linkFitxaJoc = "https://jordimas96.github.io/mad-jumpgate";
+
     override async ngOnInit() {
         super.ngOnInit();
 
