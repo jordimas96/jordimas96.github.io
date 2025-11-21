@@ -23,7 +23,7 @@
                 @include mobil {
                     flex-direction: column;
                 }
-                img {
+                .imatge {
                     border-radius: 1rem;
                     @include mobil {
                         border-radius: 2rem;
@@ -33,7 +33,7 @@
 
 
                 &.bionicles {
-                    img.bionicle {
+                    .imatge.bionicle {
                         width: 300px;
                         @include mobil { width: 300px; }
 
@@ -41,17 +41,37 @@
                     }
                 }
                 &.pokemon {
-                    pre { display: inline; }
+                    pre {
+                        font-family: Consolas;
+                        display: inline;
+                        background-color: light-dark(white, hsl(0, 0%, 25%));
+                        color: light-dark(hsl(0, 0%, 20%), white);
+                        padding: 0.1rem 0.25rem;
+                        border-radius: 0.25rem;
+                    }
 
                     @include tablet { flex-direction: row-reverse; }
-                    img.pokemon {
-                        image-rendering: pixelated;
+                    .imatge.pokemon {
+                        // 240 x 160 //
                         width: calc(240px * 2);
                         @include mobil { width: 100%; }
+
+                        image-rendering: pixelated;
+                        aspect-ratio: 3 / 2;
+
+                        background: url('/assets/about-me/pokemon/pokemon-hackrom.png');
+                        background-size: auto 100%;
+                        
+                        animation: vent 1.333s steps(5) infinite;
+
+                        @keyframes vent {
+                            from { background-position-x: 0; }
+                            to   { background-position-x: calc(-100% * 5); }
+                        }
                     }
                 }
                 &.desmuntant-portatil {
-                    img.portatil {
+                    .imatge.portatil {
                         width: 500px;
                         @include mobil { width: 100%; }
                     }
