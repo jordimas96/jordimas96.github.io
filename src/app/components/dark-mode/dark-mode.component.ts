@@ -44,7 +44,7 @@ export class DarkModeComponent {
     // Mètode 2 //
     async animacioDarkModeTipusCortinaShadow(nomBoto: "dark" | "auto") {
         // Si es click al auto i no cal fer efecte, no el fem //
-        if (nomBoto == "auto" && this.ts.modeFosc == Utils.systemDarkMode()) {
+        if (nomBoto == "auto" && this.ts.modeFosc == Utils.systemDarkMode) {
             this.accioAutoDarkMode();
             $(".botoAutoMode").fadeOut(200);
             return;
@@ -143,14 +143,14 @@ export class DarkModeComponent {
     }
 
     accioAutoDarkMode() {
-        this.ts.modeFosc = Utils.systemDarkMode();
+        this.ts.modeFosc = Utils.systemDarkMode;
         this.ts.actTema();
         localStorage.removeItem("darkmode");
     }
 
     setDarkMode() {
         // Establir variable dark mode. Si no te cookie el traiem de system //
-        this.ts.modeFosc = Utils.getFlag("darkmode") ?? Utils.systemDarkMode();
+        this.ts.modeFosc = Utils.getFlag("darkmode") ?? Utils.systemDarkMode;
     }
 
 }

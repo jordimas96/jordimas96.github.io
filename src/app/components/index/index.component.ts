@@ -95,7 +95,7 @@ export class IndexComponent implements OnInit, AfterViewInit {
     }
 
     public scrollOnHover(event: MouseEvent) {
-        if (this.m.esPantallaTactil()) return;
+        if (this.m.esPantallaTactil) return;
 
         let i = this.indexRef.nativeElement;
         let pos = event.clientX / i.clientWidth;

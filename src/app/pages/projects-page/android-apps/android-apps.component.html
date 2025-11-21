@@ -43,7 +43,7 @@
                 <img src="assets/_projects/android/icons/buttons/play-store.png" alt="Google Play Store" class="logo">
             </a>
         </div>
-        @if (!m.esAndroid()) {
+        @if (!m.esAndroid) {
             <div class="col" appMostrarAmbAnimacio>
                 <qrcode [qrdata]="'https://jordimas96.github.io/r/play-store'" [errorCorrectionLevel]="'M'"
                     colorDark="#005727" colorLight="#b8ffd8" title="Play Store QR"></qrcode>
@@ -63,7 +63,7 @@
                 <img src="assets/_projects/android/icons/buttons/amazon-appstore.png" alt="Amazon Appstore" class="logo">
             </a>
         </div>
-        @if (!m.esAndroid()) {
+        @if (!m.esAndroid) {
             <div class="col paleta-192" appMostrarAmbAnimacio>
                 <qrcode [qrdata]="getAmazonLink_apps()" [errorCorrectionLevel]="'M'"
                     colorDark="#152939" colorLight="#b8f0ff" title="Amazon Appstore QR"></qrcode>
@@ -83,7 +83,7 @@
                 <img src="assets/_projects/android/icons/buttons/apkpure.svg" alt="APKPure" class="logo">
             </a>
         </div>
-        @if (!m.esAndroid()) {
+        @if (!m.esAndroid) {
             <div class="col paleta-149" appMostrarAmbAnimacio>
                 <qrcode qrdata="https://apkpure.net/developer/Jordi%20Mas%20Parramon" [errorCorrectionLevel]="'M'"
                     colorDark="#12683c" colorLight="#fff" title="APKPure QR"></qrcode>

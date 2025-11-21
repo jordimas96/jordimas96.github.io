@@ -50,7 +50,7 @@ export class LinkComponent implements OnChanges {
 
         if (!numLletres) return false;
 
-        const limitLletres = this.m.esPantallaPc() ? 40 : 15;
+        const limitLletres = this.m.esPantallaPc ? 40 : 15;
 
         return numLletres > limitLletres;
     }

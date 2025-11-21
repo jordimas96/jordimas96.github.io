@@ -83,7 +83,7 @@ export class Utils {
     public static limit(n: number, min: number, max: number) {
         return Math.max(min, Math.min(n, max));
     }
-    public static getRouteActual() {
+    public static get routeActual() {
         return location.pathname.split("/")[1];
     }
 
@@ -95,12 +95,12 @@ export class Utils {
 
 
     public static scroll(x) { window.scroll({ top: x, left: 0, behavior: "instant" }); }
-    public static getAmpladaPantalla() {
+    public static get ampladaPantalla() {
         return screen.width;
     }
 
 
-    public static systemDarkMode() {
+    public static get systemDarkMode() {
         return !(window.matchMedia && window.matchMedia('(prefers-color-scheme: light)').matches);
     }
 

@@ -43,7 +43,7 @@ export class LlenguatgesProgramacioComponent {
         window.scrollTo({
             top:
                 document.getElementById("languages")!.offsetTop
-                - (this.ls.getAlturaAppbar() + this.ls.index.offsetHeight)
+                - (this.ls.alturaAppbar + this.ls.index.offsetHeight)
         });
 
         Utils.setFlag("showTime", this.showTime);

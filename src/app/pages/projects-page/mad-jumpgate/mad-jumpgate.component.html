@@ -31,20 +31,20 @@
 
     <div class="seccions-icones d-flex gap-3">
         <div appMostrarAmbAnimacio>
-            <div class="seccio-icones card play p-3" [class.disabled]="m.esMobil()">
+            <div class="seccio-icones card play p-3" [class.disabled]="m.esMobil">
                 <div class="titol text-80">
                     @if (m.ca) { Jugar }
                     @if (m.es) { Jugar }
                     @if (m.en) { Play }
                 </div>
                 <div class="contingut shadow-filter-1">
-                    <a href="https://jordimas96.github.io/r/mad-jumpgate-online-webgl" class="bg-white" [class.samsung-squircle]="m.esSamsung()" [class.xiaomi-rounded]="m.esXiaomi()" [class.apple-squircle]="m.esIOS()" matRipple>
+                    <a href="https://jordimas96.github.io/r/mad-jumpgate-online-webgl" class="bg-white" [class.samsung-squircle]="m.esSamsung" [class.xiaomi-rounded]="m.esXiaomi" [class.apple-squircle]="m.esIOS" matRipple>
                         <img src="assets/_projects/mad-jumpgate/icons/buttons/unity.png" [alt]="textPlayInBrowser()" [title]="textPlayInBrowser()" class="logo">
                     </a>
-                    <a href="https://jmaspgames.itch.io/mad-jumpgate" [class.samsung-squircle]="m.esSamsung()" [class.xiaomi-rounded]="m.esXiaomi()" [class.apple-squircle]="m.esIOS()" matRipple>
+                    <a href="https://jmaspgames.itch.io/mad-jumpgate" [class.samsung-squircle]="m.esSamsung" [class.xiaomi-rounded]="m.esXiaomi" [class.apple-squircle]="m.esIOS" matRipple>
                         <img src="assets/_projects/mad-jumpgate/icons/buttons/itch-io.svg" [alt]="textPlayInItchIo()" [title]="textPlayInItchIo()" class="logo">
                     </a>
-                    <a href="https://jordimas96.github.io/r/mad-jumpgate-download-windows" [class.samsung-squircle]="m.esSamsung()" [class.xiaomi-rounded]="m.esXiaomi()" [class.apple-squircle]="m.esIOS()" matRipple>
+                    <a href="https://jordimas96.github.io/r/mad-jumpgate-download-windows" [class.samsung-squircle]="m.esSamsung" [class.xiaomi-rounded]="m.esXiaomi" [class.apple-squircle]="m.esIOS" matRipple>
                         <img src="assets/_projects/mad-jumpgate/icons/buttons/windows.png" [alt]="textDownloadForWindows()" [title]="textDownloadForWindows()" class="logo">
                     </a>
                 </div>
@@ -58,13 +58,13 @@
                     @if (m.en) { Watch gameplay }
                 </div>
                 <div class="contingut shadow-filter-1">
-                    <a href="https://youtu.be/TwJ3bpvQ4qA" class="bg-white" [class.samsung-squircle]="m.esSamsung()" [class.xiaomi-rounded]="m.esXiaomi()" [class.apple-squircle]="m.esIOS()" matRipple>
+                    <a href="https://youtu.be/TwJ3bpvQ4qA" class="bg-white" [class.samsung-squircle]="m.esSamsung" [class.xiaomi-rounded]="m.esXiaomi" [class.apple-squircle]="m.esIOS" matRipple>
                         <img src="assets/_projects/mad-jumpgate/icons/buttons/youtube.png" [alt]="textGameplayOnYoutube()" [title]="textGameplayOnYoutube()" class="logo">
                     </a>
                 </div>
             </div>
         </div>
-        @if (m.esPantallaPc()) {
+        @if (m.esPantallaPc) {
             <div class="flex-fill d-flex justify-content-center">
                 <div class="card p-3" appMostrarAmbAnimacio>
                     <app-story [urlId]="'18078142072743585'" [titol]="'FPS'" img="assets/about-me/stories/mad-jumpgate.png" />
@@ -74,7 +74,7 @@
         
     </div>
 
-    @if (m.esPantallaMobil()) {
+    @if (m.esPantallaMobil) {
         <div class="text-center mt-4">
             <app-story [urlId]="'18078142072743585'" [titol]="'FPS'" img="assets/about-me/stories/mad-jumpgate.png" appMostrarAmbAnimacio />
         </div>

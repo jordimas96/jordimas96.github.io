@@ -1,5 +1,5 @@
 
-<div #index class="index" [style.top.px]="ls.getAlturaAppbar()" (mousemove)="scrollOnHover($event)">
+<div #index class="index" [style.top.px]="ls.alturaAppbar" (mousemove)="scrollOnHover($event)">
 
     @for (e of elementsALaPagina; track e.id) {
         @switch (e.id) {

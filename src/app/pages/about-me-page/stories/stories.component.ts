@@ -27,7 +27,7 @@ export class StoriesComponent implements OnInit {
     async ngOnInit() { }
 
     public scrollOnHover(event: MouseEvent) {
-        if (this.m.esPantallaTactil()) return;
+        if (this.m.esPantallaTactil) return;
 
         let s = this.storiesRef.nativeElement;
         let pos = event.clientX / s.clientWidth;

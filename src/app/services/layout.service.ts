@@ -30,11 +30,11 @@ export class LayoutService implements OnInit, AfterViewInit {
 
 
 
-    public getAlturaAppbar() {
+    public get alturaAppbar() {
         return this.appbar?.offsetHeight || 0;
     }
     
-    public getAmpladaScrollbar() {
+    public get ampladaScrollbar() {
         return window.innerWidth - (this.appbar?.offsetWidth || 0);
     }
 
