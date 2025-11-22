@@ -54,7 +54,7 @@
                     .imatge.pokemon {
                         // 240 x 160 //
                         width: calc(240px * 2);
-                        @include mobil { width: 100%; }
+                        @include mobil { width: calc(240px * 1.5); }
 
                         image-rendering: pixelated;
                         aspect-ratio: 3 / 2;
