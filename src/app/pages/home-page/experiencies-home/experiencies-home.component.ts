@@ -27,7 +27,7 @@ export class ExperienciesHomeComponent {
     }
 
 
-    getSeeMoreText() {
+    get seeMore() {
         return ["Veure més", "Ver más", "See more"][this.m.idiomaIndex];
     }
 }
