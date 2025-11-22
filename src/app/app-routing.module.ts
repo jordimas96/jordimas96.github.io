@@ -41,6 +41,11 @@ const routes: Routes = [
         path: "section/:section",
         component: SectionPageComponent
     },
+
+    {
+        path: "bunquer",
+        redirectTo: "github"
+    },
     
     {
         path: "**",

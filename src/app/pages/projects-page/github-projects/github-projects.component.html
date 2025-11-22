@@ -9,11 +9,11 @@
             </a>
         </div>
 
-        <!-- <div class="missatge-temps-real-github text-90">
+        <div class="missatge-temps-real-github text-50">
             @if (m.ca) { * Repositoris carregats a temps real des de GitHub }
             @if (m.es) { * Repositorios cargados a tiempo real desde GitHub }
             @if (m.en) { * Repositories loaded in real time from GitHub }
-        </div> -->
+        </div>
     </div>
     <article class="descripcio mb-4">
         @if (m.ca) { Llistat dels meus repositoris més rellevants a GitHub, on tinc els meus experiments i eines, i projectes vells dels meus estudis. Les imatges, títols, text dels readmes en 3 idiomes, url i altra informació es carrega dinàmicament mitjançant una petició a l'API de GitHub. }
@@ -32,7 +32,7 @@
                             }
                             <div class="titol flex-fill">{{repo.title}}</div>
                         </div>
-                        @if (repo.text[m.idioma]) { <div class="text">{{repo.text[m.idioma]}}</div> }
+                        @if (repo.text[m.idioma]) { <div class="text text-80">{{repo.text[m.idioma]}}</div> }
                         <div class="text-end">
                             <a class="boto stretched-link" [href]="repo.url">
                                 @if (m.ca) { Visitar web }
