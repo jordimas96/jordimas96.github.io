@@ -1,5 +1,4 @@
 import { AfterViewInit, Component, ElementRef, HostListener, OnInit, ViewChild } from '@angular/core';
-import $ from 'jquery';
 import { SelectorIdiomaComponent } from 'src/app/components/selector-idioma/selector-idioma.component';
 import { LayoutService } from 'src/app/services/layout.service';
 import { MainService } from 'src/app/services/main.service';
