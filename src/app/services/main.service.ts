@@ -25,7 +25,7 @@ export class MainService {
     public u;
 
     // Variables //
-    public tempsDelayCarregaPag = 1000;
+    public tempsDelayCarregaPag = 600;
     public readonly debug = window.location.hostname == "localhost" || window.location.hostname.includes("192.168.1.");
     public scroll = window.pageYOffset;
     public window = window;

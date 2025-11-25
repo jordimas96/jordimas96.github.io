@@ -34,7 +34,9 @@ export class AppbarComponent implements OnInit, AfterViewInit {
         this.m.afterRootFadeIn(this.afterRootFadeIn.bind(this));
 
         // Delay inicial pagina root //
-        setTimeout(() => { $("app-root").fadeIn(300); }, this.m.tempsDelayCarregaPag);
+        setTimeout(() => {
+            document.documentElement.classList.add("mostrat");
+        }, this.m.tempsDelayCarregaPag);
     }
 
     ngAfterViewInit() {

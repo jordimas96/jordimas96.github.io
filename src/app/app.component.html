@@ -1,7 +1,9 @@
 <app-appbar />
 <app-sidebar />
 <div class="outlet-container" [style.paddingLeft.px]="ls.paddingLeftPagina">
-    <app-index />
-    <router-outlet />
+    <main>
+        <app-index />
+        <router-outlet />
+    </main>
     <app-footer />
 </div>
