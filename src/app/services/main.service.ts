@@ -66,6 +66,8 @@ export class MainService {
                     Utils.removeHoverStyles();
                 }
             }
+
+            this.addAltToAllImages();
         });
     }
 
@@ -120,6 +122,12 @@ export class MainService {
         const rect = element.getBoundingClientRect();
         const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
         window.scrollTo({ top: rect.top + scrollTop - offset });
+    }
+
+    addAltToAllImages() {
+        document.querySelectorAll("img").forEach(e => {
+            if (!e.alt) e.alt = "";
+        });
     }
 
 }
