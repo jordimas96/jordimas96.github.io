@@ -32,9 +32,12 @@ h4, h5 {
     color: var(--text);
 }
 
-.text-daurat {
+.text-ressaltat {
     color: light-dark(var(--link), gold);
     font-weight: bold;
+    @include light {
+        font-weight: 800;
+    }
 }
 
 
