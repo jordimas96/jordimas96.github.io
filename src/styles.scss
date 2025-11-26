@@ -32,9 +32,6 @@ html {
 
     &.mostrat {
         opacity: 1;
-        main {
-            scale: 1;
-        }
     }
 
     &.dark {
@@ -58,12 +55,6 @@ html {
         line-height: 1.4;
         overflow-y: scroll;
         overflow-x: hidden;
-
-        main {
-            scale: 0.95;
-            transform-origin: top;
-            transition: scale 1.5s ease-out;
-        }
     }
 }
 
