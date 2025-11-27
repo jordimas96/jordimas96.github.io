@@ -9,10 +9,17 @@
             </a>
         </div>
 
-        <div class="missatge-temps-real-github text-50">
-            @if (m.ca) { * Carregat a temps real des de GitHub }
-            @if (m.es) { * Cargado a tiempo real desde GitHub }
-            @if (m.en) { * Loaded in real time from GitHub }
+        <div class="missatge-temps-real-github text-end text-70">
+            <i class="fa-solid fa-arrows-rotate me-1"></i>
+            @if (m.esPantallaPc) {
+                @if (m.ca) { Sincronitzat a temps real des de GitHub }
+                @if (m.es) { Sincronizado en tiempo real desde GitHub }
+                @if (m.en) { Synchronized in real time from GitHub }
+            } @else {
+                @if (m.ca) { Des de GitHub }
+                @if (m.es) { Desde GitHub }
+                @if (m.en) { From GitHub }
+            }
         </div>
     </div>
     <article class="descripcio mb-4">

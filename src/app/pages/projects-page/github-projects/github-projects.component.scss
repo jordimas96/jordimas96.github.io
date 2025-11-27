@@ -16,6 +16,13 @@
         }
         .missatge-temps-real-github {
             font-size: 1rem;
+            cursor: default;
+            i {
+                transition: rotate 0.45s ease-out;
+            }
+            &:hover > i {
+                rotate: 360deg;
+            }
         }
     }
 

@@ -5,14 +5,14 @@
             <img src="assets/_experience/nexxia/nexxia.jpg" alt="Nexxia" class="title-icon rounded-2">
             <span class="fletxa">↗</span>
         </a>
-        @if (m.esPantallaPc) {
-            <div class="text-60 px-2 d-xs-none">
-                <i class="fa-solid fa-graduation-cap icona-practiques"></i>
+        <div class="text-60 text-end">
+            <i class="fa-solid fa-graduation-cap icona-practiques me-1"></i>
+            @if (m.esPantallaPc) {
                 @if (m.ca) { Pràctiques }
                 @if (m.es) { Prácticas }
                 @if (m.en) { Internship }
-            </div>
-        }
+            }
+        </div>
     </div>
     <article class="descripcio mb-4">
         @if (m.ca) {
