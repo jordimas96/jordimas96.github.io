@@ -29,7 +29,7 @@
 
 
         <ngx-masonry #masonry class="repos row g-3 mt-3" [ordered]="true" [class.ocult]="!masonryReady" (layoutComplete)="onLayoutComplete()">
-            @for (repo of repos; track repo.name) {
+            @for (repo of gs.repos; track repo.name) {
                 <div ngxMasonryItem class="col-12 col-md-6" [attr.aria-order]="repo.order" style="--hue: {{repo.cardHue}}deg">
 
                     <div class="repo card-themed paleta-{{repo.cardHue}} {{repo.name}}" appMostrarAmbAnimacio matRipple>
