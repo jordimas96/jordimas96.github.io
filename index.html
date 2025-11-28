@@ -15,8 +15,37 @@
     </script>
 
     <!-- Splash Screen -->
-    <link rel="preload" href="assets/splash-screen/splash-screen.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
-    <noscript><style>#splash-screen{display:flex;justify-content:center;align-items:flex-start;inset:0;position:fixed;background-color:light-dark(white, black);opacity:1;transition:opacity 0.6s;z-index:1000000}</style><link rel="stylesheet" href="assets/splash-screen/splash-screen.css" media="print" onload="this.media='all'"><noscript><link rel="stylesheet" href="assets/splash-screen/splash-screen.css"></noscript></noscript>
+    <style>
+        #splash-screen {
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+
+            inset: 0;
+            position: fixed;
+            background-color: light-dark(white, black); /* c7d6ff */
+
+            opacity: 1;
+            transition: opacity 0.6s;
+
+            z-index: 1000000;
+        }
+
+        #splash-screen svg.jmas {
+            will-change: scale;
+
+            margin-top: 25vh;
+
+            fill: light-dark(#757575, white); /* 5e6a8d */
+
+            /* animation: apareixer 0.5s ease; */
+        }
+
+        @keyframes apareixer {
+            from { scale: 0.7; opacity: 0; }
+            to { scale: 1; opacity: 1; }
+        }
+    </style>
 
     <title>Jordi Mas Parramon</title>
     <meta name="author" content="Jordi Mas Parramon">
