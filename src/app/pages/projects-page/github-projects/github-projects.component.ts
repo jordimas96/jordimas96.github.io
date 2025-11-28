@@ -35,9 +35,7 @@ export class GithubProjectsComponent implements OnInit {
     ) { }
 
     async ngOnInit() {
-        this.m.afterRootFadeIn(() => {
-            this.gs.carregarInfoProjects();
-        });
+        this.gs.carregarInfoProjects();
     }
 
 

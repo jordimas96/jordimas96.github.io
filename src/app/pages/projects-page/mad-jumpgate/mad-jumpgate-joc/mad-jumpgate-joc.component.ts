@@ -26,11 +26,6 @@ export class MadJumpgateJocComponent {
     }
 
     ngOnInit() {
-        this.m.afterRootFadeIn(this.afterRootFadeIn.bind(this));
-
-    }
-
-    afterRootFadeIn() {
         this.posarIframeDinsLimits();
     }
     

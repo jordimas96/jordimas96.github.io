@@ -24,9 +24,5 @@ export class AboutMePageComponent extends PageComponent {
         if (!this.m.debug) document.title = "Jordi Mas Parramon - About me";
     }
 
-    override afterRootFadeIn() {
-        super.afterRootFadeIn();
-    }
-
 
 }

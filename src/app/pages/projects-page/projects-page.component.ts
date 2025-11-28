@@ -34,8 +34,4 @@ export class ProjectsPageComponent extends PageComponent {
         this.frase = llistaFrases[Math.floor(Math.random() * llistaFrases.length)];
     }
 
-    override afterRootFadeIn() {
-        super.afterRootFadeIn();
-    }
-
 }

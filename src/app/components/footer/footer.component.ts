@@ -31,7 +31,6 @@ export class FooterComponent implements OnInit, AfterViewInit{
     }
 
     ngOnInit() {
-        this.m.afterRootFadeIn(this.afterRootFadeIn.bind(this));
 
         // Fill battery info //
         try {
@@ -45,7 +44,5 @@ export class FooterComponent implements OnInit, AfterViewInit{
     ngAfterViewInit() {
         this.ls.footer = this.footerRef.nativeElement;
     }
-
-    afterRootFadeIn() { }
 
 }

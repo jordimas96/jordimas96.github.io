@@ -30,8 +30,4 @@ export class HomePageComponent extends PageComponent {
         if (!this.m.debug) document.title = "Jordi Mas Parramon - Home";
     }
 
-    override afterRootFadeIn() {
-        super.afterRootFadeIn();
-    }
-
 }

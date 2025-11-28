@@ -22,17 +22,10 @@ export class DarkModeComponent {
     ) { }
 
     ngOnInit() {
-        this.m.afterRootFadeIn(this.afterRootFadeIn.bind(this));
-
-
         this.setDarkMode();
-
 
         // Mostrar boto Dark Mode Auto si cal //
         if (Utils.hasFlag("darkMode")) $(".botoAutoMode").fadeIn(150);
-    }
-
-    afterRootFadeIn() {
     }
 
 

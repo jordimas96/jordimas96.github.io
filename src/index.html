@@ -9,10 +9,11 @@
         html.dark { color-scheme: only dark; }
     </style>
     <script>
-        const darkMode = localStorage.getItem("darkmode");
+        const darkMode = localStorage.getItem("darkMode");
         if (darkMode === "0") document.documentElement.classList.add("light");
         else if (darkMode === "1") document.documentElement.classList.add("dark");
     </script>
+
     <title>Jordi Mas Parramon</title>
     <meta name="author" content="Jordi Mas Parramon">
     <meta name="description" content="My portfolio showing my work and projects as a frontend programmer">
@@ -33,6 +34,7 @@
     <!-- Styles -->
     <link rel="stylesheet" href="assets/fonts/stylesheet.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v6.5.2/css/all.css">
+    <link rel="stylesheet" href="assets/splash-screen/splash-screen.css">
 
     <!-- Scripts -->
     <script src="github-pages-routing-problem-fix.js"></script>
@@ -56,6 +58,10 @@
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 </head>
 <body>
+    <div id="splash-screen"></div>
+
     <jmp-root></jmp-root>
+
+    <script src="assets/splash-screen/splash-screen.js"></script>
 </body>
 </html>

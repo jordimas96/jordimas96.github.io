@@ -6,7 +6,7 @@ import { ActivatedRoute, Router } from '@angular/router';
 @Injectable({
     providedIn: 'root'
 })
-export class LayoutService implements OnInit, AfterViewInit {
+export class LayoutService {
     // Components //
     public appbar: HTMLElement;
     public sidebar: HTMLElement;
@@ -19,12 +19,6 @@ export class LayoutService implements OnInit, AfterViewInit {
         public router: Router,
         public route: ActivatedRoute,
     ) {
-        
-    }
-
-    ngOnInit(): void { }
-
-    ngAfterViewInit(): void {
         
     }
 

@@ -42,11 +42,6 @@ export class NavegacioTabComponent {
         });
     }
     ngOnInit() {
-        this.m.afterRootFadeIn(this.afterRootFadeIn.bind(this));
-
-    }
-
-    afterRootFadeIn() {
         this.actPosPill(false);
 
         interval(50).subscribe(() => {

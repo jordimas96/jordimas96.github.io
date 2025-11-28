@@ -65,10 +65,6 @@ export class SectionPageComponent extends PageComponent {
         });
     }
 
-    override afterRootFadeIn() {
-        super.afterRootFadeIn();
-    }
-
     getNameGoBack() {
         return [
             ["Inici", "Inicio", "Home"],

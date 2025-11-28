@@ -25,7 +25,6 @@ export class MainService {
     public u;
 
     // Variables //
-    public tempsDelayCarregaPag = 600;
     public readonly debug = window.location.hostname == "localhost" || window.location.hostname.includes("192.168.1.");
     public scroll = window.pageYOffset;
     public window = window;
@@ -103,13 +102,6 @@ export class MainService {
 
     public sanitize(url) { return this.sanitizer.bypassSecurityTrustResourceUrl(url); }
 
-
-    // Funcions //
-    afterRootFadeIn(funcio: Function) {
-        setTimeout(async () => {
-            funcio();
-        }, document.documentElement.classList.contains("mostrat") ? 0 : this.tempsDelayCarregaPag); // Retard fadein pagina //
-    }
 
     scrollTo(element: string | Element) {
         if (typeof (element) == "string")

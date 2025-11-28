@@ -23,11 +23,6 @@ export class MadJumpgateGameplayComponent {
     constructor(public m: MainService) { }
 
     ngOnInit() {
-        this.m.afterRootFadeIn(this.afterRootFadeIn.bind(this));
-        
-    }
-
-    afterRootFadeIn() {
         this.posarIframeDinsLimits();
     }
     

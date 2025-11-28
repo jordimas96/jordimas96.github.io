@@ -21,13 +21,6 @@ export class DetallsAndroidAppsComponent {
 
     constructor(public m: MainService) { }
 
-    ngOnInit() {
-        this.m.afterRootFadeIn(this.afterRootFadeIn.bind(this));
-    }
-
-
-    afterRootFadeIn() { }
-
 
 
     getAmazonLink_breakingBall() {

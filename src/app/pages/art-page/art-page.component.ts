@@ -35,9 +35,4 @@ export class ArtPageComponent extends PageComponent {
 
     }
 
-    override afterRootFadeIn() {
-        super.afterRootFadeIn();
-    }
-
-
 }

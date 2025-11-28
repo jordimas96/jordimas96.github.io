@@ -16,10 +16,6 @@ export class SelectorIdiomaComponent {
     constructor(public m: MainService) { }
 
     ngOnInit() {
-        this.m.afterRootFadeIn(this.afterRootFadeIn.bind(this));
-    }
-
-    afterRootFadeIn() {
         this.establirIdiomaDefecte();
     }
 

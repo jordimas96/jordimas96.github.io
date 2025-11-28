@@ -18,7 +18,7 @@ import { Utils } from 'src/app/shared/utils';
         SelectorIdiomaComponent,
     ]
 })
-export class AppbarComponent implements OnInit, AfterViewInit {
+export class AppbarComponent implements AfterViewInit {
 
     @ViewChild('appbar') appbar: ElementRef;
 
@@ -30,20 +30,8 @@ export class AppbarComponent implements OnInit, AfterViewInit {
         m.appbar = this;
     }
 
-    ngOnInit() {
-        this.m.afterRootFadeIn(this.afterRootFadeIn.bind(this));
-
-        // Delay inicial pagina root //
-        setTimeout(() => {
-            document.documentElement.classList.add("mostrat");
-        }, this.m.tempsDelayCarregaPag);
-    }
-
     ngAfterViewInit() {
         this.ls.appbar = this.appbar.nativeElement;
-    }
-
-    afterRootFadeIn() {
     }
 
     width() {

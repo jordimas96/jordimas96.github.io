@@ -22,8 +22,4 @@ export class ExperiencePageComponent extends PageComponent {
         if (!this.m.debug) document.title = "Jordi Mas Parramon - Experience";
     }
 
-    override afterRootFadeIn() {
-        super.afterRootFadeIn();
-    }
-
 }
