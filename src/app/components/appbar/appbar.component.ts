@@ -5,6 +5,7 @@ import { MainService } from 'src/app/services/main.service';
 import { ThemeService } from 'src/app/services/theme.service';
 import { SharedImports } from 'src/app/shared/imports';
 import { NavegacioTabComponent } from './navegacio-tab/navegacio-tab.component';
+import { Utils } from 'src/app/shared/utils';
 
 
 @Component({
@@ -34,8 +35,13 @@ export class AppbarComponent implements OnInit, AfterViewInit {
 
         // Delay inicial pagina root //
         setTimeout(() => {
-            document.documentElement.classList.add("mostrat");
+            let splashScreen = document.getElementById("splash-screen")!;
+            splashScreen.style.opacity = "0";
+
+            setTimeout(() => { splashScreen.style.display = "none"; }, 600);
+
         }, this.m.tempsDelayCarregaPag);
+        
     }
 
     ngAfterViewInit() {

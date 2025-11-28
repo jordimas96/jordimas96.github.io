@@ -27,13 +27,6 @@ html {
     position: relative;
     min-height: 100%;
 
-    transition: opacity 0.6s;
-    opacity: 0;
-
-    &.mostrat {
-        opacity: 1;
-    }
-
     &.dark {
         --body-background-color: var(--color-l-0);
         color-scheme: only dark;
