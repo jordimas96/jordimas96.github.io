@@ -134,9 +134,9 @@
         </div>
 
         <div class="botons">
-            <a class="boto boing ca" href="CV Jordi Mas Parramon CA.pdf">Català</a>
-            <a class="boto boing es" href="CV Jordi Mas Parramon ES.pdf">Español</a>
-            <a class="boto boing en" href="CV Jordi Mas Parramon EN.pdf">English</a>
+            <a class="boto boing ca" onclick="obrirCV('CV Jordi Mas Parramon CA.pdf')">Català</a>
+            <a class="boto boing es" onclick="obrirCV('CV Jordi Mas Parramon ES.pdf')">Español</a>
+            <a class="boto boing en" onclick="obrirCV('CV Jordi Mas Parramon EN.pdf')">English</a>
         </div>
 
     </section>
@@ -152,6 +152,11 @@
     <script>
         if (!location.pathname.endsWith("index.html") && !location.pathname.endsWith("/"))
             location.pathname += '/';
+        
+        function obrirCV(nomArxiu) {
+            location.assign(location.href + nomArxiu);
+        }
+        
     </script>
 </body>
 </html>
