@@ -35,13 +35,8 @@ export class AppbarComponent implements OnInit, AfterViewInit {
 
         // Delay inicial pagina root //
         setTimeout(() => {
-            let splashScreen = document.getElementById("splash-screen")!;
-            splashScreen.style.opacity = "0";
-
-            setTimeout(() => { splashScreen.style.display = "none"; }, 600);
-
+            document.documentElement.classList.add("mostrat");
         }, this.m.tempsDelayCarregaPag);
-        
     }
 
     ngAfterViewInit() {

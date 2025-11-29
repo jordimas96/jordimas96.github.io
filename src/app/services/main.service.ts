@@ -108,7 +108,7 @@ export class MainService {
     afterRootFadeIn(funcio: Function) {
         setTimeout(async () => {
             funcio();
-        }, $("app-root").is(":visible") ? 0 : this.tempsDelayCarregaPag); // Retard fadein pagina //
+        }, document.documentElement.classList.contains("mostrat") ? 0 : this.tempsDelayCarregaPag); // Retard fadein pagina //
     }
 
     scrollTo(element: string | Element) {
