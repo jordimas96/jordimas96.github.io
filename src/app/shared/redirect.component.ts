@@ -35,6 +35,7 @@ export class RedirectComponent {
                 return `/assets/documents/cv/`;
         }
 
+        // Foto //
         if (url == "foto" || url == "photo") return "/assets/foto-carnet-2020.jpg";
 
 
@@ -51,7 +52,7 @@ export class RedirectComponent {
             "color:#f60", "", "color:lime", "");
         
         if (esRutaExterna)
-            location.assign(urlNova);
+            location.replace(urlNova);
         else {
             const [path, queryString] = urlNova.split('?');
             const queryParams = Object.fromEntries(new URLSearchParams(queryString));
