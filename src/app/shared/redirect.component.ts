@@ -15,13 +15,6 @@ export class RedirectComponent {
         urlNova = urlNova!.replace(/^\//, '');
 
         this.redirigir(url, urlNova);
-
-        // Redirigir, si pel que fos seguís a la pàgina (no visor de PDF per exemple) //
-        if (url == "cv") {
-            setTimeout(() => {
-                this.redirigir("", "/");
-            }, 100);
-        }
     }
 
     canviarUrl(url: string): string {
@@ -58,7 +51,7 @@ export class RedirectComponent {
             "color:#f60", "", "color:lime", "");
         
         if (esRutaExterna)
-            window.location.href = urlNova;
+            location.assign(urlNova);
         else {
             const [path, queryString] = urlNova.split('?');
             const queryParams = Object.fromEntries(new URLSearchParams(queryString));
