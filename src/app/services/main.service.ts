@@ -85,7 +85,7 @@ export class MainService {
     public get esIOS() { return /iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent); }
     public get esSamsung() { return /SAMSUNG|SGH-[I|N|T]|GT-[I|P|N]|SM-[N|P|T|Z|G]|SHV-E|SCH-[I|J|R|S]|SPH-L/i.test(navigator.userAgent); }
     public get esXiaomi() { return /XiaoMi\/MiuiBrowser/i.test(navigator.userAgent); }
-    public get esPantallaTactil() { return (('ontouchstart' in window) || (navigator.maxTouchPoints > 0) || (navigator.maxTouchPoints > 0)); }
+    public get esPantallaTactil() { return 'ontouchstart' in window || navigator.maxTouchPoints > 0; }
     public get ampladaScrollbar() { return window.innerWidth - this.appbar.width(); }
 
     public printarFirmaAConsola() {
