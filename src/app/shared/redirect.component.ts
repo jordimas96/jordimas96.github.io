@@ -21,7 +21,7 @@ export class RedirectComponent {
 
         
         // Buscar seccions //
-        let seccio = SECCIONS.find(s => url == s.nom);
+        let seccio = SECCIONS.find(s => url == s.nom || url == s.nom + "-info");
         if (seccio)
             return `${seccio.pagina}?priority=${seccio.nom}`;
         
@@ -32,8 +32,9 @@ export class RedirectComponent {
             if (idioma)
                 return `/assets/documents/cv/CV Jordi Mas Parramon ${idioma.toUpperCase()}.pdf`;
             else
-                return `/assets/documents/cv/`;
+                return `/assets/documents/cv`;
         }
+        if (url == "cv-selector") return "/assets/documents/cv";
 
         // Foto //
         if (url == "foto" || url == "photo") return "/assets/foto-carnet-2020.jpg";

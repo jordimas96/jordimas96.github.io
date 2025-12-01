@@ -22,10 +22,7 @@ export class MadJumpgateJocComponent {
     public placeholderWidth = 0;
     public placeholderHeight = 0;
 
-    public iframeUrl: SafeResourceUrl;
-
     constructor(public m: MainService) {
-        this.iframeUrl = m.sanitize(environment.assets + '/external-pages/mad-jumpgate');
     }
 
     ngOnInit() {
