@@ -29,9 +29,10 @@
             "assets": [
               "src/favicon.ico",
               "src/assets",
-              "src/404.html",
-              "src/github-pages-routing-problem-fix.js",
-              "src/sitemap.xml"
+              {
+                "glob": "**/*",
+                "input": "public"
+              }
             ],
             "styles": [
               "src/app/styles/libraries/material-custom.css",
