@@ -39,8 +39,8 @@ export class GitHubService {
                 title: "Descarregador de capítols d'El Búnquer",
                 cardHue: 346,
                 text: {
-                    ca: "Eina que permet descarregar fàcilment tots els episodis del programa de radio El Búnquer, de Catalunya Ràdio. Permet buscar episodis i reproduir-los o descarregar-los individualment o en bloc. Mostra el temps estimat de descàrrega, pes total i barra de progrés amb temps restant. Aquesta web no allotja els arxius.",
-                    es: "Herramienta que permite descargar fácilmente todos los episodios del programa de radio El Búnquer, de Catalunya Ràdio. Permite buscar episodios y reproducirlos o descargarlos individualmente o en bloque. Muestra el tiempo estimado de descarga, peso total y barra de progreso con tiempo restante. Esta web no aloja los archivos.",
+                    ca: "Eina que permet descarregar fàcilment tots els capítols del programa de radio El Búnquer, de Catalunya Ràdio. Permet buscar capítols i reproduir-los o descarregar-los individualment o en bloc. Mostra el temps estimat de descàrrega, pes total i barra de progrés amb temps restant. Aquesta web no allotja els arxius.",
+                    es: "Herramienta que permite descargar fácilmente todos los capítulos del programa de radio El Búnquer, de Catalunya Ràdio. Permite buscar capítulos y reproducirlos o descargarlos individualmente o en bloque. Muestra el tiempo estimado de descarga, peso total y barra de progreso con tiempo restante. Esta web no aloja los archivos.",
                     en: "Tool that allows you to easily download all episodes of the radio program El Búnquer, from Catalunya Ràdio. It allows you to search for episodes and play or download them individually or in bulk. It shows the estimated download time, total weight and progress bar with remaining time. This web does not host the files.",
                 }
             },
