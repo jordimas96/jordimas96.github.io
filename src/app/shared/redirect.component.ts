@@ -36,7 +36,9 @@ export class RedirectComponent {
         }
         if (url == "cv-selector") return "/assets/documents/cv";
 
-        if (url == "play-store" || url == "playstore") return "https://jordimas96.github.io/assets_repo/jordimas96.github.io/external-pages/apps/play-store";
+        if (url == "play-store" || url == "playstore")
+            // return "https://jordimas96.github.io/assets_repo/jordimas96.github.io/external-pages/apps/play-store";
+            return "assets/_projects/android/play-store/index-simple.html";
 
         // Foto //
         if (url == "foto" || url == "photo") return "/assets/foto-carnet-2020.jpg";
