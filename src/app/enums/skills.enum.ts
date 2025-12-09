@@ -12,6 +12,7 @@ export enum Skills {
     ANGULARMATERIAL = "Angular Material",
     MATERIALIZE = "Materialize",
     PRIMENG = "PrimeNG",
+    JEST = "Jest",
     JASMINE = "Jasmine",
     JIRA = "Jira",
     SONARQUBE = "SonarQube",
