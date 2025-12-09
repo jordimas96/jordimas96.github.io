@@ -21,10 +21,10 @@ IN2ART es una red social para artistas, coleccionistas y aficionados al arte. La
   * Título, autor propio o reconocido, fecha (exacta o aproximada)
   * Medio, movimiento artístico, técnica, dimensiones, precio, descripción y tags
   * Control de contenido para mayores de edad
-  * Previsualización de publicación antes de subrirla
+  * Previsualización de publicación antes de subirla
 * Formularios diseñados para máxima usabilidad y ergonomía: arrastrar para reordenar archivos audiovisuales, selectores de fecha flexibles, gestión de tags automática.
 
-### Pperfil de usuario
+### Perfil de usuario
 
 * Perfil personalizable con biografía, correo, enlaces y tipo de usuario: artista profesional, coleccionista o espectador.
 * Visualización de seguidores, suscriptores y lista de publicaciones propias (separadas por tipo de obra).
@@ -36,7 +36,7 @@ IN2ART es una red social para artistas, coleccionistas y aficionados al arte. La
 * Función de exploración personalizada basada tanto en intereses como en tipo de usuario cuando no hay búsqueda activa.
 * Acceso rápido desde publicaciones a búsquedas por tags o categorías.
 
-### Autenticació
+### Autenticación
 
 * Login, registro, selección inicial de intereses.
 * Recuperación de contraseña, eliminación de usuario.
