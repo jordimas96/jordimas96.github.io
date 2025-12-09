@@ -36,7 +36,7 @@ IN2ART is a social network for artists, collectors, and art enthusiasts. The pla
 * Personalized browsing feature based on both interests and user type when there is no active search.
 * Quick access from posts to searches by tags or categories.
 
-### Autenticació
+### Authentication
 
 * Login, registration, initial selection of interests.
 * Password recovery, user deletion.
