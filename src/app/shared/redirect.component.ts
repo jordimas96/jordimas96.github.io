@@ -10,6 +10,10 @@ export class RedirectComponent {
     constructor(private router: Router) {
         const url = this.router.url.replace(/^\//, '');
 
+        // Temporal, Búnquer Descarregador //
+        if (url == "bunquer-descarregador")
+            location.href = "https://bunquer-descarregador.github.io/";
+
         let urlNova = this.canviarUrl(url);
         
         urlNova = urlNova!.replace(/^\//, '');
