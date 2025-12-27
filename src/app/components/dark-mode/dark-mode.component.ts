@@ -29,7 +29,7 @@ export class DarkModeComponent {
 
 
         // Mostrar boto Dark Mode Auto si cal //
-        if (Utils.hasFlag("darkmode")) $(".botoAutoMode").fadeIn(150);
+        if (Utils.hasFlag("darkMode")) $(".botoAutoMode").fadeIn(150);
     }
 
     afterRootFadeIn() {
@@ -139,18 +139,18 @@ export class DarkModeComponent {
     accioDarkMode() {
         this.ts.modeFosc = !this.ts.modeFosc;
         this.ts.actTema();
-        Utils.setFlag("darkmode", this.ts.modeFosc);
+        Utils.setFlag("darkMode", this.ts.modeFosc);
     }
 
     accioAutoDarkMode() {
         this.ts.modeFosc = Utils.systemDarkMode;
         this.ts.actTema();
-        localStorage.removeItem("darkmode");
+        localStorage.removeItem("darkMode");
     }
 
     setDarkMode() {
         // Establir variable dark mode. Si no te cookie el traiem de system //
-        this.ts.modeFosc = Utils.getFlag("darkmode") ?? Utils.systemDarkMode;
+        this.ts.modeFosc = Utils.getFlag("darkMode") ?? Utils.systemDarkMode;
     }
 
 }

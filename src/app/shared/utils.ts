@@ -51,7 +51,7 @@ export class Utils {
         localStorage.removeItem(key);
     }
     public static hasFlag(key: string): boolean {
-        return this.getFlag(key) === null;
+        return this.getFlag(key) !== null;
     }
 
 
