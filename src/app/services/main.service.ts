@@ -52,7 +52,7 @@ export class MainService {
         if (this.debug) {
             window["m"] = this;
             document.title = "Local";
-            document.querySelector("link[rel*='icon']")!["href"] = "assets/favicon-local.ico";
+            document.querySelectorAll("link[rel*='icon']").forEach(e => e["href"] = "assets/favicon-local.ico");
             // document.body.style.overflowX = "visible";
         } else {
             this.printarFirmaAConsola();
