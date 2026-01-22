@@ -58,6 +58,7 @@ export class Links {
 
 
         "tasker": "https://tasker.joaoapps.com/",
+        "joao-play-store": "https://play.google.com/store/apps/dev?id=8102570190170276456",
 
 
         "pixel-exp": "https://get.pixelexperience.org/",
