@@ -1,0 +1,28 @@
+<div id="page" class="page">
+    <div class="page-title mb-5" appMostrarAmbAnimacio>
+        <!-- {{ seccio.nom }} -->
+    </div>
+
+
+
+    <div class="content">
+
+        <div class="mw-940 m-auto">
+            @if (seccio.component) {
+                <ng-container *ngComponentOutlet="seccio.component" />
+            } @else {
+                <h4 class="text-center text-danger mt-5">Invalid section name</h4>
+                <!-- <h2 class="text-center mt-5"><app-link href="/" target="_self">Go home</app-link></h2> -->
+            }
+        </div>
+
+        <div class="altres-seccions-titol mt-6 mb-4" appMostrarAmbAnimacio>{{ textAltresSeccions }}</div>
+
+        <div class="mw-1400 m-auto row justify-content-center g-3 mb-6">
+            @for (seccio of altresSeccions; track seccio.nom) {
+                <app-preview-case-study [nom]="seccio.nom" class="col-12 col-md-6 col-xl-4" />
+            }
+        </div>
+
+    </div>
+</div>

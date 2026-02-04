@@ -61,7 +61,6 @@ html {
     transition: transform 0.3s;
 
     .content {
-        max-width: 940px;
         margin: auto;
     }
 
@@ -203,6 +202,9 @@ video, img {
 .float-right { float: right !important; }
 .float-none { float: none !important; }
 .font-italic { font-style: italic !important; }
+.mw-940 { max-width: 940px !important; }
+.mw-1200 { max-width: 1200px !important; }
+.mw-1400 { max-width: 1400px !important; }
 
 
 // Utils //

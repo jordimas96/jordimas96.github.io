@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { RouterLink } from '@angular/router';
+import { ActivatedRoute, RouterLink } from '@angular/router';
 import { AmazfitWatchfacesComponent } from 'src/app/pages/art-page/amazfit-watchfaces/amazfit-watchfaces.component';
 import { IconsComponent } from 'src/app/pages/art-page/icons/icons.component';
 import { NexxiaComponent } from 'src/app/pages/experience-page/2016-10-nexxia/nexxia.component';
@@ -15,6 +15,7 @@ import { CustomRomsComponent } from 'src/app/pages/projects-page/custom-roms/cus
 import { GithubProjectsComponent } from 'src/app/pages/projects-page/github-projects/github-projects.component';
 import { MadJumpgateComponent } from 'src/app/pages/projects-page/mad-jumpgate/mad-jumpgate.component';
 import { TaskerComponent } from 'src/app/pages/projects-page/tasker/tasker.component';
+import { MainService } from 'src/app/services/main.service';
 import { SharedImports } from 'src/app/shared/imports';
 
 @Component({
@@ -46,18 +47,18 @@ export class SectionPageComponent extends PageComponent {
     public optionBack: number = 0;
     public urlGoBack: string = "";
 
+    constructor(
+        override m: MainService,
+        public route: ActivatedRoute,
+    ) {
+        super(m);
+    }
+
     override async ngOnInit() {
         super.ngOnInit();
 
         this.route.params.subscribe(params => {
             this.section = params['section'];
-
-            // if (["indra", "evora", "orange", "in2art", "matic", "tecnocom", "nexxia"].includes(this.section))
-            //     this.optionBack = 1;
-            // else if (["android", "mad-jumpgate", "github", "custom-roms", "tasker"].includes(this.section))
-            //     this.optionBack = 2;
-            // else if (["icons", "amazfit"].includes(this.section))
-            //     this.optionBack = 3;
 
             // this.urlGoBack = "/" + ["", "experience", "projects", "art"][this.optionBack];
             this.urlGoBack = "/";

@@ -27,7 +27,7 @@ export class RedirectComponent {
         // Buscar seccions //
         let seccio = SECCIONS.find(s => url == s.nom || url == s.nom + "-info");
         if (seccio)
-            return `${seccio.pagina}?priority=${seccio.nom}`;
+            return `${seccio.pagina}/${seccio.nom}`;
         
 
         // CV //

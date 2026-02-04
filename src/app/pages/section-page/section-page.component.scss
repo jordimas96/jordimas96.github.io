@@ -1,11 +1,6 @@
 @import "src/styles.scss";
 @import "../page.scss";
 
-// ::ng-deep app-appbar app-navegacio-tab .contenidor button {
-//     background-color: var(--text) !important;
-//     color: var(--fons) !important;
-// }
-
 ::ng-deep app-index {
     display: none !important;
 }

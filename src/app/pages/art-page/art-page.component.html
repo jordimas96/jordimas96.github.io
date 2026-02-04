@@ -5,27 +5,16 @@
         @if (m.en) { Artistic projects }
     </div>
 
-    <div class="content mb-6 d-flex flex-column gap-6">
+    <div class="content mb-6">
 
-        <div class="seccions">
-            @for (seccio of seccionsPrioritat; track seccio.nom) {
-                <ng-container *ngComponentOutlet="seccio.component"></ng-container>
-            }
-
-            @if (seccionsPrioritat.length && seccions.length) {
-                <div class="altres-seccions-titol" appMostrarAmbAnimacio>
-                    @if (m.ca) { Altres projectes artístics }
-                    @if (m.es) { Otros proyectos artísticos }
-                    @if (m.en) { Other artistic projects }
-                </div>
-            }
-
-            @for (seccio of seccions; track seccio.nom) {
-                <ng-container *ngComponentOutlet="seccio.component"></ng-container>
-            }
+        <div class="seccions mw-1400 m-auto row justify-content-center g-3 mb-6">
+            <app-preview-case-study class="col-12 col-md-6 col-xl-4" [nom]="'icons'" />
+            <app-preview-case-study class="col-12 col-md-6 col-xl-4" [nom]="'amazfit'" />
         </div>
 
-        <h2 class="proximament-mes">{{ frase[m.idiomaIndex] }}</h2>
+
+        <h2 class="proximament-mes mt-6 mb-6">{{ frase[m.idiomaIndex] }}</h2>
+
 
         <div class="navegacio-pagina">
             <button class="boto projects" routerLink="/projects" title="Projects" appMostrarAmbAnimacio matRipple>

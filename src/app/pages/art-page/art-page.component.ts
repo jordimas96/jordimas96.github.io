@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { RouterLink } from '@angular/router';
+import { PreviewCaseStudyComponent } from 'src/app/components/preview-case-study/preview-case-study.component';
 import { SharedImports } from 'src/app/shared/imports';
 import { PageComponent } from '../page.component';
 
@@ -9,6 +10,7 @@ import { PageComponent } from '../page.component';
     styleUrl: './art-page.component.scss',
     imports: [
         ...SharedImports,
+        PreviewCaseStudyComponent,
         RouterLink,
     ]
 })

@@ -5,27 +5,21 @@
         @if (m.en) { Personal projects }
     </div>
 
-    <div class="content pb-6">
+    <div class="content mb-6">
 
-        <div class="seccions">
-            @for (seccio of seccionsPrioritat; track seccio.nom) {
-                <ng-container *ngComponentOutlet="seccio.component"></ng-container>
-            }
-
-            @if (seccionsPrioritat.length && seccions.length) {
-                <div class="altres-seccions-titol" appMostrarAmbAnimacio>
-                    @if (m.ca) { Altres projectes }
-                    @if (m.es) { Otros proyectos }
-                    @if (m.en) { Other projects }
-                </div>
-            }
-
-            @for (seccio of seccions; track seccio.nom) {
-                <ng-container *ngComponentOutlet="seccio.component"></ng-container>
-            }
+        <div class="seccions mw-1400 m-auto row justify-content-center g-3 mb-6">
+            <app-preview-case-study class="col-12 col-md-6 col-xl-4" [nom]="'android'" />
+            <app-preview-case-study class="col-12 col-md-6 col-xl-4" [nom]="'mad-jumpgate'" />
+            <app-preview-case-study class="col-12 col-md-6 col-xl-4" [nom]="'github'" />
+            <app-preview-case-study class="col-12 col-md-6 col-xl-4" [nom]="'custom-roms'" />
+            <app-preview-case-study class="col-12 col-md-6 col-xl-4" [nom]="'tasker'" />
         </div>
 
-        <div class="navegacio-pagina mt-6 mb-6">
+
+        <h2 class="proximament-mes mt-6 mb-6">{{ frase[m.idiomaIndex] }}</h2>
+
+
+        <div class="navegacio-pagina">
             <button class="boto experience" routerLink="/experience" title="Experience" appMostrarAmbAnimacio matRipple>
                 <i class="fa-solid fa-briefcase" alt="Experience"></i>
             </button>

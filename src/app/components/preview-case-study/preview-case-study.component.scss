@@ -1,0 +1,45 @@
+@import "src/styles.scss";
+
+
+.item {
+    height: 100%;
+
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    padding: 1.3rem;
+
+    overflow: hidden;
+
+    .titol {
+        margin-top: -0.3rem;
+        font-size: 1.5rem;
+    }
+    .text {
+        flex: 1 1 auto;
+        font-size: 1.2rem;
+        color: var(--text-80);
+        margin-bottom: 0.5rem;
+    }
+    .titol, .text {
+        position: relative;
+        transition: color 0.6s;
+    }
+    .boto {
+        padding: 0.5rem 1rem;
+
+        box-shadow: 0 0 0 0 var(--accent-color);
+        transition: box-shadow 0.6s;
+    }
+
+    &:hover {
+
+        .titol, .text {
+            color: var(--fons);
+        }
+
+        .boto {
+            box-shadow: 0 0 30px 26.5rem var(--accent-color);
+        }
+    }
+}

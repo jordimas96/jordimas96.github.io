@@ -5,24 +5,16 @@
         @if (m.en) { Professional experience }
     </div>
 
-    <div class="content mb-6 d-flex flex-column gap-6">
+    <div class="content mb-6">
 
-        <div class="seccions">
-            @for (seccio of seccionsPrioritat; track seccio.nom) {
-                <ng-container *ngComponentOutlet="seccio.component"></ng-container>
-            }
-
-            @if (seccionsPrioritat.length && seccions.length) {
-                <div class="altres-seccions-titol" appMostrarAmbAnimacio>
-                    @if (m.ca) { Altres experiències }
-                    @if (m.es) { Otras experiencias }
-                    @if (m.en) { Other experiences }
-                </div>
-            }
-
-            @for (seccio of seccions; track seccio.nom) {
-                <ng-container *ngComponentOutlet="seccio.component"></ng-container>
-            }
+        <div class="seccions mw-1400 m-auto row justify-content-center g-3 mb-6">
+            <app-preview-case-study class="col-12 col-md-6 col-xl-4" [nom]="'indra'" />
+            <app-preview-case-study class="col-12 col-md-6 col-xl-4" [nom]="'in2art'" />
+            <app-preview-case-study class="col-12 col-md-6 col-xl-4" [nom]="'matic'" />
+            <app-preview-case-study class="col-12 col-md-6 col-xl-4" [nom]="'evora'" />
+            <app-preview-case-study class="col-12 col-md-6 col-xl-4" [nom]="'orange'" />
+            <app-preview-case-study class="col-12 col-md-6 col-xl-4" [nom]="'tecnocom'" />
+            <app-preview-case-study class="col-12 col-md-6 col-xl-4" [nom]="'nexxia'" />
         </div>
         
         <div class="navegacio-pagina">

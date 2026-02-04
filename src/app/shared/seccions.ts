@@ -21,26 +21,26 @@ import { IconsComponent } from 'src/app/pages/art-page/icons/icons.component';
 
 export interface Seccio {
     nom: string;
-    pagina: string;
+    pagina: "experience" | "projects" | "art";
     component: ComponentType<any>;
 }
 
 export const SECCIONS: Seccio[] = [
 
-    { nom: "indra", pagina: "/experience", component: IndraComponent },
-    { nom: "in2art", pagina: "/experience", component: In2artComponent },
-    { nom: "matic", pagina: "/experience", component: MaticComponent },
-    { nom: "evora", pagina: "/experience", component: EvoraComponent },
-    { nom: "orange", pagina: "/experience", component: OrangeComponent },
-    { nom: "tecnocom", pagina: "/experience", component: TecnocomComponent },
-    { nom: "nexxia", pagina: "/experience", component: NexxiaComponent },
+    { nom: "indra",         pagina: "experience", component: IndraComponent },
+    { nom: "in2art",        pagina: "experience", component: In2artComponent },
+    { nom: "matic",         pagina: "experience", component: MaticComponent },
+    { nom: "evora",         pagina: "experience", component: EvoraComponent },
+    { nom: "orange",        pagina: "experience", component: OrangeComponent },
+    { nom: "tecnocom",      pagina: "experience", component: TecnocomComponent },
+    { nom: "nexxia",        pagina: "experience", component: NexxiaComponent },
 
-    { nom: "android", pagina: "/projects", component: AndroidAppsComponent },
-    { nom: "mad-jumpgate", pagina: "/projects", component: MadJumpgateComponent },
-    { nom: "github", pagina: "/projects", component: GithubProjectsComponent },
-    { nom: "custom-roms", pagina: "/projects", component: CustomRomsComponent },
-    { nom: "tasker", pagina: "/projects", component: TaskerComponent },
+    { nom: "android",       pagina: "projects",   component: AndroidAppsComponent },
+    { nom: "mad-jumpgate",  pagina: "projects",   component: MadJumpgateComponent },
+    { nom: "github",        pagina: "projects",   component: GithubProjectsComponent },
+    { nom: "custom-roms",   pagina: "projects",   component: CustomRomsComponent },
+    { nom: "tasker",        pagina: "projects",   component: TaskerComponent },
 
-    { nom: "icons", pagina: "/art", component: IconsComponent },
-    { nom: "amazfit", pagina: "/art", component: AmazfitWatchfacesComponent },
+    { nom: "icons",         pagina: "art",        component: IconsComponent },
+    { nom: "amazfit",       pagina: "art",        component: AmazfitWatchfacesComponent },
 ];
