@@ -67,6 +67,6 @@ export class BotonsNavegacioPaginaComponent implements OnInit, AfterViewInit {
         this.scrollAlFinalDePagina = liniaBottom > this.el.nativeElement.offsetTop - 128;
     }
 
-    get fabMode() { return this.m.esPantallaMobil || this.m.esAndroid; }
+    get fabMode() { return this.m.esPantallaMobil; }
     
 };
