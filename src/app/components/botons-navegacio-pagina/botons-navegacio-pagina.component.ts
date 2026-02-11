@@ -1,6 +1,5 @@
-import { Component, ElementRef, Input, OnChanges, OnDestroy, OnInit, ViewChild } from '@angular/core';
-import { NavigationEnd, Router, RouterLink } from '@angular/router';
-import { filter } from 'rxjs';
+import { AfterViewInit, Component, ElementRef, HostListener, OnInit } from '@angular/core';
+import { RouterLink } from '@angular/router';
 import { MainService } from 'src/app/services/main.service';
 import { SharedImports } from 'src/app/shared/imports';
 
@@ -21,11 +20,20 @@ enum Pagines {
         RouterLink,
     ]
 })
-export class BotonsNavegacioPaginaComponent implements OnInit {
+export class BotonsNavegacioPaginaComponent implements OnInit, AfterViewInit {
 
     public botons: any[] = [];
 
-    constructor(public m: MainService) { }
+    public carregat = false;
+    public scrollAlFinalDePagina = false;
+
+    constructor(
+        public m: MainService,
+        private el: ElementRef,
+    ) {
+        if (this.fabMode)
+            el.nativeElement.style.visibility = "hidden";
+    }
 
     public readonly llistaBotons = {
         [Pagines.home]:       { nom: Pagines.home,       text: () => ["Inici", "Inicio", "Home"][this.m.idiomaIndex],                  iconClass: "fa-house" },
@@ -44,5 +52,21 @@ export class BotonsNavegacioPaginaComponent implements OnInit {
             case (Pagines.about):       this.botons = [this.llistaBotons[Pagines.art],          this.llistaBotons[Pagines.home]];       break;
         }
     }
+
+    ngAfterViewInit() {
+        setTimeout(() => {
+            this.el.nativeElement.style.visibility = "";
+            this.carregat = true;
+        }, 300);
+    }
+
+    @HostListener('window:scroll')
+    @HostListener('window:resize')
+    _() {
+        let liniaBottom = window.scrollY + window.innerHeight;
+        this.scrollAlFinalDePagina = liniaBottom > this.el.nativeElement.offsetTop - 128;
+    }
+
+    get fabMode() { return this.m.esPantallaMobil || this.m.esAndroid; }
     
 };

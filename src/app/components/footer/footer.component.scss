@@ -5,6 +5,7 @@ footer {
     color: var(--color-clar);
 
     padding: 1.5rem;
+    @include mobil { padding-bottom: 6rem; }
     backdrop-filter: blur(40px);
     box-shadow: 0 0 10px 0px var(--color-fosc-50);
 

@@ -309,7 +309,7 @@ img, .noselect {
 .shadow-filter-5 { filter: drop-shadow(0 19px 38px rgba(0,0,0,0.30)) drop-shadow(0 15px 12px rgba(0,0,0,0.22)) !important; }
 
 // Ombres que només funcionen en mode clar //
-.light {
+::ng-deep .light {
     .shadow-1-l { @extend .shadow-1; }
     .shadow-2-l { @extend .shadow-2; }
     .shadow-3-l { @extend .shadow-3; }

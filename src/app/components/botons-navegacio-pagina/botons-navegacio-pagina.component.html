@@ -1,15 +1,20 @@
-<div class="navegacio-pagina">
+<div class="navegacio-pagina"
+    [class.fab-mode]="fabMode"
+    [class.fab-ocult-animacio]="fabMode"
+    [class.fab-mostrat]="fabMode && scrollAlFinalDePagina && carregat">
     <button
         class="boto" [class]="botons[0].nom"
         [routerLink]="'/' + botons[0].nom"
         [title]="botons[0].text()"
-        appMostrarAmbAnimacio matRipple>
+        appMostrarAmbAnimacio
+        matRipple>
         <i class="fa-solid" [class]="botons[0].iconClass"></i>
     </button>
     <button
         class="boto" [class]="botons[1].nom"
         [routerLink]="'/' + botons[1].nom"
-        appMostrarAmbAnimacio matRipple>
+        appMostrarAmbAnimacio
+        matRipple>
         <i class="fa-solid" [class]="botons[1].iconClass"></i>
         {{ botons[1].text() }}
     </button>
