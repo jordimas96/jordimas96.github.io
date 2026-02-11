@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { RouterLink } from '@angular/router';
+import { BotonsNavegacioPaginaComponent } from 'src/app/components/botons-navegacio-pagina/botons-navegacio-pagina.component';
 import { SharedImports } from 'src/app/shared/imports';
 import { PageComponent } from '../page.component';
 import { BioComponent } from './bio/bio.component';
@@ -14,12 +14,12 @@ import { StatsComponent } from './stats/stats.component';
     styleUrl: './home-page.component.scss',
     imports: [
         ...SharedImports,
-        RouterLink,
         BioComponent,
         StatsComponent,
         ProjectesHomeComponent,
         ExperienciesHomeComponent,
         LlenguatgesProgramacioComponent,
+        BotonsNavegacioPaginaComponent,
     ]
 })
 export class HomePageComponent extends PageComponent {

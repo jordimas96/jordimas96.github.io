@@ -16,17 +16,7 @@
         <h2 class="proximament-mes mt-6 mb-6">{{ frase[m.idiomaIndex] }}</h2>
 
 
-        <div class="navegacio-pagina">
-            <button class="boto projects" routerLink="/projects" title="Projects" appMostrarAmbAnimacio matRipple>
-                <i class="fa-solid fa-shapes" alt="Projects"></i>
-            </button>
-            <button class="boto about-me" routerLink="/about-me" appMostrarAmbAnimacio matRipple>
-                <i class="fa-solid fa-user" alt="About me"></i>
-                @if (m.ca) { Sobre mi }
-                @if (m.es) { Acerca de mí }
-                @if (m.en) { About me }
-            </button>
-        </div>
+        <app-botons-navegacio-pagina />
 
     </div>
 </div>

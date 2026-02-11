@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { RouterLink } from '@angular/router';
+import { BotonsNavegacioPaginaComponent } from 'src/app/components/botons-navegacio-pagina/botons-navegacio-pagina.component';
 import { PreviewCaseStudyComponent } from 'src/app/components/preview-case-study/preview-case-study.component';
 import { SharedImports } from 'src/app/shared/imports';
 import { PageComponent } from '../page.component';
@@ -11,7 +11,7 @@ import { PageComponent } from '../page.component';
     imports: [
         ...SharedImports,
         PreviewCaseStudyComponent,
-        RouterLink,
+        BotonsNavegacioPaginaComponent,
     ]
 })
 export class ProjectsPageComponent extends PageComponent {

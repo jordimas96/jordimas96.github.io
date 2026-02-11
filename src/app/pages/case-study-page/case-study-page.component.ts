@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
-import { PreviewCaseStudyComponent as PreviewCaseStudyComponent } from 'src/app/components/preview-case-study/preview-case-study.component';
+import { BotonsNavegacioPaginaComponent } from 'src/app/components/botons-navegacio-pagina/botons-navegacio-pagina.component';
+import { PreviewCaseStudyComponent } from 'src/app/components/preview-case-study/preview-case-study.component';
 import { PageComponent } from 'src/app/pages/page.component';
 import { MainService } from 'src/app/services/main.service';
 import { SharedImports } from 'src/app/shared/imports';
@@ -12,7 +13,8 @@ import { Seccio, SECCIONS } from 'src/app/shared/seccions';
     styleUrl: './case-study-page.component.scss',
     imports: [
         ...SharedImports,
-        PreviewCaseStudyComponent
+        PreviewCaseStudyComponent,
+        BotonsNavegacioPaginaComponent,
     ]
 })
 export class CaseStudyPageComponent extends PageComponent {

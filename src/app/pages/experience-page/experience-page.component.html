@@ -16,18 +16,9 @@
             <app-preview-case-study class="col-12 col-md-6 col-xl-4" [nom]="'tecnocom'" />
             <app-preview-case-study class="col-12 col-md-6 col-xl-4" [nom]="'nexxia'" />
         </div>
-        
-        <div class="navegacio-pagina">
-            <button class="boto home" routerLink="/home" title="Home" appMostrarAmbAnimacio matRipple>
-                <i class="fa-solid fa-house" alt="Home"></i>
-            </button>
-            <button class="boto projects" routerLink="/projects" appMostrarAmbAnimacio matRipple>
-                <i class="fa-solid fa-shapes" alt="Projects"></i>
-                @if (m.ca) { Projectes }
-                @if (m.es) { Proyectos }
-                @if (m.en) { Projects }
-            </button>
-        </div>
+
+
+        <app-botons-navegacio-pagina />
 
     </div>
 </div>
