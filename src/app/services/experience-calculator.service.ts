@@ -72,8 +72,8 @@ export class ExperienceCalculatorService {
                 Skills.WINDOWS,
             ]
         },
-        { // In2art // -
-            nom: "In2art",
+        { // IN2ART // -
+            nom: "IN2ART",
             dates: ["2021-08-31", "2023-06-30"],
             skills: [
                 Skills.FRONTEND,

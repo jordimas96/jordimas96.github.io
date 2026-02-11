@@ -67,7 +67,7 @@ export class SkillComponent implements OnInit {
             return this.getText_anysMesosDies() + // 2 years, 6 months and 9 days //
                 "\n" +
                 ["a", "en", "in"][this.m.idiomaIndex] + " " + // in //
-                Utils.addConjunctionBetweenThe2Last(this.skill?.empreses, this.m.conjuncio); // Evora, Orange and In2art //
+                Utils.addConjunctionBetweenThe2Last(this.skill?.empreses, this.m.conjuncio); // Evora, Orange and IN2ART //
         } else {
             return [
                 "Experiència només en projectes personals",
