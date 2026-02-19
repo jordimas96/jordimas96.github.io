@@ -133,7 +133,7 @@ export class ExperienceCalculatorService {
         },
         { // Indra //
             nom: "Indra",
-            dates: ["18-06-2024",],
+            dates: ["18-06-2024", "20-02-2026"],
             skills: [
                 Skills.FRONTEND,
                 Skills.ANGULAR, Skills.NGRX, Skills.TYPESCRIPT, Skills.JAVASCRIPT, Skills.CSS, Skills.SASS, Skills.HTML5,
