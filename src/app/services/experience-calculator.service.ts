@@ -10,7 +10,7 @@ export class ExperienceCalculatorService {
     private experiencia = [
         { // DSET (Pràctiques) //
             nom: "DSET",
-            dates: ["2016-02-01", "2016-07-14"],
+            dates: ["01-02-2016", "14-07-2016"],
             skills: [
                 Skills.FRONTEND,
                 Skills.JAVASCRIPT, Skills.CSS, Skills.HTML5, Skills.CORDOVA,
@@ -20,7 +20,7 @@ export class ExperienceCalculatorService {
         },
         { // Nexxia (Pràctiques) //
             nom: "Nexxia",
-            dates: ["2016-10-17", "2017-02-28"],
+            dates: ["17-10-2016", "28-02-2017"],
             skills: [
                 Skills.FRONTEND,
                 Skills.JAVASCRIPT, Skills.JQUERY, Skills.CSS, Skills.HTML5, Skills.BOOTSTRAP,
@@ -31,7 +31,7 @@ export class ExperienceCalculatorService {
         },
         { // Beca Tecnocom //
             nom: "Beca Tecnocom",
-            dates: ["2017-07-03", "2017-07-31"],
+            dates: ["03-07-2017", "31-07-2017"],
             skills: [
                 Skills.BACKEND,
                 Skills.JAVA, Skills.JSP, Skills.MAVEN, Skills.MICROSERVICES,
@@ -43,7 +43,7 @@ export class ExperienceCalculatorService {
         },
         { // Tecnocom //
             nom: "Tecnocom",
-            dates: ["2017-09-04", "2019-03-08"],
+            dates: ["04-09-2017", "08-03-2019"],
             skills: [
                 Skills.BACKEND,
                 Skills.JAVA, Skills.JSP, Skills.MAVEN, Skills.MICROSERVICES,
@@ -56,7 +56,7 @@ export class ExperienceCalculatorService {
         },
         { // Matic //
             nom: "Matic",
-            dates: ["2020-09-07", "2021-06-25"],
+            dates: ["07-09-2020", "25-06-2021"],
             skills: [
                 Skills.FRONTEND, Skills.BACKEND,
                 Skills.JAVASCRIPT, Skills.JQUERY, Skills.CSS, Skills.HTML5,
@@ -74,7 +74,7 @@ export class ExperienceCalculatorService {
         },
         { // IN2ART // -
             nom: "IN2ART",
-            dates: ["2021-08-31", "2023-06-30"],
+            dates: ["31-08-2021", "30-06-2023"],
             skills: [
                 Skills.FRONTEND,
                 Skills.ANGULAR, Skills.CSS, Skills.SASS, Skills.TYPESCRIPT, Skills.JAVASCRIPT, Skills.JQUERY, Skills.HTML5,
@@ -92,7 +92,7 @@ export class ExperienceCalculatorService {
         },
         { // CodiTramuntana // -
             nom: "CodiTramuntana",
-            dates: ["2023-07-05", "2023-08-22"],
+            dates: ["05-07-2023", "22-08-2023"],
             skills: [
                 Skills.FRONTEND, Skills.BACKEND,
                 Skills.RUBYONRAILS,
@@ -103,7 +103,7 @@ export class ExperienceCalculatorService {
         },
         { // Orange //
             nom: "Orange",
-            dates: ["2023-08-23", "2023-11-03"],
+            dates: ["23-08-2023", "03-11-2023"],
             skills: [
                 Skills.FRONTEND, Skills.BACKEND,
                 Skills.JAVA, Skills.WEBLOGIC, Skills.ECLIPSE, Skills.MAVEN, Skills.MICROSERVICES,
@@ -118,7 +118,7 @@ export class ExperienceCalculatorService {
         },
         { // Evora //
             nom: "Evora",
-            dates: ["2023-11-06", "2024-01-26"],
+            dates: ["06-11-2023", "26-01-2024"],
             skills: [
                 Skills.FRONTEND,
                 Skills.ANGULAR, Skills.NGRX, Skills.TYPESCRIPT, Skills.JAVASCRIPT, Skills.CSS, Skills.SASS,
@@ -133,7 +133,7 @@ export class ExperienceCalculatorService {
         },
         { // Indra //
             nom: "Indra",
-            dates: ["2024-06-18",],
+            dates: ["18-06-2024",],
             skills: [
                 Skills.FRONTEND,
                 Skills.ANGULAR, Skills.NGRX, Skills.TYPESCRIPT, Skills.JAVASCRIPT, Skills.CSS, Skills.SASS, Skills.HTML5,
@@ -152,6 +152,10 @@ export class ExperienceCalculatorService {
     public skills: any;
 
     constructor(public m: MainService) {
+
+        // Invertir ordre dates //
+        this.experiencia.forEach(empresa => empresa.dates = empresa.dates.map(data => data.split("-").reverse().join("-")));
+        
         this.calcularExperiencia();
 
         this.setIntervalDiari();
