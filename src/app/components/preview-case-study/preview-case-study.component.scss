@@ -42,4 +42,7 @@
             box-shadow: 0 0 30px 26.5rem var(--accent-color);
         }
     }
+    &:active {
+        translate: 0.125rem 0.25rem;
+    }
 }
