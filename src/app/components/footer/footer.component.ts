@@ -6,7 +6,7 @@ import { SharedImports } from 'src/app/shared/imports';
 
 
 @Component({
-    selector: 'app-footer',
+    selector: 'jmp-footer',
     templateUrl: './footer.component.html',
     styleUrl: './footer.component.scss',
     imports: [

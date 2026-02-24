@@ -5,22 +5,22 @@
 </h3>
 
 <figure class="text-center">
-    <app-about-card appMostrarAmbAnimacio />
+    <jmp-about-card appMostrarAmbAnimacio />
     <figcaption class="mt-2" appMostrarAmbAnimacio>
         @if (m.ca) {
             Fragment reconstruït de la secció "sobre IN2ART" de la web original el 2022.<br> 
             Hi apareixen les firmes dels 2 desenvolupadors principals, inclosa la meva.<br>
-            Es pot veure també en les demos d'<app-link [href]="linkPC">ordinador</app-link> i de <app-link [href]="linkMobil">mòbil</app-link>.
+            Es pot veure també en les demos d'<jmp-link [href]="linkPC">ordinador</jmp-link> i de <jmp-link [href]="linkMobil">mòbil</jmp-link>.
         }
         @if (m.es) {
             Fragmento reconstruido de la sección "acerca de IN2ART" de la web original en 2022.<br>
             Aparecen las firmas de los 2 desarrolladores principales, incluyendo la mía.<br>
-            Se puede ver también en las demos de <app-link [href]="linkPC">ordenador</app-link> y de <app-link [href]="linkMobil">móvil</app-link>.
+            Se puede ver también en las demos de <jmp-link [href]="linkPC">ordenador</jmp-link> y de <jmp-link [href]="linkMobil">móvil</jmp-link>.
         }
         @if (m.en) {
             Reconstructed fragment of the "about IN2ART" section from the original website in 2022.<br>
             It includes the signatures of the 2 main developers, including mine.<br>
-            It can also be seen in the <app-link [href]="linkPC">desktop</app-link> and <app-link [href]="linkMobil">mobile</app-link> demos.
+            It can also be seen in the <jmp-link [href]="linkPC">desktop</jmp-link> and <jmp-link [href]="linkMobil">mobile</jmp-link> demos.
         }
     </figcaption>
 </figure>

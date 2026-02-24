@@ -6,7 +6,7 @@ import { SharedImports } from 'src/app/shared/imports';
 import { Utils } from 'src/app/shared/utils';
 
 @Component({
-    selector: 'app-skill',
+    selector: 'jmp-skill',
     templateUrl: './skill.component.html',
     styleUrl: './skill.component.scss',
     imports: [

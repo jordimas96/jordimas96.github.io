@@ -5,7 +5,7 @@ import { MainService } from 'src/app/services/main.service';
 import { SharedImports } from 'src/app/shared/imports';
 
 @Component({
-    selector: 'app-matic',
+    selector: 'jmp-matic',
     templateUrl: './matic.component.html',
     styleUrl: './matic.component.scss',
     imports: [

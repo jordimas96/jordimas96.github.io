@@ -8,7 +8,7 @@ import { MadJumpgateGameplayComponent } from './mad-jumpgate-gameplay/mad-jumpga
 import { MadJumpgateJocComponent } from './mad-jumpgate-joc/mad-jumpgate-joc.component';
 
 @Component({
-    selector: 'app-mad-jumpgate',
+    selector: 'jmp-mad-jumpgate',
     templateUrl: './mad-jumpgate.component.html',
     styleUrl: './mad-jumpgate.component.scss',
     imports: [

@@ -6,7 +6,7 @@ import { StoryComponent } from './story/story.component';
 
 
 @Component({
-    selector: 'app-stories',
+    selector: 'jmp-stories',
     templateUrl: './stories.component.html',
     styleUrl: './stories.component.scss',
     imports: [

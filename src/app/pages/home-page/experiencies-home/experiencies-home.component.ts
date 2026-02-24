@@ -7,7 +7,7 @@ import { MainService } from 'src/app/services/main.service';
 import { SharedImports } from 'src/app/shared/imports';
 
 @Component({
-    selector: 'app-experiencies-home',
+    selector: 'jmp-experiencies-home',
     templateUrl: './experiencies-home.component.html',
     styleUrl: './experiencies-home.component.scss',
     imports: [

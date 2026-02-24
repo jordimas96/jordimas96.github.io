@@ -3,7 +3,7 @@ import { MainService } from 'src/app/services/main.service';
 import { Utils } from 'src/app/shared/utils';
 
 @Component({
-    selector: 'app-imatge-scroll',
+    selector: 'jmp-imatge-scroll',
     templateUrl: './imatge-scroll.component.html',
     styleUrl: './imatge-scroll.component.scss',
     standalone: true

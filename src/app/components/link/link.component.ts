@@ -3,7 +3,7 @@ import { MainService } from 'src/app/services/main.service';
 import { Links } from './links';
 
 @Component({
-    selector: 'app-link',
+    selector: 'jmp-link',
     templateUrl: './link.component.html',
     styleUrl: './link.component.scss',
     imports: []

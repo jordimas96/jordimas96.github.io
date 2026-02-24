@@ -9,7 +9,7 @@ import { IframeTemplateComponent } from './iframe-template/iframe-template.compo
 
 
 @Component({
-    selector: 'app-indra',
+    selector: 'jmp-indra',
     templateUrl: './indra.component.html',
     styleUrl: './indra.component.scss',
     imports: [

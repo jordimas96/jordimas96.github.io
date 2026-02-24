@@ -3,7 +3,7 @@ import { MainService } from 'src/app/services/main.service';
 import { SharedImports } from 'src/app/shared/imports';
 
 @Component({
-    selector: 'app-amazfit-watchfaces',
+    selector: 'jmp-amazfit-watchfaces',
     templateUrl: './amazfit-watchfaces.component.html',
     styleUrl: './amazfit-watchfaces.component.scss',
     imports: [

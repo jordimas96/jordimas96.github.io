@@ -5,7 +5,7 @@
         @if (m.en) { About me }
     </div>
 
-    <app-stories class="d-block mb-4" />
+    <jmp-stories class="d-block mb-4" />
 
     <div class="content mb-6 d-flex flex-column gap-6">
 
@@ -21,13 +21,13 @@
                     <!-- Bionicles -->
                     <span class="text flex-1" appMostrarAmbAnimacio>
                         @if (m.ca) {
-                            Des de ben petit sempre m'ha fascinat qualsevol tipus de tecnologia. Des dels 4 anys em passava les tardes jugant i construint <app-link id="bionicle">Bionicles</app-link>, una línia de figures articulades de LEGO, sovint sense mirar les instruccions; els sabia muntar a partir de veure el resultat final, i amb els ingeniosos mecanismes interns funcionant. Quan me'n cansava, sovint ràpid, els desmuntava i utilitzava les peces per a inventar-me'n de nous. Veia una imatge a internet d'un Bionicle nou i intentava construir-lo, improvisant amb les peces de les que disposava, sovint amb bastant èxit. Considero que això va contribuir al desenvolupament de la meva visió espacial i al meu poder d'observació des de molt jove.
+                            Des de ben petit sempre m'ha fascinat qualsevol tipus de tecnologia. Des dels 4 anys em passava les tardes jugant i construint <jmp-link id="bionicle">Bionicles</jmp-link>, una línia de figures articulades de LEGO, sovint sense mirar les instruccions; els sabia muntar a partir de veure el resultat final, i amb els ingeniosos mecanismes interns funcionant. Quan me'n cansava, sovint ràpid, els desmuntava i utilitzava les peces per a inventar-me'n de nous. Veia una imatge a internet d'un Bionicle nou i intentava construir-lo, improvisant amb les peces de les que disposava, sovint amb bastant èxit. Considero que això va contribuir al desenvolupament de la meva visió espacial i al meu poder d'observació des de molt jove.
                         }
                         @if (m.es) {
-                            Desde pequeño siempre me ha fascinado cualquier tipo de tecnología. Desde los 4 años me pasaba las tardes jugando y construyendo <app-link id="bionicle">Bionicles</app-link>, una línea de figuras articuladas de LEGO, a menudo sin mirar las instrucciones; los sabía montar con sólo ver el resultado final, y con los ingeniosos mecanismos internos funcionando. Cuando me cansaba, a menudo rápido, los desmontaba y utilizaba las piezas para inventarme nuevos. Veía una imagen en internet de un Bionicle nuevo e intentaba construirlo, improvisando con las piezas de las que disponía, a menudo con bastante éxito. Considero que esto contribuyó al desarrollo de mi visión espacial y a mi poder de observación desde muy joven.
+                            Desde pequeño siempre me ha fascinado cualquier tipo de tecnología. Desde los 4 años me pasaba las tardes jugando y construyendo <jmp-link id="bionicle">Bionicles</jmp-link>, una línea de figuras articuladas de LEGO, a menudo sin mirar las instrucciones; los sabía montar con sólo ver el resultado final, y con los ingeniosos mecanismos internos funcionando. Cuando me cansaba, a menudo rápido, los desmontaba y utilizaba las piezas para inventarme nuevos. Veía una imagen en internet de un Bionicle nuevo e intentaba construirlo, improvisando con las piezas de las que disponía, a menudo con bastante éxito. Considero que esto contribuyó al desarrollo de mi visión espacial y a mi poder de observación desde muy joven.
                         }
                         @if (m.en) {
-                            Since I was a child, I have always been fascinated by any kind of technology. From the age of 4, I used to spend whole afternoons playing and building <app-link id="bionicle">Bionicles</app-link>, a line of articulated LEGO figures, often without looking at the instructions; I knew how to put them together just by looking at the final result, and with the ingenious internal mechanisms working. When I got bored of them, often quickly, I would take them apart and use the the pieces to invent new ones. I would see a picture of a new Bionicle on the internet and try to build it, improvising with whatever parts I had available, often quite successfully. I believe this contributed to the development of my spatial vision and powers of observation from a very young age.
+                            Since I was a child, I have always been fascinated by any kind of technology. From the age of 4, I used to spend whole afternoons playing and building <jmp-link id="bionicle">Bionicles</jmp-link>, a line of articulated LEGO figures, often without looking at the instructions; I knew how to put them together just by looking at the final result, and with the ingenious internal mechanisms working. When I got bored of them, often quickly, I would take them apart and use the the pieces to invent new ones. I would see a picture of a new Bionicle on the internet and try to build it, improvising with whatever parts I had available, often quite successfully. I believe this contributed to the development of my spatial vision and powers of observation from a very young age.
                         }
                     </span>
                     <img src="assets/about-me/bionicle-makuta-nui-2003.jpg" alt="Bionicle Makuta Nui (2003)"
@@ -84,15 +84,15 @@
 
                 <p class="mb-4">
                     @if (m.ca) {
-                        Com molta gent que acaba en aquest camp, de petit sempre havia volgut ser <app-link [href]="linkJocLandingPage">desenvolupador de videojocs</app-link>, i a secundària vaig estudiar introducció a HTML i altres eines i em va agradar tant que vaig decidir estudiar programació. Vaig estudiar 2 cicles superiors (<app-link id="daw">DAW</app-link> i <app-link id="dam">DAM</app-link>) i amb el temps m'he anat especialitzant en la part frontend, tot i que sovint he hagut d'intervenir en tots els punts de la programació.<br>
+                        Com molta gent que acaba en aquest camp, de petit sempre havia volgut ser <jmp-link [href]="linkJocLandingPage">desenvolupador de videojocs</jmp-link>, i a secundària vaig estudiar introducció a HTML i altres eines i em va agradar tant que vaig decidir estudiar programació. Vaig estudiar 2 cicles superiors (<jmp-link id="daw">DAW</jmp-link> i <jmp-link id="dam">DAM</jmp-link>) i amb el temps m'he anat especialitzant en la part frontend, tot i que sovint he hagut d'intervenir en tots els punts de la programació.<br>
                         A batxillerat era un crack a dibuix tècnic, tecnologia, electrotècnia, física i filosofia.
                     }
                     @if (m.es) {
-                        Como mucha gente que termina en este campo, de pequeño siempre había querido ser <app-link [href]="linkJocLandingPage">desarrollador de videojuegos</app-link>, y en secundaria estudié introducción a HTML y otras herramientas y me gustó tanto que decidí estudiar programación. Estudié 2 ciclos superiores (<app-link id="daw">DAW</app-link> y <app-link id="dam">DAM</app-link>) y con el tiempo me he ido especializando en la parte frontend, aunque a menudo he tenido que intervenir en todos los puntos de la programación.<br>
+                        Como mucha gente que termina en este campo, de pequeño siempre había querido ser <jmp-link [href]="linkJocLandingPage">desarrollador de videojuegos</jmp-link>, y en secundaria estudié introducción a HTML y otras herramientas y me gustó tanto que decidí estudiar programación. Estudié 2 ciclos superiores (<jmp-link id="daw">DAW</jmp-link> y <jmp-link id="dam">DAM</jmp-link>) y con el tiempo me he ido especializando en la parte frontend, aunque a menudo he tenido que intervenir en todos los puntos de la programación.<br>
                         En bachillerato se me daba muy bien dibujo técnico, tecnología, electrotecnia, física y filosofía.
                     }
                     @if (m.en) {
-                        Like many people who end up in this field, as a child I always wanted to be a <app-link [href]="linkJocLandingPage">video game developer</app-link>, and in high school I studied an introduction to HTML and other tools and I liked it so much that I decided to study programming. I studied 2 higher cycles (<app-link id="daw">Web</app-link> and <app-link id="dam">Multiplatform</app-link> Application Development) and over time I have specialized in the frontend part, although I have often had to intervene in all aspects of programming.<br>
+                        Like many people who end up in this field, as a child I always wanted to be a <jmp-link [href]="linkJocLandingPage">video game developer</jmp-link>, and in high school I studied an introduction to HTML and other tools and I liked it so much that I decided to study programming. I studied 2 higher cycles (<jmp-link id="daw">Web</jmp-link> and <jmp-link id="dam">Multiplatform</jmp-link> Application Development) and over time I have specialized in the frontend part, although I have often had to intervene in all aspects of programming.<br>
                         In high school I was very good at technical drawing, technology, electrical engineering, physics and philosophy.
                     }
                 </p>
@@ -192,7 +192,7 @@
         </section>
 
 
-        <app-botons-navegacio-pagina />
+        <jmp-botons-navegacio-pagina />
 
     </div>
 

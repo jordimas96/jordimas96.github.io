@@ -3,7 +3,7 @@ import { MainService } from 'src/app/services/main.service';
 import { SharedImports } from 'src/app/shared/imports';
 
 @Component({
-    selector: 'app-icones-contacte',
+    selector: 'jmp-icones-contacte',
     templateUrl: './icones-contacte.component.html',
     styleUrl: './icones-contacte.component.scss',
     imports: [

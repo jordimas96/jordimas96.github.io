@@ -5,7 +5,7 @@ import { MainService } from 'src/app/services/main.service';
 import { SharedImports } from 'src/app/shared/imports';
 
 @Component({
-    selector: 'app-nexxia',
+    selector: 'jmp-nexxia',
     templateUrl: './nexxia.component.html',
     styleUrl: './nexxia.component.scss',
     imports: [

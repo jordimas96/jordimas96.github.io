@@ -5,7 +5,7 @@ import { MainService } from 'src/app/services/main.service';
 import { AboutCardComponent } from './about-card/about-card.component';
 
 @Component({
-    selector: 'app-about-in2art',
+    selector: 'jmp-about-in2art',
     templateUrl: './about-in2art.component.html',
     styleUrl: './about-in2art.component.scss',
     imports: [AboutCardComponent, LinkComponent, MostrarAmbAnimacioDirective]

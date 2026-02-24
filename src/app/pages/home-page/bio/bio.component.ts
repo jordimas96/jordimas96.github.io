@@ -7,7 +7,7 @@ import { MainService } from 'src/app/services/main.service';
 import { SharedImports } from 'src/app/shared/imports';
 
 @Component({
-    selector: 'app-bio',
+    selector: 'jmp-bio',
     templateUrl: './bio.component.html',
     styleUrl: './bio.component.scss',
     imports: [

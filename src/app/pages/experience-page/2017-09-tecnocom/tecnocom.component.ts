@@ -5,7 +5,7 @@ import { MainService } from 'src/app/services/main.service';
 import { SharedImports } from 'src/app/shared/imports';
 
 @Component({
-    selector: 'app-tecnocom',
+    selector: 'jmp-tecnocom',
     templateUrl: './tecnocom.component.html',
     styleUrl: './tecnocom.component.scss',
     imports: [

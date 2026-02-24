@@ -1,10 +1,10 @@
 @import "src/styles.scss";
 @import "../page.scss";
 
-::ng-deep app-index {
+::ng-deep jmp-index {
     display: none !important;
 }
-::ng-deep app-navegacio-tab nav button {
+::ng-deep jmp-navegacio-tab nav button {
     box-shadow: 0px 30px 25px -30px rgba(255, 255, 255, 0.2705882353) inset, 0px -30px 25px -30px rgba(0, 0, 0, 0.2705882353) inset;
 }
 

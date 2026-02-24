@@ -4,7 +4,7 @@ import { MainService } from 'src/app/services/main.service';
 import { Utils } from 'src/app/shared/utils';
 
 @Component({
-    selector: 'app-selector-idioma',
+    selector: 'jmp-selector-idioma',
     templateUrl: './selector-idioma.component.html',
     styleUrl: './selector-idioma.component.scss',
     imports: [

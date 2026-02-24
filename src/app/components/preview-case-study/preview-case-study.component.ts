@@ -5,7 +5,7 @@ import { MainService } from 'src/app/services/main.service';
 import { SharedImports } from 'src/app/shared/imports';
 
 @Component({
-    selector: 'app-preview-case-study',
+    selector: 'jmp-preview-case-study',
     templateUrl: './preview-case-study.component.html',
     styleUrl: './preview-case-study.component.scss',
     imports: [

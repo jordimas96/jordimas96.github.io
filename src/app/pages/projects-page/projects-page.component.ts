@@ -5,7 +5,7 @@ import { SharedImports } from 'src/app/shared/imports';
 import { PageComponent } from '../page.component';
 
 @Component({
-    selector: 'app-projects-page',
+    selector: 'jmp-projects-page',
     templateUrl: './projects-page.component.html',
     styleUrl: './projects-page.component.scss',
     imports: [

@@ -6,7 +6,7 @@ import { Utils } from 'src/app/shared/utils';
 import { environment } from 'src/environments/environment';
 
 @Component({
-    selector: 'app-mad-jumpgate-joc',
+    selector: 'jmp-mad-jumpgate-joc',
     templateUrl: './mad-jumpgate-joc.component.html',
     styleUrl: './mad-jumpgate-joc.component.scss',
     imports: [
@@ -51,7 +51,7 @@ export class MadJumpgateJocComponent {
         // Si el contingut està tancat, no es pot medir l'amplada del placeholder per a redimensionar l'iframe. Amb aquest codi //
         // obrim el contingut per a mesurar el placeholder i poder establir la mida del placeholder i posteriorment la de l'iframe. //
         // Ho necessitem per a que el jQuery faci l'animació slideDown bé (necessita saber la distancia total de l'animació que farà jQuery) //
-        let $root = $("app-mad-jumpgate-joc");
+        let $root = $("jmp-mad-jumpgate-joc");
         if (!$root.find(".contingut").is(":visible")) {
             $root.find(".contingut").show();
             this.placeholderWidth = $root.find(".iframe-i-placeholder").innerWidth()!;

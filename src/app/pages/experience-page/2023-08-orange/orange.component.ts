@@ -5,7 +5,7 @@ import { MainService } from 'src/app/services/main.service';
 import { SharedImports } from 'src/app/shared/imports';
 
 @Component({
-    selector: 'app-orange',
+    selector: 'jmp-orange',
     templateUrl: './orange.component.html',
     styleUrl: './orange.component.scss',
     imports: [

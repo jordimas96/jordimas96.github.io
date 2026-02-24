@@ -12,7 +12,7 @@ enum Pagines {
 }
 
 @Component({
-    selector: 'app-botons-navegacio-pagina',
+    selector: 'jmp-botons-navegacio-pagina',
     templateUrl: './botons-navegacio-pagina.component.html',
     styleUrl: './botons-navegacio-pagina.component.scss',
     imports: [

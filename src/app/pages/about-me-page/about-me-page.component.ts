@@ -5,7 +5,7 @@ import { PageComponent } from '../page.component';
 import { StoriesComponent } from './stories/stories.component';
 
 @Component({
-    selector: 'app-about-me-page',
+    selector: 'jmp-about-me-page',
     templateUrl: './about-me-page.component.html',
     styleUrl: './about-me-page.component.scss',
     imports: [

@@ -6,7 +6,7 @@ import { Utils } from 'src/app/shared/utils';
 
 
 @Component({
-    selector: 'app-story',
+    selector: 'jmp-story',
     templateUrl: './story.component.html',
     styleUrl: './story.component.scss',
     imports: [

@@ -9,7 +9,7 @@ import { ProjectesHomeComponent } from './projectes-home/projectes-home.componen
 import { StatsComponent } from './stats/stats.component';
 
 @Component({
-    selector: 'app-home-page',
+    selector: 'jmp-home-page',
     templateUrl: './home-page.component.html',
     styleUrl: './home-page.component.scss',
     imports: [

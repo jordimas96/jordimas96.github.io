@@ -5,7 +5,7 @@ import { MainService } from 'src/app/services/main.service';
 import { SharedImports } from 'src/app/shared/imports';
 
 @Component({
-    selector: 'app-evora',
+    selector: 'jmp-evora',
     templateUrl: './evora.component.html',
     styleUrl: './evora.component.scss',
     imports: [

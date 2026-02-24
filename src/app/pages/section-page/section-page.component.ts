@@ -19,7 +19,7 @@ import { MainService } from 'src/app/services/main.service';
 import { SharedImports } from 'src/app/shared/imports';
 
 @Component({
-    selector: 'app-section-page',
+    selector: 'jmp-section-page',
     templateUrl: './section-page.component.html',
     styleUrl: './section-page.component.scss',
     imports: [

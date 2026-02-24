@@ -5,7 +5,7 @@ import { SharedImports } from 'src/app/shared/imports';
 import { IframeTemplateComponent } from './iframe-template/iframe-template.component';
 
 @Component({
-    selector: 'app-demos-in2art',
+    selector: 'jmp-demos-in2art',
     templateUrl: './demos-in2art.component.html',
     styleUrl: './demos-in2art.component.scss',
     imports: [

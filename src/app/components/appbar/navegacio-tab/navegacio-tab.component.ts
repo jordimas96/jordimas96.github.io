@@ -6,7 +6,7 @@ import { SharedImports } from 'src/app/shared/imports';
 import { Utils } from 'src/app/shared/utils';
 
 @Component({
-    selector: 'app-navegacio-tab',
+    selector: 'jmp-navegacio-tab',
     templateUrl: './navegacio-tab.component.html',
     styleUrl: './navegacio-tab.component.scss',
     imports: [
@@ -34,7 +34,7 @@ export class NavegacioTabComponent {
             if (event instanceof NavigationEnd) {
                 // When screen changed //
                 await Utils.wait(0);
-                this.botoSeleccionat = document.querySelector("app-navegacio-tab nav button.selected");
+                this.botoSeleccionat = document.querySelector("jmp-navegacio-tab nav button.selected");
                 Utils.scroll(0);
 
                 this.actPosPill(true);
@@ -56,7 +56,7 @@ export class NavegacioTabComponent {
     }
 
     actPosPill(animacio) {
-        if (!this.botoSeleccionat) this.botoSeleccionat = document.querySelector("app-navegacio-tab nav button.selected");
+        if (!this.botoSeleccionat) this.botoSeleccionat = document.querySelector("jmp-navegacio-tab nav button.selected");
         if (!this.botoSeleccionat) {
             $(this.pill.nativeElement).css({ top: 0, left: 0, width: 0, height: 0 });
             return;

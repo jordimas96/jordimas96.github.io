@@ -5,7 +5,7 @@ import { SharedImports } from 'src/app/shared/imports';
 import { Utils } from 'src/app/shared/utils';
 
 @Component({
-    selector: 'app-dark-mode',
+    selector: 'jmp-dark-mode',
     templateUrl: './dark-mode.component.html',
     styleUrl: './dark-mode.component.scss',
     imports: [

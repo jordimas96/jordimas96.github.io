@@ -8,7 +8,7 @@ import { SharedImports } from 'src/app/shared/imports';
 import { Utils } from 'src/app/shared/utils';
 
 @Component({
-    selector: 'app-llenguatges-programacio-home',
+    selector: 'jmp-llenguatges-programacio-home',
     templateUrl: './llenguatges-programacio-home.component.html',
     styleUrl: './llenguatges-programacio-home.component.scss',
     imports: [
@@ -53,21 +53,21 @@ export class LlenguatgesProgramacioComponent {
         else this.sorted = !this.sorted;
 
         // Enviem els divs molt lluny i els fem tornar per a llançar l'efecte de appMostrarAmbAnimacio //
-        $("app-skill").css({ "transform": "translateY(-100000px)" });
+        $("jmp-skill").css({ "transform": "translateY(-100000px)" });
         await Utils.wait(10);
 
         // Afegim o traiem l'estil order per a ordenar elements dins el flex //
         if (this.sorted) {
-            $("app-skill").each((i, e) => {
+            $("jmp-skill").each((i, e) => {
                 let order = this.exp.getSkill(e.getAttribute("ng-reflect-nom"))?.diesTotals || 0;
                 e.style.order = -order + "";
             });
         } else {
-            $("app-skill").css("order", "");
+            $("jmp-skill").css("order", "");
         }
 
         await Utils.wait(10);
-        $("app-skill").css({ "transform": "" });
+        $("jmp-skill").css({ "transform": "" });
 
     }
 

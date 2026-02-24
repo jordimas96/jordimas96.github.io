@@ -3,7 +3,7 @@ import { MAT_DIALOG_DATA, MatDialogContent, MatDialogRef } from '@angular/materi
 import { SharedImports } from 'src/app/shared/imports';
 
 @Component({
-    selector: 'app-iframe-template',
+    selector: 'jmp-iframe-template',
     templateUrl: './iframe-template.component.html',
     styleUrl: './iframe-template.component.scss',
     imports: [

@@ -25,10 +25,10 @@
         width: 4rem;
         font-size: 2rem;
     }
-    app-navegacio-tab {
+    jmp-navegacio-tab {
         margin: 0.5rem;
     }
-    ::ng-deep app-selector-idioma {
+    ::ng-deep jmp-selector-idioma {
         @include gran {
             padding: 0.25rem 2rem 0.25rem 1.5rem;
         }

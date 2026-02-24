@@ -8,7 +8,7 @@ import { SharedImports } from 'src/app/shared/imports';
 import { DetallsAndroidAppsComponent } from './detalls-android-apps/detalls-android-apps.component';
 
 @Component({
-    selector: 'app-android-apps',
+    selector: 'jmp-android-apps',
     templateUrl: './android-apps.component.html',
     styleUrl: './android-apps.component.scss',
     imports: [

@@ -7,7 +7,7 @@ import { SidebarComponent } from 'src/app/components/sidebar/sidebar.component';
 import { LayoutService } from 'src/app/services/layout.service';
 
 @Component({
-    selector: 'app-root',
+    selector: 'jmp-root',
     templateUrl: './app.component.html',
     styleUrl: './app.component.scss',
     imports: [

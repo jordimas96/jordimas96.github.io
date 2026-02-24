@@ -7,7 +7,7 @@ import { SharedImports } from 'src/app/shared/imports';
 
 
 @Component({
-    selector: 'app-index',
+    selector: 'jmp-index',
     templateUrl: './index.component.html',
     styleUrl: './index.component.scss',
     imports: [

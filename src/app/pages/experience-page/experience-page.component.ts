@@ -5,7 +5,7 @@ import { SharedImports } from 'src/app/shared/imports';
 import { PageComponent } from '../page.component';
 
 @Component({
-    selector: 'app-experience-page',
+    selector: 'jmp-experience-page',
     templateUrl: './experience-page.component.html',
     styleUrl: './experience-page.component.scss',
     imports: [

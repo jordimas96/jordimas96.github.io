@@ -10,7 +10,7 @@ import { Utils } from 'src/app/shared/utils';
 
 
 @Component({
-    selector: 'app-sidebar',
+    selector: 'jmp-sidebar',
     templateUrl: './sidebar.component.html',
     styleUrl: './sidebar.component.scss',
     imports: [

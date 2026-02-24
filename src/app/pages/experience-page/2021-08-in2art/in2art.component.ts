@@ -7,7 +7,7 @@ import { DemosIn2artComponent } from './demos-in2art/demos-in2art.component';
 import { AboutIn2artComponent } from './about-in2art/about-in2art.component';
 
 @Component({
-    selector: 'app-in2art',
+    selector: 'jmp-in2art',
     templateUrl: './in2art.component.html',
     styleUrl: './in2art.component.scss',
     imports: [

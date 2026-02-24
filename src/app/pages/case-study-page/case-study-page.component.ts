@@ -8,7 +8,7 @@ import { SharedImports } from 'src/app/shared/imports';
 import { Seccio, SECCIONS } from 'src/app/shared/seccions';
 
 @Component({
-    selector: 'app-case-study-page',
+    selector: 'jmp-case-study-page',
     templateUrl: './case-study-page.component.html',
     styleUrl: './case-study-page.component.scss',
     imports: [

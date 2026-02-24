@@ -7,7 +7,7 @@ import { MainService } from 'src/app/services/main.service';
 import { SharedImports } from 'src/app/shared/imports';
 
 @Component({
-    selector: 'app-projectes-home',
+    selector: 'jmp-projectes-home',
     templateUrl: './projectes-home.component.html',
     styleUrl: './projectes-home.component.scss',
     imports: [

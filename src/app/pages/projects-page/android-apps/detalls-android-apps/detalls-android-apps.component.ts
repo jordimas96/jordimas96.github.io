@@ -7,7 +7,7 @@ import { MainService } from 'src/app/services/main.service';
 import { SharedImports } from 'src/app/shared/imports';
 
 @Component({
-    selector: 'app-detalls-android-apps',
+    selector: 'jmp-detalls-android-apps',
     templateUrl: './detalls-android-apps.component.html',
     styleUrl: './detalls-android-apps.component.scss',
     imports: [

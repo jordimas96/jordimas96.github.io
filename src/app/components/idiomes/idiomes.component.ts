@@ -3,7 +3,7 @@ import { MainService } from 'src/app/services/main.service';
 import { SharedImports } from 'src/app/shared/imports';
 
 @Component({
-    selector: 'app-idiomes',
+    selector: 'jmp-idiomes',
     templateUrl: './idiomes.component.html',
     styleUrl: './idiomes.component.scss',
     standalone: true,

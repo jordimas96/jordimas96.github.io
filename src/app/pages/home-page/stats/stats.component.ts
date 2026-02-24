@@ -5,7 +5,7 @@ import { MainService } from 'src/app/services/main.service';
 import { SharedImports } from 'src/app/shared/imports';
 
 @Component({
-    selector: 'app-stats',
+    selector: 'jmp-stats',
     templateUrl: './stats.component.html',
     styleUrl: './stats.component.scss',
     imports: [

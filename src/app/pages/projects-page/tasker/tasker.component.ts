@@ -6,7 +6,7 @@ import { MainService } from 'src/app/services/main.service';
 import { SharedImports } from 'src/app/shared/imports';
 
 @Component({
-    selector: 'app-tasker',
+    selector: 'jmp-tasker',
     templateUrl: './tasker.component.html',
     styleUrl: './tasker.component.scss',
     imports: [

@@ -9,7 +9,7 @@ import { Utils } from 'src/app/shared/utils';
 
 
 @Component({
-    selector: 'app-appbar',
+    selector: 'jmp-appbar',
     templateUrl: './appbar.component.html',
     styleUrl: './appbar.component.scss',
     imports: [

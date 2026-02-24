@@ -10,7 +10,7 @@ import { SharedImports } from 'src/app/shared/imports';
 import { GitHubService } from './github.service';
 
 @Component({
-    selector: 'app-github-projects',
+    selector: 'jmp-github-projects',
     templateUrl: './github-projects.component.html',
     styleUrl: './github-projects.component.scss',
     imports: [
