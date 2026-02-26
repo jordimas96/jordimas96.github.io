@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, HostListener, ViewChild } from '@angular/core';
 import { MatDialog, MatDialogConfig } from '@angular/material/dialog';
 import { SkillComponent } from 'src/app/components/skill/skill.component';
 import { Skills } from 'src/app/enums/skills.enum';
@@ -19,6 +19,8 @@ import { IframeTemplateComponent } from './iframe-template/iframe-template.compo
 })
 export class IndraComponent {
     Skills = Skills;
+
+    @ViewChild("cartaRecomanacio") cartaRecomanacio;
 
     constructor(
         public m: MainService,
@@ -87,6 +89,21 @@ export class IndraComponent {
             }
         );
 
+    }
+
+    public translateFons = 0;
+    @HostListener('window:scroll')
+    onScroll() {
+        const el = this.cartaRecomanacio.nativeElement;
+        const r = el.getBoundingClientRect();
+        const vh = window.innerHeight;
+
+        const progress = (vh - r.top) / (vh + r.height);
+        const p = Math.max(0, Math.min(1, progress));
+
+        const factor = r.height * 2;
+
+        this.translateFons = (p - 0.75) * factor;
     }
 
 

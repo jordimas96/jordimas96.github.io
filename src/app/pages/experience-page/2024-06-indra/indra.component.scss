@@ -20,12 +20,6 @@ a.link-boto-titol {
     p, ul {
         margin-bottom: 1.5rem;
     }
-
-    // .card {
-    //     background-color: light-dark(hsla(216, 100%, 86%, 0.57), hsla(216, 92%, 70%, 0.25));
-    //     border-radius: 1.8rem;
-    //     padding: 1rem;
-    // }
 }
 
 h4, h5 {
@@ -70,6 +64,48 @@ h4, h5 {
         border-radius: 1rem;
 
         i { scale: 1.35; }
+    }
+}
+
+.carta-recomanacio {
+    position: relative;
+    display: block;
+    height: 17.5rem;
+    @include mobil { height: 12.5rem; }
+    border-radius: 2rem;
+    overflow: hidden;
+    font-size: 2rem;
+    @include mobil { font-size: 1.4rem; }
+
+    .fons {
+        position: absolute;
+        width: 100%;
+        background-color: #d6e6ff;
+
+        translate: 0 var(--translate-fons);
+        will-change: translate;
+        z-index: -1;
+
+        box-shadow: 0 0 0 100px white;
+
+        // filter: blur(5px);
+        filter: brightness(0.7) contrast(20) blur(7px);
+        @include mobil { filter: brightness(0.7) contrast(20) blur(4px); }
+        // filter: blur(5px) brightness(0.5) contrast(3)  brightness(1.6) blur(7px)
+    }
+
+    .text {
+        text-align: left;
+        padding: 1rem 2rem;
+        background-color: light-dark(hsla(217, 100%, 78%, 0.62), hsla(216, 100%, 18%, 0.71));
+        color: var(--text);
+        transition: padding 0.3s, font-size 0.3s;
+    }
+
+    &:hover {
+        .text {
+            font-size: 1.3em;
+        }
     }
 }
 

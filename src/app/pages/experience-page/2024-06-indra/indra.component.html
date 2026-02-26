@@ -362,14 +362,14 @@
             </div>
         </div>
 
-        <div class="text-center mt-5">
-            <a class="boto carta-recomanacio" href="assets/_experience/indra/Carta Recomanacio Indra 2026.pdf">
+        <a #cartaRecomanacio class="rs carta-recomanacio mt-5 mb-5" href="assets/_experience/indra/Carta Recomanacio Indra 2026.pdf">
+            <img class="fons" src="assets/_experience/indra/fons-carta-recomanacio.png" [style.--translate-fons.px]="translateFons">
+            <div class="text">
                 @if (m.ca) { Carta de recomanació }
                 @if (m.es) { Carta de recomendación }
                 @if (m.en) { Letter of recommendation }
-                <i class="fa-solid fa-trophy"></i>
-            </a>
-        </div>
+            </div>
+        </a>
 
         
     </article>
