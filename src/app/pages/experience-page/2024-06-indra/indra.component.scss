@@ -67,7 +67,7 @@ h4, h5 {
     }
 }
 
-.carta-recomanacio {
+.pdf-parallax {
     position: relative;
     display: block;
     height: 17.5rem;
@@ -91,7 +91,7 @@ h4, h5 {
         // filter: blur(5px);
         filter: brightness(0.7) contrast(20) blur(7px);
         @include mobil { filter: brightness(0.7) contrast(20) blur(4px); }
-        // filter: blur(5px) brightness(0.5) contrast(3)  brightness(1.6) blur(7px)
+        // filter: blur(5px) brightness(0.5) contrast(3) brightness(1.6) blur(7px)
     }
 
     .text {
@@ -104,7 +104,7 @@ h4, h5 {
 
     &:hover {
         .text {
-            font-size: 1.3em;
+            font-size: 1.15em;
         }
     }
 }

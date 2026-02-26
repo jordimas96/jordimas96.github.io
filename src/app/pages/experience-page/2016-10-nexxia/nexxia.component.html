@@ -24,7 +24,7 @@
 
             <h4>Assoliments</h4>
             <ul>
-                <li>Vaig fer una feina molt important i l'empresa va quedar tant satisfeta que em va donar una <jmp-link id="carta-recomanacio-nexxia">carta de recomanació</jmp-link></li>
+                <li>Vaig fer una feina molt important i l'empresa va quedar tant satisfeta que em va donar una carta de recomanació.</li>
             </ul>
         }
 
@@ -37,7 +37,7 @@
 
             <h4>Logros</h4>
             <ul>
-                <li>Hice un trabajo muy importante y la empresa quedó tan satisfecha que me dio una <jmp-link id="carta-recomanacio-nexxia">carta de recomendación</jmp-link></li>
+                <li>Hice un trabajo muy importante y la empresa quedó tan satisfecha que me dio una carta de recomendación.</li>
             </ul>
         }
 
@@ -50,9 +50,20 @@
 
             <h4>Achievements</h4>
             <ul>
-                <li>I did a very important job and the company was so satisfied that they gave me a <jmp-link id="carta-recomanacio-nexxia">letter of recommendation</jmp-link></li>
+                <li>I did a very important job and the company was so satisfied that they gave me a letter of recommendation.</li>
             </ul>
         }
+
+
+        <a #cartaRecomanacio class="rs pdf-parallax mt-5 mb-5" href="assets/_experience/nexxia/Carta Recomanacio Nexxia 2017.pdf">
+            <img class="fons" src="assets/_experience/nexxia/fons-carta-recomanacio.jpg" [style.--translate-fons.px]="translateFons">
+            <div class="text">
+                @if (m.ca) { Carta de recomanació }
+                @if (m.es) { Carta de recomendación }
+                @if (m.en) { Letter of recommendation }
+                <i class="fa-solid fa-file-pdf ms-2"></i>
+            </div>
+        </a>
     </article>
 
     <!-- Skills -->

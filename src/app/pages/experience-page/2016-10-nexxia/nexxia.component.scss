@@ -23,3 +23,46 @@ a.link-boto-titol {
 h4 {
     color: var(--text-90);
 }
+
+
+.pdf-parallax {
+    position: relative;
+    display: block;
+    height: 17.5rem;
+    @include mobil { height: 12.5rem; }
+    border-radius: 2rem;
+    overflow: hidden;
+    font-size: 2rem;
+    @include mobil { font-size: 1.4rem; }
+
+    .fons {
+        position: absolute;
+        width: 100%;
+        background-color: #d6e6ff;
+
+        translate: 0 var(--translate-fons);
+        will-change: translate;
+        z-index: -1;
+
+        box-shadow: 0 0 0 100px white;
+
+        // filter: blur(5px);
+        filter: brightness(0.7) contrast(20) blur(7px);
+        @include mobil { filter: brightness(0.7) contrast(20) blur(4px); }
+        // filter: blur(5px) brightness(0.5) contrast(3) brightness(1.6) blur(7px)
+    }
+
+    .text {
+        text-align: left;
+        padding: 1rem 2rem;
+        background-color: light-dark(hsla(46, 100%, 72%, 0.5), hsla(46, 100%, 21%, 0.6));
+        color: var(--text);
+        transition: padding 0.3s, font-size 0.3s;
+    }
+
+    &:hover {
+        .text {
+            font-size: 1.15em;
+        }
+    }
+}

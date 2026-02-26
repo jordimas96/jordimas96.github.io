@@ -1,4 +1,4 @@
-import { Component, HostListener, ViewChild } from '@angular/core';
+import { Component, ElementRef, HostListener, ViewChild } from '@angular/core';
 import { MatDialog, MatDialogConfig } from '@angular/material/dialog';
 import { SkillComponent } from 'src/app/components/skill/skill.component';
 import { Skills } from 'src/app/enums/skills.enum';
@@ -20,7 +20,8 @@ import { IframeTemplateComponent } from './iframe-template/iframe-template.compo
 export class IndraComponent {
     Skills = Skills;
 
-    @ViewChild("cartaRecomanacio") cartaRecomanacio;
+    @ViewChild("cartaRecomanacio") cartaRecomanacio: ElementRef<HTMLAnchorElement>;
+    public translateFons = 0;
 
     constructor(
         public m: MainService,
@@ -91,7 +92,7 @@ export class IndraComponent {
 
     }
 
-    public translateFons = 0;
+
     @HostListener('window:scroll')
     onScroll() {
         const el = this.cartaRecomanacio.nativeElement;

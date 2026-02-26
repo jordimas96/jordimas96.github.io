@@ -53,7 +53,6 @@ export class Links {
         "uwp_en": "https://learn.microsoft.com/en-us/windows/uwp/get-started/universal-application-platform-guide",
 
 
-        "carta-recomanacio-nexxia": "assets/_experience/nexxia/Carta Recomanacio Nexxia 2017.pdf",
         "fast-report": "https://www.fast-report.com/en/",
 
 
