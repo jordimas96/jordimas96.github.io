@@ -13,6 +13,20 @@ a.link-boto-titol {
         }
     }
 }
+.icona-dreta-titol {
+    display: flex;
+    gap: 0.75rem;
+    align-items: center;
+    
+    img {
+        height: 2rem;
+        border-radius: 0.5rem;
+    }
+    .text {
+        font-size: 0.75em;
+        color: light-dark(hsl(350, 100%, 15%), hsl(350, 100%, 91%));
+    }
+}
 
 .descripcio {
     p, ul {

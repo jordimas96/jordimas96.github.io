@@ -15,11 +15,6 @@ export class IdiomesComponent implements OnInit {
 
     constructor(public m: MainService) { }
 
-    ngOnInit(): void {
-
-        // Debug //
-        if (this.m.debug) setTimeout(() => { $("img.es").attr("src", "assets/flags/cat.svg") }, 0);
-
-    }
+    ngOnInit(): void { }
 
 }

@@ -45,7 +45,7 @@
         </p>
 
         <!-- SYSTEM BLOCK -->
-        <section class="systemblock card paleta-21 text-80 mb-6">
+        <section class="systemblock card paleta-21 text-80 mb-6" appMostrarAmbAnimacio>
             <h3 class="text-center mt-3 mb-2 text-100">System Block</h3>
             <p class="mx-3 mb-3">
                 @if (m.ca) {
@@ -131,7 +131,7 @@
                             }
                         </div>
                         <div class="imatge">
-                            <img src="assets/_experience/matic/systemblock/systemblock-captura-crm-pc.png" alt="System Block Web" class="w-100 rounded-3">
+                            <img src="assets/_experience/matic/systemblock/systemblock-captura-crm-pc.png" alt="System Block Web" class="w-100 rounded-3" appMostrarAmbAnimacio>
                         </div>
                     </div>
                 </div>
@@ -192,7 +192,7 @@
                             }
                         </div>
                         <div class="imatge flex-4 mw-75 mw-sm-100 mx-auto">
-                            <img src="assets/_experience/matic/systemblock/systemblock-captura-mobil.jpg" alt="System Block App" class="w-100">
+                            <img src="assets/_experience/matic/systemblock/systemblock-captura-mobil.jpg" alt="System Block App" class="w-100" appMostrarAmbAnimacio>
                         </div>
                     </div>
                 </div>
@@ -236,7 +236,7 @@
         </section>
 
         <!-- APPCESSS TEST --> <!-- (17 de maig al 4 de juny del 2021) -->
-        <section class="appcess card paleta-193 text-80 mb-6">
+        <section class="appcess card paleta-193 text-80 mb-6" appMostrarAmbAnimacio>
             <h3 class="text-center mb-3 text-100">Appcess Test</h3>
             @if (m.ca) {
                 Desenvolupament d'una aplicació per a Android i iPhone per al control d'accés a esdeveniments durant la pandèmia. L'aplicació permet als usuaris fer-se un test de COVID en centres autoritzats, i obtenir un QR per a accedir a l'esdeveniment.<br><br>
@@ -397,13 +397,13 @@
         @if (m.es) { <h4>Demo interactiva</h4> }
         @if (m.en) { <h4>Interactive demo</h4> }
 
-        <div class="text-80 font-italic mt-3 mb-2">
+        <div class="text-80 font-italic mt-2 mb-2">
             @if (m.ca) { Interactua amb els botons! }
             @if (m.es) { ¡Interactúa con los botones! }
             @if (m.en) { Interact with the buttons! }
         </div>
 
-        <section class="seccio-boto-systemblock shadow-2-l">
+        <section class="seccio-boto-systemblock shadow-2-l" appMostrarAmbAnimacio>
             <a [href]="linkSmartCountingPDF" class="rs btn btn-negre">
                 PDF SmartCounting
             </a>

@@ -5,12 +5,14 @@
             <img src="assets/_experience/nexxia/nexxia.jpg" alt="Nexxia" class="title-icon rounded-2">
             <span class="fletxa">↗</span>
         </a>
-        <div class="text-60 text-end">
-            <i class="fa-solid fa-graduation-cap icona-practiques me-1"></i>
+        <div class="text-60">
+            <i class="fa-solid fa-graduation-cap icona-practiques"></i>
             @if (m.esPantallaPc) {
-                @if (m.ca) { Pràctiques }
-                @if (m.es) { Prácticas }
-                @if (m.en) { Internship }
+                <span class="ms-1">
+                    @if (m.ca) { Pràctiques }
+                    @if (m.es) { Prácticas }
+                    @if (m.en) { Internship }
+                </span>
             }
         </div>
     </div>
@@ -55,7 +57,7 @@
         }
 
 
-        <a #cartaRecomanacio class="rs pdf-parallax mt-5 mb-5" href="assets/_experience/nexxia/Carta Recomanacio Nexxia 2017.pdf">
+        <a #cartaRecomanacio class="rs pdf-parallax mt-5 mb-5" href="assets/_experience/nexxia/Carta Recomanacio Nexxia 2017.pdf" appMostrarAmbAnimacio>
             <img class="fons" src="assets/_experience/nexxia/fons-carta-recomanacio.jpg" [style.--translate-fons.px]="translateFons">
             <div class="text">
                 @if (m.ca) { Carta de recomanació }

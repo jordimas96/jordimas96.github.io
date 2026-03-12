@@ -76,7 +76,7 @@
 
 
             <div class="accordion">
-                <div class="card crisis">
+                <div class="card crisis" appMostrarAmbAnimacio>
                     <button class="boto-desplegable" (click)="toggleSeccio($event.currentTarget)" matRipple>
                         <div class="d-flex flex-column text-start ps-3">
                             <div class="titol">
@@ -191,7 +191,7 @@
                     </div>
                 </div>
 
-                <div class="card dintel">
+                <div class="card dintel" appMostrarAmbAnimacio>
                     <button class="boto-desplegable" (click)="toggleSeccio($event.currentTarget)" matRipple>
                         <div class="d-flex flex-column text-start ps-3">
                             <div class="titol">
@@ -275,13 +275,13 @@
                         @if (m.es) { <h4>Demo interactiva</h4> }
                         @if (m.en) { <h4>Interactive demo</h4> }
 
-                        <div class="text-80 font-italic mt-3 mb-2">
+                        <div class="text-80 font-italic mt-2 mb-2">
                             @if (m.ca) { Interactua amb els botons per veure el seu comportament i l'estètica de la guia d'estils de la llibreria }
                             @if (m.es) { Interactúa con los botones para ver su comportamiento y estética de la guía de estilos de la librería }
                             @if (m.en) { Interact with the buttons to see their behavior and the aesthetics of the library style guide }
                         </div>
 
-                        <section class="seccio-boto-dintel shadow-2-l">
+                        <section class="seccio-boto-dintel shadow-2-l" appMostrarAmbAnimacio>
                             <a [href]="linkDintelHome" class="rs dnt-button primary">
                                 @if (m.ca) { Llibreria Dintel }
                                 @if (m.es) { Librería Dintel }
@@ -296,7 +296,7 @@
                     </div>
                 </div>
 
-                <div class="card sede">
+                <div class="card sede" appMostrarAmbAnimacio>
                     <button class="boto-desplegable" (click)="toggleSeccio($event.currentTarget)" matRipple>
                         <div class="d-flex flex-column text-start ps-3">
                             <div class="titol">
@@ -362,7 +362,7 @@
             </div>
         </div>
 
-        <a #cartaRecomanacio class="rs pdf-parallax mt-5 mb-5" href="assets/_experience/indra/Carta Recomanacio Indra 2026.pdf">
+        <a #cartaRecomanacio class="rs pdf-parallax mt-5 mb-5" href="assets/_experience/indra/Carta Recomanacio Indra 2026.pdf" appMostrarAmbAnimacio>
             <img class="fons" src="assets/_experience/indra/fons-carta-recomanacio.jpg" [style.--translate-fons.px]="translateFons">
             <div class="text">
                 @if (m.ca) { Carta de recomanació }
