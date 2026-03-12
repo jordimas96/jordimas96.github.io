@@ -16,6 +16,9 @@ import { SharedImports } from 'src/app/shared/imports';
 export class EvoraComponent {
     Skills = Skills;
 
+    public readonly rutaImgMaquina = "assets/_experience/evora/maquina-evora.png";
+    public readonly rutaImgMigracio = "assets/_experience/evora/angular-12-a-17.png";
+
     constructor(public m: MainService) { }
 
 }

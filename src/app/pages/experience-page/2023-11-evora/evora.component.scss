@@ -32,6 +32,25 @@ a.link-boto-titol {
         shape-outside: url("/assets/_experience/evora/maquina-evora.png");
         shape-margin: 1.5rem;
     }
+
+    .angular-migracio {
+        width: 40rem;
+        max-width: 100%;
+        border-radius: 2rem;
+        @include mobil {
+            border-radius: 0.75rem;
+        }
+    }
+    .pwa {
+        height: 5rem;
+        padding: 1rem;
+        border-radius: 1rem;
+        @include mobil {
+            height: 2.5rem;
+            padding: 0.5rem;
+            border-radius: 0.5rem;
+        }
+    }
 }
 
 h4 {
