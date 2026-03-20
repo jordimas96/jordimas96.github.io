@@ -14,39 +14,6 @@
         else if (darkMode === "1") document.documentElement.classList.add("dark");
     </script>
 
-    <!-- Splash Screen -->
-    <style>
-        #splash-screen {
-            display: flex;
-            justify-content: center;
-            align-items: flex-start;
-
-            inset: 0;
-            position: fixed;
-            background-color: light-dark(white, black); /* c7d6ff */
-
-            opacity: 1;
-            transition: opacity 0.6s;
-
-            z-index: 1000000;
-        }
-
-        #splash-screen svg.jmas {
-            will-change: scale;
-
-            margin-top: 25vh;
-
-            fill: light-dark(#757575, white); /* 5e6a8d */
-
-            /* animation: apareixer 0.5s ease; */
-        }
-
-        @keyframes apareixer {
-            from { scale: 0.8; opacity: 0; }
-            to { scale: 1; opacity: 1; }
-        }
-    </style>
-
     <title>Jordi Mas Parramon</title>
     <meta name="author" content="Jordi Mas Parramon">
     <meta name="description" content="My portfolio showing my work and projects as a frontend programmer">
@@ -67,6 +34,7 @@
     <!-- Styles -->
     <link rel="stylesheet" href="assets/fonts/stylesheet.css" media="print" onload="this.media='all'"><noscript><link rel="stylesheet" href="assets/fonts/stylesheet.css"></noscript>
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v6.5.2/css/all.css">
+    <style>#splash-screen{display:flex;justify-content:center;align-items:flex-start;inset:0;position:fixed;background-color:light-dark(white, black);pointer-events:none;opacity:1;transition:opacity 0.6s;z-index:1000000}</style><link rel="stylesheet" href="assets/splash-screen/splash-screen.css" media="print" onload="this.media='all'"><noscript><link rel="stylesheet" href="assets/splash-screen/splash-screen.css"></noscript>
 
     <!-- Scripts -->
     <script src="github-pages-routing-problem-fix.js"></script>
