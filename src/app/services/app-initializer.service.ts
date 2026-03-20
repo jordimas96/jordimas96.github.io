@@ -1,4 +1,5 @@
-import { Injectable } from "@angular/core";
+import { ApplicationRef, Injectable } from "@angular/core";
+import { filter, firstValueFrom } from "rxjs";
 
 @Injectable({
     providedIn: 'root'
@@ -7,19 +8,20 @@ export class AppInitializerService {
 
     private readonly FONS_URL = "assets/background/boles.webp";
 
-    constructor() { }
+    constructor(private appRef: ApplicationRef) { }
     
 
     async init() {
 
-        let carregarImatgeFonsPromise = this.carregarImatgeFons();
+        let backgroundImageLoaded = this.carregarImatgeFons();
 
         // Aplicar fons al body //
-        carregarImatgeFonsPromise.then(() => document.body.style.backgroundImage = `url("${this.FONS_URL}")`);
+        backgroundImageLoaded.then(() => document.body.style.backgroundImage = `url("${this.FONS_URL}")`);
 
         await Promise.all([
-            carregarImatgeFonsPromise,
-            document.fonts.ready
+            backgroundImageLoaded,
+            document.fonts.ready,
+            firstValueFrom(this.appRef.isStable.pipe(filter(stable => stable))),
         ]);
 
         setTimeout(() => {
@@ -47,7 +49,9 @@ export class AppInitializerService {
         if (!splashScreen) return;
         
         splashScreen.style.opacity = "0";
-        setTimeout(() => splashScreen.remove(), 2000);
+        splashScreen.style.pointerEvents = "none";
+        
+        splashScreen.addEventListener("transitionend", () => splashScreen.remove());
     }
 
 
