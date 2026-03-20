@@ -5,8 +5,7 @@
 
     inset: 0;
     position: fixed;
-    /* background-color: light-dark(white, black); /* c7d6ff */
-    background-color: black; /* c7d6ff */
+    background-color: light-dark(white, black); /* c7d6ff */
 
     pointer-events: none;
 
@@ -21,8 +20,7 @@
 
     margin-top: 25vh;
 
-    /* fill: light-dark(#757575, white); /* 5e6a8d */
-    fill: white; /* 5e6a8d */
+    fill: light-dark(#757575, white); /* 5e6a8d */
 
     /* animation: apareixer 0.5s ease; */
 }
