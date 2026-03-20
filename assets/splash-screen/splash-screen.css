@@ -14,7 +14,7 @@
 }
 
 #splash-screen > .jmas {
-    mask: url("jmas.svg") no-repeat center / contain;
+    mask: url("/assets/splash-screen/jmas.svg") no-repeat center / contain;
     width: clamp(200px, 20vw, 500px);
     aspect-ratio: 2.5;
     background-color: light-dark(#757575, white); /* 5e6a8d */
