@@ -7,25 +7,33 @@
     position: fixed;
     background-color: light-dark(white, black); /* c7d6ff */
 
-    pointer-events: none;
-
     opacity: 1;
     transition: opacity 0.6s;
 
     z-index: 1000000;
 }
 
-#splash-screen svg.jmas {
+#splash-screen > .jmas {
+    mask: url("jmas.svg") no-repeat center / contain;
+    width: clamp(200px, 20vw, 500px);
+    aspect-ratio: 2.5;
+    background-color: light-dark(#757575, white); /* 5e6a8d */
+
     will-change: scale;
 
     margin-top: 25vh;
 
-    fill: light-dark(#757575, white); /* 5e6a8d */
+    animation:
+        apareixer 0.5s ease,
+        creixer 5s ease-out forwards;
 
-    /* animation: apareixer 0.5s ease; */
 }
 
 @keyframes apareixer {
     from { scale: 0.8; opacity: 0; }
     to { scale: 1; opacity: 1; }
+}
+@keyframes creixer {
+    from { scale: 1; }
+    to { scale: 1.5; }
 }
