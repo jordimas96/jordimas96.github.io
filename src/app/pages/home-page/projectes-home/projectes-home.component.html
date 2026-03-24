@@ -9,6 +9,42 @@
     <div class="projectes section row g-3">
 
         <div class="col-12 col-sm-6">
+            <div class="projecte tema-in2art card-themed bg-colored" appMostrarAmbAnimacio matRipple>
+                <div class="titol">
+                    IN2ART
+                    <span class="subtitol">
+                        @if (m.ca) { - Desenvolupador Frontend }
+                        @if (m.es) { - Desarrollador Frontend }
+                        @if (m.en) { - Frontend Developer }
+                    </span>
+                </div>
+                <div class="text">
+                    @if (m.ca) {
+                        Creació d'una xarxa social d'art des de zero.<br>
+                        Desenvolupament complet del frontend, i part del backend.<br>
+                        Principal responsable del desenvolupament i lideratge tècnic.
+                    }
+                    @if (m.es) {
+                        Creación de una red social de arte desde cero.<br>
+                        Desarrollo completo del frontend, y parte del backend.<br>
+                        Principal responsable del desarrollo y liderazgo técnico.
+                    }
+                    @if (m.en) {
+                        Creation of an art social network from scratch.<br>
+                        Complete development of the frontend, and part of the backend.<br>
+                        Main responsible for development and technical leadership.
+                    }
+                </div>
+                <div class="text-end">
+                    <button class="boto stretched-link" routerLink="/projects/in2art">
+                        {{ seeMore }}
+                        <i class="fa-solid fa-arrow-right"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+        
+        <div class="col-12 col-sm-6">
             <div class="projecte tema-android card-themed bg-colored" appMostrarAmbAnimacio matRipple>
                 <div class="titol">
                     @if (m.ca) { Apps Android }
@@ -21,7 +57,7 @@
                     @if (m.en) { 6 Android apps, on the Play Store and others. Android Studio, Java, Kotlin and Unity. Material You. Monet dynamic colors. }
                 </div>
                 <div class="text-end">
-                    <button class="boto stretched-link" routerLink="/android">
+                    <button class="boto stretched-link" routerLink="/projects/android">
                         {{ seeMore }}
                         <i class="fa-solid fa-arrow-right"></i>
                     </button>
@@ -42,7 +78,7 @@
                     @if (m.en) { Shooting game made in 2 weeks with Unity. 5 levels with various weapons and healing items, grenades, enemy spawn, music and special effects. Final project of DAM. }
                 </div>
                 <div class="text-end">
-                    <button class="boto stretched-link" routerLink="/mad-jumpgate">
+                    <button class="boto stretched-link" routerLink="/projects/mad-jumpgate">
                         {{ seeMore }}
                         <i class="fa-solid fa-arrow-right"></i>
                     </button>
@@ -63,7 +99,7 @@
                     @if (m.en) { My most relevant repositories on GitHub, where I have my experiments and tools, and old projects from my studies. In real time. }
                 </div>
                 <div class="text-end">
-                    <button class="boto stretched-link" routerLink="/github">
+                    <button class="boto stretched-link" routerLink="/projects/github">
                         {{ seeMore }}
                         <i class="fa-solid fa-arrow-right"></i>
                     </button>
@@ -80,7 +116,7 @@
                     @if (m.en) { Installing custom ROMs on my Android devices and smartwatches. Bootloader unlocking and firmware modification. }
                 </div>
                 <div class="text-end">
-                    <button class="boto stretched-link color-fons" routerLink="/custom-roms">
+                    <button class="boto stretched-link color-fons" routerLink="/projects/custom-roms">
                         {{ seeMore }}
                         <i class="fa-solid fa-arrow-right"></i>
                     </button>
@@ -101,7 +137,7 @@
                     @if (m.en) { Complex automations on Android with Tasker. Shared with the community with hundreds of downloads. }
                 </div>
                 <div class="text-end">
-                    <button class="boto stretched-link" routerLink="/tasker">
+                    <button class="boto stretched-link" routerLink="/projects/tasker">
                         {{ seeMore }}
                         <i class="fa-solid fa-arrow-right"></i>
                     </button>
@@ -122,7 +158,7 @@
                     @if (m.en) { Design of improvised icons and illustrations for various personal projects. }
                 </div>
                 <div class="text-end">
-                    <button class="boto stretched-link" routerLink="/icons">
+                    <button class="boto stretched-link" routerLink="/art/icons">
                         {{ seeMore }}
                         <i class="fa-solid fa-arrow-right"></i>
                     </button>
@@ -139,7 +175,7 @@
                     @if (m.en) { Projects for smartwatch customization. Uploading projects for the community. }
                 </div>
                 <div class="text-end">
-                    <button class="boto stretched-link" routerLink="/amazfit">
+                    <button class="boto stretched-link" routerLink="/art/amazfit">
                         {{ seeMore }}
                         <i class="fa-solid fa-arrow-right"></i>
                     </button>

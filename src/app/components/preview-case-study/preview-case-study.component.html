@@ -1,9 +1,9 @@
-@switch (nom) {
+@switch (pagina + "/" + nom) {
 
 
     <!-- EXPERIENCIA -->
 
-    @case ("indra") {
+    @case ("experience/indra") {
         <div class="item tema-dintel card-themed bg-colored" appMostrarAmbAnimacio matRipple>
             <div class="titol">Indra</div>
             <div class="text">
@@ -21,7 +21,7 @@
                 }
             </div>
             <div class="text-end">
-                <button class="boto stretched-link" routerLink="/indra">
+                <button class="boto stretched-link" routerLink="/experience/indra">
                     {{ seeMore }}
                     <i class="fa-solid fa-arrow-right"></i>
                 </button>
@@ -29,7 +29,7 @@
         </div>
     }
     
-    @case ("in2art-experience") {
+    @case ("experience/in2art") {
         <div class="item tema-in2art card-themed bg-colored" appMostrarAmbAnimacio matRipple>
             <div class="titol">
                 IN2ART
@@ -57,7 +57,7 @@
                 }
             </div>
             <div class="text-end">
-                <button class="boto stretched-link" routerLink="/in2art-experience">
+                <button class="boto stretched-link" routerLink="/experience/in2art">
                     {{ seeMore }}
                     <i class="fa-solid fa-arrow-right"></i>
                 </button>
@@ -65,7 +65,7 @@
         </div>
     }
     
-    @case ("matic") {
+    @case ("experience/matic") {
         <div class="item tema-matic card-themed bg-colored" appMostrarAmbAnimacio matRipple>
             <div class="titol">Matic</div>
             <div class="text">
@@ -86,7 +86,7 @@
                 }
             </div>
             <div class="text-end">
-                <button class="boto stretched-link" routerLink="/matic">
+                <button class="boto stretched-link" routerLink="/experience/matic">
                     {{ seeMore }}
                     <i class="fa-solid fa-arrow-right"></i>
                 </button>
@@ -94,7 +94,7 @@
         </div>
     }
     
-    @case ("evora") {
+    @case ("experience/evora") {
         <div class="item tema-evora card-themed bg-colored" appMostrarAmbAnimacio matRipple>
             <div class="titol">Evora IT</div>
             <div class="text">
@@ -115,7 +115,7 @@
                 }
             </div>
             <div class="text-end">
-                <button class="boto stretched-link" routerLink="/evora">
+                <button class="boto stretched-link" routerLink="/experience/evora">
                     {{ seeMore }}
                     <i class="fa-solid fa-arrow-right"></i>
                 </button>
@@ -123,7 +123,7 @@
         </div>
     }
     
-    @case ("orange") {
+    @case ("experience/orange") {
         <div class="item tema-orange card-themed bg-colored" appMostrarAmbAnimacio matRipple>
             <div class="titol">Orange</div>
             <div class="text">
@@ -132,7 +132,7 @@
                 @if (m.en) { Fullstack in an application to prevent fraud in the consumption of an operator's clients. }
             </div>
             <div class="text-end">
-                <button class="boto stretched-link" routerLink="/orange">
+                <button class="boto stretched-link" routerLink="/experience/orange">
                     {{ seeMore }}
                     <i class="fa-solid fa-arrow-right"></i>
                 </button>
@@ -140,7 +140,7 @@
         </div>
     }
     
-    @case ("tecnocom") {
+    @case ("experience/tecnocom") {
         <div class="item tema-tecnocom card-themed bg-colored" appMostrarAmbAnimacio matRipple>
             <div class="titol">Tecnocom / Indra</div>
             <div class="text">
@@ -149,7 +149,7 @@
                 @if (m.en) { Renewal of La Caixa's Línia Oberta system: Development of a customer management system, with development guides. Middlewares. }
             </div>
             <div class="text-end">
-                <button class="boto stretched-link" routerLink="/tecnocom">
+                <button class="boto stretched-link" routerLink="/experience/tecnocom">
                     {{ seeMore }}
                     <i class="fa-solid fa-arrow-right"></i>
                 </button>
@@ -157,7 +157,7 @@
         </div>
     }
     
-    @case ("nexxia") {
+    @case ("experience/nexxia") {
         <div class="item tema-nexxia card-themed bg-colored" appMostrarAmbAnimacio matRipple>
             <div class="titol">Nexxia</div>
             <div class="text">
@@ -166,7 +166,7 @@
                 @if (m.en) { Development of a system for generating customized templates for subsequent invoice generation. }
             </div>
             <div class="text-end">
-                <button class="boto stretched-link" routerLink="/nexxia">
+                <button class="boto stretched-link" routerLink="/experience/nexxia">
                     {{ seeMore }}
                     <i class="fa-solid fa-arrow-right"></i>
                 </button>
@@ -177,7 +177,7 @@
     
     <!-- PROJECTES -->
     
-    @case ("in2art") {
+    @case ("projects/in2art") {
         <div class="item tema-in2art card-themed bg-colored" appMostrarAmbAnimacio matRipple>
             <div class="titol">
                 IN2ART
@@ -205,7 +205,7 @@
                 }
             </div>
             <div class="text-end">
-                <button class="boto stretched-link" routerLink="/in2art">
+                <button class="boto stretched-link" routerLink="/projects/in2art">
                     {{ seeMore }}
                     <i class="fa-solid fa-arrow-right"></i>
                 </button>
@@ -213,7 +213,7 @@
         </div>
     }
     
-    @case ("android") {
+    @case ("projects/android") {
         <div class="item tema-android card-themed bg-colored" appMostrarAmbAnimacio matRipple>
             <div class="titol">
                 @if (m.ca) { Apps Android }
@@ -226,7 +226,7 @@
                 @if (m.en) { 6 Android apps, on the Play Store and others. Android Studio, Java, Kotlin and Unity. Material You. Monet dynamic colors. }
             </div>
             <div class="text-end">
-                <button class="boto stretched-link" routerLink="/android">
+                <button class="boto stretched-link" routerLink="/projects/android">
                     {{ seeMore }}
                     <i class="fa-solid fa-arrow-right"></i>
                 </button>
@@ -234,7 +234,7 @@
         </div>
     }
     
-    @case ("mad-jumpgate") {
+    @case ("projects/mad-jumpgate") {
         <div class="item tema-mad-jumpgate card-themed bg-colored" appMostrarAmbAnimacio matRipple>
             <div class="titol">
                 @if (m.ca) { Joc de disparar per a PC }
@@ -247,7 +247,7 @@
                 @if (m.en) { Shooting game made in 2 weeks with Unity. 5 levels with various weapons and healing items, grenades, enemy spawn, music and special effects. Final project of DAM. }
             </div>
             <div class="text-end">
-                <button class="boto stretched-link" routerLink="/mad-jumpgate">
+                <button class="boto stretched-link" routerLink="/projects/mad-jumpgate">
                     {{ seeMore }}
                     <i class="fa-solid fa-arrow-right"></i>
                 </button>
@@ -255,7 +255,7 @@
         </div>
     }
     
-    @case ("github") {
+    @case ("projects/github") {
         <div class="item tema-github card-themed bg-colored" appMostrarAmbAnimacio matRipple>
             <div class="titol">
                 @if (m.ca) { Projectes GitHub }
@@ -268,7 +268,7 @@
                 @if (m.en) { My most relevant repositories on GitHub, where I have my experiments and tools, and old projects from my studies. In real time. }
             </div>
             <div class="text-end">
-                <button class="boto stretched-link" routerLink="/github">
+                <button class="boto stretched-link" routerLink="/projects/github">
                     {{ seeMore }}
                     <i class="fa-solid fa-arrow-right"></i>
                 </button>
@@ -276,7 +276,7 @@
         </div>
     }
     
-    @case ("custom-roms") {
+    @case ("projects/custom-roms") {
         <div class="item tema-custom-roms card-themed bg-colored" appMostrarAmbAnimacio matRipple>
             <div class="titol">Custom ROMs</div>
             <div class="text">
@@ -285,7 +285,7 @@
                 @if (m.en) { Installing custom ROMs on my Android devices and smartwatches. Bootloader unlocking and firmware modification. }
             </div>
             <div class="text-end">
-                <button class="boto stretched-link color-fons" routerLink="/custom-roms">
+                <button class="boto stretched-link color-fons" routerLink="/projects/custom-roms">
                     {{ seeMore }}
                     <i class="fa-solid fa-arrow-right"></i>
                 </button>
@@ -293,7 +293,7 @@
         </div>
     }
     
-    @case ("tasker") {
+    @case ("projects/tasker") {
         <div class="item tema-tasker card-themed bg-colored" appMostrarAmbAnimacio matRipple>
             <div class="titol">
                 @if (m.ca) { Projectes TaskerNet }
@@ -306,7 +306,7 @@
                 @if (m.en) { Complex automations on Android with Tasker. Shared with the community with hundreds of downloads. }
             </div>
             <div class="text-end">
-                <button class="boto stretched-link" routerLink="/tasker">
+                <button class="boto stretched-link" routerLink="/projects/tasker">
                     {{ seeMore }}
                     <i class="fa-solid fa-arrow-right"></i>
                 </button>
@@ -317,7 +317,7 @@
 
     <!-- ART -->
     
-    @case ("icons") {
+    @case ("art/icons") {
         <div class="item tema-icons card-themed bg-colored" appMostrarAmbAnimacio matRipple>
             <div class="titol">
                 @if (m.ca) { Icones }
@@ -330,7 +330,7 @@
                 @if (m.en) { Design of improvised icons and illustrations for various personal projects. }
             </div>
             <div class="text-end">
-                <button class="boto stretched-link" routerLink="/icons">
+                <button class="boto stretched-link" routerLink="/art/icons">
                     {{ seeMore }}
                     <i class="fa-solid fa-arrow-right"></i>
                 </button>
@@ -338,7 +338,7 @@
         </div>
     }
     
-    @case ("amazfit") {
+    @case ("art/amazfit") {
         <div class="item tema-amazfit card-themed bg-colored" appMostrarAmbAnimacio matRipple>
             <div class="titol">Amazfit Watchfaces</div>
             <div class="text">
@@ -347,7 +347,7 @@
                 @if (m.en) { Projects for smartwatch customization. Uploading projects for the community. }
             </div>
             <div class="text-end">
-                <button class="boto stretched-link" routerLink="/amazfit">
+                <button class="boto stretched-link" routerLink="/art/amazfit">
                     {{ seeMore }}
                     <i class="fa-solid fa-arrow-right"></i>
                 </button>

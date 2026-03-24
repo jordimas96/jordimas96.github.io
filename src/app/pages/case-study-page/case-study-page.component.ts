@@ -37,6 +37,7 @@ export class CaseStudyPageComponent extends PageComponent {
             let nom = params["case-study"];
             let seccio = SECCIONS.find(s => s.pagina == pagina && s.nom == nom);
             
+            // Si no hi ha seccio, vés a la pàgina anterior //
             if (!seccio) {
                 this.router.navigateByUrl(this.router.url.split("/")[1]);
                 return;
