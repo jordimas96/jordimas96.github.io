@@ -88,7 +88,7 @@
                 @if (m.en) { About me }
             </button>
 
-            <a href="cv" class="boto boto-cv" appMostrarAmbAnimacio matRipple>
+            <a [href]="'/cv/' + m.idioma" class="boto boto-cv" appMostrarAmbAnimacio matRipple>
                 <img src="assets/icons/cv.png" alt="Curriculum Vitae" class="logo invert">
                 @if (m.ca) { Obrir CV }
                 @if (m.es) { Abrir CV }

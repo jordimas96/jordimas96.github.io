@@ -44,7 +44,9 @@ export class SelectorIdiomaComponent implements AfterViewInit {
 
 
         document.documentElement.lang = this.m.idioma;
-        localStorage.setItem("lang", this.m.idioma);
+        
+        if (target)
+            localStorage.setItem("lang", this.m.idioma);
     }
 
 }

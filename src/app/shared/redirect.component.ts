@@ -27,6 +27,7 @@ export class RedirectComponent {
         if (url == "in2art") return "/projects/in2art";
         if (url == "in2art-experience" || url == "in2art-exp") return "/experience/in2art";
 
+        
         // CV //
         if (url == "cv") {
             let idioma = localStorage.getItem("lang");
@@ -35,12 +36,17 @@ export class RedirectComponent {
             else
                 return `/assets/documents/cv`;
         }
+        if (["cv/ca", "cv/es", "cv/en"].includes(url)) {
+            return `/assets/documents/cv/CV Jordi Mas Parramon ${url.split("/")[1].toUpperCase()}.pdf`;
+        }
         if (url == "cv-selector") return "/assets/documents/cv";
+
 
         if (url == "play-store" || url == "playstore")
             // return "https://jordimas96.github.io/assets_repo/jordimas96.github.io/external-pages/apps/play-store";
             return "assets/_projects/android/play-store/index-simple.html";
 
+        
         // Foto //
         if (url == "foto" || url == "photo") return "/assets/foto-carnet-2020.jpg";
 
