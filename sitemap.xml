@@ -12,6 +12,9 @@
 <url><loc>https://jordimas96.github.io/art</loc>        <priority>0.9</priority></url>
 <url><loc>https://jordimas96.github.io/about-me</loc>   <priority>0.9</priority></url>
 <url><loc>https://jordimas96.github.io/cv</loc>         <priority>0.9</priority></url>
+<url><loc>https://jordimas96.github.io/cv/ca</loc>      <priority>0.8</priority></url>
+<url><loc>https://jordimas96.github.io/cv/es</loc>      <priority>0.8</priority></url>
+<url><loc>https://jordimas96.github.io/cv/en</loc>      <priority>0.8</priority></url>
 
 <url><loc>https://jordimas96.github.io/experience/indra</loc>      <priority>0.7</priority></url>
 <url><loc>https://jordimas96.github.io/experience/in2art</loc>     <priority>0.7</priority></url>
