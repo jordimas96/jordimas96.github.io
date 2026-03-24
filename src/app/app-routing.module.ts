@@ -23,9 +23,9 @@ const routes: Routes = [
     { path: "about-me", component: AboutMePageComponent },
 
     // Altres //
-    { path: "experience/:case-study", component: CaseStudyPageComponent },
-    { path:   "projects/:case-study", component: CaseStudyPageComponent },
-    { path:        "art/:case-study", component: CaseStudyPageComponent },
+    { path: "experience/:case-study", component: CaseStudyPageComponent, data: { pagina: "experience" } },
+    { path:   "projects/:case-study", component: CaseStudyPageComponent, data: { pagina: "projects" } },
+    { path:        "art/:case-study", component: CaseStudyPageComponent, data: { pagina: "art" } },
 
     { path: "section/:section", component: SectionPageComponent },
 

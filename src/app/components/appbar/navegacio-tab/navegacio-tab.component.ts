@@ -53,7 +53,7 @@ export class NavegacioTabComponent {
     actPosPill(animacio) {
         if (!this.botoSeleccionat) this.botoSeleccionat = document.querySelector("jmp-navegacio-tab nav button.selected");
         if (!this.botoSeleccionat) {
-            $(this.pill.nativeElement).css({ top: 0, left: 0, width: 0, height: 0 });
+            $(this.pill?.nativeElement).css({ top: 0, left: 0, width: 0, height: 0 });
             return;
         }
 

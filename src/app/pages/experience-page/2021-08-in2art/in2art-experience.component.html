@@ -14,6 +14,7 @@
 
             També vaig elaborar una documentació amb els passos detallats per a compilar el projecte, pujar la web al servidor, utilitzar arxius importants com .htaccess, treballar amb les traduccions, paràmetres de les peticions de la API, etc. El propòsit d'aquesta documentació era evitar les feines repetitives i agilitzar la comunicació entre frontend i backend.
             A més, vaig crear diferents scripts de PowerShell per a automatitzar les compilacions i traduccions.
+            Vaig implementar un sistema automàtic per a detectar i registrar literals sense traduir en runtime, facilitant així el manteniment de i18n.
         }
 
         @if (m.es) {
@@ -23,6 +24,7 @@
 
             También elaboré una documentación con los pasos detallados para compilar el proyecto, subir la web al servidor, usar archivos importantes como .htaccess, trabajar con las traducciones, parámetros de las peticiones de la API, etc. El propósito de esta documentación fue evitar los trabajos repetitivos y agilizar la comunicación entre frontend y backend.
             Además, creé distintos scripts de PowerShell para automatizar las compilaciones y traducciones.
+            Implementé un sistema automático para detectar y registrar literales sin traducir en runtime, facilitando así el mantenimiento de i18n.
         }
 
         @if (m.en) {
@@ -32,8 +34,10 @@
 
             I also produced a documentation with detailed steps to compile the project, upload the web to the server, use important files like .htaccess, work with translations, API request parameters, etc. The purpose of this documentation was to avoid repetitive tasks and streamline communication between frontend and backend.
             Additionally, I created different PowerShell scripts to automate builds and translations.
+            I implemented an automatic system to detect and log untranslated literals in runtime, thus facilitating i18n maintenance.
         }
     </article> -->
+    
     <article class="descripcio mb-4">
         @if (m.ca) {
             <p>
@@ -42,41 +46,21 @@
 
             <h4>Assoliments</h4>
             <ul>
+                <li>Desenvolupament complet del frontend d'una xarxa social</li>
                 <li><span class="text-ressaltat">Líder de projecte</span>. Divisió, assignació de tasques i revisió</li>
-                <li>Projecte construït des de zero amb Angular, CSS i TypeScript</li>
+                <li>Projecte construït des de zero</li>
                 <li>Participació en parts clau de la decisió dels estils i identitat visual de la xarxa social</li>
-                <li>Formació de 4 estudiants en Frontend per incloure'ls a l'equip</li>
+                <li>Selecció, formació i supervisió de 4 estudiants (DAM) en desenvolupament web</li>
             </ul>
 
             <p>
-                La primera part del projecte, quan vaig fer l'estructura i l'organització del frontend, la vaig desenvolupar en solitari. A mesura que la web va anar creixent i es van afegir noves seccions, vaig poder dividir la càrrega de treball entre estudiants de pràctiques de DAM (backend) als que jo mateix vaig formar en Angular, TypeScript i CSS. Junts vam treballar en equip per crear una veritable <jmp-link href="/assets/_experience/in2art/in2art-pc.png">obra d'art</jmp-link>.
-            </p>
-
-            <section class="funcionalitats card mb-4">
-                <h4>Estructura i funcionalitats de la pàgina</h4>
-                <ul>
-                    <li>Feed amb scroll infinit i autoreproducció, publicacions multimèdia (imatges, vídeos, àudios i interactius), amb totes les dades, sistema de valoració (sobre criteris segons tipus d'obra) i de comentaris i respostes.</li>
-                    <li>Perfil, amb biografia, llistes de seguidors/subscriptors i llistat de publicacions pròpies.</li>
-                    <li>Formulari dinàmic per pujar arxius d'obres amb metadades completes (tècniques, moviments, dates, etiquetes, etc.).</li>
-                    <li>Buscador global amb mode d'exploració.</li>
-                    <li>Suport per a diversos idiomes.</li>
-                    <li>Notificacions.</li>
-                    <li>Ajustos.</li>
-                </ul>
-
-                <div class="text-center mb-3">
-                    <jmp-link [href]="linkReadme"><i class="fa-regular fa-file-lines me-1"></i> Fitxa completa de funcionalitats d'IN2ART</jmp-link>
-                </div>
-            </section>
-
-            <p>
-                Vaig crear documentació i scripts per automatitzar compilacions, gestió de traduccions i configuració del projecte, amb l'objectiu d'agilitzar processos i la comunicació entre frontend i backend.<br><br>
+                La primera part del projecte, quan vaig fer l'estructura i l'organització del frontend, la vaig desenvolupar en solitari. A mesura que la web va anar creixent i es van afegir noves seccions, vaig poder dividir la càrrega de treball entre estudiants de pràctiques de DAM (backend) als que jo mateix vaig formar en Angular, TypeScript i CSS. Junts vam treballar en equip per crear una veritable <jmp-link href="/assets/_experience/in2art/in2art-pc.png">obra d'art</jmp-link>.<br><br>
 
                 La secció de comentaris de la xarxa social va ser desenvolupada per un altre membre de l'equip, mentre que jo vaig supervisar i guiar-ne el desenvolupament i la integració al projecte principal.<br><br>
 
                 D'altra banda, es va desenvolupar un backoffice per a la gestió d'usuaris i permisos. Va formar part de l'ecosistema del projecte i va ser desenvolupat per un altre membre de l'equip. Tot i no participar directament en el seu desenvolupament, em vaig encarregar de revisar-lo i guiar-ne el progrés.<br><br>
 
-                La meva feina va deixar tal empremta que, un any després, seguia sent la referència que consultaven candidats interessats a unir-se al projecte.
+                La meva feina va deixar tal empremta que, un any després de marxar de l'empresa, seguia sent la referència que consultaven candidats interessats a unir-se al projecte.
             </p>
         }
 
@@ -87,41 +71,21 @@
 
             <h4>Logros</h4>
             <ul>
+                <li>Desarrollo completo del frontend de una red social</li>
                 <li><span class="text-ressaltat">Líder de proyecto</span>. División, asignación de tareas y revisión</li>
-                <li>Proyecto construido desde cero con Angular, CSS y TypeScript</li>
+                <li>Proyecto construido desde cero</li>
                 <li>Participación en partes clave de la decisión de los estilos e identidad visual de la red social</li>
-                <li>Formación de 4 estudiantes en Frontend para incluirlos en el equipo</li>
+                <li>Selección, formación y supervisión de 4 estudiantes (DAM) en desarrollo web</li>
             </ul>
 
             <p>
-                La primera parte del proyecto, la estructura y organización del frontend, la desarrollé en solitario. A medida que la web fue creciendo y se añadieron nuevas secciones, pude dividir la carga de trabajo entre estudiantes de prácticas de DAM (backend) a los que yo mismo formé en Angular, TypeScript y CSS. Juntos, trabajamos en equipo para crear una verdadera <jmp-link href="/assets/_experience/in2art/in2art-pc.png">obra de arte</jmp-link>.
-            </p>
-
-            <section class="funcionalitats card mb-4">
-                <h4>Estructura y funcionalidades de la página</h4>
-                <ul>
-                    <li>Feed con scroll infinito y autoreproducción, publicaciones multimedia (imágenes, vídeos, audios e interactivos), con todos los datos, sistema de valoración (sobre criterios según tipo de obra) y de comentarios y respuestas.</li>
-                    <li>Perfil, con biografía, listas de seguidores/suscriptores y listado de publicaciones propias.</li>
-                    <li>Formulario dinámico para subir archivos de obras con metadatos completos (técnicas, movimientos, fechas, etiquetas, etc.).</li>
-                    <li>Buscador global con modo de exploración.</li>
-                    <li>Soporte para varios idiomas.</li>
-                    <li>Notificaciones.</li>
-                    <li>Ajustes.</li>
-                </ul>
-
-                <div class="text-center mb-3">
-                    <jmp-link [href]="linkReadme"><i class="fa-regular fa-file-lines me-1"></i> Ficha completa de funcionalidades de IN2ART</jmp-link>
-                </div>
-            </section>
-
-            <p>
-                También creé documentación y scripts para automatizar compilaciones, gestión de traducciones y configuración del proyecto, para agilizar procesos y la comunicación entre frontend y backend.<br><br>
+                La primera parte del proyecto, la estructura y organización del frontend, la desarrollé en solitario. A medida que la web fue creciendo y se añadieron nuevas secciones, pude dividir la carga de trabajo entre estudiantes de prácticas de DAM (backend) a los que yo mismo formé en Angular, TypeScript y CSS. Juntos, trabajamos en equipo para crear una verdadera <jmp-link href="/assets/_experience/in2art/in2art-pc.png">obra de arte</jmp-link>.<br><br>
 
                 La sección de comentarios de la red social fue desarrollada por otro miembro del equipo, mientras que yo supervisé y guié su desarrollo e integración al proyecto principal.<br><br>
 
                 Por otro lado, se desarrolló un backoffice para la gestión de usuarios y permisos. Formó parte del ecosistema del proyecto y fue desarrollado por otro miembro del equipo. Pese a no participar directamente en su desarrollo, me encargué de revisarlo y guiar su progreso.<br><br>
 
-                Mi trabajo dejó tal huella que, un año después, seguía siendo la referencia que consultaban candidatos interesados en unirse al proyecto.
+                Mi trabajo dejó tal huella que, un año después de irme de la empresa, seguía siendo la referencia que consultaban candidatos interesados en unirse al proyecto.
             </p>
         }
 
@@ -132,49 +96,32 @@
 
             <h4>Achievements</h4>
             <ul>
+                <li>Complete development of the frontend of a social network</li>
                 <li><span class="text-ressaltat">Project lead</span>. Division, assignment of tasks and review</li>
-                <li>Project built from scratch with Angular, CSS and TypeScript</li>
+                <li>Project built from scratch</li>
                 <li>Participation in key parts of the decision of the styles and visual identity of the social network</li>
-                <li>Training of 4 students in Frontend to be included in the team</li>
+                <li>Selection, training and supervision of 4 students (DAM) in web development</li>
             </ul>
 
             <p>
-                The first part of the project, when I did the structure and organization of the frontend, I developed it alone. As the web grew and new sections were added, I splitted the workload among DAM internship students (backend) that I trained myself in Angular, TypeScript, and CSS. Together, we worked as a team to create a true <jmp-link href="/assets/_experience/in2art/in2art-pc.png">work of art</jmp-link>.
-            </p>
-
-            <section class="funcionalitats card mb-4">
-                <h4>Page structure and functionalities</h4>
-                <ul>
-                    <li>Feed with infinite scroll and autoplay, multimedia posts (images, videos, audios and interactives), with all data, rating system (on criteria according to type of work) and comments and replies.</li>
-                    <li>Profile, with biography, followers/subscribers lists and own posts list.</li>
-                    <li>Dynamic form to upload work files with complete metadata (techniques, movements, dates, tags, etc.).</li>
-                    <li>Global search engine with exploration mode.</li>
-                    <li>Support for multiple languages.</li>
-                    <li>Notifications.</li>
-                    <li>Settings.</li>
-                </ul>
-
-                <div class="text-center mb-3">
-                    <jmp-link [href]="linkReadme"><i class="fa-regular fa-file-lines me-1"></i> Complete feature sheet of IN2ART</jmp-link>
-                </div>
-            </section>
-            
-            <p>
-                I created documentation and scripts to automate builds, translation management and project configuration, with the aim of streamlining processes and communication between frontend and backend.<br><br>
+                The first part of the project, when I did the structure and organization of the frontend, I developed it alone. As the web grew and new sections were added, I splitted the workload among DAM internship students (backend) that I trained myself in Angular, TypeScript, and CSS. Together, we worked as a team to create a true <jmp-link href="/assets/_experience/in2art/in2art-pc.png">work of art</jmp-link>.<br><br>
 
                 The social network's comments section was developed by another team member, while I oversaw and guided its development and integration into the main project.<br><br>
 
                 On the other hand, a backoffice was developed for user and permission management. It was part of the project ecosystem and was developed by another team member. Despite not participating directly in its development, I was responsible for reviewing it and guiding its progress.<br><br>
 
-                My work left such a mark that, a year later, I was still the reference consulted by candidates interested in joining the project.
+                My work left such a mark that, a year after leaving the company, I was still the reference consulted by candidates interested in joining the project.
             </p>
         }
     </article>
 
 
-    <jmp-demos-in2art class="mt-6 mb-6" />
-    
-    <jmp-about-in2art class="mb-6" />
+    <button routerLink="/projects/in2art" class="boto mt-5 mb-5 mx-auto d-flex" appMostrarAmbAnimacio matRipple>
+        @if (m.ca) { Veure informació completa del projecte }
+        @if (m.es) { Ver información completa del proyecto }
+        @if (m.en) { View full project information }
+        <i class="fa-solid fa-arrow-right"></i>
+    </button>
 
 
     <!-- Skills -->

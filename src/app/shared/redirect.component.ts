@@ -23,12 +23,9 @@ export class RedirectComponent {
 
     canviarUrl(url: string): string {
 
-        
-        // Buscar seccions //
-        let seccio = SECCIONS.find(s => url == s.nom || url == s.nom + "-info");
-        if (seccio)
-            return `${seccio.pagina}/${seccio.nom}`;
-        
+        // IN2ART //
+        if (url == "in2art") return "/projects/in2art";
+        if (url == "in2art-experience" || url == "in2art-exp") return "/experience/in2art";
 
         // CV //
         if (url == "cv") {
@@ -49,6 +46,12 @@ export class RedirectComponent {
 
 
 
+        // Buscar seccions //
+        let seccio = SECCIONS.find(s => url == s.nom || url == s.nom + "-info");
+        if (seccio)
+            return `${seccio.pagina}/${seccio.nom}`;
+
+        
 
         // Si no ha trobat res, anirem a home //
         return "";

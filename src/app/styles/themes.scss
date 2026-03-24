@@ -231,6 +231,14 @@
     --accent-color: light-dark(#2b3137, white);
 }
 
+.tema-custom-roms {
+    @extend .paleta-199;
+
+    --fons-card: light-dark(hsla(199, 0%, 100%, 0.5), hsla(199, 0%, 0%, 0.5)) !important;
+
+    --link: light-dark(hsl(218, 100%, 61%), hsl(199, 100%, 60%));
+}
+
 .tema-tasker {
     @extend .paleta-34;
 
@@ -337,6 +345,8 @@
 
 .tema-in2art {
     @extend .paleta-bn;
+    --fons-card: light-dark(hsla(0, 0%, 100%, 0.5), hsla(0, 0%, 0%, 0.5)) !important;
+    --accent-color: light-dark(black, white);
 }
 
 .tema-matic {

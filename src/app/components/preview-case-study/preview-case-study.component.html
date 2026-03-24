@@ -1,4 +1,8 @@
 @switch (nom) {
+
+
+    <!-- EXPERIENCIA -->
+
     @case ("indra") {
         <div class="item tema-dintel card-themed bg-colored" appMostrarAmbAnimacio matRipple>
             <div class="titol">Indra</div>
@@ -23,22 +27,45 @@
                 </button>
             </div>
         </div>
-    } @case ("in2art") {
+    }
+    
+    @case ("in2art-experience") {
         <div class="item tema-in2art card-themed bg-colored" appMostrarAmbAnimacio matRipple>
-            <div class="titol">IN2ART</div>
+            <div class="titol">
+                IN2ART
+                <span class="subtitol">
+                    @if (m.ca) { - Desenvolupador Frontend }
+                    @if (m.es) { - Desarrollador Frontend }
+                    @if (m.en) { - Frontend Developer }
+                </span>
+            </div>
             <div class="text">
-                @if (m.ca) { Xarxa social d'art. Frontend complet, backend parcial.<br> Líder de projecte. }
-                @if (m.es) { Red social de arte. Frontend completo, backend parcial.<br> Líder de proyecto. }
-                @if (m.en) { Art social network. Complete frontend, partial backend.<br> Project lead. }
+                @if (m.ca) {
+                    Creació d'una xarxa social d'art des de zero.<br>
+                    Desenvolupament complet del frontend, i part del backend.<br>
+                    Principal responsable del desenvolupament i lideratge tècnic.
+                }
+                @if (m.es) {
+                    Creación de una red social de arte desde cero.<br>
+                    Desarrollo completo del frontend, y parte del backend.<br>
+                    Principal responsable del desarrollo y liderazgo técnico.
+                }
+                @if (m.en) {
+                    Creation of an art social network from scratch.<br>
+                    Complete development of the frontend, and part of the backend.<br>
+                    Main responsible for development and technical leadership.
+                }
             </div>
             <div class="text-end">
-                <button class="boto stretched-link" routerLink="/in2art">
+                <button class="boto stretched-link" routerLink="/in2art-experience">
                     {{ seeMore }}
                     <i class="fa-solid fa-arrow-right"></i>
                 </button>
             </div>
         </div>
-    } @case ("matic") {
+    }
+    
+    @case ("matic") {
         <div class="item tema-matic card-themed bg-colored" appMostrarAmbAnimacio matRipple>
             <div class="titol">Matic</div>
             <div class="text">
@@ -65,7 +92,9 @@
                 </button>
             </div>
         </div>
-    } @case ("evora") {
+    }
+    
+    @case ("evora") {
         <div class="item tema-evora card-themed bg-colored" appMostrarAmbAnimacio matRipple>
             <div class="titol">Evora IT</div>
             <div class="text">
@@ -92,7 +121,9 @@
                 </button>
             </div>
         </div>
-    } @case ("orange") {
+    }
+    
+    @case ("orange") {
         <div class="item tema-orange card-themed bg-colored" appMostrarAmbAnimacio matRipple>
             <div class="titol">Orange</div>
             <div class="text">
@@ -107,7 +138,9 @@
                 </button>
             </div>
         </div>
-    } @case ("tecnocom") {
+    }
+    
+    @case ("tecnocom") {
         <div class="item tema-tecnocom card-themed bg-colored" appMostrarAmbAnimacio matRipple>
             <div class="titol">Tecnocom / Indra</div>
             <div class="text">
@@ -122,7 +155,9 @@
                 </button>
             </div>
         </div>
-    } @case ("nexxia") {
+    }
+    
+    @case ("nexxia") {
         <div class="item tema-nexxia card-themed bg-colored" appMostrarAmbAnimacio matRipple>
             <div class="titol">Nexxia</div>
             <div class="text">
@@ -137,7 +172,48 @@
                 </button>
             </div>
         </div>
-    } @case ("android") {
+    }
+
+    
+    <!-- PROJECTES -->
+    
+    @case ("in2art") {
+        <div class="item tema-in2art card-themed bg-colored" appMostrarAmbAnimacio matRipple>
+            <div class="titol">
+                IN2ART
+                <span class="subtitol">
+                    @if (m.ca) { - Xarxa social d'art }
+                    @if (m.es) { - Red social de arte }
+                    @if (m.en) { - Art social network }
+                </span>
+            </div>
+            <div class="text">
+                @if (m.ca) {
+                    Creació d'una xarxa social d'art des de zero.<br>
+                    Frontend complet i backend parcial.<br>
+                    Principal responsable del desenvolupament.
+                }
+                @if (m.es) {
+                    Creación de una red social de arte desde cero.<br>
+                    Frontend completo y backend parcial.<br>
+                    Principal responsable del desarrollo.
+                }
+                @if (m.en) {
+                    Creation of an art social network from scratch.<br>
+                    Complete frontend and partial backend.<br>
+                    Main responsible for development.
+                }
+            </div>
+            <div class="text-end">
+                <button class="boto stretched-link" routerLink="/in2art">
+                    {{ seeMore }}
+                    <i class="fa-solid fa-arrow-right"></i>
+                </button>
+            </div>
+        </div>
+    }
+    
+    @case ("android") {
         <div class="item tema-android card-themed bg-colored" appMostrarAmbAnimacio matRipple>
             <div class="titol">
                 @if (m.ca) { Apps Android }
@@ -156,7 +232,9 @@
                 </button>
             </div>
         </div>
-    } @case ("mad-jumpgate") {
+    }
+    
+    @case ("mad-jumpgate") {
         <div class="item tema-mad-jumpgate card-themed bg-colored" appMostrarAmbAnimacio matRipple>
             <div class="titol">
                 @if (m.ca) { Joc de disparar per a PC }
@@ -175,7 +253,9 @@
                 </button>
             </div>
         </div>
-    } @case ("github") {
+    }
+    
+    @case ("github") {
         <div class="item tema-github card-themed bg-colored" appMostrarAmbAnimacio matRipple>
             <div class="titol">
                 @if (m.ca) { Projectes GitHub }
@@ -194,8 +274,10 @@
                 </button>
             </div>
         </div>
-    } @case ("custom-roms") {
-        <div class="item card-themed bg-colored" appMostrarAmbAnimacio matRipple>
+    }
+    
+    @case ("custom-roms") {
+        <div class="item tema-custom-roms card-themed bg-colored" appMostrarAmbAnimacio matRipple>
             <div class="titol">Custom ROMs</div>
             <div class="text">
                 @if (m.ca) { Instal·lació de ROMs personalitzades als meus dispositius Android i smartwatches. Desbloqueig del bootloader i modificació de firmwares. }
@@ -209,7 +291,9 @@
                 </button>
             </div>
         </div>
-    } @case ("tasker") {
+    }
+    
+    @case ("tasker") {
         <div class="item tema-tasker card-themed bg-colored" appMostrarAmbAnimacio matRipple>
             <div class="titol">
                 @if (m.ca) { Projectes TaskerNet }
@@ -228,7 +312,12 @@
                 </button>
             </div>
         </div>
-    } @case ("icons") {
+    }
+
+
+    <!-- ART -->
+    
+    @case ("icons") {
         <div class="item tema-icons card-themed bg-colored" appMostrarAmbAnimacio matRipple>
             <div class="titol">
                 @if (m.ca) { Icones }
@@ -247,7 +336,9 @@
                 </button>
             </div>
         </div>
-    } @case ("amazfit") {
+    }
+    
+    @case ("amazfit") {
         <div class="item tema-amazfit card-themed bg-colored" appMostrarAmbAnimacio matRipple>
             <div class="titol">Amazfit Watchfaces</div>
             <div class="text">

@@ -1,0 +1,40 @@
+@import "src/styles.scss";
+@import "src/app/pages/experience-page/experience-styles.scss";
+
+
+a.link-boto-titol:hover {
+    img.title-icon {
+        transform-origin: 50% 200%;
+        animation: saludar 0.45s linear;
+    }
+}
+@keyframes saludar {
+    0% { transform: rotate(0deg); }
+    25% { transform: rotate(7.5deg); }
+    50% { transform: rotate(0deg); }
+    75% { transform: rotate(7.5deg); }
+    100% { transform: rotate(0deg); }
+    0%, 100% { clip-path: inset(7%); }
+}
+
+.descripcio {
+    p, ul {
+        margin-bottom: 1.5rem;
+    }
+
+    .funcionalitats.card {
+        background-color: light-dark(rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0.15));
+        padding: 1rem;
+        border-radius: 1.5rem;
+        border: 1px solid light-dark(rgba(255, 255, 255, 0.66), rgba(255, 255, 255, 0.27));
+    }
+}
+
+h4 {
+    color: var(--text-90);
+}
+
+.text-ressaltat {
+    color: light-dark(black, gold);
+    font-weight: bold;
+}

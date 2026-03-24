@@ -22,20 +22,21 @@
 
 
         @switch (section) {
-            @case ("android")      { <jmp-android-apps />       }
-            @case ("mad-jumpgate") { <jmp-mad-jumpgate />       }
-            @case ("github")       { <jmp-github-projects />    }
-            @case ("custom-roms")  { <jmp-custom-roms />        }
-            @case ("tasker")       { <jmp-tasker />             }
-            @case ("icons")        { <jmp-icons />              }
-            @case ("amazfit")      { <jmp-amazfit-watchfaces /> }
-            @case ("indra")        { <jmp-indra />              }
-            @case ("evora")        { <jmp-evora />              }
-            @case ("orange")       { <jmp-orange />             }
-            @case ("in2art")       { <jmp-in2art />             }
-            @case ("matic")        { <jmp-matic />              }
-            @case ("tecnocom")     { <jmp-tecnocom />           }
-            @case ("nexxia")       { <jmp-nexxia />             }
+            @case ("in2art")            { <jmp-in2art />             }
+            @case ("android")           { <jmp-android-apps />       }
+            @case ("mad-jumpgate")      { <jmp-mad-jumpgate />       }
+            @case ("github")            { <jmp-github-projects />    }
+            @case ("custom-roms")       { <jmp-custom-roms />        }
+            @case ("tasker")            { <jmp-tasker />             }
+            @case ("icons")             { <jmp-icons />              }
+            @case ("amazfit")           { <jmp-amazfit-watchfaces /> }
+            @case ("indra")             { <jmp-indra />              }
+            @case ("evora")             { <jmp-evora />              }
+            @case ("orange")            { <jmp-orange />             }
+            @case ("in2art-experience") { <jmp-in2art-experience />  }
+            @case ("matic")             { <jmp-matic />              }
+            @case ("tecnocom")          { <jmp-tecnocom />           }
+            @case ("nexxia")            { <jmp-nexxia />             }
             @default {
                 <h4 class="text-center text-danger mt-5">Invalid section name</h4>
                 <!-- <h2 class="text-center mt-5"><jmp-link href="/" target="_self">Go home</jmp-link></h2> -->
@@ -73,7 +74,7 @@
                 @if (section != "android") {      <button class="boto tema-android"      routerLink="/section/android"      matRipple>Apps Android</button>       }
                 @if (section != "mad-jumpgate") { <button class="boto tema-mad-jumpgate" routerLink="/section/mad-jumpgate" matRipple>PC shooting game</button>   }
                 @if (section != "github") {       <button class="boto tema-github"       routerLink="/section/github"       matRipple>GitHub Projects</button>    }
-                @if (section != "custom-roms") {  <button class="boto "                  routerLink="/section/custom-roms"  matRipple>Custom ROMs</button>        }
+                @if (section != "custom-roms") {  <button class="boto tema-custom-roms"  routerLink="/section/custom-roms"  matRipple>Custom ROMs</button>        }
                 @if (section != "tasker") {       <button class="boto tema-tasker"       routerLink="/section/tasker"       matRipple>Tasker</button>             }
                 @if (section != "icons") {        <button class="boto tema-icons"        routerLink="/section/icons"        matRipple>Icons</button>              }
                 @if (section != "amazfit") {      <button class="boto tema-amazfit"      routerLink="/section/amazfit"      matRipple>Amazfit Watchfaces</button> }

@@ -1,7 +1,6 @@
-import { Component } from '@angular/core';
+import { AfterViewInit, Component, ElementRef, ViewChild } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { MainService } from 'src/app/services/main.service';
-import { Utils } from 'src/app/shared/utils';
 
 @Component({
     selector: 'jmp-selector-idioma',
@@ -11,11 +10,13 @@ import { Utils } from 'src/app/shared/utils';
         FormsModule,
     ]
 })
-export class SelectorIdiomaComponent {
+export class SelectorIdiomaComponent implements AfterViewInit {
+
+    @ViewChild("selectorIdioma") selectorIdioma: ElementRef;
 
     constructor(public m: MainService) { }
 
-    ngOnInit() {
+    ngAfterViewInit() {
         this.establirIdiomaDefecte();
     }
 
@@ -24,7 +25,8 @@ export class SelectorIdiomaComponent {
         this.m.idioma = localStorage.getItem("lang") || navigator.language.split("-")[0];
 
         // Si l'idioma detectat no es al select, el posem a anglès per defecte //
-        if (!$("#idioma > option").toArray().map(e => $(e).val()).includes(this.m.idioma))
+        
+        if (this.selectorIdioma && !Array.from(this.selectorIdioma.nativeElement).find((e: any) => e.value === this.m.idioma))
             this.m.idioma = "en";
 
         this.idiomaCanviat();

@@ -62,16 +62,18 @@
         padding: 1rem 2rem;
 
         font-size: 1.6rem;
+        transition: color 0.3s, transform 0.3s;
 
         i {
             display: block;
-            transition: transform 0.3s;
+            transition: color 0.3s, transform 0.3s;
         }
 
         &:hover {
             color: var(--color-6);
+            transform: translateY(0.5rem);
             i {
-                transform: translateY(0.5rem);
+                transform: translateY(0.33rem);
             }
         }
     }

@@ -1,0 +1,25 @@
+<!-- <h3 class="mb-4 text-center" appMostrarAmbAnimacio>
+    @if (m.ca) { Secció "Sobre IN2ART" (recreada) }
+    @if (m.es) { Sección "Acerca de IN2ART" (recreada) }
+    @if (m.en) { Section "About IN2ART" (recreated) }
+</h3> -->
+
+<figure class="text-center">
+    <div class="contenidor shadow-2-l" appMostrarAmbAnimacio>
+        <jmp-about-card />
+    </div>
+    <figcaption class="mt-2" appMostrarAmbAnimacio>
+        @if (m.ca) {
+            Rèplica fidel de la interfície original (2022).<br>
+            Veure a les demos d'<jmp-link [href]="linkPC">ordinador</jmp-link> i <jmp-link [href]="linkMobil">mòbil</jmp-link>.
+        }
+        @if (m.es) {
+            Replica fiel de la interfaz original (2022).<br>
+            Ver en las demos de <jmp-link [href]="linkPC">ordenador</jmp-link> y <jmp-link [href]="linkMobil">móvil</jmp-link>.
+        }
+        @if (m.en) {
+            Faithful replica of the original interface (2022).<br>
+            View in the <jmp-link [href]="linkPC">desktop</jmp-link> and <jmp-link [href]="linkMobil">mobile</jmp-link> demos.
+        }
+    </figcaption>
+</figure>

@@ -33,8 +33,10 @@ export class CaseStudyPageComponent extends PageComponent {
     override async ngOnInit() {
         super.ngOnInit();
         this.route.params.subscribe((params) => {
-
-            let seccio = SECCIONS.find(s => s.nom == params["case-study"]); 
+            let pagina = this.route.snapshot.data["pagina"];
+            let nom = params["case-study"];
+            let seccio = SECCIONS.find(s => s.pagina == pagina && s.nom == nom);
+            
             if (!seccio) {
                 this.router.navigateByUrl(this.router.url.split("/")[1]);
                 return;
