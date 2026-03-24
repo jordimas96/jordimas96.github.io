@@ -1,6 +1,5 @@
 :host {
     font-family: Roboto;
-    color-scheme: dark; // De moment la mantindrem en mode fosc //
     overflow-wrap: break-word;
 
     .card {
@@ -15,7 +14,7 @@
         border-radius: 20px;
         text-align: center;
 
-        transition: padding 0.5s;
+        transition: padding 0.5s, margin 0.5s, border-radius 0.5s;
 
         .titol {
             font-size: 2.5rem;
@@ -45,6 +44,13 @@
     }
 }
 
+@media only screen and (max-width: 575.98px) {
+    :host {
+        .card {
+            border-radius: 0;
+        }
+    }
+}
 
 @media only screen and (max-width: 991.98px) {
     :host {

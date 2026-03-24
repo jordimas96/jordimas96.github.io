@@ -1,11 +1,15 @@
+@import "src/styles.scss";
+
 :host { display: block; }
 
 figure {
 
     .contenidor {
-        padding: 2rem;
-        background-color: black;
+        padding: 2rem 0.5rem;
+        background-color: light-dark(#eee, #000);
         border-radius: 1.5rem;
+
+        transition: padding 0.5s, border-radius 0.5s;
 
         jmp-about-card {
             display: block;
@@ -16,5 +20,14 @@ figure {
         font-size: 0.9rem;
         font-style: italic;
         color: var(--text-70);
+    }
+}
+
+@media only screen and (max-width: 575.98px) {
+    figure {
+        .contenidor {
+            @include light { overflow: hidden; }
+            padding: 0;
+        }
     }
 }
