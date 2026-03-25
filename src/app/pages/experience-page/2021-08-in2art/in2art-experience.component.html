@@ -116,15 +116,45 @@
     </article>
 
 
-    <button class="veure-info-projecte my-5" routerLink="/projects/in2art" appMostrarAmbAnimacio matRipple>
-        <div class="text h2 mb-0">
-            @if (m.ca) { Veure projecte complet }
-            @if (m.es) { Ver proyecto completo }
-            @if (m.en) { View full project }
-            <i class="fa-solid fa-chevron-right ms-2"></i>
-        </div>
-    </button>
+    <section class="veure-info-projecte card mb-4" appMostrarAmbAnimacio>
+        <button class="rs overlay" routerLink="/projects/in2art" matRipple>
+            <div class="text h2 mb-0">
+                @if (m.ca) { Veure projecte complet }
+                @if (m.es) { Ver proyecto completo }
+                @if (m.en) { View full project }
+                <br>
+                <i class="fa-solid fa-chevron-down"></i>
+            </div>
+        </button>
 
+        <div class="fadeout">
+            <div class="placeholder">
+                <div class="text">
+                    @if (m.ca) {
+                        <h4>Estructura i funcionalitats de la xarxa social</h4>
+                        <ul>
+                            <li>Feed amb scroll infinit i autoreproducció, publicacions multimèdia (imatges, vídeos, àudios i interactius), amb totes les dades, sistema de valoració (sobre criteris segons tipus d'obra) i de comentaris i respostes.</li>
+                            <li>Perfil, amb biografia, llistes de seguidors/subscriptors i llistat de publicacions pròpies.</li>
+                        </ul>
+                    }
+                    @if (m.es) {
+                        <h4>Estructura y funcionalidades de la red social</h4>
+                        <ul>
+                            <li>Feed con scroll infinito y autoreproducción, publicaciones multimedia (imágenes, vídeos, audios e interactivos), con todos los datos, sistema de valoración (sobre criterios según tipo de obra) y de comentarios y respuestas.</li>
+                            <li>Perfil, con biografía, listas de seguidores/suscriptores y listado de publicaciones propias.</li>
+                        </ul>
+                    }
+                    @if (m.en) {
+                        <h4>Structure and functionalities of the social network</h4>
+                        <ul>
+                            <li>Feed with infinite scroll and autoplay, multimedia posts (images, videos, audios and interactives), with all data, rating system (on criteria according to type of work) and comments and replies.</li>
+                            <li>Profile, with biography, followers/subscribers lists and own posts list.</li>
+                        </ul>
+                    }
+                </div>
+            </div>
+        </div>
+    </section>
 
 
 
