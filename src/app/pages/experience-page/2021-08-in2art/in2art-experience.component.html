@@ -116,12 +116,17 @@
     </article>
 
 
-    <button routerLink="/projects/in2art" class="boto mt-5 mb-5 mx-auto d-flex" appMostrarAmbAnimacio matRipple>
-        @if (m.ca) { Veure informació completa del projecte }
-        @if (m.es) { Ver información completa del proyecto }
-        @if (m.en) { View full project information }
-        <i class="fa-solid fa-arrow-right"></i>
+    <button class="veure-info-projecte my-5" routerLink="/projects/in2art" appMostrarAmbAnimacio matRipple>
+        <div class="text h2 mb-0">
+            @if (m.ca) { Veure projecte complet }
+            @if (m.es) { Ver proyecto completo }
+            @if (m.en) { View full project }
+            <i class="fa-solid fa-chevron-right ms-2"></i>
+        </div>
     </button>
+
+
+
 
 
     <!-- Skills -->

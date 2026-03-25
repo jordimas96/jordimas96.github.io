@@ -30,6 +30,35 @@ a.link-boto-titol:hover {
     }
 }
 
+.veure-info-projecte {
+    // Estils card //
+    background-color: light-dark(rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0.15));
+    border-radius: 1.5rem;
+    border: 1px solid light-dark(rgba(255, 255, 255, 0.66), rgba(255, 255, 255, 0.27));
+
+    width: 100%;
+
+    padding: 3rem 1rem;
+
+    transition: padding 0.2s, border 0.2s, background-color 0.2s;
+
+    .text {
+        color: light-dark(var(--color-7), var(--color-9));
+        transition: transform 0.2s;
+    }
+
+    &:hover {
+        padding: 3.5rem 1rem;
+        border: 2px solid light-dark(white, rgba(255, 255, 255, 0.5));
+        background-color: light-dark(rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.25));
+
+        .text {
+            transform: scale(1.15);
+        }
+    }
+}
+
+
 h4 {
     color: var(--text-90);
 }
