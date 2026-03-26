@@ -12,8 +12,8 @@ import { AboutCardComponent } from './about-card/about-card.component';
 })
 export class AboutIn2artComponent {
 
-    public linkPC = "https://youtu.be/8K6HP2YXtyk?si=hCTqazUXXsSSBI_U&t=583";
-    public linkMobil = "https://youtu.be/_VEn4PUaOVk?si=lPGMBrtPTtMKfywc&t=418";
+    public linkPC = "https://youtu.be/d8kB5c2RFes?si=hCTqazUXXsSSBI_U&t=607";
+    public linkMobil = "https://youtu.be/nY2EHO3zcnw?si=lPGMBrtPTtMKfywc&t=449";
 
     constructor(public m: MainService) { }
 }

@@ -28,4 +28,8 @@ export class In2artExperienceComponent {
         ][this.m.idiomaIndex];
     }
 
+    get urlImatgeUI() {
+        return `/assets/_experience/in2art/in2art-${this.m.esPantallaPc ? "desktop" : "mobile"}.png`;
+    }
+
 }
