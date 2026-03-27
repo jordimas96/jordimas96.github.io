@@ -50,6 +50,11 @@ IN2ART is a social network for artists, collectors, and art enthusiasts. The pla
 
 * Terms of Service and About pages.
 
+### Demo
+
+* [Demonstration video of the main features](https://jordimas96.github.io/in2art/demo-video)
+
+
 ---
 
 _**Author:** Jordi Mas Parramon — Lead frontend developer of the IN2ART social network. Responsible for frontend, design, and part of the backend._

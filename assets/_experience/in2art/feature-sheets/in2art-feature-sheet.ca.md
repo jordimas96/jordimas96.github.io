@@ -50,6 +50,11 @@ IN2ART és una xarxa social per a artistes, col·leccionistes i aficionats a l'a
 
 * Pàgines de Termes de Servei i About.
 
+### Demo
+
+* [Vídeo de demostració de les funcionalitats principals](https://jordimas96.github.io/in2art/demo-video)
+
+
 ---
 
 _**Autor:** Jordi Mas Parramon — Principal desenvolupador del frontend de la xarxa social IN2ART. Responsable del frontend, disseny i part del backend._
