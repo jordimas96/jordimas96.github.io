@@ -52,7 +52,7 @@ IN2ART es una red social para artistas, coleccionistas y aficionados al arte. La
 
 ### Demo
 
-* [Vídeo de demostración de las funcionalidades principales](https://jordimas96.github.io/in2art/demo-video)
+* [Ver demo (YouTube)](https://jordimas96.github.io/in2art/demo-video)
 
 
 ---

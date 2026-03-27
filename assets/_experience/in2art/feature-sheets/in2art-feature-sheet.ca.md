@@ -52,7 +52,7 @@ IN2ART és una xarxa social per a artistes, col·leccionistes i aficionats a l'a
 
 ### Demo
 
-* [Vídeo de demostració de les funcionalitats principals](https://jordimas96.github.io/in2art/demo-video)
+* [Veure demo (YouTube)](https://jordimas96.github.io/in2art/demo-video)
 
 
 ---

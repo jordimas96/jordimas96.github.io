@@ -52,7 +52,7 @@ IN2ART is a social network for artists, collectors, and art enthusiasts. The pla
 
 ### Demo
 
-* [Demonstration video of the main features](https://jordimas96.github.io/in2art/demo-video)
+* [View demo (YouTube)](https://jordimas96.github.io/in2art/demo-video)
 
 
 ---
