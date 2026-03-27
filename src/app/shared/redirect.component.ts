@@ -8,13 +8,15 @@ import { Utils } from './utils';
 export class RedirectComponent {
 
     constructor(private router: Router) {
+
         const url = this.router.url.replace(/^\//, '');
 
-        // Temporal, Búnquer Descarregador //
-        if (url == "bunquer-descarregador")
-            location.href = "https://bunquer-descarregador.github.io/";
-
         let urlNova = this.canviarUrl(url);
+
+        if (urlNova.startsWith("http://") || urlNova.startsWith("https://")) {
+            location.href = urlNova;
+            return;
+        }
         
         urlNova = urlNova!.replace(/^\//, '');
 
@@ -22,10 +24,18 @@ export class RedirectComponent {
     }
 
     canviarUrl(url: string): string {
+        if (url == "bunquer-descarregador")
+            return "https://bunquer-descarregador.github.io/";
+
 
         // IN2ART //
         if (url == "in2art") return "/projects/in2art";
         if (url == "in2art-experience" || url == "in2art-exp") return "/experience/in2art";
+        if (url == "in2art/demo-video") {
+            return document.documentElement.clientWidth > document.documentElement.clientHeight ?
+                "https://www.youtube.com/watch?v=d8kB5c2RFes" :
+                "https://www.youtube.com/watch?v=nY2EHO3zcnw";
+        }
 
         
         // CV //
