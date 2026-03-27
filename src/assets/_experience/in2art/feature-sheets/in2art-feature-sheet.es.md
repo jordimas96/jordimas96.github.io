@@ -50,6 +50,11 @@ IN2ART es una red social para artistas, coleccionistas y aficionados al arte. La
 
 * Páginas de Términos de Servicio y About.
 
+### Demo
+
+* [Ver demo (YouTube)](https://jordimas96.github.io/in2art/demo-video)
+
+
 ---
 
 _**Autor:** Jordi Mas Parramon — Principal desarrollador del frontend de la red social IN2ART. Responsable del frontend, diseño y parte del backend._
