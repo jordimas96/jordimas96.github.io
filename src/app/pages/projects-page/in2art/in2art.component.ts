@@ -3,8 +3,9 @@ import { SkillComponent } from 'src/app/components/skill/skill.component';
 import { Skills } from 'src/app/enums/skills.enum';
 import { MainService } from 'src/app/services/main.service';
 import { SharedImports } from 'src/app/shared/imports';
-import { DemosIn2artComponent } from './demos-in2art/demos-in2art.component';
-import { AboutIn2artComponent } from './about-in2art/about-in2art.component';
+import { AboutComponent } from './about/about.component';
+import { DemosComponent } from './demos/demos.component';
+import { FuncionalitatsComponent } from './funcionalitats/funcionalitats.component';
 
 @Component({
     selector: 'jmp-in2art',
@@ -13,8 +14,9 @@ import { AboutIn2artComponent } from './about-in2art/about-in2art.component';
     imports: [
         ...SharedImports,
         SkillComponent,
-        DemosIn2artComponent,
-        AboutIn2artComponent,
+        DemosComponent,
+        FuncionalitatsComponent,
+        AboutComponent,
     ]
 })
 export class In2artComponent {
@@ -28,10 +30,6 @@ export class In2artComponent {
             "https://in2.art/Social/es-es/",
             "https://in2.art/Social/en-uk/",
         ][this.m.idiomaIndex];
-    }
-
-    public get linkReadme() {
-        return `https://github.com/jordimas96/jordimas96.github.io/blob/main/src/assets/_experience/in2art/feature-sheets/in2art-feature-sheet.${this.m.idioma}.md`;
     }
 
 }

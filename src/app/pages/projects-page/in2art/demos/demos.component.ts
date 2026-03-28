@@ -5,14 +5,14 @@ import { SharedImports } from 'src/app/shared/imports';
 import { IframeTemplateComponent } from './iframe-template/iframe-template.component';
 
 @Component({
-    selector: 'jmp-demos-in2art',
-    templateUrl: './demos-in2art.component.html',
-    styleUrl: './demos-in2art.component.scss',
+    selector: 'jmp-demos',
+    templateUrl: './demos.component.html',
+    styleUrl: './demos.component.scss',
     imports: [
         ...SharedImports
     ]
 })
-export class DemosIn2artComponent {
+export class DemosComponent {
 
     constructor(
         public m: MainService,

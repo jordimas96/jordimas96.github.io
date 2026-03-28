@@ -1,0 +1,44 @@
+<section class="funcionalitats card" appMostrarAmbAnimacio>
+    <h4>
+        @if (m.ca) { Estructura i funcionalitats de la xarxa social }
+        @if (m.es) { Estructura y funcionalidades de la red social }
+        @if (m.en) { Structure and functionalities of the social network }
+    </h4>
+    <ul>
+        @if (m.ca) {
+            <li>Feed amb scroll infinit i autoreproducció, publicacions multimèdia (imatges, vídeos, àudios i interactius), amb totes les dades, sistema de valoració (sobre criteris segons tipus d'obra) i de comentaris i respostes.</li>
+            <li>Perfil, amb biografia, llistes de seguidors/subscriptors i llistat de publicacions pròpies.</li>
+            <li>Formulari dinàmic per pujar arxius d'obres amb metadades completes (tècniques, moviments, dates, etiquetes, etc.).</li>
+            <li>Buscador global amb mode d'exploració.</li>
+            <li>Suport per a diversos idiomes.</li>
+            <li>Notificacions.</li>
+            <li>Ajustos.</li>
+        }
+        @if (m.es) {
+            <li>Feed con scroll infinito y autoreproducción, publicaciones multimedia (imágenes, vídeos, audios e interactivos), con todos los datos, sistema de valoración (sobre criterios según tipo de obra) y de comentarios y respuestas.</li>
+            <li>Perfil, con biografía, listas de seguidores/suscriptores y listado de publicaciones propias.</li>
+            <li>Formulario dinámico para subir archivos de obras con metadatos completos (técnicas, movimientos, fechas, etiquetas, etc.).</li>
+            <li>Buscador global con modo de exploración.</li>
+            <li>Soporte para varios idiomas.</li>
+            <li>Notificaciones.</li>
+            <li>Ajustes.</li>
+        }
+        @if (m.en) {
+            <li>Feed with infinite scroll and autoplay, multimedia posts (images, videos, audios and interactives), with all data, rating system (on criteria according to type of work) and comments and replies.</li>
+            <li>Profile, with biography, followers/subscribers lists and own posts list.</li>
+            <li>Dynamic form to upload work files with complete metadata (techniques, movements, dates, tags, etc.).</li>
+            <li>Global search engine with exploration mode.</li>
+            <li>Support for multiple languages.</li>
+            <li>Notifications.</li>
+            <li>Settings.</li>
+        }
+    </ul>
+    <div class="text-center mb-3">
+        <jmp-link [href]="linkReadme">
+            <i class="fa-regular fa-file-lines me-1"></i>
+            @if (m.ca) { Fitxa completa de funcionalitats }
+            @if (m.es) { Ficha completa de funcionalidades }
+            @if (m.en) { Complete feature sheet }
+        </jmp-link>
+    </div>
+</section>

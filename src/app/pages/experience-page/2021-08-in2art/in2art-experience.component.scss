@@ -71,6 +71,7 @@ a.link-boto-titol:hover {
 
             .text {
                 filter: blur(4px);
+                user-select: none;
                 transition: filter 0.2s;
             }
         }
