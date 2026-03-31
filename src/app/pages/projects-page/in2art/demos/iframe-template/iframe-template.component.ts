@@ -31,9 +31,9 @@ export class IframeTemplateComponent implements OnInit, AfterViewInit {
     recalcularDireccioFlex() {
         let ratio;
 
-        if (this.data.id == 1) ratio = 2560 / 1440;
-        if (this.data.id == 2) ratio = 1080 / 2050;
-        if (this.data.id == 3) ratio = 1920 / 1080;
+        if (this.data.id == "desktop")      ratio = 2560 / 1440;
+        if (this.data.id == "mobile")       ratio = 1080 / 2050;
+        if (this.data.id == "responsive")   ratio = 1920 / 1080;
 
         let alturaEspaiIBoto = 16 * 2 + 80;
 

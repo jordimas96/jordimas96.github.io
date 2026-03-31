@@ -347,6 +347,7 @@
     @extend .paleta-bn;
     --fons-card: light-dark(hsla(0, 0%, 100%, 0.5), hsla(0, 0%, 0%, 0.5)) !important;
     --accent-color: light-dark(black, white);
+    --link: light-dark(hsl(0, 0%, 30%), white);
 }
 
 .tema-matic {

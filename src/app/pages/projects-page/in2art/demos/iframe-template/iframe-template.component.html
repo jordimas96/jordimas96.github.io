@@ -1,6 +1,6 @@
 <mat-dialog-content #contenidor (click)="dialogRef.close()">
     @switch (data.id) {
-        @case (1) {
+        @case ("desktop") {
             <iframe
                 #iframe
                 class="desktop" [class]="direccioALimitar"
@@ -9,7 +9,7 @@
                 referrerpolicy="strict-origin-when-cross-origin" allowfullscreen
                 ></iframe>
         }
-        @case (2) {
+        @case ("mobile") {
             <iframe
                 #iframe
                 class="mobile" [class]="direccioALimitar"
@@ -18,7 +18,7 @@
                 referrerpolicy="strict-origin-when-cross-origin" allowfullscreen
                 ></iframe>
         }
-        @case (3) {
+        @case ("responsive") {
             <iframe
                 #iframe
                 class="responsive" [class]="direccioALimitar"

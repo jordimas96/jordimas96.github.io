@@ -3,22 +3,74 @@
 :host { display: block; }
 
 .galeria {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 2rem;
+    
 
-        
-    .card {
+    .item-visible {
+        display: flex;
+        justify-content: center;
+
+        .item {
+            font-size: 1.3rem;
+
+            .thumbnail {
+                height: 20rem;
+            }
+            &.mobile {
+
+                .thumbnail {
+                    height: initial !important;
+                    
+                    img {
+                        width: 70vw;
+                        height: initial;
+                    }
+                }
+            }
+        }
+    }
+    .items-ocults {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 2rem;
+
+        .item .thumbnail {
+            height: 10rem;
+        }
+    }
+
+}
+
+.item {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    border-radius: 1rem;
+
+    font-size: 1rem;
+    cursor: pointer;
+
+    transition: border-radius 0.3s;
+    
+    .thumbnail {
         position: relative;
 
-        height: 200px;
+        height: 12.5rem;
         border-radius: 1rem;
 
         overflow: hidden;
+        
+        transition: border-radius 0.3s;
 
-        cursor: pointer;
 
+        img {
+            height: 100%;
+
+            filter: brightness(0.4);
+            // @include light { filter: brightness(0.6); }
+            
+            transition: scale 0.3s, filter 0.3s;
+        }
         .icona {
             position: absolute;
             inset: 0;
@@ -32,32 +84,39 @@
             
             transition: scale 0.3s, opacity 0.3s;
         }
-        img {
-            height: 100%;
-
-            filter: brightness(0.4);
-            // @include light { filter: brightness(0.6); }
-            
-            transition: scale 0.3s, filter 0.3s;
-        }
-
-        &:hover {
-            .icona {
-                scale: 1.6;
-                opacity: 0.7;
-            }
-            img {
-                scale: 1.6;
-                filter: brightness(1) blur(20px) saturate(4);
-            }
-        }
     }
 
     .text {
         text-align: center;
-        font-size: 1.3rem;
+        font-size: 1.3em;
+        transition: scale 0.3s;
+    }
+
+    &:hover {
+        border-radius: 2rem 2rem 1rem 1rem;
+
+        .thumbnail {
+            border-radius: 2rem;
+
+            img {
+                scale: 1.6;
+                filter: brightness(1) blur(20px) saturate(4);
+            }
+            .icona {
+                scale: 1.6;
+                opacity: 0.7;
+            }
+        }
+        .text {
+            scale: 1.25;
+        }
     }
 }
+
+.boto-veure-altres-demos {
+    gap: 0.75rem;
+}
+
 jmp-link {
     display: inline-block;
     font-size: 1.1rem;

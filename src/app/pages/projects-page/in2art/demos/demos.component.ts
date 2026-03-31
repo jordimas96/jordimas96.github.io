@@ -14,6 +14,8 @@ import { IframeTemplateComponent } from './iframe-template/iframe-template.compo
 })
 export class DemosComponent {
 
+    public veureMes = false;
+
     constructor(
         public m: MainService,
         private dialog: MatDialog
@@ -25,8 +27,26 @@ export class DemosComponent {
         // navigator.mediaSession.setActionHandler('pause', function() { });
     }
 
+    get textTitol() {
+        const textEscriptori = ["Demo per a escriptori", "Demo para escritorio", "Desktop demo"][this.m.idiomaIndex];
+        const textMobil = ["Demo per a mòbil", "Demo para móvil", "Mobile demo"][this.m.idiomaIndex];
+        const textGaleria = ["Galeria de demos", "Galería de demos", "Gallery of demos"][this.m.idiomaIndex];
 
-    obrirModal(id) {
+        if (!this.veureMes)
+            return this.relacioAspecteHoritzontal ? textEscriptori : textMobil;
+        return textGaleria;
+    }
+    get textVeureAltresDemos() {
+        return [
+            `Altres demos (${this.relacioAspecteHoritzontal ? "mòbil" : "escriptori"})`,
+            `Otras demos (${this.relacioAspecteHoritzontal ? "móvil" : "escritorio"})`,
+            `Other demos (${this.relacioAspecteHoritzontal ? "mobile" : "desktop"})`,
+        ][this.m.idiomaIndex];
+    }
+
+    get relacioAspecteHoritzontal() { return window.innerWidth > window.innerHeight };
+
+    obrirModal(id: "desktop" | "mobile" | "responsive") {
 
         this.dialog.open(
             IframeTemplateComponent,

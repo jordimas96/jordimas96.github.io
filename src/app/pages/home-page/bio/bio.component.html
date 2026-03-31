@@ -30,7 +30,7 @@
             <!-- Recipient bio pc -->
             @if (m.esPantallaPc) {
                 <div class="text-center text-80 mt-4">
-                    <div *ngTemplateOutlet="contBio"></div>
+                    <ng-container *ngTemplateOutlet="contBio" />
                 </div>
             }
 
@@ -38,7 +38,7 @@
         <!-- Recipient bio mobil -->
         @if (m.esPantallaMobil) {
             <div class="text-center text-80 mt-4">
-                <div *ngTemplateOutlet="contBio"></div>
+                <ng-container *ngTemplateOutlet="contBio" />
             </div>
         }
     </div>

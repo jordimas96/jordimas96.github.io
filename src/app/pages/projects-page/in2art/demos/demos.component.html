@@ -1,54 +1,32 @@
 <section class="demos">
 
-    <h3 class="mb-4 text-center">
-        @if (m.ca) { Galeria de demos }
-        @if (m.es) { Galería de demos }
-        @if (m.en) { Gallery of demos }
-    </h3>
+    <h3 class="mb-4 text-center">{{ textTitol }}</h3>
 
     <div class="galeria">
-        <div class="desktop">
-            <div class="card" (click)="obrirModal(1)" matRipple appMostrarAmbAnimacio>
-                <img src="assets/_experience/in2art/demo/pc-thumb.png" class="fons" alt="PC thumbnail">
-                <div class="icona">
-                    <i class="fa-solid fa-play"></i>
-                </div>
-            </div>
-            <div class="text mt-2" appMostrarAmbAnimacio>
-                @if (m.ca) { Escriptori }
-                @if (m.es) { Escritorio }
-                @if (m.en) { Desktop }
-            </div>
+        <div class="item-visible" appMostrarAmbAnimacio>
+            <ng-container *ngTemplateOutlet="relacioAspecteHoritzontal ? desktop : mobile" />
         </div>
 
-        <div class="mobile">
-            <div class="card" (click)="obrirModal(2)" matRipple appMostrarAmbAnimacio>
-                <img src="assets/_experience/in2art/demo/mobile-thumb.png" alt="Mobile thumbnail">
-                <div class="icona">
-                    <i class="fa-solid fa-play"></i>
-                </div>
+        @if (!veureMes) {
+            <div class="text-center mt-4">
+                <button class="boto boto-veure-altres-demos" (click)="veureMes = true" appMostrarAmbAnimacio matRipple>
+                    {{ textVeureAltresDemos }}
+                    <!-- <i class="fa-solid fa-chevron-down"></i> -->
+                    @if (relacioAspecteHoritzontal) {
+                        <i class="fa-solid fa-mobile-screen"></i>
+                    } @else {
+                        <i class="fa-solid fa-display"></i>
+                    }
+                </button>
             </div>
-            <div class="text mt-2" appMostrarAmbAnimacio>
-                @if (m.ca) { Mòbil }
-                @if (m.es) { Móvil }
-                @if (m.en) { Mobile }
-            </div>
-        </div>
+        } @else {
+            <div class="items-ocults mt-5" appMostrarAmbAnimacio>
+                <ng-container *ngTemplateOutlet="relacioAspecteHoritzontal ? mobile : desktop" />
 
-        <div class="responsive">
-            <div class="card" (click)="obrirModal(3)" matRipple appMostrarAmbAnimacio>
-                <img src="assets/_experience/in2art/demo/responsive-thumb.png" alt="responsive thumbnail">
-                <div class="icona">
-                    <i class="fa-solid fa-play"></i>
-                </div>
+                <ng-container *ngTemplateOutlet="responsive" />
             </div>
-            <div class="text mt-2" appMostrarAmbAnimacio>
-                @if (m.ca) { Responsiu }
-                @if (m.es) { Responsivo }
-                @if (m.en) { Responsive }
-            </div>
-        </div>
-
+        }
+        
     </div>
 
     <jmp-link [href]="m.env.assets + '/demos/in2art/'" class="mt-4" appMostrarAmbAnimacio>
@@ -59,3 +37,54 @@
     </jmp-link>
 
 </section>
+
+
+<ng-template #desktop>
+    <div class="item desktop" (click)="obrirModal('desktop')" matRipple appMostrarAmbAnimacio>
+        <div class="thumbnail">
+            <img src="assets/_experience/in2art/demo/desktop-thumb.png" class="fons" alt="desktop thumbnail">
+            <div class="icona">
+                <i class="fa-solid fa-play"></i>
+            </div>
+        </div>
+        <div class="text">
+            @if (m.ca) { Escriptori }
+            @if (m.es) { Escritorio }
+            @if (m.en) { Desktop }
+        </div>
+    </div>
+</ng-template>
+
+
+<ng-template #mobile>
+    <div class="item mobile" (click)="obrirModal('mobile')" matRipple appMostrarAmbAnimacio>
+        <div class="thumbnail">
+            <img src="assets/_experience/in2art/demo/mobile-thumb.png" alt="mobile thumbnail">
+            <div class="icona">
+                <i class="fa-solid fa-play"></i>
+            </div>
+        </div>
+        <div class="text">
+            @if (m.ca) { Mòbil }
+            @if (m.es) { Móvil }
+            @if (m.en) { Mobile }
+        </div>
+    </div>
+</ng-template>
+
+
+<ng-template #responsive>
+    <div class="item responsive" (click)="obrirModal('responsive')" matRipple appMostrarAmbAnimacio>
+        <div class="thumbnail">
+            <img src="assets/_experience/in2art/demo/responsive-thumb.png" alt="responsive thumbnail">
+            <div class="icona">
+                <i class="fa-solid fa-play"></i>
+            </div>
+        </div>
+        <div class="text">
+            @if (m.ca) { Responsiu }
+            @if (m.es) { Responsivo }
+            @if (m.en) { Responsive }
+        </div>
+    </div>
+</ng-template>
