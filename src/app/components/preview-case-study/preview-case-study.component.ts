@@ -35,4 +35,8 @@ export class PreviewCaseStudyComponent {
     get seeMore() {
         return ["Veure més", "Ver más", "See more"][this.m.idiomaIndex];
     }
+
+    getCostatGran(card: HTMLDivElement) {
+        return Math.max(card.offsetWidth - 120, card.offsetHeight - 30);
+    }
 }
