@@ -273,6 +273,8 @@
 .tema-icons {
     @extend .paleta-60;
 
+    --link: light-dark(hsl(60, 100%, 16%), hsl(60, 100%, 50%));
+
     --fons-card: linear-gradient(45deg,
         hsla(87, 100%, 25%, 0.5),
         hsla(160, 100%, 25%, 0.5),

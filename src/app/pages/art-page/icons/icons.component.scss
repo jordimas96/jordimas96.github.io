@@ -13,6 +13,10 @@
         &.round {
             border-radius: 50%;
         }
+        &.proporcions-apple {
+            border-radius: calc(100% * 57 / 256);
+        }
+
     }
     img {
         border-radius: 6.25%;
@@ -26,7 +30,7 @@
             z-index: 2;
         }
     }
-    div {
+    .logos-4x4 {
         display: flex;
         flex-wrap: wrap;
         align-content: space-between;
