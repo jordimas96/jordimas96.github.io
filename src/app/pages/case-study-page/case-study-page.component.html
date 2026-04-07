@@ -20,7 +20,7 @@
 
         <div class="mw-1400 m-auto row justify-content-center g-3 mb-6">
             @for (seccio of altresSeccions; track seccio.nom) {
-                <jmp-preview-case-study [pagina]="seccio.pagina" [nom]="seccio.nom" class="col-12 col-md-6 col-xl-4" />
+                <jmp-preview-case-study [pagina]="seccio.pagina" [id]="seccio.nom" class="col-12 col-md-6 col-xl-4" />
             }
         </div>
 

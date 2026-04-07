@@ -17,7 +17,7 @@ import { SECCIONS } from 'src/app/shared/seccions';
 })
 export class PreviewCaseStudyComponent {
 
-    @Input() nom: string;
+    @Input() id: string;
     @Input() pagina: string;
 
     constructor(public m: MainService) { }
@@ -25,7 +25,7 @@ export class PreviewCaseStudyComponent {
     ngOnInit() {
         // Si no tenim pàgina, l'intentem deduir //
         if (!this.pagina) {
-            let seccioProbable = SECCIONS.find(s => s.nom == this.nom);
+            let seccioProbable = SECCIONS.find(s => s.nom == this.id);
             if (seccioProbable)
                 this.pagina = seccioProbable.pagina;
         }

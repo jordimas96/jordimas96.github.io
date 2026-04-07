@@ -7,7 +7,7 @@ import { MainService } from "./main.service";
 })
 export class ExperienceCalculatorService {
 
-    private experiencia = [
+    public readonly experiencia = [
         { // DSET (Pràctiques) //
             nom: "DSET",
             dates: ["01-02-2016", "14-07-2016"],

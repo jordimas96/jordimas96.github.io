@@ -4,6 +4,7 @@ import { SharedImports } from 'src/app/shared/imports';
 import { PageComponent } from '../page.component';
 import { BioComponent } from './bio/bio.component';
 import { ExperienciesHomeComponent } from './experiencies-home/experiencies-home.component';
+import { FeinaActualComponent } from './feina-actual/feina-actual.component';
 import { LlenguatgesProgramacioComponent } from './llenguatges-programacio-home/llenguatges-programacio-home.component';
 import { ProjectesHomeComponent } from './projectes-home/projectes-home.component';
 import { StatsComponent } from './stats/stats.component';
@@ -15,9 +16,10 @@ import { StatsComponent } from './stats/stats.component';
     imports: [
         ...SharedImports,
         BioComponent,
-        StatsComponent,
+        FeinaActualComponent,
         ProjectesHomeComponent,
         ExperienciesHomeComponent,
+        StatsComponent,
         LlenguatgesProgramacioComponent,
         BotonsNavegacioPaginaComponent,
     ]
