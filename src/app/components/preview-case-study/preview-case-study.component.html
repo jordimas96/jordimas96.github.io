@@ -7,7 +7,14 @@
         <div #card class="item tema-dintel card-themed bg-colored"
             [style.--extensio-ombra.px]="getCostatGran(card)"
             appMostrarAmbAnimacio matRipple>
-            <div class="titol">Indra</div>
+            <div class="titol">
+                Indra
+                <span class="subtitol">
+                    @if (m.ca) { - Desenvolupador Frontend }
+                    @if (m.es) { - Desarrollador Frontend }
+                    @if (m.en) { - Frontend Developer }
+                </span>
+            </div>
             <div class="text">
                 @if (m.ca) {
                     Backoffice i llibreria per gestionar ciutadans a l'estranger durant crisis.<br>
