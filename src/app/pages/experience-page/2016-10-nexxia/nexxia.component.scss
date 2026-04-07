@@ -57,12 +57,13 @@ h4 {
         padding: 1rem 2rem;
         background-color: light-dark(hsla(46, 100%, 72%, 0.5), hsla(46, 100%, 21%, 0.6));
         color: var(--text);
-        transition: padding 0.3s, font-size 0.3s;
+        transform-origin: 2rem 1rem;
+        transition: padding 0.3s, scale 0.3s;
     }
 
     &:hover {
         .text {
-            font-size: 1.15em;
+            scale: 1.15;
         }
     }
 }
