@@ -1,4 +1,199 @@
 
+<!-- Apps Matic -->
+ 
+<h4 class="mb-3">
+    @if (m.ca) { Apps desenvolupades a Matic }
+    @if (m.es) { Apps desarrolladas en Matic }
+    @if (m.en) { Apps developed at Matic }
+</h4>
+
+<div class="apps-matic mb-5">
+    <section class="seccio systemblock">
+        <button class="boto-desplegable" (click)="toggleSeccio($event.currentTarget)" matRipple>
+            <div class="d-flex align-items-center gap-3">
+                <img src="assets/_projects/android/icons/apps/systemblock.png" class="icona">
+                <div class="d-flex flex-column text-start">
+                    <span class="titol">System Block</span>
+                    <span class="subtitol">
+                        @if (m.ca) { Permet als tècnics crear albarans i sincronitzar dades amb el CRM }
+                        @if (m.es) { Permite a los técnicos crear albaranes y sincronizar datos con el CRM }
+                        @if (m.en) { Allows technicians to create delivery notes and synchronize data with the CRM }
+                    </span>
+
+                </div>
+            </div>
+            <i class="fa-solid fa-chevron-down fletxa"></i>
+        </button>
+        <div class="contingut flex-column flex-sm-row" style="display:none;">
+            <div class="info flex-8">
+                <div class="text mb-2">
+                    @if (m.ca) {
+                        Aplicació mòbil que vaig fer quan traballava a Matic, per a l'empresa System Block, una empresa de molls de càrrega. Permet als tècnics gesionar les visites tècniques al client. Durant la visita, poden introduir-hi la informació de la intervenció, peces utilitzades i necessàries per fer la feina.<br><br>
+
+                        Permet crear albarans, firmar-los i enviar-los per email, amb les fotos fetes durant la visita. Té agenda i llista d'ordres de treball per tècnic.<br>
+                        L'app se sincronitza amb la base de dades central del CRM i amb la web.<br>
+                        Interfície adaptativa per a mòbils i tablets.<br><br>
+
+                        Aquesta app la vaig fer amb Javascript, jQuery, CSS i Cordova, i està compilada per a Android.<br><br>
+
+                        És una web interna que només utilitzen els tècnics de l'empresa, no està publicada a cap botiga d'aplicacions.
+                    }
+                    @if (m.es) {
+                        Aplicación móvil que hice cuando trabajaba en Matic, para la empresa System Block, una empresa de muelles de carga. Permite a los técnicos gestionar las visitas técnicas al cliente. Durante la visita, pueden introducir la información de la intervención, piezas utilizadas y necesarias para hacer el trabajo.<br><br>
+
+                        Permite crear albaranes, firmarlos y enviarlos por email, con las fotos hechas durante la visita. Tiene agenda y lista de órdenes de trabajo por técnico.<br>
+                        La app se sincroniza con la base de datos central del CRM y con la web.<br>
+                        Interfaz adaptativa para móviles y tablets.<br><br>
+
+                        Esta app la hice con Javascript, jQuery, CSS y Cordova, y está compilada para Android.<br><br>
+
+                        Es una web interna que sólo utilizan los técnicos de la empresa, no está publicada en ninguna tienda de aplicaciones.
+                    }
+                    @if (m.en) {
+                        Mobile application that I made when I worked at Matic, for the company System Block, a loading dock company. It allows technicians to manage technical visits to the client. During the visit, they can enter the information of the intervention, parts used and necessary to do the job.<br><br>
+
+                        It allows you to create delivery notes, sign them and send them by email, with the photos taken during the visit. It has an agenda and a list of work orders by technician.<br>
+                        The app synchronizes with the central CRM database and with the web.<br>
+                        Adaptive interface for mobiles and tablets.<br><br>
+
+                        I made this app with Javascript, jQuery, CSS and Cordova, and it is compiled for Android.<br><br>
+
+                        It is an internal web that is only used by the company's technicians, it is not published in any app store.
+                    }
+                    <br>
+
+                    <button routerLink="/matic" class="boto tema-matic mt-4 mx-auto d-flex" appMostrarAmbAnimacio matRipple>
+                        @if (m.ca) { Veure més }
+                        @if (m.es) { Ver más }
+                        @if (m.en) { See more }
+                        <i class="fa-solid fa-arrow-right"></i>
+                    </button>
+                </div>
+
+                <div class="skills">
+                    <jmp-skill [skill]="Skills.JAVASCRIPT" />
+                    <jmp-skill [skill]="Skills.JQUERY" />
+                    <jmp-skill [skill]="Skills.CSS" />
+                    <jmp-skill [skill]="Skills.HTML5" />
+                    <jmp-skill [skill]="Skills.BOOTSTRAP" />
+                    <jmp-skill [skill]="Skills.CORDOVA" />
+                    <jmp-skill [skill]="Skills.MVC" />
+                    <jmp-skill [skill]="Skills.RESPONSIVEDESIGN" />
+                    <jmp-skill [skill]="Skills.AGILE" />
+                </div>
+            </div>
+            <div class="imatge flex-4 mw-75 mw-sm-100 mx-auto">
+                <img src="assets/_experience/matic/systemblock/systemblock-captura-mobil.jpg" alt="System Block App" class="w-100">
+            </div>
+        </div>
+    </section>
+
+
+
+    <section class="seccio appcess">
+        <button class="boto-desplegable" (click)="toggleSeccio($event.currentTarget)" matRipple>
+            <div class="d-flex align-items-center gap-3">
+                <img src="assets/_projects/android/icons/apps/appcess.png" class="icona">
+                <div class="d-flex flex-column text-start">
+                    <span class="titol">Appcess Test</span>
+                    <span class="subtitol">
+                        @if (m.ca) { Genera QRs d'accés després de tests de COVID, UI intuitiva i funcionament offline }
+                        @if (m.es) { Genera QRs de acceso después de tests de COVID, UI intuitiva y funcionamiento offline }
+                        @if (m.en) { Generates access QRs after COVID tests, intuitive UI and offline functionality }
+                    </span>
+
+                </div>
+            </div>
+            <i class="fa-solid fa-chevron-down fletxa"></i>
+        </button>
+        <div class="contingut flex-column flex-sm-row" style="display:none;">
+            <div class="info flex-8">
+                <div>
+                    <div class="text mb-5">
+                        @if (m.ca) {
+                            Aplicació mòbil que vaig fer quan traballava a Matic. Permet gestionar l'accés a esdeveniments durant la pandèmia. L'aplicació permet als usuaris fer-se un test de COVID en centres autoritzats i, si són negatius, obtenir un QR per a accedir a l'esdeveniment.<br><br>
+
+                            UI intuitiva, navegació amb doble swipe per navegar entre esdeveniments i alhora entre persones per a cada esdeveniment. Autenticació biomètrica i funcionament offline.<br><br>
+
+                            Desenvolupada en només 3 setmanes i reutilitzada per a altres esdeveniments.<br><br>
+
+                            Aquesta app la vaig fer amb Javascript, jQuery, CSS i Cordova, i està compilada per a Android i iPhone.<br><br>
+
+                            Es va pujar a la Play Store, a l'App Store, i a algunes botigues de tercers.
+                        }
+                        @if (m.es) {
+                            Aplicación móvil que hice cuando trabajaba en Matic. Permite gestionar el acceso a eventos durante la pandemia. La aplicación permite a los usuarios hacerse un test de COVID en centros autorizados y, si son negativos, obtener un QR para acceder al evento.<br><br>
+
+                            UI intuitiva, navegación con doble swipe para navegar entre eventos y a la vez entre personas para cada evento. Autenticación biométrica y funcionamiento offline.<br><br>
+
+                            Desarrollada en sólo 3 semanas y reutilizada para otros eventos.<br><br>
+
+                            Esta app la hice con Javascript, jQuery, CSS y Cordova, y está compilada para Android y iPhone.<br><br>
+
+                            Se subió a la Play Store, a la App Store, y a algunas tiendas de terceros.
+                        }
+                        @if (m.en) {
+                            Mobile application that I made when I worked at Matic. It allows to manage access to events during the pandemic. The application allows users to take a COVID test at authorized centers and, if they test negative, obtain a QR code to access the event.<br><br>
+
+                            Intuitive UI, double swipe navigation to navigate between events and at the same time between people for each event. Biometric authentication and offline functionality.<br><br>
+
+                            Developed in just 3 weeks and reused for other events.<br><br>
+
+                            I made this app with Javascript, jQuery, CSS and Cordova, and it is compiled for Android and iPhone.<br><br>
+
+                            It was uploaded to the Play Store, the App Store, and some third-party stores.
+                        }
+                        <br>
+
+                        <button routerLink="/matic" class="boto tema-matic my-4 mx-auto d-flex" appMostrarAmbAnimacio matRipple>
+                            @if (m.ca) { Veure més }
+                            @if (m.es) { Ver más }
+                            @if (m.en) { See more }
+                            <i class="fa-solid fa-arrow-right"></i>
+                        </button>
+                    </div>
+                    <div class="iconesStores shadow-filter-1">
+                        <a [href]="m.env.assets + '/external-pages/matic/play-store/'" [class.samsung-squircle]="m.esSamsung" [class.xiaomi-rounded]="m.esXiaomi" [class.apple-squircle]="m.esIOS" appMostrarAmbAnimacio matRipple>
+                            <img src="assets/_projects/android/icons/stores/play-store.png" alt="Play Store" title="Play Store" class="logo">
+                        </a>
+                        <a [href]="m.env.assets + '//matic/app-store/'" [class.samsung-squircle]="m.esSamsung" [class.xiaomi-rounded]="m.esXiaomi" [class.apple-squircle]="m.esIOS" appMostrarAmbAnimacio matRipple>
+                            <img src="assets/_projects/android/icons/stores/apple.jpg" alt="App Store" title="App Store" class="logo">
+                        </a>
+                        <a href="https://apkpure.net/canet-rock-test/es.appcess.canetrocktest/download/1.0.6" [class.samsung-squircle]="m.esSamsung" [class.xiaomi-rounded]="m.esXiaomi" [class.apple-squircle]="m.esIOS" appMostrarAmbAnimacio matRipple>
+                            <img src="assets/_projects/android/icons/stores/apkpure.png" alt="APKPure" title="APKPure" class="logo">
+                        </a>
+                        <a href="https://apkcombo.com/canet-rock-test/es.appcess.canetrocktest" [class.samsung-squircle]="m.esSamsung" [class.xiaomi-rounded]="m.esXiaomi" [class.apple-squircle]="m.esIOS" appMostrarAmbAnimacio matRipple>
+                            <img src="assets/_projects/android/icons/stores/apkcombo.png" alt="APKCombo" title="APKCombo" class="logo">
+                        </a>
+                        <a href="https://www.appbrain.com/app/canet-rock-test/es.appcess.canetrocktest" [class.samsung-squircle]="m.esSamsung" [class.xiaomi-rounded]="m.esXiaomi" [class.apple-squircle]="m.esIOS" appMostrarAmbAnimacio matRipple>
+                            <img src="assets/_projects/android/icons/stores/appbrain.png" alt="AppBrain" title="AppBrain" class="logo">
+                        </a>
+                        <!-- https://appparapc.com/apk/10789372/ -->
+                    </div>
+                </div>
+
+                <div class="skills">
+                    <jmp-skill [skill]="Skills.JAVASCRIPT" />
+                    <jmp-skill [skill]="Skills.JQUERY" />
+                    <jmp-skill [skill]="Skills.CSS" />
+                    <jmp-skill [skill]="Skills.HTML5" />
+                    <jmp-skill [skill]="Skills.BOOTSTRAP" />
+                    <jmp-skill [skill]="Skills.CORDOVA" />
+                    <jmp-skill [skill]="Skills.MVC" />
+                    <jmp-skill [skill]="Skills.RESPONSIVEDESIGN" />
+                    <jmp-skill [skill]="Skills.AGILE" />
+                </div>
+            </div>
+            <div class="imatge flex-4 mw-75 mw-sm-100 mx-auto">
+                <img src="assets/_experience/matic/appcess-captures/6.webp" alt="System Block App" class="w-100">
+            </div>
+        </div>
+    </section>
+
+</div>
+
+
+
 <!-- Apps Personals -->
 
 <h4 class="mb-3">
@@ -7,7 +202,7 @@
     @if (m.en) { Personal apps }
 </h4>
 
-<div class="apps-personals mb-5">
+<div class="apps-personals">
     <section class="seccio wallpaper-blurrer">
         <button class="boto-desplegable" (click)="toggleSeccio($event.currentTarget)" matRipple>
             <div class="d-flex align-items-center gap-3">
@@ -279,199 +474,4 @@
             </div>
         </div>
     </section>
-</div>
-
-
-
-<!-- Apps Matic -->
- 
-<h4 class="mb-3">
-    @if (m.ca) { Apps desenvolupades a Matic }
-    @if (m.es) { Apps desarrolladas en Matic }
-    @if (m.en) { Apps developed at Matic }
-</h4>
-
-<div class="apps-matic">
-    <section class="seccio systemblock">
-        <button class="boto-desplegable" (click)="toggleSeccio($event.currentTarget)" matRipple>
-            <div class="d-flex align-items-center gap-3">
-                <img src="assets/_projects/android/icons/apps/systemblock.png" class="icona">
-                <div class="d-flex flex-column text-start">
-                    <span class="titol">System Block</span>
-                    <span class="subtitol">
-                        @if (m.ca) { Permet als tècnics crear albarans i sincronitzar dades amb el CRM }
-                        @if (m.es) { Permite a los técnicos crear albaranes y sincronizar datos con el CRM }
-                        @if (m.en) { Allows technicians to create delivery notes and synchronize data with the CRM }
-                    </span>
-
-                </div>
-            </div>
-            <i class="fa-solid fa-chevron-down fletxa"></i>
-        </button>
-        <div class="contingut flex-column flex-sm-row" style="display:none;">
-            <div class="info flex-8">
-                <div class="text mb-2">
-                    @if (m.ca) {
-                        Aplicació mòbil que vaig fer quan traballava a Matic, per a l'empresa System Block, una empresa de molls de càrrega. Permet als tècnics gesionar les visites tècniques al client. Durant la visita, poden introduir-hi la informació de la intervenció, peces utilitzades i necessàries per fer la feina.<br><br>
-
-                        Permet crear albarans, firmar-los i enviar-los per email, amb les fotos fetes durant la visita. Té agenda i llista d'ordres de treball per tècnic.<br>
-                        L'app se sincronitza amb la base de dades central del CRM i amb la web.<br>
-                        Interfície adaptativa per a mòbils i tablets.<br><br>
-
-                        Aquesta app la vaig fer amb Javascript, jQuery, CSS i Cordova, i està compilada per a Android.<br><br>
-
-                        És una web interna que només utilitzen els tècnics de l'empresa, no està publicada a cap botiga d'aplicacions.
-                    }
-                    @if (m.es) {
-                        Aplicación móvil que hice cuando trabajaba en Matic, para la empresa System Block, una empresa de muelles de carga. Permite a los técnicos gestionar las visitas técnicas al cliente. Durante la visita, pueden introducir la información de la intervención, piezas utilizadas y necesarias para hacer el trabajo.<br><br>
-
-                        Permite crear albaranes, firmarlos y enviarlos por email, con las fotos hechas durante la visita. Tiene agenda y lista de órdenes de trabajo por técnico.<br>
-                        La app se sincroniza con la base de datos central del CRM y con la web.<br>
-                        Interfaz adaptativa para móviles y tablets.<br><br>
-
-                        Esta app la hice con Javascript, jQuery, CSS y Cordova, y está compilada para Android.<br><br>
-
-                        Es una web interna que sólo utilizan los técnicos de la empresa, no está publicada en ninguna tienda de aplicaciones.
-                    }
-                    @if (m.en) {
-                        Mobile application that I made when I worked at Matic, for the company System Block, a loading dock company. It allows technicians to manage technical visits to the client. During the visit, they can enter the information of the intervention, parts used and necessary to do the job.<br><br>
-
-                        It allows you to create delivery notes, sign them and send them by email, with the photos taken during the visit. It has an agenda and a list of work orders by technician.<br>
-                        The app synchronizes with the central CRM database and with the web.<br>
-                        Adaptive interface for mobiles and tablets.<br><br>
-
-                        I made this app with Javascript, jQuery, CSS and Cordova, and it is compiled for Android.<br><br>
-
-                        It is an internal web that is only used by the company's technicians, it is not published in any app store.
-                    }
-                    <br>
-
-                    <button routerLink="/matic" class="boto tema-matic mt-4 mx-auto d-flex" appMostrarAmbAnimacio matRipple>
-                        @if (m.ca) { Veure més }
-                        @if (m.es) { Ver más }
-                        @if (m.en) { See more }
-                        <i class="fa-solid fa-arrow-right"></i>
-                    </button>
-                </div>
-
-                <div class="skills">
-                    <jmp-skill [skill]="Skills.JAVASCRIPT" />
-                    <jmp-skill [skill]="Skills.JQUERY" />
-                    <jmp-skill [skill]="Skills.CSS" />
-                    <jmp-skill [skill]="Skills.HTML5" />
-                    <jmp-skill [skill]="Skills.BOOTSTRAP" />
-                    <jmp-skill [skill]="Skills.CORDOVA" />
-                    <jmp-skill [skill]="Skills.MVC" />
-                    <jmp-skill [skill]="Skills.RESPONSIVEDESIGN" />
-                    <jmp-skill [skill]="Skills.AGILE" />
-                </div>
-            </div>
-            <div class="imatge flex-4 mw-75 mw-sm-100 mx-auto">
-                <img src="assets/_experience/matic/systemblock/systemblock-captura-mobil.jpg" alt="System Block App" class="w-100">
-            </div>
-        </div>
-    </section>
-
-
-
-    <section class="seccio appcess">
-        <button class="boto-desplegable" (click)="toggleSeccio($event.currentTarget)" matRipple>
-            <div class="d-flex align-items-center gap-3">
-                <img src="assets/_projects/android/icons/apps/appcess.png" class="icona">
-                <div class="d-flex flex-column text-start">
-                    <span class="titol">Appcess Test</span>
-                    <span class="subtitol">
-                        @if (m.ca) { Genera QRs d'accés després de tests de COVID, UI intuitiva i funcionament offline }
-                        @if (m.es) { Genera QRs de acceso después de tests de COVID, UI intuitiva y funcionamiento offline }
-                        @if (m.en) { Generates access QRs after COVID tests, intuitive UI and offline functionality }
-                    </span>
-
-                </div>
-            </div>
-            <i class="fa-solid fa-chevron-down fletxa"></i>
-        </button>
-        <div class="contingut flex-column flex-sm-row" style="display:none;">
-            <div class="info flex-8">
-                <div>
-                    <div class="text mb-5">
-                        @if (m.ca) {
-                            Aplicació mòbil que vaig fer quan traballava a Matic. Permet gestionar l'accés a esdeveniments durant la pandèmia. L'aplicació permet als usuaris fer-se un test de COVID en centres autoritzats i, si són negatius, obtenir un QR per a accedir a l'esdeveniment.<br><br>
-
-                            UI intuitiva, navegació amb doble swipe per navegar entre esdeveniments i alhora entre persones per a cada esdeveniment. Autenticació biomètrica i funcionament offline.<br><br>
-
-                            Desenvolupada en només 3 setmanes i reutilitzada per a altres esdeveniments.<br><br>
-
-                            Aquesta app la vaig fer amb Javascript, jQuery, CSS i Cordova, i està compilada per a Android i iPhone.<br><br>
-
-                            Es va pujar a la Play Store, a l'App Store, i a algunes botigues de tercers.
-                        }
-                        @if (m.es) {
-                            Aplicación móvil que hice cuando trabajaba en Matic. Permite gestionar el acceso a eventos durante la pandemia. La aplicación permite a los usuarios hacerse un test de COVID en centros autorizados y, si son negativos, obtener un QR para acceder al evento.<br><br>
-
-                            UI intuitiva, navegación con doble swipe para navegar entre eventos y a la vez entre personas para cada evento. Autenticación biométrica y funcionamiento offline.<br><br>
-
-                            Desarrollada en sólo 3 semanas y reutilizada para otros eventos.<br><br>
-
-                            Esta app la hice con Javascript, jQuery, CSS y Cordova, y está compilada para Android y iPhone.<br><br>
-
-                            Se subió a la Play Store, a la App Store, y a algunas tiendas de terceros.
-                        }
-                        @if (m.en) {
-                            Mobile application that I made when I worked at Matic. It allows to manage access to events during the pandemic. The application allows users to take a COVID test at authorized centers and, if they test negative, obtain a QR code to access the event.<br><br>
-
-                            Intuitive UI, double swipe navigation to navigate between events and at the same time between people for each event. Biometric authentication and offline functionality.<br><br>
-
-                            Developed in just 3 weeks and reused for other events.<br><br>
-
-                            I made this app with Javascript, jQuery, CSS and Cordova, and it is compiled for Android and iPhone.<br><br>
-
-                            It was uploaded to the Play Store, the App Store, and some third-party stores.
-                        }
-                        <br>
-
-                        <button routerLink="/matic" class="boto tema-matic my-4 mx-auto d-flex" appMostrarAmbAnimacio matRipple>
-                            @if (m.ca) { Veure més }
-                            @if (m.es) { Ver más }
-                            @if (m.en) { See more }
-                            <i class="fa-solid fa-arrow-right"></i>
-                        </button>
-                    </div>
-                    <div class="iconesStores shadow-filter-1">
-                        <a [href]="m.env.assets + '/external-pages/matic/play-store/'" [class.samsung-squircle]="m.esSamsung" [class.xiaomi-rounded]="m.esXiaomi" [class.apple-squircle]="m.esIOS" appMostrarAmbAnimacio matRipple>
-                            <img src="assets/_projects/android/icons/stores/play-store.png" alt="Play Store" title="Play Store" class="logo">
-                        </a>
-                        <a [href]="m.env.assets + '/external-pages/matic/app-store/'" [class.samsung-squircle]="m.esSamsung" [class.xiaomi-rounded]="m.esXiaomi" [class.apple-squircle]="m.esIOS" appMostrarAmbAnimacio matRipple>
-                            <img src="assets/_projects/android/icons/stores/apple.jpg" alt="App Store" title="App Store" class="logo">
-                        </a>
-                        <a href="https://apkpure.net/canet-rock-test/es.appcess.canetrocktest/download/1.0.6" [class.samsung-squircle]="m.esSamsung" [class.xiaomi-rounded]="m.esXiaomi" [class.apple-squircle]="m.esIOS" appMostrarAmbAnimacio matRipple>
-                            <img src="assets/_projects/android/icons/stores/apkpure.png" alt="APKPure" title="APKPure" class="logo">
-                        </a>
-                        <a href="https://apkcombo.com/canet-rock-test/es.appcess.canetrocktest" [class.samsung-squircle]="m.esSamsung" [class.xiaomi-rounded]="m.esXiaomi" [class.apple-squircle]="m.esIOS" appMostrarAmbAnimacio matRipple>
-                            <img src="assets/_projects/android/icons/stores/apkcombo.png" alt="APKCombo" title="APKCombo" class="logo">
-                        </a>
-                        <a href="https://www.appbrain.com/app/canet-rock-test/es.appcess.canetrocktest" [class.samsung-squircle]="m.esSamsung" [class.xiaomi-rounded]="m.esXiaomi" [class.apple-squircle]="m.esIOS" appMostrarAmbAnimacio matRipple>
-                            <img src="assets/_projects/android/icons/stores/appbrain.png" alt="AppBrain" title="AppBrain" class="logo">
-                        </a>
-                        <!-- https://appparapc.com/apk/10789372/ -->
-                    </div>
-                </div>
-
-                <div class="skills">
-                    <jmp-skill [skill]="Skills.JAVASCRIPT" />
-                    <jmp-skill [skill]="Skills.JQUERY" />
-                    <jmp-skill [skill]="Skills.CSS" />
-                    <jmp-skill [skill]="Skills.HTML5" />
-                    <jmp-skill [skill]="Skills.BOOTSTRAP" />
-                    <jmp-skill [skill]="Skills.CORDOVA" />
-                    <jmp-skill [skill]="Skills.MVC" />
-                    <jmp-skill [skill]="Skills.RESPONSIVEDESIGN" />
-                    <jmp-skill [skill]="Skills.AGILE" />
-                </div>
-            </div>
-            <div class="imatge flex-4 mw-75 mw-sm-100 mx-auto">
-                <img src="assets/_experience/matic/appcess-captures/6.webp" alt="System Block App" class="w-100">
-            </div>
-        </div>
-    </section>
-
 </div>

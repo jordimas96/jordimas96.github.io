@@ -1,6 +1,5 @@
 import { Component } from '@angular/core';
-import { MatRipple } from '@angular/material/core';
-import { RouterLink } from '@angular/router';
+import { PreviewCaseStudyComponent } from 'src/app/components/preview-case-study/preview-case-study.component';
 import { Skills } from 'src/app/enums/skills.enum';
 import { ExperienceCalculatorService } from 'src/app/services/experience-calculator.service';
 import { MainService } from 'src/app/services/main.service';
@@ -11,9 +10,8 @@ import { SharedImports } from 'src/app/shared/imports';
     templateUrl: './experiencies-home.component.html',
     styleUrl: './experiencies-home.component.scss',
     imports: [
-        RouterLink,
         ...SharedImports,
-        MatRipple,
+        PreviewCaseStudyComponent,
     ]
 })
 export class ExperienciesHomeComponent {
