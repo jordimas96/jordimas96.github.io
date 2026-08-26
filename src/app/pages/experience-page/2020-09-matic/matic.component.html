@@ -255,7 +255,7 @@
                 L'aplicació està dissenyada per a funcionar sense connexió, ja que s'utilitzaria en llocs on hi hauria una gran quantitat de gent.<br><br>
 
                 Vaig desenvolupar tot el frontend de l'aplicació en solitari en 3 setmanes de treball intensiu, incloent totes les proves en condicions reals.<br>
-                Posteriorment, vaig reutilitzar i adaptar aquesta base per desenvolupar 3 aplicacions específiques per a diferents esdeveniments i empreses, destinades a gestionar l'accés de gairebé 50.000 assistents<br>
+                Posteriorment, vaig reutilitzar l'aplicació desenvolupada com a base per crear dues aplicacions adaptades i específiques per a 2 festivals, destinades a gestionar l'accés de gairebé 50.000 assistents. Un dels projectes es va desenvolupar en el marc d'un contracte de 200.000 €.<br>
             }
             @if (m.es) {
                 Desarrollo de una aplicación para Android y iPhone para el control de acceso a eventos masivos durante la pandemia. La aplicación permite a los usuarios hacerse un test de COVID en centros autorizados, y obtener un QR para acceder al evento.<br><br>
@@ -274,7 +274,7 @@
                 La aplicación está diseñada para funcionar sin conexión, ya que se utilizaría en lugares donde habría una gran cantidad de gente.<br><br>
 
                 Desarrollé todo el frontend de la aplicación en solitario en 3 semanas de trabajo intensivo, incluyendo todas las pruebas en condiciones reales.<br>
-                Posteriormente, reutilicé y adapté esta base para desarrollar 3 aplicaciones específicas para distintos eventos y empresas, destinadas a gestionar el acceso de casi 50.000 asistentes<br>
+                Posteriormente, reutilicé la aplicación desarrollada como base para crear dos aplicaciones adaptadas y específicas para 2 festivales, destinadas a gestionar el acceso de casi 50.000 asistentes. Uno de los proyectos se desarrolló en el marco de un contrato de 200.000 €.<br>
             }
             @if (m.en) {
                 Development of an application for Android and iPhone for access control to massive events during the pandemic. The application allows users to take a COVID test in authorized centers, and obtain a QR to access the event.<br><br>
@@ -293,19 +293,33 @@
                 The application is designed to work offline, as it would be used in places where there would be a large amount of people.<br><br>
 
                 I developed the entire frontend of the application alone in 3 weeks of intensive work, including all tests in real conditions.<br>
-                Subsequently, I reused and adapted this base to develop 3 specific applications for different events and companies, intended to manage access for almost 50,000 attendees.
+                Subsequently, I reused the developed application as a base to create two adapted and specific applications for 2 festivals, intended to manage the access of almost 50,000 attendees. One of the projects was developed within the framework of a €200,000 contract.<br>
             }
             
-            <div class="assistents-gestionats mt-4">
-                <div class="numero" appMostrarAmbAnimacio>
-                    @if (m.ca || m.es) { 49.200 }
-                    @if (m.en) { 49,200 }
+            <div class="metriques mt-4">
+                <div class="metrica assistents">
+                    <div class="numero" appMostrarAmbAnimacio>
+                        @if (m.ca || m.es) { 49.200 }
+                        @if (m.en) { 49,200 }
+                    </div>
+                    <div class="text" appMostrarAmbAnimacio>
+                        @if (m.ca) { assistents en 2 festivals }
+                        @if (m.es) { assistentes en 2 festivales }
+                        @if (m.en) { attendees in 2 festivals }
+                    </div>
                 </div>
-                <div class="text" appMostrarAmbAnimacio>
-                    @if (m.ca) { assistents gestionats }
-                    @if (m.es) { assistentes gestionados }
-                    @if (m.en) { attendees managed }
+                <div class="metrica diners">
+                    <div class="numero" appMostrarAmbAnimacio>
+                        @if (m.ca || m.es) { 200.000 € }
+                        @if (m.en) { € 200,000 }
+                    </div>
+                    <div class="text" appMostrarAmbAnimacio>
+                        @if (m.ca) { valor d'un dels contractes }
+                        @if (m.es) { valor de uno de los contratos }
+                        @if (m.en) { value of one of the contracts }
+                    </div>
                 </div>
+                <!-- 25.000 descàrregues a la Play Store  -->
             </div>
         </section>
 

@@ -68,16 +68,26 @@ h4, h5 {
     padding: 1.5rem;
     border-radius: 2.5rem;
 }
-.assistents-gestionats {
-    text-align: center;
-    color: light-dark(hsl(33deg 100% 25%), hsl(33, 100%, 73%));
+.metriques {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    gap: 1rem;
+    
+    .metrica {
+        text-align: center;
+        
+        &.assistents { color: light-dark(hsl(33, 100%, 25%), hsl(33, 100%, 73%)); }
+        &.diners { color: light-dark(hsl(117, 100%, 25%), hsl(117, 100%, 73%)); }
 
-    .numero {
-        font-size: 3rem;
-        font-weight: bold;
-    }
-    .text {
-        font-size: 1.2rem;
+        .numero {
+            font-size: 3rem;
+            font-weight: bold;
+        }
+        .text {
+            font-size: 1.2rem;
+        }
+
     }
 }
 
