@@ -239,7 +239,7 @@
         <section class="appcess card paleta-193 text-80 mb-6" appMostrarAmbAnimacio>
             <h3 class="text-center mb-3 text-100">Appcess Test</h3>
             @if (m.ca) {
-                Desenvolupament d'una aplicació per a Android i iPhone per al control d'accés a esdeveniments durant la pandèmia. L'aplicació permet als usuaris fer-se un test de COVID en centres autoritzats, i obtenir un QR per a accedir a l'esdeveniment.<br><br>
+                Desenvolupament d'una aplicació per a Android i iPhone per al control d'accés a esdeveniments massius durant la pandèmia. L'aplicació permet als usuaris fer-se un test de COVID en centres autoritzats, i obtenir un QR per a accedir a l'esdeveniment.<br><br>
                 
                 Flux de funcionament:
                 <ol>
@@ -255,10 +255,10 @@
                 L'aplicació està dissenyada per a funcionar sense connexió, ja que s'utilitzaria en llocs on hi hauria una gran quantitat de gent.<br><br>
 
                 Vaig desenvolupar tot el frontend de l'aplicació en solitari en 3 setmanes de treball intensiu, incloent totes les proves en condicions reals.<br>
-                Posteriorment, aquesta aplicació es va reutilitzar per crear 3 aplicacions adaptades a diferents esdeveniments i empreses.<br>
+                Posteriorment, vaig reutilitzar i adaptar aquesta base per desenvolupar 3 aplicacions específiques per a diferents esdeveniments i empreses, destinades a gestionar l'accés de gairebé 50.000 assistents<br>
             }
             @if (m.es) {
-                Desarrollo de una aplicación para Android y iPhone para el control de acceso a eventos durante la pandemia. La aplicación permite a los usuarios hacerse un test de COVID en centros autorizados, y obtener un QR para acceder al evento.<br><br>
+                Desarrollo de una aplicación para Android y iPhone para el control de acceso a eventos masivos durante la pandemia. La aplicación permite a los usuarios hacerse un test de COVID en centros autorizados, y obtener un QR para acceder al evento.<br><br>
                 
                 Flujo de funcionamiento:
                 <ol>
@@ -274,10 +274,10 @@
                 La aplicación está diseñada para funcionar sin conexión, ya que se utilizaría en lugares donde habría una gran cantidad de gente.<br><br>
 
                 Desarrollé todo el frontend de la aplicación en solitario en 3 semanas de trabajo intensivo, incluyendo todas las pruebas en condiciones reales.<br>
-                Posteriormente, esta aplicación se reutilizó para crear 3 aplicaciones adaptadas a diferentes eventos y empresas.<br>
+                Posteriormente, reutilicé y adapté esta base para desarrollar 3 aplicaciones específicas para distintos eventos y empresas, destinadas a gestionar el acceso de casi 50.000 asistentes<br>
             }
             @if (m.en) {
-                Development of an application for Android and iPhone for access control to events during the pandemic. The application allows users to take a COVID test in authorized centers, and obtain a QR to access the event.<br><br>
+                Development of an application for Android and iPhone for access control to massive events during the pandemic. The application allows users to take a COVID test in authorized centers, and obtain a QR to access the event.<br><br>
                 
                 Operating flow:
                 <ol>
@@ -293,8 +293,20 @@
                 The application is designed to work offline, as it would be used in places where there would be a large amount of people.<br><br>
 
                 I developed the entire frontend of the application alone in 3 weeks of intensive work, including all tests in real conditions.<br>
-                Subsequently, this application was reused to create 3 applications adapted to different events and companies.<br>
+                Subsequently, I reused and adapted this base to develop 3 specific applications for different events and companies, intended to manage access for almost 50,000 attendees.
             }
+            
+            <div class="assistents-gestionats mt-4">
+                <div class="numero" appMostrarAmbAnimacio>
+                    @if (m.ca || m.es) { 49.200 }
+                    @if (m.en) { 49,200 }
+                </div>
+                <div class="text" appMostrarAmbAnimacio>
+                    @if (m.ca) { assistents gestionats }
+                    @if (m.es) { assistentes gestionados }
+                    @if (m.en) { attendees managed }
+                </div>
+            </div>
         </section>
 
         <h4 class="mb-3">
@@ -362,7 +374,7 @@
                 <li>Proyectos construidos desde cero con Javascript, JQuery, CSS, Cordova y librerías</li>
                 <li>Desarrollo de UIs simples, intuitivas y pulidas utilizando CSS y librerías</li>
                 <li>Desarrollo de nuevas funciones para <jmp-link id="ocine">Ocine</jmp-link></li>
-                <li>Modificaciones menores de apps i webs</li>
+                <li>Modificaciones menores de apps y webs</li>
                 <li>Desarrollo de un sistema de carteleras para el público para ser usadas en múltiples locales de cines en Madrid</li>
             </ul>
 
