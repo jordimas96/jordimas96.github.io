@@ -343,20 +343,6 @@
                         <i class="fa-solid fa-chevron-down fletxa"></i>
                     </button>
                     <div class="contingut flex-column" style="display:none;">
-
-                        <div class="metriques mt-3 mb-4">
-                            <div class="metrica mida-icones">
-                                <div class="numero" appMostrarAmbAnimacio>
-                                    -99 %
-                                </div>
-                                <div class="text" appMostrarAmbAnimacio>
-                                    @if (m.ca) { mida de la llibreria d'icones }
-                                    @if (m.es) { tamaño de la librería de iconos }
-                                    @if (m.en) { size of the icon library }
-                                </div>
-                            </div>
-                        </div>
-
                         @if (m.ca) {
                             Manteniment evolutiu i correctiu d'una aplicació d'atenció al ciutadà: 
 
@@ -411,7 +397,7 @@
         </div>
 
 
-        <div class="metriques mt-5">
+        <div class="metriques my-5">
             <div class="metrica consulats">
                 <div class="numero" appMostrarAmbAnimacio>
                     183
@@ -423,17 +409,30 @@
                     @if (m.en) { consular offices <br> use the system }
                 </div>
             </div>
-            <div class="metrica diners">
-                    <div class="numero" appMostrarAmbAnimacio [title]="textMetricaDiners">
-                        @if (m.ca || m.es) { 115 M€ }
-                        @if (m.en) { € 115M }
-                    </div>
-                    <div class="text" appMostrarAmbAnimacio>
-                        @if (m.ca) { inversió en el projecte <br> de digitalització consular }
-                        @if (m.es) { inversión en el proyecto <br> de digitalización consular }
-                        @if (m.en) { investment in the consular <br> digitalization project }
-                    </div>
+            <div class="metrica num-emergencies">
+                <div class="numero" appMostrarAmbAnimacio>
+                    {{ emergencies.num.toLocaleString(m.idioma) }}
+                    <i class="fa-solid fa-tower-broadcast"></i>
                 </div>
+                <div class="text" appMostrarAmbAnimacio>
+                    @if (m.ca) { emergències consulars <br> ateses mitjançant el sistema  }
+                    @if (m.es) { emergencias consulares <br> atendidas mediante el sistema }
+                    @if (m.en) { consular emergencies <br> handled through the system }
+                    <br>
+                    ({{ emergencies.anyInici }} - {{ emergencies.anyFi }})
+                </div>
+            </div>
+            <!-- <div class="metrica diners">
+                <div class="numero" appMostrarAmbAnimacio [title]="textMetricaDiners">
+                    @if (m.ca || m.es) { 115 M€ }
+                    @if (m.en) { € 115M }
+                </div>
+                <div class="text" appMostrarAmbAnimacio>
+                    @if (m.ca) { inversió en el projecte <br> de digitalització consular }
+                    @if (m.es) { inversión en el proyecto <br> de digitalización consular }
+                    @if (m.en) { investment in the consular <br> digitalization project }
+                </div>
+            </div> -->
         </div>
 
 

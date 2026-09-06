@@ -23,11 +23,15 @@ export class IndraComponent {
     @ViewChild("cartaRecomanacio") cartaRecomanacio: ElementRef<HTMLAnchorElement>;
     public translateFons = 0;
 
+    public emergencies: { num, anyInici, anyFi };
+
     constructor(
         public m: MainService,
         public ts: ThemeService,
         private dialog: MatDialog
-    ) { }
+    ) {
+        this.calcularMetricaNumEmergencies();
+    }
 
     get linkTitol() {
         return [
@@ -60,12 +64,22 @@ export class IndraComponent {
         ][this.m.idiomaIndex];
     }
 
-    get textMetricaDiners() {
-        return [
-            "115 milions d'euros",
-            "115 millones de euros",
-            "115 million euros"
-        ][this.m.idiomaIndex];
+    // get textMetricaDiners() { return "115 " + ["milions d'euros", "millones de euros", "million euros"][this.m.idiomaIndex]; }
+
+    calcularMetricaNumEmergencies() {
+        let percentatgeAny = (Date.now() - new Date(new Date().getFullYear(), 0, 0).getTime()) / 86400000 / 365;
+        
+        // https://www.google.com/search?q=numero+emergencias+consulares+atendidas+2025
+        let dades = {
+            2025: 9000, // https://www.exteriores.gob.es/es/Comunicacion/NotasPrensa/Paginas/2026_NOTAS_P/Albares-presenta-el-informe-de-actividad-consular-de-2025-en-el-Consejo-de-Ministros.aspx
+            2026: Math.round(9000 * percentatgeAny), // extrapolat fins tenir dades oficials
+        }
+
+        this.emergencies = {
+            num: Object.values(dades).reduce((acc, v) => acc + v),
+            anyInici: Object.keys(dades).at(0),
+            anyFi: Object.keys(dades).at(-1),
+        };
     }
 
     goToDintel(event) {

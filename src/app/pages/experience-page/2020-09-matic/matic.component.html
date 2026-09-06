@@ -299,8 +299,7 @@
             <div class="metriques mt-4">
                 <div class="metrica assistents">
                     <div class="numero" appMostrarAmbAnimacio>
-                        @if (m.ca || m.es) { 49.200 }
-                        @if (m.en) { 49,200 }
+                        {{ (49200).toLocaleString(m.idioma) }}
                         <i class="fa-solid fa-user-group"></i>
                     </div>
                     <div class="text" appMostrarAmbAnimacio>
@@ -311,8 +310,9 @@
                 </div>
                 <div class="metrica diners">
                     <div class="numero" appMostrarAmbAnimacio>
-                        @if (m.ca || m.es) { 200.000 € }
-                        @if (m.en) { € 200,000 }
+                        @if (m.en) { € }
+                        {{ (200000).toLocaleString(m.idioma) }}
+                        @if (m.ca || m.es) { € }
                     </div>
                     <div class="text" appMostrarAmbAnimacio>
                         @if (m.ca) { valor d'un dels contractes }
