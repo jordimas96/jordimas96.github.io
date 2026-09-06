@@ -60,6 +60,14 @@ export class IndraComponent {
         ][this.m.idiomaIndex];
     }
 
+    get textMetricaDiners() {
+        return [
+            "115 milions d'euros",
+            "115 millones de euros",
+            "115 million euros"
+        ][this.m.idiomaIndex];
+    }
+
     goToDintel(event) {
         event.preventDefault();
 

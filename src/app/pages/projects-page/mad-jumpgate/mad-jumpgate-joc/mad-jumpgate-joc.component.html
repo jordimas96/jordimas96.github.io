@@ -4,9 +4,9 @@
             <img src="assets/_projects/mad-jumpgate/icons/accordion/mad-jumpgate.png" class="icona">
             <span class="titol">
                 @if (m.esPc) {
-                    @if (m.ca) { Jugar aquí }
-                    @if (m.es) { Jugar aquí }
-                    @if (m.en) { Play here }
+                    @if (m.ca) { Jugar al navegador }
+                    @if (m.es) { Jugar en el navegador }
+                    @if (m.en) { Play in browser }
                 } @else {
                     Mad Jumpgate
                 }
@@ -28,16 +28,16 @@
         } @else {
             <div class="missatge-nomes-pc">
                 @if (m.ca) {
-                    <div appMostrarAmbAnimacio>Aquest joc és només per a ordinador</div>
-                    <div appMostrarAmbAnimacio>Accedeix des d'un ordinador per a jugar-hi</div>
+                    <div class="mb-2" appMostrarAmbAnimacio>Aquest joc només està disponible per a ordinador</div>
+                    <div appMostrarAmbAnimacio>Accedeix des d'un ordinador per jugar-hi</div>
                 }
                 @if (m.es) {
-                    <div appMostrarAmbAnimacio>Este juego es sólo para ordenador</div>
+                    <div class="mb-2" appMostrarAmbAnimacio>Este juego sólo está disponible para ordenador</div>
                     <div appMostrarAmbAnimacio>Accede desde un ordenador para jugar</div>
                 }
                 @if (m.en) {
-                    <div appMostrarAmbAnimacio>This game is for PC only</div>
-                    <div appMostrarAmbAnimacio>Access from a computer to play it</div>
+                    <div class="mb-2" appMostrarAmbAnimacio>This game is only available on desktop</div>
+                    <div appMostrarAmbAnimacio>Access from a computer to play</div>
                 }
             </div>
         }

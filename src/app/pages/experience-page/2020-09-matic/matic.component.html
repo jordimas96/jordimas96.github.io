@@ -66,7 +66,7 @@
             </p>
 
             <div class="accordion">
-                <div class="card web">
+                <section class="card web">
                     <button class="boto-desplegable" (click)="toggleSeccio($event.currentTarget)" matRipple>
                         <div class="d-flex flex-column text-start ps-3">
                             <div class="titol">
@@ -95,7 +95,7 @@
                                     <li>Organització de visites tècniques, reparacions i manteniments, agenda d'ordres de treball pels operaris</li>
                                     <li>Dashboard amb estadístiques i gràfics de tot el sistema, personalitzats segons cada usuari, i amb vistes generals pels administradors</li>
                                     <li>Sistemes automàtics d'enviament de correus a l'administració i als clients</li>
-                                    <li>Maaquetació de factures imprimibles i enviables per email, amb firmes incloses</li>
+                                    <li>Maquetació de factures imprimibles i enviables per email, amb firmes incloses</li>
                                     <li>Exportació a Excel i PDF de les dades completes o parcials, segons filtres i rols</li>
                                 </ul>
                             }
@@ -134,9 +134,9 @@
                             <img src="assets/_experience/matic/systemblock/systemblock-captura-crm-pc.png" alt="System Block Web" class="w-100 rounded-3" appMostrarAmbAnimacio>
                         </div>
                     </div>
-                </div>
+                </section>
 
-                <div class="card app">
+                <section class="card app">
                     <button class="boto-desplegable" (click)="toggleSeccio($event.currentTarget)" matRipple>
                         <div class="d-flex flex-column text-start ps-3">
                             <div class="titol">
@@ -195,9 +195,9 @@
                             <img src="assets/_experience/matic/systemblock/systemblock-captura-mobil.jpg" alt="System Block App" class="w-100" appMostrarAmbAnimacio>
                         </div>
                     </div>
-                </div>
+                </section>
 
-                <div class="card app-windows">
+                <section class="card app-windows">
                     <button class="boto-desplegable" (click)="toggleSeccio($event.currentTarget)" matRipple>
                         <div class="d-flex flex-column text-start ps-3">
                             <div class="titol">
@@ -229,7 +229,7 @@
                             }
                         </div>
                     </div>
-                </div>
+                </section>
 
             </div>
             
@@ -301,6 +301,7 @@
                     <div class="numero" appMostrarAmbAnimacio>
                         @if (m.ca || m.es) { 49.200 }
                         @if (m.en) { 49,200 }
+                        <i class="fa-solid fa-user-group"></i>
                     </div>
                     <div class="text" appMostrarAmbAnimacio>
                         @if (m.ca) { assistents en 2 festivals }
@@ -337,7 +338,7 @@
             Vaig treballar en una app per al parc de tirolines Selva de l'Aventura. Vaig fer algunes millores en accessibilitat i facilitat d'ús, facilitació d'ompliment de formularis i correcció d'errors de codi i visuals en diferents mides de pantalles. <jmp-link id="selvaventura-info-web-matic">Veure més</jmp-link>.<br><br>
 
             <h5>Inquiets</h5>
-            Suport tècnic per a la web comercial d'Inquiets, una botiga de roba i productes infantils a Figueres. Gestió i desenvolupament de canvis i millores a la web. Suport tècnic remot per a clients, amb solució d'errors de la base de dades i de la web.<br><br>
+            Suport tècnic per a la web comercial d'<jmp-link id="inquiets">Inquiets</jmp-link>, una botiga de roba i productes infantils a Figueres. Gestió i desenvolupament de canvis i millores a la web. Suport tècnic remot per a clients, amb solució d'errors de la base de dades i de la web.<br><br>
         }
         @if (m.es) {
             <h5>Ocine</h5>
@@ -347,7 +348,7 @@
             Trabajé en una app para el parque de tirolinas Selva de l'Aventura. Hice algunas mejoras en accesibilidad y facilidad de uso, facilitación de rellenado de formularios y corrección de errores de código y visuales en diferentes tamaños de pantallas. <jmp-link id="selvaventura-info-web-matic">Ver más</jmp-link>.<br><br>
 
             <h5>Inquiets</h5>
-            Soporte técnico para la web comercial de Inquiets, una tienda de ropa y productos infantiles en Figueres. Gestión y desarrollo de cambios y mejoras en la web. Soporte técnico remoto para clientes, con solución de errores de la base de datos y de la web.<br><br>
+            Soporte técnico para la web comercial de <jmp-link id="inquiets">Inquiets</jmp-link>, una tienda de ropa y productos infantiles en Figueres. Gestión y desarrollo de cambios y mejoras en la web. Soporte técnico remoto para clientes, con solución de errores de la base de datos y de la web.<br><br>
         }
         @if (m.en) {
             <h5>Ocine</h5>
@@ -357,7 +358,7 @@
             I worked on an app for the Selva de l'Aventura zip line park. I made some improvements in accessibility and ease of use, facilitation of filling out forms and correction of code and visual errors in different screen sizes. <jmp-link id="selvaventura-info-web-matic">See more</jmp-link>.<br><br>
 
             <h5>Inquiets</h5>
-            Technical support for the commercial website of Inquiets, a clothing and children's products store in Figueres. Management and development of changes and improvements to the web. Remote technical support for clients, with solution of database and web errors.<br><br>
+            Technical support for the commercial website of <jmp-link id="inquiets">Inquiets</jmp-link>, a clothing and children's products store in Figueres. Management and development of changes and improvements to the web. Remote technical support for clients, with solution of database and web errors.<br><br>
         }
 
 

@@ -58,31 +58,39 @@
     </article> -->
     <article class="descripcio mb-4">
         <h5>
-            @if (m.ca) { Desenvolupador Angular per al Ministeri d'Exteriors }
-            @if (m.es) { Desenvolupador Angular para el Ministerio de Exteriores }
-            @if (m.en) { Angular Developer for the Ministry of Foreign Affairs }
+            @if (m.ca) { Desenvolupador Angular per al <i>Ministerio de Exteriores</i>, a Indra }
+            @if (m.es) { Desenvolupador Angular para el Ministerio de Exteriores, en Indra }
+            @if (m.en) { Angular Developer for the Ministry of Foreign Affairs, at Indra }
         </h5>
 
         <div class="mb-4">
             @if (m.ca) {
-                Aquesta feina la vaig dur a terme a través d'<jmp-link id="indra">Indra</jmp-link>, una consultora que gestiona diversos projectes per al <i>Gobierno de España</i>, contractat per <jmp-link id="alvea">Alvea</jmp-link>.<br><br>
+                Vaig participar en el <i>Plan de Digitalización Consular</i>, un projecte de transformació digital del <i>Ministerio de Asuntos Exteriores</i>. Dins d'aquest projecte vaig participar en diverses seccions:<br><br>
+
+                Veure la notícia:
             }
             @if (m.es) {
-                Este trabajo lo llevé a cabo a través de <jmp-link id="indra">Indra</jmp-link>, una consultora que gestiona varios proyectos para el Gobierno de España, contratado por <jmp-link id="alvea">Alvea</jmp-link>.<br><br>
+                Participé en el Plan de Digitalización Consular, un proyecto de transformación digital del Ministerio de Asuntos Exteriores. Dentro de este proyecto participé en varias secciones:<br><br>
+
+                Ver la noticia:
             }
             @if (m.en) {
-                I carried out this work through <jmp-link id="indra">Indra</jmp-link>, a company that manages several projects for the Government of Spain, contracted by <jmp-link id="alvea">Alvea</jmp-link>.<br><br>
+                I participated in the Consular Digitization Plan, a digital transformation project of the Ministry of Foreign Affairs. Within this project I participated in several sections:<br><br>
+
+                See the news:
             }
+            <jmp-link id="plan-digitalizacion-consular">El Ministerio de Exteriores pone en marcha su Plan de Digitalización Consular ↗</jmp-link>
+            <br><br>
 
 
             <div class="accordion">
-                <div class="card crisis" appMostrarAmbAnimacio>
+                <section class="card crisis" appMostrarAmbAnimacio>
                     <button class="boto-desplegable" (click)="toggleSeccio($event.currentTarget)" matRipple>
                         <div class="d-flex flex-column text-start ps-3">
                             <div class="titol">
-                                @if (m.ca) { <i>Gestión de Crisis y Emergencias</i> }
-                                @if (m.es) { Gestión de Crisis y Emergencias }
-                                @if (m.en) { <i>Gestión de Crisis y Emergencias</i> }
+                                @if (m.ca) { Plataforma <i>Gestión de Crisis y Emergencias</i> }
+                                @if (m.es) { Plataforma Gestión de Crisis y Emergencias }
+                                @if (m.en) { <i>Gestión de Crisis y Emergencias</i> platform }
                             </div>
                             <!-- <div class="subtitol"></div> -->
                         </div>
@@ -189,9 +197,9 @@
                         
                         <!-- <video navegacio aplicacio> -->
                     </div>
-                </div>
+                </section>
 
-                <div class="card dintel" appMostrarAmbAnimacio>
+                <section class="card dintel" appMostrarAmbAnimacio>
                     <button class="boto-desplegable" (click)="toggleSeccio($event.currentTarget)" matRipple>
                         <div class="d-flex flex-column text-start ps-3">
                             <div class="titol">
@@ -204,6 +212,32 @@
                         <i class="fa-solid fa-chevron-down fletxa"></i>
                     </button>
                     <div class="contingut flex-column flex-sm-row" style="display:none;">
+
+                        <div class="metriques mt-3 mb-4">
+                            <div class="metrica components">
+                                <div class="numero" appMostrarAmbAnimacio>
+                                    47
+                                    <i class="fa-solid fa-puzzle-piece"></i>
+                                </div>
+                                <div class="text" appMostrarAmbAnimacio>
+                                    @if (m.ca) { components reutilitzables }
+                                    @if (m.es) { componentes reutilizables }
+                                    @if (m.en) { reusable components }
+                                </div>
+                            </div>
+
+                            <div class="metrica apps-ministeri">
+                                <div class="numero" appMostrarAmbAnimacio>
+                                    100 %
+                                </div>
+                                <div class="text" appMostrarAmbAnimacio>
+                                    @if (m.ca) { de les apps oficials del ministeri <br> utilitzen la llibreria }
+                                    @if (m.es) { de las apps oficiales del ministerio <br> utilizan la librería }
+                                    @if (m.en) { of the ministry's official apps <br> use the library }
+                                </div>
+                            </div>
+                        </div>
+                        
                         @if (m.ca) {
                             <h5>Equip i col·laboració</h5>
                             Poc després d'entrar a l'empresa, vaig formar part d'un equip de 5 desenvolupadors amb els quals vam crear una <jmp-link [href]="linkDintelComponents">llibreria de components</jmp-link> en Angular, utilitzant PrimeNG, Angular Material i altres plugins com a base.<br><br>
@@ -215,7 +249,7 @@
                             Els components estan desenvolupats seguint uns estils estrictament definits, amb cada aspecte del disseny (colors, formes, espais, fonts, mides, animacions) fortament marcat. <br><br>
 
                             <h5>Manteniment i desenvolupament posterior</h5>
-                            Durant els següents projectes a l'empresa, ocasionalment vaig anar tornant a aquesta llibreria per a fer canvis i també desenvolupar nous components, com ara un mapa interactiu on es podien marcar àrees on hi havia una crisi, punts amb informació, i rutes al llarg de diferents etapes d'evacuacions. També vaig desenvolupar un selector autocompletable de llocs, que utilitzava dades que provenien d'una API de Google.<br><br>
+                            Durant els següents projectes a l'empresa, ocasionalment vaig anar tornant a aquesta llibreria per a fer canvis i també desenvolupar nous components complexos, com ara un mapa interactiu on es podien marcar àrees on hi havia una crisi, punts amb informació, i rutes al llarg de diferents etapes d'evacuacions. També vaig desenvolupar un selector autocompletable de llocs, que utilitzava dades que provenien d'una API de Google.<br><br>
                             
 
                             <h4>Assoliments</h4>
@@ -237,7 +271,7 @@
                             Los componentes están desarrollados siguiendo unos estilos estrictamente definidos, con cada aspecto del diseño (colores, formas, espacios, fuentes, tamaños, animaciones) fuertemente marcado.<br><br>
 
                             <h5>Mantenimiento y desarrollo posterior</h5>
-                            Durante los siguientes proyectos en la empresa, ocasionalmente regresé a esta librería para hacer cambios y también desarrollar nuevos componentes, como un mapa interactivo donde se podían marcar áreas en crisis, puntos con información y rutas a lo largo de diferentes etapas de evacuación. También desarrollé un selector autocompletable de lugares, que utilizaba datos provenientes de una API de Google.<br><br>
+                            Durante los siguientes proyectos en la empresa, ocasionalmente regresé a esta librería para hacer cambios y también desarrollar nuevos componentes complejos, como un mapa interactivo donde se podían marcar áreas en crisis, puntos con información y rutas a lo largo de diferentes etapas de evacuación. También desarrollé un selector autocompletable de lugares, que utilizaba datos provenientes de una API de Google.<br><br>
 
                             <h4>Logros</h4>
                             <ul>
@@ -258,7 +292,7 @@
                             Components are developed following strictly defined styles, with every aspect of the design (colors, shapes, spacing, fonts, sizes, animations) strongly enforced.<br><br>
 
                             <h5>Maintenance and Further Development</h5>
-                            During subsequent projects at the company, I occasionally returned to this library to make changes and also develop new components, such as an interactive map where crisis areas, information points, and evacuation routes could be marked. I also developed an autocompletable location selector using data from a Google API.<br><br>
+                            During subsequent projects at the company, I occasionally returned to this library to make changes and also develop new complex components, such as an interactive map where crisis areas, information points, and evacuation routes could be marked. I also developed an autocompletable location selector using data from a Google API.<br><br>
 
                             <h4>Achievements</h4>
                             <ul>
@@ -294,21 +328,35 @@
                             </a>
                         </section>
                     </div>
-                </div>
+                </section>
 
-                <div class="card sede" appMostrarAmbAnimacio>
+                <section class="card sede" appMostrarAmbAnimacio>
                     <button class="boto-desplegable" (click)="toggleSeccio($event.currentTarget)" matRipple>
                         <div class="d-flex flex-column text-start ps-3">
                             <div class="titol">
-                                @if (m.ca) { <i>Sede Ciudadano / Mi Carpeta</i> }
-                                @if (m.es) { Sede Ciudadano / Mi Carpeta }
-                                @if (m.en) { <i>Sede Ciudadano / Mi Carpeta</i> }
+                                @if (m.ca) { <i>Sede Electrónica</i> i <i>Carpeta Consular</i> }
+                                @if (m.es) { Sede Electrónica y Carpeta Consular }
+                                @if (m.en) { <i>Sede Electrónica</i> & <i>Carpeta Consular</i> }
                             </div>
                             <!-- <div class="subtitol"></div> -->
                         </div>
                         <i class="fa-solid fa-chevron-down fletxa"></i>
                     </button>
                     <div class="contingut flex-column" style="display:none;">
+
+                        <div class="metriques mt-3 mb-4">
+                            <div class="metrica mida-icones">
+                                <div class="numero" appMostrarAmbAnimacio>
+                                    -99 %
+                                </div>
+                                <div class="text" appMostrarAmbAnimacio>
+                                    @if (m.ca) { mida de la llibreria d'icones }
+                                    @if (m.es) { tamaño de la librería de iconos }
+                                    @if (m.en) { size of the icon library }
+                                </div>
+                            </div>
+                        </div>
+
                         @if (m.ca) {
                             Manteniment evolutiu i correctiu d'una aplicació d'atenció al ciutadà: 
 
@@ -357,10 +405,37 @@
                         }
 
                     </div>
-                </div>
+                </section>
 
             </div>
         </div>
+
+
+        <div class="metriques mt-5">
+            <div class="metrica consulats">
+                <div class="numero" appMostrarAmbAnimacio>
+                    183
+                    <i class="fa-solid fa-building-flag"></i>
+                </div>
+                <div class="text" appMostrarAmbAnimacio>
+                    @if (m.ca) { oficines consulars <br> utilitzen el sistema }
+                    @if (m.es) { oficinas consulares <br> utilizan el sistema }
+                    @if (m.en) { consular offices <br> use the system }
+                </div>
+            </div>
+            <div class="metrica diners">
+                    <div class="numero" appMostrarAmbAnimacio [title]="textMetricaDiners">
+                        @if (m.ca || m.es) { 115 M€ }
+                        @if (m.en) { € 115M }
+                    </div>
+                    <div class="text" appMostrarAmbAnimacio>
+                        @if (m.ca) { inversió en el projecte <br> de digitalització consular }
+                        @if (m.es) { inversión en el proyecto <br> de digitalización consular }
+                        @if (m.en) { investment in the consular <br> digitalization project }
+                    </div>
+                </div>
+        </div>
+
 
         <a #cartaRecomanacio class="rs pdf-parallax mt-5 mb-5" href="assets/_experience/indra/Carta Recomanacio Indra 2026.pdf" appMostrarAmbAnimacio>
             <img class="fons" src="assets/_experience/indra/fons-carta-recomanacio.jpg" [style.--translate-fons.px]="translateFons">

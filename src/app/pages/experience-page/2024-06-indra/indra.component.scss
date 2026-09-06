@@ -67,6 +67,39 @@ h4, h5 {
     }
 }
 
+.metriques {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    gap: 1rem;
+    
+    .metrica {
+        text-align: center;
+        
+        &.components { color: light-dark(hsl(190, 100%, 25%), hsl(190, 100%, 66%)); }
+        &.apps-ministeri, &.consulats { color: light-dark(hsl(48, 100%, 22%), hsl(48, 100%, 50%)); } // #ffce00
+        &.mida-icones { color: light-dark(hsl(42, 100%, 22%), hsl(42, 100%, 50%)); } // #ffb400
+        &.diners { color: light-dark(hsl(117, 100%, 25%), hsl(117, 100%, 73%)); }
+
+        .numero {
+            font-size: 3rem;
+            font-weight: bold;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            
+            i {
+                font-size: 1.5rem;
+                margin-left: 0.7rem;
+            }
+        }
+        .text {
+            font-size: 1.2rem;
+        }
+
+    }
+}
+
 .pdf-parallax {
     position: relative;
     display: block;
@@ -119,7 +152,7 @@ h4, h5 {
 
     border-radius: 2rem;
     
-    > div {
+    > section {
         border-radius: 0.5rem;
 
         &:first-of-type {

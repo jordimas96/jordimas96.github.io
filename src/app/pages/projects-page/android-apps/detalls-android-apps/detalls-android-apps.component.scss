@@ -10,6 +10,14 @@
     border-radius: 2rem;
 }
 
+.text-ressaltat {
+    color: light-dark(var(--link), gold);
+    font-weight: bold;
+    @include light {
+        font-weight: 800;
+    }
+}
+
 .seccio {
     border-radius: 0.5rem;
 

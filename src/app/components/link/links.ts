@@ -20,10 +20,15 @@ export class Links {
         "material-you": "https://m3.material.io/",
         "dynamic-colors": "https://developer.android.com/develop/ui/views/theming/dynamic-colors",
 
+        "amongus-web": "https://www.innersloth.com/games/among-us/",
+
         "among-useful": "https://apkcombo.com/among-useful/com.jmasp.amongustool",
 
 
-        "alvea": "https://alvea.es/",
+        "plan-digitalizacion-consular": "https://administracionelectronica.gob.es/pae_Home/pae_Actualidad/pae_Noticias/Anio2023/Marzo/Noticia-2023-03-16-El-MAEC-pone-en-marcha-su-Plan-Digitalizacion-Consular.html",
+        // "plan-digitalizacion-consular": "https://www.exteriores.gob.es/es/ServiciosAlCiudadano/TablonDeAnuncios/Documents/PRTR/Plan%20de%20Digitalizaci%C3%B3n%20Consular%20.pdf",
+        // "plan-digitalizacion-consular": "assets/_experience/indra/crisis/PAe - El Ministerio de Asuntos Exteriores, Unión Europea y Cooperación pone en marcha su Plan de Digitalización Consular.pdf",
+        // "plan-digitalizacion-consular": "assets/_experience/indra/crisis/Plan de Digitalización Consular.pdf",
 
         "ministerio-exteriores_ca": "https://www.exteriores.gob.es/ca",
         "ministerio-exteriores_es": "https://www.exteriores.gob.es/",
@@ -48,6 +53,9 @@ export class Links {
         "selvaventura-info-web-matic_ca": "https://www.matic.cat/app-per-a-la-selva-de-laventura/",
         "selvaventura-info-web-matic_es": "https://www.matic.cat/es/app-para-la-selva-de-laventura/",
         "selvaventura-info-web-matic_en": "https://www.matic.cat/es/app-para-la-selva-de-laventura/",
+        "inquiets_ca": "https://www.inquietsstore.com/",
+        "inquiets_es": "https://www.inquietsstore.com/es",
+        "inquiets_en": "https://www.inquietsstore.com/en",
         "uwp_ca": "https://learn.microsoft.com/ca-es/windows/uwp/get-started/universal-application-platform-guide",
         "uwp_es": "https://learn.microsoft.com/es-es/windows/uwp/get-started/universal-application-platform-guide",
         "uwp_en": "https://learn.microsoft.com/en-us/windows/uwp/get-started/universal-application-platform-guide",
@@ -76,10 +84,6 @@ export class Links {
         "xiaomi-flash-tool": "https://xiaomiflashtool.com/",
         "asus-flash-tool": "https://www.ytechb.com/asus-flash-tool/",
 
-
-        "indra_ca": "https://www.indracompany.com/es/",
-        "indra_es": "https://www.indracompany.com/es/",
-        "indra_en": "https://www.indracompany.com/en/",
 
         "lacaixa_ca": "https://www.caixabank.cat/index_ca.html",
         "lacaixa_es": "https://www.caixabank.cat/index_es.html",
