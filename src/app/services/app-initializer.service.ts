@@ -1,5 +1,4 @@
-import { ApplicationRef, Injectable } from "@angular/core";
-import { filter, firstValueFrom } from "rxjs";
+import { Injectable } from "@angular/core";
 
 @Injectable({
     providedIn: 'root'
@@ -8,7 +7,7 @@ export class AppInitializerService {
 
     private readonly FONS_URL = "assets/background/boles.webp";
 
-    constructor(private appRef: ApplicationRef) { }
+    constructor() { }
 
 
     async init() {
@@ -18,18 +17,17 @@ export class AppInitializerService {
         // Aplicar fons al body //
         backgroundImageLoaded.then(() => document.body.style.backgroundImage = `url("${this.FONS_URL}")`);
 
-        await Promise.race([
+        Promise.race([
             Promise.all([
                 backgroundImageLoaded,
                 document.fonts.ready,
-                firstValueFrom(this.appRef.isStable.pipe(filter(stable => stable))),
             ]),
             new Promise(resolve => setTimeout(resolve, 3000)),
-        ]);
-
-        setTimeout(() => {
-            this.ocultarSplashScreen();
-        }, 300);
+        ]).then(() => {
+            setTimeout(() => {
+                this.ocultarSplashScreen();
+            }, 450);
+        });
 
     }
 

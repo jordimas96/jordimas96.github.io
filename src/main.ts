@@ -28,7 +28,7 @@ bootstrapApplication(AppComponent, {
         provideAnimations(),
 
         provideAppInitializer(() => {
-            return inject(AppInitializerService).init();
+            inject(AppInitializerService).init();
         })
     ]
 })
