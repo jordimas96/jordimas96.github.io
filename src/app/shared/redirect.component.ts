@@ -11,19 +11,16 @@ export class RedirectComponent {
 
         let urlNova = this.canviarUrl(url);
 
-        if (urlNova.startsWith("http://") || urlNova.startsWith("https://")) {
-            location.href = urlNova;
-            return;
-        }
-
         urlNova = urlNova!.replace(/^\//, '');
 
         this.redirigir(url, urlNova);
     }
 
     canviarUrl(url: string): string {
+
         // El búnquer //
-        if (url == "bunquer") return "/github";
+        if (url == "bunquer") return "/projects/github";
+
 
         // IN2ART //
         if (url == "in2art") return "/projects/in2art";
@@ -33,7 +30,7 @@ export class RedirectComponent {
         // Buscar seccions //
         let seccio = SECCIONS.find(s => url == s.nom || url == s.nom + "-info");
         if (seccio)
-            return `${seccio.pagina}/${seccio.nom}`;
+            return `/${seccio.pagina}/${seccio.nom}`;
 
 
 
@@ -42,18 +39,11 @@ export class RedirectComponent {
     }
 
     redirigir(url: string, urlNova: string) {
-        const esRutaExterna = urlNova.startsWith("assets/") || urlNova.startsWith("/assets/");
-
         console.log(`Redirected from %c/${url}%c to %c/${urlNova}%c`,
             "color:#f60", "", "color:lime", "");
 
-        if (esRutaExterna)
-            location.replace(urlNova);
-        else {
-            const [path, queryString] = urlNova.split('?');
-            const queryParams = Object.fromEntries(new URLSearchParams(queryString));
-            this.router.navigate([path], { queryParams, replaceUrl: true });
-        }
-
+        const [path, queryString] = urlNova.split('?');
+        const queryParams = Object.fromEntries(new URLSearchParams(queryString));
+        this.router.navigate([path], { queryParams, replaceUrl: true });
     }
 }
