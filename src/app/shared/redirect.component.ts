@@ -1,8 +1,6 @@
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
 import { SECCIONS } from './seccions';
-import { MainService } from '../services/main.service';
-import { Utils } from './utils';
 
 @Component({ template: '' })
 export class RedirectComponent {
@@ -17,49 +15,19 @@ export class RedirectComponent {
             location.href = urlNova;
             return;
         }
-        
+
         urlNova = urlNova!.replace(/^\//, '');
 
         this.redirigir(url, urlNova);
     }
 
     canviarUrl(url: string): string {
-        if (url == "bunquer-descarregador")
-            return "https://bunquer-descarregador.github.io/";
-
+        // El búnquer //
+        if (url == "bunquer") return "/github";
 
         // IN2ART //
         if (url == "in2art") return "/projects/in2art";
         if (url == "in2art-experience" || url == "in2art-exp") return "/experience/in2art";
-        if (url == "in2art/demo-video") {
-            return document.documentElement.clientWidth > document.documentElement.clientHeight ?
-                "https://www.youtube.com/watch?v=d8kB5c2RFes" :
-                "https://www.youtube.com/watch?v=nY2EHO3zcnw";
-        }
-
-        
-        // CV //
-        if (url == "cv") {
-            let idioma = localStorage.getItem("lang");
-            if (idioma)
-                return `/assets/documents/cv/CV Jordi Mas Parramon ${idioma.toUpperCase()}.pdf`;
-            else
-                return `/assets/documents/cv`;
-        }
-        if (["cv/ca", "cv/es", "cv/en"].includes(url)) {
-            return `/assets/documents/cv/CV Jordi Mas Parramon ${url.split("/")[1].toUpperCase()}.pdf`;
-        }
-        if (url == "cv-selector") return "/assets/documents/cv";
-
-
-        if (url == "play-store" || url == "playstore")
-            // return "https://jordimas96.github.io/assets_repo/jordimas96.github.io/external-pages/apps/play-store";
-            return "assets/_projects/android/play-store/index-simple.html";
-
-        
-        // Foto //
-        if (url == "foto" || url == "photo") return "/assets/foto-carnet-2020.jpg";
-
 
 
         // Buscar seccions //
@@ -67,7 +35,7 @@ export class RedirectComponent {
         if (seccio)
             return `${seccio.pagina}/${seccio.nom}`;
 
-        
+
 
         // Si no ha trobat res, anirem a home //
         return "";
@@ -75,10 +43,10 @@ export class RedirectComponent {
 
     redirigir(url: string, urlNova: string) {
         const esRutaExterna = urlNova.startsWith("assets/") || urlNova.startsWith("/assets/");
-        
+
         console.log(`Redirected from %c/${url}%c to %c/${urlNova}%c`,
             "color:#f60", "", "color:lime", "");
-        
+
         if (esRutaExterna)
             location.replace(urlNova);
         else {

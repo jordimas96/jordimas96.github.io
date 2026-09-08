@@ -22,18 +22,15 @@ const routes: Routes = [
     { path: "art", component: ArtPageComponent },
     { path: "about-me", component: AboutMePageComponent },
 
-    // Altres //
+    // Case studies //
     { path: "experience/:case-study", component: CaseStudyPageComponent, data: { pagina: "experience" } },
     { path:   "projects/:case-study", component: CaseStudyPageComponent, data: { pagina: "projects" } },
     { path:        "art/:case-study", component: CaseStudyPageComponent, data: { pagina: "art" } },
 
+    // Section (no utilitzat) //
     { path: "section/:section", component: SectionPageComponent },
-
-    {
-        path: "bunquer",
-        redirectTo: "github"
-    },
     
+    // Fallback general //
     {
         path: "**",
         component: RedirectComponent
