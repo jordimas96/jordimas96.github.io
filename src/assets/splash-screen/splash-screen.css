@@ -1,7 +1,8 @@
 #splash-screen {
     display: flex;
-    justify-content: center;
-    align-items: flex-start;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
 
     inset: 0;
     position: fixed;
@@ -21,14 +22,19 @@
     /* background: linear-gradient(45deg, rgb(106, 52, 255), magenta); */
 
     will-change: transform;
-    transform: translateZ(0);
+    transform: translateZ(0); /* Rendiment */
 
     margin-top: 25vh;
+    transform-origin: 58.7% 49.42%; /* JM'as */
+    /* transform-origin: 69.87% 67.77%; /* a */
 
     animation:
         apareixer 0.5s ease,
         creixer 5s ease-out forwards;
 
+    &.superzoom {
+        animation: superzoom 1s ease-in forwards;
+    }
 }
 
 @keyframes apareixer {
@@ -38,4 +44,8 @@
 @keyframes creixer {
     from { transform: scale(1); }
     to { transform: scale(1.5); }
+}
+@keyframes superzoom {
+    from { transform: scale(1.5); }
+    to { transform: scale(140); }
 }

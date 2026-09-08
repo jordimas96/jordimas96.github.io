@@ -46,17 +46,29 @@ export class AppInitializerService {
     }
 
     ocultarSplashScreen() {
-        let splashScreen = document.getElementById("splash-screen");
-        if (!splashScreen) return;
+        let splashScreen = document.querySelector<HTMLElement>("#splash-screen");
+        let jmas = document.querySelector<HTMLElement>("#splash-screen > .jmas");
+        if (!splashScreen || !jmas) return;
 
-        splashScreen.style.opacity = "0";
-        splashScreen.style.pointerEvents = "none";
 
-        splashScreen.addEventListener("transitionend", () => splashScreen.remove(), { once: true });
+        jmas.classList.add("superzoom");
 
         setTimeout(() => {
-            splashScreen.remove();
-        }, 1000);
+            
+            splashScreen.style.opacity = "0";
+            splashScreen.style.pointerEvents = "none";
+            
+            splashScreen.addEventListener("transitionend", () => splashScreen.remove(), { once: true });
+
+            setTimeout(() => splashScreen.remove(), 1000);
+        
+        }, 600);
+
+        
+
+        
+
+        
     }
 
 
