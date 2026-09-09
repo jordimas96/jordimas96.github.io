@@ -11,6 +11,7 @@ import { EvoraComponent } from 'src/app/pages/experience-page/2023-11-evora/evor
 import { IndraComponent } from 'src/app/pages/experience-page/2024-06-indra/indra.component';
 import { PageComponent } from 'src/app/pages/page.component';
 import { AndroidAppsComponent } from 'src/app/pages/projects-page/android-apps/android-apps.component';
+import { BunquerComponent } from 'src/app/pages/projects-page/bunquer/bunquer.component';
 import { CustomRomsComponent } from 'src/app/pages/projects-page/custom-roms/custom-roms.component';
 import { GithubProjectsComponent } from 'src/app/pages/projects-page/github-projects/github-projects.component';
 import { In2artComponent } from 'src/app/pages/projects-page/in2art/in2art.component';
@@ -34,6 +35,7 @@ import { SharedImports } from 'src/app/shared/imports';
         EvoraComponent,
         IndraComponent,
         In2artComponent,
+        BunquerComponent,
         AndroidAppsComponent,
         MadJumpgateComponent,
         GithubProjectsComponent,

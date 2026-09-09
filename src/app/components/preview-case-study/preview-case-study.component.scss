@@ -32,6 +32,8 @@
     .boto {
         padding: 0.5rem 1rem;
 
+        font-weight: bold;
+
         box-shadow: 0 0 0 0 var(--accent-color);
         transition: box-shadow 0.6s;
     }

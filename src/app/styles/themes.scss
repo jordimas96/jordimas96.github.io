@@ -216,6 +216,12 @@
 
 // Projects //
 
+.tema-bunquer {
+    @extend .paleta-346;
+    --fons-card: light-dark(hsla(346, 100%, 72%, 0.5), hsla(346, 100%, 17%, 0.73)) !important;
+    --link: light-dark(var(--color-l-2), var(--color-l-7));
+}
+
 .tema-android {
     @extend .paleta-147;
     --link: light-dark(var(--color-l-2), var(--color-l-5));

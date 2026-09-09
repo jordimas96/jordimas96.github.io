@@ -4,6 +4,7 @@ export enum Skills {
     JAVASCRIPT = "JavaScript",
     JQUERY = "jQuery",
     TYPESCRIPT = "TypeScript",
+    RXJS = "RxJS",
     NGRX = "NgRx",
     CSS = "CSS",
     SASS = "SASS",

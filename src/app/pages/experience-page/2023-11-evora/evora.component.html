@@ -8,9 +8,9 @@
         <div class="icona-dreta-titol" appMostrarAmbAnimacio>
             @if (m.esPantallaPc) {
                 <span class="text">
-                    @if (m.ca) { Feina en anglès }
-                    @if (m.es) { Trabajo en inglés }
-                    @if (m.en) { Job in English }
+                    @if (m.ca) { 100% en anglès }
+                    @if (m.es) { 100% en inglés }
+                    @if (m.en) { 100% in English }
                 </span>
             }
             <img src="assets/icons/flags/uk.svg" alt="English">
@@ -157,8 +157,9 @@
     </div>
     <div class="skills">
         <jmp-skill [skill]="Skills.ANGULAR" />
-        <jmp-skill [skill]="Skills.NGRX" />
         <jmp-skill [skill]="Skills.TYPESCRIPT" />
+        <jmp-skill [skill]="Skills.NGRX" />
+        <jmp-skill [skill]="Skills.RXJS" />
         <jmp-skill [skill]="Skills.CSS" />
         <jmp-skill [skill]="Skills.ANGULARMATERIAL" />
         <jmp-skill [skill]="Skills.PWA" />

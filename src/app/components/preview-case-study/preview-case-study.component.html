@@ -236,6 +236,47 @@
         </div>
     }
     
+    @case ("projects/bunquer") {
+        <div #card class="item tema-bunquer card-themed bg-colored"
+            [style.--extensio-ombra.px]="getCostatGran(card)"
+            appMostrarAmbAnimacio matRipple>
+            <div class="titol">
+                @if (m.ca) { Descarregador de capítols d'<i>El&nbsp;búnquer</i> }
+                @if (m.es) { Descargador de episodios de <i>El&nbsp;búnquer</i> }
+                @if (m.en) { Downloader of <i>El&nbsp;búnquer</i> episodes }
+            </div>
+            <div class="text">
+                @if (m.ca) {
+                    Web per a descarregar programes de ràdio.<br>
+                    Navegació, cercador, descàrregues individuals i múltiples, amb informació i barra de progrés.<br>
+                    Registre dels capítols vistos.<br>
+                    Còpia de seguretat.<br>
+                    Angular, RxJS, CSS.
+                }
+                @if (m.es) {
+                    Web para descargar programas de radio.<br>
+                    Navegación, buscador, descargas individuales y múltiples, con información y barra de progreso.<br>
+                    Registro de los episodios vistos.<br>
+                    Copia de seguridad.<br>
+                    Angular, RxJS, CSS.
+                }
+                @if (m.en) {
+                    Web to download radio programs.<br>
+                    Navigation, search engine, individual and multiple downloads, with information and progress bar.<br>
+                    Tracking of viewed episodes.<br>
+                    Backup.<br>
+                    Angular, RxJS, CSS.
+                }
+            </div>
+            <div class="text-end">
+                <button class="boto stretched-link" routerLink="/projects/bunquer">
+                    {{ seeMore }}
+                    <i class="fa-solid fa-arrow-right"></i>
+                </button>
+            </div>
+        </div>
+    }
+
     @case ("projects/android") {
         <div #card class="item tema-android card-themed bg-colored"
             [style.--extensio-ombra.px]="getCostatGran(card)"

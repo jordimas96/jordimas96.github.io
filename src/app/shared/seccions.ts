@@ -10,6 +10,7 @@ import { EvoraComponent } from 'src/app/pages/experience-page/2023-11-evora/evor
 import { IndraComponent } from 'src/app/pages/experience-page/2024-06-indra/indra.component';
 
 import { AndroidAppsComponent } from 'src/app/pages/projects-page/android-apps/android-apps.component';
+import { BunquerComponent } from 'src/app/pages/projects-page/bunquer/bunquer.component';
 import { CustomRomsComponent } from 'src/app/pages/projects-page/custom-roms/custom-roms.component';
 import { GithubProjectsComponent } from 'src/app/pages/projects-page/github-projects/github-projects.component';
 import { In2artComponent } from 'src/app/pages/projects-page/in2art/in2art.component';
@@ -37,6 +38,7 @@ export const SECCIONS: Seccio[] = [
     { nom: "nexxia",        pagina: "experience", component: NexxiaComponent },
 
     { nom: "in2art",        pagina: "projects",   component: In2artComponent },
+    { nom: "bunquer",       pagina: "projects",   component: BunquerComponent },
     { nom: "android",       pagina: "projects",   component: AndroidAppsComponent },
     { nom: "mad-jumpgate",  pagina: "projects",   component: MadJumpgateComponent },
     { nom: "github",        pagina: "projects",   component: GithubProjectsComponent },

@@ -18,10 +18,6 @@ export class RedirectComponent {
 
     canviarUrl(url: string): string {
 
-        // El búnquer //
-        if (url == "bunquer") return "/projects/github";
-
-
         // IN2ART //
         if (url == "in2art") return "/projects/in2art";
         if (url == "in2art-experience" || url == "in2art-exp") return "/experience/in2art";
