@@ -139,6 +139,7 @@ section:not(.treureHover) {
     .nodejs           { --h:  87; --s:  67%; --l: 70%; .chip { background-color: #83cd29; color: #333333; } } // hsl(87, 67%, 48%);
     .sequelize        { --h: 196; --s:  98%; --l: 70%; .chip { background-color: #02aeee; color: #ffffff; } } // hsl(196, 98%, 47%);
     .json             { --h:   0; --s:   0%; --l: 70%; .chip { background-color: #3e3e3e; color: #ffffff; } } // hsl(0, 0%, 24%);
+    .playwright       { --h: 122; --s:  58%; --l: 70%; .chip { background: linear-gradient(135deg, #e2574c 30%, #2ead33 50%); color: #ffffff; } } // hsl(122, 58%, 43%)
     .java             { --h: 194; --s: 100%; --l: 70%; .chip { background-color: #007396; color: #ffffff; } } // hsl(194, 100%, 29%);
     .python           { --h:  49; --s: 100%; --l: 70%; .chip { background-color: #3572A5; color: #ffe364; } } // hsl(49, 100%, 70%);
     .csharp           { --h: 288; --s:  48%; --l: 70%; .chip { background-color: #953dac; color: #ffffff; } } // hsl(288, 48%, 46%);

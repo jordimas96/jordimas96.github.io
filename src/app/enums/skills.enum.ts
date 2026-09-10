@@ -29,6 +29,7 @@ export enum Skills {
     NODEJS = "NodeJs",
     SEQUELIZE = "Sequelize",
     JSON = "JSON",
+    PLAYWRIGHT = "Playwright",
     JAVA = "Java",
     PYTHON = "Python",
     CSHARP = "C#",
