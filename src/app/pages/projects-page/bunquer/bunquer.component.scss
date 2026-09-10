@@ -16,9 +16,46 @@
         }
     }
 
-    .descripcio {
-        h4, h5 {
-            margin-top: 1.7rem;
+    section.botons-pagines {
+        
+        .boto.web {
+            padding: 1.2rem 2rem;
+            font-size: 1.5rem;
+            font-weight: bold;
+            border-radius: 1.3rem;
+        }
+
+        .boto.amb-icona {
+            display: flex;
+            gap: 1rem;
+            padding: 0.6rem;
+            font-size: 1.5rem;
+            font-weight: bold;
+            border-radius: 2.5rem;
+
+            .text {
+                margin-left: 0.5rem;
+            }
+
+            &.github {
+                background-color: #e9e9eb;
+                color: black;
+
+                img {
+                    height: 3rem;
+                    filter: invert(1);
+                }
+            }
+            &._3cat {
+                background-color: #f61e50;
+                color: white;
+
+                img {
+                    height: 2rem;
+                    margin-bottom: 0.2rem;
+                    margin-right: 0.2rem;
+                }
+            }
         }
     }
 

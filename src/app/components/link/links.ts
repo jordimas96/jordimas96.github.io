@@ -3,12 +3,6 @@ export class Links {
 
     public static readonly links = {
 
-        // El bunquer //
-        "bunquer-web": "https://bunquer-descarregador.github.io/",
-        "bunquer-case-study": "https://jordimas96.github.io/bunquer/",
-        "bunquer-repositori-github": "https://github.com/bunquer-descarregador/bunquer-descarregador.github.io",
-        "bunquer-programa-oficial-3cat": "https://www.3cat.cat/3cat/el-bunquer/",
-
         "angular-12": "https://blog.angular.io/angular-v12-is-now-available-32ed51fbfd49",
         "angular-17": "https://blog.angular.io/introducing-angular-v17-4d7033312e4b",
 

@@ -6,7 +6,7 @@
             @if (m.en) { Downloader of <i>El&nbsp;búnquer</i> episodes }
         </span>
         <a href="https://bunquer-descarregador.github.io/" class="rs">
-            <img src="assets/_projects/bunquer/icons/logo-bunquer-transparent.png" alt="El búnquer descarregador" class="title-icon">
+            <img src="assets/_projects/bunquer/icons/bunquer/logo-bunquer-transparent.png" alt="El búnquer descarregador" class="title-icon">
         </a>
     </div>
     <article class="descripcio mb-4">
@@ -14,13 +14,13 @@
         @if (m.ca) {
             Aplicació web per consultar i descarregar tots els capítols d'<i>El&nbsp;Búnquer</i> de Catalunya Ràdio, inclosos els més antics, que no són fàcilment accessibles des de la web oficial.
 
-            <h4>El projecte</h4>
+            <h4 class="mt-4">El projecte</h4>
             La web oficial utilitza un sistema de scroll infinit que dificulta l'accés als capítols antics. A més, el feed RSS només conserva els 350 capítols més recents.<br>
             Per solucionar-ho, vaig crear una aplicació que <b>indexa tots els capítols disponibles i els organitza per temporades i tipus</b>, permetent localitzar-los i descarregar-los de molt més ràpidament.<br>
             Per obtenir les dades, vaig desenvolupar scripts amb <b>Playwright</b> que fan scraping de la web oficial i generen un fitxer JSON amb la informació dels capítols, incloent-hi el títol, la temporada, la descripció i l'enllaç a l'MP3.<br>
             Posteriorment, vaig utilitzar la <b>API pública de 3Cat</b> per completar aquesta informació amb dades addicionals, com ara les imatges i la durada dels capítols.
 
-            <h4>Funcionalitats</h4>
+            <h4 class="mt-4">Funcionalitats</h4>
             <ul>
                 <li>Navegació per tots els capítols, organitzats per temporades i tipus (normals, especials i millors moments)</li>
                 <li>Cercador de capítols flexible que permet cercar per qualsevol criteri</li>
@@ -33,35 +33,24 @@
                 <li>Còpia de seguretat dels capítols vistos mitjançant exportació i importació, per facilitar el canvi de dispositiu</li>
             </ul>
 
-            <h4>Tecnologies</h4>
+            <h4 class="mt-4">Tecnologies</h4>
             <ul>
                 <li>Angular, HTML, TypeScript, CSS</li>
                 <li>Fitxers JSON com a base de dades dels capítols</li>
                 <li>Playwright (scripts de scraping)</li>
             </ul>
-
-            <h4>Enllaços</h4>
-            <ul>
-                <li><jmp-link id="bunquer-web">Web</jmp-link></li>
-                <li><jmp-link id="bunquer-repositori-github">Repositori a GitHub</jmp-link></li>
-                <li><jmp-link id="bunquer-programa-oficial-3cat">Programa oficial (3Cat)</jmp-link></li>
-            </ul>
-
-            <h4>Sobre el projecte</h4>
-            Projecte independent creat per fer més accessible la cultura catalana i fomentar l'ús del català.<br>
-            La web no allotja els fitxers d'àudio: les descàrregues provenen directament dels recursos disponibles a la web oficial.
         }
 
         @if (m.es) {
             Aplicación web para consultar y descargar todos los episodios de <i>El&nbsp;Búnquer</i> de Catalunya Ràdio, incluidos los más antiguos, que no son fácilmente accesibles desde la web oficial.
 
-            <h4>El proyecto</h4>
+            <h4 class="mt-4">El proyecto</h4>
             La web oficial utiliza un sistema de scroll infinito que dificulta el acceso a los episodios antiguos. Además, el feed RSS solo conserva los 350 episodios más recientes.<br>
             Para solucionarlo, creé una aplicación que <b>indexa todos los episodios disponibles y los organiza por temporada y tipo</b>, permitiendo localizarlos y descargarlos de manera mucho más rápida.<br>
             Para obtener los datos, desarrollé scripts con <b>Playwright</b> que realizan scraping de la web oficial y generan un archivo JSON con la información de los episodios, incluyendo el título, la temporada, la descripción y el enlace al MP3.<br>
             Posteriormente, utilicé la <b>API pública de 3Cat</b> para completar esta información con datos adicionales, como las imágenes y la duración de los episodios.
 
-            <h4>Funcionalidades</h4>
+            <h4 class="mt-4">Funcionalidades</h4>
             <ul>
                 <li>Navegación por todos los episodios, organizados por temporadas y tipos (normales, especiales y mejores momentos)</li>
                 <li>Buscador de episodios flexible que permite buscar por cualquier criterio</li>
@@ -74,35 +63,24 @@
                 <li>Copia de seguridad de los episodios vistos mediante exportación e importación, para facilitar el cambio de dispositivo</li>
             </ul>
 
-            <h4>Tecnologías</h4>
+            <h4 class="mt-4">Tecnologías</h4>
             <ul>
                 <li>Angular, HTML, TypeScript, CSS</li>
                 <li>Archivos JSON como base de datos de los episodios</li>
                 <li>Playwright (scripts de scraping)</li>
             </ul>
-
-            <h4>Enlaces</h4>
-            <ul>
-                <li><jmp-link id="bunquer-web">Web</jmp-link></li>
-                <li><jmp-link id="bunquer-repositori-github">Repositorio en GitHub</jmp-link></li>
-                <li><jmp-link id="bunquer-programa-oficial-3cat">Programa oficial (3Cat)</jmp-link></li>
-            </ul>
-
-            <h4>Sobre el proyecto</h4>
-            Proyecto independiente creado para hacer más accesible la cultura catalana y fomentar el uso del catalán.<br>
-            La web no aloja los archivos de audio: las descargas provienen directamente de los recursos disponibles en la web oficial.
         }
 
         @if (m.en) {
             Web application for browsing and downloading all episodes of <i>El&nbsp;Búnquer</i> from Catalunya Ràdio, including older episodes that are not easily accessible on the official website.
 
-            <h4>The project</h4>
+            <h4 class="mt-4">The project</h4>
             The official website uses infinite scrolling that makes it difficult to access older episodes. In addition, the RSS feed only retains the 350 most recent episodes.<br>
             To solve this, I created an application that <b>indexes all available episodes and organizes them by season and type</b>, making it much faster to find and download episodes.<br>
             To obtain the data, I developed scripts with <b>Playwright</b> that scrape the official website and generate a JSON file containing episode information, including the title, season, description, and MP3 link.<br>
             Later, I used the <b>public 3Cat API</b> to supplement this information with additional data, such as images and the duration of each episode.
 
-            <h4>Features</h4>
+            <h4 class="mt-4">Features</h4>
             <ul>
                 <li>Browse all episodes, organized by season and type (regular, special, and best moments)</li>
                 <li>Flexible episode search that allows searching by any criteria</li>
@@ -115,21 +93,64 @@
                 <li>Backup of viewed episodes through export and import, making it easier to switch devices</li>
             </ul>
 
-            <h4>Technologies</h4>
+            <h4 class="mt-4">Technologies</h4>
             <ul>
                 <li>Angular, HTML, TypeScript, CSS</li>
                 <li>JSON files as a database for episode data</li>
                 <li>Playwright (scraping scripts)</li>
             </ul>
+        }
 
-            <h4>Links</h4>
-            <ul>
-                <li><jmp-link id="bunquer-web">Web</jmp-link></li>
-                <li><jmp-link id="bunquer-repositori-github">GitHub repository</jmp-link></li>
-                <li><jmp-link id="bunquer-programa-oficial-3cat">Official show (3Cat)</jmp-link></li>
-            </ul>
+        <section class="botons-pagines my-4">
+            <h4>
+                @if (m.ca) { Enllaços }
+                @if (m.es) { Enlaces }
+                @if (m.en) { Links }
+            </h4>
 
-            <h4>About the project</h4>
+            <div class="text-center mb-3">
+                <a href="https://bunquer-descarregador.github.io/" class="boto web" appMostrarAmbAnimacio matRipple>
+                    @if (m.ca) { Veure web }
+                    @if (m.es) { Visitar la web }
+                    @if (m.en) { View website }
+                </a>
+            </div>
+
+            <div class="d-flex flex-wrap gap-3 justify-content-center align-items-center">
+                <a href="https://github.com/bunquer-descarregador/bunquer-descarregador.github.io" class="boto amb-icona github" appMostrarAmbAnimacio matRipple>
+                    <span class="text">
+                        @if (m.ca) { Veure codi }
+                        @if (m.es) { Ver código }
+                        @if (m.en) { View code }
+                    </span>
+                    <img src="assets/_projects/bunquer/icons/github.png" alt="GitHub">
+                </a>
+                <a href="https://www.3cat.cat/3cat/el-bunquer/" class="boto amb-icona _3cat" appMostrarAmbAnimacio matRipple>
+                    <span class="text">
+                        @if (m.ca) { Programa oficial }
+                        @if (m.es) { Programa oficial }
+                        @if (m.en) { Official show }
+                    </span>
+                    <img src="assets/_projects/bunquer/icons/3cat-blanc.svg" alt="3Cat">
+                </a>
+            </div>
+
+            
+        </section>
+
+
+        @if (m.ca) {
+            <h4 class="mt-4">Sobre el projecte</h4>
+            Projecte independent creat per fer més accessible la cultura catalana i fomentar l'ús del català.<br>
+            La web no allotja els fitxers d'àudio: les descàrregues provenen directament dels recursos disponibles a la web oficial.
+        }
+        @if (m.es) {
+            <h4 class="mt-4">Sobre el proyecto</h4>
+            Proyecto independiente creado para hacer más accesible la cultura catalana y fomentar el uso del catalán.<br>
+            La web no aloja los archivos de audio: las descargas provienen directamente de los recursos disponibles en la web oficial.
+        }
+        @if (m.en) {
+            <h4 class="mt-4">About the project</h4>
             Independent project created to make Catalan culture more accessible and promote the use of the Catalan language.<br>
             The website does not host the audio files: downloads are served directly from resources available on the official website.
         }

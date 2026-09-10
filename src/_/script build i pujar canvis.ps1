@@ -1,1 +1,0 @@
-ng build; git add .; git commit -m "(from git)"; git push
