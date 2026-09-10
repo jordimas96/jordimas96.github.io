@@ -16,6 +16,43 @@
         }
     }
 
+    .funcionalitats {
+        .layout {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 1rem;
+
+            .funcionalitat.card {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+
+                width: 100%;
+                @include tablet { width: calc(50% - 0.5rem); }
+                @include pc { width: 17.5rem; }
+                
+                padding: 1rem;
+                border-radius: 2rem;
+
+                background-color: light-dark(hsla(346, 100%, 90%, 0.5), hsla(346, 100%, 34%, 0.5));
+
+                cursor: default;
+
+                i {
+                    font-size: 2rem;
+                    margin: 1rem;
+                }
+                .text {
+                    display: flex;
+                    align-items: center;
+                    flex: 1;
+                    text-align: center;
+                }
+            }
+        }
+    }
+
     section.botons-pagines {
         
         .boto.web {

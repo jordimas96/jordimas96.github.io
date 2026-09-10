@@ -14,94 +14,143 @@
         @if (m.ca) {
             Aplicació web per consultar i descarregar tots els capítols d'<i>El&nbsp;Búnquer</i> de Catalunya Ràdio, inclosos els més antics, que no són fàcilment accessibles des de la web oficial.
 
-            <h4 class="mt-4">El projecte</h4>
+            <h4 class="mt-5">El projecte</h4>
             La web oficial utilitza un sistema de scroll infinit que dificulta l'accés als capítols antics. A més, el feed RSS només conserva els 350 capítols més recents.<br>
             Per solucionar-ho, vaig crear una aplicació que <b>indexa tots els capítols disponibles i els organitza per temporades i tipus</b>, permetent localitzar-los i descarregar-los de molt més ràpidament.<br>
             Per obtenir les dades, vaig desenvolupar scripts amb <b>Playwright</b> que fan scraping de la web oficial i generen un fitxer JSON amb la informació dels capítols, incloent-hi el títol, la temporada, la descripció i l'enllaç a l'MP3.<br>
             Posteriorment, vaig utilitzar la <b>API pública de 3Cat</b> per completar aquesta informació amb dades addicionals, com ara les imatges i la durada dels capítols.
-
-            <h4 class="mt-4">Funcionalitats</h4>
-            <ul>
-                <li>Navegació per tots els capítols, organitzats per temporades i tipus (normals, especials i millors moments)</li>
-                <li>Cercador de capítols flexible que permet cercar per qualsevol criteri</li>
-                <li>Descàrrega individual de qualsevol capítol</li>
-                <li>Descàrrega múltiple de diversos capítols alhora</li>
-                <li>Vista prèvia de la mida total i del temps estimat de descàrrega</li>
-                <li>Barra de progrés amb informació sobre el temps restant</li>
-                <li>Gestió de descàrregues paral·leles per evitar saturar el servidor</li>
-                <li>Registre automàtic dels capítols vistos, visibles també a la barra de selecció múltiple</li>
-                <li>Còpia de seguretat dels capítols vistos mitjançant exportació i importació, per facilitar el canvi de dispositiu</li>
-            </ul>
-
-            <h4 class="mt-4">Tecnologies</h4>
-            <ul>
-                <li>Angular, HTML, TypeScript, CSS</li>
-                <li>Fitxers JSON com a base de dades dels capítols</li>
-                <li>Playwright (scripts de scraping)</li>
-            </ul>
         }
 
         @if (m.es) {
             Aplicación web para consultar y descargar todos los episodios de <i>El&nbsp;Búnquer</i> de Catalunya Ràdio, incluidos los más antiguos, que no son fácilmente accesibles desde la web oficial.
 
-            <h4 class="mt-4">El proyecto</h4>
+            <h4 class="mt-5">El proyecto</h4>
             La web oficial utiliza un sistema de scroll infinito que dificulta el acceso a los episodios antiguos. Además, el feed RSS solo conserva los 350 episodios más recientes.<br>
             Para solucionarlo, creé una aplicación que <b>indexa todos los episodios disponibles y los organiza por temporada y tipo</b>, permitiendo localizarlos y descargarlos de manera mucho más rápida.<br>
             Para obtener los datos, desarrollé scripts con <b>Playwright</b> que realizan scraping de la web oficial y generan un archivo JSON con la información de los episodios, incluyendo el título, la temporada, la descripción y el enlace al MP3.<br>
             Posteriormente, utilicé la <b>API pública de 3Cat</b> para completar esta información con datos adicionales, como las imágenes y la duración de los episodios.
-
-            <h4 class="mt-4">Funcionalidades</h4>
-            <ul>
-                <li>Navegación por todos los episodios, organizados por temporadas y tipos (normales, especiales y mejores momentos)</li>
-                <li>Buscador de episodios flexible que permite buscar por cualquier criterio</li>
-                <li>Descarga individual de cualquier episodio</li>
-                <li>Descarga múltiple de varios episodios a la vez</li>
-                <li>Vista prèvia del tamaño total y del tiempo estimado de descarga</li>
-                <li>Barra de progreso con información sobre el tiempo restante</li>
-                <li>Gestión de descargas paralelas para evitar saturar el servidor</li>
-                <li>Registro automático de los episodios vistos, visibles también en la barra de selección múltiple</li>
-                <li>Copia de seguridad de los episodios vistos mediante exportación e importación, para facilitar el cambio de dispositivo</li>
-            </ul>
-
-            <h4 class="mt-4">Tecnologías</h4>
-            <ul>
-                <li>Angular, HTML, TypeScript, CSS</li>
-                <li>Archivos JSON como base de datos de los episodios</li>
-                <li>Playwright (scripts de scraping)</li>
-            </ul>
         }
 
         @if (m.en) {
             Web application for browsing and downloading all episodes of <i>El&nbsp;Búnquer</i> from Catalunya Ràdio, including older episodes that are not easily accessible on the official website.
 
-            <h4 class="mt-4">The project</h4>
+            <h4 class="mt-5">The project</h4>
             The official website uses infinite scrolling that makes it difficult to access older episodes. In addition, the RSS feed only retains the 350 most recent episodes.<br>
             To solve this, I created an application that <b>indexes all available episodes and organizes them by season and type</b>, making it much faster to find and download episodes.<br>
             To obtain the data, I developed scripts with <b>Playwright</b> that scrape the official website and generate a JSON file containing episode information, including the title, season, description, and MP3 link.<br>
             Later, I used the <b>public 3Cat API</b> to supplement this information with additional data, such as images and the duration of each episode.
-
-            <h4 class="mt-4">Features</h4>
-            <ul>
-                <li>Browse all episodes, organized by season and type (regular, special, and best moments)</li>
-                <li>Flexible episode search that allows searching by any criteria</li>
-                <li>Download individual episodes</li>
-                <li>Download multiple episodes at once</li>
-                <li>Preview of the total size and estimated download time</li>
-                <li>Progress bar showing the remaining time</li>
-                <li>Parallel download management to avoid overloading the server</li>
-                <li>Automatic tracking of viewed episodes, also visible in the multi-selection bar</li>
-                <li>Backup of viewed episodes through export and import, making it easier to switch devices</li>
-            </ul>
-
-            <h4 class="mt-4">Technologies</h4>
-            <ul>
-                <li>Angular, HTML, TypeScript, CSS</li>
-                <li>JSON files as a database for episode data</li>
-                <li>Playwright (scraping scripts)</li>
-            </ul>
         }
 
-        <section class="botons-pagines my-4">
+        <section class="funcionalitats my-5">
+            <h4 class="mb-3">
+                @if (m.ca) { Funcionalitats }
+                @if (m.es) { Funcionalidades }
+                @if (m.en) { Features }
+            </h4>
+            <div class="layout">
+                <div class="funcionalitat card shadow-2-l">
+                    <i class="fa-solid fa-sitemap"></i>
+                    <div class="text">
+                        @if (m.ca) { Navegació per tots els capítols, organitzats per temporades i tipus (normals, especials i millors moments) }
+                        @if (m.es) { Navegación por todos los episodios, organizados por temporadas y tipos (normales, especiales y mejores momentos) }
+                        @if (m.en) { Browse all episodes, organized by season and type (regular, special, and best moments) }
+                    </div>
+                </div>
+                <div class="funcionalitat card shadow-2-l">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                    <div class="text">
+                        @if (m.ca) { Cercador de capítols flexible que permet cercar per qualsevol criteri }
+                        @if (m.es) { Buscador de episodios flexible que permite buscar por cualquier criterio }
+                        @if (m.en) { Flexible episode search that allows searching by any criteria }
+                    </div>
+                </div>
+                <div class="funcionalitat card shadow-2-l">
+                    <i class="fa-solid fa-download"></i>
+                    <div class="text">
+                        @if (m.ca) { Descàrrega individual de qualsevol capítol }
+                        @if (m.es) { Descarga individual de cualquier episodio }
+                        @if (m.en) { Download individual episodes }
+                    </div>
+                </div>
+                <div class="funcionalitat card shadow-2-l">
+                    <i class="fa-solid fa-angles-down"></i>
+                    <div class="text">
+                        @if (m.ca) { Descàrrega múltiple de diversos capítols alhora }
+                        @if (m.es) { Descarga múltiple de varios episodios a la vez }
+                        @if (m.en) { Download multiple episodes at once }
+                    </div>
+                </div>
+                <div class="funcionalitat card shadow-2-l">
+                    <i class="fa-solid fa-eye"></i>
+                    <div class="text">
+                        @if (m.ca) { Vista prèvia de la mida total i del temps estimat de descàrrega }
+                        @if (m.es) { Vista prèvia del tamaño total y del tiempo estimado de descarga }
+                        @if (m.en) { Preview of the total size and estimated download time }
+                    </div>
+                </div>
+                <div class="funcionalitat card shadow-2-l">
+                    <i class="fa-solid fa-bars-progress"></i>
+                    <div class="text">
+                        @if (m.ca) { Barra de progrés amb informació sobre el temps restant }
+                        @if (m.es) { Barra de progreso con información sobre el tiempo restante }
+                        @if (m.en) { Progress bar showing the remaining time }
+                    </div>
+                </div>
+                <div class="funcionalitat card shadow-2-l">
+                    <i class="fa-solid fa-server"></i>
+                    <div class="text">
+                        @if (m.ca) { Gestió de descàrregues paral·leles per evitar saturar el servidor }
+                        @if (m.es) { Gestión de descargas paralelas para evitar saturar el servidor }
+                        @if (m.en) { Parallel download management to avoid overloading the server }
+                    </div>
+                </div>
+                <div class="funcionalitat card shadow-2-l">
+                    <i class="fa-solid fa-list-check"></i>
+                    <div class="text">
+                        @if (m.ca) { Registre automàtic dels capítols vistos, visibles també a la barra de selecció múltiple }
+                        @if (m.es) { Registro automático de los episodios vistos, visibles también en la barra de selección múltiple }
+                        @if (m.en) { Automatic tracking of viewed episodes, also visible in the multi-selection bar }
+                    </div>
+                </div>
+                <div class="funcionalitat card shadow-2-l">
+                    <i class="fa-solid fa-file-export"></i>
+                    <div class="text">
+                        @if (m.ca) { Còpia de seguretat dels capítols vistos mitjançant exportació i importació, per facilitar el canvi de dispositiu }
+                        @if (m.es) { Copia de seguridad de los episodios vistos mediante exportación e importación, para facilitar el cambio de dispositivo }
+                        @if (m.en) { Backup of viewed episodes through export and import, making it easier to switch devices }
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="tecnologies my-5">
+            @if (m.ca) {
+                <h4>Tecnologies</h4>
+                <ul>
+                    <li>Angular, HTML, TypeScript, CSS</li>
+                    <li>Fitxers JSON com a base de dades dels capítols</li>
+                    <li>Playwright (scripts de scraping)</li>
+                </ul>
+            }
+            @if (m.es) {
+                <h4>Tecnologías</h4>
+                <ul>
+                    <li>Angular, HTML, TypeScript, CSS</li>
+                    <li>Archivos JSON como base de datos de los episodios</li>
+                    <li>Playwright (scripts de scraping)</li>
+                </ul>
+            }
+            @if (m.en) {
+                <h4>Technologies</h4>
+                <ul>
+                    <li>Angular, HTML, TypeScript, CSS</li>
+                    <li>JSON files as a database for episode data</li>
+                    <li>Playwright (scraping scripts)</li>
+                </ul>
+            }
+        </section>
+
+        <section class="botons-pagines my-5">
             <h4>
                 @if (m.ca) { Enllaços }
                 @if (m.es) { Enlaces }
