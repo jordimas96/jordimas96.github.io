@@ -3,7 +3,7 @@
     class="sidebar"
     [class.open]="open"
     [class.rail]="rail" [class.drawer]="!rail"
-    [class.mobil]="vistaMobil()"
+    [class.mobil]="isVistaMobil"
     style="--DRAWER-WIDTH: {{ DRAWER_WIDTH }}px; --RAIL-WIDTH: {{ RAIL_WIDTH }}px; --APPBAR-HEIGHT: {{ ls.alturaAppbar }}px;"
     >
 
@@ -90,6 +90,6 @@
     <div class="hiddenButtonBlockGoogleAnalytics" (click)="blockGoogleAnalyticsService.hiddenButtonClick()"></div>
 
 </div>
-@if (mobil && open) {
-    <div class="backdrop" [style.top.px]="ls.alturaAppbar" (pointerdown)="open = false"></div>
+@if (isVistaMobil && open) {
+    <div class="backdrop" [style.top.px]="ls.alturaAppbar" (pointerdown)="tancar()"></div>
 }

@@ -45,8 +45,15 @@ export class SelectorIdiomaComponent implements AfterViewInit {
 
         document.documentElement.lang = this.m.idioma;
         
-        if (target)
+        if (target) {
             localStorage.setItem("lang", this.m.idioma);
+
+            if (this.m.ca) navigator.vibrate([35, 50, 35, 50, 50]);
+            if (this.m.es) navigator.vibrate([35, 50, 35, 50, 50]);
+            if (this.m.en) navigator.vibrate([70, 35, 40]);
+
+
+        }
     }
 
 }

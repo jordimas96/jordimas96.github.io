@@ -64,6 +64,8 @@ export class DarkModeComponent {
 
         await Utils.wait(0);
 
+        navigator.vibrate(5);
+
         // 1. Transicio spread, expandir //
         $(".botoDarkMode")
             .addClass("transicio-1")
@@ -78,6 +80,8 @@ export class DarkModeComponent {
 
 
         await Utils.wait(700);
+
+        navigator.vibrate(5);
 
         // Acció canviar mode (instantani) //
         if (nomBoto == "dark") {

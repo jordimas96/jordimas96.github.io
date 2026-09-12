@@ -74,8 +74,10 @@ export class SidebarComponent implements OnInit, AfterViewInit {
     }
 
     toggle() {
-        if (this.vistaMobil())
-            this.open = !this.open;
+        if (this.isVistaMobil) {
+            if (this.open) this.tancar();
+            else this.obrir();
+        }
         else
             this.canviarVista();
     }
@@ -103,18 +105,17 @@ export class SidebarComponent implements OnInit, AfterViewInit {
     }
 
     obrir() {
-        // Get the middle point of scroll, for the transform-origin of the .page element //
-        const scroll = (document.documentElement.scrollTop + document.documentElement.clientHeight / 2) / document.documentElement.scrollHeight * 100;
-
         this.open = true;
-        $("#page, .index-mobil, .index-pc").css({ "transform-origin": `100% ${scroll}%`, "transform": "scale(0.95)" });
+        
+        navigator.vibrate?.([40, 10, 10]);
     }
     tancar() {
         this.open = false;
-        $("#page, .index-mobil, .index-pc").css({ "transform": "" });
+        
+        navigator.vibrate?.([10]);
     }
 
-    vistaMobil() {
+    get isVistaMobil() {
         return window.innerWidth < 992;
     }
 
@@ -132,12 +133,12 @@ export class SidebarComponent implements OnInit, AfterViewInit {
 
     @HostListener('window:resize')
     onResize() {
-        let valorMobilAbans = this.mobil;
+        let valorMobilAnterior = this.mobil;
 
-        this.mobil = this.vistaMobil();
+        this.mobil = this.isVistaMobil;
 
         // Si ha canviat //
-        if (this.mobil != valorMobilAbans) {
+        if (this.mobil != valorMobilAnterior) {
             if (this.mobil) {
                 this.open = false;
                 this.rail = false;
