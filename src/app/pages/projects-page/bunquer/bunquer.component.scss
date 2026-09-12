@@ -27,6 +27,7 @@
                 display: flex;
                 flex-direction: column;
                 align-items: center;
+                gap: 1rem;
 
                 width: 100%;
                 @include tablet { width: calc(50% - 0.5rem); }
@@ -41,11 +42,9 @@
 
                 i {
                     font-size: 2rem;
-                    margin: 1rem;
                 }
                 .text {
                     display: flex;
-                    align-items: center;
                     flex: 1;
                     text-align: center;
                 }
