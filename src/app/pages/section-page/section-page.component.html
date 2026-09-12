@@ -1,5 +1,5 @@
 <div id="page" class="page">
-    <!-- <div class="page-title mb-5" appMostrarAmbAnimacio>
+    <!-- <div class="page-title mb-5" jmpMostrarAmbAnimacio>
         @if (m.ca) { Secció }
         @if (m.es) { Sección }
         @if (m.en) { Section }
@@ -11,7 +11,7 @@
 
     <div class="content">
 
-        <button [routerLink]="urlGoBack" class="boto botoText botoBack my-3" appMostrarAmbAnimacio matRipple>
+        <button [routerLink]="urlGoBack" class="boto botoText botoBack my-3" jmpMostrarAmbAnimacio matRipple>
             <i class="fa-solid fa-chevron-left"></i>
             <!-- {{ getNameGoBack() }} -->
             @if (m.ca) { Enrere }
@@ -52,7 +52,7 @@
 
 
         <div class="mt-6">
-            <div class="titol h2 mb-4 text-center" appMostrarAmbAnimacio>
+            <div class="titol h2 mb-4 text-center" jmpMostrarAmbAnimacio>
                 @if (m.ca) { Experiència professional }
                 @if (m.es) { Experiencia profesional }
                 @if (m.en) { Professional experience }
@@ -66,7 +66,7 @@
                 @if (section != "tecnocom") {     <button class="boto tema-tecnocom"     routerLink="/section/tecnocom"             matRipple>Tecnocom</button> }
                 @if (section != "nexxia") {       <button class="boto tema-nexxia"       routerLink="/section/nexxia"               matRipple>Nexxia</button>   }
             </div>
-            <div class="titol h2 mb-4 text-center" appMostrarAmbAnimacio>
+            <div class="titol h2 mb-4 text-center" jmpMostrarAmbAnimacio>
                 @if (m.ca) { Projectes personals }
                 @if (m.es) { Proyectos personales }
                 @if (m.en) { Personal projects }

@@ -1,7 +1,7 @@
 import { AfterViewInit, Directive, ElementRef, OnDestroy, Renderer2 } from '@angular/core';
 
 @Directive({
-    selector: '[smoothMove]',
+    selector: '[jmpSmoothMove]',
     standalone: true
 })
 export class SmoothMoveDirective implements AfterViewInit, OnDestroy {

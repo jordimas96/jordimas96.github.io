@@ -32,7 +32,7 @@
             @for (repo of gs.repos; track repo.name) {
                 <div ngxMasonryItem class="col-12 col-md-6" [attr.aria-order]="repo.order" style="--hue: {{repo.cardHue}}deg">
 
-                    <div class="repo card-themed paleta-{{repo.cardHue}} {{repo.name}}" appMostrarAmbAnimacio matRipple>
+                    <div class="repo card-themed paleta-{{repo.cardHue}} {{repo.name}}" jmpMostrarAmbAnimacio matRipple>
                         <div class="header">
                             @if (repo.iconUrl) {
                                 <img class="logo" [src]="repo.iconUrl" [alt]="repo.title" (error)="onImgLogoError(repo)">
@@ -61,8 +61,8 @@
     </article>
 
     <div class="text-center d-flex justify-content-center gap-4 mt-5">
-        <jmp-story [urlId]="'17989504298801722'" [titol]="'Web projects'" img="assets/about-me/stories/github.jpg" appMostrarAmbAnimacio />
-        <jmp-story [urlId]="'18499569574034605'" [titol]="'Rounded Corners'" img="assets/about-me/stories/rounded-corners-directive.ico" appMostrarAmbAnimacio />
+        <jmp-story [urlId]="'17989504298801722'" [titol]="'Web projects'" img="assets/about-me/stories/github.jpg" jmpMostrarAmbAnimacio />
+        <jmp-story [urlId]="'18499569574034605'" [titol]="'Rounded Corners'" img="assets/about-me/stories/rounded-corners-directive.ico" jmpMostrarAmbAnimacio />
     </div>
 
     <!-- Skills -->

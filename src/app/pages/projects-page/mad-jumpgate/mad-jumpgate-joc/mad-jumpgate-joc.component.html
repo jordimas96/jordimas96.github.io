@@ -16,7 +16,7 @@
     </button>
     <div class="contingut" style="display:none;">
         @if (m.esPc) {
-            <div class="iframe-i-placeholder" appMostrarAmbAnimacio>
+            <div class="iframe-i-placeholder" jmpMostrarAmbAnimacio>
                 @if (carregarJoc) {
                     <iframe #iframeRef src="https://mad-jumpgate.github.io/webgl" width="1920" height="1080" scrolling="no"></iframe>
                 }
@@ -28,16 +28,16 @@
         } @else {
             <div class="missatge-nomes-pc">
                 @if (m.ca) {
-                    <div class="mb-2" appMostrarAmbAnimacio>Aquest joc només està disponible per a ordinador</div>
-                    <div appMostrarAmbAnimacio>Accedeix des d'un ordinador per jugar-hi</div>
+                    <div class="mb-2" jmpMostrarAmbAnimacio>Aquest joc només està disponible per a ordinador</div>
+                    <div jmpMostrarAmbAnimacio>Accedeix des d'un ordinador per jugar-hi</div>
                 }
                 @if (m.es) {
-                    <div class="mb-2" appMostrarAmbAnimacio>Este juego sólo está disponible para ordenador</div>
-                    <div appMostrarAmbAnimacio>Accede desde un ordenador para jugar</div>
+                    <div class="mb-2" jmpMostrarAmbAnimacio>Este juego sólo está disponible para ordenador</div>
+                    <div jmpMostrarAmbAnimacio>Accede desde un ordenador para jugar</div>
                 }
                 @if (m.en) {
-                    <div class="mb-2" appMostrarAmbAnimacio>This game is only available on desktop</div>
-                    <div appMostrarAmbAnimacio>Access from a computer to play</div>
+                    <div class="mb-2" jmpMostrarAmbAnimacio>This game is only available on desktop</div>
+                    <div jmpMostrarAmbAnimacio>Access from a computer to play</div>
                 }
             </div>
         }

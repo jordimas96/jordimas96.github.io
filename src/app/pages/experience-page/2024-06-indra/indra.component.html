@@ -84,7 +84,7 @@
 
 
             <div class="accordion">
-                <section class="card crisis" appMostrarAmbAnimacio>
+                <section class="card crisis" jmpMostrarAmbAnimacio>
                     <button class="boto-desplegable" (click)="toggleSeccio($event.currentTarget)" matRipple>
                         <div class="d-flex flex-column text-start ps-3">
                             <div class="titol">
@@ -199,7 +199,7 @@
                     </div>
                 </section>
 
-                <section class="card dintel" appMostrarAmbAnimacio>
+                <section class="card dintel" jmpMostrarAmbAnimacio>
                     <button class="boto-desplegable" (click)="toggleSeccio($event.currentTarget)" matRipple>
                         <div class="d-flex flex-column text-start ps-3">
                             <div class="titol">
@@ -215,11 +215,11 @@
 
                         <div class="metriques mt-3 mb-4">
                             <div class="metrica components">
-                                <div class="numero" appMostrarAmbAnimacio>
+                                <div class="numero" jmpMostrarAmbAnimacio>
                                     47
                                     <i class="fa-solid fa-puzzle-piece"></i>
                                 </div>
-                                <div class="text" appMostrarAmbAnimacio>
+                                <div class="text" jmpMostrarAmbAnimacio>
                                     @if (m.ca) { components reutilitzables }
                                     @if (m.es) { componentes reutilizables }
                                     @if (m.en) { reusable components }
@@ -227,10 +227,10 @@
                             </div>
 
                             <div class="metrica apps-ministeri">
-                                <div class="numero" appMostrarAmbAnimacio>
+                                <div class="numero" jmpMostrarAmbAnimacio>
                                     100 %
                                 </div>
-                                <div class="text" appMostrarAmbAnimacio>
+                                <div class="text" jmpMostrarAmbAnimacio>
                                     @if (m.ca) { de les apps oficials del ministeri <br> utilitzen la llibreria }
                                     @if (m.es) { de las apps oficiales del ministerio <br> utilizan la librería }
                                     @if (m.en) { of the ministry's official apps <br> use the library }
@@ -315,7 +315,7 @@
                             @if (m.en) { Interact with the buttons to see their behavior and the aesthetics of the library style guide }
                         </div>
 
-                        <section class="seccio-boto-dintel shadow-2-l" appMostrarAmbAnimacio>
+                        <section class="seccio-boto-dintel shadow-2-l" jmpMostrarAmbAnimacio>
                             <a [href]="linkDintelHome" class="rs dnt-button primary">
                                 @if (m.ca) { Llibreria Dintel }
                                 @if (m.es) { Librería Dintel }
@@ -330,7 +330,7 @@
                     </div>
                 </section>
 
-                <section class="card sede" appMostrarAmbAnimacio>
+                <section class="card sede" jmpMostrarAmbAnimacio>
                     <button class="boto-desplegable" (click)="toggleSeccio($event.currentTarget)" matRipple>
                         <div class="d-flex flex-column text-start ps-3">
                             <div class="titol">
@@ -399,22 +399,22 @@
 
         <div class="metriques my-5">
             <div class="metrica consulats">
-                <div class="numero" appMostrarAmbAnimacio>
+                <div class="numero" jmpMostrarAmbAnimacio>
                     183
                     <i class="fa-solid fa-building-flag"></i>
                 </div>
-                <div class="text" appMostrarAmbAnimacio>
+                <div class="text" jmpMostrarAmbAnimacio>
                     @if (m.ca) { oficines consulars <br> utilitzen el sistema }
                     @if (m.es) { oficinas consulares <br> utilizan el sistema }
                     @if (m.en) { consular offices <br> use the system }
                 </div>
             </div>
             <div class="metrica num-emergencies">
-                <div class="numero" appMostrarAmbAnimacio>
+                <div class="numero" jmpMostrarAmbAnimacio>
                     {{ emergencies.num.toLocaleString(m.idioma) }}
                     <i class="fa-solid fa-tower-broadcast"></i>
                 </div>
-                <div class="text" appMostrarAmbAnimacio>
+                <div class="text" jmpMostrarAmbAnimacio>
                     @if (m.ca) { emergències consulars <br> ateses mitjançant el sistema  }
                     @if (m.es) { emergencias consulares <br> atendidas mediante el sistema }
                     @if (m.en) { consular emergencies <br> handled through the system }
@@ -423,11 +423,11 @@
                 </div>
             </div>
             <!-- <div class="metrica diners">
-                <div class="numero" appMostrarAmbAnimacio [title]="textMetricaDiners">
+                <div class="numero" jmpMostrarAmbAnimacio [title]="textMetricaDiners">
                     @if (m.ca || m.es) { 115 M€ }
                     @if (m.en) { € 115M }
                 </div>
-                <div class="text" appMostrarAmbAnimacio>
+                <div class="text" jmpMostrarAmbAnimacio>
                     @if (m.ca) { inversió en el projecte <br> de digitalització consular }
                     @if (m.es) { inversión en el proyecto <br> de digitalización consular }
                     @if (m.en) { investment in the consular <br> digitalization project }
@@ -436,7 +436,7 @@
         </div>
 
 
-        <a #cartaRecomanacio class="rs pdf-parallax mt-5 mb-5" href="assets/_experience/indra/Carta Recomanacio Indra 2026.pdf" appMostrarAmbAnimacio>
+        <a #cartaRecomanacio class="rs pdf-parallax mt-5 mb-5" href="assets/_experience/indra/Carta Recomanacio Indra 2026.pdf" jmpMostrarAmbAnimacio>
             <img class="fons" src="assets/_experience/indra/fons-carta-recomanacio.jpg" [style.--translate-fons.px]="translateFons">
             <div class="text">
                 @if (m.ca) { Carta de recomanació }

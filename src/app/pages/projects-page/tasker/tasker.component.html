@@ -28,14 +28,14 @@
     </article>
 
     <div class="botons">
-        <a href="https://taskernet.com/?user=AS35m8mRntivpH1gAMw7ymN993wqjIo0bD6%2FSevikpiMYXceQJ%2BATvjOUxxvfzAbynKD" class="boto ambIcona" appMostrarAmbAnimacio matRipple>
+        <a href="https://taskernet.com/?user=AS35m8mRntivpH1gAMw7ymN993wqjIo0bD6%2FSevikpiMYXceQJ%2BATvjOUxxvfzAbynKD" class="boto ambIcona" jmpMostrarAmbAnimacio matRipple>
             @if (m.ca) { Els meus projectes }
             @if (m.es) { Mis proyectos }
             @if (m.en) { My projects }
             <img src="assets/_projects/tasker/tasker.png" alt="Tasker" class="logo tasker shadow-filter-1">
         </a>
 
-        <a href="https://play.google.com/store/apps/details?id=net.dinglisch.android.taskerm" class="boto ambIcona" appMostrarAmbAnimacio matRipple>
+        <a href="https://play.google.com/store/apps/details?id=net.dinglisch.android.taskerm" class="boto ambIcona" jmpMostrarAmbAnimacio matRipple>
             @if (m.ca) { Descarregar Tasker }
             @if (m.es) { Descargar Tasker }
             @if (m.en) { Download Tasker }
@@ -49,7 +49,7 @@
         @if (m.en) { Project gallery }
     </h4>
     <div class="imatges">
-        <figure class="task bateries-lockscreen" appMostrarAmbAnimacio>
+        <figure class="task bateries-lockscreen" jmpMostrarAmbAnimacio>
             <figcaption class="text">
                 @if (m.ca) {
                     <p>Aquest projecte segueix i registra els nivells de bateria de diversos telèfons. Consisteix en dos projectes:</p>
@@ -76,7 +76,7 @@
             <img class="media" src="assets/_projects/tasker/gallery/bateries-lockscreen.png">
         </figure>
 
-        <figure class="task bateries-ajustes-rapidos" appMostrarAmbAnimacio>
+        <figure class="task bateries-ajustes-rapidos" jmpMostrarAmbAnimacio>
             <figcaption class="text">
                 @if (m.ca) {
                     <p>Aquest projecte segueix i registra els nivells de bateria de diversos telèfons. Consisteix en dos projectes:</p>
@@ -103,7 +103,7 @@
             <img class="media" src="assets/_projects/tasker/gallery/bateries-ajustes-rapidos.png">
         </figure>
 
-        <figure class="task bateria-gran-lockscreen" appMostrarAmbAnimacio>
+        <figure class="task bateria-gran-lockscreen" jmpMostrarAmbAnimacio>
             <figcaption class="text">
                 @if (m.ca) {
                     Una tasca que mostra un indicador gran de nivell de bateria a la pantalla de bloqueig durant el mode Always On Display. El color passa de verd a groc i a vermell en el rang de 100 - 50 - 0.
@@ -118,7 +118,7 @@
             <img class="media" src="assets/_projects/tasker/gallery/bateria-gran-lockscreen.jpg">
         </figure>
 
-        <figure class="task segons-a-quick-settings" appMostrarAmbAnimacio>
+        <figure class="task segons-a-quick-settings" jmpMostrarAmbAnimacio>
             <figcaption class="text">
                 @if (m.ca) {
                     Aquesta tasca mostra els segons a la barra d'estat només quan obres el panell d'ajustaments ràpids. Quan el tanques, torna a mostrar només hora i minuts.<br>
@@ -136,7 +136,7 @@
             <video class="media" loop autoplay [muted]="'muted'"><source src="assets/_projects/tasker/gallery/segons-a-quick-settings.mp4" type="video/mp4"></video>
         </figure>
 
-        <figure class="task notificacio-amazfit-bateria-baixa" appMostrarAmbAnimacio>
+        <figure class="task notificacio-amazfit-bateria-baixa" jmpMostrarAmbAnimacio>
             <figcaption class="text">
                 @if (m.ca) {
                     La tasca de logs de bateria també pot llegir el nivell de càrrega dels dispositius Bluetooth. Aquesta tasca mostra una notificació vermella quan la bateria del meu rellotge baixa a menys del 20% i una notificació verda quan el dispositiu torna a estar completament carregat.
@@ -151,7 +151,7 @@
             <img class="media" src="assets/_projects/tasker/gallery/notificacio-amazfit-bateria-baixa.png">
         </figure>
 
-        <figure class="task notificacio-espai-utilitzat" appMostrarAmbAnimacio>
+        <figure class="task notificacio-espai-utilitzat" jmpMostrarAmbAnimacio>
             <figcaption class="text">
                 @if (m.ca) {
                     Tasca que mostra el percentatge d'espai d'emmagatzematge utilitzat al sistema Android, en intervals d'actualització personalitzables. També personalitzable entre MB i GB.
@@ -166,7 +166,7 @@
             <img class="media" src="assets/_projects/tasker/gallery/notificacio-espai-utilitzat.png">
         </figure>
 
-        <figure class="task temps-posposar" appMostrarAmbAnimacio>
+        <figure class="task temps-posposar" jmpMostrarAmbAnimacio>
             <figcaption class="text">
                 @if (m.ca) {
                     Canvia els temps de posposició de les notificacions pels que vulguis. Els temps de posposició de les notificacions són valors interns que Android no permet canviar a l'usuari. Aquesta tasca permet canviar aquests valors. La tasca s'executa cada cop que el sistema restableix automàticament els valors amb els per defecte.
@@ -181,7 +181,7 @@
             <img class="media" src="assets/_projects/tasker/gallery/temps-posposar.png">
         </figure>
 
-        <figure class="task bateries-al-galaxy-flip-5" appMostrarAmbAnimacio>
+        <figure class="task bateries-al-galaxy-flip-5" jmpMostrarAmbAnimacio>
             <figcaption class="text">
                 @if (m.ca) {
                     <p>Aquest projecte segueix i registra els nivells de bateria de diversos telèfons. Consisteix en dos projectes:</p>
@@ -210,7 +210,7 @@
     </div>
 
     <div class="text-center mt-5">
-        <jmp-story [urlId]="'18003839957777674'" [titol]="'Tasker'" img="assets/about-me/stories/tasker.png" appMostrarAmbAnimacio />
+        <jmp-story [urlId]="'18003839957777674'" [titol]="'Tasker'" img="assets/about-me/stories/tasker.png" jmpMostrarAmbAnimacio />
     </div>
 
     <!-- Skills -->

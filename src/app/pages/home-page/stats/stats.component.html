@@ -1,13 +1,13 @@
 <section id="stats">
 
-    <div class="titol white-title-shadow h2 mb-4 text-center" appMostrarAmbAnimacio>
+    <div class="titol white-title-shadow h2 mb-4 text-center" jmpMostrarAmbAnimacio>
         @if (m.ca) { Estadístiques }
         @if (m.es) { Estadísticas }
         @if (m.en) { Stats }
     </div>
 
     <div class="stats section">
-        <div class="stat card-themed bg-colored" appMostrarAmbAnimacio>
+        <div class="stat card-themed bg-colored" jmpMostrarAmbAnimacio>
             <div class="titol">
                 @if (m.ca) { Experiència total }
                 @if (m.es) { Experiencia total }
@@ -16,23 +16,23 @@
             <div class="valor" [innerHTML]="getText(Skills._TOTAL)"></div>
         </div>
 
-        <div class="stat card-themed bg-colored paleta-170" appMostrarAmbAnimacio>
+        <div class="stat card-themed bg-colored paleta-170" jmpMostrarAmbAnimacio>
             <div class="titol">Frontend</div>
             <div class="valor" [innerHTML]="getText(Skills.FRONTEND)"></div>
         </div>
-        <div class="stat card-themed bg-colored paleta-207" appMostrarAmbAnimacio>
+        <div class="stat card-themed bg-colored paleta-207" jmpMostrarAmbAnimacio>
             <div class="titol">Backend</div>
             <div class="valor" [innerHTML]="getText(Skills.BACKEND)"></div>
         </div>
-        <div class="stat card-themed bg-colored paleta-347" appMostrarAmbAnimacio>
+        <div class="stat card-themed bg-colored paleta-347" jmpMostrarAmbAnimacio>
             <div class="titol">Angular</div>
             <div class="valor" [innerHTML]="getText(Skills.ANGULAR)"></div>
         </div>
-        <div class="stat card-themed bg-colored paleta-260" appMostrarAmbAnimacio>
+        <div class="stat card-themed bg-colored paleta-260" jmpMostrarAmbAnimacio>
             <div class="titol">CSS</div>
             <div class="valor" [innerHTML]="getText(Skills.CSS)"></div>
         </div>
-        <div class="stat card-themed bg-colored paleta-53" appMostrarAmbAnimacio>
+        <div class="stat card-themed bg-colored paleta-53" jmpMostrarAmbAnimacio>
             <div class="titol">JavaScript</div>
             <div class="valor" [innerHTML]="getText(Skills.JAVASCRIPT)"></div>
         </div>

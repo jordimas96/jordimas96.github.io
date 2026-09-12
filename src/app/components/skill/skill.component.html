@@ -2,10 +2,10 @@
     <span class="tooltipExp {{ classe }}" (mouseenter)="correctTooltipPosition()">
         @if (!showTime) {
             <section class="{{ classe }}">
-                <div class="chip" appMostrarAmbAnimacio>{{ nom }}</div>
+                <div class="chip" jmpMostrarAmbAnimacio>{{ nom }}</div>
             </section>
         } @else {
-            <section class="showTime" appMostrarAmbAnimacio>
+            <section class="showTime" jmpMostrarAmbAnimacio>
                 <div class="chip">{{ nom }}</div>
                 <div class="barra">
                     <div class="nivell" [style.width.%]="getNivellBarra()"> {{ getTextCurt() }} </div>

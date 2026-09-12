@@ -2,7 +2,7 @@ import { Directive, ElementRef, OnDestroy, OnInit, Renderer2 } from '@angular/co
 import { Utils } from 'src/app/shared/utils';
 
 @Directive({
-    selector: '[appMostrarAmbAnimacio]',
+    selector: '[jmpMostrarAmbAnimacio]',
     standalone: true
 })
 export class MostrarAmbAnimacioDirective implements OnInit, OnDestroy {
@@ -77,7 +77,7 @@ export class MostrarAmbAnimacioDirective implements OnInit, OnDestroy {
         // Aconseguir la posició de l'element entre els seus germans i cosins //
         var currentElement = $(this.el.nativeElement);
         var sameLevelElements = currentElement
-            .add('[appMostrarAmbAnimacio]')
+            .add('[jmpMostrarAmbAnimacio]')
             .add(currentElement)
             .filter(function (i, e) {
                 // Comptar pares fins al segon nivell, o sigui germans i cosins //

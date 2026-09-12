@@ -3,13 +3,13 @@
     <h3 class="mb-4 text-center">{{ textTitol }}</h3>
 
     <div class="galeria">
-        <div class="item-visible" appMostrarAmbAnimacio>
+        <div class="item-visible" jmpMostrarAmbAnimacio>
             <ng-container *ngTemplateOutlet="relacioAspecteHoritzontal ? desktop : mobile" />
         </div>
 
         @if (!veureMes) {
             <div class="text-center mt-4">
-                <button class="boto boto-veure-altres-demos" (click)="veureMes = true" appMostrarAmbAnimacio matRipple>
+                <button class="boto boto-veure-altres-demos" (click)="veureMes = true" jmpMostrarAmbAnimacio matRipple>
                     {{ textVeureAltresDemos }}
                     <!-- <i class="fa-solid fa-chevron-down"></i> -->
                     @if (relacioAspecteHoritzontal) {
@@ -20,7 +20,7 @@
                 </button>
             </div>
         } @else {
-            <div class="items-ocults mt-5" appMostrarAmbAnimacio>
+            <div class="items-ocults mt-5" jmpMostrarAmbAnimacio>
                 <ng-container *ngTemplateOutlet="relacioAspecteHoritzontal ? mobile : desktop" />
 
                 <ng-container *ngTemplateOutlet="responsive" />
@@ -29,7 +29,7 @@
         
     </div>
 
-    <jmp-link [href]="m.env.assets + '/demos/in2art/'" class="mt-4" appMostrarAmbAnimacio>
+    <jmp-link [href]="m.env.assets + '/demos/in2art/'" class="mt-4" jmpMostrarAmbAnimacio>
         <i class="fa-solid fa-scale-balanced me-1"></i>
         @if (m.ca) { Ús legítim i propietat }
         @if (m.es) { Uso legítimo y propiedad }
@@ -40,7 +40,7 @@
 
 
 <ng-template #desktop>
-    <div class="item desktop" (click)="obrirModal('desktop')" matRipple appMostrarAmbAnimacio>
+    <div class="item desktop" (click)="obrirModal('desktop')" matRipple jmpMostrarAmbAnimacio>
         <div class="thumbnail">
             <img src="assets/_experience/in2art/demo/desktop-thumb.png" class="fons" alt="desktop thumbnail">
             <div class="icona">
@@ -57,7 +57,7 @@
 
 
 <ng-template #mobile>
-    <div class="item mobile" (click)="obrirModal('mobile')" matRipple appMostrarAmbAnimacio>
+    <div class="item mobile" (click)="obrirModal('mobile')" matRipple jmpMostrarAmbAnimacio>
         <div class="thumbnail">
             <img src="assets/_experience/in2art/demo/mobile-thumb.png" alt="mobile thumbnail">
             <div class="icona">
@@ -74,7 +74,7 @@
 
 
 <ng-template #responsive>
-    <div class="item responsive" (click)="obrirModal('responsive')" matRipple appMostrarAmbAnimacio>
+    <div class="item responsive" (click)="obrirModal('responsive')" matRipple jmpMostrarAmbAnimacio>
         <div class="thumbnail">
             <img src="assets/_experience/in2art/demo/responsive-thumb.png" alt="responsive thumbnail">
             <div class="icona">

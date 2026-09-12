@@ -52,7 +52,7 @@ export class LlenguatgesProgramacioComponent {
         if (sorted != undefined) this.sorted = sorted
         else this.sorted = !this.sorted;
 
-        // Enviem els divs molt lluny i els fem tornar per a llançar l'efecte de appMostrarAmbAnimacio //
+        // Enviem els divs molt lluny i els fem tornar per a llançar l'efecte de jmpMostrarAmbAnimacio //
         $("jmp-skill").css({ "transform": "translateY(-100000px)" });
         await Utils.wait(10);
 
