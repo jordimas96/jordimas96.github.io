@@ -1,4 +1,4 @@
-import { AfterViewInit, ElementRef, Injectable, OnInit } from "@angular/core";
+import { AfterViewInit, ElementRef, inject, Injectable, OnInit } from "@angular/core";
 import { ActivatedRoute, Router } from '@angular/router';
 
 // https://developerslogblog.wordpress.com/2019/04/23/how-to-use-angular-services-to-share-data-between-components/ //
@@ -7,6 +7,10 @@ import { ActivatedRoute, Router } from '@angular/router';
     providedIn: 'root'
 })
 export class LayoutService {
+    
+    public router = inject(Router);
+    public route = inject(ActivatedRoute);
+
     // Components //
     public appbar: HTMLElement;
     public sidebar: HTMLElement;
@@ -14,15 +18,7 @@ export class LayoutService {
     public index: HTMLElement;
 
     public paddingLeftPagina: number = 0;
-
-    constructor(
-        public router: Router,
-        public route: ActivatedRoute,
-    ) {
-        
-    }
-
-
+    
 
     public get alturaAppbar() {
         return this.appbar?.offsetHeight || 0;

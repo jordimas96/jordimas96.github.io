@@ -1,4 +1,4 @@
-import { Component, OnInit, ViewChild } from '@angular/core';
+import { Component, inject, OnInit, ViewChild } from '@angular/core';
 import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
 import { NgxMasonryComponent, NgxMasonryModule } from 'ngx-masonry';
 import { SkillComponent } from 'src/app/components/skill/skill.component';
@@ -22,17 +22,16 @@ import { GitHubService } from './github.service';
     ]
 })
 export class GithubProjectsComponent implements OnInit {
+    
+    public m = inject(MainService);
+    public ts = inject(ThemeService);
+    public gs = inject(GitHubService);
+    
     Skills = Skills;
 
     @ViewChild("masonry") masonry: NgxMasonryComponent;
 
     public masonryReady = false;
-
-    constructor(
-        public m: MainService,
-        public ts: ThemeService,
-        public gs: GitHubService,
-    ) { }
 
     async ngOnInit() {
         this.gs.carregarInfoProjects();

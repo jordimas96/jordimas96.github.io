@@ -1,11 +1,10 @@
-import { AfterViewInit, Component, ElementRef, HostListener, OnInit, ViewChild } from '@angular/core';
+import { AfterViewInit, Component, ElementRef, HostListener, inject, ViewChild } from '@angular/core';
 import { SelectorIdiomaComponent } from 'src/app/components/selector-idioma/selector-idioma.component';
 import { LayoutService } from 'src/app/services/layout.service';
 import { MainService } from 'src/app/services/main.service';
 import { ThemeService } from 'src/app/services/theme.service';
 import { SharedImports } from 'src/app/shared/imports';
 import { NavegacioTabComponent } from './navegacio-tab/navegacio-tab.component';
-import { Utils } from 'src/app/shared/utils';
 
 
 @Component({
@@ -20,15 +19,13 @@ import { Utils } from 'src/app/shared/utils';
 })
 export class AppbarComponent implements AfterViewInit {
 
+    public m = inject(MainService);
+    public ts = inject(ThemeService);
+    public ls = inject(LayoutService);
+
     @ViewChild('appbar') appbar: ElementRef;
 
-    constructor(
-        public m: MainService,
-        public ts: ThemeService,
-        public ls: LayoutService,
-    ) {
-        m.appbar = this;
-    }
+    constructor() { this.m.appbar = this; }
 
     ngAfterViewInit() {
         this.ls.appbar = this.appbar.nativeElement;

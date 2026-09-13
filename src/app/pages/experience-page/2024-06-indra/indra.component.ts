@@ -1,4 +1,4 @@
-import { Component, ElementRef, HostListener, ViewChild } from '@angular/core';
+import { Component, ElementRef, HostListener, inject, ViewChild } from '@angular/core';
 import { MatDialog, MatDialogConfig } from '@angular/material/dialog';
 import { SkillComponent } from 'src/app/components/skill/skill.component';
 import { Skills } from 'src/app/enums/skills.enum';
@@ -18,6 +18,11 @@ import { IframeTemplateComponent } from './iframe-template/iframe-template.compo
     ]
 })
 export class IndraComponent {
+    
+    public m = inject(MainService);
+    public ts = inject(ThemeService);
+    private dialog = inject(MatDialog);
+    
     Skills = Skills;
 
     @ViewChild("cartaRecomanacio") cartaRecomanacio: ElementRef<HTMLAnchorElement>;
@@ -25,11 +30,7 @@ export class IndraComponent {
 
     public emergencies: { num, anyInici, anyFi };
 
-    constructor(
-        public m: MainService,
-        public ts: ThemeService,
-        private dialog: MatDialog
-    ) {
+    constructor() {
         this.calcularMetricaNumEmergencies();
     }
 

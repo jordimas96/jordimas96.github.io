@@ -1,4 +1,4 @@
-import { Injectable } from "@angular/core";
+import { inject, Injectable } from "@angular/core";
 import { Utils } from 'src/app/shared/utils';
 import { MainService } from "./main.service";
 
@@ -7,11 +7,13 @@ import { MainService } from "./main.service";
 })
 export class BlockGoogleAnalyticsService {
 
+    private m = inject(MainService);
+
     private readonly KEY = "googleAnalyticsBlocked";
     private isBlocked = false;
 
-    constructor(private m: MainService) {
-        if (m.debug || Utils.getFlag(this.KEY)) {
+    constructor() {
+        if (this.m.debug || Utils.getFlag(this.KEY)) {
             this.block();
         }
 

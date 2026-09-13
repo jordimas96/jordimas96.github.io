@@ -1,5 +1,4 @@
-import { Component } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import { Component, inject } from '@angular/core';
 import { MainService } from 'src/app/services/main.service';
 import { Utils } from 'src/app/shared/utils';
 
@@ -10,7 +9,7 @@ import { Utils } from 'src/app/shared/utils';
 })
 export class PageComponent {
 
-    constructor(public m: MainService) { }
+    public m = inject(MainService);
 
     async ngOnInit() {
 

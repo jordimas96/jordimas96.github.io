@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
 import { SkillComponent } from 'src/app/components/skill/skill.component';
 import { Skills } from 'src/app/enums/skills.enum';
 import { MainService } from 'src/app/services/main.service';
@@ -14,11 +14,12 @@ import { SharedImports } from 'src/app/shared/imports';
     ]
 })
 export class EvoraComponent {
+
+    public m = inject(MainService);
+
     Skills = Skills;
 
     public readonly rutaImgMaquina = "assets/_experience/evora/maquina-evora.png";
     public readonly rutaImgMigracio = "assets/_experience/evora/angular-12-a-17.png";
-
-    constructor(public m: MainService) { }
 
 }

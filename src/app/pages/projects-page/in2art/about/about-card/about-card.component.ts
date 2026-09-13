@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
 import { MainService } from 'src/app/services/main.service';
 
 @Component({
@@ -7,5 +7,7 @@ import { MainService } from 'src/app/services/main.service';
     styleUrl: './about-card.component.scss'
 })
 export class AboutCardComponent {
-    constructor(public m: MainService) { }
+
+    public m = inject(MainService);
+
 }

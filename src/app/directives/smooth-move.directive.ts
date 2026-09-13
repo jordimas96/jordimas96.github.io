@@ -1,14 +1,16 @@
-import { AfterViewInit, Directive, ElementRef, OnDestroy, Renderer2 } from '@angular/core';
+import { AfterViewInit, Directive, ElementRef, inject, OnDestroy, Renderer2 } from '@angular/core';
 
 @Directive({
     selector: '[jmpSmoothMove]',
     standalone: true
 })
 export class SmoothMoveDirective implements AfterViewInit, OnDestroy {
+
+    private el = inject(ElementRef);
+    private renderer = inject(Renderer2);
+
     private duplicateElement: HTMLElement;
     private mutationObserver: MutationObserver;
-
-    constructor(private el: ElementRef, private renderer: Renderer2) { }
 
     ngAfterViewInit() {
         this.createDuplicate();

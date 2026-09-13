@@ -1,4 +1,4 @@
-import { Injectable } from "@angular/core";
+import { inject, Injectable } from "@angular/core";
 import { ProviderService } from "src/app/services/provider.service";
 import { Utils } from "src/app/shared/utils";
 
@@ -8,16 +8,12 @@ import { Utils } from "src/app/shared/utils";
     providedIn: 'root'
 })
 export class GitHubService {
+
+    public ps = inject(ProviderService);
     
     public readonly USE_CACHE = true;
     
     public repos: Array<any>;
-
-    constructor(
-        public ps: ProviderService,
-    ) {
-        
-    }
 
     async carregarInfoProjects() {
 

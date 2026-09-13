@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
 import { LinkComponent } from 'src/app/components/link/link.component';
 import { MostrarAmbAnimacioDirective } from "src/app/directives/mostrar-amb-animacio.directive";
 import { MainService } from 'src/app/services/main.service';
@@ -11,9 +11,9 @@ import { AboutCardComponent } from './about-card/about-card.component';
     imports: [AboutCardComponent, LinkComponent, MostrarAmbAnimacioDirective]
 })
 export class AboutComponent {
+    
+    public m = inject(MainService);
 
     public linkPC = "https://youtu.be/d8kB5c2RFes?t=607";
     public linkMobil = "https://youtu.be/nY2EHO3zcnw?t=449";
-
-    constructor(public m: MainService) { }
 }

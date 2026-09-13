@@ -1,4 +1,4 @@
-import { Injectable } from "@angular/core";
+import { inject, Injectable } from "@angular/core";
 import { MatSnackBar, MatSnackBarConfig } from '@angular/material/snack-bar';
 import { ToastTemplateComponent } from "src/app/components/toast-template/toast-template.component";
 
@@ -8,7 +8,7 @@ import { ToastTemplateComponent } from "src/app/components/toast-template/toast-
 })
 export class ToastService {
 
-    constructor(private snackBar: MatSnackBar) { }
+    private snackBar = inject(MatSnackBar);
 
     open(text) {
         let config: MatSnackBarConfig = {

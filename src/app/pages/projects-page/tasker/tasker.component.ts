@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, inject, OnInit } from '@angular/core';
 import { SkillComponent } from 'src/app/components/skill/skill.component';
 import { Skills } from 'src/app/enums/skills.enum';
 import { StoryComponent } from 'src/app/pages/about-me-page/stories/story/story.component';
@@ -16,9 +16,10 @@ import { SharedImports } from 'src/app/shared/imports';
     ]
 })
 export class TaskerComponent implements OnInit {
-    Skills = Skills;
 
-    constructor(public m: MainService) { }
+    public m = inject(MainService);
+
+    Skills = Skills;
 
     ngOnInit() {
         document.querySelectorAll("#tasker video").forEach(e => (<HTMLVideoElement>e).play());

@@ -1,4 +1,4 @@
-import { Component, ElementRef } from '@angular/core';
+import { Component, ElementRef, inject } from '@angular/core';
 import { RouterLink } from '@angular/router';
 import { IconesContacteComponent } from 'src/app/components/icones-contacte/icones-contacte.component';
 import { Skills } from 'src/app/enums/skills.enum';
@@ -17,6 +17,11 @@ import { SharedImports } from 'src/app/shared/imports';
     ]
 })
 export class BioComponent {
+
+    public m = inject(MainService);
+    public rootElement = inject(ElementRef);
+    public exp = inject(ExperienceCalculatorService);
+    
     Skills = Skills;
 
     public salutacions = {
@@ -24,16 +29,6 @@ export class BioComponent {
         es: ["¡Buenos días!", "¡Buenas tardes!", "¡Buenas noches!"],
         en: ["Good morning!", "Good afternoon!", "Good evening!"],
     };
-
-    constructor(
-        public m: MainService,
-        public rootElement: ElementRef,
-        public exp: ExperienceCalculatorService
-    ) { }
-
-    async ngOnInit() { }
-
-
 
     getSalutacioSegonsHora() {
         let horaActual = new Date().getHours();

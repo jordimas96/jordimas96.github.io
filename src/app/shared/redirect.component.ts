@@ -1,11 +1,13 @@
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
 import { Router } from '@angular/router';
 import { SECCIONS } from './seccions';
 
 @Component({ template: '' })
 export class RedirectComponent {
 
-    constructor(private router: Router) {
+    private router = inject(Router);
+
+    constructor() {
 
         const url = this.router.url.replace(/^\//, '');
 

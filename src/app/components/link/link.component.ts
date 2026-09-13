@@ -1,4 +1,4 @@
-import { Component, ElementRef, Input, OnChanges, ViewChild } from '@angular/core';
+import { Component, ElementRef, inject, Input, OnChanges, ViewChild } from '@angular/core';
 import { MainService } from 'src/app/services/main.service';
 import { Links } from './links';
 
@@ -9,6 +9,8 @@ import { Links } from './links';
     imports: []
 })
 export class LinkComponent implements OnChanges {
+
+    private m = inject(MainService);
 
     @ViewChild('a') a: ElementRef;
 
@@ -21,9 +23,6 @@ export class LinkComponent implements OnChanges {
     public links = Links.links;
 
     public hrefCalculat;
-
-
-    constructor(private m: MainService) { }
     
     ngOnChanges() {
         this.hrefCalculat = this.getHref();

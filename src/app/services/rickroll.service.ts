@@ -1,4 +1,4 @@
-import { Injectable } from "@angular/core";
+import { inject, Injectable } from "@angular/core";
 import { MainService } from "./main.service";
 import { ToastService } from "./toast.service";
 
@@ -6,18 +6,15 @@ import { ToastService } from "./toast.service";
     providedIn: 'root'
 })
 export class RickrollService {
+        
+    public m = inject(MainService);
+    private toast = inject(ToastService);
 
     readonly TOTAL_CLICKS = 7;
 
     private clicksLeft = this.TOTAL_CLICKS;
     private lastClickTime: number = 0;
     private cooldown = false;
-
-    constructor(
-        public m: MainService,
-        private toast: ToastService,
-    ) { }
-
 
     public click() {
         if (this.cooldown) return;

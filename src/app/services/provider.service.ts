@@ -1,14 +1,13 @@
-import { Injectable } from '@angular/core';
+import { inject, Injectable } from '@angular/core';
 import { PeticioService } from 'src/app/services/peticio.service';
 
 @Injectable({
     providedIn: 'root'
 })
 export class ProviderService {
-
-    constructor(public peticio: PeticioService) { }
-
-
+    
+    public peticio = inject(PeticioService);
+    
     // Other projects //
     public getRepositorisGitHubProjects() {
 

@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, inject, Input } from '@angular/core';
 import { MatRipple } from '@angular/material/core';
 import { RouterLink } from '@angular/router';
 import { MainService } from 'src/app/services/main.service';
@@ -17,10 +17,10 @@ import { SECCIONS } from 'src/app/shared/seccions';
 })
 export class PreviewCaseStudyComponent {
 
+    public m = inject(MainService);
+
     @Input() id: string;
     @Input() pagina: string;
-
-    constructor(public m: MainService) { }
 
     ngOnInit() {
         // Si no tenim pàgina, l'intentem deduir //

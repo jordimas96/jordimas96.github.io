@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
 import { SkillComponent } from 'src/app/components/skill/skill.component';
 import { Skills } from 'src/app/enums/skills.enum';
 import { StoryComponent } from 'src/app/pages/about-me-page/stories/story/story.component';
@@ -20,12 +20,13 @@ import { MadJumpgateJocComponent } from './mad-jumpgate-joc/mad-jumpgate-joc.com
     ]
 })
 export class MadJumpgateComponent {
+    
+    public m = inject(MainService);
+
     Skills = Skills;
 
-    constructor(public m: MainService) { }
-
-    textPlayInBrowser() { return ["Jugar al navegador", "Jugar en el navegador", "Play in browser"][this.m.idiomaIndex]; }
-    textPlayInItchIo() { return ["Jugar a itch.io", "Jugar en itch.io", "Play on itch.io"][this.m.idiomaIndex]; }
-    textDownloadForWindows() { return ["Descarregar per a Windows", "Descargar para Windows", "Download for Windows"][this.m.idiomaIndex]; }
-    textGameplayOnYoutube() { return ["Gameplay a YouTube", "Gameplay en YouTube", "Gameplay on YouTube"][this.m.idiomaIndex]; }
+    get textPlayInBrowser() { return ["Jugar al navegador", "Jugar en el navegador", "Play in browser"][this.m.idiomaIndex]; }
+    get textPlayInItchIo() { return ["Jugar a itch.io", "Jugar en itch.io", "Play on itch.io"][this.m.idiomaIndex]; }
+    get textDownloadForWindows() { return ["Descarregar per a Windows", "Descargar para Windows", "Download for Windows"][this.m.idiomaIndex]; }
+    get textGameplayOnYoutube() { return ["Gameplay a YouTube", "Gameplay en YouTube", "Gameplay on YouTube"][this.m.idiomaIndex]; }
 }

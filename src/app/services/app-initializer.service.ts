@@ -7,9 +7,6 @@ export class AppInitializerService {
 
     private readonly FONS_URL = "assets/background/boles.webp";
 
-    constructor() { }
-
-
     async init() {
 
         let backgroundImageLoaded = this.carregarImatgeFons();

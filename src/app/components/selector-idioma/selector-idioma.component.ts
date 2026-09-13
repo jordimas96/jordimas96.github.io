@@ -1,4 +1,4 @@
-import { AfterViewInit, Component, ElementRef, ViewChild } from '@angular/core';
+import { AfterViewInit, Component, ElementRef, inject, ViewChild } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { MainService } from 'src/app/services/main.service';
 
@@ -12,9 +12,9 @@ import { MainService } from 'src/app/services/main.service';
 })
 export class SelectorIdiomaComponent implements AfterViewInit {
 
-    @ViewChild("selectorIdioma") selectorIdioma: ElementRef;
+    public m = inject(MainService);
 
-    constructor(public m: MainService) { }
+    @ViewChild("selectorIdioma") selectorIdioma: ElementRef;
 
     ngAfterViewInit() {
         this.establirIdiomaDefecte();

@@ -1,4 +1,4 @@
-import { Component, ElementRef, HostListener, ViewChild } from '@angular/core';
+import { Component, ElementRef, HostListener, inject, ViewChild } from '@angular/core';
 import { MainService } from 'src/app/services/main.service';
 import { SharedImports } from 'src/app/shared/imports';
 import { Utils } from 'src/app/shared/utils';
@@ -12,6 +12,8 @@ import { Utils } from 'src/app/shared/utils';
     ]
 })
 export class MadJumpgateGameplayComponent {
+    
+    public m = inject(MainService);
 
     @ViewChild('iframeRef') iframeRef: ElementRef;
 
@@ -19,8 +21,6 @@ export class MadJumpgateGameplayComponent {
 
     public placeholderWidth = 0;
     public placeholderHeight = 0;
-
-    constructor(public m: MainService) { }
 
     ngOnInit() {
         this.posarIframeDinsLimits();

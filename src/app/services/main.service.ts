@@ -1,4 +1,4 @@
-import { Injectable } from "@angular/core";
+import { inject, Injectable } from "@angular/core";
 import { DomSanitizer } from "@angular/platform-browser";
 import { ActivatedRoute, NavigationEnd, Router } from '@angular/router';
 import { GoogleAnalyticsService } from 'ngx-google-analytics';
@@ -15,6 +15,12 @@ import { environment } from "src/environments/environment";
     providedIn: 'root'
 })
 export class MainService {
+    
+    public router = inject(Router);
+    public route = inject(ActivatedRoute);
+    public gas = inject(GoogleAnalyticsService);
+    private sanitizer = inject(DomSanitizer);
+
     // Components //
     public appbar!: AppbarComponent;
     public sidebar: SidebarComponent;
@@ -38,12 +44,7 @@ export class MainService {
     public es: boolean;
     public en: boolean;
 
-    constructor(
-        public router: Router,
-        public route: ActivatedRoute,
-        public gas: GoogleAnalyticsService,
-        private sanitizer: DomSanitizer,
-    ) {
+    constructor() {
         this.u = Utils;
 
 

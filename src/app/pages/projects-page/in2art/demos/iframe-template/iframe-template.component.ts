@@ -1,4 +1,4 @@
-import { AfterViewInit, Component, ElementRef, HostListener, inject, OnDestroy, OnInit, ViewChild } from '@angular/core';
+import { AfterViewInit, Component, ElementRef, HostListener, inject, ViewChild } from '@angular/core';
 import { MAT_DIALOG_DATA, MatDialogContent, MatDialogRef } from '@angular/material/dialog';
 import { SharedImports } from 'src/app/shared/imports';
 
@@ -11,17 +11,14 @@ import { SharedImports } from 'src/app/shared/imports';
         MatDialogContent
     ]
 })
-export class IframeTemplateComponent implements OnInit, AfterViewInit {
+export class IframeTemplateComponent implements AfterViewInit {
+
     public data = inject(MAT_DIALOG_DATA);
     readonly dialogRef = inject(MatDialogRef<IframeTemplateComponent>);
 
     @ViewChild('contenidor') contenidor: ElementRef;
     @ViewChild('iframe') iframe: ElementRef;
     public direccioALimitar = "vertical";
-
-    constructor() { }
-
-    ngOnInit() { }
 
     ngAfterViewInit() {
         this.recalcularDireccioFlex();

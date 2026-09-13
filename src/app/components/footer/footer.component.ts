@@ -1,4 +1,4 @@
-import { AfterViewInit, Component, ElementRef, OnInit, ViewChild } from '@angular/core';
+import { AfterViewInit, Component, ElementRef, inject, OnInit, ViewChild } from '@angular/core';
 import { LayoutService } from 'src/app/services/layout.service';
 import { MainService } from 'src/app/services/main.service';
 import { RickrollService } from 'src/app/services/rickroll.service';
@@ -13,7 +13,12 @@ import { SharedImports } from 'src/app/shared/imports';
         ...SharedImports,
     ]
 })
-export class FooterComponent implements OnInit, AfterViewInit{
+export class FooterComponent implements OnInit, AfterViewInit {
+    
+    public m = inject(MainService);
+    public rootElement = inject(ElementRef);
+    public rr = inject(RickrollService);
+    public ls = inject(LayoutService);
 
     @ViewChild("footer") footerRef: ElementRef;
 
@@ -21,14 +26,7 @@ export class FooterComponent implements OnInit, AfterViewInit{
     public bateria = 100;
     public carregant = true;
 
-    constructor(
-        public m: MainService,
-        public rootElement: ElementRef,
-        public rr: RickrollService,
-        public ls: LayoutService,
-    ) {
-        m.footer = this;
-    }
+    constructor() { this.m.footer = this; }
 
     ngOnInit() {
 

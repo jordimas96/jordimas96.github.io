@@ -1,4 +1,4 @@
-import { AfterViewInit, Component, ElementRef, HostListener, OnInit } from '@angular/core';
+import { AfterViewInit, Component, ElementRef, HostListener, inject, OnInit } from '@angular/core';
 import { RouterLink } from '@angular/router';
 import { MainService } from 'src/app/services/main.service';
 import { SharedImports } from 'src/app/shared/imports';
@@ -22,17 +22,17 @@ enum Pagines {
 })
 export class BotonsNavegacioPaginaComponent implements OnInit, AfterViewInit {
 
+    public m = inject(MainService);
+    private el = inject(ElementRef);
+        
     public botons: any[] = [];
 
     public carregat = false;
     public scrollAlFinalDePagina = false;
 
-    constructor(
-        public m: MainService,
-        private el: ElementRef,
-    ) {
+    constructor() {
         if (this.fabMode)
-            el.nativeElement.style.visibility = "hidden";
+            this.el.nativeElement.style.visibility = "hidden";
     }
 
     public readonly llistaBotons = {

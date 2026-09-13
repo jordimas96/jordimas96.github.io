@@ -1,4 +1,4 @@
-import { Injectable } from "@angular/core";
+import { inject, Injectable } from "@angular/core";
 import { Skills } from 'src/app/enums/skills.enum';
 import { MainService } from "./main.service";
 
@@ -6,6 +6,8 @@ import { MainService } from "./main.service";
     providedIn: 'root'
 })
 export class ExperienceCalculatorService {
+
+    public m = inject(MainService);
 
     public readonly experiencia = [
         { // DSET (Pràctiques) //
@@ -151,7 +153,7 @@ export class ExperienceCalculatorService {
 
     public skills: any;
 
-    constructor(public m: MainService) {
+    constructor() {
 
         // Invertir ordre dates //
         this.experiencia.forEach(empresa => empresa.dates = empresa.dates.map(data => data.split("-").reverse().join("-")));

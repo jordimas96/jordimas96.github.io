@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, inject, OnInit } from '@angular/core';
 import { MainService } from 'src/app/services/main.service';
 import { SharedImports } from 'src/app/shared/imports';
 
@@ -11,10 +11,8 @@ import { SharedImports } from 'src/app/shared/imports';
         ...SharedImports,
     ]
 })
-export class IdiomesComponent implements OnInit {
+export class IdiomesComponent {
 
-    constructor(public m: MainService) { }
-
-    ngOnInit(): void { }
+    public m = inject(MainService);
 
 }

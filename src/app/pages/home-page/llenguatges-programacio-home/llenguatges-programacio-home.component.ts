@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
 import { SkillComponent } from 'src/app/components/skill/skill.component';
 import { Skills } from 'src/app/enums/skills.enum';
 import { ExperienceCalculatorService } from 'src/app/services/experience-calculator.service';
@@ -17,16 +17,17 @@ import { Utils } from 'src/app/shared/utils';
     ]
 })
 export class LlenguatgesProgramacioComponent {
+    
+    public m = inject(MainService);
+    public exp = inject(ExperienceCalculatorService);
+    public ls = inject(LayoutService);
+    
     Skills = Skills;
 
     public showTime: boolean = false;
     public sorted = false;
 
-    constructor(
-        public m: MainService,
-        public exp: ExperienceCalculatorService,
-        public ls: LayoutService,
-    ) {
+    constructor() {
         this.showTime = !!Utils.getFlag("showTime");
     }
 

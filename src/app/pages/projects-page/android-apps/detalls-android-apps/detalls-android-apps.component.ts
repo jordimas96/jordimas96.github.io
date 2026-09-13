@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
 import { RouterLink } from '@angular/router';
 import $ from 'jquery';
 import { SkillComponent } from 'src/app/components/skill/skill.component';
@@ -17,11 +17,10 @@ import { SharedImports } from 'src/app/shared/imports';
     ]
 })
 export class DetallsAndroidAppsComponent {
+    
+    public m = inject(MainService);
+
     Skills = Skills;
-
-    constructor(public m: MainService) { }
-
-
 
     getAmazonLink_breakingBall() {
         const com = this.m.en ? "com" : "es";

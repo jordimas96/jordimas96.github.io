@@ -1,4 +1,4 @@
-import { AfterViewInit, Component, ElementRef, HostListener, ViewChild } from '@angular/core';
+import { AfterViewInit, Component, ElementRef, HostListener, inject, ViewChild } from '@angular/core';
 import { SkillComponent } from 'src/app/components/skill/skill.component';
 import { Skills } from 'src/app/enums/skills.enum';
 import { MainService } from 'src/app/services/main.service';
@@ -14,12 +14,12 @@ import { SharedImports } from 'src/app/shared/imports';
     ]
 })
 export class NexxiaComponent implements AfterViewInit {
+    public m = inject(MainService);
+
     Skills = Skills;
 
     @ViewChild("cartaRecomanacio") cartaRecomanacio: ElementRef<HTMLAnchorElement>;
     public translateFons = 0;
-
-    constructor(public m: MainService) { }
 
     ngAfterViewInit() {
         setTimeout(() => this.onScroll(), 600);

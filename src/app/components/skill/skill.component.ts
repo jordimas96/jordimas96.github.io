@@ -1,4 +1,4 @@
-import { Component, ElementRef, Input, OnInit, Renderer2 } from '@angular/core';
+import { Component, ElementRef, inject, Input, OnInit, Renderer2 } from '@angular/core';
 import { Skills } from 'src/app/enums/skills.enum';
 import { ExperienceCalculatorService } from 'src/app/services/experience-calculator.service';
 import { MainService } from 'src/app/services/main.service';
@@ -14,6 +14,12 @@ import { Utils } from 'src/app/shared/utils';
     ]
 })
 export class SkillComponent implements OnInit {
+    
+    public m = inject(MainService);
+    private el = inject(ElementRef);
+    private renderer = inject(Renderer2);
+    private exp = inject(ExperienceCalculatorService);
+
 
     @Input("skill") nom: Skills;
     @Input("showTime") showTime: boolean = false;
@@ -21,13 +27,6 @@ export class SkillComponent implements OnInit {
     public skill;
     public clau: string;
     public classe: string;
-
-    constructor(
-        public m: MainService,
-        private el: ElementRef,
-        private renderer: Renderer2,
-        private exp: ExperienceCalculatorService
-    ) { }
 
     ngOnInit(): void {
 

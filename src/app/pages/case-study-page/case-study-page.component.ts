@@ -1,9 +1,8 @@
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { BotonsNavegacioPaginaComponent } from 'src/app/components/botons-navegacio-pagina/botons-navegacio-pagina.component';
 import { PreviewCaseStudyComponent } from 'src/app/components/preview-case-study/preview-case-study.component';
 import { PageComponent } from 'src/app/pages/page.component';
-import { MainService } from 'src/app/services/main.service';
 import { SharedImports } from 'src/app/shared/imports';
 import { Seccio, SECCIONS } from 'src/app/shared/seccions';
 
@@ -19,16 +18,11 @@ import { Seccio, SECCIONS } from 'src/app/shared/seccions';
 })
 export class CaseStudyPageComponent extends PageComponent {
 
+    public route = inject(ActivatedRoute);
+    public router = inject(Router);
+
     public seccio: Seccio;
     public altresSeccions: Seccio[];
-
-    constructor(
-        override m: MainService,
-        public route: ActivatedRoute,
-        public router: Router,
-    ) {
-        super(m);
-    }
 
     override async ngOnInit() {
         super.ngOnInit();
@@ -36,7 +30,7 @@ export class CaseStudyPageComponent extends PageComponent {
             let pagina = this.route.snapshot.data["pagina"];
             let nom = params["case-study"];
             let seccio = SECCIONS.find(s => s.pagina == pagina && s.nom == nom);
-            
+
             // Si no hi ha seccio, vés a la pàgina anterior //
             if (!seccio) {
                 this.router.navigateByUrl(this.router.url.split("/")[1]);

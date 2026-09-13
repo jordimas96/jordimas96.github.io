@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
 import { MatDialog, MatDialogConfig } from '@angular/material/dialog';
 import { MainService } from 'src/app/services/main.service';
 import { SharedImports } from 'src/app/shared/imports';
@@ -13,19 +13,17 @@ import { IframeTemplateComponent } from './iframe-template/iframe-template.compo
     ]
 })
 export class DemosComponent {
+    
+    public m = inject(MainService);
+    private dialog = inject(MatDialog);
 
     public veureMes = false;
 
-    constructor(
-        public m: MainService,
-        private dialog: MatDialog
-    ) { }
-
-    ngOnInit() {
+    // ngOnInit() {
         // Deshabilitar control dels videos des de les tecles multimedia del teclat //
         // navigator.mediaSession.setActionHandler('play', function() { });
         // navigator.mediaSession.setActionHandler('pause', function() { });
-    }
+    // }
 
     get textTitol() {
         const textEscriptori = ["Demo per a escriptori", "Demo para escritorio", "Desktop demo"][this.m.idiomaIndex];

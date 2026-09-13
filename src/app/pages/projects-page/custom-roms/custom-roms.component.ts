@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, inject, OnInit } from '@angular/core';
 import { Skills } from 'src/app/enums/skills.enum';
 import { StoryComponent } from 'src/app/pages/about-me-page/stories/story/story.component';
 import { MainService } from 'src/app/services/main.service';
@@ -14,9 +14,10 @@ import { SharedImports } from 'src/app/shared/imports';
     ]
 })
 export class CustomRomsComponent implements OnInit {
-    Skills = Skills;
+    
+    public m = inject(MainService);
 
-    constructor(public m: MainService) { }
+    Skills = Skills;
 
     ngOnInit() {
         // Posa fons segons la imatge //

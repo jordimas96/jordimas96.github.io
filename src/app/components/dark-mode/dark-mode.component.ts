@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
 import { MainService } from 'src/app/services/main.service';
 import { ThemeService } from 'src/app/services/theme.service';
 import { SharedImports } from 'src/app/shared/imports';
@@ -13,13 +13,11 @@ import { Utils } from 'src/app/shared/utils';
     ]
 })
 export class DarkModeComponent {
+    
+    public m = inject(MainService);
+    public ts = inject(ThemeService);
 
     public botonsActius = true;
-
-    constructor(
-        public m: MainService,
-        public ts: ThemeService
-    ) { }
 
     ngOnInit() {
         this.setDarkMode();
@@ -72,10 +70,10 @@ export class DarkModeComponent {
             .css({
                 "box-shadow": `0 0 ${blur}px ${spread}px ${color1}`
             });
-        
+
         $(".botoDarkMode > i")
             .css("transform", `rotate(${this.ts.modeFosc ? 67.5 : 360}deg)`);
-            
+
 
 
 

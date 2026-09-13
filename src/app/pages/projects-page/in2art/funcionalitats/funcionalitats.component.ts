@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
 import { LinkComponent } from 'src/app/components/link/link.component';
 import { MostrarAmbAnimacioDirective } from "src/app/directives/mostrar-amb-animacio.directive";
 import { MainService } from 'src/app/services/main.service';
@@ -10,8 +10,8 @@ import { MainService } from 'src/app/services/main.service';
     imports: [LinkComponent, MostrarAmbAnimacioDirective]
 })
 export class FuncionalitatsComponent {
-    
-    constructor(public m: MainService) { }
+
+    public m = inject(MainService);
 
     public get linkReadme() {
         return `https://github.com/jordimas96/jordimas96.github.io/blob/main/src/assets/_experience/in2art/feature-sheets/in2art-feature-sheet.${this.m.idioma}.md`;

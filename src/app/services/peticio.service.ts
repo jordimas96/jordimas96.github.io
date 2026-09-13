@@ -1,5 +1,5 @@
 import { HttpClient } from '@angular/common/http';
-import { Injectable } from '@angular/core';
+import { inject, Injectable } from '@angular/core';
 
 
 @Injectable({
@@ -7,7 +7,7 @@ import { Injectable } from '@angular/core';
 })
 export class PeticioService {
 
-    constructor(private http: HttpClient) { }
+    private http = inject(HttpClient);
 
     public get(url: string, onSuccess, onFail = (e) => console.error(e)) {
         this.http.get(url).subscribe({
@@ -16,7 +16,7 @@ export class PeticioService {
         });
     }
     public getText(url: string, onSuccess, onFail = (e) => console.error(e)) {
-        this.http.get(url,{ responseType: 'text' }).subscribe({
+        this.http.get(url, { responseType: 'text' }).subscribe({
             next: (data) => onSuccess(data),
             error: (e) => onFail(e),
         });

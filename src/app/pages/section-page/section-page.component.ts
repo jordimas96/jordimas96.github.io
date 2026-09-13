@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
 import { ActivatedRoute, RouterLink } from '@angular/router';
 import { AmazfitWatchfacesComponent } from 'src/app/pages/art-page/amazfit-watchfaces/amazfit-watchfaces.component';
 import { IconsComponent } from 'src/app/pages/art-page/icons/icons.component';
@@ -46,17 +46,12 @@ import { SharedImports } from 'src/app/shared/imports';
     ]
 })
 export class SectionPageComponent extends PageComponent {
+    
+    public route = inject(ActivatedRoute);
 
     public section: string;
     public optionBack: number = 0;
     public urlGoBack: string = "";
-
-    constructor(
-        override m: MainService,
-        public route: ActivatedRoute,
-    ) {
-        super(m);
-    }
 
     override async ngOnInit() {
         super.ngOnInit();

@@ -1,4 +1,4 @@
-import { Component, ElementRef, HostListener, ViewChild } from '@angular/core';
+import { Component, ElementRef, HostListener, inject, ViewChild } from '@angular/core';
 import { SafeResourceUrl } from '@angular/platform-browser';
 import { MainService } from 'src/app/services/main.service';
 import { SharedImports } from 'src/app/shared/imports';
@@ -15,15 +15,14 @@ import { environment } from 'src/environments/environment';
 })
 export class MadJumpgateJocComponent {
 
+    public m = inject(MainService);
+
     @ViewChild('iframeRef') iframeRef: ElementRef;
 
     public carregarJoc = false;
 
     public placeholderWidth = 0;
     public placeholderHeight = 0;
-
-    constructor(public m: MainService) {
-    }
 
     ngOnInit() {
         this.posarIframeDinsLimits();

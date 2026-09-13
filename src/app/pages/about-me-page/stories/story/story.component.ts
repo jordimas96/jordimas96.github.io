@@ -1,8 +1,7 @@
-import { AfterViewInit, Component, ElementRef, Input, OnInit, ViewChild } from '@angular/core';
+import { Component, inject, Input } from '@angular/core';
 import { LayoutService } from 'src/app/services/layout.service';
 import { MainService } from 'src/app/services/main.service';
 import { SharedImports } from 'src/app/shared/imports';
-import { Utils } from 'src/app/shared/utils';
 
 
 @Component({
@@ -13,21 +12,16 @@ import { Utils } from 'src/app/shared/utils';
         ...SharedImports,
     ]
 })
-export class StoryComponent implements OnInit {
+export class StoryComponent {
+
+    public m = inject(MainService);
+    public ls = inject(LayoutService);
 
     @Input("titol") titol = "";
     @Input("urlId") urlId = "";
     @Input("img") img = "";
 
     url = "";
-        
-    constructor(
-        public m: MainService,
-        public ls: LayoutService,
-    ) { }
-    
-    ngOnInit() { }
-
 
     async click() {
         let url = "https://www.instagram.com/stories/highlights/" + this.urlId;

@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
 import { GoogleAnalyticsService } from 'ngx-google-analytics';
 
 @Component({
@@ -8,7 +8,8 @@ import { GoogleAnalyticsService } from 'ngx-google-analytics';
   `
 })
 export class ExampleComponent {
-    constructor(private gaService: GoogleAnalyticsService) { }
+    
+    private gaService = inject(GoogleAnalyticsService);
 
     trackButtonClick() {
         this.gaService.event('button', 'click', 'Example Button Click');

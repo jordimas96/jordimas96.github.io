@@ -1,4 +1,4 @@
-import { AfterViewInit, ChangeDetectorRef, Component, ElementRef, HostListener, OnInit, ViewChild } from '@angular/core';
+import { AfterViewInit, ChangeDetectorRef, Component, ElementRef, HostListener, inject, OnInit, ViewChild } from '@angular/core';
 import { NavigationEnd, RouterLink, RouterLinkActive } from '@angular/router';
 import { DarkModeComponent } from 'src/app/components/dark-mode/dark-mode.component';
 import { SelectorIdiomaComponent } from 'src/app/components/selector-idioma/selector-idioma.component';
@@ -23,6 +23,11 @@ import { Utils } from 'src/app/shared/utils';
 })
 export class SidebarComponent implements OnInit, AfterViewInit {
 
+    public m = inject(MainService);
+    public blockGoogleAnalyticsService = inject(BlockGoogleAnalyticsService);
+    public ls = inject(LayoutService);
+    public cdr = inject(ChangeDetectorRef);
+
     // Mobil: Sempre oberta, sempre drawer. S'obre i es tanca amb les 3 ralles. només cal controlar posició //
     // PC: Mode rail o mode drawer. Canvia de mode quan cliques el botó //
 
@@ -36,14 +41,8 @@ export class SidebarComponent implements OnInit, AfterViewInit {
     public rail: boolean;
 
 
-    constructor(
-        public m: MainService,
-        public blockGoogleAnalyticsService: BlockGoogleAnalyticsService,
-        public ls: LayoutService,
-        public cdr: ChangeDetectorRef
-    ) {
-        m.sidebar = this;
-    }
+    constructor() { this.m.sidebar = this; }
+    
     ngOnInit() {
 
         this.llegirVistaCookie();
@@ -57,6 +56,7 @@ export class SidebarComponent implements OnInit, AfterViewInit {
                     this.open = false;
             }
         });
+        
     }
 
     ngAfterViewInit() {

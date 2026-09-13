@@ -1,4 +1,4 @@
-import { AfterViewInit, Component, ElementRef, OnInit, ViewChild } from '@angular/core';
+import { Component, ElementRef, inject, ViewChild } from '@angular/core';
 import { LayoutService } from 'src/app/services/layout.service';
 import { MainService } from 'src/app/services/main.service';
 import { SharedImports } from 'src/app/shared/imports';
@@ -14,17 +14,14 @@ import { StoryComponent } from './story/story.component';
         StoryComponent,
     ]
 })
-export class StoriesComponent implements OnInit {
+export class StoriesComponent {
+
+    public m = inject(MainService);
+    public ls = inject(LayoutService);
 
     @ViewChild('stories') storiesRef: ElementRef;
 
     prefixUrl = "assets/about-me/stories/";
-
-    constructor(
-        public m: MainService,
-        public ls: LayoutService,
-    ) { }
-    async ngOnInit() { }
 
     public scrollOnHover(event: MouseEvent) {
         if (this.m.esPantallaTactil) return;

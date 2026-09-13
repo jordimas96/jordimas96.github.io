@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
 import { RouterLink } from '@angular/router';
 import { SkillComponent } from 'src/app/components/skill/skill.component';
 import { Skills } from 'src/app/enums/skills.enum';
@@ -16,9 +16,10 @@ import { SharedImports } from 'src/app/shared/imports';
     ]
 })
 export class In2artExperienceComponent {
-    Skills = Skills;
 
-    constructor(public m: MainService) { }
+    public m = inject(MainService);
+
+    Skills = Skills;
 
     get linkTitol() {
         return [

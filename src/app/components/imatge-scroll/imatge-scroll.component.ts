@@ -1,4 +1,4 @@
-import { Component, HostListener, Input } from '@angular/core';
+import { Component, HostListener, inject, Input } from '@angular/core';
 import { MainService } from 'src/app/services/main.service';
 import { Utils } from 'src/app/shared/utils';
 
@@ -10,10 +10,10 @@ import { Utils } from 'src/app/shared/utils';
 })
 export class ImatgeScrollComponent {
 
+    public m = inject(MainService);
+
     @Input() src: string;
     public transY;
-
-    constructor(public m: MainService) { }
 
     @HostListener('window:scroll', ['$event'])
     onScroll() {

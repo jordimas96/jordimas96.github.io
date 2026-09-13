@@ -1,4 +1,4 @@
-import { AfterViewInit, Component, ElementRef, HostListener, OnInit, ViewChild } from '@angular/core';
+import { AfterViewInit, Component, ElementRef, HostListener, inject, OnInit, ViewChild } from '@angular/core';
 import { ActivatedRoute, NavigationEnd, Router } from '@angular/router';
 import { filter } from 'rxjs';
 import { LayoutService } from 'src/app/services/layout.service';
@@ -14,7 +14,11 @@ import { SharedImports } from 'src/app/shared/imports';
         ...SharedImports,
     ]
 })
-export class IndexComponent implements OnInit, AfterViewInit {
+export class IndexComponent implements AfterViewInit {
+    public m = inject(MainService);
+    public ls = inject(LayoutService);
+    public router = inject(Router);
+    public route = inject(ActivatedRoute);
 
     @ViewChild('index') indexRef: ElementRef;
 
@@ -41,13 +45,9 @@ export class IndexComponent implements OnInit, AfterViewInit {
     ];
     public elementsALaPagina: any = [];
 
-    constructor(
-        public m: MainService,
-        public ls: LayoutService,
-        public router: Router,
-        public route: ActivatedRoute,
-    ) {
-        m.index = this;
+    constructor() {
+
+        this.m.index = this;
 
         // Event al canviar de pàgina //
         this.router.events
@@ -55,10 +55,6 @@ export class IndexComponent implements OnInit, AfterViewInit {
             .subscribe(() => setTimeout(() => this.onPageChange(), 0));
         
         this.route.queryParams.subscribe(() => setTimeout(() => this.onPageChange(), 0));
-
-
-    }
-    async ngOnInit() {
 
     }
 

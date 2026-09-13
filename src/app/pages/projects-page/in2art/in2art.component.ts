@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
 import { SkillComponent } from 'src/app/components/skill/skill.component';
 import { Skills } from 'src/app/enums/skills.enum';
 import { MainService } from 'src/app/services/main.service';
@@ -20,9 +20,10 @@ import { FuncionalitatsComponent } from './funcionalitats/funcionalitats.compone
     ]
 })
 export class In2artComponent {
-    Skills = Skills;
+    
+    public m = inject(MainService);
 
-    constructor(public m: MainService) { }
+    Skills = Skills;
 
     get linkTitol() {
         return [

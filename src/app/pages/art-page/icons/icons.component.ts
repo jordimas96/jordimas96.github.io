@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
 import { MainService } from 'src/app/services/main.service';
 import { SharedImports } from 'src/app/shared/imports';
 
@@ -12,6 +12,6 @@ import { SharedImports } from 'src/app/shared/imports';
 })
 export class IconsComponent {
 
-    constructor(public m: MainService) { }
+    public m = inject(MainService);
 
 }

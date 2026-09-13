@@ -1,4 +1,4 @@
-import { Directive, ElementRef, OnDestroy, OnInit, Renderer2 } from '@angular/core';
+import { Directive, ElementRef, inject, OnDestroy, OnInit, Renderer2 } from '@angular/core';
 import { Utils } from 'src/app/shared/utils';
 
 @Directive({
@@ -6,15 +6,15 @@ import { Utils } from 'src/app/shared/utils';
     standalone: true
 })
 export class MostrarAmbAnimacioDirective implements OnInit, OnDestroy {
+    
+    private el = inject(ElementRef);
+    private renderer = inject(Renderer2);
 
     private observer: IntersectionObserver;
     private timeoutTreureAnimacio: NodeJS.Timeout;
 
-    constructor(
-        private el: ElementRef,
-        private renderer: Renderer2
-    ) {
-        renderer.addClass(el.nativeElement, 'ocult-animacio');
+    constructor() {
+        this.renderer.addClass(this.el.nativeElement, 'ocult-animacio');
     }
 
     ngOnInit() {

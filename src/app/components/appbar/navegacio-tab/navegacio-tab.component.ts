@@ -1,4 +1,4 @@
-import { Component, ElementRef, HostListener, ViewChild } from '@angular/core';
+import { Component, ElementRef, HostListener, inject, ViewChild } from '@angular/core';
 import { NavigationEnd, Router, RouterLink, RouterLinkActive } from '@angular/router';
 import { interval } from 'rxjs';
 import { MainService } from 'src/app/services/main.service';
@@ -16,6 +16,10 @@ import { Utils } from 'src/app/shared/utils';
     ]
 })
 export class NavegacioTabComponent {
+    
+    public m = inject(MainService);
+    private router = inject(Router);
+    private elementRef = inject(ElementRef);
 
     @ViewChild("pill") pill: ElementRef;
 
@@ -25,11 +29,7 @@ export class NavegacioTabComponent {
 
     public movent = false;
 
-    constructor(
-        public m: MainService,
-        private router: Router,
-        private elementRef: ElementRef
-    ) {
+    constructor() {
         this.router.events.subscribe(async event => {
             if (event instanceof NavigationEnd) {
                 // When screen changed //
@@ -61,8 +61,8 @@ export class NavegacioTabComponent {
         let rectComp = this.elementRef.nativeElement.getBoundingClientRect();
 
         let canvis = {
-            top: rect.top-rectComp.top,
-            left: rect.left-rectComp.left,
+            top: rect.top - rectComp.top,
+            left: rect.left - rectComp.left,
             width: rect.width,
             height: rect.height,
         };

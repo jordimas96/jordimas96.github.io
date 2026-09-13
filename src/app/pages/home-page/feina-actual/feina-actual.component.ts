@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
 import { PreviewCaseStudyComponent } from 'src/app/components/preview-case-study/preview-case-study.component';
 import { ExperienceCalculatorService } from 'src/app/services/experience-calculator.service';
 import { MainService } from 'src/app/services/main.service';
@@ -15,10 +15,8 @@ import { SharedImports } from 'src/app/shared/imports';
 })
 export class FeinaActualComponent {
 
-    constructor(
-        public m: MainService,
-        public exp: ExperienceCalculatorService
-    ) { }
+    public m = inject(MainService);
+    public exp = inject(ExperienceCalculatorService);
 
     get textTitol() {
         let treballant = !this.exp.experiencia.at(-1)?.dates[1];

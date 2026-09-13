@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
 import { QRCodeComponent } from 'angularx-qrcode';
 import { SkillComponent } from 'src/app/components/skill/skill.component';
 import { Skills } from 'src/app/enums/skills.enum';
@@ -20,10 +20,10 @@ import { DetallsAndroidAppsComponent } from './detalls-android-apps/detalls-andr
     ]
 })
 export class AndroidAppsComponent {
+
+    public m = inject(MainService);
+
     Skills = Skills;
-
-    constructor(public m: MainService) { }
-
 
     getAmazonLink_apps() {
         const com = this.m.en ? "com" : "es";
