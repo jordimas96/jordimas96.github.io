@@ -44,7 +44,7 @@ export class BlockGoogleAnalyticsService {
                 console.log("%cGoogle Analytics already were blocked on this device", "color: lime");
             else {
                 this.block();
-                alert("Google Analytics blocked on this device");
+                alert("Google Analytics has been blocked on this device");
             }
         }
     }

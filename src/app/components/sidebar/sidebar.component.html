@@ -12,8 +12,7 @@
             class="rs boto-seccio home"
             [class.rail]="rail" [class.drawer]="!rail"
             routerLinkActive="selected" [routerLinkActiveOptions]="{exact: true}" routerLink="/"
-            [title]="rail ? getText.inici() : ''"
-            matRipple>
+            [title]="rail ? getText.inici() : ''">
             <i class="icona fa-solid fa-house"></i>
             <div class="text">
                 {{ getText.inici() }}
@@ -23,8 +22,7 @@
             class="rs boto-seccio experience"
             [class.rail]="rail" [class.drawer]="!rail"
             routerLinkActive="selected" routerLink="/experience"
-            [title]="rail ? getText.experiencia() : ''"
-            matRipple>
+            [title]="rail ? getText.experiencia() : ''">
             <i class="icona fa-solid fa-briefcase"></i>
             <div class="text">
                 {{ getText.experiencia() }}
@@ -34,8 +32,7 @@
             class="rs boto-seccio projects"
             [class.rail]="rail" [class.drawer]="!rail"
             routerLinkActive="selected" routerLink="/projects"
-            [title]="rail ? getText.projectes() : ''"
-            matRipple>
+            [title]="rail ? getText.projectes() : ''">
             <i class="icona fa-solid fa-shapes"></i>
             <div class="text">
                 {{ getText.projectes() }}
@@ -45,8 +42,7 @@
             class="rs boto-seccio art"
             [class.rail]="rail" [class.drawer]="!rail"
             routerLinkActive="selected" routerLink="/art"
-            [title]="rail ? getText.art() : ''"
-            matRipple>
+            [title]="rail ? getText.art() : ''">
             <i class="icona fa-solid fa-paintbrush"></i>
             <div class="text">
                 {{ getText.art() }}
@@ -56,8 +52,7 @@
             class="rs boto-seccio about-me"
             [class.rail]="rail" [class.drawer]="!rail"
             routerLinkActive="selected" routerLink="/about-me"
-            [title]="rail ? getText.aboutme() : ''"
-            matRipple>
+            [title]="rail ? getText.aboutme() : ''">
             <i class="icona fa-solid fa-user"></i>
             <div class="text text-nowrap">
                 {{ getText.aboutme() }}
@@ -67,8 +62,7 @@
             class="rs boto-seccio cv"
             href="/cv"
             [class.rail]="rail" [class.drawer]="!rail"
-            [title]="rail ? getText.cv() : ''"
-            matRipple>
+            [title]="rail ? getText.cv() : ''">
             <i class="icona icona-cv"></i>
             <div class="text">
                 {{ getText.cv() }}
@@ -80,7 +74,7 @@
 
 
 
-    <div class="zonaInferior">
+    <div class="zona-inferior">
         <jmp-dark-mode />
         <jmp-selector-idioma />
     </div>
