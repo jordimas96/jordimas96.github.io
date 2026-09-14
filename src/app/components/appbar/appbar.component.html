@@ -1,10 +1,12 @@
-<header #appbar id="appbar" class="appbar v" [ngClass]="{'shadow-3':m.scroll>0 && !ts.modeFosc, 'scrolled':m.scroll>0}" jmpMostrarAmbAnimacio>
+<header #appbar id="appbar" class="appbar v" [class.shadow-3-l]="m.scroll > 0" [class.scrolled]="m.scroll > 0" jmpMostrarAmbAnimacio>
 
     <button class="boto botoText botoSidebar rounded-pill" (click)="m.sidebar.toggle()" aria-label="Open sidebar" matRipple>
         <i class="fa-solid fa-bars d-block"></i>
     </button>
 
-    <jmp-navegacio-tab class="w-100 w-lg-auto" />
+    <!-- <jmp-navegacio-tab class="w-0 w-lg-auto" /> -->
+
+    <jmp-input-buscador />
 
     <jmp-selector-idioma class="d-none d-sm-flex pe-2" />
 

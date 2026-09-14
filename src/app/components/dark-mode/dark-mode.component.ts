@@ -51,6 +51,8 @@ export class DarkModeComponent {
         $("*:not(.botoDarkMode, .botoDarkMode > i)").css("transition", "none");
         $(".sidebar").css("overflow", "visible");
         $("*").css("pointer-events", "none");
+        const zIndexSidebarOriginal = $(".sidebar").css("z-index");
+        $(".sidebar").css("z-index", "1000000000");
         this.botonsActius = false;
 
 
@@ -117,6 +119,7 @@ export class DarkModeComponent {
         $("*:not(.botoDarkMode, .botoDarkMode > i)").css("transition", "");
         $(".sidebar").css("overflow", "");
         $("*").css("pointer-events", "");
+        $(".sidebar").css("z-index", zIndexSidebarOriginal);
         this.botonsActius = true;
 
     }

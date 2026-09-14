@@ -1,0 +1,21 @@
+<form #form
+    class="input-wrapper"
+    [class.focus]="focus"
+    [style.--valorScale]="valorScale"
+    (mousedown)="wrapper_mousedown($event)"
+    (ngSubmit)="buscar()">
+
+    <i class="fa-solid fa-magnifying-glass lupa"></i>
+
+    <input #input type="text"
+        placeholder="Cerca..."
+        (input)="valor = input.value"
+        (focus)="focus = true"
+        (blur)="blur()">
+
+    <button type="submit" class="buscar rs" [class.ocult]="!input.value">
+        <i class="fa-solid fa-circle-arrow-right"></i>
+    </button>
+
+</form>
+

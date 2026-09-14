@@ -8,12 +8,13 @@
 
     display: flex;
     justify-content: space-between;
-    align-items: stretch;
+    align-items: center;
 
-    z-index: 1000;
+    z-index: 11000;
     background: none;
     backdrop-filter: blur(20px) saturate(1.5);
     transition: box-shadow 0.3s, backdrop-filter 0.3s;
+
 
     &:not(.scrolled) {
         // background: var(--fons-50);
@@ -28,6 +29,22 @@
     jmp-navegacio-tab {
         margin: 0.5rem;
     }
+
+    jmp-input-buscador {
+        position: absolute;
+        left: 50%;
+        translate: -50%;
+        
+        width: 30rem;
+        max-width: 56%;
+        @include mobil {
+            width: calc(100% - 8rem);
+            max-width: none;
+        }
+
+    }
+
+    
     ::ng-deep jmp-selector-idioma {
         @include gran {
             padding: 0.25rem 2rem 0.25rem 1.5rem;

@@ -1,0 +1,65 @@
+@import "src/styles.scss";
+
+.input-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 0.2rem;
+
+    background-color: light-dark(hsla(0, 0%, 100%, 0.4), hsla(0, 0%, 0%, 0.4));
+    color: white;
+    font-size: 1.3rem;
+
+    padding: 0.25rem 0.5rem;
+    border-radius: 1.2rem;
+
+    cursor: text;
+
+    transform-origin: center top;
+    --easing: cubic-bezier(0.34, 1.56, 0.64, 1);
+    transition: scale 0.4s var(--easing), padding 0.4s var(--easing), margin 0.4s var(--easing), background-color 0.4s var(--easing), shadow 0.4s;
+
+    &.focus {
+        // scale: 1.25;
+        scale: var(--valorScale);
+        // margin: 0 -3.7rem 0;
+        padding-top: 0.75rem;
+        padding-bottom: 0.75rem;
+        margin-top: 1.2rem;
+        background-color: light-dark(white, black);
+
+        @extend .shadow-2-l;
+
+        i.lupa {
+            color: light-dark(hsla(0, 0%, 0%, 0.3), hsla(0, 0%, 100%, 0.3));
+        }
+        input::placeholder { color: light-dark(hsla(0, 0%, 0%, 0.5), hsla(0, 0%, 100%, 0.5)); }
+    }
+
+
+    i.lupa {
+
+        color: light-dark(hsla(0, 0%, 0%, 0.5), hsla(0, 0%, 100%, 0.5));
+
+        transition: color 0.4s;
+
+        pointer-events: none;
+    }
+
+    input {
+        width: 100%;
+        background: none;
+        border: 0;
+        outline: none;
+
+        &::placeholder { color: light-dark(hsla(0, 0%, 0%, 0.7), hsla(0, 0%, 100%, 0.7)); }
+    }
+
+    .buscar {
+        margin-right: 0.25rem;
+        color: light-dark(hsla(0, 0%, 0%, 0.8), hsla(0, 0%, 100%, 0.8));
+
+        &.ocult {
+            visibility: hidden;
+        }
+    }
+}
