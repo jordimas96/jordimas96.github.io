@@ -14,16 +14,18 @@ export class AppInitializerService {
         // Aplicar fons al body //
         backgroundImageLoaded.then(() => document.body.style.backgroundImage = `url("${this.FONS_URL}")`);
 
+        const tempsMin = 500;
+        const tempsMax = 3000;
+
         Promise.race([
             Promise.all([
                 backgroundImageLoaded,
                 document.fonts.ready,
+                new Promise(resolve => setTimeout(resolve, tempsMin)),
             ]),
-            new Promise(resolve => setTimeout(resolve, 3000)),
+            new Promise(resolve => setTimeout(resolve, tempsMax)),
         ]).then(() => {
-            setTimeout(() => {
-                this.ocultarSplashScreen();
-            }, 450);
+            this.ocultarSplashScreen();
         });
 
     }
@@ -50,25 +52,11 @@ export class AppInitializerService {
 
         jmas.classList.add("superzoom");
 
-        setTimeout(() => {
-            
-            splashScreen.style.opacity = "0";
-            splashScreen.style.pointerEvents = "none";
-            
-            splashScreen.addEventListener("transitionend", () => splashScreen.remove(), { once: true });
-
-            setTimeout(() => splashScreen.remove(), 1000);
+        // Amb 0.6s de retard //
+        splashScreen.style.opacity = "0";
+        splashScreen.style.pointerEvents = "none";
         
-        }, 600);
-
-        
-
-        
-
-        
+        splashScreen.addEventListener("transitionend", () => splashScreen.remove(), { once: true });
     }
-
-
-
 
 }
