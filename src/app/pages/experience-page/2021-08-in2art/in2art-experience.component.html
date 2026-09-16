@@ -1,4 +1,4 @@
-<section id="in2art" class="tema-in2art card-themed bg-colored section">
+<section id="in2art" class="case-study tema-in2art card-themed bg-colored section">
     <div class="titol-top-card section-title d-flex align-items-center justify-content-between mb-2">
         <a [href]="linkTitol" class="rs link-boto-titol gap-3" matRipple>
             IN2ART
@@ -6,38 +6,6 @@
             <span class="fletxa">↗</span>
         </a>
     </div>
-    <!-- <article class="descripcio mb-4">
-        @if (m.ca) {
-            Principal desenvolupador d'una xarxa social enfocada al món de l'art, a IN2ART, amb Angular 11. Vaig ser responsable del frontend, disseny i part del backend.
-            A més, estic orgullós de dir que vaig desenvolupar la pàgina des de zero utilitzant la meva experiència a Angular, CSS i TypeScript.<br>
-            La primera part del projecte, quan vaig fer l'estructura i l'organització del frontend, la vaig desenvolupar en solitari. A mesura que la web va anar creixent i es van afegir noves seccions, vaig poder dividir la càrrega de treball entre estudiants de pràctiques de DAM (backend) als que jo mateix vaig formar en Angular, TypeScript i CSS. Junts vam treballar en equip per crear una veritable obra d'art.<br><br>
-
-            També vaig elaborar una documentació amb els passos detallats per a compilar el projecte, pujar la web al servidor, utilitzar arxius importants com .htaccess, treballar amb les traduccions, paràmetres de les peticions de la API, etc. El propòsit d'aquesta documentació era evitar les feines repetitives i agilitzar la comunicació entre frontend i backend.
-            A més, vaig crear diferents scripts de PowerShell per a automatitzar les compilacions i traduccions.
-            Vaig implementar un sistema automàtic per a detectar i registrar literals sense traduir en runtime, facilitant així el manteniment de i18n.
-        }
-
-        @if (m.es) {
-            Principal desarrollador de una red social enfocada al mundo del arte, en IN2ART, con Angular 11. Fui responsable del frontend, diseño y parte del backend.
-            Además, estoy orgulloso de decir que desarrollé la página desde cero utilizando mi experiencia en Angular, CSS y TypeScript.<br>
-            La primera parte del proyecto, cuando hice la estructura y organización del frontend, la desarrollé en solitario. A medida que la web fue creciendo y se añadieron nuevas secciones, pude dividir la carga de trabajo entre estudiantes de prácticas de DAM (backend) a los que yo mismo formé en Angular, TypeScript y CSS. Juntos, trabajamos en equipo para crear una verdadera obra de arte.<br><br>
-
-            También elaboré una documentación con los pasos detallados para compilar el proyecto, subir la web al servidor, usar archivos importantes como .htaccess, trabajar con las traducciones, parámetros de las peticiones de la API, etc. El propósito de esta documentación fue evitar los trabajos repetitivos y agilizar la comunicación entre frontend y backend.
-            Además, creé distintos scripts de PowerShell para automatizar las compilaciones y traducciones.
-            Implementé un sistema automático para detectar y registrar literales sin traducir en runtime, facilitando así el mantenimiento de i18n.
-        }
-
-        @if (m.en) {
-            Main developer of a social network focused on the art world, at IN2ART, with Angular 11. I was responsible for the frontend, design and part of the backend.
-            Also, I am proud to say that I built the page from scratch using my experience in Angular, CSS, and TypeScript.<br>
-            The first part of the project, when I did the structure and organization of the frontend, I developed it alone. As the web grew and new sections were added, I splitted the workload among DAM internship students (backend) that I trained myself in Angular, TypeScript, and CSS. Together, we worked as a team to create a true work of art.<br><br>
-
-            I also produced a documentation with detailed steps to compile the project, upload the web to the server, use important files like .htaccess, work with translations, API request parameters, etc. The purpose of this documentation was to avoid repetitive tasks and streamline communication between frontend and backend.
-            Additionally, I created different PowerShell scripts to automate builds and translations.
-            I implemented an automatic system to detect and log untranslated literals in runtime, thus facilitating i18n maintenance.
-        }
-    </article> -->
-    
     <article class="descripcio mb-4">
         @if (m.ca) {
             <p>
@@ -166,12 +134,12 @@
 
 
     <!-- Skills -->
-    <div class="skills-title mb-2">
+    <div class="case-study-skills-title mb-2">
         @if (m.ca) { Tecnologies utilitzades }
         @if (m.es) { Tecnologías usadas }
         @if (m.en) { Used technologies }
     </div>
-    <div class="skills">
+    <div class="case-study-skills">
         <jmp-skill [skill]="Skills.ANGULAR" />
         <jmp-skill [skill]="Skills.CSS" />
         <jmp-skill [skill]="Skills.TYPESCRIPT" />
