@@ -1,0 +1,59 @@
+<div id="page" class="page">
+
+
+
+    <div class="content mb-6">
+
+        <div class="mw-940 m-auto">
+
+            <div class="input-wrapper"
+                (click)="input.focus()"
+                [class.a-dalt]="query"
+                >
+
+                <i class="fa-solid fa-magnifying-glass lupa"></i>
+
+                <input #input type="text"
+                    [placeholder]="textPlaceholder"
+                    (input)="query = input.value">
+
+            </div>
+
+
+            <div class="resultats mt-5">
+                @if (resultats.skills) {
+                    <section class="skills">
+                        <h1 class="text-center mb-3">Skills</h1>
+                        <div class="llista-skills">
+                            @for (skill of resultats.skills; track skill[0]) {
+                                <jmp-skill [skill]="Skills[skill[0]]" />
+                            }
+                        </div>
+                    </section>
+                }
+
+                <!-- <section class="case-studies mt-4">
+                    
+                    <h2 class="text-center mb-2">Case studies</h2>
+                    <div class="llista-case-studies">
+
+                    </div>
+
+                </section> -->
+            </div>
+            
+        </div>
+
+        <!-- <div class="altres-seccions-titol mt-6 mb-4" jmpMostrarAmbAnimacio>Resultats</div> -->
+
+        <div class="mw-1400 m-auto row justify-content-center g-3 mb-6">
+            <!-- @for (seccio of altresSeccions; track seccio.nom) {
+                <jmp-preview-case-study [pagina]="seccio.pagina" [id]="seccio.nom" class="col-12 col-md-6 col-xl-4" />
+            } -->
+        </div>
+
+
+        <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+
+    </div>
+</div>

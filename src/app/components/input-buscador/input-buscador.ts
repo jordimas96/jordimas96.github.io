@@ -37,11 +37,11 @@ export class InputBuscador implements AfterViewInit {
     }
 
     buscar() {
-        const valor = this.input.nativeElement.value.trim();
+        const query = this.input.nativeElement.value.trim();
         
         this.blur();
-        
-        this.router.navigate(["/search"], { queryParams: { q: valor } });
+
+        this.router.navigate(["/search", query]);
     }
 
     blur() {
@@ -49,6 +49,8 @@ export class InputBuscador implements AfterViewInit {
         this.input.nativeElement.value = "";
         this.focus = false;
     }
+
+    get textPlaceholder() { return ["Cerca...", "Buscar...", "Search..."][this.m.idiomaIndex]; }
 
     
     @HostListener('document:keydown.escape', ['$event'])

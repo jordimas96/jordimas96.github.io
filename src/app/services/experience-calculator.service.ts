@@ -79,7 +79,7 @@ export class ExperienceCalculatorService {
             dates: ["31-08-2021", "30-06-2023"],
             skills: [
                 Skills.FRONTEND,
-                Skills.ANGULAR, Skills.CSS, Skills.SASS, Skills.TYPESCRIPT, Skills.JAVASCRIPT, Skills.JQUERY, Skills.HTML5,
+                Skills.ANGULAR, Skills.CSS, Skills.SCSS, Skills.TYPESCRIPT, Skills.JAVASCRIPT, Skills.JQUERY, Skills.HTML5,
                 Skills.BOOTSTRAP, Skills.ANGULARMATERIAL,
                 Skills.I18N,
                 Skills.NODEJS,
@@ -123,7 +123,7 @@ export class ExperienceCalculatorService {
             dates: ["06-11-2023", "26-01-2024"],
             skills: [
                 Skills.FRONTEND,
-                Skills.ANGULAR, Skills.NGRX, Skills.RXJS, Skills.TYPESCRIPT, Skills.JAVASCRIPT, Skills.CSS, Skills.SASS,
+                Skills.ANGULAR, Skills.NGRX, Skills.RXJS, Skills.TYPESCRIPT, Skills.JAVASCRIPT, Skills.CSS, Skills.SCSS,
                 Skills.ANGULARMATERIAL,
                 Skills.PWA, Skills.CORDOVA,
                 Skills.MICROSERVICES,
@@ -138,7 +138,7 @@ export class ExperienceCalculatorService {
             dates: ["18-06-2024", "20-02-2026"],
             skills: [
                 Skills.FRONTEND,
-                Skills.ANGULAR, Skills.NGRX, Skills.RXJS, Skills.TYPESCRIPT, Skills.JAVASCRIPT, Skills.CSS, Skills.SASS, Skills.HTML5,
+                Skills.ANGULAR, Skills.NGRX, Skills.RXJS, Skills.TYPESCRIPT, Skills.JAVASCRIPT, Skills.CSS, Skills.SCSS, Skills.HTML5,
                 Skills.PRIMENG, Skills.BOOTSTRAP, Skills.ANGULARMATERIAL,
                 Skills.JEST, Skills.JASMINE, Skills.JIRA, Skills.SONARQUBE, Skills.OPENSHIFT,
                 Skills.MICROSERVICES,

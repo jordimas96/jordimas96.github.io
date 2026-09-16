@@ -7,7 +7,7 @@ export enum Skills {
     RXJS = "RxJS",
     NGRX = "NgRx",
     CSS = "CSS",
-    SASS = "SASS",
+    SCSS = "SCSS",
     HTML5 = "HTML5",
     BOOTSTRAP = "Bootstrap",
     ANGULARMATERIAL = "Angular Material",

@@ -4,8 +4,8 @@
     color: var(--fons);
     background-color: var(--text);
     font-size: 1rem;
-    padding: 0.25rem 0.75rem;
-    border-radius: 1rem;
+    padding: 0.25em 0.75em;
+    border-radius: 1em;
     font-weight: 800;
     text-align: center;
     white-space: nowrap;
@@ -117,7 +117,7 @@ section:not(.treureHover) {
     .rxjs             { --h: 324; --s:  95%; --l: 70%; .chip { background-color: #502888; color: #ed0690; } } // hsl(324, 95%, 48%);
     .ngrx             { --h: 291; --s:  66%; --l: 70%; .chip { background-color: #412846; color: #c141d8; } } // hsl(291, 66%, 55%);
     .css              { --h: 207; --s:  90%; --l: 70%; .chip { background-color: #2196f3; color: #ffffff; } } // hsl(207, 90%, 54%);
-    .sass             { --h: 329; --s:  55%; --l: 70%; .chip { background-color: #d56fa4; color: #ffffff; } } // hsl(329, 55%, 64%);
+    .scss             { --h: 329; --s:  55%; --l: 70%; .chip { background-color: #d56fa4; color: #ffffff; } } // hsl(329, 55%, 64%);
     .html5            { --h:  15; --s:  81%; --l: 70%; .chip { background-color: #e64c18; color: #ffffff; } } // hsl(15, 81%, 50%);
     .bootstrap        { --h: 264; --s:  34%; --l: 70%; .chip { background-color: #563d7c; color: #ffffff; } } // hsl(264, 34%, 36%);
     .angularmaterial  { --h:  33; --s:  82%; --l: 70%; .chip { background-color: #fb8c00; color: #ffffff; } } // hsl(33, 100%, 49%);

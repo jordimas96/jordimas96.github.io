@@ -13,12 +13,17 @@ export class RedirectComponent {
 
         let urlNova = this.canviarUrl(url);
 
-        urlNova = urlNova!.replace(/^\//, '');
+        if (urlNova != null) {
+            urlNova = urlNova!.replace(/^\//, '');
 
-        this.redirigir(url, urlNova);
+            this.redirigir(url, urlNova);
+        }
+        else {
+            this.goToSearch(url);
+        }
     }
 
-    canviarUrl(url: string): string {
+    canviarUrl(url: string): string | null {
 
         // IN2ART //
         if (url == "in2art") return "/projects/in2art";
@@ -33,7 +38,7 @@ export class RedirectComponent {
 
 
         // Si no ha trobat res, anirem a home //
-        return "";
+        return null;
     }
 
     redirigir(url: string, urlNova: string) {
@@ -43,5 +48,15 @@ export class RedirectComponent {
         const [path, queryString] = urlNova.split('?');
         const queryParams = Object.fromEntries(new URLSearchParams(queryString));
         this.router.navigate([path], { queryParams, replaceUrl: true });
+    }
+
+    goToSearch(pathname: string) {
+        let query =
+            decodeURIComponent(pathname)
+                .split("/")
+                .filter(Boolean)
+                .join(" ");
+        
+        this.router.navigate(["/search", query]);
     }
 }
