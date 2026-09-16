@@ -7,6 +7,12 @@
 .story {
     width: 100px;
 
+    transition: scale 0.2s;
+
+    &:hover {
+        scale: 1.15;
+    }
+
     .imatges {
         position: relative;
         
