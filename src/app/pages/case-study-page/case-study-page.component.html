@@ -8,8 +8,8 @@
     <div class="content mb-6">
 
         <div class="mw-940 m-auto">
-            @if (seccio.component) {
-                <ng-container *ngComponentOutlet="seccio.component" />
+            @if (seccio.caseStudy.component) {
+                <ng-container *ngComponentOutlet="seccio.caseStudy.component; inputs: { caseStudy: seccio.caseStudy }" />
             } @else {
                 <h4 class="text-center text-danger mt-5">Invalid section name</h4>
                 <!-- <h2 class="text-center mt-5"><jmp-link href="/" target="_self">Go home</jmp-link></h2> -->

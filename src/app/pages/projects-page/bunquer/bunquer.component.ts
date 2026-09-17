@@ -1,6 +1,6 @@
-import { Component, inject } from '@angular/core';
-import { SkillComponent } from 'src/app/components/skill/skill.component';
-import { Skills } from 'src/app/enums/skills.enum';
+import { Component, inject, Input } from '@angular/core';
+import { LlistaSkills } from 'src/app/components/llista-skills/llista-skills';
+import { CaseStudy } from 'src/app/data/case-studies.data';
 import { MainService } from 'src/app/services/main.service';
 import { SharedImports } from 'src/app/shared/imports';
 
@@ -10,13 +10,13 @@ import { SharedImports } from 'src/app/shared/imports';
     styleUrl: './bunquer.component.scss',
     imports: [
         ...SharedImports,
-        SkillComponent,
+        LlistaSkills,
     ]
 })
 export class BunquerComponent {
     
     public m = inject(MainService);
 
-    Skills = Skills;
+    @Input() caseStudy!: CaseStudy;
 
 }

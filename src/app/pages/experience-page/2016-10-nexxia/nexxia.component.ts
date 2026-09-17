@@ -1,6 +1,6 @@
-import { AfterViewInit, Component, ElementRef, HostListener, inject, ViewChild } from '@angular/core';
-import { SkillComponent } from 'src/app/components/skill/skill.component';
-import { Skills } from 'src/app/enums/skills.enum';
+import { AfterViewInit, Component, ElementRef, HostListener, inject, Input, ViewChild } from '@angular/core';
+import { LlistaSkills } from 'src/app/components/llista-skills/llista-skills';
+import { CaseStudy } from 'src/app/data/case-studies.data';
 import { MainService } from 'src/app/services/main.service';
 import { SharedImports } from 'src/app/shared/imports';
 
@@ -10,13 +10,14 @@ import { SharedImports } from 'src/app/shared/imports';
     styleUrl: './nexxia.component.scss',
     imports: [
         ...SharedImports,
-        SkillComponent,
+        LlistaSkills,
     ]
 })
 export class NexxiaComponent implements AfterViewInit {
+
     public m = inject(MainService);
 
-    Skills = Skills;
+    @Input() caseStudy!: CaseStudy;
 
     @ViewChild("cartaRecomanacio") cartaRecomanacio: ElementRef<HTMLAnchorElement>;
     public translateFons = 0;

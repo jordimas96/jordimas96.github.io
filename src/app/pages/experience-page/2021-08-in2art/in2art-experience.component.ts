@@ -1,7 +1,7 @@
-import { Component, inject } from '@angular/core';
+import { Component, inject, Input } from '@angular/core';
 import { RouterLink } from '@angular/router';
-import { SkillComponent } from 'src/app/components/skill/skill.component';
-import { Skills } from 'src/app/enums/skills.enum';
+import { LlistaSkills } from 'src/app/components/llista-skills/llista-skills';
+import { CaseStudy } from 'src/app/data/case-studies.data';
 import { MainService } from 'src/app/services/main.service';
 import { SharedImports } from 'src/app/shared/imports';
 
@@ -11,15 +11,15 @@ import { SharedImports } from 'src/app/shared/imports';
     styleUrl: './in2art-experience.component.scss',
     imports: [
         ...SharedImports,
-        SkillComponent,
         RouterLink,
+        LlistaSkills,
     ]
 })
 export class In2artExperienceComponent {
 
     public m = inject(MainService);
 
-    Skills = Skills;
+    @Input() caseStudy!: CaseStudy;
 
     get linkTitol() {
         return [

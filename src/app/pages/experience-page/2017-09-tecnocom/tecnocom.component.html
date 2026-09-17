@@ -69,26 +69,6 @@
         }
     </article>
 
-    <!-- Skills -->
-    <div class="case-study-skills-title mt-4 mb-2">
-        @if (m.ca) { Tecnologies utilitzades }
-        @if (m.es) { Tecnologías usadas }
-        @if (m.en) { Used technologies }
-    </div>
-    <div class="case-study-skills">
-        <jmp-skill [skill]="Skills.JAVA" />
-        <jmp-skill [skill]="Skills.JSP" />
-        <jmp-skill [skill]="Skills.PL1" />
-        <jmp-skill [skill]="Skills.DB2" />
-        <jmp-skill [skill]="Skills.MAVEN" />
-        <jmp-skill [skill]="Skills.NETBEANS" />
-        <jmp-skill [skill]="Skills.ECLIPSE" />
-        <jmp-skill [skill]="Skills.SVN" />
-        <jmp-skill [skill]="Skills.WINDOWSSERVER" />
-        <jmp-skill [skill]="Skills.TEAMVIEWER" />
-        <jmp-skill [skill]="Skills.REMOTEDESKTOP" />
-        <jmp-skill [skill]="Skills.ZOSMVS" />
-        <jmp-skill [skill]="Skills.CONTINUOUSINTEGRATION" />
-        <jmp-skill [skill]="Skills.AGILE" />
-    </div>
+    <jmp-llista-skills [skills]="caseStudy.skills" class="mt-4" />
+
 </section>

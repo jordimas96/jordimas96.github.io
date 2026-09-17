@@ -1,8 +1,8 @@
-import { Component, inject, OnInit, ViewChild } from '@angular/core';
+import { Component, inject, Input, OnInit, ViewChild } from '@angular/core';
 import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
 import { NgxMasonryComponent, NgxMasonryModule } from 'ngx-masonry';
-import { SkillComponent } from 'src/app/components/skill/skill.component';
-import { Skills } from 'src/app/enums/skills.enum';
+import { LlistaSkills } from 'src/app/components/llista-skills/llista-skills';
+import { CaseStudy } from 'src/app/data/case-studies.data';
 import { StoryComponent } from 'src/app/pages/about-me-page/stories/story/story.component';
 import { MainService } from 'src/app/services/main.service';
 import { ThemeService } from 'src/app/services/theme.service';
@@ -16,9 +16,9 @@ import { GitHubService } from './github.service';
     imports: [
         ...SharedImports,
         NgxMasonryModule,
-        SkillComponent,
         MatProgressSpinnerModule,
         StoryComponent,
+        LlistaSkills,
     ]
 })
 export class GithubProjectsComponent implements OnInit {
@@ -27,7 +27,7 @@ export class GithubProjectsComponent implements OnInit {
     public ts = inject(ThemeService);
     public gs = inject(GitHubService);
     
-    Skills = Skills;
+    @Input() caseStudy!: CaseStudy;
 
     @ViewChild("masonry") masonry: NgxMasonryComponent;
 

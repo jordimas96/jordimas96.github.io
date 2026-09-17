@@ -1,0 +1,10 @@
+<div class="skills-title mb-2">
+    @if (m.ca) { Tecnologies utilitzades }
+    @if (m.es) { Tecnologías usadas }
+    @if (m.en) { Used technologies }
+</div>
+<div class="skills">
+    @for (skill of skills; track skill) {
+        <jmp-skill [skill]="skill" />
+    }
+</div>

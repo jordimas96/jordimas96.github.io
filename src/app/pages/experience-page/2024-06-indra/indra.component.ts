@@ -1,7 +1,7 @@
-import { Component, ElementRef, HostListener, inject, ViewChild } from '@angular/core';
+import { Component, ElementRef, HostListener, inject, Input, ViewChild } from '@angular/core';
 import { MatDialog, MatDialogConfig } from '@angular/material/dialog';
-import { SkillComponent } from 'src/app/components/skill/skill.component';
-import { Skills } from 'src/app/enums/skills.enum';
+import { LlistaSkills } from 'src/app/components/llista-skills/llista-skills';
+import { CaseStudy } from 'src/app/data/case-studies.data';
 import { MainService } from 'src/app/services/main.service';
 import { ThemeService } from 'src/app/services/theme.service';
 import { SharedImports } from 'src/app/shared/imports';
@@ -14,7 +14,7 @@ import { IframeTemplateComponent } from './iframe-template/iframe-template.compo
     styleUrl: './indra.component.scss',
     imports: [
         ...SharedImports,
-        SkillComponent,
+        LlistaSkills,
     ]
 })
 export class IndraComponent {
@@ -23,7 +23,7 @@ export class IndraComponent {
     public ts = inject(ThemeService);
     private dialog = inject(MatDialog);
     
-    Skills = Skills;
+    @Input() caseStudy!: CaseStudy;
 
     @ViewChild("cartaRecomanacio") cartaRecomanacio: ElementRef<HTMLAnchorElement>;
     public translateFons = 0;

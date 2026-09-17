@@ -1,6 +1,6 @@
-import { Component, inject } from '@angular/core';
-import { SkillComponent } from 'src/app/components/skill/skill.component';
-import { Skills } from 'src/app/enums/skills.enum';
+import { Component, inject, Input } from '@angular/core';
+import { LlistaSkills } from 'src/app/components/llista-skills/llista-skills';
+import { CaseStudy } from 'src/app/data/case-studies.data';
 import { MainService } from 'src/app/services/main.service';
 import { SharedImports } from 'src/app/shared/imports';
 
@@ -10,14 +10,14 @@ import { SharedImports } from 'src/app/shared/imports';
     styleUrl: './evora.component.scss',
     imports: [
         ...SharedImports,
-        SkillComponent,
+        LlistaSkills,
     ]
 })
 export class EvoraComponent {
 
     public m = inject(MainService);
 
-    Skills = Skills;
+    @Input() caseStudy!: CaseStudy;
 
     public readonly rutaImgMaquina = "assets/_experience/evora/maquina-evora.png";
     public readonly rutaImgMigracio = "assets/_experience/evora/angular-12-a-17.png";

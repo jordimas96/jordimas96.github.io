@@ -1,7 +1,7 @@
 import { Component, ElementRef, inject } from '@angular/core';
 import { RouterLink } from '@angular/router';
 import { IconesContacteComponent } from 'src/app/components/icones-contacte/icones-contacte.component';
-import { Skills } from 'src/app/enums/skills.enum';
+import { Skill } from 'src/app/enums/skill.enum';
 import { ExperienceCalculatorService } from 'src/app/services/experience-calculator.service';
 import { MainService } from 'src/app/services/main.service';
 import { SharedImports } from 'src/app/shared/imports';
@@ -22,7 +22,7 @@ export class BioComponent {
     public rootElement = inject(ElementRef);
     public exp = inject(ExperienceCalculatorService);
     
-    Skills = Skills;
+    Skill = Skill;
 
     public salutacions = {
         ca: ["Bon dia!", "Bona tarda!", "Bona nit!"],
@@ -49,7 +49,7 @@ export class BioComponent {
     }
 
     getAnysExp() {
-        let [anys, mesos] = this.exp.skills[Skills._TOTAL].anysMesosDies;
+        let [anys, mesos] = this.exp.skills[Skill._TOTAL].anysMesosDies;
         if (mesos >= 6)
             anys++;
 

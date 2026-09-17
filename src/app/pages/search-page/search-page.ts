@@ -2,7 +2,7 @@ import { AfterViewInit, Component, ElementRef, inject, OnInit, ViewChild } from 
 import { ActivatedRoute, Router } from '@angular/router';
 import { PreviewCaseStudyComponent } from 'src/app/components/preview-case-study/preview-case-study.component';
 import { SkillComponent } from 'src/app/components/skill/skill.component';
-import { Skills } from 'src/app/enums/skills.enum';
+import { Skill } from 'src/app/enums/skill.enum';
 import { PageComponent } from 'src/app/pages/page.component';
 import { SharedImports } from 'src/app/shared/imports';
 
@@ -23,13 +23,14 @@ export class SearchPageComponent extends PageComponent implements OnInit, AfterV
     
     @ViewChild("input") input: ElementRef<HTMLInputElement>;
 
-    Skills = Skills;
-    private readonly llistaSkills: [string, string][] = Object.entries(Skills)
+    Skill = Skill;
+    
+    private readonly llistaSkills: [string, string][] = Object.entries(Skill)
         .filter(([k, v]) => k != "_TOTAL")
         .map(([k, v]) => [k, v.toLowerCase()]);
 
     private _query = "";
-    public resultats: any = {};
+    public resultats: { skills?: [] } = {};
 
     
     public hiHaResultats = false;

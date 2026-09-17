@@ -1,50 +1,29 @@
-
-import { ComponentType } from '@angular/cdk/portal';
-
-import { NexxiaComponent } from 'src/app/pages/experience-page/2016-10-nexxia/nexxia.component';
-import { TecnocomComponent } from 'src/app/pages/experience-page/2017-09-tecnocom/tecnocom.component';
-import { MaticComponent } from 'src/app/pages/experience-page/2020-09-matic/matic.component';
-import { In2artExperienceComponent } from 'src/app/pages/experience-page/2021-08-in2art/in2art-experience.component';
-import { OrangeComponent } from 'src/app/pages/experience-page/2023-08-orange/orange.component';
-import { EvoraComponent } from 'src/app/pages/experience-page/2023-11-evora/evora.component';
-import { IndraComponent } from 'src/app/pages/experience-page/2024-06-indra/indra.component';
-
-import { AndroidAppsComponent } from 'src/app/pages/projects-page/android-apps/android-apps.component';
-import { BunquerComponent } from 'src/app/pages/projects-page/bunquer/bunquer.component';
-import { CustomRomsComponent } from 'src/app/pages/projects-page/custom-roms/custom-roms.component';
-import { GithubProjectsComponent } from 'src/app/pages/projects-page/github-projects/github-projects.component';
-import { In2artComponent } from 'src/app/pages/projects-page/in2art/in2art.component';
-import { MadJumpgateComponent } from 'src/app/pages/projects-page/mad-jumpgate/mad-jumpgate.component';
-import { TaskerComponent } from 'src/app/pages/projects-page/tasker/tasker.component';
-
-import { AmazfitWatchfacesComponent } from 'src/app/pages/art-page/amazfit-watchfaces/amazfit-watchfaces.component';
-import { IconsComponent } from 'src/app/pages/art-page/icons/icons.component';
-
+import { CASE_STUDIES, CaseStudy } from 'src/app/data/case-studies.data';
 
 export interface Seccio {
     nom: string;
     pagina: "experience" | "projects" | "art";
-    component: ComponentType<any>;
+    caseStudy: CaseStudy;
 }
 
 export const SECCIONS: Seccio[] = [
 
-    { nom: "indra",         pagina: "experience", component: IndraComponent },
-    { nom: "in2art",        pagina: "experience", component: In2artExperienceComponent },
-    { nom: "matic",         pagina: "experience", component: MaticComponent },
-    { nom: "evora",         pagina: "experience", component: EvoraComponent },
-    { nom: "orange",        pagina: "experience", component: OrangeComponent },
-    { nom: "tecnocom",      pagina: "experience", component: TecnocomComponent },
-    { nom: "nexxia",        pagina: "experience", component: NexxiaComponent },
+    { nom: "indra",         pagina: "experience",   caseStudy: CASE_STUDIES.indra },
+    { nom: "in2art",        pagina: "experience",   caseStudy: CASE_STUDIES.in2art_exp },
+    { nom: "matic",         pagina: "experience",   caseStudy: CASE_STUDIES.matic },
+    { nom: "evora",         pagina: "experience",   caseStudy: CASE_STUDIES.evora },
+    { nom: "orange",        pagina: "experience",   caseStudy: CASE_STUDIES.orange },
+    { nom: "tecnocom",      pagina: "experience",   caseStudy: CASE_STUDIES.tecnocom },
+    { nom: "nexxia",        pagina: "experience",   caseStudy: CASE_STUDIES.nexxia },
 
-    { nom: "in2art",        pagina: "projects",   component: In2artComponent },
-    { nom: "bunquer",       pagina: "projects",   component: BunquerComponent },
-    { nom: "android",       pagina: "projects",   component: AndroidAppsComponent },
-    { nom: "mad-jumpgate",  pagina: "projects",   component: MadJumpgateComponent },
-    { nom: "github",        pagina: "projects",   component: GithubProjectsComponent },
-    { nom: "custom-roms",   pagina: "projects",   component: CustomRomsComponent },
-    { nom: "tasker",        pagina: "projects",   component: TaskerComponent },
+    { nom: "in2art",        pagina: "projects",     caseStudy: CASE_STUDIES.in2art },
+    { nom: "bunquer",       pagina: "projects",     caseStudy: CASE_STUDIES.bunquer },
+    { nom: "android",       pagina: "projects",     caseStudy: CASE_STUDIES.android },
+    { nom: "mad-jumpgate",  pagina: "projects",     caseStudy: CASE_STUDIES.mad_jumpgate },
+    { nom: "github",        pagina: "projects",     caseStudy: CASE_STUDIES.github },
+    { nom: "custom-roms",   pagina: "projects",     caseStudy: CASE_STUDIES.custom_roms },
+    { nom: "tasker",        pagina: "projects",     caseStudy: CASE_STUDIES.tasker },
 
-    { nom: "icons",         pagina: "art",        component: IconsComponent },
-    { nom: "amazfit",       pagina: "art",        component: AmazfitWatchfacesComponent },
+    { nom: "icons",         pagina: "art",          caseStudy: CASE_STUDIES.icons },
+    { nom: "amazfit",       pagina: "art",          caseStudy: CASE_STUDIES.amazfit },
 ];

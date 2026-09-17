@@ -213,16 +213,6 @@
         <jmp-story [urlId]="'18003839957777674'" [titol]="'Tasker'" img="assets/about-me/stories/tasker.png" jmpMostrarAmbAnimacio />
     </div>
 
-    <!-- Skills -->
-    <h5 class="case-study-skills-title mt-4 mb-2">
-        @if (m.ca) { Tecnologies utilitzades }
-        @if (m.es) { Tecnologías usadas }
-        @if (m.en) { Used technologies }
-    </h5>
-    <div class="case-study-skills">
-        <jmp-skill [skill]="Skills.HTML5" />
-        <jmp-skill [skill]="Skills.CSS" />
-        <jmp-skill [skill]="Skills.JAVA" />
-        <jmp-skill [skill]="Skills.PHP" />
-    </div>
+    <jmp-llista-skills [skills]="caseStudy.skills" class="mt-4" />
+
 </section>

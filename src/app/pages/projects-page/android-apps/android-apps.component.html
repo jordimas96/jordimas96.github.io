@@ -105,21 +105,6 @@
         <jmp-story [urlId]="'18067998383314514'" [titol]="'Breaking Ball'" img="assets/about-me/stories/breaking-ball.png" jmpMostrarAmbAnimacio />
     </div>
 
-    <!-- Skills -->
-    <div class="case-study-skills-title mt-4 mb-2">
-        @if (m.ca) { Tecnologies utilitzades }
-        @if (m.es) { Tecnologías usadas }
-        @if (m.en) { Used technologies }
-    </div>
-    <div class="case-study-skills">
-        <jmp-skill [skill]="Skills.ANDROID" />
-        <jmp-skill [skill]="Skills.KOTLIN" />
-        <jmp-skill [skill]="Skills.JAVA" />
-        <jmp-skill [skill]="Skills.CSHARP" />
-        <jmp-skill [skill]="Skills.PHP" />
-        <jmp-skill [skill]="Skills.MYSQL" />
-        <jmp-skill [skill]="Skills.GITHUB" />
-        <jmp-skill [skill]="Skills.ANDROIDSTUDIO" />
-        <jmp-skill [skill]="Skills.UNITY" />
-    </div>
+    <jmp-llista-skills [skills]="caseStudy.skills" class="mt-4" />
+
 </section>

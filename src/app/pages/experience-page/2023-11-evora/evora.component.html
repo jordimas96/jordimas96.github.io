@@ -109,28 +109,6 @@
         </div> -->
     </article>
 
-    <!-- Skills -->
-    <div class="case-study-skills-title mt-4 mb-2">
-        @if (m.ca) { Tecnologies utilitzades }
-        @if (m.es) { Tecnologías usadas }
-        @if (m.en) { Used technologies }
-    </div>
-    <div class="case-study-skills">
-        <jmp-skill [skill]="Skills.ANGULAR" />
-        <jmp-skill [skill]="Skills.TYPESCRIPT" />
-        <jmp-skill [skill]="Skills.NGRX" />
-        <jmp-skill [skill]="Skills.RXJS" />
-        <jmp-skill [skill]="Skills.CSS" />
-        <jmp-skill [skill]="Skills.ANGULARMATERIAL" />
-        <jmp-skill [skill]="Skills.PWA" />
-        <jmp-skill [skill]="Skills.CORDOVA" />
-        <jmp-skill [skill]="Skills.GIT" />
-        <jmp-skill [skill]="Skills.JIRA" />
-        <jmp-skill [skill]="Skills.CONFLUENCE" />
+    <jmp-llista-skills [skills]="caseStudy.skills" class="mt-4" />
 
-        <jmp-skill [skill]="Skills.CONTINUOUSINTEGRATION" />
-        <jmp-skill [skill]="Skills.AGILE" />
-        <jmp-skill [skill]="Skills.MVC" />
-
-    </div>
 </section>

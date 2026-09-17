@@ -1,6 +1,5 @@
 import { Component, inject } from '@angular/core';
 import { PreviewCaseStudyComponent } from 'src/app/components/preview-case-study/preview-case-study.component';
-import { Skills } from 'src/app/enums/skills.enum';
 import { ExperienceCalculatorService } from 'src/app/services/experience-calculator.service';
 import { MainService } from 'src/app/services/main.service';
 import { SharedImports } from 'src/app/shared/imports';
@@ -18,8 +17,6 @@ export class ProjectesHomeComponent {
 
     public m = inject(MainService);
     public exp = inject(ExperienceCalculatorService);
-
-    Skills = Skills;
 
     get seeMore() {
         return ["Veure més", "Ver más", "See more"][this.m.idiomaIndex];

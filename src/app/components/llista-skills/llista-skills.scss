@@ -1,0 +1,16 @@
+@import "src/styles.scss";
+
+:host { display: block; }
+
+.skills-title {
+    font-size: 1.25rem;
+}
+.skills {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+
+    @include mobil {
+        justify-content: center;
+    }
+}

@@ -106,23 +106,6 @@ body {
     }
 }
 
-// Estils case study //
-.case-study {
-
-    .case-study-skills-title {
-        font-size: 1.25rem;
-    }
-    .case-study-skills {
-        display: flex;
-        flex-wrap: wrap;
-        gap: 0.5rem;
-
-        @include mobil {
-            justify-content: center;
-        }
-    }
-}
-
 
 // Estils generals per tots els ns (<button> i <a>) //
 .boto {

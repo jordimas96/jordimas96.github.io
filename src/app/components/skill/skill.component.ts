@@ -1,5 +1,5 @@
 import { Component, ElementRef, inject, Input, OnInit, Renderer2 } from '@angular/core';
-import { Skills } from 'src/app/enums/skills.enum';
+import { Skill } from 'src/app/enums/skill.enum';
 import { ExperienceCalculatorService } from 'src/app/services/experience-calculator.service';
 import { MainService } from 'src/app/services/main.service';
 import { SharedImports } from 'src/app/shared/imports';
@@ -21,7 +21,7 @@ export class SkillComponent implements OnInit {
     private exp = inject(ExperienceCalculatorService);
 
 
-    @Input("skill") nom: Skills;
+    @Input("skill") nom: Skill;
     @Input("showTime") showTime: boolean = false;
 
     public skill;
@@ -32,7 +32,7 @@ export class SkillComponent implements OnInit {
 
         this.skill = this.exp.skills[this.nom] || { diesTotals: 0, empreses: [], anysMesosDies: [0, 0, 0] };
 
-        this.clau = Object.keys(Skills)[Object.values(Skills).indexOf(this.nom)];
+        this.clau = Object.keys(Skill)[Object.values(Skill).indexOf(this.nom)];
         this.classe = this.clau.toLowerCase();
 
     }
@@ -59,7 +59,7 @@ export class SkillComponent implements OnInit {
         return this.exp.construirCadenaTempsExp_anysMesos(this.skill?.anysMesosDies);
     }
     getNivellBarra() {
-        return (this.skill?.diesTotals || 0) / this.exp.getSkill(Skills._TOTAL)?.diesTotals * 100;
+        return (this.skill?.diesTotals || 0) / this.exp.getSkill(Skill._TOTAL)?.diesTotals * 100;
     }
     getTextTooltip() {
         if (this.skill?.empreses?.length) {

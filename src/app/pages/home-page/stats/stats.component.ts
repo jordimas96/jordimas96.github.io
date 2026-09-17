@@ -1,5 +1,5 @@
 import { Component, inject } from '@angular/core';
-import { Skills } from 'src/app/enums/skills.enum';
+import { Skill } from 'src/app/enums/skill.enum';
 import { ExperienceCalculatorService } from 'src/app/services/experience-calculator.service';
 import { MainService } from 'src/app/services/main.service';
 import { SharedImports } from 'src/app/shared/imports';
@@ -17,9 +17,9 @@ export class StatsComponent {
     public m = inject(MainService);
     public exp = inject(ExperienceCalculatorService);
 
-    Skills = Skills;
+    Skill = Skill;
 
-    getText(skill: Skills) {
+    getText(skill: Skill) {
         let text = this.exp.construirCadenaTempsExp_anysMesos(this.exp.skills[skill].anysMesosDies);
         text = text.replace(/\d+/g, (num) => `<span class="num">${num}</span>`);
         return text;

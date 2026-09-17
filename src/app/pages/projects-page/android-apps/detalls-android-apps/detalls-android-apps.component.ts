@@ -2,7 +2,7 @@ import { Component, inject } from '@angular/core';
 import { RouterLink } from '@angular/router';
 import $ from 'jquery';
 import { SkillComponent } from 'src/app/components/skill/skill.component';
-import { Skills } from 'src/app/enums/skills.enum';
+import { Skill as s } from 'src/app/enums/skill.enum';
 import { MainService } from 'src/app/services/main.service';
 import { SharedImports } from 'src/app/shared/imports';
 
@@ -12,15 +12,22 @@ import { SharedImports } from 'src/app/shared/imports';
     styleUrl: './detalls-android-apps.component.scss',
     imports: [
         ...SharedImports,
-        SkillComponent,
         RouterLink,
+        SkillComponent,
     ]
 })
 export class DetallsAndroidAppsComponent {
     
     public m = inject(MainService);
 
-    Skills = Skills;
+    public readonly llistaSkills = {
+        "systemblock": [s.JAVASCRIPT, s.JQUERY, s.CSS, s.HTML5, s.BOOTSTRAP, s.CORDOVA, s.MVC, s.RESPONSIVEDESIGN, s.AGILE],
+        "appcess": [s.JAVASCRIPT, s.JQUERY, s.CSS, s.HTML5, s.BOOTSTRAP, s.CORDOVA, s.MVC, s.RESPONSIVEDESIGN, s.AGILE],
+        "wallpaper-blurrer": [s.KOTLIN, s.JAVA, s.ANDROIDSTUDIO],
+        "text-mimicker": [s.KOTLIN, s.JAVA, s.ANDROIDSTUDIO],
+        "sus-tracker": [s.JAVA, s.ANDROIDSTUDIO],
+        "breaking-ball": [s.CSHARP, s.PHP, s.MYSQL, s.GITHUB, s.UNITY],
+    }
 
     getAmazonLink_breakingBall() {
         const com = this.m.en ? "com" : "es";

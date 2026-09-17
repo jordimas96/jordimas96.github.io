@@ -1,6 +1,6 @@
 import { Component, inject } from '@angular/core';
 import { SkillComponent } from 'src/app/components/skill/skill.component';
-import { Skills } from 'src/app/enums/skills.enum';
+import { Skill } from 'src/app/enums/skill.enum';
 import { ExperienceCalculatorService } from 'src/app/services/experience-calculator.service';
 import { LayoutService } from 'src/app/services/layout.service';
 import { MainService } from 'src/app/services/main.service';
@@ -22,7 +22,7 @@ export class LlenguatgesProgramacioComponent {
     public exp = inject(ExperienceCalculatorService);
     public ls = inject(LayoutService);
     
-    Skills = Skills;
+    Skill = Skill;
 
     public showTime: boolean = false;
     public sorted = false;

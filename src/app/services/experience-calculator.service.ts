@@ -1,5 +1,5 @@
 import { inject, Injectable } from "@angular/core";
-import { Skills } from 'src/app/enums/skills.enum';
+import { Skill as s, Skill } from 'src/app/enums/skill.enum';
 import { MainService } from "./main.service";
 
 @Injectable({
@@ -14,138 +14,138 @@ export class ExperienceCalculatorService {
             nom: "DSET",
             dates: ["01-02-2016", "14-07-2016"],
             skills: [
-                Skills.FRONTEND,
-                Skills.JAVASCRIPT, Skills.CSS, Skills.HTML5, Skills.CORDOVA,
-                Skills.VMWARE, Skills.VIRTUALBOX,
-                Skills.FEDORA, Skills.MACOS,
+                s.FRONTEND,
+                s.JAVASCRIPT, s.CSS, s.HTML5, s.CORDOVA,
+                s.VMWARE, s.VIRTUALBOX,
+                s.FEDORA, s.MACOS,
             ]
         },
         { // Nexxia (Pràctiques) //
             nom: "Nexxia",
             dates: ["17-10-2016", "28-02-2017"],
             skills: [
-                Skills.FRONTEND,
-                Skills.JAVASCRIPT, Skills.JQUERY, Skills.CSS, Skills.HTML5, Skills.BOOTSTRAP,
-                Skills.DELPHI, Skills.FASTREPORT,
-                Skills.RESPONSIVEDESIGN,
-                Skills.WINDOWS,
+                s.FRONTEND,
+                s.JAVASCRIPT, s.JQUERY, s.CSS, s.HTML5, s.BOOTSTRAP,
+                s.DELPHI, s.FASTREPORT,
+                s.RESPONSIVEDESIGN,
+                s.WINDOWS,
             ]
         },
         { // Beca Tecnocom //
             nom: "Beca Tecnocom",
             dates: ["03-07-2017", "31-07-2017"],
             skills: [
-                Skills.BACKEND,
-                Skills.JAVA, Skills.JSP, Skills.MAVEN, Skills.MICROSERVICES,
-                Skills.NETBEANS, Skills.ECLIPSE, Skills.SVN,
-                Skills.WINDOWSSERVER, Skills.REMOTEDESKTOP, Skills.TEAMVIEWER,
-                Skills.PL1, Skills.DB2, Skills.ZOSMVS,
-                Skills.WINDOWS,
+                s.BACKEND,
+                s.JAVA, s.JSP, s.MAVEN, s.MICROSERVICES,
+                s.NETBEANS, s.ECLIPSE, s.SVN,
+                s.WINDOWSSERVER, s.REMOTEDESKTOP, s.TEAMVIEWER,
+                s.PL1, s.DB2, s.ZOSMVS,
+                s.WINDOWS,
             ]
         },
         { // Tecnocom //
             nom: "Tecnocom",
             dates: ["04-09-2017", "08-03-2019"],
             skills: [
-                Skills.BACKEND,
-                Skills.JAVA, Skills.JSP, Skills.MAVEN, Skills.MICROSERVICES,
-                Skills.SQLDEVELOPER,
-                Skills.NETBEANS, Skills.ECLIPSE, Skills.SVN,
-                Skills.WINDOWSSERVER, Skills.REMOTEDESKTOP, Skills.TEAMVIEWER,
-                Skills.AGILE, Skills.CONTINUOUSINTEGRATION,
-                Skills.WINDOWS,
+                s.BACKEND,
+                s.JAVA, s.JSP, s.MAVEN, s.MICROSERVICES,
+                s.SQLDEVELOPER,
+                s.NETBEANS, s.ECLIPSE, s.SVN,
+                s.WINDOWSSERVER, s.REMOTEDESKTOP, s.TEAMVIEWER,
+                s.AGILE, s.CONTINUOUSINTEGRATION,
+                s.WINDOWS,
             ]
         },
         { // Matic //
             nom: "Matic",
             dates: ["07-09-2020", "25-06-2021"],
             skills: [
-                Skills.FRONTEND, Skills.BACKEND,
-                Skills.JAVASCRIPT, Skills.JQUERY, Skills.CSS, Skills.HTML5,
-                Skills.BOOTSTRAP, Skills.MATERIALIZE,
-                Skills.CORDOVA, Skills.UWP,
-                Skills.NODEJS, Skills.SEQUELIZE, Skills.PHP,
-                Skills.MYSQL, Skills.PHPMYADMIN, Skills.SQLDEVELOPER,
-                Skills.APACHE, Skills.FILEZILLA,
-                Skills.POWERSHELL,
-                Skills.JOOMLA, Skills.K2, Skills.AKEEBABACKUP, Skills.JCEFILEMANAGER,
-                Skills.WINDOWSSERVER, Skills.REMOTEDESKTOP, Skills.ANYDESK,
-                Skills.AGILE, Skills.MVC, Skills.RESPONSIVEDESIGN,
-                Skills.WINDOWS,
+                s.FRONTEND, s.BACKEND,
+                s.JAVASCRIPT, s.JQUERY, s.CSS, s.HTML5,
+                s.BOOTSTRAP, s.MATERIALIZE,
+                s.CORDOVA, s.ANDROID, s.UWP,
+                s.NODEJS, s.SEQUELIZE, s.PHP,
+                s.MYSQL, s.PHPMYADMIN, s.SQLDEVELOPER,
+                s.APACHE, s.FILEZILLA,
+                s.POWERSHELL,
+                s.JOOMLA, s.K2, s.AKEEBABACKUP, s.JCEFILEMANAGER,
+                s.WINDOWSSERVER, s.REMOTEDESKTOP, s.ANYDESK,
+                s.AGILE, s.MVC, s.RESPONSIVEDESIGN,
+                s.WINDOWS,
             ]
         },
         { // IN2ART // -
             nom: "IN2ART",
             dates: ["31-08-2021", "30-06-2023"],
             skills: [
-                Skills.FRONTEND,
-                Skills.ANGULAR, Skills.CSS, Skills.SCSS, Skills.TYPESCRIPT, Skills.JAVASCRIPT, Skills.JQUERY, Skills.HTML5,
-                Skills.BOOTSTRAP, Skills.ANGULARMATERIAL,
-                Skills.I18N,
-                Skills.NODEJS,
-                Skills.JSON,
-                Skills.MYSQL, Skills.PHPMYADMIN,
-                Skills.FILEZILLA, Skills.APACHE, Skills.GIT, Skills.SOURCETREE,
-                Skills.POWERSHELL,
-                Skills.POSTMAN, Skills.ASANA, Skills.POEDIT,
-                Skills.MVC, Skills.AGILE, Skills.RESPONSIVEDESIGN,
-                Skills.WINDOWS,
+                s.FRONTEND,
+                s.ANGULAR, s.CSS, s.SCSS, s.TYPESCRIPT, s.JAVASCRIPT, s.JQUERY, s.HTML5,
+                s.BOOTSTRAP, s.ANGULARMATERIAL,
+                s.I18N,
+                s.NODEJS,
+                s.JSON,
+                s.MYSQL, s.PHPMYADMIN,
+                s.FILEZILLA, s.APACHE, s.GIT, s.SOURCETREE,
+                s.POWERSHELL,
+                s.POSTMAN, s.ASANA, s.POEDIT,
+                s.MVC, s.AGILE, s.RESPONSIVEDESIGN,
+                s.WINDOWS,
             ]
         },
         { // CodiTramuntana // -
             nom: "CodiTramuntana",
             dates: ["05-07-2023", "22-08-2023"],
             skills: [
-                Skills.FRONTEND, Skills.BACKEND,
-                Skills.RUBYONRAILS,
-                Skills.SQLDEVELOPER,
-                Skills.WINSCP, //?
-                Skills.REDHAT,
+                s.FRONTEND, s.BACKEND,
+                s.RUBYONRAILS,
+                s.SQLDEVELOPER,
+                s.WINSCP, //?
+                s.REDHAT,
             ]
         },
         { // Orange //
             nom: "Orange",
             dates: ["23-08-2023", "03-11-2023"],
             skills: [
-                Skills.FRONTEND, Skills.BACKEND,
-                Skills.JAVA, Skills.WEBLOGIC, Skills.ECLIPSE, Skills.MAVEN, Skills.MICROSERVICES,
-                Skills.ANGULAR,
-                Skills.SQLDEVELOPER,
-                Skills.JIRA, Skills.CONFLUENCE, Skills.GITLAB, Skills.JFROGARTIFACTORY, Skills.FIGMA,
-                Skills.TORTOISEGIT,
-                Skills.WINSCP, Skills.WINDOWSSERVER,
-                Skills.MVC, Skills.AGILE, Skills.CONTINUOUSINTEGRATION,
-                Skills.WINDOWS,
+                s.FRONTEND, s.BACKEND,
+                s.JAVA, s.WEBLOGIC, s.ECLIPSE, s.MAVEN, s.MICROSERVICES,
+                s.ANGULAR,
+                s.SQLDEVELOPER,
+                s.JIRA, s.CONFLUENCE, s.GITLAB, s.JFROGARTIFACTORY, s.FIGMA,
+                s.TORTOISEGIT,
+                s.WINSCP, s.WINDOWSSERVER,
+                s.MVC, s.AGILE, s.CONTINUOUSINTEGRATION,
+                s.WINDOWS,
             ]
         },
         { // Evora //
             nom: "Evora",
             dates: ["06-11-2023", "26-01-2024"],
             skills: [
-                Skills.FRONTEND,
-                Skills.ANGULAR, Skills.NGRX, Skills.RXJS, Skills.TYPESCRIPT, Skills.JAVASCRIPT, Skills.CSS, Skills.SCSS,
-                Skills.ANGULARMATERIAL,
-                Skills.PWA, Skills.CORDOVA,
-                Skills.MICROSERVICES,
-                Skills.GIT, Skills.BITBUCKET,
-                Skills.JIRA, Skills.CONFLUENCE, Skills.FIGMA,
-                Skills.MVC, Skills.AGILE, Skills.CONTINUOUSINTEGRATION,
-                Skills.MACOS,
+                s.FRONTEND,
+                s.ANGULAR, s.NGRX, s.RXJS, s.TYPESCRIPT, s.JAVASCRIPT, s.CSS, s.SCSS,
+                s.ANGULARMATERIAL,
+                s.PWA, s.CORDOVA,
+                s.MICROSERVICES,
+                s.GIT, s.BITBUCKET,
+                s.JIRA, s.CONFLUENCE, s.FIGMA,
+                s.MVC, s.AGILE, s.CONTINUOUSINTEGRATION,
+                s.MACOS,
             ]
         },
         { // Indra //
             nom: "Indra",
             dates: ["18-06-2024", "20-02-2026"],
             skills: [
-                Skills.FRONTEND,
-                Skills.ANGULAR, Skills.NGRX, Skills.RXJS, Skills.TYPESCRIPT, Skills.JAVASCRIPT, Skills.CSS, Skills.SCSS, Skills.HTML5,
-                Skills.PRIMENG, Skills.BOOTSTRAP, Skills.ANGULARMATERIAL,
-                Skills.JEST, Skills.JASMINE, Skills.JIRA, Skills.SONARQUBE, Skills.OPENSHIFT,
-                Skills.MICROSERVICES,
-                Skills.GIT, Skills.SOURCETREE, Skills.BITBUCKET,
-                Skills.FIGMA,
-                Skills.MVC, Skills.AGILE, Skills.RESPONSIVEDESIGN, Skills.CONTINUOUSINTEGRATION,
-                Skills.WINDOWS,
+                s.FRONTEND,
+                s.ANGULAR, s.NGRX, s.RXJS, s.TYPESCRIPT, s.JAVASCRIPT, s.CSS, s.SCSS, s.HTML5,
+                s.PRIMENG, s.BOOTSTRAP, s.ANGULARMATERIAL,
+                s.JEST, s.JASMINE, s.JIRA, s.SONARQUBE, s.OPENSHIFT,
+                s.MICROSERVICES,
+                s.GIT, s.SOURCETREE, s.BITBUCKET,
+                s.FIGMA,
+                s.MVC, s.AGILE, s.RESPONSIVEDESIGN, s.CONTINUOUSINTEGRATION,
+                s.WINDOWS,
             ]
         },
 
@@ -177,7 +177,7 @@ export class ExperienceCalculatorService {
 
     calcularExperiencia() {
 
-        this.skills = { [Skills._TOTAL]: { diesTotals: 0, empreses: [], anysMesosDies: [0, 0, 0] } };
+        this.skills = { [Skill._TOTAL]: { diesTotals: 0, empreses: [], anysMesosDies: [0, 0, 0] } };
 
         // Omplim skills amb diesTotals //
         this.experiencia.forEach(empresa => {
@@ -189,20 +189,20 @@ export class ExperienceCalculatorService {
             if (empresa.nom == "Indra") diesTotals += 2 + 5.65 + 2; // Vacances no gaudides //
             if (empresa.nom == "Indra") diesTotals *= 43 / 40; // 43h a week //
 
-            empresa.skills.forEach((skill: Skills) => {
+            empresa.skills.forEach((skill: Skill) => {
                 if (this.skills[skill] === undefined)
                     this.skills[skill] = { diesTotals: 0, empreses: [], anysMesosDies: [0, 0, 0] };
 
                 let diesASumar = diesTotals;
                 
-                if (empresa.nom == "Matic" && skill == Skills.SEQUELIZE) diesASumar *= 188 / 443; // I did 42.5% of the work in System Block's backend //
+                if (empresa.nom == "Matic" && skill == Skill.SEQUELIZE) diesASumar *= 188 / 443; // I did ~42.5% of the work in System Block's backend //
                 
                 this.skills[skill].diesTotals += diesASumar;
 
                 this.skills[skill].empreses.push(empresa.nom);
             });
 
-            this.skills[Skills._TOTAL].diesTotals += diesTotals;
+            this.skills[Skill._TOTAL].diesTotals += diesTotals;
         });
 
         // Calculem els seus anys, mesos, dies, etc. //

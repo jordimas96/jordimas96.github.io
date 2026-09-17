@@ -419,34 +419,6 @@
         
     </article>
 
-    <!-- Skills -->
-    <div class="case-study-skills-title mt-4 mb-2">
-        @if (m.ca) { Tecnologies utilitzades }
-        @if (m.es) { Tecnologías usadas }
-        @if (m.en) { Used technologies }
-    </div>
-    <div class="case-study-skills">
-        <jmp-skill [skill]="Skills.JAVASCRIPT" />
-        <jmp-skill [skill]="Skills.JQUERY" />
-        <jmp-skill [skill]="Skills.CSS" />
-        <jmp-skill [skill]="Skills.HTML5" />
-        <jmp-skill [skill]="Skills.BOOTSTRAP" />
-        <jmp-skill [skill]="Skills.MATERIALIZE" />
-        <jmp-skill [skill]="Skills.UWP" />
-        <jmp-skill [skill]="Skills.CORDOVA" />
-        <jmp-skill [skill]="Skills.SEQUELIZE" />
-        <jmp-skill [skill]="Skills.PHP" />
-        <jmp-skill [skill]="Skills.APACHE" />
-        <jmp-skill [skill]="Skills.MYSQL" />
-        <jmp-skill [skill]="Skills.PHPMYADMIN" />
-        <jmp-skill [skill]="Skills.FILEZILLA" />
-        <jmp-skill [skill]="Skills.POWERSHELL" />
-        <jmp-skill [skill]="Skills.WINDOWSSERVER" />
-        <jmp-skill [skill]="Skills.JOOMLA" />
-        <jmp-skill [skill]="Skills.AGILE" />
-        <jmp-skill [skill]="Skills.MVC" />
-        <jmp-skill [skill]="Skills.RESPONSIVEDESIGN" />
-        <jmp-skill [skill]="Skills.ANYDESK" />
-        <jmp-skill [skill]="Skills.REMOTEDESKTOP" />
-    </div>
+    <jmp-llista-skills [skills]="caseStudy.skills" class="mt-4" />
+
 </section>

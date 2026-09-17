@@ -1,6 +1,6 @@
-import { Component, inject } from '@angular/core';
-import { SkillComponent } from 'src/app/components/skill/skill.component';
-import { Skills } from 'src/app/enums/skills.enum';
+import { Component, inject, Input } from '@angular/core';
+import { LlistaSkills } from 'src/app/components/llista-skills/llista-skills';
+import { CaseStudy } from 'src/app/data/case-studies.data';
 import { StoryComponent } from 'src/app/pages/about-me-page/stories/story/story.component';
 import { MainService } from 'src/app/services/main.service';
 import { SharedImports } from 'src/app/shared/imports';
@@ -15,15 +15,15 @@ import { MadJumpgateJocComponent } from './mad-jumpgate-joc/mad-jumpgate-joc.com
         ...SharedImports,
         MadJumpgateJocComponent,
         MadJumpgateGameplayComponent,
-        SkillComponent,
         StoryComponent,
+        LlistaSkills,
     ]
 })
 export class MadJumpgateComponent {
     
     public m = inject(MainService);
 
-    Skills = Skills;
+    @Input() caseStudy!: CaseStudy;
 
     get textPlayInBrowser() { return ["Jugar al navegador", "Jugar en el navegador", "Play in browser"][this.m.idiomaIndex]; }
     get textPlayInItchIo() { return ["Jugar a itch.io", "Jugar en itch.io", "Play on itch.io"][this.m.idiomaIndex]; }

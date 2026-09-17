@@ -1,4 +1,4 @@
-export enum Skills {
+export enum Skill {
     _TOTAL = "_total",
     ANGULAR = "Angular",
     JAVASCRIPT = "JavaScript",

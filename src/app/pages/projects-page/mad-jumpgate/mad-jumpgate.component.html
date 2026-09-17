@@ -87,17 +87,7 @@
             <jmp-story [urlId]="'18078142072743585'" [titol]="'FPS'" img="assets/about-me/stories/mad-jumpgate.png" jmpMostrarAmbAnimacio />
         </div>
     }
-    
 
-    <!-- Skills -->
-    <div class="case-study-skills-title mt-4 mb-2">
-        @if (m.ca) { Tecnologies utilitzades }
-        @if (m.es) { Tecnologías usadas }
-        @if (m.en) { Used technologies }
-    </div>
-    <div class="case-study-skills">
-        <jmp-skill [skill]="Skills.CSHARP" />
-        <jmp-skill [skill]="Skills.UNITY" />
-        <jmp-skill [skill]="Skills.VISUALSTUDIO" />
-    </div>
+    <jmp-llista-skills [skills]="caseStudy.skills" class="mt-4" />
+
 </section>

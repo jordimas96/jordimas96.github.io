@@ -69,18 +69,13 @@
                         <i class="fa-solid fa-arrow-right"></i>
                     </button>
                 </div>
-
-                <div class="case-study-skills">
-                    <jmp-skill [skill]="Skills.JAVASCRIPT" />
-                    <jmp-skill [skill]="Skills.JQUERY" />
-                    <jmp-skill [skill]="Skills.CSS" />
-                    <jmp-skill [skill]="Skills.HTML5" />
-                    <jmp-skill [skill]="Skills.BOOTSTRAP" />
-                    <jmp-skill [skill]="Skills.CORDOVA" />
-                    <jmp-skill [skill]="Skills.MVC" />
-                    <jmp-skill [skill]="Skills.RESPONSIVEDESIGN" />
-                    <jmp-skill [skill]="Skills.AGILE" />
+                
+                <div class="skills">
+                    @for (skill of llistaSkills['systemblock']; track skill) {
+                        <jmp-skill [skill]="skill" />
+                    }
                 </div>
+
             </div>
             <div class="imatge flex-4 mw-75 mw-sm-100 mx-auto">
                 <img src="assets/_experience/matic/systemblock/systemblock-captura-mobil.jpg" alt="System Block App" class="w-100">
@@ -171,18 +166,13 @@
                         <!-- https://appparapc.com/apk/10789372/ -->
                     </div>
                 </div>
-
-                <div class="case-study-skills">
-                    <jmp-skill [skill]="Skills.JAVASCRIPT" />
-                    <jmp-skill [skill]="Skills.JQUERY" />
-                    <jmp-skill [skill]="Skills.CSS" />
-                    <jmp-skill [skill]="Skills.HTML5" />
-                    <jmp-skill [skill]="Skills.BOOTSTRAP" />
-                    <jmp-skill [skill]="Skills.CORDOVA" />
-                    <jmp-skill [skill]="Skills.MVC" />
-                    <jmp-skill [skill]="Skills.RESPONSIVEDESIGN" />
-                    <jmp-skill [skill]="Skills.AGILE" />
+                
+                <div class="skills">
+                    @for (skill of llistaSkills['appcess']; track skill) {
+                        <jmp-skill [skill]="skill" />
+                    }
                 </div>
+
             </div>
             <div class="imatge flex-4 mw-75 mw-sm-100 mx-auto">
                 <img src="assets/_experience/matic/appcess-captures/6.webp" alt="System Block App" class="w-100">
@@ -248,12 +238,13 @@
                         </a>
                     </div>
                 </div>
-
-                <div class="case-study-skills">
-                    <jmp-skill [skill]="Skills.KOTLIN" />
-                    <jmp-skill [skill]="Skills.JAVA" />
-                    <jmp-skill [skill]="Skills.ANDROIDSTUDIO" />
+                
+                <div class="skills">
+                    @for (skill of llistaSkills['wallpaper-blurrer']; track skill) {
+                        <jmp-skill [skill]="skill" />
+                    }
                 </div>
+
             </div>
             <div class="video flex-4" jmpMostrarAmbAnimacio>
                 <video loop [muted]="'muted'" class="mw-75 mw-sm-100 m-auto m-sm-0">
@@ -313,12 +304,13 @@
                         </a>
                     </div>
                 </div>
-
-                <div class="case-study-skills">
-                    <jmp-skill [skill]="Skills.KOTLIN" />
-                    <jmp-skill [skill]="Skills.JAVA" />
-                    <jmp-skill [skill]="Skills.ANDROIDSTUDIO" />
+                
+                <div class="skills">
+                    @for (skill of llistaSkills['text-mimicker']; track skill) {
+                        <jmp-skill [skill]="skill" />
+                    }
                 </div>
+
             </div>
             <div class="video flex-1 d-flex align-items-end rounded-3" style="background-color:#262626" jmpMostrarAmbAnimacio>
                 <video loop [muted]="'muted'">
@@ -395,10 +387,12 @@
                  
                 <!--        < evolució de la icona >        < evolució del disseny >        -->
 
-                <div class="case-study-skills">
-                    <jmp-skill [skill]="Skills.JAVA" />
-                    <jmp-skill [skill]="Skills.ANDROIDSTUDIO" />
+                <div class="skills">
+                    @for (skill of llistaSkills['sus-tracker']; track skill) {
+                        <jmp-skill [skill]="skill" />
+                    }
                 </div>
+
             </div>
             <div class="video" jmpMostrarAmbAnimacio>
                 <video loop [muted]="'muted'" class="mb-1 mb-sm-0">
@@ -458,14 +452,13 @@
                         </a>
                     </div>
                 </div>
-
-                <div class="case-study-skills">
-                    <jmp-skill [skill]="Skills.CSHARP" />
-                    <jmp-skill [skill]="Skills.PHP" />
-                    <jmp-skill [skill]="Skills.MYSQL" />
-                    <jmp-skill [skill]="Skills.GITHUB" />
-                    <jmp-skill [skill]="Skills.UNITY" />
+                
+                <div class="skills">
+                    @for (skill of llistaSkills['breaking-ball']; track skill) {
+                        <jmp-skill [skill]="skill" />
+                    }
                 </div>
+
             </div>
             <div class="video flex-4" jmpMostrarAmbAnimacio>
                 <video loop [muted]="'muted'" class="mw-75 mw-sm-100 m-auto m-sm-0">

@@ -122,7 +122,15 @@
                     }
                 }
             }
-            .skills { }
+            .skills {
+                display: flex;
+                flex-wrap: wrap;
+                gap: 0.5rem;
+
+                @include mobil {
+                    justify-content: center;
+                }
+            }
         }
         .video {
             video {
