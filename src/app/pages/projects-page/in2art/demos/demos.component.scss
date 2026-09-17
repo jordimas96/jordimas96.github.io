@@ -45,6 +45,7 @@
 
     transition: border-radius 0.3s;
 
+    --color: hsl(0, 0%, 25%);
     &.desktop { --color: hsl(210, 82%, 37%); }
     &.mobile { --color: hsl(2, 28%, 36%); }
     &.responsive { --color: hsl(48, 100%, 21%); }
@@ -55,9 +56,7 @@
         height: 10rem;
         border-radius: 1rem;
 
-        overflow: hidden;
-
-        @include dark { border: 1px solid var(--color, hsl(0, 0%, 25%)); }
+        @include dark { box-shadow: var(--color) 0 0 8px 2px; }
         
         transition: border-radius 0.3s, border-color 0.3s;
 
