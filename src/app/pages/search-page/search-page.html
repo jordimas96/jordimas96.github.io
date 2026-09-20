@@ -8,7 +8,7 @@
 
             <div class="input-wrapper"
                 (click)="input.focus()"
-                [class.a-dalt]="query"
+                [class.gran]="!query"
                 >
 
                 <i class="fa-solid fa-magnifying-glass lupa"></i>
@@ -19,39 +19,48 @@
 
             </div>
 
+            @if (query) {
+                <div class="resultats mt-5">
+                    @if (resultats.skills) {
+                        <section class="skills">
+                            <h1 class="text-center mb-4" jmpMostrarAmbAnimacio>
+                                @if (m.ca) { Habilitats tècniques }
+                                @if (m.es) { Habilidades técnicas }
+                                @if (m.en) { Technical Skills }
+                            </h1>
+                            <div class="llista-skills">
+                                @for (skill of resultats.skills; track skill[0]) {
+                                    <jmp-skill [skill]="Skill[skill[0]]" />
+                                }
+                            </div>
+                        </section>
+                    }
 
-            <div class="resultats mt-5">
-                @if (resultats.skills) {
-                    <section class="skills">
-                        <h1 class="text-center mb-4" jmpMostrarAmbAnimacio>
-                            @if (m.ca) { Habilitats tècniques }
-                            @if (m.es) { Habilidades técnicas }
-                            @if (m.en) { Technical Skills }
-                        </h1>
-                        <div class="llista-skills">
-                            @for (skill of resultats.skills; track skill[0]) {
-                                <jmp-skill [skill]="Skill[skill[0]]" />
-                            }
-                        </div>
-                    </section>
-                }
+                    @if (resultats.caseStudies) {
+                        <section class="case-studies">
+                            <h1 class="text-center mb-4" jmpMostrarAmbAnimacio>
+                                @if (m.ca) { Experiències i projectes }
+                                @if (m.es) { Experiencias y proyectos }
+                                @if (m.en) { Experience and projects }
+                            </h1>
+                            <div class="llista-case-studies mx-auto row justify-content-center g-3 mb-6">
+                                @for (caseStudy of resultats.caseStudies; track caseStudy) {
+                                    <jmp-preview-case-study [id]="caseStudy" class="col-12 col-md-6 col-xl-4" />
+                                }
+                            </div>
 
-                @if (resultats.caseStudies) {
-                    <section class="case-studies">
-                        <h1 class="text-center mb-4" jmpMostrarAmbAnimacio>
-                            @if (m.ca) { Experiències i projectes }
-                            @if (m.es) { Experiencias y proyectos }
-                            @if (m.en) { Experience and projects }
-                        </h1>
-                        <div class="llista-case-studies mx-auto row justify-content-center g-3 mb-6">
-                            @for (caseStudy of resultats.caseStudies; track caseStudy) {
-                                <jmp-preview-case-study [id]="caseStudy" class="col-12 col-md-6 col-xl-4" />
-                            }
-                        </div>
+                        </section>
+                    }
 
-                    </section>
-                }
-            </div>
+                    @if (!hiHaResultats) {
+                        <h3 class="text-center"><i>
+                            @if (m.ca) { No hi ha resultats }
+                            @if (m.es) { Sin resultados }
+                            @if (m.en) { No results }
+                        </i></h3>
+                    }
+                </div>
+            }
             
         </div>
 

@@ -2,33 +2,38 @@
 @import "../page.scss";
 
 .content {
-    min-height: 90vh;
+    min-height: 70vh;
 
     .input-wrapper {
         display: flex;
         align-items: center;
-        gap: 2rem;
-        @include mobil { gap: 1.5rem; }
+        gap: 1rem;
+        @include mobil { gap: 0.25rem; }
 
         background-color: light-dark(hsla(0, 0%, 100%, 0.4), hsla(0, 0%, 0%, 0.4));
         backdrop-filter: blur(20px);
         font-size: 3rem;
         @include mobil { font-size: 2rem; }
 
-        padding: 1.5rem 1.5rem;
-        margin-top: 25vh;
-        border-radius: 4rem;
+        width: 75%;
+        @include mobil { width: 100%; }
+
+        padding: 0.25rem 0.5rem;
+        margin: auto;
+        border-radius: 1rem;
 
         cursor: text;
-        transition: margin-top 0.5s, padding 0.5s, border-radius 0.5s, gap 0.5s;
+        transition: translate 0.5s, width 0.5s, padding 0.5s, border-radius 0.5s, gap 0.5s;
         transition-timing-function: cubic-bezier(0.38, 1.37, 0.64, 0.97);
 
-        &.a-dalt {
-            margin-top: 0;
-            padding: 0.25rem 0.5rem;
-            border-radius: 1rem;
-            gap: 1rem;
-            @include mobil { gap: 0.25rem; }
+        &.gran {
+            translate: 0 25vh;
+            @include mobil { width: 75%; }
+
+            padding: 1.5rem 1.5rem;
+            border-radius: 4rem;
+            gap: 2rem;
+            @include mobil { gap: 1.5rem; }
         }
 
 
