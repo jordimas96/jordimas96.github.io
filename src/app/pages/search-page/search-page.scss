@@ -1,72 +1,78 @@
 @import "src/styles.scss";
 @import "../page.scss";
 
-.input-wrapper {
-    display: flex;
-    align-items: center;
-    gap: 2rem;
-    @include mobil { gap: 1.5rem; }
+.content {
+    min-height: 90vh;
 
-    background-color: light-dark(hsla(0, 0%, 100%, 0.4), hsla(0, 0%, 0%, 0.4));
-    backdrop-filter: blur(20px);
-    font-size: 3rem;
-    @include mobil { font-size: 2rem; }
-
-    padding: 1.5rem 1.5rem;
-    margin-top: 25vh;
-    border-radius: 4rem;
-
-    cursor: text;
-    transition: margin-top 0.5s, padding 0.5s, border-radius 0.5s, gap 0.5s;
-    transition-timing-function: cubic-bezier(0.38, 1.37, 0.64, 0.97);
-
-    &.a-dalt {
-        margin-top: 0;
-        padding: 0.25rem 0.5rem;
-        border-radius: 1rem;
-        gap: 1rem;
-        @include mobil { gap: 0.25rem; }
-    }
-
-
-    i.lupa {
-        padding: 0.65rem;
-        @include mobil { padding: 0.25rem; }
-
-        color: light-dark(hsla(0, 0%, 0%, 0.5), hsla(0, 0%, 100%, 0.5));
-
-        transition: color 0.4s;
-
-        pointer-events: none;
-    }
-
-    input {
-        width: 100%;
-        background: none;
-        border: 0;
-        outline: none;
-
-        &::placeholder { color: light-dark(hsla(0, 0%, 0%, 0.7), hsla(0, 0%, 100%, 0.7)); }
-    }
-}
-
-.resultats {
-    .llista-skills {
+    .input-wrapper {
         display: flex;
-        flex-wrap: wrap;
-        gap: 1rem;
-        justify-content: center;
+        align-items: center;
+        gap: 2rem;
+        @include mobil { gap: 1.5rem; }
 
-        ::ng-deep {
-            jmp-skill .chip {
-                font-size: 1.5rem;
+        background-color: light-dark(hsla(0, 0%, 100%, 0.4), hsla(0, 0%, 0%, 0.4));
+        backdrop-filter: blur(20px);
+        font-size: 3rem;
+        @include mobil { font-size: 2rem; }
+
+        padding: 1.5rem 1.5rem;
+        margin-top: 25vh;
+        border-radius: 4rem;
+
+        cursor: text;
+        transition: margin-top 0.5s, padding 0.5s, border-radius 0.5s, gap 0.5s;
+        transition-timing-function: cubic-bezier(0.38, 1.37, 0.64, 0.97);
+
+        &.a-dalt {
+            margin-top: 0;
+            padding: 0.25rem 0.5rem;
+            border-radius: 1rem;
+            gap: 1rem;
+            @include mobil { gap: 0.25rem; }
+        }
+
+
+        i.lupa {
+            padding: 0.65rem;
+            @include mobil { padding: 0.25rem; }
+
+            color: light-dark(hsla(0, 0%, 0%, 0.5), hsla(0, 0%, 100%, 0.5));
+
+            transition: color 0.4s;
+
+            pointer-events: none;
+        }
+
+        input {
+            width: 100%;
+            background: none;
+            border: 0;
+            outline: none;
+
+            &::placeholder { color: light-dark(hsla(0, 0%, 0%, 0.7), hsla(0, 0%, 100%, 0.7)); }
+        }
+    }
+
+    .resultats {
+        display: flex;
+        flex-direction: column;
+        gap: 6rem;
+
+        .llista-skills {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1rem;
+            justify-content: center;
+
+            ::ng-deep {
+                jmp-skill .chip {
+                    font-size: 1.5rem;
+                }
             }
         }
     }
+
 }
-
-
-
 
 
 

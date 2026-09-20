@@ -2,9 +2,10 @@ import { Component, inject } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { BotonsNavegacioPaginaComponent } from 'src/app/components/botons-navegacio-pagina/botons-navegacio-pagina.component';
 import { PreviewCaseStudyComponent } from 'src/app/components/preview-case-study/preview-case-study.component';
+import { CASE_STUDIES, CaseStudy } from 'src/app/data/case-studies.data';
+import { Seccio, SECCIONS } from 'src/app/data/seccions.data';
 import { PageComponent } from 'src/app/pages/page.component';
 import { SharedImports } from 'src/app/shared/imports';
-import { Seccio, SECCIONS } from 'src/app/shared/seccions';
 
 @Component({
     selector: 'jmp-case-study-page',
@@ -23,6 +24,7 @@ export class CaseStudyPageComponent extends PageComponent {
 
     public seccio: Seccio;
     public altresSeccions: Seccio[];
+    public caseStudy: CaseStudy;
 
     override async ngOnInit() {
         super.ngOnInit();
@@ -30,7 +32,7 @@ export class CaseStudyPageComponent extends PageComponent {
             let pagina = this.route.snapshot.data["pagina"];
             let nom = params["case-study"];
             
-            let seccio = SECCIONS.find(s => s.pagina == pagina && s.nom == nom);
+            let seccio = SECCIONS.find(s => s.pagina == pagina && s.nomUrl == nom);
 
             // Si no existeix la seccio de la url (/projects/asd), vés a la pàgina anterior (/projects) //
             if (!seccio) {
@@ -39,11 +41,12 @@ export class CaseStudyPageComponent extends PageComponent {
             }
 
             this.seccio = seccio;
+            this.caseStudy = CASE_STUDIES[seccio.id];
 
 
             this.altresSeccions = SECCIONS
                 .filter(s => s.pagina == seccio.pagina)
-                .filter(s => s.nom != seccio.nom);
+                .filter(s => s.nomUrl != seccio.nomUrl);
 
 
         });

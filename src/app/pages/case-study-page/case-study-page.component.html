@@ -8,8 +8,8 @@
     <div class="content mb-6">
 
         <div class="mw-940 m-auto">
-            @if (seccio.caseStudy.component) {
-                <ng-container *ngComponentOutlet="seccio.caseStudy.component; inputs: { caseStudy: seccio.caseStudy }" />
+            @if (caseStudy.component) {
+                <ng-container *ngComponentOutlet="caseStudy.component; inputs: { caseStudy: caseStudy }" />
             } @else {
                 <h4 class="text-center text-danger mt-5">Invalid section name</h4>
                 <!-- <h2 class="text-center mt-5"><jmp-link href="/" target="_self">Go home</jmp-link></h2> -->
@@ -18,9 +18,9 @@
 
         <div class="altres-seccions-titol mt-6 mb-4" jmpMostrarAmbAnimacio>{{ textAltresSeccions }}</div>
 
-        <div class="mw-1400 m-auto row justify-content-center g-3 mb-6">
-            @for (seccio of altresSeccions; track seccio.nom) {
-                <jmp-preview-case-study [pagina]="seccio.pagina" [id]="seccio.nom" class="col-12 col-md-6 col-xl-4" />
+        <div class="mw-1400 mx-auto row justify-content-center g-3 mb-6">
+            @for (seccio of altresSeccions; track seccio.nomUrl) {
+                <jmp-preview-case-study [id]="seccio.id" class="col-12 col-md-6 col-xl-4" />
             }
         </div>
 

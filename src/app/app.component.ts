@@ -21,7 +21,7 @@ import { ScrollHapticsService } from 'src/app/services/scroll-haptics.service';
 })
 export class AppComponent {
     public ls = inject(LayoutService);
-    scrollHaptics = inject(ScrollHapticsService);
+
     title = 'Jordi Mas Parramon';
 
     constructor() {

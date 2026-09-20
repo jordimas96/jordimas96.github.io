@@ -22,11 +22,14 @@ import { IndraComponent } from 'src/app/pages/experience-page/2024-06-indra/indr
 import { ComponentType } from '@angular/cdk/portal';
 import { Skill as s, Skill } from 'src/app/enums/skill.enum';
 
+
 export interface CaseStudy {
     url: string;
     component: ComponentType<any>;
     skills: Skill[];
 }
+
+export type CaseStudyId = keyof typeof CASE_STUDIES;
 
 
 export const CASE_STUDIES = {

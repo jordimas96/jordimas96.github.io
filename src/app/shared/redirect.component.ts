@@ -1,6 +1,6 @@
 import { Component, inject } from '@angular/core';
 import { Router } from '@angular/router';
-import { SECCIONS } from './seccions';
+import { SECCIONS } from 'src/app/data/seccions.data';
 
 @Component({ template: '' })
 export class RedirectComponent {
@@ -31,9 +31,9 @@ export class RedirectComponent {
 
 
         // Buscar seccions //
-        let seccio = SECCIONS.find(s => url == s.nom || url == s.nom + "-info");
+        let seccio = SECCIONS.find(s => url == s.nomUrl || url == s.nomUrl + "-info");
         if (seccio)
-            return `/${seccio.pagina}/${seccio.nom}`;
+            return `/${seccio.pagina}/${seccio.nomUrl}`;
 
 
 

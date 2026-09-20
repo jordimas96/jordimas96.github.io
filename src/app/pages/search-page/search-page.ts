@@ -2,6 +2,7 @@ import { AfterViewInit, Component, ElementRef, inject, OnInit, ViewChild } from 
 import { ActivatedRoute, Router } from '@angular/router';
 import { PreviewCaseStudyComponent } from 'src/app/components/preview-case-study/preview-case-study.component';
 import { SkillComponent } from 'src/app/components/skill/skill.component';
+import { CASE_STUDIES, CaseStudy } from 'src/app/data/case-studies.data';
 import { Skill } from 'src/app/enums/skill.enum';
 import { PageComponent } from 'src/app/pages/page.component';
 import { SharedImports } from 'src/app/shared/imports';
@@ -30,10 +31,9 @@ export class SearchPageComponent extends PageComponent implements OnInit, AfterV
         .map(([k, v]) => [k, v.toLowerCase()]);
 
     private _query = "";
-    public resultats: { skills?: [] } = {};
+    public resultats: { skills?: [], caseStudies?: [] } = {};
 
     
-    public hiHaResultats = false;
 
     override async ngOnInit() {
         super.ngOnInit();
@@ -57,6 +57,10 @@ export class SearchPageComponent extends PageComponent implements OnInit, AfterV
     }
     get query() { return this._query; }
 
+    get hiHaResultats() {
+        return !!Object.keys(this.resultats).length;
+    }
+
     actURL() {
         let novaURL = this.query.trim().toLowerCase();
         if (novaURL != "") novaURL = "/search/" + novaURL;
@@ -70,17 +74,28 @@ export class SearchPageComponent extends PageComponent implements OnInit, AfterV
 
         if (!this.query) {
             this.resultats = {};
-            this.hiHaResultats = false;
             return;
         }
         const query = this.query.trim().toLowerCase();
 
+        // Skills //
         let skills = this.llistaSkills.filter(([k, v]) => v.includes(query));
-
         if (skills.length) resultats["skills"] = skills;
 
+        // Case studies //
+        let caseStudies: string[] = [];
+        // Temporal, ara llista només case studies que tinguin alguna de les skills trobades //
+        if (skills.length) {
+            caseStudies = Object.entries(CASE_STUDIES).filter(([key, caseStudy]) => {
+                return caseStudy.skills.some(caseStudySkill =>
+                    skills.some(skill => Skill[skill[0]] === caseStudySkill)
+                );
+            })
+                .map(v => v[0]);
+        }
+        if (caseStudies.length) resultats["caseStudies"] = caseStudies;
+
         this.resultats = resultats;
-        this.hiHaResultats = !!Object.keys(resultats).length;
     }
 
 

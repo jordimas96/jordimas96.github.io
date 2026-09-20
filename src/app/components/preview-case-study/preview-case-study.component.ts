@@ -1,9 +1,9 @@
 import { Component, inject, Input } from '@angular/core';
 import { MatRipple } from '@angular/material/core';
 import { RouterLink } from '@angular/router';
+import { CaseStudyId } from 'src/app/data/case-studies.data';
 import { MainService } from 'src/app/services/main.service';
 import { SharedImports } from 'src/app/shared/imports';
-import { SECCIONS } from 'src/app/shared/seccions';
 
 @Component({
     selector: 'jmp-preview-case-study',
@@ -19,18 +19,7 @@ export class PreviewCaseStudyComponent {
 
     public m = inject(MainService);
 
-    @Input() id: string;
-    @Input() pagina: string;
-
-    ngOnInit() {
-        // Si no tenim pàgina, l'intentem deduir //
-        if (!this.pagina) {
-            let seccioProbable = SECCIONS.find(s => s.nom == this.id);
-            if (seccioProbable)
-                this.pagina = seccioProbable.pagina;
-        }
-    }
-
+    @Input() id: CaseStudyId;
 
     get seeMore() {
         return ["Veure més", "Ver más", "See more"][this.m.idiomaIndex];

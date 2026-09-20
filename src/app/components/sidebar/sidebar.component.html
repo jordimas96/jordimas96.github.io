@@ -11,8 +11,7 @@
         <button
             class="rs boto-seccio home"
             [class.rail]="rail" [class.drawer]="!rail"
-            routerLinkActive="selected" [routerLinkActiveOptions]="{exact: true}" routerLink="/"
-            [title]="rail ? getText.inici() : ''">
+            routerLinkActive="selected" [routerLinkActiveOptions]="{exact: true}" routerLink="/">
             <i class="icona fa-solid fa-house"></i>
             <div class="text">
                 {{ getText.inici() }}
@@ -21,8 +20,7 @@
         <button
             class="rs boto-seccio experience"
             [class.rail]="rail" [class.drawer]="!rail"
-            routerLinkActive="selected" routerLink="/experience"
-            [title]="rail ? getText.experiencia() : ''">
+            routerLinkActive="selected" routerLink="/experience">
             <i class="icona fa-solid fa-briefcase"></i>
             <div class="text">
                 {{ getText.experiencia() }}
@@ -31,8 +29,7 @@
         <button
             class="rs boto-seccio projects"
             [class.rail]="rail" [class.drawer]="!rail"
-            routerLinkActive="selected" routerLink="/projects"
-            [title]="rail ? getText.projectes() : ''">
+            routerLinkActive="selected" routerLink="/projects">
             <i class="icona fa-solid fa-shapes"></i>
             <div class="text">
                 {{ getText.projectes() }}
@@ -41,8 +38,7 @@
         <button
             class="rs boto-seccio art"
             [class.rail]="rail" [class.drawer]="!rail"
-            routerLinkActive="selected" routerLink="/art"
-            [title]="rail ? getText.art() : ''">
+            routerLinkActive="selected" routerLink="/art">
             <i class="icona fa-solid fa-paintbrush"></i>
             <div class="text">
                 {{ getText.art() }}
@@ -51,8 +47,7 @@
         <button
             class="rs boto-seccio about-me"
             [class.rail]="rail" [class.drawer]="!rail"
-            routerLinkActive="selected" routerLink="/about-me"
-            [title]="rail ? getText.aboutme() : ''">
+            routerLinkActive="selected" routerLink="/about-me">
             <i class="icona fa-solid fa-user"></i>
             <div class="text text-nowrap">
                 {{ getText.aboutme() }}
@@ -61,8 +56,7 @@
         <a
             class="rs boto-seccio cv"
             href="/cv"
-            [class.rail]="rail" [class.drawer]="!rail"
-            [title]="rail ? getText.cv() : ''">
+            [class.rail]="rail" [class.drawer]="!rail">
             <i class="icona icona-cv"></i>
             <div class="text">
                 {{ getText.cv() }}
