@@ -1,25 +1,27 @@
 import { Component } from '@angular/core';
 import { BotonsNavegacioPaginaComponent } from 'src/app/components/botons-navegacio-pagina/botons-navegacio-pagina.component';
-import { PreviewCaseStudyComponent } from 'src/app/components/preview-case-study/preview-case-study.component';
 import { SharedImports } from 'src/app/shared/imports';
 import { PageComponent } from '../page.component';
+import { StoriesComponent } from './stories/stories.component';
 
 @Component({
-    selector: 'jmp-experience-page',
-    templateUrl: './experience-page.component.html',
-    styleUrl: './experience-page.component.scss',
+    templateUrl: './about-me.page.html',
+    styleUrl: './about-me.page.scss',
     imports: [
         ...SharedImports,
-        PreviewCaseStudyComponent,
+        StoriesComponent,
         BotonsNavegacioPaginaComponent,
     ]
 })
-export class ExperiencePageComponent extends PageComponent {
+export class AboutMePageComponent extends PageComponent {
+
+    linkJocLandingPage = "https://mad-jumpgate.github.io/";
 
     override async ngOnInit() {
         super.ngOnInit();
 
-        if (!this.m.debug) document.title = "Jordi Mas Parramon - Experience";
+        if (!this.m.debug) document.title = "Jordi Mas Parramon - About me";
     }
+
 
 }

@@ -10,9 +10,8 @@ import { ProjectesHomeComponent } from './projectes-home/projectes-home.componen
 import { StatsComponent } from './stats/stats.component';
 
 @Component({
-    selector: 'jmp-home-page',
-    templateUrl: './home-page.component.html',
-    styleUrl: './home-page.component.scss',
+    templateUrl: './home.page.html',
+    styleUrl: './home.page.scss',
     imports: [
         ...SharedImports,
         BioComponent,

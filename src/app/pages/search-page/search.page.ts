@@ -2,15 +2,14 @@ import { AfterViewInit, Component, ElementRef, inject, OnInit, ViewChild } from 
 import { ActivatedRoute, Router } from '@angular/router';
 import { PreviewCaseStudyComponent } from 'src/app/components/preview-case-study/preview-case-study.component';
 import { SkillComponent } from 'src/app/components/skill/skill.component';
-import { CASE_STUDIES, CaseStudy } from 'src/app/data/case-studies.data';
+import { CASE_STUDIES } from 'src/app/data/case-studies.data';
 import { Skill } from 'src/app/enums/skill.enum';
-import { PageComponent } from 'src/app/pages/page.component';
 import { SharedImports } from 'src/app/shared/imports';
+import { PageComponent } from '../page.component';
 
 @Component({
-    selector: 'jmp-search-page',
-    templateUrl: './search-page.html',
-    styleUrl: './search-page.scss',
+    templateUrl: './search.page.html',
+    styleUrl: './search.page.scss',
     imports: [
         ...SharedImports,
         SkillComponent,

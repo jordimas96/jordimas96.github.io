@@ -5,23 +5,22 @@ import { SharedImports } from 'src/app/shared/imports';
 import { PageComponent } from '../page.component';
 
 @Component({
-    selector: 'jmp-projects-page',
-    templateUrl: './projects-page.component.html',
-    styleUrl: './projects-page.component.scss',
+    templateUrl: './art.page.html',
+    styleUrl: './art.page.scss',
     imports: [
         ...SharedImports,
         PreviewCaseStudyComponent,
         BotonsNavegacioPaginaComponent,
     ]
 })
-export class ProjectsPageComponent extends PageComponent {
+export class ArtPageComponent extends PageComponent {
 
     public frase: string[];
 
     override async ngOnInit() {
         super.ngOnInit();
 
-        if (!this.m.debug) document.title = "Jordi Mas Parramon - Projects";
+        if (!this.m.debug) document.title = "Jordi Mas Parramon - Art";
 
         // Pròximament més //
         let llistaFrases = [
@@ -32,6 +31,7 @@ export class ProjectsPageComponent extends PageComponent {
             ["Pròximament més...", "Próximamente más...", "Coming soon..."],
         ];
         this.frase = llistaFrases[Math.floor(Math.random() * llistaFrases.length)];
+
     }
 
 }

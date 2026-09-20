@@ -1,13 +1,13 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { AboutMePageComponent } from 'src/app/pages/about-me-page/about-me-page.component';
-import { ArtPageComponent } from 'src/app/pages/art-page/art-page.component';
-import { ExperiencePageComponent } from 'src/app/pages/experience-page/experience-page.component';
-import { HomePageComponent } from 'src/app/pages/home-page/home-page.component';
-import { ProjectsPageComponent } from 'src/app/pages/projects-page/projects-page.component';
-import { SearchPageComponent } from 'src/app/pages/search-page/search-page';
-import { SectionPageComponent } from 'src/app/pages/section-page/section-page.component';
-import { CaseStudyPageComponent } from './pages/case-study-page/case-study-page.component';
+import { AboutMePageComponent } from 'src/app/pages/about-me-page/about-me.page';
+import { ArtPageComponent } from 'src/app/pages/art-page/art.page';
+import { ExperiencePageComponent } from 'src/app/pages/experience-page/experience.page';
+import { HomePageComponent } from 'src/app/pages/home-page/home.page';
+import { ProjectsPageComponent } from 'src/app/pages/projects-page/projects.page';
+import { SearchPageComponent } from 'src/app/pages/search-page/search.page';
+import { SectionPageComponent } from 'src/app/pages/section-page/section.page';
+import { CaseStudyPageComponent } from './pages/case-study-page/case-study.page';
 import { RedirectComponent } from './shared/redirect.component';
 
 const routes: Routes = [

@@ -4,13 +4,12 @@ import { BotonsNavegacioPaginaComponent } from 'src/app/components/botons-navega
 import { PreviewCaseStudyComponent } from 'src/app/components/preview-case-study/preview-case-study.component';
 import { CASE_STUDIES, CaseStudy } from 'src/app/data/case-studies.data';
 import { Seccio, SECCIONS } from 'src/app/data/seccions.data';
-import { PageComponent } from 'src/app/pages/page.component';
 import { SharedImports } from 'src/app/shared/imports';
+import { PageComponent } from '../page.component';
 
 @Component({
-    selector: 'jmp-case-study-page',
-    templateUrl: './case-study-page.component.html',
-    styleUrl: './case-study-page.component.scss',
+    templateUrl: './case-study.page.html',
+    styleUrl: './case-study.page.scss',
     imports: [
         ...SharedImports,
         PreviewCaseStudyComponent,
