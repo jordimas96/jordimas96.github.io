@@ -1,6 +1,6 @@
 import { DragDropModule } from '@angular/cdk/drag-drop';
 import { provideHttpClient, withInterceptorsFromDi } from '@angular/common/http';
-import { importProvidersFrom, inject, provideAppInitializer } from '@angular/core';
+import { importProvidersFrom, inject, provideAppInitializer, provideZoneChangeDetection } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { BrowserModule, bootstrapApplication } from '@angular/platform-browser';
 import { provideAnimations } from '@angular/platform-browser/animations';
@@ -14,7 +14,7 @@ import { AppInitializerService } from './app/services/app-initializer.service';
 
 bootstrapApplication(AppComponent, {
     providers: [
-        importProvidersFrom(
+        provideZoneChangeDetection(), importProvidersFrom(
             BrowserModule,
             NgbModule,
             AppRoutingModule,

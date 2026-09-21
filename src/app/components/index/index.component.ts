@@ -115,7 +115,7 @@ export class IndexComponent implements AfterViewInit {
 
 
     // Funcions //
-    @HostListener('window:scroll', ['$event'])
+    @HostListener('window:scroll')
     onScroll() {
         this.m.scroll = window.scrollY;
         if (this.m.scroll > 0)

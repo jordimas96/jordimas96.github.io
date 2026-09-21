@@ -15,7 +15,7 @@ export class ImatgeScrollComponent {
     @Input() src: string;
     public transY;
 
-    @HostListener('window:scroll', ['$event'])
+    @HostListener('window:scroll')
     onScroll() {
         this.transY = -((window.pageYOffset / (this.m.esPantallaMobil ? 100 : 200)) * 13 - 6.5);
         this.transY = Utils.numberInRange(this.transY, -6.5, 6.5);

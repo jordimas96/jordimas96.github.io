@@ -76,8 +76,8 @@ export class NavegacioTabComponent {
     }
 
     // Funcions //
-    @HostListener('window:resize', ['$event'])
-    @HostListener('window:scroll', ['$event'])
+    @HostListener('window:resize')
+    @HostListener('window:scroll')
     onResize() {
         this.actPosPill(false);
     }

@@ -53,8 +53,8 @@ export class InputBuscador implements AfterViewInit {
     get textPlaceholder() { return ["Cerca...", "Buscar...", "Search..."][this.m.idiomaIndex]; }
 
     
-    @HostListener('document:keydown.escape', ['$event'])
-    onEscape(event: KeyboardEvent) {
+    @HostListener('document:keydown.escape')
+    onEscape() {
         this.blur();
     }
 

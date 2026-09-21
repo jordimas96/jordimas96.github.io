@@ -24,7 +24,7 @@ export class IframeTemplateComponent implements AfterViewInit {
         this.recalcularDireccioFlex();
     }
 
-    @HostListener('window:resize', ['$event'])
+    @HostListener('window:resize')
     recalcularDireccioFlex() {
         let ratio;
 

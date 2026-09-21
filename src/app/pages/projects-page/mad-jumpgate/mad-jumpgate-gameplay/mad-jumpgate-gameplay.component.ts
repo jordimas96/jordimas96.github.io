@@ -35,7 +35,7 @@ export class MadJumpgateGameplayComponent {
         this.posarIframeDinsLimits();
     }
 
-    @HostListener('window:resize', ['$event'])
+    @HostListener('window:resize')
     posarIframeDinsLimits() {
 
         // Si el contingut està tancat, no es pot medir l'amplada del placeholder per a redimensionar l'iframe. Amb aquest codi //

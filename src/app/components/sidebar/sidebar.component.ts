@@ -130,8 +130,8 @@ export class SidebarComponent implements OnInit, AfterViewInit {
     }
 
 
-    @HostListener('document:keydown.escape', ['$event'])
-    onEscape(event: KeyboardEvent) {
+    @HostListener('document:keydown.escape')
+    onEscape() {
         if (!this.mobil && !this.rail) this.toggle(); // PC //
         if (this.mobil && this.open) this.toggle(); // Mobil //
     }

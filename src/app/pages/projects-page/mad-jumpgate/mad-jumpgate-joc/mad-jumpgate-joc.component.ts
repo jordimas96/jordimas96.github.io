@@ -37,7 +37,7 @@ export class MadJumpgateJocComponent {
         this.posarIframeDinsLimits();
     }
 
-    @HostListener('window:resize', ['$event'])
+    @HostListener('window:resize')
     posarIframeDinsLimits() {
         var iframeWidth = 1920;
         var iframeHeight = 1080;
