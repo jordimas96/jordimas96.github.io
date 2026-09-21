@@ -1,0 +1,66 @@
+@import "src/styles.scss";
+@import "../page.scss";
+
+.content {
+    min-height: 70vh;
+
+
+    jmp-skill {
+        pointer-events: none;
+        
+        ::ng-deep .chip {
+            font-size: 2rem;
+            @include mobil { font-size: 2rem; }
+            padding: 0.25em 1.25em;
+        }
+    }
+
+    .info-card {
+
+        font-size: 1.5rem;
+        @include mobil { font-size: 1.25rem };
+
+        padding: 0.75rem 2rem;
+        border-radius: 2rem;
+
+        background-color: hsl(var(--h), var(--s), 90%);
+        color: hsl(var(--h), var(--s), 20%);
+
+        text-align: center;
+        white-space: pre-line;
+
+        @extend .shadow-3;
+    }
+
+    .resultats {
+        display: flex;
+        flex-direction: column;
+        gap: 6rem;
+
+        .llista-skills {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1rem;
+            justify-content: center;
+
+            ::ng-deep {
+                jmp-skill .chip {
+                    font-size: 1.5rem;
+                }
+            }
+        }
+    }
+
+}
+
+
+
+
+// Ocultar camp buscador de la appbar a la pantalla /search //
+::ng-deep {
+    jmp-input-buscador {
+        scale: 0.75;
+        opacity: 0;
+        pointer-events: none;
+    }
+}

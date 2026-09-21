@@ -1,4 +1,5 @@
 import { Component, ElementRef, inject, Input, OnInit, Renderer2 } from '@angular/core';
+import { Router } from '@angular/router';
 import { Skill } from 'src/app/enums/skill.enum';
 import { ExperienceCalculatorService } from 'src/app/services/experience-calculator.service';
 import { MainService } from 'src/app/services/main.service';
@@ -8,7 +9,7 @@ import { Utils } from 'src/app/shared/utils';
 @Component({
     selector: 'jmp-skill',
     templateUrl: './skill.component.html',
-    styleUrl: './skill.component.scss',
+    styleUrls: ['./skill.component.scss', './skill-colors.component.scss'],
     imports: [
         ...SharedImports,
     ]
@@ -16,6 +17,7 @@ import { Utils } from 'src/app/shared/utils';
 export class SkillComponent implements OnInit {
     
     public m = inject(MainService);
+    public router = inject(Router);
     private el = inject(ElementRef);
     private renderer = inject(Renderer2);
     private exp = inject(ExperienceCalculatorService);
@@ -65,13 +67,13 @@ export class SkillComponent implements OnInit {
         if (this.skill?.empreses?.length) {
             return this.getText_anysMesosDies() + // 2 years, 6 months and 9 days //
                 "\n" +
-                ["a", "en", "in"][this.m.idiomaIndex] + " " + // in //
+                ["a", "en", "at"][this.m.idiomaIndex] + " " + // at //
                 Utils.addConjunctionBetweenThe2Last(this.skill?.empreses, this.m.conjuncio); // Evora, Orange and IN2ART //
         } else {
             return [
-                "Experiència només en projectes personals",
-                "Experiencia sólo en proyectos personales",
-                "Experience in personal projects only"
+                "Només en projectes personals",
+                "Sólo en proyectos personales",
+                "Personal projects only"
             ][this.m.idiomaIndex];
         }
     }
@@ -96,6 +98,11 @@ export class SkillComponent implements OnInit {
                 this.renderer.setStyle(tooltipCard, "translate", `${offset}px`);
 
         }
+    }
+
+
+    obrirPaginaSkill() {
+        this.router.navigate(["/skill", this.clau.toLowerCase()]);
     }
 
 

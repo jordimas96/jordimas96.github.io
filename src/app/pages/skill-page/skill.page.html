@@ -1,0 +1,44 @@
+<div id="page" class="page">
+
+
+
+    <div class="content mb-6">
+
+        <div class="mw-1400 mx-auto">
+
+            <div class="d-flex flex-column align-items-center gap-3">
+
+                <jmp-skill [skill]="skill" />
+
+                <div class="info-card" [class]="skillInfoCardClass" jmpMostrarAmbAnimacio>
+                    {{ experienciaEn_string }} <b>{{ skill }}:</b><br>
+                    {{ getTextTooltip() }}
+                </div>
+
+            </div>
+
+            <div class="resultats mt-5">
+                @if (caseStudies) {
+                    <section class="case-studies">
+                        <div class="llista-case-studies mx-auto row justify-content-center g-3 mb-6">
+                            @for (caseStudy of caseStudies; track caseStudy) {
+                                <jmp-preview-case-study [id]="caseStudy" class="col-12 col-md-6 col-xl-4" />
+                            }
+                        </div>
+
+                    </section>
+                }
+
+                <!-- @if (!hiHaResultats) {
+                    <h3 class="text-center"><i>
+                        @if (m.ca) { No hi ha resultats }
+                        @if (m.es) { Sin resultados }
+                        @if (m.en) { No results }
+                    </i></h3>
+                } -->
+            </div>
+            
+        </div>
+
+    </div>
+</div>

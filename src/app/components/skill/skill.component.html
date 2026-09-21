@@ -1,7 +1,7 @@
 @if (skill) {
-    <span class="tooltipExp {{ classe }}" (mouseenter)="correctTooltipPosition()">
+    <button class="rs w-100 tooltipExp" [class]="classe" (mouseenter)="correctTooltipPosition()" (click)="obrirPaginaSkill()">
         @if (!showTime) {
-            <section class="{{ classe }}">
+            <section [class]="classe">
                 <div class="chip" jmpMostrarAmbAnimacio>{{ nom }}</div>
             </section>
         } @else {
@@ -16,5 +16,5 @@
             {{ experienciaEn_string() }} <b>{{ nom }}:</b><br>
             {{ getTextTooltip() }}
         </div>
-    </span>
+    </button>
 }

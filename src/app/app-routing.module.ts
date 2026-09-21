@@ -7,6 +7,7 @@ import { HomePageComponent } from 'src/app/pages/home-page/home.page';
 import { ProjectsPageComponent } from 'src/app/pages/projects-page/projects.page';
 import { SearchPageComponent } from 'src/app/pages/search-page/search.page';
 import { SectionPageComponent } from 'src/app/pages/section-page/section.page';
+import { SkillPageComponent } from 'src/app/pages/skill-page/skill.page';
 import { CaseStudyPageComponent } from './pages/case-study-page/case-study.page';
 import { RedirectComponent } from './shared/redirect.component';
 
@@ -22,8 +23,10 @@ const routes: Routes = [
     { path: "projects",      component: ProjectsPageComponent },
     { path: "art",           component: ArtPageComponent },
     { path: "about-me",      component: AboutMePageComponent },
+    
     { path: "search",        component: SearchPageComponent },
     { path: "search/:query", component: SearchPageComponent },
+    { path: "skill/:skill",  component: SkillPageComponent },
 
     // Case studies //
     { path: "experience/:case-study", component: CaseStudyPageComponent, data: { pagina: "experience" } },

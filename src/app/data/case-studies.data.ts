@@ -121,4 +121,4 @@ export const CASE_STUDIES = {
     },
 
 
-}
+};

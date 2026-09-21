@@ -1,4 +1,5 @@
 import { inject, Injectable } from "@angular/core";
+import { CaseStudyId } from "src/app/data/case-studies.data";
 import { Skill as s, Skill } from 'src/app/enums/skill.enum';
 import { MainService } from "./main.service";
 
@@ -9,147 +10,162 @@ export class ExperienceCalculatorService {
 
     public m = inject(MainService);
 
-    public readonly experiencia = [
-        { // DSET (Pràctiques) //
-            nom: "DSET",
-            dates: ["01-02-2016", "14-07-2016"],
-            skills: [
-                s.FRONTEND,
-                s.JAVASCRIPT, s.CSS, s.HTML5, s.CORDOVA,
-                s.VMWARE, s.VIRTUALBOX,
-                s.FEDORA, s.MACOS,
-            ]
-        },
-        { // Nexxia (Pràctiques) //
-            nom: "Nexxia",
-            dates: ["17-10-2016", "28-02-2017"],
-            skills: [
-                s.FRONTEND,
-                s.JAVASCRIPT, s.JQUERY, s.CSS, s.HTML5, s.BOOTSTRAP,
-                s.DELPHI, s.FASTREPORT,
-                s.RESPONSIVEDESIGN,
-                s.WINDOWS,
-            ]
-        },
-        { // Beca Tecnocom //
-            nom: "Beca Tecnocom",
-            dates: ["03-07-2017", "31-07-2017"],
-            skills: [
-                s.BACKEND,
-                s.JAVA, s.JSP, s.MAVEN, s.MICROSERVICES,
-                s.NETBEANS, s.ECLIPSE, s.SVN,
-                s.WINDOWSSERVER, s.REMOTEDESKTOP, s.TEAMVIEWER,
-                s.PL1, s.DB2, s.ZOSMVS,
-                s.WINDOWS,
-            ]
-        },
-        { // Tecnocom //
-            nom: "Tecnocom",
-            dates: ["04-09-2017", "08-03-2019"],
-            skills: [
-                s.BACKEND,
-                s.JAVA, s.JSP, s.MAVEN, s.MICROSERVICES,
-                s.SQLDEVELOPER,
-                s.NETBEANS, s.ECLIPSE, s.SVN,
-                s.WINDOWSSERVER, s.REMOTEDESKTOP, s.TEAMVIEWER,
-                s.AGILE, s.CONTINUOUSINTEGRATION,
-                s.WINDOWS,
-            ]
-        },
-        { // Matic //
-            nom: "Matic",
-            dates: ["07-09-2020", "25-06-2021"],
-            skills: [
-                s.FRONTEND, s.BACKEND,
-                s.JAVASCRIPT, s.JQUERY, s.CSS, s.HTML5,
-                s.BOOTSTRAP, s.MATERIALIZE,
-                s.CORDOVA, s.ANDROID, s.UWP,
-                s.NODEJS, s.SEQUELIZE, s.PHP,
-                s.MYSQL, s.PHPMYADMIN, s.SQLDEVELOPER,
-                s.APACHE, s.FILEZILLA,
-                s.POWERSHELL,
-                s.JOOMLA, s.K2, s.AKEEBABACKUP, s.JCEFILEMANAGER,
-                s.WINDOWSSERVER, s.REMOTEDESKTOP, s.ANYDESK,
-                s.AGILE, s.MVC, s.RESPONSIVEDESIGN,
-                s.WINDOWS,
-            ]
-        },
-        { // IN2ART // -
-            nom: "IN2ART",
-            dates: ["31-08-2021", "30-06-2023"],
-            skills: [
-                s.FRONTEND,
-                s.ANGULAR, s.CSS, s.SCSS, s.TYPESCRIPT, s.JAVASCRIPT, s.JQUERY, s.HTML5,
-                s.BOOTSTRAP, s.ANGULARMATERIAL,
-                s.I18N,
-                s.NODEJS,
-                s.JSON,
-                s.MYSQL, s.PHPMYADMIN,
-                s.FILEZILLA, s.APACHE, s.GIT, s.SOURCETREE,
-                s.POWERSHELL,
-                s.POSTMAN, s.ASANA, s.POEDIT,
-                s.MVC, s.AGILE, s.RESPONSIVEDESIGN,
-                s.WINDOWS,
-            ]
-        },
-        { // CodiTramuntana // -
-            nom: "CodiTramuntana",
-            dates: ["05-07-2023", "22-08-2023"],
-            skills: [
-                s.FRONTEND, s.BACKEND,
-                s.RUBYONRAILS,
-                s.SQLDEVELOPER,
-                s.WINSCP, //?
-                s.REDHAT,
-            ]
-        },
-        { // Orange //
-            nom: "Orange",
-            dates: ["23-08-2023", "03-11-2023"],
-            skills: [
-                s.FRONTEND, s.BACKEND,
-                s.JAVA, s.WEBLOGIC, s.ECLIPSE, s.MAVEN, s.MICROSERVICES,
-                s.ANGULAR,
-                s.SQLDEVELOPER,
-                s.JIRA, s.CONFLUENCE, s.GITLAB, s.JFROGARTIFACTORY, s.FIGMA,
-                s.TORTOISEGIT,
-                s.WINSCP, s.WINDOWSSERVER,
-                s.MVC, s.AGILE, s.CONTINUOUSINTEGRATION,
-                s.WINDOWS,
-            ]
-        },
-        { // Evora //
-            nom: "Evora",
-            dates: ["06-11-2023", "26-01-2024"],
-            skills: [
-                s.FRONTEND,
-                s.ANGULAR, s.NGRX, s.RXJS, s.TYPESCRIPT, s.JAVASCRIPT, s.CSS, s.SCSS,
-                s.ANGULARMATERIAL,
-                s.PWA, s.CORDOVA,
-                s.MICROSERVICES,
-                s.GIT, s.BITBUCKET,
-                s.JIRA, s.CONFLUENCE, s.FIGMA,
-                s.MVC, s.AGILE, s.CONTINUOUSINTEGRATION,
-                s.MACOS,
-            ]
-        },
-        { // Indra //
-            nom: "Indra",
-            dates: ["18-06-2024", "20-02-2026"],
-            skills: [
-                s.FRONTEND,
-                s.ANGULAR, s.NGRX, s.RXJS, s.TYPESCRIPT, s.JAVASCRIPT, s.CSS, s.SCSS, s.HTML5,
-                s.PRIMENG, s.BOOTSTRAP, s.ANGULARMATERIAL,
-                s.JEST, s.JASMINE, s.JIRA, s.SONARQUBE, s.OPENSHIFT,
-                s.MICROSERVICES,
-                s.GIT, s.SOURCETREE, s.BITBUCKET,
-                s.FIGMA,
-                s.MVC, s.AGILE, s.RESPONSIVEDESIGN, s.CONTINUOUSINTEGRATION,
-                s.WINDOWS,
-            ]
-        },
+    public readonly experiencia: {
+        nom: string,
+        dates: string[],
+        caseStudyId: CaseStudyId | null,
+        skills: Skill[],
+    }[] = [
+            { // DSET (Pràctiques) //
+                nom: "DSET",
+                dates: ["01-02-2016", "14-07-2016"],
+                caseStudyId: null,
+                skills: [
+                    s.FRONTEND,
+                    s.JAVASCRIPT, s.CSS, s.HTML5, s.CORDOVA,
+                    s.VMWARE, s.VIRTUALBOX,
+                    s.FEDORA, s.MACOS,
+                ]
+            },
+            { // Nexxia (Pràctiques) //
+                nom: "Nexxia",
+                dates: ["17-10-2016", "28-02-2017"],
+                caseStudyId: "nexxia",
+                skills: [
+                    s.FRONTEND,
+                    s.JAVASCRIPT, s.JQUERY, s.CSS, s.HTML5, s.BOOTSTRAP,
+                    s.DELPHI, s.FASTREPORT,
+                    s.RESPONSIVEDESIGN,
+                    s.WINDOWS,
+                ]
+            },
+            { // Beca Tecnocom //
+                nom: "Beca Tecnocom",
+                dates: ["03-07-2017", "31-07-2017"],
+                caseStudyId: "tecnocom",
+                skills: [
+                    s.BACKEND,
+                    s.JAVA, s.JSP, s.MAVEN, s.MICROSERVICES,
+                    s.NETBEANS, s.ECLIPSE, s.SVN,
+                    s.WINDOWSSERVER, s.REMOTEDESKTOP, s.TEAMVIEWER,
+                    s.PL1, s.DB2, s.ZOSMVS,
+                    s.WINDOWS,
+                ]
+            },
+            { // Tecnocom //
+                nom: "Tecnocom",
+                dates: ["04-09-2017", "08-03-2019"],
+                caseStudyId: "tecnocom",
+                skills: [
+                    s.BACKEND,
+                    s.JAVA, s.JSP, s.MAVEN, s.MICROSERVICES,
+                    s.SQLDEVELOPER,
+                    s.NETBEANS, s.ECLIPSE, s.SVN,
+                    s.WINDOWSSERVER, s.REMOTEDESKTOP, s.TEAMVIEWER,
+                    s.AGILE, s.CONTINUOUSINTEGRATION,
+                    s.WINDOWS,
+                ]
+            },
+            { // Matic //
+                nom: "Matic",
+                dates: ["07-09-2020", "25-06-2021"],
+                caseStudyId: "matic",
+                skills: [
+                    s.FRONTEND, s.BACKEND,
+                    s.JAVASCRIPT, s.JQUERY, s.CSS, s.HTML5,
+                    s.BOOTSTRAP, s.MATERIALIZE,
+                    s.CORDOVA, s.ANDROID, s.UWP,
+                    s.NODEJS, s.SEQUELIZE, s.PHP,
+                    s.MYSQL, s.PHPMYADMIN, s.SQLDEVELOPER,
+                    s.APACHE, s.FILEZILLA,
+                    s.POWERSHELL,
+                    s.JOOMLA, s.K2, s.AKEEBABACKUP, s.JCEFILEMANAGER,
+                    s.WINDOWSSERVER, s.REMOTEDESKTOP, s.ANYDESK,
+                    s.AGILE, s.MVC, s.RESPONSIVEDESIGN,
+                    s.WINDOWS,
+                ]
+            },
+            { // IN2ART // -
+                nom: "IN2ART",
+                dates: ["31-08-2021", "30-06-2023"],
+                caseStudyId: "in2art_exp",
+                skills: [
+                    s.FRONTEND,
+                    s.ANGULAR, s.CSS, s.SCSS, s.TYPESCRIPT, s.JAVASCRIPT, s.JQUERY, s.HTML5,
+                    s.BOOTSTRAP, s.ANGULARMATERIAL,
+                    s.I18N,
+                    s.NODEJS,
+                    s.JSON,
+                    s.MYSQL, s.PHPMYADMIN,
+                    s.FILEZILLA, s.APACHE, s.GIT, s.SOURCETREE,
+                    s.POWERSHELL,
+                    s.POSTMAN, s.ASANA, s.POEDIT,
+                    s.MVC, s.AGILE, s.RESPONSIVEDESIGN,
+                    s.WINDOWS,
+                ]
+            },
+            { // CodiTramuntana // -
+                nom: "CodiTramuntana",
+                dates: ["05-07-2023", "22-08-2023"],
+                caseStudyId: null,
+                skills: [
+                    s.FRONTEND, s.BACKEND,
+                    s.RUBYONRAILS,
+                    s.SQLDEVELOPER,
+                    s.WINSCP, //?
+                    s.REDHAT,
+                ]
+            },
+            { // Orange //
+                nom: "Orange",
+                dates: ["23-08-2023", "03-11-2023"],
+                caseStudyId: "orange",
+                skills: [
+                    s.FRONTEND, s.BACKEND,
+                    s.JAVA, s.WEBLOGIC, s.ECLIPSE, s.MAVEN, s.MICROSERVICES,
+                    s.ANGULAR,
+                    s.SQLDEVELOPER,
+                    s.JIRA, s.CONFLUENCE, s.GITLAB, s.JFROGARTIFACTORY, s.FIGMA,
+                    s.TORTOISEGIT,
+                    s.WINSCP, s.WINDOWSSERVER,
+                    s.MVC, s.AGILE, s.CONTINUOUSINTEGRATION,
+                    s.WINDOWS,
+                ]
+            },
+            { // Evora //
+                nom: "Evora",
+                dates: ["06-11-2023", "26-01-2024"],
+                caseStudyId: "evora",
+                skills: [
+                    s.FRONTEND,
+                    s.ANGULAR, s.NGRX, s.RXJS, s.TYPESCRIPT, s.JAVASCRIPT, s.CSS, s.SCSS,
+                    s.ANGULARMATERIAL,
+                    s.PWA, s.CORDOVA,
+                    s.MICROSERVICES,
+                    s.GIT, s.BITBUCKET,
+                    s.JIRA, s.CONFLUENCE, s.FIGMA,
+                    s.MVC, s.AGILE, s.CONTINUOUSINTEGRATION,
+                    s.MACOS,
+                ]
+            },
+            { // Indra //
+                nom: "Indra",
+                dates: ["18-06-2024", "20-02-2026"],
+                caseStudyId: "indra",
+                skills: [
+                    s.FRONTEND,
+                    s.ANGULAR, s.NGRX, s.RXJS, s.TYPESCRIPT, s.JAVASCRIPT, s.CSS, s.SCSS, s.HTML5,
+                    s.PRIMENG, s.BOOTSTRAP, s.ANGULARMATERIAL,
+                    s.JEST, s.JASMINE, s.JIRA, s.SONARQUBE, s.OPENSHIFT,
+                    s.MICROSERVICES,
+                    s.GIT, s.SOURCETREE, s.BITBUCKET,
+                    s.FIGMA,
+                    s.MVC, s.AGILE, s.RESPONSIVEDESIGN, s.CONTINUOUSINTEGRATION,
+                    s.WINDOWS,
+                ]
+            },
 
-    ];
+        ];
 
     public skills: any;
 
