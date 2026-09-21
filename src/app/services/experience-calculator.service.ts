@@ -1,6 +1,6 @@
 import { inject, Injectable } from "@angular/core";
 import { CaseStudyId } from "src/app/data/case-studies.data";
-import { Skill as s, Skill } from 'src/app/enums/skill.enum';
+import { Skill as s, Skill } from 'src/app/data/skills.data';
 import { MainService } from "./main.service";
 
 @Injectable({
@@ -290,16 +290,6 @@ export class ExperienceCalculatorService {
         if (mesos > 0) text += mesos + "m";
 
         return text;
-    }
-
-
-    normalitzar(s) {
-        return s
-            .normalize()
-            .toLowerCase()
-            .replaceAll("#", "sharp")
-            .replaceAll("/", "")
-            .replaceAll(" ", "")
     }
 
 }

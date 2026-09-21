@@ -1,6 +1,6 @@
 import { Component, inject } from '@angular/core';
 import { SkillComponent } from 'src/app/components/skill/skill.component';
-import { Skill } from 'src/app/enums/skill.enum';
+import { Skill } from 'src/app/data/skills.data';
 import { ExperienceCalculatorService } from 'src/app/services/experience-calculator.service';
 import { LayoutService } from 'src/app/services/layout.service';
 import { MainService } from 'src/app/services/main.service';

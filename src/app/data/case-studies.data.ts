@@ -20,7 +20,7 @@ import { IndraComponent } from 'src/app/pages/experience-page/2024-06-indra/indr
 
 
 import { ComponentType } from '@angular/cdk/portal';
-import { Skill as s, Skill } from 'src/app/enums/skill.enum';
+import { Skill as s, Skill } from 'src/app/data/skills.data';
 
 
 export interface CaseStudy {
@@ -32,7 +32,7 @@ export interface CaseStudy {
 export type CaseStudyId = keyof typeof CASE_STUDIES;
 
 
-export const CASE_STUDIES = {
+export const CASE_STUDIES: Record<string, CaseStudy> = {
 
     // PROJECTES //
     in2art: {

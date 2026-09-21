@@ -1,6 +1,6 @@
 import { Component, inject } from '@angular/core';
 import { Router } from '@angular/router';
-import { Skill } from 'src/app/enums/skill.enum';
+import { Skill } from 'src/app/data/skills.data';
 import { ExperienceCalculatorService } from 'src/app/services/experience-calculator.service';
 import { MainService } from 'src/app/services/main.service';
 import { SharedImports } from 'src/app/shared/imports';
@@ -27,8 +27,8 @@ export class StatsComponent {
         return text;
     }
 
-    goToSkill(skill: string) {
-        this.router.navigate(["/skill", skill.toLowerCase()]);
+    obrirPaginaSkill(skill: Skill) {
+        this.router.navigate(["/skill", skill]);
     }
 
 }

@@ -2,7 +2,7 @@ import { Component, inject } from '@angular/core';
 import { RouterLink } from '@angular/router';
 import $ from 'jquery';
 import { SkillComponent } from 'src/app/components/skill/skill.component';
-import { Skill as s } from 'src/app/enums/skill.enum';
+import { Skill as s } from 'src/app/data/skills.data';
 import { MainService } from 'src/app/services/main.service';
 import { SharedImports } from 'src/app/shared/imports';
 

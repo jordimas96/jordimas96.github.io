@@ -10,8 +10,8 @@
 
                 <jmp-skill [skill]="skill" />
 
-                <div class="info-card" [class]="skillInfoCardClass" jmpMostrarAmbAnimacio>
-                    {{ experienciaEn_string }} <b>{{ skill }}:</b><br>
+                <div class="info-card" [class]="skill" jmpMostrarAmbAnimacio>
+                    {{ experienciaEn_string }} <b>{{ SkillText[skill] }}:</b><br>
                     {{ getTextTooltip() }}
                 </div>
 

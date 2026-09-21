@@ -1,9 +1,9 @@
-import { AfterViewInit, Component, ElementRef, inject, OnInit, ViewChild } from '@angular/core';
+import { AfterViewInit, Component, ElementRef, inject, ViewChild } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { PreviewCaseStudyComponent } from 'src/app/components/preview-case-study/preview-case-study.component';
 import { SkillComponent } from 'src/app/components/skill/skill.component';
 import { CASE_STUDIES, CaseStudyId } from 'src/app/data/case-studies.data';
-import { Skill } from 'src/app/enums/skill.enum';
+import { Skill, SkillText } from 'src/app/data/skills.data';
 import { ExperienceCalculatorService } from 'src/app/services/experience-calculator.service';
 import { SharedImports } from 'src/app/shared/imports';
 import { PageComponent } from '../page.component';
@@ -17,7 +17,7 @@ import { PageComponent } from '../page.component';
         PreviewCaseStudyComponent,
     ]
 })
-export class SearchPageComponent extends PageComponent implements OnInit, AfterViewInit {
+export class SearchPageComponent extends PageComponent implements AfterViewInit {
 
     public route = inject(ActivatedRoute);
     public router = inject(Router);
@@ -25,23 +25,12 @@ export class SearchPageComponent extends PageComponent implements OnInit, AfterV
     
     @ViewChild("input") input: ElementRef<HTMLInputElement>;
 
-    Skill = Skill;
-    
-    private readonly llistaSkills: [string, string][] = Object.entries(Skill)
-        .filter(([k, v]) => k != "_TOTAL")
-        .map(([k, v]) => [k, v.toLowerCase()]);
+    private readonly llistaSkillsTextos = Object.entries(SkillText)
+        .filter(([key, text]) => key != Skill._TOTAL);
 
     private _query = "";
-    public resultats: { skills?: [], caseStudies?: [] } = {};
+    public resultats: { skills?: Skill[], caseStudies?: CaseStudyId[] } = {};
 
-    
-
-    override async ngOnInit() {
-        super.ngOnInit();
-
-
-        
-    }
 
     ngAfterViewInit() {
         this.query = this.route.snapshot.paramMap.get('query') ?? "";
@@ -64,8 +53,8 @@ export class SearchPageComponent extends PageComponent implements OnInit, AfterV
 
     actURL() {
         let novaURL = this.query.trim().toLowerCase();
-        if (novaURL != "") novaURL = "/search/" + novaURL;
-        else novaURL = "/search";
+        if (!novaURL) novaURL = "/search";
+        else novaURL = "/search/" + novaURL;
 
         window.history.replaceState({}, "", novaURL);
     }
@@ -73,33 +62,38 @@ export class SearchPageComponent extends PageComponent implements OnInit, AfterV
     buscar() {
         let resultats = {};
 
-        if (!this.query) {
+        const query = this.query.trim().toLowerCase();
+
+        if (!query) {
             this.resultats = {};
             return;
         }
-        const query = this.query.trim().toLowerCase();
 
         // Skills //
-        let skills = this.llistaSkills.filter(([k, v]) => v.includes(query));
+        let skills: Skill[] = this.llistaSkillsTextos
+            .filter(([key, text]) => text.toLowerCase().includes(query))
+            .map(([key, text]) => key as Skill);
         if (skills.length) resultats["skills"] = skills;
 
         // Case studies //
-        let caseStudiesTotals: string[] = [];
+        let caseStudiesTotals: CaseStudyId[] = [];
         // Temporal, ara llista només case studies que tinguin alguna de les skills trobades //
         if (skills.length) {
-            const caseStudies = Object.entries(CASE_STUDIES).reverse()
-                .filter(([key, caseStudy]) => {
-                return caseStudy.skills.some(caseStudySkill =>
-                    skills.some(skill => Skill[skill[0]] === caseStudySkill)
-                );
-            }).map(v => v[0]);
+            const caseStudies: CaseStudyId[] = Object.entries(CASE_STUDIES).reverse()
+                .filter(([key, caseStudy]) =>
+                    caseStudy.skills.some(caseStudySkill =>
+                        skills.some(skill => skill == caseStudySkill)
+                    )
+                ).map(([key, caseStudy]) => key as CaseStudyId);
 
-            const caseStudiesExperienceCalculator = [...this.exp.experiencia].reverse()
+            const caseStudiesExperienceCalculator: CaseStudyId[] = this.exp.experiencia
+                .filter(empresa => empresa.caseStudyId).reverse() // Eliminem empreses sense caseStudyId //
                 .filter(empresa =>
-                    skills.some(skill => empresa.skills.includes(Skill[skill[0]]))
+                    empresa.skills.some(empresaSkill =>
+                        skills.some(skill => skill == empresaSkill)
+                    )
                 )
-                .map(empresa => empresa.caseStudyId as CaseStudyId)
-                .filter(Boolean);
+                .map(empresa => empresa.caseStudyId as CaseStudyId);
             
             // Eliminar repetits //
             caseStudiesTotals = [...new Set([...caseStudies, ...caseStudiesExperienceCalculator])];

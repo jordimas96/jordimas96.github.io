@@ -1,19 +1,19 @@
-@if (skill) {
-    <button class="rs w-100 tooltipExp" [class]="classe" (mouseenter)="correctTooltipPosition()" (click)="obrirPaginaSkill()">
+@if (dadesSkill) {
+    <button class="rs w-100 tooltipExp" [class]="skill" (mouseenter)="correctTooltipPosition()" (click)="obrirPaginaSkill()">
         @if (!showTime) {
-            <section [class]="classe">
-                <div class="chip" jmpMostrarAmbAnimacio>{{ nom }}</div>
+            <section [class]="skill">
+                <div class="chip" jmpMostrarAmbAnimacio>{{ SkillText[skill] }}</div>
             </section>
         } @else {
             <section class="showTime" jmpMostrarAmbAnimacio>
-                <div class="chip">{{ nom }}</div>
+                <div class="chip">{{ SkillText[skill] }}</div>
                 <div class="barra">
                     <div class="nivell" [style.width.%]="getNivellBarra()"> {{ getTextCurt() }} </div>
                 </div>
             </section>
         }
         <div class="tooltip-card">
-            {{ experienciaEn_string() }} <b>{{ nom }}:</b><br>
+            {{ experienciaEn_string() }} <b>{{ SkillText[skill] }}:</b><br>
             {{ getTextTooltip() }}
         </div>
     </button>

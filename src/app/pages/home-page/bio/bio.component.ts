@@ -1,7 +1,7 @@
 import { Component, ElementRef, inject } from '@angular/core';
 import { RouterLink } from '@angular/router';
 import { IconesContacteComponent } from 'src/app/components/icones-contacte/icones-contacte.component';
-import { Skill } from 'src/app/enums/skill.enum';
+import { Skill } from 'src/app/data/skills.data';
 import { ExperienceCalculatorService } from 'src/app/services/experience-calculator.service';
 import { MainService } from 'src/app/services/main.service';
 import { SharedImports } from 'src/app/shared/imports';

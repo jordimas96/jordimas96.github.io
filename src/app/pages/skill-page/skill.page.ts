@@ -3,7 +3,7 @@ import { ActivatedRoute, Router } from '@angular/router';
 import { PreviewCaseStudyComponent } from 'src/app/components/preview-case-study/preview-case-study.component';
 import { SkillComponent } from 'src/app/components/skill/skill.component';
 import { CASE_STUDIES, CaseStudyId } from 'src/app/data/case-studies.data';
-import { Skill } from 'src/app/enums/skill.enum';
+import { Skill, SkillText } from 'src/app/data/skills.data';
 import { ExperienceCalculatorService } from 'src/app/services/experience-calculator.service';
 import { SharedImports } from 'src/app/shared/imports';
 import { PageComponent } from '../page.component';
@@ -23,42 +23,38 @@ export class SkillPageComponent extends PageComponent implements OnInit {
     public router = inject(Router);
     private exp = inject(ExperienceCalculatorService);
 
-    Skill = Skill;
+    SkillText = SkillText;
 
     public skill: Skill;
     public caseStudies: CaseStudyId[];
-
-    public skillInfoCardClass = "";
 
     override async ngOnInit() {
         super.ngOnInit();
 
         const skillUrl = this.route.snapshot.paramMap.get('skill');
 
-        const skillKey = Object.keys(Skill)
-            .find(key => key.toLowerCase() === skillUrl);
+        const existeix = Object.values(Skill).filter(s => s != Skill._TOTAL).some(v => v == skillUrl);
 
-        if (!skillKey) {
+        // Si no existeix la skill, anem a /xxxx //
+        if (!existeix) {
             this.router.navigate(['/' + skillUrl]);
             return;
         }
 
-        this.skill = Skill[skillKey as keyof typeof Skill];
-        this.skillInfoCardClass = skillUrl ?? "";
+        this.skill = skillUrl as Skill;
 
         this.buscarCaseStudies();
     }
 
     buscarCaseStudies() {
-        const caseStudies = Object.entries(CASE_STUDIES).reverse()
-            .filter(([key, caseStudy]) => (caseStudy.skills as Skill[]).includes(this.skill))
-            .map((caseStudy) => caseStudy[0] as CaseStudyId);
+        const caseStudies: CaseStudyId[] = Object.entries(CASE_STUDIES).reverse()
+            .filter(([key, caseStudy]) => caseStudy.skills.includes(this.skill))
+            .map((caseStudy) => caseStudy[0]);
         
-        const caseStudiesExperienceCalculator = [...this.exp.experiencia].reverse()
+        const caseStudiesExperienceCalculator: CaseStudyId[] = this.exp.experiencia
+            .filter(empresa => empresa.caseStudyId).reverse() // Eliminem empreses sense caseStudyId //
             .filter(empresa => empresa.skills.includes(this.skill))
-            .map(empresa => empresa.caseStudyId as CaseStudyId)
-            .filter(Boolean);
-        
+            .map(empresa => empresa.caseStudyId as CaseStudyId);
         
         // Eliminar repetits //
         this.caseStudies = [...new Set([...caseStudies, ...caseStudiesExperienceCalculator])]

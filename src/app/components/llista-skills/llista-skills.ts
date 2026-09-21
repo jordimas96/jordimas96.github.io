@@ -1,6 +1,6 @@
 import { Component, inject, Input } from '@angular/core';
 import { SkillComponent } from 'src/app/components/skill/skill.component';
-import { Skill } from 'src/app/enums/skill.enum';
+import { Skill } from 'src/app/data/skills.data';
 import { MainService } from 'src/app/services/main.service';
 import { SharedImports } from 'src/app/shared/imports';
 

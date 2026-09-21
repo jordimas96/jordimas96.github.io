@@ -1,6 +1,6 @@
 import { Component, ElementRef, inject, Input, OnInit, Renderer2 } from '@angular/core';
 import { Router } from '@angular/router';
-import { Skill } from 'src/app/enums/skill.enum';
+import { Skill, SkillText } from 'src/app/data/skills.data';
 import { ExperienceCalculatorService } from 'src/app/services/experience-calculator.service';
 import { MainService } from 'src/app/services/main.service';
 import { SharedImports } from 'src/app/shared/imports';
@@ -22,21 +22,16 @@ export class SkillComponent implements OnInit {
     private renderer = inject(Renderer2);
     private exp = inject(ExperienceCalculatorService);
 
+    @Input() skill: Skill;
+    @Input() showTime: boolean = false;
 
-    @Input("skill") nom: Skill;
-    @Input("showTime") showTime: boolean = false;
+    SkillText = SkillText;
 
-    public skill;
-    public clau: string;
-    public classe: string;
+    public dadesSkill: { diesTotals: number; empreses: string[]; anysMesosDies: number[] };
 
     ngOnInit(): void {
 
-        this.skill = this.exp.skills[this.nom] || { diesTotals: 0, empreses: [], anysMesosDies: [0, 0, 0] };
-
-        this.clau = Object.keys(Skill)[Object.values(Skill).indexOf(this.nom)];
-        this.classe = this.clau.toLowerCase();
-
+        this.dadesSkill = this.exp.skills[this.skill] || { diesTotals: 0, empreses: [], anysMesosDies: [0, 0, 0] };
     }
 
     buscarGoogle(s) {
@@ -49,26 +44,26 @@ export class SkillComponent implements OnInit {
     }
 
     getAnysExp() {
-        return this.exp.getTextExp(this.nom);
+        return this.exp.getTextExp(this.skill);
     }
     getTextCurt() {
-        return this.exp.construirCadenaTempsExpCurta(this.skill?.anysMesosDies);
+        return this.exp.construirCadenaTempsExpCurta(this.dadesSkill?.anysMesosDies);
     }
     getText_anysMesosDies() {
-        return this.exp.construirCadenaTempsExp(this.skill?.anysMesosDies);
+        return this.exp.construirCadenaTempsExp(this.dadesSkill?.anysMesosDies);
     }
     getText_anysMesos() {
-        return this.exp.construirCadenaTempsExp_anysMesos(this.skill?.anysMesosDies);
+        return this.exp.construirCadenaTempsExp_anysMesos(this.dadesSkill?.anysMesosDies);
     }
     getNivellBarra() {
-        return (this.skill?.diesTotals || 0) / this.exp.getSkill(Skill._TOTAL)?.diesTotals * 100;
+        return (this.dadesSkill?.diesTotals || 0) / this.exp.getSkill(Skill._TOTAL)?.diesTotals * 100;
     }
     getTextTooltip() {
-        if (this.skill?.empreses?.length) {
+        if (this.dadesSkill?.empreses?.length) {
             return this.getText_anysMesosDies() + // 2 years, 6 months and 9 days //
                 "\n" +
                 ["a", "en", "at"][this.m.idiomaIndex] + " " + // at //
-                Utils.addConjunctionBetweenThe2Last(this.skill?.empreses, this.m.conjuncio); // Evora, Orange and IN2ART //
+                Utils.addConjunctionBetweenThe2Last(this.dadesSkill?.empreses, this.m.conjuncio); // Evora, Orange and IN2ART //
         } else {
             return [
                 "Només en projectes personals",
@@ -102,7 +97,7 @@ export class SkillComponent implements OnInit {
 
 
     obrirPaginaSkill() {
-        this.router.navigate(["/skill", this.clau.toLowerCase()]);
+        this.router.navigate(["/skill", this.skill]);
     }
 
 
