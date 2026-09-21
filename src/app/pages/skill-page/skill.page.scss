@@ -23,8 +23,15 @@
         padding: 0.75rem 2rem;
         border-radius: 2rem;
 
-        background-color: hsl(var(--h), var(--s), 90%);
-        color: hsl(var(--h), var(--s), 20%);
+        background-color: light-dark(
+            hsla(var(--h), var(--s), 90%, 0.75),
+            hsla(var(--h), var(--s), 20%, 0.5)
+        );
+        color: light-dark(
+            hsl(var(--h), var(--s), 20%),
+            hsl(var(--h), var(--s), 90%)
+        );
+        backdrop-filter: blur(40px);
 
         text-align: center;
         white-space: pre-line;

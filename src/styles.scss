@@ -193,9 +193,17 @@ video, img {
 .float-right { float: right !important; }
 .float-none { float: none !important; }
 .font-italic { font-style: italic !important; }
-.mw-940 { max-width: 940px !important; }
+.cursor-default { cursor: default; }
+.cursor-pointer { cursor: pointer; }
+
+.mw-640  { max-width: 640px !important; }
+.mw-768  { max-width: 768px !important; }
+.mw-940  { max-width: 940px !important; }
+.mw-1024 { max-width: 1024px !important; }
 .mw-1200 { max-width: 1200px !important; }
 .mw-1400 { max-width: 1400px !important; }
+.mw-1600 { max-width: 1600px !important; }
+.mw-none { max-width: none !important; }
 
 
 // Utils //

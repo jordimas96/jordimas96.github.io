@@ -9,11 +9,11 @@
 
     <input #input type="text"
         [placeholder]="textPlaceholder"
-        (input)="valor = input.value"
+        (input)="valor = input.value.trim()"
         (focus)="focus = true"
         (blur)="blur()">
 
-    <button type="submit" class="buscar rs" [class.ocult]="!input.value">
+    <button type="submit" class="buscar rs" [class.ocult]="!valor">
         <i class="fa-solid fa-circle-arrow-right"></i>
     </button>
 

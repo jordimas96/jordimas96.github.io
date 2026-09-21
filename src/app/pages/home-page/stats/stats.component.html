@@ -16,23 +16,23 @@
             <div class="valor" [innerHTML]="getText(Skill._TOTAL)"></div>
         </div>
 
-        <div class="stat card-themed bg-colored paleta-170" jmpMostrarAmbAnimacio>
+        <div class="stat card-themed bg-colored clickable paleta-170" (click)="goToSkill('FRONTEND')" matRipple jmpMostrarAmbAnimacio>
             <div class="titol">Frontend</div>
             <div class="valor" [innerHTML]="getText(Skill.FRONTEND)"></div>
         </div>
-        <div class="stat card-themed bg-colored paleta-207" jmpMostrarAmbAnimacio>
+        <div class="stat card-themed bg-colored clickable paleta-207" (click)="goToSkill('BACKEND')" matRipple jmpMostrarAmbAnimacio>
             <div class="titol">Backend</div>
             <div class="valor" [innerHTML]="getText(Skill.BACKEND)"></div>
         </div>
-        <div class="stat card-themed bg-colored paleta-347" jmpMostrarAmbAnimacio>
+        <div class="stat card-themed bg-colored clickable paleta-347" (click)="goToSkill('ANGULAR')" matRipple jmpMostrarAmbAnimacio>
             <div class="titol">Angular</div>
             <div class="valor" [innerHTML]="getText(Skill.ANGULAR)"></div>
         </div>
-        <div class="stat card-themed bg-colored paleta-260" jmpMostrarAmbAnimacio>
+        <div class="stat card-themed bg-colored clickable paleta-260" (click)="goToSkill('CSS')" matRipple jmpMostrarAmbAnimacio>
             <div class="titol">CSS</div>
             <div class="valor" [innerHTML]="getText(Skill.CSS)"></div>
         </div>
-        <div class="stat card-themed bg-colored paleta-53" jmpMostrarAmbAnimacio>
+        <div class="stat card-themed bg-colored clickable paleta-53" (click)="goToSkill('JAVASCRIPT')" matRipple jmpMostrarAmbAnimacio>
             <div class="titol">JavaScript</div>
             <div class="valor" [innerHTML]="getText(Skill.JAVASCRIPT)"></div>
         </div>
