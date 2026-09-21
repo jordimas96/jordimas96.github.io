@@ -9,9 +9,9 @@
     background-color: light-dark(white, black); /* c7d6ff */
 
     opacity: 1;
-    transition: opacity 0.6s;
+    transition: opacity 0.6s 0.6s;
 
-    z-index: 1000000;
+    z-index: 10000000;
 }
 
 #splash-screen > .jmas {
@@ -26,7 +26,7 @@
 
     margin-top: 25vh;
     transform-origin: 58.7% 49.42%; /* JM'as */
-    /* transform-origin: 69.87% 67.77%; /* a */
+    /* transform-origin: 69.87% 67.77%; /* JM⨀s */
 
     animation:
         apareixer 0.5s ease,
