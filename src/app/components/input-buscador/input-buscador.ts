@@ -1,4 +1,4 @@
-import { AfterViewInit, Component, ElementRef, HostListener, inject, ViewChild } from '@angular/core';
+import { AfterViewInit, ChangeDetectionStrategy, Component, ElementRef, HostListener, inject, ViewChild } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { Router } from '@angular/router';
 import { MainService } from 'src/app/services/main.service';
@@ -8,7 +8,7 @@ import { SharedImports } from 'src/app/shared/imports';
     selector: 'jmp-input-buscador',
     templateUrl: './input-buscador.html',
     styleUrl: './input-buscador.scss',
-    standalone: true,
+    changeDetection: ChangeDetectionStrategy.Eager,
     imports: [
         ...SharedImports,
         FormsModule

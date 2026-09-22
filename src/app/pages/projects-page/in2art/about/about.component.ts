@@ -1,4 +1,4 @@
-import { Component, inject } from '@angular/core';
+import { ChangeDetectionStrategy, Component, inject } from '@angular/core';
 import { LinkComponent } from 'src/app/components/link/link.component';
 import { MostrarAmbAnimacioDirective } from "src/app/directives/mostrar-amb-animacio.directive";
 import { MainService } from 'src/app/services/main.service';
@@ -8,6 +8,7 @@ import { AboutCardComponent } from './about-card/about-card.component';
     selector: 'jmp-about',
     templateUrl: './about.component.html',
     styleUrl: './about.component.scss',
+    changeDetection: ChangeDetectionStrategy.Eager,
     imports: [AboutCardComponent, LinkComponent, MostrarAmbAnimacioDirective]
 })
 export class AboutComponent {

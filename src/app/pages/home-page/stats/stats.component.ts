@@ -1,4 +1,4 @@
-import { Component, inject } from '@angular/core';
+import { ChangeDetectionStrategy, Component, inject } from '@angular/core';
 import { Router } from '@angular/router';
 import { Skill } from 'src/app/data/skills.data';
 import { ExperienceCalculatorService } from 'src/app/services/experience-calculator.service';
@@ -9,6 +9,7 @@ import { SharedImports } from 'src/app/shared/imports';
     selector: 'jmp-stats',
     templateUrl: './stats.component.html',
     styleUrl: './stats.component.scss',
+    changeDetection: ChangeDetectionStrategy.Eager,
     imports: [
         ...SharedImports,
     ]

@@ -1,4 +1,4 @@
-import { Component, inject } from '@angular/core';
+import { ChangeDetectionStrategy, Component, inject } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { BotonsNavegacioPaginaComponent } from 'src/app/components/botons-navegacio-pagina/botons-navegacio-pagina.component';
 import { PreviewCaseStudyComponent } from 'src/app/components/preview-case-study/preview-case-study.component';
@@ -10,6 +10,7 @@ import { PageComponent } from '../page.component';
 @Component({
     templateUrl: './case-study.page.html',
     styleUrl: './case-study.page.scss',
+    changeDetection: ChangeDetectionStrategy.Eager,
     imports: [
         ...SharedImports,
         PreviewCaseStudyComponent,

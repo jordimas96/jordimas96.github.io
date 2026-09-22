@@ -1,4 +1,4 @@
-import { Component, inject, Input, OnInit, ViewChild } from '@angular/core';
+import { ChangeDetectionStrategy, Component, inject, Input, OnInit, ViewChild } from '@angular/core';
 import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
 import { NgxMasonryComponent, NgxMasonryModule } from 'ngx-masonry';
 import { LlistaSkills } from 'src/app/components/llista-skills/llista-skills';
@@ -13,6 +13,7 @@ import { GitHubService } from './github.service';
     selector: 'jmp-github-projects',
     templateUrl: './github-projects.component.html',
     styleUrl: './github-projects.component.scss',
+    changeDetection: ChangeDetectionStrategy.Eager,
     imports: [
         ...SharedImports,
         NgxMasonryModule,

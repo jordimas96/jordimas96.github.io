@@ -1,4 +1,4 @@
-import { Component, inject, Input } from '@angular/core';
+import { ChangeDetectionStrategy, Component, inject, Input } from '@angular/core';
 import { LlistaSkills } from 'src/app/components/llista-skills/llista-skills';
 import { CaseStudy } from 'src/app/data/case-studies.data';
 import { MainService } from 'src/app/services/main.service';
@@ -11,6 +11,7 @@ import { FuncionalitatsComponent } from './funcionalitats/funcionalitats.compone
     selector: 'jmp-in2art',
     templateUrl: './in2art.component.html',
     styleUrl: './in2art.component.scss',
+    changeDetection: ChangeDetectionStrategy.Eager,
     imports: [
         ...SharedImports,
         DemosComponent,

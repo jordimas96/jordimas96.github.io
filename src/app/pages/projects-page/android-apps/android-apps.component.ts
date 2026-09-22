@@ -1,4 +1,4 @@
-import { Component, inject, Input } from '@angular/core';
+import { ChangeDetectionStrategy, Component, inject, Input } from '@angular/core';
 import { QRCodeComponent } from 'angularx-qrcode';
 import { LlistaSkills } from 'src/app/components/llista-skills/llista-skills';
 import { CaseStudy } from 'src/app/data/case-studies.data';
@@ -11,6 +11,7 @@ import { DetallsAndroidAppsComponent } from './detalls-android-apps/detalls-andr
     selector: 'jmp-android-apps',
     templateUrl: './android-apps.component.html',
     styleUrl: './android-apps.component.scss',
+    changeDetection: ChangeDetectionStrategy.Eager,
     imports: [
         ...SharedImports,
         DetallsAndroidAppsComponent,

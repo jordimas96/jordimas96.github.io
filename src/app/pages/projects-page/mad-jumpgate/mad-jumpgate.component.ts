@@ -1,4 +1,4 @@
-import { Component, inject, Input } from '@angular/core';
+import { ChangeDetectionStrategy, Component, inject, Input } from '@angular/core';
 import { LlistaSkills } from 'src/app/components/llista-skills/llista-skills';
 import { CaseStudy } from 'src/app/data/case-studies.data';
 import { StoryComponent } from 'src/app/pages/about-me-page/stories/story/story.component';
@@ -11,6 +11,7 @@ import { MadJumpgateJocComponent } from './mad-jumpgate-joc/mad-jumpgate-joc.com
     selector: 'jmp-mad-jumpgate',
     templateUrl: './mad-jumpgate.component.html',
     styleUrl: './mad-jumpgate.component.scss',
+    changeDetection: ChangeDetectionStrategy.Eager,
     imports: [
         ...SharedImports,
         MadJumpgateJocComponent,

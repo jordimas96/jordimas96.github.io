@@ -1,4 +1,4 @@
-import { Component, inject, OnInit } from '@angular/core';
+import { ChangeDetectionStrategy, Component, inject, OnInit } from '@angular/core';
 import { StoryComponent } from 'src/app/pages/about-me-page/stories/story/story.component';
 import { MainService } from 'src/app/services/main.service';
 import { SharedImports } from 'src/app/shared/imports';
@@ -7,6 +7,7 @@ import { SharedImports } from 'src/app/shared/imports';
     selector: 'jmp-custom-roms',
     templateUrl: './custom-roms.component.html',
     styleUrl: './custom-roms.component.scss',
+    changeDetection: ChangeDetectionStrategy.Eager,
     imports: [
         ...SharedImports,
         StoryComponent,

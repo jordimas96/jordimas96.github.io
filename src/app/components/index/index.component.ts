@@ -1,4 +1,4 @@
-import { AfterViewInit, Component, ElementRef, HostListener, inject, OnInit, ViewChild } from '@angular/core';
+import { AfterViewInit, ChangeDetectionStrategy, Component, ElementRef, HostListener, inject, ViewChild } from '@angular/core';
 import { ActivatedRoute, NavigationEnd, Router } from '@angular/router';
 import { filter } from 'rxjs';
 import { LayoutService } from 'src/app/services/layout.service';
@@ -10,6 +10,7 @@ import { SharedImports } from 'src/app/shared/imports';
     selector: 'jmp-index',
     templateUrl: './index.component.html',
     styleUrl: './index.component.scss',
+    changeDetection: ChangeDetectionStrategy.Eager,
     imports: [
         ...SharedImports,
     ]

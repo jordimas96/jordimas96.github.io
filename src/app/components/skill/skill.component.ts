@@ -1,4 +1,4 @@
-import { Component, ElementRef, inject, Input, OnInit, Renderer2 } from '@angular/core';
+import { ChangeDetectionStrategy, Component, ElementRef, inject, Input, OnInit, Renderer2 } from '@angular/core';
 import { Router } from '@angular/router';
 import { Skill, SkillText } from 'src/app/data/skills.data';
 import { ExperienceCalculatorService } from 'src/app/services/experience-calculator.service';
@@ -10,6 +10,7 @@ import { Utils } from 'src/app/shared/utils';
     selector: 'jmp-skill',
     templateUrl: './skill.component.html',
     styleUrls: ['./skill.component.scss', './skill-colors.component.scss'],
+    changeDetection: ChangeDetectionStrategy.Eager,
     imports: [
         ...SharedImports,
     ]

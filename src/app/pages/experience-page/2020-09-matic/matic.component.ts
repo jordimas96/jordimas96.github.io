@@ -1,4 +1,4 @@
-import { Component, inject, Input } from '@angular/core';
+import { ChangeDetectionStrategy, Component, inject, Input } from '@angular/core';
 import { LlistaSkills } from 'src/app/components/llista-skills/llista-skills';
 import { CaseStudy } from 'src/app/data/case-studies.data';
 import { MainService } from 'src/app/services/main.service';
@@ -8,6 +8,7 @@ import { SharedImports } from 'src/app/shared/imports';
     selector: 'jmp-matic',
     templateUrl: './matic.component.html',
     styleUrl: './matic.component.scss',
+    changeDetection: ChangeDetectionStrategy.Eager,
     imports: [
         ...SharedImports,
         LlistaSkills,

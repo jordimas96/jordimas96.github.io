@@ -1,4 +1,4 @@
-import { Component, ElementRef, HostListener, inject, ViewChild } from '@angular/core';
+import { ChangeDetectionStrategy, Component, ElementRef, HostListener, inject, ViewChild } from '@angular/core';
 import { MainService } from 'src/app/services/main.service';
 import { SharedImports } from 'src/app/shared/imports';
 import { Utils } from 'src/app/shared/utils';
@@ -7,6 +7,7 @@ import { Utils } from 'src/app/shared/utils';
     selector: 'jmp-mad-jumpgate-gameplay',
     templateUrl: './mad-jumpgate-gameplay.component.html',
     styleUrl: './mad-jumpgate-gameplay.component.scss',
+    changeDetection: ChangeDetectionStrategy.Eager,
     imports: [
         ...SharedImports,
     ]

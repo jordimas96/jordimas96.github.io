@@ -1,4 +1,4 @@
-import { Component, inject } from '@angular/core';
+import { ChangeDetectionStrategy, Component, inject } from '@angular/core';
 import { MAT_DIALOG_DATA, MatDialogContent, MatDialogRef } from '@angular/material/dialog';
 import { SharedImports } from 'src/app/shared/imports';
 
@@ -6,6 +6,7 @@ import { SharedImports } from 'src/app/shared/imports';
     selector: 'jmp-iframe-template',
     templateUrl: './iframe-template.component.html',
     styleUrl: './iframe-template.component.scss',
+    changeDetection: ChangeDetectionStrategy.Eager,
     imports: [
         ...SharedImports,
         MatDialogContent

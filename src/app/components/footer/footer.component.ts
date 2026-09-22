@@ -1,4 +1,4 @@
-import { AfterViewInit, Component, ElementRef, inject, OnInit, ViewChild } from '@angular/core';
+import { AfterViewInit, ChangeDetectionStrategy, Component, ElementRef, inject, OnInit, ViewChild } from '@angular/core';
 import { LayoutService } from 'src/app/services/layout.service';
 import { MainService } from 'src/app/services/main.service';
 import { RickrollService } from 'src/app/services/rickroll.service';
@@ -9,6 +9,7 @@ import { SharedImports } from 'src/app/shared/imports';
     selector: 'jmp-footer',
     templateUrl: './footer.component.html',
     styleUrl: './footer.component.scss',
+    changeDetection: ChangeDetectionStrategy.Eager,
     imports: [
         ...SharedImports,
     ]

@@ -1,4 +1,4 @@
-import { AfterViewInit, Component, ElementRef, HostListener, inject, OnInit } from '@angular/core';
+import { AfterViewInit, ChangeDetectionStrategy, Component, ElementRef, HostListener, inject, OnInit } from '@angular/core';
 import { RouterLink } from '@angular/router';
 import { MainService } from 'src/app/services/main.service';
 import { SharedImports } from 'src/app/shared/imports';
@@ -15,6 +15,7 @@ enum Pagines {
     selector: 'jmp-botons-navegacio-pagina',
     templateUrl: './botons-navegacio-pagina.component.html',
     styleUrl: './botons-navegacio-pagina.component.scss',
+    changeDetection: ChangeDetectionStrategy.Eager,
     imports: [
         ...SharedImports,
         RouterLink,

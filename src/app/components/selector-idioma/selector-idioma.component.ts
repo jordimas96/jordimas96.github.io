@@ -1,4 +1,4 @@
-import { AfterViewInit, Component, ElementRef, inject, ViewChild } from '@angular/core';
+import { AfterViewInit, ChangeDetectionStrategy, Component, ElementRef, inject, ViewChild } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { MainService } from 'src/app/services/main.service';
 
@@ -6,6 +6,7 @@ import { MainService } from 'src/app/services/main.service';
     selector: 'jmp-selector-idioma',
     templateUrl: './selector-idioma.component.html',
     styleUrl: './selector-idioma.component.scss',
+    changeDetection: ChangeDetectionStrategy.Eager,
     imports: [
         FormsModule,
     ]

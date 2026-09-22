@@ -1,4 +1,4 @@
-import { Component, inject } from '@angular/core';
+import { ChangeDetectionStrategy, Component, inject } from '@angular/core';
 import { LinkComponent } from 'src/app/components/link/link.component';
 import { MostrarAmbAnimacioDirective } from "src/app/directives/mostrar-amb-animacio.directive";
 import { MainService } from 'src/app/services/main.service';
@@ -7,6 +7,7 @@ import { MainService } from 'src/app/services/main.service';
     selector: 'jmp-funcionalitats',
     templateUrl: './funcionalitats.component.html',
     styleUrl: './funcionalitats.component.scss',
+    changeDetection: ChangeDetectionStrategy.Eager,
     imports: [LinkComponent, MostrarAmbAnimacioDirective]
 })
 export class FuncionalitatsComponent {

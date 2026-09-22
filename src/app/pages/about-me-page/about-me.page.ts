@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { ChangeDetectionStrategy, Component } from '@angular/core';
 import { BotonsNavegacioPaginaComponent } from 'src/app/components/botons-navegacio-pagina/botons-navegacio-pagina.component';
 import { SharedImports } from 'src/app/shared/imports';
 import { PageComponent } from '../page.component';
@@ -7,6 +7,7 @@ import { StoriesComponent } from './stories/stories.component';
 @Component({
     templateUrl: './about-me.page.html',
     styleUrl: './about-me.page.scss',
+    changeDetection: ChangeDetectionStrategy.Eager,
     imports: [
         ...SharedImports,
         StoriesComponent,

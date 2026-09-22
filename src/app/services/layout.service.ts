@@ -1,4 +1,4 @@
-import { AfterViewInit, ElementRef, inject, Injectable, OnInit } from "@angular/core";
+import { inject, Injectable } from "@angular/core";
 import { ActivatedRoute, Router } from '@angular/router';
 
 // https://developerslogblog.wordpress.com/2019/04/23/how-to-use-angular-services-to-share-data-between-components/ //

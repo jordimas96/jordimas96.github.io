@@ -1,4 +1,4 @@
-import { Component, HostListener, inject, Input } from '@angular/core';
+import { ChangeDetectionStrategy, Component, HostListener, inject, Input } from '@angular/core';
 import { MainService } from 'src/app/services/main.service';
 import { Utils } from 'src/app/shared/utils';
 
@@ -6,6 +6,7 @@ import { Utils } from 'src/app/shared/utils';
     selector: 'jmp-imatge-scroll',
     templateUrl: './imatge-scroll.component.html',
     styleUrl: './imatge-scroll.component.scss',
+    changeDetection: ChangeDetectionStrategy.Eager,
     standalone: true
 })
 export class ImatgeScrollComponent {

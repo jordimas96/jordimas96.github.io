@@ -1,4 +1,4 @@
-import { Component, inject } from '@angular/core';
+import { ChangeDetectionStrategy, Component, inject } from '@angular/core';
 import { RouterLink } from '@angular/router';
 import $ from 'jquery';
 import { SkillComponent } from 'src/app/components/skill/skill.component';
@@ -10,6 +10,7 @@ import { SharedImports } from 'src/app/shared/imports';
     selector: 'jmp-detalls-android-apps',
     templateUrl: './detalls-android-apps.component.html',
     styleUrl: './detalls-android-apps.component.scss',
+    changeDetection: ChangeDetectionStrategy.Eager,
     imports: [
         ...SharedImports,
         RouterLink,

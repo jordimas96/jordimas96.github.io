@@ -1,4 +1,4 @@
-import { Component, inject } from '@angular/core';
+import { ChangeDetectionStrategy, Component, inject } from '@angular/core';
 import { MainService } from 'src/app/services/main.service';
 import { SharedImports } from 'src/app/shared/imports';
 
@@ -6,6 +6,7 @@ import { SharedImports } from 'src/app/shared/imports';
     selector: 'jmp-amazfit-watchfaces',
     templateUrl: './amazfit-watchfaces.component.html',
     styleUrl: './amazfit-watchfaces.component.scss',
+    changeDetection: ChangeDetectionStrategy.Eager,
     imports: [
         ...SharedImports,
     ]

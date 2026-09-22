@@ -1,10 +1,11 @@
-import { Component, inject } from '@angular/core';
+import { ChangeDetectionStrategy, Component, inject } from '@angular/core';
 import { MainService } from 'src/app/services/main.service';
 import { Utils } from 'src/app/shared/utils';
 
 @Component({
     template: '',
     styleUrl: './page.scss',
+    changeDetection: ChangeDetectionStrategy.Eager,
     standalone: false
 })
 export class PageComponent {

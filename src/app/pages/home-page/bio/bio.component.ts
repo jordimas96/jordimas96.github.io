@@ -1,4 +1,4 @@
-import { Component, ElementRef, inject } from '@angular/core';
+import { ChangeDetectionStrategy, Component, ElementRef, inject } from '@angular/core';
 import { RouterLink } from '@angular/router';
 import { IconesContacteComponent } from 'src/app/components/icones-contacte/icones-contacte.component';
 import { Skill } from 'src/app/data/skills.data';
@@ -10,6 +10,7 @@ import { SharedImports } from 'src/app/shared/imports';
     selector: 'jmp-bio',
     templateUrl: './bio.component.html',
     styleUrl: './bio.component.scss',
+    changeDetection: ChangeDetectionStrategy.Eager,
     imports: [
         ...SharedImports,
         RouterLink,

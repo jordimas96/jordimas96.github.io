@@ -1,4 +1,4 @@
-import { Component, inject, Input, OnInit } from '@angular/core';
+import { ChangeDetectionStrategy, Component, inject, Input, OnInit } from '@angular/core';
 import { LlistaSkills } from 'src/app/components/llista-skills/llista-skills';
 import { CaseStudy } from 'src/app/data/case-studies.data';
 import { StoryComponent } from 'src/app/pages/about-me-page/stories/story/story.component';
@@ -9,6 +9,7 @@ import { SharedImports } from 'src/app/shared/imports';
     selector: 'jmp-tasker',
     templateUrl: './tasker.component.html',
     styleUrl: './tasker.component.scss',
+    changeDetection: ChangeDetectionStrategy.Eager,
     imports: [
         ...SharedImports,
         StoryComponent,

@@ -1,4 +1,4 @@
-import { Component, inject } from '@angular/core';
+import { ChangeDetectionStrategy, Component, inject } from '@angular/core';
 import { ActivatedRoute, RouterLink } from '@angular/router';
 import { AmazfitWatchfacesComponent } from 'src/app/pages/art-page/amazfit-watchfaces/amazfit-watchfaces.component';
 import { IconsComponent } from 'src/app/pages/art-page/icons/icons.component';
@@ -22,6 +22,7 @@ import { PageComponent } from '../page.component';
 @Component({
     templateUrl: './section.page.html',
     styleUrl: './section.page.scss',
+    changeDetection: ChangeDetectionStrategy.Eager,
     imports: [
         ...SharedImports,
         RouterLink,

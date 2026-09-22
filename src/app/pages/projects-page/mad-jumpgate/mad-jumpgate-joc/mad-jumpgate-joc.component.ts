@@ -1,14 +1,13 @@
-import { Component, ElementRef, HostListener, inject, ViewChild } from '@angular/core';
-import { SafeResourceUrl } from '@angular/platform-browser';
+import { ChangeDetectionStrategy, Component, ElementRef, HostListener, inject, ViewChild } from '@angular/core';
 import { MainService } from 'src/app/services/main.service';
 import { SharedImports } from 'src/app/shared/imports';
 import { Utils } from 'src/app/shared/utils';
-import { environment } from 'src/environments/environment';
 
 @Component({
     selector: 'jmp-mad-jumpgate-joc',
     templateUrl: './mad-jumpgate-joc.component.html',
     styleUrl: './mad-jumpgate-joc.component.scss',
+    changeDetection: ChangeDetectionStrategy.Eager,
     imports: [
         ...SharedImports,
     ]

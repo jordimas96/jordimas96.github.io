@@ -1,4 +1,4 @@
-import { Component, inject, Input } from '@angular/core';
+import { ChangeDetectionStrategy, Component, inject, Input } from '@angular/core';
 import { MatRipple } from '@angular/material/core';
 import { RouterLink } from '@angular/router';
 import { CaseStudyId } from 'src/app/data/case-studies.data';
@@ -9,6 +9,7 @@ import { SharedImports } from 'src/app/shared/imports';
     selector: 'jmp-preview-case-study',
     templateUrl: './preview-case-study.component.html',
     styleUrl: './preview-case-study.component.scss',
+    changeDetection: ChangeDetectionStrategy.Eager,
     imports: [
         RouterLink,
         ...SharedImports,

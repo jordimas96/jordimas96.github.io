@@ -1,4 +1,4 @@
-import { Component, inject } from '@angular/core';
+import { ChangeDetectionStrategy, Component, inject } from '@angular/core';
 import { MainService } from 'src/app/services/main.service';
 import { ThemeService } from 'src/app/services/theme.service';
 import { SharedImports } from 'src/app/shared/imports';
@@ -8,6 +8,7 @@ import { Utils } from 'src/app/shared/utils';
     selector: 'jmp-dark-mode',
     templateUrl: './dark-mode.component.html',
     styleUrl: './dark-mode.component.scss',
+    changeDetection: ChangeDetectionStrategy.Eager,
     imports: [
         ...SharedImports,
     ]

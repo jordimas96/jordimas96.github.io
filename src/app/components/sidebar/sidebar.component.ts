@@ -1,4 +1,4 @@
-import { AfterViewInit, ChangeDetectorRef, Component, ElementRef, HostListener, inject, OnInit, ViewChild } from '@angular/core';
+import { AfterViewInit, ChangeDetectionStrategy, ChangeDetectorRef, Component, ElementRef, HostListener, inject, OnInit, ViewChild } from '@angular/core';
 import { NavigationEnd, RouterLink, RouterLinkActive } from '@angular/router';
 import { DarkModeComponent } from 'src/app/components/dark-mode/dark-mode.component';
 import { SelectorIdiomaComponent } from 'src/app/components/selector-idioma/selector-idioma.component';
@@ -13,6 +13,7 @@ import { Utils } from 'src/app/shared/utils';
     selector: 'jmp-sidebar',
     templateUrl: './sidebar.component.html',
     styleUrl: './sidebar.component.scss',
+    changeDetection: ChangeDetectionStrategy.Eager,
     imports: [
         RouterLinkActive,
         RouterLink,

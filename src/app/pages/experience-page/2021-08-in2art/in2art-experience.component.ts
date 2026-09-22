@@ -1,4 +1,4 @@
-import { Component, inject, Input } from '@angular/core';
+import { ChangeDetectionStrategy, Component, inject, Input } from '@angular/core';
 import { RouterLink } from '@angular/router';
 import { LlistaSkills } from 'src/app/components/llista-skills/llista-skills';
 import { CaseStudy } from 'src/app/data/case-studies.data';
@@ -9,6 +9,7 @@ import { SharedImports } from 'src/app/shared/imports';
     selector: 'jmp-in2art-experience',
     templateUrl: './in2art-experience.component.html',
     styleUrl: './in2art-experience.component.scss',
+    changeDetection: ChangeDetectionStrategy.Eager,
     imports: [
         ...SharedImports,
         RouterLink,

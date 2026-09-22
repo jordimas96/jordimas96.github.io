@@ -1,14 +1,14 @@
-import { Component, ElementRef, inject, ViewChild } from '@angular/core';
+import { ChangeDetectionStrategy, Component, ElementRef, inject, ViewChild } from '@angular/core';
 import { LayoutService } from 'src/app/services/layout.service';
 import { MainService } from 'src/app/services/main.service';
 import { SharedImports } from 'src/app/shared/imports';
 import { StoryComponent } from './story/story.component';
 
-
 @Component({
     selector: 'jmp-stories',
     templateUrl: './stories.component.html',
     styleUrl: './stories.component.scss',
+    changeDetection: ChangeDetectionStrategy.Eager,
     imports: [
         ...SharedImports,
         StoryComponent,

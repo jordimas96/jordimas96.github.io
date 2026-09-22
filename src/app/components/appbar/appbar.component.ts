@@ -1,4 +1,4 @@
-import { AfterViewInit, Component, ElementRef, HostListener, inject, ViewChild } from '@angular/core';
+import { AfterViewInit, ChangeDetectionStrategy, Component, ElementRef, HostListener, inject, ViewChild } from '@angular/core';
 import { InputBuscador } from 'src/app/components/input-buscador/input-buscador';
 import { SelectorIdiomaComponent } from 'src/app/components/selector-idioma/selector-idioma.component';
 import { LayoutService } from 'src/app/services/layout.service';
@@ -12,6 +12,7 @@ import { NavegacioTabComponent } from './navegacio-tab/navegacio-tab.component';
     selector: 'jmp-appbar',
     templateUrl: './appbar.component.html',
     styleUrl: './appbar.component.scss',
+    changeDetection: ChangeDetectionStrategy.Eager,
     imports: [
         ...SharedImports,
         NavegacioTabComponent,

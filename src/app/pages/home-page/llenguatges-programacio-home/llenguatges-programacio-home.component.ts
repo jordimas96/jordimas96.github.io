@@ -1,4 +1,4 @@
-import { Component, inject } from '@angular/core';
+import { ChangeDetectionStrategy, Component, inject } from '@angular/core';
 import { SkillComponent } from 'src/app/components/skill/skill.component';
 import { Skill } from 'src/app/data/skills.data';
 import { ExperienceCalculatorService } from 'src/app/services/experience-calculator.service';
@@ -11,6 +11,7 @@ import { Utils } from 'src/app/shared/utils';
     selector: 'jmp-llenguatges-programacio-home',
     templateUrl: './llenguatges-programacio-home.component.html',
     styleUrl: './llenguatges-programacio-home.component.scss',
+    changeDetection: ChangeDetectionStrategy.Eager,
     imports: [
         ...SharedImports,
         SkillComponent,

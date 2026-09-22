@@ -1,4 +1,4 @@
-import { Component, ElementRef, HostListener, inject, ViewChild } from '@angular/core';
+import { ChangeDetectionStrategy, Component, ElementRef, HostListener, inject, ViewChild } from '@angular/core';
 import { NavigationEnd, Router, RouterLink, RouterLinkActive } from '@angular/router';
 import { interval } from 'rxjs';
 import { MainService } from 'src/app/services/main.service';
@@ -9,6 +9,7 @@ import { Utils } from 'src/app/shared/utils';
     selector: 'jmp-navegacio-tab',
     templateUrl: './navegacio-tab.component.html',
     styleUrl: './navegacio-tab.component.scss',
+    changeDetection: ChangeDetectionStrategy.Eager,
     imports: [
         RouterLinkActive,
         RouterLink,

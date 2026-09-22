@@ -1,8 +1,11 @@
-import { Component, inject } from '@angular/core';
+import { ChangeDetectionStrategy, Component, inject } from '@angular/core';
 import { Router } from '@angular/router';
 import { SECCIONS } from 'src/app/data/seccions.data';
 
-@Component({ template: '' })
+@Component({
+    template: '',
+    changeDetection: ChangeDetectionStrategy.Eager,
+})
 export class RedirectComponent {
 
     private router = inject(Router);

@@ -1,4 +1,4 @@
-import { Component, ElementRef, inject, Input, OnChanges, ViewChild } from '@angular/core';
+import { ChangeDetectionStrategy, Component, ElementRef, inject, Input, OnChanges, ViewChild } from '@angular/core';
 import { MainService } from 'src/app/services/main.service';
 import { Links } from './links';
 
@@ -6,6 +6,7 @@ import { Links } from './links';
     selector: 'jmp-link',
     templateUrl: './link.component.html',
     styleUrl: './link.component.scss',
+    changeDetection: ChangeDetectionStrategy.Eager,
     imports: []
 })
 export class LinkComponent implements OnChanges {
