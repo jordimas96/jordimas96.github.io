@@ -2,6 +2,7 @@
 @import "src/app/styles/mediaqueries.scss";
 @import "src/app/styles/variables.scss";
 // @import "src/app/styles/themes.scss";
+@import "src/app/styles/animacions.scss";
 @import "src/app/styles/scrollbar.scss";
 @import "src/app/directives/mostrar-amb-animacio.directive.scss";
 @import "src/app/styles/extra-styles/shapes.scss";
@@ -20,6 +21,9 @@
 // @function color($color, $alpha: 1) {
 //     @return rgba(var($color), $alpha);
 // }
+
+
+// #region HTML //
 
 html {
 
@@ -52,7 +56,12 @@ body {
     overflow-x: hidden;
 }
 
-// Estils estructura pagines //
+// #endregion
+
+
+
+// #region Estils estructura pagines //
+
 .page {
     transition: transform 0.3s, padding 0.3s;
 
@@ -106,8 +115,12 @@ body {
     }
 }
 
+// #endregion //
 
-// Estils generals per tots els ns (<button> i <a>) //
+
+
+// #region Estils generals per tots els ns (<button> i <a>) //
+
 .boto {
     @include reset-a;
     @include reset-button;
@@ -151,8 +164,11 @@ ul {
     }
 }
 
+// #endregion
 
-// Shared //
+
+
+// #region Shared //
 
 .boing {
 	cursor: pointer;
@@ -169,11 +185,12 @@ ul {
     }
 }
 
+// #endregion
 
 
 
+// #region Arreglos - Fixes //
 
-/* Arreglos - Fixes */
 video, img {
     display: block;
 }
@@ -182,13 +199,13 @@ video, img {
     z-index: 1110;
 }
 
+// #endregion
 
-// Bugs llibreries (?)
 
-// Bootstrap 5.3.3 //
-.text-justify {
-    text-align: justify !important;
-}
+
+// #region Bugs llibreries (?) - Bootstrap 5.3.3 //
+
+.text-justify { text-align: justify !important; }
 .float-left { float: left !important; }
 .float-right { float: right !important; }
 .float-none { float: none !important; }
@@ -205,8 +222,12 @@ video, img {
 .mw-1600 { max-width: 1600px !important; }
 .mw-none { max-width: none !important; }
 
+// #endregion
 
-// Utils //
+
+
+// #region Utils //
+
 // *** Ja exsiteixen a bootstrap 5 //
 .rounded { border-radius: 0.25rem !important; }
 .rounded-2 { border-radius: 0.5rem !important; }
@@ -280,8 +301,12 @@ img, .noselect {
 									supported by Chrome, Edge, Opera and Firefox */
 }
 
+// #endregion
 
-// Icones (img -> i) //
+
+
+// #region Icones (img -> i) //
+
 .icona-cv {
     background-color: currentColor;
     mask-image: url('/assets/icons/cv.png');
@@ -293,8 +318,12 @@ img, .noselect {
     -webkit-mask-position: center;
 }
 
+// #endregion
 
-// Ombres //
+
+
+// #region Ombres //
+
 .shadow-1 { box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24) !important; }
 .shadow-2 { box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23) !important; }
 .shadow-3 { box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23) !important; }
@@ -330,12 +359,11 @@ img, .noselect {
     }
 }
 
+// #endregion
 
 
 
-
-
-// Tota la pagina //
+// #region Tota la pagina //
 
 // Selecció //
 ::selection { background-color: var(--color-7); color: var(--fons); }
@@ -354,3 +382,4 @@ img, .noselect {
     box-shadow: inset 0 0 0 1000px light-dark(#fff2, #fff8) !important;
 }
 
+// #endregion

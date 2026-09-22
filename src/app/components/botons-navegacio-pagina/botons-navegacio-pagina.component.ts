@@ -21,20 +21,14 @@ enum Pagines {
         RouterLink,
     ]
 })
-export class BotonsNavegacioPaginaComponent implements OnInit, AfterViewInit {
+export class BotonsNavegacioPaginaComponent implements OnInit {
 
     public m = inject(MainService);
     private el = inject(ElementRef);
         
     public botons: any[] = [];
 
-    public carregat = false;
     public scrollAlFinalDePagina = false;
-
-    constructor() {
-        if (this.fabMode)
-            this.el.nativeElement.style.visibility = "hidden";
-    }
 
     public readonly llistaBotons = {
         [Pagines.home]:       { nom: Pagines.home,       text: () => ["Inici", "Inicio", "Home"][this.m.idiomaIndex],                  iconClass: "fa-house" },
@@ -52,13 +46,6 @@ export class BotonsNavegacioPaginaComponent implements OnInit, AfterViewInit {
             case (Pagines.art):         this.botons = [this.llistaBotons[Pagines.projects],     this.llistaBotons[Pagines.about]];      break;
             case (Pagines.about):       this.botons = [this.llistaBotons[Pagines.art],          this.llistaBotons[Pagines.home]];       break;
         }
-    }
-
-    ngAfterViewInit() {
-        setTimeout(() => {
-            this.el.nativeElement.style.visibility = "";
-            this.carregat = true;
-        }, 300);
     }
 
     @HostListener('window:scroll')
