@@ -61,22 +61,36 @@ export class SkillPageComponent extends PageComponent implements OnInit {
         this.caseStudies = [...new Set([...caseStudies, ...caseStudiesExperienceCalculator])]
     }
 
+    previewClass(numElem: number) {
+        if (numElem == 1)       return "col-12 col-md-8";
+        else if (numElem == 2)  return "col-12 col-md-6";
+        else                    return "col-12 col-md-6 col-xl-4";
+    }
+
 
     getTextTooltip() {
+        const aLesSeguentsEmpresesIProjectes = [
+            "a les següents empreses i projectes:",
+            "en las siguientes empresas y proyectos:",
+            "at the following companies and projects:"
+        ][this.m.idiomaIndex];
+        const alsSeguentsProjectes = [
+            "En els següents projectes personals:",
+            "En los siguientes proyectos personales:",
+            "In the following personal projects:"
+        ][this.m.idiomaIndex];
+        const nomesEnProjectesPersonals = [
+            "Només en projectes personals",
+            "Sólo en proyectos personales",
+            "Personal projects only"
+        ][this.m.idiomaIndex];
+        
         let infoCompletaSkill = this.exp.skills[this.skill] || { diesTotals: 0, empreses: [], anysMesosDies: [0, 0, 0] };
         if (infoCompletaSkill?.empreses?.length) {
             return this.getText_anysMesosDies(infoCompletaSkill.anysMesosDies) + // 2 years, 6 months and 9 days //
-                "\n" + [
-                    "a les següents empreses i projectes:",
-                    "en las siguientes empresas y proyectos:",
-                    "at the following companies and projects:"
-                ][this.m.idiomaIndex]
+                "\n" + aLesSeguentsEmpresesIProjectes;
         } else {
-            return [
-                "En els següents projectes personals:",
-                "En los siguientes proyectos personales:",
-                "In the following personal projects:"
-            ][this.m.idiomaIndex];
+            return this.caseStudies.length ? alsSeguentsProjectes : nomesEnProjectesPersonals;
         }
     }
     getText_anysMesosDies(anysMesosDies) {

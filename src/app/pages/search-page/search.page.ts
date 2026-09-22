@@ -55,7 +55,7 @@ export class SearchPageComponent extends PageComponent implements AfterViewInit 
     actURL() {
         let novaURL = this.query.trim().toLowerCase();
         if (!novaURL) novaURL = "/search";
-        else novaURL = "/search/" + novaURL;
+        else novaURL = "/search/" + encodeURIComponent(novaURL);
 
         window.history.replaceState({}, "", novaURL);
     }
@@ -105,5 +105,10 @@ export class SearchPageComponent extends PageComponent implements AfterViewInit 
     }
 
 
+    previewClass(numElem: number) {
+        if (numElem == 1)       return "col-12 col-md-8";
+        else if (numElem == 2)  return "col-12 col-md-6";
+        else                    return "col-12 col-md-6 col-xl-4";
+    }
 
 }

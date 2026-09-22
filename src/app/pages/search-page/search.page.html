@@ -45,7 +45,7 @@
                             </h1>
                             <div class="llista-case-studies mx-auto row justify-content-center g-3 mb-6">
                                 @for (caseStudy of resultats.caseStudies; track caseStudy) {
-                                    <jmp-preview-case-study [id]="caseStudy" class="col-12 col-md-6 col-xl-4" />
+                                    <jmp-preview-case-study [id]="caseStudy" [class]="previewClass(resultats.caseStudies.length)" />
                                 }
                             </div>
 
