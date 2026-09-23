@@ -10,7 +10,6 @@
         
         ::ng-deep .chip {
             font-size: 2rem;
-            @include mobil { font-size: 2rem; }
             padding: 0.25em 1.25em;
         }
     }
@@ -58,16 +57,4 @@
         }
     }
 
-}
-
-
-
-
-// Ocultar camp buscador de la appbar a la pantalla /search //
-::ng-deep {
-    jmp-input-buscador {
-        scale: 0.75;
-        opacity: 0;
-        pointer-events: none;
-    }
 }

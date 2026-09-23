@@ -88,7 +88,7 @@ export class SkillPageComponent extends PageComponent implements OnInit {
         let infoCompletaSkill = this.exp.skills[this.skill] || { diesTotals: 0, empreses: [], anysMesosDies: [0, 0, 0] };
         if (infoCompletaSkill?.empreses?.length) {
             return this.getText_anysMesosDies(infoCompletaSkill.anysMesosDies) + // 2 years, 6 months and 9 days //
-                "\n" + aLesSeguentsEmpresesIProjectes;
+                (this.caseStudies.length ? "\n" + aLesSeguentsEmpresesIProjectes : "");
         } else {
             return this.caseStudies.length ? alsSeguentsProjectes : nomesEnProjectesPersonals;
         }

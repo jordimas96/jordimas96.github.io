@@ -1,4 +1,5 @@
 import { AfterViewInit, ChangeDetectionStrategy, Component, ElementRef, HostListener, inject, ViewChild } from '@angular/core';
+import { MarcadorPaginaActual } from 'src/app/components/appbar/marcador-pagina-actual/marcador-pagina-actual';
 import { InputBuscador } from 'src/app/components/input-buscador/input-buscador';
 import { SelectorIdiomaComponent } from 'src/app/components/selector-idioma/selector-idioma.component';
 import { LayoutService } from 'src/app/services/layout.service';
@@ -16,6 +17,7 @@ import { NavegacioTabComponent } from './navegacio-tab/navegacio-tab.component';
     imports: [
         ...SharedImports,
         NavegacioTabComponent,
+        MarcadorPaginaActual,
         InputBuscador,
         SelectorIdiomaComponent,
     ]

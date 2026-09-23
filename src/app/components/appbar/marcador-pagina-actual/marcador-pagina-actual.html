@@ -1,0 +1,11 @@
+<div class="contingut" #contingut
+    [class.visible]="scroll"
+    [class.entrar-pel-costat]="esCaseStudy">
+    <div class="contingut-intern" #contingutIntern>
+        @if (marcador?.text) {
+            <h1 class="text">{{ marcador.text }}</h1>
+        } @else if (marcador?.skill) {
+            <jmp-skill [skill]="marcador.skill" />
+        }
+    </div>
+</div>

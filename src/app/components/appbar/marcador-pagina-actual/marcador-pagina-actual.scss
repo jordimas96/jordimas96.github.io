@@ -1,0 +1,68 @@
+@import "src/styles.scss";
+
+:host {
+
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+
+    .contingut {
+        transition: opacity, scale, translate;
+        transition-duration: 0.2s;
+        
+        &:not(.visible) {
+            opacity: 0;
+            scale: 0.8;
+            translate: 0 2rem;
+            &.entrar-pel-costat { translate: -6rem 2rem; }
+        }
+
+        .text {
+            margin-bottom: 0;
+            font-size: 2.2rem;
+            @include mobil { font-size: 1.5rem; }
+        }
+        jmp-skill {
+            pointer-events: none;
+
+            ::ng-deep {
+                .chip {
+                    font-size: 1.5rem;
+                    padding: 0.25em 1.25em;
+                }
+            }
+        }
+    }
+}
+
+
+
+.fadein {
+    animation: fadeIn 0.2s;
+}
+.fadeout {
+    animation: fadeOut 0.2s;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        scale: 0.8;
+    }
+    to {
+        opacity: 1;
+        scale: 1;
+    }
+}
+@keyframes fadeOut {
+    from {
+        opacity: 1;
+        scale: 1;
+    }
+    to {
+        opacity: 0;
+        scale: 0.8;
+    }
+}

@@ -29,7 +29,7 @@
                                 @if (m.en) { Technical Skills }
                             </h1>
                             <div class="llista-skills">
-                                @for (skill of resultats.skills; track skill[0]) {
+                                @for (skill of resultats.skills; track skill) {
                                     <jmp-skill [skill]="skill" />
                                 }
                             </div>

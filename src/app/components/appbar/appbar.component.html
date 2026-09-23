@@ -1,13 +1,26 @@
 <header #appbar id="appbar" class="appbar v" [class.shadow-3-l]="m.scroll > 0" [class.scrolled]="m.scroll > 0" jmpMostrarAmbAnimacio>
 
-    <button class="boto botoText botoSidebar rounded-pill" (click)="m.sidebar.toggle()" aria-label="Open sidebar" matRipple>
-        <i class="fa-solid fa-bars d-block"></i>
-    </button>
+    <div class="esquerra">
+        <button class="rs boto-sidebar" (click)="m.sidebar.toggle()" aria-label="Open sidebar" matRipple>
+            <i class="fa-solid fa-bars d-block"></i>
+        </button>
+    </div>
 
-    <!-- <jmp-navegacio-tab class="w-0 w-lg-auto" /> -->
+    <div class="mig">
+    <!-- <jmp-navegacio-tab class="w-0 w-lg-auto m-2" /> -->
 
-    <jmp-input-buscador />
+        <jmp-marcador-pagina-actual />
+        <!-- <jmp-input-buscador /> -->
+     </div>
 
-    <jmp-selector-idioma class="d-none d-sm-flex pe-2" />
+    <div class="dreta">
+        <button class="rs boto-lupa" matRipple>
+            <i class="fa-solid fa-magnifying-glass"></i>
+        </button>
+
+        @if (m.esPantallaPc) {
+            <jmp-selector-idioma class="mx-2 mx-lg-4" />
+        }
+    </div>
 
 </header>
