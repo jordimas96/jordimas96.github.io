@@ -42,16 +42,16 @@ export class Utils {
     public static setFlag(key: string, value: boolean) {
         localStorage.setItem(key, value ? "1" : "0");
     }
-    public static getFlag(key: string): boolean | null {
+    public static getFlag(key: string, valorDefecte = false): boolean {
         let value = localStorage.getItem(key);
-        if (value === null) return null;
+        if (value === null) return valorDefecte;
         return !!parseInt(value);
     }
     public static removeFlag(key: string) {
         localStorage.removeItem(key);
     }
     public static hasFlag(key: string): boolean {
-        return this.getFlag(key) !== null;
+        return localStorage.getItem(key) !== null;
     }
 
 

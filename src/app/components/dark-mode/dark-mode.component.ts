@@ -149,7 +149,7 @@ export class DarkModeComponent {
 
     setDarkMode() {
         // Establir variable dark mode. Si no te cookie el traiem de system //
-        this.ts.modeFosc = Utils.getFlag("darkMode") ?? Utils.systemDarkMode;
+        this.ts.modeFosc = Utils.getFlag("darkMode", Utils.systemDarkMode);
     }
 
 }

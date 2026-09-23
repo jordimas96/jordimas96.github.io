@@ -29,7 +29,7 @@ export class LlenguatgesProgramacioComponent {
     public sorted = false;
 
     constructor() {
-        this.showTime = !!Utils.getFlag("showTime");
+        this.showTime = Utils.getFlag("showTime");
     }
 
 

@@ -6,7 +6,7 @@ import { LayoutService } from 'src/app/services/layout.service';
 import { MainService } from 'src/app/services/main.service';
 import { ThemeService } from 'src/app/services/theme.service';
 import { SharedImports } from 'src/app/shared/imports';
-import { NavegacioTabComponent } from './navegacio-tab/navegacio-tab.component';
+import { Utils } from 'src/app/shared/utils';
 
 
 @Component({
@@ -16,7 +16,6 @@ import { NavegacioTabComponent } from './navegacio-tab/navegacio-tab.component';
     changeDetection: ChangeDetectionStrategy.Eager,
     imports: [
         ...SharedImports,
-        NavegacioTabComponent,
         MarcadorPaginaActual,
         InputBuscador,
         SelectorIdiomaComponent,
@@ -30,10 +29,14 @@ export class AppbarComponent implements AfterViewInit {
 
     @ViewChild('appbar') appbar: ElementRef;
 
+    public buscadorObert = false;
+
     constructor() { this.m.appbar = this; }
 
     ngAfterViewInit() {
         this.ls.appbar = this.appbar.nativeElement;
+        
+        this.buscadorObert = Utils.getFlag("buscadorObert");
     }
 
     width() {
@@ -41,6 +44,13 @@ export class AppbarComponent implements AfterViewInit {
     }
     height() {
         return this.appbar.nativeElement.offsetHeight || 0;
+    }
+
+
+    toggleBuscador() {
+        this.buscadorObert = !this.buscadorObert;
+
+        Utils.setFlag("buscadorObert", this.buscadorObert);
     }
 
 

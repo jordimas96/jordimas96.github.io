@@ -9,17 +9,37 @@
     <div class="mig">
     <!-- <jmp-navegacio-tab class="w-0 w-lg-auto m-2" /> -->
 
-        <jmp-marcador-pagina-actual />
-        <!-- <jmp-input-buscador /> -->
-     </div>
+        <jmp-marcador-pagina-actual [class.ocult]="buscadorObert" />
+
+        @if (buscadorObert) {
+            <div class="buscador-wrapper"
+                animate.enter="fadein-a-esquerra"
+                animate.leave="fadeout-a-dreta">
+                <jmp-input-buscador />
+            </div>
+        }
+
+    </div>
 
     <div class="dreta">
-        <button class="rs boto-lupa" matRipple>
-            <i class="fa-solid fa-magnifying-glass"></i>
-        </button>
+        <div class="zona-boto-buscador">
+            <button class="rs boto boto-buscador" [class.vermell]="buscadorObert" (click)="toggleBuscador()" matRipple>
+                @if (buscadorObert) {
+                    <i class="fa-solid fa-xmark"
+                        animate.enter="scale-fadein"
+                        animate.leave="scale-fadeout"
+                    ></i>
+                } @else {
+                    <i class="fa-solid fa-magnifying-glass"
+                        animate.enter="scale-fadein"
+                        animate.leave="scale-fadeout"
+                    ></i>
+                }
+            </button>
+        </div>
 
         @if (m.esPantallaPc) {
-            <jmp-selector-idioma class="mx-2 mx-lg-4" />
+            <jmp-selector-idioma class="me-2 mx-lg-4" />
         }
     </div>
 

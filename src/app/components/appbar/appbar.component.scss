@@ -46,31 +46,109 @@
         font-size: 2rem;
 
         border-radius: 1rem;
+
+        z-index: 200;
     }
 
-    jmp-input-buscador {
-        position: absolute;
-        left: 50%;
-        translate: -50%;
-        
-        width: 30rem;
-        max-width: 56%;
-        @include mobil {
-            width: calc(100% - 8rem);
-            max-width: none;
+    jmp-marcador-pagina-actual {
+        transition: opacity, scale, translate;
+        transition-duration: 0.2s;
+
+        &.ocult {
+            opacity: 0;
+            // scale: 0.8;
+            translate: 0 -2rem;
+            visibility: collapse;
         }
-        transition: scale 0.2s, opacity 0.2s;
     }
 
-    .boto-lupa {
+    .buscador-wrapper {
+        position: absolute;
+        inset: 0;
+
+        jmp-input-buscador {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            translate: -50% -50%;
+            
+            width: 30rem;
+            max-width: 34%;
+            @include mobil {
+                width: calc(100% - 8rem);
+                max-width: none;
+            }
+            
+            z-index: 300;
+
+            transition: scale 0.2s, opacity 0.2s;
+        }
+    }
+
+    .zona-boto-buscador {
         width: 4rem;
         height: 100%;
 
         padding: 0.5rem;
+        transition: scale 0.2s, opacity 0.2s;
 
-        font-size: 2rem;
+        .boto-buscador {
+            width: 100%;
+            height: 100%;
 
-        border-radius: 1rem;
+            padding: 0.5rem;
+
+            font-size: 1.5rem;
+
+            border-radius: 2rem;
+            
+            background-color: light-dark(hsla(0, 0%, 100%, 0.4), hsla(0, 0%, 0%, 0.4));
+
+            transition: background-color 0.2s, color 0.2s;
+
+            &.vermell {
+                background-color: light-dark(hsla(0, 100%, 90%, 0.4), hsla(0, 100%, 10%, 0.4));
+                color: light-dark(hsl(0, 100%, 10%), hsl(0, 100%, 90%));
+            }
+
+        }
+        i { position: absolute; }
     }
 
+    jmp-selector-idioma {
+        z-index: 200;
+    }
+
+}
+
+.fadein-a-esquerra {
+    animation: fadeInAEsquerra 0.2s;
+}
+.fadeout-a-dreta {
+    animation: fadeOutADreta 0.2s;
+}
+
+@keyframes fadeInAEsquerra {
+    from {
+        opacity: 0;
+        translate: 42%;
+        scale: 0 0.6;
+    }
+    to {
+        opacity: 1;
+        translate: 0;
+        scale: 1;
+    }
+}
+@keyframes fadeOutADreta {
+    from {
+        opacity: 1;
+        translate: 0;
+        scale: 1;
+    }
+    to {
+        opacity: 0;
+        translate: 42%;
+        scale: 0 0.6;
+    }
 }
