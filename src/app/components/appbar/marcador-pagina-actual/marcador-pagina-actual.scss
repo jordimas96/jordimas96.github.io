@@ -21,6 +21,8 @@
 
         .text {
             margin-bottom: 0;
+            text-align: center;
+            
             font-size: 2.2rem;
             @include mobil { font-size: 1.5rem; }
         }

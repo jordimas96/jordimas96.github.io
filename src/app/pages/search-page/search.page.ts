@@ -80,7 +80,7 @@ export class SearchPageComponent extends PageComponent implements AfterViewInit 
         let caseStudiesTotals: CaseStudyId[] = [];
         // Temporal, ara llista només case studies que tinguin alguna de les skills trobades //
         if (skills.length) {
-            const caseStudies: CaseStudyId[] = Object.entries(CASE_STUDIES).reverse()
+            const caseStudies: CaseStudyId[] = Object.entries(CASE_STUDIES)
                 .filter(([key, caseStudy]) =>
                     caseStudy.skills.some(caseStudySkill =>
                         skills.some(skill => skill == caseStudySkill)

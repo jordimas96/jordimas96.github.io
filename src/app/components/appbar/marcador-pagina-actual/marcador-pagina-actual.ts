@@ -7,7 +7,7 @@ import { MainService } from 'src/app/services/main.service';
 import { SharedImports } from 'src/app/shared/imports';
 
 export interface Marcador {
-    text?: string,
+    text?: () => string,
     skill?: Skill,
 }
 
@@ -35,22 +35,22 @@ export class MarcadorPaginaActual implements OnInit, AfterViewInit {
     marcador: Marcador | null;
 
     textosCaseStudies = {
-        "/experience/indra":         "Indra",
-        "/experience/evora":         "Evora IT",
-        "/experience/orange":        "Orange",
-        "/experience/in2art":        "IN2ART",
-        "/experience/matic":         "Matic",
-        "/experience/tecnocom":      "Tecnocom / Indra",
-        "/experience/nexxia":        "Nexxia",
-        "/projects/in2art":          "IN2ART",
-        "/projects/bunquer":         "El búnquer descarregador",
-        "/projects/android":         "Apps Android",
-        "/projects/mad-jumpgate":    "PC shooting game",
-        "/projects/github":          "GitHub Projects",
-        "/projects/custom-roms":     "Custom ROMs",
-        "/projects/tasker":          "Tasker",
-        "/art/icons":                "Icons",
-        "/art/amazfit":              "Amazfit Watchfaces",
+        "/experience/indra":        () => "Indra",
+        "/experience/evora":        () => "Evora IT",
+        "/experience/orange":       () => "Orange",
+        "/experience/in2art":       () => "IN2ART",
+        "/experience/matic":        () => "Matic",
+        "/experience/tecnocom":     () => "Tecnocom / Indra",
+        "/experience/nexxia":       () => "Nexxia",
+        "/projects/in2art":         () => "IN2ART",
+        "/projects/bunquer":        () => ["Descarregador de capítols d'El búnquer", "Descargador de episodios de El búnquer", "Downloader of El búnquer episodes"][this.m.idiomaIndex],
+        "/projects/android":        () => ["Apps Android", "Apps Android", "Android Apps"][this.m.idiomaIndex],
+        "/projects/mad-jumpgate":   () => ["Joc de disparar per a PC", "Juego de disparos para PC", "PC shooting game"][this.m.idiomaIndex],
+        "/projects/github":         () => ["Projectes GitHub", "Proyectos GitHub", "GitHub projects"][this.m.idiomaIndex],
+        "/projects/custom-roms":    () => "Custom ROMs",
+        "/projects/tasker":         () => ["Projectes TaskerNet", "Proyectos TaskerNet", "TaskerNet projects"][this.m.idiomaIndex],
+        "/art/icons":               () => ["Icones", "Iconos", "Icons"][this.m.idiomaIndex],
+        "/art/amazfit":             () => "Amazfit Watchfaces",
     };
 
     ngOnInit() {
@@ -91,11 +91,11 @@ export class MarcadorPaginaActual implements OnInit, AfterViewInit {
     }
 
     getDadesMarcador(url: string): Marcador {
-        if (url == "/" || url == "/home")   return { text: "Jordi Mas Parramon" };
-        else if (url == "/experience")      return { text: ["Experiència professional", "Experiencia profesional", "Professional experience"][this.m.idiomaIndex] };
-        else if (url == "/projects")        return { text: ["Projectes", "Proyectos", "Projects"][this.m.idiomaIndex] };
-        else if (url == "/art")             return { text: ["Projectes artístics", "Proyectos artísticos", "Artistic projects"][this.m.idiomaIndex] };
-        else if (url == "/about-me")        return { text: ["Sobre mi", "Acerca de mí", "About me"][this.m.idiomaIndex] };
+        if (url == "/" || url == "/home")   return { text: () => "Jordi Mas Parramon" };
+        else if (url == "/experience")      return { text: () => ["Experiència professional", "Experiencia profesional", "Professional experience"][this.m.idiomaIndex] };
+        else if (url == "/projects")        return { text: () => ["Projectes", "Proyectos", "Projects"][this.m.idiomaIndex] };
+        else if (url == "/art")             return { text: () => ["Projectes artístics", "Proyectos artísticos", "Artistic projects"][this.m.idiomaIndex] };
+        else if (url == "/about-me")        return { text: () => ["Sobre mi", "Acerca de mí", "About me"][this.m.idiomaIndex] };
 
         else if (url.startsWith("/search")) return {};
 

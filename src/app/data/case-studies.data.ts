@@ -84,40 +84,40 @@ export const CASE_STUDIES: Record<string, CaseStudy> = {
     },
 
     // EXPERENCIA //
-    nexxia: {
-        url: "/nexxia",
-        component: NexxiaComponent,
-        skills: [s.JAVASCRIPT, s.JQUERY, s.CSS, s.HTML5, s.BOOTSTRAP, s.DELPHI, s.FASTREPORT, s.RESPONSIVEDESIGN]
-    },
-    tecnocom: {
-        url: "/tecnocom",
-        component: TecnocomComponent,
-        skills: [s.JAVA, s.JSP, s.PL1, s.DB2, s.MAVEN, s.NETBEANS, s.ECLIPSE, s.SVN, s.WINDOWSSERVER, s.TEAMVIEWER, s.REMOTEDESKTOP, s.ZOSMVS, s.CONTINUOUSINTEGRATION, s.AGILE]
-    },
-    orange: {
-        url: "/orange",
-        component: OrangeComponent,
-        skills: [s.JAVA, s.ANGULAR, s.SQLDEVELOPER, s.WEBLOGIC, s.ECLIPSE, s.JIRA, s.CONFLUENCE, s.GITLAB, s.MAVEN, s.JFROGARTIFACTORY, s.TORTOISEGIT, s.WINSCP, s.WINDOWSSERVER, s.CONTINUOUSINTEGRATION, s.AGILE]
-    },
-    evora: {
-        url: "/evora",
-        component: EvoraComponent,
-        skills: [s.ANGULAR, s.TYPESCRIPT, s.NGRX, s.RXJS, s.CSS, s.ANGULARMATERIAL, s.PWA, s.CORDOVA, s.GIT, s.JIRA, s.CONFLUENCE, s.CONTINUOUSINTEGRATION, s.AGILE, s.MVC]
-    },
-    matic: {
-        url: "/matic",
-        component: MaticComponent,
-        skills: [s.JAVASCRIPT, s.JQUERY, s.CSS, s.HTML5, s.BOOTSTRAP, s.MATERIALIZE, s.CORDOVA, s.ANDROID, s.UWP, s.SEQUELIZE, s.PHP, s.APACHE, s.MYSQL, s.PHPMYADMIN, s.FILEZILLA, s.POWERSHELL, s.WINDOWSSERVER, s.JOOMLA, s.AGILE, s.MVC, s.RESPONSIVEDESIGN, s.ANYDESK, s.REMOTEDESKTOP]
+    indra: {
+        url: "/indra",
+        component: IndraComponent,
+        skills: [s.ANGULAR, s.TYPESCRIPT, s.NGRX, s.RXJS, s.CSS, s.SCSS, s.HTML5, s.PRIMENG, s.JEST, s.JASMINE, s.JIRA, s.SONARQUBE, s.OPENSHIFT, s.GIT, s.BITBUCKET, s.RESPONSIVEDESIGN, s.CONTINUOUSINTEGRATION, s.AGILE, s.MVC]
     },
     in2art_exp: {
         url: "/in2art-exp",
         component: In2artExperienceComponent,
         skills: [s.ANGULAR, s.CSS, s.TYPESCRIPT, s.JAVASCRIPT, s.JQUERY, s.HTML5, s.BOOTSTRAP, s.ANGULARMATERIAL, s.I18N, s.NODEJS, s.JSON, s.MYSQL, s.FILEZILLA, s.APACHE, s.GIT, s.SOURCETREE, s.POWERSHELL, s.POSTMAN, s.ASANA, s.PHPMYADMIN, s.POEDIT, s.AGILE, s.MVC, s.RESPONSIVEDESIGN]
     },
-    indra: {
-        url: "/indra",
-        component: IndraComponent,
-        skills: [s.ANGULAR, s.TYPESCRIPT, s.NGRX, s.RXJS, s.CSS, s.SCSS, s.HTML5, s.PRIMENG, s.JEST, s.JASMINE, s.JIRA, s.SONARQUBE, s.OPENSHIFT, s.GIT, s.BITBUCKET, s.RESPONSIVEDESIGN, s.CONTINUOUSINTEGRATION, s.AGILE, s.MVC]
+    matic: {
+        url: "/matic",
+        component: MaticComponent,
+        skills: [s.JAVASCRIPT, s.JQUERY, s.CSS, s.HTML5, s.BOOTSTRAP, s.MATERIALIZE, s.CORDOVA, s.ANDROID, s.UWP, s.SEQUELIZE, s.PHP, s.APACHE, s.MYSQL, s.PHPMYADMIN, s.FILEZILLA, s.POWERSHELL, s.WINDOWSSERVER, s.JOOMLA, s.AGILE, s.MVC, s.RESPONSIVEDESIGN, s.ANYDESK, s.REMOTEDESKTOP]
+    },
+    evora: {
+        url: "/evora",
+        component: EvoraComponent,
+        skills: [s.ANGULAR, s.TYPESCRIPT, s.NGRX, s.RXJS, s.CSS, s.ANGULARMATERIAL, s.PWA, s.CORDOVA, s.GIT, s.JIRA, s.CONFLUENCE, s.CONTINUOUSINTEGRATION, s.AGILE, s.MVC]
+    },
+    orange: {
+        url: "/orange",
+        component: OrangeComponent,
+        skills: [s.JAVA, s.ANGULAR, s.SQLDEVELOPER, s.WEBLOGIC, s.ECLIPSE, s.JIRA, s.CONFLUENCE, s.GITLAB, s.MAVEN, s.JFROGARTIFACTORY, s.TORTOISEGIT, s.WINSCP, s.WINDOWSSERVER, s.CONTINUOUSINTEGRATION, s.AGILE]
+    },
+    tecnocom: {
+        url: "/tecnocom",
+        component: TecnocomComponent,
+        skills: [s.JAVA, s.JSP, s.PL1, s.DB2, s.MAVEN, s.NETBEANS, s.ECLIPSE, s.SVN, s.WINDOWSSERVER, s.TEAMVIEWER, s.REMOTEDESKTOP, s.ZOSMVS, s.CONTINUOUSINTEGRATION, s.AGILE]
+    },
+    nexxia: {
+        url: "/nexxia",
+        component: NexxiaComponent,
+        skills: [s.JAVASCRIPT, s.JQUERY, s.CSS, s.HTML5, s.BOOTSTRAP, s.DELPHI, s.FASTREPORT, s.RESPONSIVEDESIGN]
     },
 
 
