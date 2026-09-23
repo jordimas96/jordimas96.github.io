@@ -50,7 +50,8 @@ export class SkillPageComponent extends PageComponent implements OnInit {
     buscarCaseStudies() {
         const caseStudies: CaseStudyId[] = Object.entries(CASE_STUDIES)
             .filter(([key, caseStudy]) => caseStudy.skills.includes(this.skill))
-            .map((caseStudy) => caseStudy[0]);
+            .sort(([, cs1], [, cs2]) => cs2.prioritat - cs1.prioritat)
+            .map(([key, caseStudy]) => key);
         
         const caseStudiesExperienceCalculator: CaseStudyId[] = this.exp.experiencia
             .filter(empresa => empresa.caseStudyId).reverse() // Eliminem empreses sense caseStudyId //

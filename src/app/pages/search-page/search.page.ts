@@ -85,7 +85,9 @@ export class SearchPageComponent extends PageComponent implements AfterViewInit 
                     caseStudy.skills.some(caseStudySkill =>
                         skills.some(skill => skill == caseStudySkill)
                     )
-                ).map(([key, caseStudy]) => key as CaseStudyId);
+                )
+                .sort(([, cs1], [, cs2]) => cs2.prioritat - cs1.prioritat)
+                .map(([key, caseStudy]) => key as CaseStudyId);
 
             const caseStudiesExperienceCalculator: CaseStudyId[] = this.exp.experiencia
                 .filter(empresa => empresa.caseStudyId).reverse() // Eliminem empreses sense caseStudyId //
