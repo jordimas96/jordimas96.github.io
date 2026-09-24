@@ -14,7 +14,8 @@
     cursor: text;
 
     transform-origin: center top;
-    transition: scale 0.4s, padding 0.4s, margin 0.4s, background-color 0.4s, shadow 0.4s;
+    transition: scale, padding, margin, background-color, shadow;
+    transition-duration: 0.4s;
     transition-timing-function: cubic-bezier(0.38, 1.37, 0.64, 0.97);
 
     &.focus {

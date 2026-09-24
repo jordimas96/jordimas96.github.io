@@ -41,6 +41,8 @@ export class InputBuscador implements AfterViewInit {
         
         this.blur();
 
+        setTimeout(() => this.m.appbar.toggleBuscador(), 300);
+
         this.router.navigate(["/search", query]);
     }
 

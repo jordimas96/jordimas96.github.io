@@ -23,7 +23,8 @@
         border-radius: 1rem;
 
         cursor: text;
-        transition: translate 0.5s, width 0.5s, padding 0.5s, border-radius 0.5s, gap 0.5s;
+        transition: translate, width, padding, border-radius, gap;
+        transition-duration: 0.5s;
         transition-timing-function: cubic-bezier(0.38, 1.37, 0.64, 0.97);
 
         &.gran {

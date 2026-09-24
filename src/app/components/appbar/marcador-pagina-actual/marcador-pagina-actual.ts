@@ -73,21 +73,21 @@ export class MarcadorPaginaActual implements OnInit, AfterViewInit {
     }
 
     actualitzarMarcador(url: string) {
-        let marcador: any = this.getDadesMarcador(url);
+        let marcador: Marcador = this.getDadesMarcador(url);
 
         let elem = this.contingutIntern?.nativeElement;
 
         // Actualitzar marcador amb animacio //
         elem.classList.remove("fadein");
         elem.classList.add("fadeout");
-        elem.addEventListener("animationend", () => {
+        setTimeout(() => {
             elem.classList.remove("fadeout");
 
             // Al acabar l'animacio, canvies les dades i despres la tornes a activar //
             this.marcador = marcador;
 
             elem.classList.add("fadein");
-        }, { once: true });
+        }, 200);
     }
 
     getDadesMarcador(url: string): Marcador {
