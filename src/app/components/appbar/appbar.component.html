@@ -13,7 +13,7 @@
 
         @if (buscadorObert) {
             <div class="buscador-wrapper"
-                animate.enter="fadein-a-esquerra"
+                animate.enter="fadeout-a-dreta-r"
                 animate.leave="fadeout-a-dreta">
                 <jmp-input-buscador />
             </div>
@@ -26,12 +26,12 @@
             <button class="rs boto boto-buscador" [class.vermell]="buscadorObert" (click)="toggleBuscador()">
                 @if (buscadorObert) {
                     <i class="fa-solid fa-xmark"
-                        animate.enter="icona-a-dreta-tornar"
+                        animate.enter="icona-a-dreta-r"
                         animate.leave="icona-a-dreta"
                     ></i>
                 } @else {
                     <i class="fa-solid fa-magnifying-glass"
-                        animate.enter="icona-a-esquerra-tornar"
+                        animate.enter="icona-a-esquerra-r"
                         animate.leave="icona-a-esquerra"
                     ></i>
                 }
