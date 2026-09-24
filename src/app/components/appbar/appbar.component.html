@@ -23,16 +23,16 @@
 
     <div class="dreta">
         <div class="zona-boto-buscador">
-            <button class="rs boto boto-buscador" [class.vermell]="buscadorObert" (click)="toggleBuscador()" matRipple>
+            <button class="rs boto boto-buscador" [class.vermell]="buscadorObert" (click)="toggleBuscador()">
                 @if (buscadorObert) {
                     <i class="fa-solid fa-xmark"
-                        animate.enter="scale-fadein"
-                        animate.leave="scale-fadeout"
+                        animate.enter="icona-a-dreta-tornar"
+                        animate.leave="icona-a-dreta"
                     ></i>
                 } @else {
                     <i class="fa-solid fa-magnifying-glass"
-                        animate.enter="scale-fadein"
-                        animate.leave="scale-fadeout"
+                        animate.enter="icona-a-esquerra-tornar"
+                        animate.leave="icona-a-esquerra"
                     ></i>
                 }
             </button>

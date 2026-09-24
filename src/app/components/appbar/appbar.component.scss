@@ -104,13 +104,15 @@
             
             background-color: light-dark(hsla(0, 0%, 100%, 0.4), hsla(0, 0%, 0%, 0.4));
 
-            transition: background-color 0.2s, color 0.2s;
+            transition: background-color 0.3s, color 0.3s;
 
             &.vermell {
                 background-color: light-dark(hsla(0, 100%, 90%, 0.4), hsla(0, 100%, 10%, 0.4));
                 color: light-dark(hsl(0, 100%, 10%), hsl(0, 100%, 90%));
             }
-
+            
+            position: relative;
+            overflow: hidden;
         }
         i { position: absolute; }
     }
@@ -121,18 +123,13 @@
 
 }
 
-.fadein-a-esquerra {
-    animation: fadeInAEsquerra 0.2s;
-}
-.fadeout-a-dreta {
-    animation: fadeOutADreta 0.2s;
-}
-
+.fadein-a-esquerra { animation: fadeInAEsquerra 0.3s; }
+.fadeout-a-dreta { animation: fadeOutADreta 0.3s; }
 @keyframes fadeInAEsquerra {
     from {
         opacity: 0;
         translate: 42%;
-        scale: 0 0.6;
+        scale: 0 1.2;
     }
     to {
         opacity: 1;
@@ -149,6 +146,19 @@
     to {
         opacity: 0;
         translate: 42%;
-        scale: 0 0.6;
+        scale: 0 1.2;
     }
+}
+
+.icona-a-esquerra { animation: iconaAEsquerra 0.3s ease-in-out; }
+.icona-a-esquerra-tornar { animation: iconaAEsquerra 0.3s ease-in-out reverse; }
+.icona-a-dreta { animation: iconaADreta 0.3s ease-in-out; }
+.icona-a-dreta-tornar { animation: iconaADreta 0.3s ease-in-out reverse; }
+@keyframes iconaAEsquerra {
+    from { translate: 0; }
+    to { translate: -180%; }
+}
+@keyframes iconaADreta {
+    from { translate: 0; }
+    to { translate: 180%; }
 }
