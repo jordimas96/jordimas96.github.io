@@ -68,15 +68,24 @@
 
         jmp-input-buscador {
             position: absolute;
-            top: 50%;
-            left: 50%;
+            // Centrat //
+            top: 50%; left: 50%;
             translate: -50% -50%;
             
-            width: 30rem;
-            max-width: 34%;
-            @include mobil {
-                width: calc(100% - 8rem);
-                max-width: none;
+            
+            width: calc(100% - 8rem);
+
+            @include tablet {
+                left: auto;
+                width: calc(100% - 3.5rem  - 18rem);
+                right: 12rem;
+
+                max-width: 22rem;
+                
+                translate: 0 -50%;
+            }
+            @include gran {
+                right: 15rem;
             }
             
             z-index: 300;
