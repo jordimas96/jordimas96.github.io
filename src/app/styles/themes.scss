@@ -1,3 +1,4 @@
+// #region Generar Paleta //
 @mixin generar-paleta($hue, $sat: 100) {
     @if ($sat > 0) {
         @if ($hue > 330 and $hue <= 360 or $hue >= 0 and $hue <= 30) {
@@ -121,7 +122,9 @@
 
     @include set-light-dark-inversos();
 }
-// Set variables que depenen de light / dark // També establir les seves opacitats //
+// #endregion //
+
+// #region Set variables que depenen de light / dark // També establir les seves opacitats //
 @mixin set-light-dark-inversos() {
     @for $i from 1 through 10 { --color-fosc-#{$i * 10}: hsla(var(--color-fosc-hsl), #{calc($i / 10)}); }
     @for $i from 1 through 10 { --color-clar-#{$i * 10}: hsla(var(--color-clar-hsl), #{calc($i / 10)}); }
@@ -134,10 +137,10 @@
     --fons: var(--fons-100);
     --text: var(--text-100);
 }
+// #endregion //
 
 
-
-// Dark Mode //
+// #region Dark Mode //
 @mixin dark {
     html.dark & {
         @content;
@@ -148,10 +151,11 @@
         @content;
     }
 }
+// #endregion //
 
 
 
-// Variables //
+// #region Variables //
 
 :root {
 
@@ -201,6 +205,7 @@
 
     @include set-light-dark-inversos();
 }
+// #endregion //
 
 
 @for $hue from 0 through 360 {
@@ -212,7 +217,7 @@
     @include generar-paleta(0, 0);
 }
 
-// Colors específics cards //
+// #region Colors específics cards //
 
 // Projects //
 
@@ -377,6 +382,8 @@
     @extend .paleta-46;
     --link: light-dark(var(--color-l-3), var(--color-l-6));
 }
+// #endregion //
+
 
 
 .color-fons { color: var(--fons) !important; }

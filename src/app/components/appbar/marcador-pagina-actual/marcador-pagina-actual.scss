@@ -23,8 +23,13 @@
             margin-bottom: 0;
             text-align: center;
             
-            font-size: 2.2rem;
-            @include mobil { font-size: 1.5rem; }
+            font-size: calc(1.325rem + 0.9vw);
+            
+            color: white;
+
+            :host-context(html.light) {
+                text-shadow: 0 3px 6px rgba(0,0,0,0.46);
+            }
         }
         jmp-skill {
             pointer-events: none;
