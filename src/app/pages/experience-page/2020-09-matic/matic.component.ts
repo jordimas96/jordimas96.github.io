@@ -66,7 +66,7 @@ export class MaticComponent {
 
         if (obert) {
             // Scroll a la secció clicada //
-            let offset = this.m.appbar.height() + this.m.index.height();
+            let offset = this.m.appbar.height() + this.m.index.height() + 16;
             let nouScroll = $seccio.parent().offset()!.top - offset;
 
             // Altura botó //
