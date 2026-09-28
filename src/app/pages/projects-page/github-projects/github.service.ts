@@ -31,7 +31,7 @@ export class GitHubService {
         // Si no, ho creem //
         let repos = [
             {
-                name: "bunquer-descarregador",
+                name: "bunquerdescarregador",
                 title: "Descarregador de capítols d'El Búnquer",
                 cardHue: 346,
                 text: {

@@ -16,7 +16,7 @@ import { StoriesComponent } from './stories/stories.component';
 })
 export class AboutMePageComponent extends PageComponent {
 
-    linkJocLandingPage = "https://mad-jumpgate.github.io/";
+    linkJocLandingPage = "https://madjumpgate.github.io/";
 
     override async ngOnInit() {
         super.ngOnInit();
