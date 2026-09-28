@@ -42,7 +42,7 @@
                 }
                 &.pokemon {
                     pre {
-                        font-family: Consolas;
+                        font-family: Consolas, monospace;
                         display: inline;
                         background-color: light-dark(white, hsl(0, 0%, 25%));
                         color: light-dark(hsl(0, 0%, 20%), white);
