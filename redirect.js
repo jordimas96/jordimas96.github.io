@@ -3,8 +3,8 @@
 
 function canviarURL(path) {
     // El búnquer //
-    if (path == "bunquer-descarregador")
-        return "https://bunquer-descarregador.github.io/";
+    if (path == "bunquer-descarregador" || path == "bunquerdescarregador")
+        return "https://bunquerdescarregador.github.io/";
 
 
     // IN2ART //
