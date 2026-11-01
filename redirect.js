@@ -2,7 +2,7 @@
 // LLISTA URLS //
 
 function canviarURL(path) {
-    // Indra //
+    // Cartes de recomanació //
     if (path == "recommendation-indra")
         return "/assets/_experience/indra/Carta%20Recomanacio%20Indra%202026.pdf";
     if (path == "recommendation-nexxia")
