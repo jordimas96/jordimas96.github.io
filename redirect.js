@@ -2,6 +2,13 @@
 // LLISTA URLS //
 
 function canviarURL(path) {
+    // Indra //
+    if (path == "recommendation/indra")
+        return "/assets/_experience/indra/Carta%20Recomanacio%20Indra%202026.pdf";
+    if (path == "recommendation/nexxia")
+        return "/assets/_experience/nexxia/Carta%20Recomanacio%20Nexxia%202017.pdf";
+
+
     // El búnquer //
     if (path == "bunquer-descarregador" || path == "bunquerdescarregador")
         return "https://bunquerdescarregador.github.io/";
