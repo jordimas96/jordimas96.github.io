@@ -126,7 +126,7 @@ export const CASE_STUDIES: Record<string, CaseStudy> = {
         url: "/tecnocom",
         component: TecnocomComponent,
         prioritat: 15,
-        skills: [s.JAVA, s.JSP, s.PL1, s.DB2, s.MAVEN, s.NETBEANS, s.ECLIPSE, s.SVN, s.WINDOWSSERVER, s.TEAMVIEWER, s.REMOTEDESKTOP, s.ZOSMVS, s.CONTINUOUSINTEGRATION, s.AGILE]
+        skills: [s.JAVA, s.JSP, s.J2EE, s.PL1, s.DB2, s.MAVEN, s.NETBEANS, s.ECLIPSE, s.SVN, s.WINDOWSSERVER, s.TEAMVIEWER, s.REMOTEDESKTOP, s.ZOSMVS, s.CONTINUOUSINTEGRATION, s.AGILE]
     },
     nexxia: {
         url: "/nexxia",

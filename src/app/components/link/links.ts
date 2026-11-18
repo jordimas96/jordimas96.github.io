@@ -85,9 +85,14 @@ export class Links {
         "asus-flash-tool": "https://www.ytechb.com/asus-flash-tool/",
 
 
-        "lacaixa_ca": "https://www.caixabank.cat/index_ca.html",
-        "lacaixa_es": "https://www.caixabank.cat/index_es.html",
-        "lacaixa_en": "https://www.caixabank.es/particular/holabank/particulares_en.html",
+        "caixabank_ca": "https://www.caixabank.cat/index_ca.html",
+        "caixabank_es": "https://www.caixabank.cat/index_es.html",
+        "caixabank_en": "https://www.caixabank.es/particular/holabank/particulares_en.html",
+
+        "tf7": "https://www.linkedin.com/in/miguel-siles-1384361b/details/projects/#:~:text=El%20cliente%20opt%C3%B3,recursos%20de%20mainframe.",
+        // https://www.linkedin.com/in/miguel-siles-1384361b/details/projects/ //
+        // https://www.linkedin.com/in/sonia-yuste-352a745/details/projects/ //
+
         "pli_ca": "https://ca.wikipedia.org/wiki/PL/I",
         "pli_es": "https://es.wikipedia.org/wiki/PL/1",
         "pli_en": "https://en.wikipedia.org/wiki/PL/I",
