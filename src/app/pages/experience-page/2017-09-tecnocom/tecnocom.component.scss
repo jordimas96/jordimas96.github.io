@@ -21,3 +21,38 @@ h4, h5 {
     color: var(--text);
 }
 
+
+.metriques {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    gap: 1rem;
+    
+    .metrica {
+        text-align: center;
+        
+        &.oficines {
+            color: light-dark(hsl(198, 89%, 24%), hsl(198, 89%, 60%));
+            .punt-milers, i {
+                color: light-dark(hsl(43, 100%, 52%), hsl(43, 100%, 57%));
+            }
+        }
+
+        .numero {
+            font-size: 3rem;
+            font-weight: bold;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            
+            i {
+                font-size: 1.5rem;
+                margin-left: 0.7rem;
+            }
+        }
+        .text {
+            font-size: 1.2rem;
+        }
+
+    }
+}

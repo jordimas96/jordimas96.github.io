@@ -37,7 +37,10 @@ export class SelectorIdiomaComponent implements AfterViewInit {
         // Variables MainService //
         if (target) this.m.idioma = target.value;
         this.m.idiomaIndex = ["ca", "es", "en"].indexOf(this.m.idioma);
+        
         this.m.conjuncio = ["i", "y", "and"][this.m.idiomaIndex];
+        this.m.puntMilers = [".", ".", ","][this.m.idiomaIndex];
+        this.m.comaDecimal = [",", ",", "."][this.m.idiomaIndex];
 
         this.m.ca = this.m.idioma == "ca";
         this.m.es = this.m.idioma == "es";

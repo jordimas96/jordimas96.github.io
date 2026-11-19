@@ -45,8 +45,9 @@ export class ExperienceCalculatorService {
                 caseStudyId: "tecnocom",
                 skills: [
                     s.BACKEND, s.FRONTEND,
-                    s.JAVA, s.JSP, s.MAVEN, s.MICROSERVICES,
-                    s.NETBEANS, s.ECLIPSE, s.SVN,
+                    s.JAVA, s.JSP, s.J2EE, s.SPRING, s.SPRINGWEBFLOW, s.XML, s.HTML5,
+                    s.MAVEN, s.MICROSERVICES,
+                    s.NETBEANS, s.ECLIPSE, s.SVN, s.JENKINS, s.WEBLOGIC,
                     s.WINDOWSSERVER, s.REMOTEDESKTOP, s.TEAMVIEWER,
                     s.PL1, s.DB2, s.ZOSMVS,
                     s.WINDOWS,
@@ -58,9 +59,10 @@ export class ExperienceCalculatorService {
                 caseStudyId: "tecnocom",
                 skills: [
                     s.BACKEND, s.FRONTEND,
-                    s.JAVA, s.JSP, s.J2EE, s.MAVEN, s.MICROSERVICES,
+                    s.JAVA, s.JSP, s.J2EE, s.SPRING, s.SPRINGWEBFLOW, s.XML, s.HTML5,
+                    s.MAVEN, s.MICROSERVICES,
                     s.SQLDEVELOPER,
-                    s.NETBEANS, s.ECLIPSE, s.SVN,
+                    s.NETBEANS, s.ECLIPSE, s.SVN, s.JENKINS, s.WEBLOGIC,
                     s.WINDOWSSERVER, s.REMOTEDESKTOP, s.TEAMVIEWER,
                     s.AGILE, s.CONTINUOUSINTEGRATION,
                     s.WINDOWS,
@@ -80,7 +82,7 @@ export class ExperienceCalculatorService {
                     s.APACHE, s.FILEZILLA, s.SWAGGER,
                     s.POWERSHELL,
                     s.JOOMLA, s.K2, s.AKEEBABACKUP, s.JCEFILEMANAGER,
-                    s.WINDOWSSERVER, s.REMOTEDESKTOP, s.ANYDESK,
+                    s.WINDOWSSERVER, s.REMOTEDESKTOP, s.ANYDESK, s.TEAMVIEWER,
                     s.AGILE, s.MVC, s.RESPONSIVEDESIGN,
                     s.WINDOWS,
                 ]

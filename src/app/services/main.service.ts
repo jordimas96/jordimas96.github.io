@@ -40,6 +40,8 @@ export class MainService {
     public idioma: string = "en";
     public idiomaIndex: number = 2;
     public conjuncio: string = "and";
+    public puntMilers: string = ".";
+    public comaDecimal: string = ",";
     public ca: boolean;
     public es: boolean;
     public en: boolean;
