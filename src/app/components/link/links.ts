@@ -60,6 +60,7 @@ export class Links {
         "uwp_es": "https://learn.microsoft.com/es-es/windows/uwp/get-started/universal-application-platform-guide",
         "uwp_en": "https://learn.microsoft.com/en-us/windows/uwp/get-started/universal-application-platform-guide",
 
+        "titol-formacio-tecnocom": "assets/_experience/tecnocom/Titol formacio Tecnocom 160h Host i SSMM Juliol 2017.pdf",
 
         "fast-report": "https://www.fast-report.com/en/",
 
